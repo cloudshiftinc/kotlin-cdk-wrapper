@@ -17,6 +17,8 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnEndpointConfig
 
 /**
+ * The configuration parameters for the SageMaker Clarify explainer.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -64,27 +66,32 @@ public class CfnEndpointConfigClarifyExplainerConfigPropertyDsl {
     private val cdkBuilder: CfnEndpointConfig.ClarifyExplainerConfigProperty.Builder =
         CfnEndpointConfig.ClarifyExplainerConfigProperty.builder()
 
-    /** @param enableExplanations the value to be set. */
+    /**
+     * @param enableExplanations A JMESPath boolean expression used to filter which records to
+     *   explain. Explanations are activated by default. See
+     *   [`EnableExplanations`](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html#clarify-online-explainability-create-endpoint-enable)
+     *   for additional information.
+     */
     public fun enableExplanations(enableExplanations: String) {
         cdkBuilder.enableExplanations(enableExplanations)
     }
 
-    /** @param inferenceConfig the value to be set. */
+    /** @param inferenceConfig The inference configuration parameter for the model container. */
     public fun inferenceConfig(inferenceConfig: IResolvable) {
         cdkBuilder.inferenceConfig(inferenceConfig)
     }
 
-    /** @param inferenceConfig the value to be set. */
+    /** @param inferenceConfig The inference configuration parameter for the model container. */
     public fun inferenceConfig(inferenceConfig: CfnEndpointConfig.ClarifyInferenceConfigProperty) {
         cdkBuilder.inferenceConfig(inferenceConfig)
     }
 
-    /** @param shapConfig the value to be set. */
+    /** @param shapConfig The configuration for SHAP analysis. */
     public fun shapConfig(shapConfig: IResolvable) {
         cdkBuilder.shapConfig(shapConfig)
     }
 
-    /** @param shapConfig the value to be set. */
+    /** @param shapConfig The configuration for SHAP analysis. */
     public fun shapConfig(shapConfig: CfnEndpointConfig.ClarifyShapConfigProperty) {
         cdkBuilder.shapConfig(shapConfig)
     }

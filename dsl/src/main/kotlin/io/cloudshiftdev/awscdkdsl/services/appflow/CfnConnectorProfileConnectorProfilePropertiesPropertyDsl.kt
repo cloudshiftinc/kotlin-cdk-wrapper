@@ -172,12 +172,12 @@ public class CfnConnectorProfileConnectorProfilePropertiesPropertyDsl {
         cdkBuilder.marketo(marketo)
     }
 
-    /** @param pardot the value to be set. */
+    /** @param pardot The connector-specific properties required by Salesforce Pardot. */
     public fun pardot(pardot: IResolvable) {
         cdkBuilder.pardot(pardot)
     }
 
-    /** @param pardot the value to be set. */
+    /** @param pardot The connector-specific properties required by Salesforce Pardot. */
     public fun pardot(pardot: CfnConnectorProfile.PardotConnectorProfilePropertiesProperty) {
         cdkBuilder.pardot(pardot)
     }

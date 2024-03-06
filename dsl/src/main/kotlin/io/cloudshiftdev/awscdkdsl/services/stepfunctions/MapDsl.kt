@@ -14,6 +14,7 @@ package io.cloudshiftdev.awscdkdsl.services.stepfunctions
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import io.cloudshiftdev.awscdkdsl.common.MapBuilder
 import kotlin.Any
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -35,8 +36,20 @@ import software.constructs.Construct
  * Map map = Map.Builder.create(this, "Map State")
  * .maxConcurrency(1)
  * .itemsPath(JsonPath.stringAt("$.inputForMap"))
+ * .itemSelector(Map.of(
+ * "item", JsonPath.stringAt("$.Map.Item.Value")))
+ * .resultPath("$.mapOutput")
  * .build();
- * map.iterator(new Pass(this, "Pass State"));
+ * // The Map iterator can contain a IChainable, which can be an individual or multiple steps
+ * chained together.
+ * // Below example is with a Choice and Pass step
+ * Choice choice = new Choice(this, "Choice");
+ * Condition condition1 = Condition.stringEquals("$.item.status", "SUCCESS");
+ * Pass step1 = new Pass(this, "Step1");
+ * Pass step2 = new Pass(this, "Step2");
+ * Pass finish = new Pass(this, "Finish");
+ * Chain definition = choice.when(condition1, step1).otherwise(step2).afterwards().next(finish);
+ * map.itemProcessor(definition);
  * ```
  *
  * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-map-state.html)
@@ -72,6 +85,38 @@ public class MapDsl(
      */
     public fun inputPath(inputPath: String) {
         cdkBuilder.inputPath(inputPath)
+    }
+
+    /**
+     * The JSON that you want to override your default iteration input (mutually exclusive with
+     * `parameters`).
+     *
+     * Default: $
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/input-output-itemselector.html)
+     *
+     * @param itemSelector The JSON that you want to override your default iteration input (mutually
+     *   exclusive with `parameters`).
+     */
+    public fun itemSelector(itemSelector: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(itemSelector)
+        cdkBuilder.itemSelector(builder.map)
+    }
+
+    /**
+     * The JSON that you want to override your default iteration input (mutually exclusive with
+     * `parameters`).
+     *
+     * Default: $
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/input-output-itemselector.html)
+     *
+     * @param itemSelector The JSON that you want to override your default iteration input (mutually
+     *   exclusive with `parameters`).
+     */
+    public fun itemSelector(itemSelector: CollectionsMap<String, Any>) {
+        cdkBuilder.itemSelector(itemSelector)
     }
 
     /**
@@ -114,12 +159,19 @@ public class MapDsl(
     }
 
     /**
-     * The JSON that you want to override your default iteration input.
+     * (deprecated) The JSON that you want to override your default iteration input (mutually
+     * exclusive with `itemSelector`).
      *
      * Default: $
      *
-     * @param parameters The JSON that you want to override your default iteration input.
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/input-output-itemselector.html)
+     *
+     * @param parameters The JSON that you want to override your default iteration input (mutually
+     *   exclusive with `itemSelector`).
+     * @deprecated Step Functions has deprecated the `parameters` field in favor of the new
+     *   `itemSelector` field
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun parameters(parameters: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
         builder.apply(parameters)
@@ -127,12 +179,19 @@ public class MapDsl(
     }
 
     /**
-     * The JSON that you want to override your default iteration input.
+     * (deprecated) The JSON that you want to override your default iteration input (mutually
+     * exclusive with `itemSelector`).
      *
      * Default: $
      *
-     * @param parameters The JSON that you want to override your default iteration input.
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/input-output-itemselector.html)
+     *
+     * @param parameters The JSON that you want to override your default iteration input (mutually
+     *   exclusive with `itemSelector`).
+     * @deprecated Step Functions has deprecated the `parameters` field in favor of the new
+     *   `itemSelector` field
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun parameters(parameters: CollectionsMap<String, Any>) {
         cdkBuilder.parameters(parameters)
     }
@@ -187,6 +246,17 @@ public class MapDsl(
      */
     public fun resultSelector(resultSelector: CollectionsMap<String, Any>) {
         cdkBuilder.resultSelector(resultSelector)
+    }
+
+    /**
+     * Optional name for this state.
+     *
+     * Default: - The construct ID will be used as state name
+     *
+     * @param stateName Optional name for this state.
+     */
+    public fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
     }
 
     public fun build(): StepfunctionsMap = cdkBuilder.build()

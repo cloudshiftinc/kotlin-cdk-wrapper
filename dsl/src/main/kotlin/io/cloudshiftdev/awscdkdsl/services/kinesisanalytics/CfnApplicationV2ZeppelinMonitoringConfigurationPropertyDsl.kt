@@ -20,7 +20,7 @@ import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2
  * Studio notebook.
  *
  * For more information about CloudWatch logging, see
- * [Monitoring](https://docs.aws.amazon.com/kinesisanalytics/latest/java/monitoring-overview.html) .
+ * [Monitoring](https://docs.aws.amazon.com/managed-flink/latest/java/monitoring-overview.html) .
  *
  * Example:
  * ```

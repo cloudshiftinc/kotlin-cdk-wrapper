@@ -132,7 +132,9 @@ public class SageMakerCreateTransformJobPropsDsl {
 
     /**
      * @param integrationPattern AWS Step Functions integrates with services directly in the Amazon
-     *   States Language. You can control these AWS services using service integration patterns
+     *   States Language. You can control these AWS services using service integration patterns.
+     *
+     * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      */
     public fun integrationPattern(integrationPattern: IntegrationPattern) {
         cdkBuilder.integrationPattern(integrationPattern)
@@ -215,6 +217,11 @@ public class SageMakerCreateTransformJobPropsDsl {
     /** @param role Role for the Transform Job. */
     public fun role(role: IRole) {
         cdkBuilder.role(role)
+    }
+
+    /** @param stateName Optional name for this state. */
+    public fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
     }
 
     /** @param tags Tags to be applied to the train job. */

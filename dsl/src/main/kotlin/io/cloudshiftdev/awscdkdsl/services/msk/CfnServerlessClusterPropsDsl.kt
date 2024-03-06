@@ -57,12 +57,12 @@ public class CfnServerlessClusterPropsDsl {
 
     private val _vpcConfigs: MutableList<Any> = mutableListOf()
 
-    /** @param clientAuthentication the value to be set. */
+    /** @param clientAuthentication Includes all client authentication information. */
     public fun clientAuthentication(clientAuthentication: IResolvable) {
         cdkBuilder.clientAuthentication(clientAuthentication)
     }
 
-    /** @param clientAuthentication the value to be set. */
+    /** @param clientAuthentication Includes all client authentication information. */
     public fun clientAuthentication(
         clientAuthentication: CfnServerlessCluster.ClientAuthenticationProperty
     ) {

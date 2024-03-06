@@ -66,12 +66,7 @@ public class CfnImageVersionPropsDsl {
         _aliases.addAll(aliases)
     }
 
-    /**
-     * @param baseImage The container image that the SageMaker image version is based on. *Length
-     *   Constraints* : Minimum length of 1. Maximum length of 255.
-     *
-     * *Pattern* : `.*`
-     */
+    /** @param baseImage The container image that the SageMaker image version is based on. */
     public fun baseImage(baseImage: String) {
         cdkBuilder.baseImage(baseImage)
     }

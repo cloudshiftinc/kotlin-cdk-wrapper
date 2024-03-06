@@ -26,7 +26,7 @@ import software.amazon.awscdk.services.sqs.IQueue
  * ```
  * import software.amazon.awscdk.services.lambda.*;
  * Function fn = Function.Builder.create(this, "MyFunc")
- * .runtime(Runtime.NODEJS_14_X)
+ * .runtime(Runtime.NODEJS_LATEST)
  * .handler("index.handler")
  * .code(Code.fromInline("exports.handler = handler.toString()"))
  * .build();

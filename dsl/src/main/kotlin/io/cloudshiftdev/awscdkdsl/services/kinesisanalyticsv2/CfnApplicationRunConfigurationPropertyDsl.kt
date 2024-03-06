@@ -16,7 +16,7 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
 
 /**
- * Describes the starting parameters for an Kinesis Data Analytics application.
+ * Describes the starting parameters for an Managed Service for Apache Flink application.
  *
  * Example:
  * ```
@@ -61,16 +61,16 @@ public class CfnApplicationRunConfigurationPropertyDsl {
     }
 
     /**
-     * @param flinkRunConfiguration Describes the starting parameters for a Flink-based Kinesis Data
-     *   Analytics application.
+     * @param flinkRunConfiguration Describes the starting parameters for a Managed Service for
+     *   Apache Flink application.
      */
     public fun flinkRunConfiguration(flinkRunConfiguration: IResolvable) {
         cdkBuilder.flinkRunConfiguration(flinkRunConfiguration)
     }
 
     /**
-     * @param flinkRunConfiguration Describes the starting parameters for a Flink-based Kinesis Data
-     *   Analytics application.
+     * @param flinkRunConfiguration Describes the starting parameters for a Managed Service for
+     *   Apache Flink application.
      */
     public fun flinkRunConfiguration(
         flinkRunConfiguration: CfnApplication.FlinkRunConfigurationProperty

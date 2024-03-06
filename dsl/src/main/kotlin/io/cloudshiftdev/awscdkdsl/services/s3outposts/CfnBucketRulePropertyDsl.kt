@@ -94,10 +94,7 @@ public class CfnBucketRulePropertyDsl {
         cdkBuilder.filter(filter)
     }
 
-    /**
-     * @param id The unique identifier for the lifecycle rule. The value can't be longer than 255
-     *   characters.
-     */
+    /** @param id the value to be set. */
     public fun id(id: String) {
         cdkBuilder.id(id)
     }

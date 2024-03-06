@@ -33,7 +33,7 @@ public object wafv2 {
      *
      * For information, including how to migrate your AWS WAF resources from the prior release, see
      * the
-     * [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)
+     * [AWS WAF developer guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)
      * .
      *
      * Use an `IPSet` to identify web requests that originate from specific IP addresses or ranges
@@ -302,18 +302,6 @@ public object wafv2 {
     }
 
     /**
-     * Inspect the body of the web request as JSON. The body immediately follows the request
-     * headers.
-     *
-     * This is used to indicate the web request component to inspect, in the `FieldToMatch`
-     * specification.
-     *
-     * Use the specifications in this object to indicate which parts of the JSON body to inspect
-     * using the rule's inspection criteria. AWS WAF inspects only the parts of the JSON that result
-     * from the matches that you indicate.
-     *
-     * Example JSON: `"JsonBody": { "MatchPattern": { "All": {} }, "MatchScope": "ALL" }`
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -404,10 +392,6 @@ public object wafv2 {
     }
 
     /**
-     * The patterns to look for in the JSON body.
-     *
-     * AWS WAF inspects the results of these pattern matches against the rule inspection criteria.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -508,7 +492,7 @@ public object wafv2 {
      *
      * For information, including how to migrate your AWS WAF resources from the prior release, see
      * the
-     * [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)
+     * [AWS WAF developer guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)
      * .
      *
      * Use an `RegexPatternSet` to have AWS WAF inspect a web request component for a specific set
@@ -584,7 +568,7 @@ public object wafv2 {
      *
      * For information, including how to migrate your AWS WAF resources from the prior release, see
      * the
-     * [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)
+     * [AWS WAF developer guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)
      * .
      *
      * Use an `RuleGroup` to define a collection of rules for inspecting and controlling web
@@ -1911,7 +1895,7 @@ public object wafv2 {
      * For information about customizing web requests and responses, see
      * [Customizing web requests and responses in AWS WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html)
      * in the
-     * [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)
+     * [AWS WAF developer guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)
      * .
      *
      * Example:
@@ -4581,7 +4565,7 @@ public object wafv2 {
 
     /**
      * A single rule, which you can use in a `WebACL` or `RuleGroup` to identify web requests that
-     * you want to allow, block, or count.
+     * you want to manage in some way.
      *
      * Each rule includes one top-level `Statement` that AWS WAF uses to identify matching web
      * requests, and parameters that govern how AWS WAF handles them.
@@ -5762,18 +5746,46 @@ public object wafv2 {
      *
      * For information, including how to migrate your AWS WAF resources from the prior release, see
      * the
-     * [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)
+     * [AWS WAF developer guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)
      * .
      *
      * Use an `WebACL` to define a collection of rules to use to inspect and control web requests.
-     * Each rule has an action defined (allow, block, or count) for requests that match the
-     * statement of the rule. In the web ACL, you specify a default action to take (allow, block)
-     * for any request that doesn't match any of the rules. The rules in a web ACL can contain rule
-     * statements that you define explicitly and rule statements that reference rule groups and
-     * managed rule groups. You can associate a web ACL with one or more AWS resources to protect.
-     * The resources can be an Amazon CloudFront distribution, an Amazon API Gateway REST API, an
-     * Application Load Balancer , an AWS AppSync GraphQL API , an Amazon Cognito user pool, an AWS
-     * App Runner service, or an AWS Verified Access instance.
+     * Each rule in a web ACL has a statement that defines what to look for in web requests and an
+     * action that AWS WAF applies to requests that match the statement. In the web ACL, you assign
+     * a default action to take (allow, block) for any request that doesn't match any of the rules.
+     *
+     * The rules in a web ACL can be a combination of explicitly defined rules and rule groups that
+     * you reference from the web ACL. The rule groups can be rule groups that you manage or rule
+     * groups that are managed by others.
+     *
+     * You can associate a web ACL with one or more AWS resources to protect. The resources can be
+     * an Amazon CloudFront distribution, an Amazon API Gateway REST API, an Application Load
+     * Balancer , an AWS AppSync GraphQL API , an Amazon Cognito user pool, an AWS App Runner
+     * service, or an AWS Verified Access instance.
+     *
+     * For more information, see
+     * [Web access control lists (web ACLs)](https://docs.aws.amazon.com/waf/latest/developerguide/web-acl.html)
+     * in the *AWS WAF developer guide* .
+     *
+     * *Web ACLs used in AWS Shield Advanced automatic application layer DDoS mitigation*
+     *
+     * If you use Shield Advanced automatic application layer DDoS mitigation, the web ACLs that you
+     * use with automatic mitigation have a rule group rule whose name starts with
+     * `ShieldMitigationRuleGroup` . This rule is used for automatic mitigations and it's managed
+     * for you in the web ACL by Shield Advanced and AWS WAF . You'll see the rule listed among the
+     * web ACL rules when you view the web ACL through the AWS WAF interfaces.
+     *
+     * When you manage the web ACL through AWS CloudFormation interfaces, you won't see the Shield
+     * Advanced rule. AWS CloudFormation doesn't include this type of rule in the stack drift status
+     * between the actual configuration of the web ACL and your web ACL template.
+     *
+     * Don't add the Shield Advanced rule group rule to your web ACL template. The rule shouldn't be
+     * in your template. When you update the web ACL template in a stack, the Shield Advanced rule
+     * is maintained for you by AWS WAF in the resulting web ACL.
+     *
+     * For more information, see
+     * [Shield Advanced automatic application layer DDoS mitigation](https://docs.aws.amazon.com/waf/latest/developerguide/ddos-automatic-app-layer-response.html)
+     * in the *AWS Shield Advanced developer guide* .
      *
      * Example:
      * ```
@@ -5932,6 +5944,8 @@ public object wafv2 {
      * AWSManagedRulesBotControlRuleSetProperty aWSManagedRulesBotControlRuleSetProperty =
      * AWSManagedRulesBotControlRuleSetProperty.builder()
      * .inspectionLevel("inspectionLevel")
+     * // the properties below are optional
+     * .enableMachineLearning(false)
      * .build();
      * ```
      *
@@ -6001,7 +6015,7 @@ public object wafv2 {
      *
      * For information, including how to migrate your AWS WAF resources from the prior release, see
      * the
-     * [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)
+     * [AWS WAF developer guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)
      * .
      *
      * Use a web ACL association to define an association between a web ACL and a regional
@@ -6016,16 +6030,29 @@ public object wafv2 {
      * [AWS::CloudFront::Distribution](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html)
      * .
      *
-     * When you create a web ACL or make changes to a web ACL or web ACL components, like rules and
-     * rule groups, AWS WAF propagates the changes everywhere that the web ACL and its components
-     * are stored and used. Your changes are applied within seconds, but there might be a brief
-     * period of inconsistency when the changes have arrived in some places and not in others. So,
-     * for example, if you change a rule action setting, the action might be the old action in one
-     * area and the new action in another area. Or if you add an IP address to an IP set used in a
-     * blocking rule, the new address might briefly be blocked in one area while still allowed in
-     * another. This temporary inconsistency can occur when you first associate a web ACL with an
-     * AWS resource and when you change a web ACL that is already associated with a resource.
-     * Generally, any inconsistencies of this type last only a few seconds.
+     * *Required permissions for customer-managed IAM policies*
+     *
+     * This call requires permissions that are specific to the protected resource type. For details,
+     * see
+     * [Permissions for AssociateWebACL](https://docs.aws.amazon.com/waf/latest/developerguide/security_iam_service-with-iam.html#security_iam_action-AssociateWebACL)
+     * in the *AWS WAF Developer Guide* .
+     *
+     * *Temporary inconsistencies during updates*
+     *
+     * When you create or change a web ACL or other AWS WAF resources, the changes take a small
+     * amount of time to propagate to all areas where the resources are stored. The propagation time
+     * can be from a few seconds to a number of minutes.
+     *
+     * The following are examples of the temporary inconsistencies that you might notice during
+     * change propagation:
+     * * After you create a web ACL, if you try to associate it with a resource, you might get an
+     *   exception indicating that the web ACL is unavailable.
+     * * After you add a rule group to a web ACL, the new rule group rules might be in effect in one
+     *   area where the web ACL is used and not in another.
+     * * After you change a rule action setting, you might see the old action in some places and the
+     *   new action in others.
+     * * After you add an IP address to an IP set that is in use in a blocking rule, the new address
+     *   might be blocked in one area while still allowed in another.
      *
      * Example:
      * ```
@@ -6602,7 +6629,7 @@ public object wafv2 {
      * For information about customizing web requests and responses, see
      * [Customizing web requests and responses in AWS WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html)
      * in the
-     * [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)
+     * [AWS WAF developer guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)
      * .
      *
      * Example:
@@ -7296,6 +7323,8 @@ public object wafv2 {
      * .build())
      * .awsManagedRulesBotControlRuleSet(AWSManagedRulesBotControlRuleSetProperty.builder()
      * .inspectionLevel("inspectionLevel")
+     * // the properties below are optional
+     * .enableMachineLearning(false)
      * .build())
      * .loginPath("loginPath")
      * .passwordField(FieldIdentifierProperty.builder()
@@ -7325,7 +7354,9 @@ public object wafv2 {
      * can retrieve the required names through the API call `ListAvailableManagedRuleGroups` .
      *
      * You cannot nest a `ManagedRuleGroupStatement` , for example for use inside a `NotStatement`
-     * or `OrStatement` . It can only be referenced as a top-level statement within a rule.
+     * or `OrStatement` . You cannot use a managed rule group statement inside another rule group.
+     * You can only use a managed rule group statement as a top-level statement in a rule that you
+     * define in a web ACL.
      *
      * You are charged additional fees when you use the AWS WAF Bot Control managed rule group
      * `AWSManagedRulesBotControlRuleSet` , the AWS WAF Fraud Control account takeover prevention
@@ -8381,7 +8412,8 @@ public object wafv2 {
      * this statement.
      *
      * You cannot nest a `RuleGroupReferenceStatement` , for example for use inside a `NotStatement`
-     * or `OrStatement` . You can only use a rule group reference statement at the top level inside
+     * or `OrStatement` . You cannot use a rule group reference statement inside another rule group.
+     * You can only reference a rule group as a top-level statement within a rule that you define in
      * a web ACL.
      *
      * Example:
@@ -8459,7 +8491,7 @@ public object wafv2 {
 
     /**
      * A single rule, which you can use in a `WebACL` or `RuleGroup` to identify web requests that
-     * you want to allow, block, or count.
+     * you want to manage in some way.
      *
      * Each rule includes one top-level `Statement` that AWS WAF uses to identify matching web
      * requests, and parameters that govern how AWS WAF handles them.

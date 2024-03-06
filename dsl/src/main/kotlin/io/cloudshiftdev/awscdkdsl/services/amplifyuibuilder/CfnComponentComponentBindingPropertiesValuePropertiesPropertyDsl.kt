@@ -44,9 +44,11 @@ import software.amazon.awscdk.services.amplifyuibuilder.CfnComponent
  * .and(List.of(predicateProperty_))
  * .field("field")
  * .operand("operand")
+ * .operandType("operandType")
  * .operator("operator")
  * .or(List.of(predicateProperty_))
  * .build()))
+ * .slotName("slotName")
  * .userAttribute("userAttribute")
  * .build();
  * ```
@@ -98,6 +100,11 @@ public class CfnComponentComponentBindingPropertiesValuePropertiesPropertyDsl {
     /** @param predicates A list of predicates for binding a component's properties to data. */
     public fun predicates(predicates: IResolvable) {
         cdkBuilder.predicates(predicates)
+    }
+
+    /** @param slotName The name of a component slot. */
+    public fun slotName(slotName: String) {
+        cdkBuilder.slotName(slotName)
     }
 
     /** @param userAttribute An authenticated user attribute. */

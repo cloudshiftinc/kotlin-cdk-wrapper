@@ -64,6 +64,7 @@ import software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy
  * .priority(123)
  * .resourceArn("resourceArn")
  * .build()))
+ * .tlsInspectionConfigurationArn("tlsInspectionConfigurationArn")
  * .build();
  * ```
  *
@@ -303,6 +304,14 @@ public class CfnFirewallPolicyFirewallPolicyPropertyDsl {
      */
     public fun statelessRuleGroupReferences(statelessRuleGroupReferences: IResolvable) {
         cdkBuilder.statelessRuleGroupReferences(statelessRuleGroupReferences)
+    }
+
+    /**
+     * @param tlsInspectionConfigurationArn The Amazon Resource Name (ARN) of the TLS inspection
+     *   configuration.
+     */
+    public fun tlsInspectionConfigurationArn(tlsInspectionConfigurationArn: String) {
+        cdkBuilder.tlsInspectionConfigurationArn(tlsInspectionConfigurationArn)
     }
 
     public fun build(): CfnFirewallPolicy.FirewallPolicyProperty {

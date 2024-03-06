@@ -46,7 +46,10 @@ public class CfnPrincipalPermissionsTableResourcePropertyDsl {
     private val cdkBuilder: CfnPrincipalPermissions.TableResourceProperty.Builder =
         CfnPrincipalPermissions.TableResourceProperty.builder()
 
-    /** @param catalogId the value to be set. */
+    /**
+     * @param catalogId The identifier for the Data Catalog. By default, it is the account ID of the
+     *   caller.
+     */
     public fun catalogId(catalogId: String) {
         cdkBuilder.catalogId(catalogId)
     }

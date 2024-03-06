@@ -111,8 +111,20 @@ import software.amazon.awscdk.services.quicksight.CfnDataSource
  * .host("host")
  * .port(123)
  * .build())
+ * .starburstParameters(StarburstParametersProperty.builder()
+ * .catalog("catalog")
+ * .host("host")
+ * .port(123)
+ * // the properties below are optional
+ * .productType("productType")
+ * .build())
  * .teradataParameters(TeradataParametersProperty.builder()
  * .database("database")
+ * .host("host")
+ * .port(123)
+ * .build())
+ * .trinoParameters(TrinoParametersProperty.builder()
+ * .catalog("catalog")
  * .host("host")
  * .port(123)
  * .build())
@@ -312,6 +324,22 @@ public class CfnDataSourceDataSourceParametersPropertyDsl {
         cdkBuilder.sqlServerParameters(sqlServerParameters)
     }
 
+    /**
+     * @param starburstParameters The parameters that are required to connect to a Starburst data
+     *   source.
+     */
+    public fun starburstParameters(starburstParameters: IResolvable) {
+        cdkBuilder.starburstParameters(starburstParameters)
+    }
+
+    /**
+     * @param starburstParameters The parameters that are required to connect to a Starburst data
+     *   source.
+     */
+    public fun starburstParameters(starburstParameters: CfnDataSource.StarburstParametersProperty) {
+        cdkBuilder.starburstParameters(starburstParameters)
+    }
+
     /** @param teradataParameters The parameters for Teradata. */
     public fun teradataParameters(teradataParameters: IResolvable) {
         cdkBuilder.teradataParameters(teradataParameters)
@@ -320,6 +348,20 @@ public class CfnDataSourceDataSourceParametersPropertyDsl {
     /** @param teradataParameters The parameters for Teradata. */
     public fun teradataParameters(teradataParameters: CfnDataSource.TeradataParametersProperty) {
         cdkBuilder.teradataParameters(teradataParameters)
+    }
+
+    /**
+     * @param trinoParameters The parameters that are required to connect to a Trino data source.
+     */
+    public fun trinoParameters(trinoParameters: IResolvable) {
+        cdkBuilder.trinoParameters(trinoParameters)
+    }
+
+    /**
+     * @param trinoParameters The parameters that are required to connect to a Trino data source.
+     */
+    public fun trinoParameters(trinoParameters: CfnDataSource.TrinoParametersProperty) {
+        cdkBuilder.trinoParameters(trinoParameters)
     }
 
     public fun build(): CfnDataSource.DataSourceParametersProperty = cdkBuilder.build()

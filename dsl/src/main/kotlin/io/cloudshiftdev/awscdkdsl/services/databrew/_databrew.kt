@@ -1922,6 +1922,9 @@ public object databrew {
     }
 
     /**
+     * Represents information on how DataBrew can find data, in either the AWS Glue Data Catalog or
+     * Amazon S3.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.

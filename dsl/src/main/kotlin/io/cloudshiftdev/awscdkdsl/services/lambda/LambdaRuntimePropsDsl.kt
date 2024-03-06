@@ -27,6 +27,7 @@ import software.amazon.awscdk.services.lambda.LambdaRuntimeProps
  * .isVariable(false)
  * .supportsCodeGuruProfiling(false)
  * .supportsInlineCode(false)
+ * .supportsSnapStart(false)
  * .build();
  * ```
  */
@@ -60,6 +61,11 @@ public class LambdaRuntimePropsDsl {
      */
     public fun supportsInlineCode(supportsInlineCode: Boolean) {
         cdkBuilder.supportsInlineCode(supportsInlineCode)
+    }
+
+    /** @param supportsSnapStart Whether this runtime supports SnapStart. */
+    public fun supportsSnapStart(supportsSnapStart: Boolean) {
+        cdkBuilder.supportsSnapStart(supportsSnapStart)
     }
 
     public fun build(): LambdaRuntimeProps = cdkBuilder.build()

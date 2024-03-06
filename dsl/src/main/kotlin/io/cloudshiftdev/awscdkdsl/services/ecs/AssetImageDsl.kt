@@ -14,6 +14,7 @@ package io.cloudshiftdev.awscdkdsl.services.ecs
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import io.cloudshiftdev.awscdkdsl.services.ecr.assets.DockerCacheOptionDsl
 import io.cloudshiftdev.awscdkdsl.services.ecr.assets.DockerImageAssetInvalidationOptionsDsl
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -130,6 +131,17 @@ public class AssetImageDsl(
      */
     public fun buildSsh(buildSsh: String) {
         cdkBuilder.buildSsh(buildSsh)
+    }
+
+    /**
+     * Disable the cache and pass `--no-cache` to the `docker build` command.
+     *
+     * Default: - cache is used
+     *
+     * @param cacheDisabled Disable the cache and pass `--no-cache` to the `docker build` command.
+     */
+    public fun cacheDisabled(cacheDisabled: Boolean) {
+        cdkBuilder.cacheDisabled(cacheDisabled)
     }
 
     /**

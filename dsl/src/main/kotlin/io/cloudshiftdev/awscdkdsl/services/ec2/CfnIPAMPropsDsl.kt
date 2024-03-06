@@ -31,8 +31,6 @@ import software.amazon.awscdk.services.ec2.CfnIPAMProps
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.ec2.*;
  * CfnIPAMProps cfnIPAMProps = CfnIPAMProps.builder()
- * .defaultResourceDiscoveryAssociationId("defaultResourceDiscoveryAssociationId")
- * .defaultResourceDiscoveryId("defaultResourceDiscoveryId")
  * .description("description")
  * .operatingRegions(List.of(IpamOperatingRegionProperty.builder()
  * .regionName("regionName")
@@ -41,6 +39,7 @@ import software.amazon.awscdk.services.ec2.CfnIPAMProps
  * .key("key")
  * .value("value")
  * .build()))
+ * .tier("tier")
  * .build();
  * ```
  *
@@ -53,21 +52,6 @@ public class CfnIPAMPropsDsl {
     private val _operatingRegions: MutableList<Any> = mutableListOf()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
-
-    /**
-     * @param defaultResourceDiscoveryAssociationId The IPAM's default resource discovery
-     *   association ID.
-     */
-    public fun defaultResourceDiscoveryAssociationId(
-        defaultResourceDiscoveryAssociationId: String
-    ) {
-        cdkBuilder.defaultResourceDiscoveryAssociationId(defaultResourceDiscoveryAssociationId)
-    }
-
-    /** @param defaultResourceDiscoveryId The IPAM's default resource discovery ID. */
-    public fun defaultResourceDiscoveryId(defaultResourceDiscoveryId: String) {
-        cdkBuilder.defaultResourceDiscoveryId(defaultResourceDiscoveryId)
-    }
 
     /** @param description The description for the IPAM. */
     public fun description(description: String) {
@@ -131,6 +115,15 @@ public class CfnIPAMPropsDsl {
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
+    }
+
+    /**
+     * @param tier IPAM is offered in a Free Tier and an Advanced Tier. For more information about
+     *   the features available in each tier and the costs associated with the tiers, see the
+     *   [VPC IPAM product pricing page](https://docs.aws.amazon.com//vpc/pricing/) .
+     */
+    public fun tier(tier: String) {
+        cdkBuilder.tier(tier)
     }
 
     public fun build(): CfnIPAMProps {

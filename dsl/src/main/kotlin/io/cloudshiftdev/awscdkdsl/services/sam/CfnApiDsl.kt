@@ -26,7 +26,7 @@ import software.amazon.awscdk.services.sam.CfnApi
 import software.constructs.Construct
 
 /**
- * Definition of AWS::Serverless::Api.
+ * https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi.
  *
  * Example:
  * ```
@@ -45,6 +45,7 @@ import software.constructs.Construct
  * .destinationArn("destinationArn")
  * .format("format")
  * .build())
+ * .alwaysDeploy(false)
  * .auth(AuthProperty.builder()
  * .addDefaultAuthorizerToCorsPreflight(false)
  * .authorizers(authorizers)
@@ -129,6 +130,24 @@ public class CfnApiDsl(
      */
     public fun accessLogSetting(accessLogSetting: CfnApi.AccessLogSettingProperty) {
         cdkBuilder.accessLogSetting(accessLogSetting)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-api.html#cfn-serverless-api-alwaysdeploy)
+     *
+     * @param alwaysDeploy
+     */
+    public fun alwaysDeploy(alwaysDeploy: Boolean) {
+        cdkBuilder.alwaysDeploy(alwaysDeploy)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-api.html#cfn-serverless-api-alwaysdeploy)
+     *
+     * @param alwaysDeploy
+     */
+    public fun alwaysDeploy(alwaysDeploy: IResolvable) {
+        cdkBuilder.alwaysDeploy(alwaysDeploy)
     }
 
     /**

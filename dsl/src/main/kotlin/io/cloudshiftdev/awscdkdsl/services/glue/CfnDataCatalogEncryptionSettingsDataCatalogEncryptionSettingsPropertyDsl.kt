@@ -31,6 +31,7 @@ import software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings
  * .build())
  * .encryptionAtRest(EncryptionAtRestProperty.builder()
  * .catalogEncryptionMode("catalogEncryptionMode")
+ * .catalogEncryptionServiceRole("catalogEncryptionServiceRole")
  * .sseAwsKmsKeyId("sseAwsKmsKeyId")
  * .build())
  * .build();

@@ -91,7 +91,9 @@ public class CfnFlowConnectorOperatorPropertyDsl {
         cdkBuilder.marketo(marketo)
     }
 
-    /** @param pardot the value to be set. */
+    /**
+     * @param pardot The operation to be performed on the provided Salesforce Pardot source fields.
+     */
     public fun pardot(pardot: String) {
         cdkBuilder.pardot(pardot)
     }

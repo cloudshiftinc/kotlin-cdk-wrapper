@@ -27,6 +27,7 @@ import software.amazon.awscdk.services.stepfunctions.SucceedProps
  * .comment("comment")
  * .inputPath("inputPath")
  * .outputPath("outputPath")
+ * .stateName("stateName")
  * .build();
  * ```
  */
@@ -55,6 +56,11 @@ public class SucceedPropsDsl {
      */
     public fun outputPath(outputPath: String) {
         cdkBuilder.outputPath(outputPath)
+    }
+
+    /** @param stateName Optional name for this state. */
+    public fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
     }
 
     public fun build(): SucceedProps = cdkBuilder.build()

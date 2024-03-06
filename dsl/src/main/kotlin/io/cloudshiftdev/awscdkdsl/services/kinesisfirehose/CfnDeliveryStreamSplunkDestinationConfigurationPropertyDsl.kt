@@ -55,6 +55,10 @@ import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
  * .prefix("prefix")
  * .build())
  * // the properties below are optional
+ * .bufferingHints(SplunkBufferingHintsProperty.builder()
+ * .intervalInSeconds(123)
+ * .sizeInMBs(123)
+ * .build())
  * .cloudWatchLoggingOptions(CloudWatchLoggingOptionsProperty.builder()
  * .enabled(false)
  * .logGroupName("logGroupName")
@@ -87,6 +91,22 @@ public class CfnDeliveryStreamSplunkDestinationConfigurationPropertyDsl {
         CfnDeliveryStream.SplunkDestinationConfigurationProperty.builder()
 
     /**
+     * @param bufferingHints The buffering options. If no value is specified, the default values for
+     *   Splunk are used.
+     */
+    public fun bufferingHints(bufferingHints: IResolvable) {
+        cdkBuilder.bufferingHints(bufferingHints)
+    }
+
+    /**
+     * @param bufferingHints The buffering options. If no value is specified, the default values for
+     *   Splunk are used.
+     */
+    public fun bufferingHints(bufferingHints: CfnDeliveryStream.SplunkBufferingHintsProperty) {
+        cdkBuilder.bufferingHints(bufferingHints)
+    }
+
+    /**
      * @param cloudWatchLoggingOptions The Amazon CloudWatch logging options for your delivery
      *   stream.
      */
@@ -105,18 +125,17 @@ public class CfnDeliveryStreamSplunkDestinationConfigurationPropertyDsl {
     }
 
     /**
-     * @param hecAcknowledgmentTimeoutInSeconds The amount of time that Kinesis Data Firehose waits
-     *   to receive an acknowledgment from Splunk after it sends it data. At the end of the timeout
-     *   period, Kinesis Data Firehose either tries to send the data again or considers it an error,
-     *   based on your retry settings.
+     * @param hecAcknowledgmentTimeoutInSeconds The amount of time that Firehose waits to receive an
+     *   acknowledgment from Splunk after it sends it data. At the end of the timeout period,
+     *   Firehose either tries to send the data again or considers it an error, based on your retry
+     *   settings.
      */
     public fun hecAcknowledgmentTimeoutInSeconds(hecAcknowledgmentTimeoutInSeconds: Number) {
         cdkBuilder.hecAcknowledgmentTimeoutInSeconds(hecAcknowledgmentTimeoutInSeconds)
     }
 
     /**
-     * @param hecEndpoint The HTTP Event Collector (HEC) endpoint to which Kinesis Data Firehose
-     *   sends your data.
+     * @param hecEndpoint The HTTP Event Collector (HEC) endpoint to which Firehose sends your data.
      */
     public fun hecEndpoint(hecEndpoint: String) {
         cdkBuilder.hecEndpoint(hecEndpoint)
@@ -148,16 +167,16 @@ public class CfnDeliveryStreamSplunkDestinationConfigurationPropertyDsl {
     }
 
     /**
-     * @param retryOptions The retry behavior in case Kinesis Data Firehose is unable to deliver
-     *   data to Splunk, or if it doesn't receive an acknowledgment of receipt from Splunk.
+     * @param retryOptions The retry behavior in case Firehose is unable to deliver data to Splunk,
+     *   or if it doesn't receive an acknowledgment of receipt from Splunk.
      */
     public fun retryOptions(retryOptions: IResolvable) {
         cdkBuilder.retryOptions(retryOptions)
     }
 
     /**
-     * @param retryOptions The retry behavior in case Kinesis Data Firehose is unable to deliver
-     *   data to Splunk, or if it doesn't receive an acknowledgment of receipt from Splunk.
+     * @param retryOptions The retry behavior in case Firehose is unable to deliver data to Splunk,
+     *   or if it doesn't receive an acknowledgment of receipt from Splunk.
      */
     public fun retryOptions(retryOptions: CfnDeliveryStream.SplunkRetryOptionsProperty) {
         cdkBuilder.retryOptions(retryOptions)
@@ -165,10 +184,10 @@ public class CfnDeliveryStreamSplunkDestinationConfigurationPropertyDsl {
 
     /**
      * @param s3BackupMode Defines how documents should be delivered to Amazon S3. When set to
-     *   `FailedEventsOnly` , Kinesis Data Firehose writes any data that could not be indexed to the
-     *   configured Amazon S3 destination. When set to `AllEvents` , Kinesis Data Firehose delivers
-     *   all incoming records to Amazon S3, and also writes failed documents to Amazon S3. The
-     *   default value is `FailedEventsOnly` .
+     *   `FailedEventsOnly` , Firehose writes any data that could not be indexed to the configured
+     *   Amazon S3 destination. When set to `AllEvents` , Firehose delivers all incoming records to
+     *   Amazon S3, and also writes failed documents to Amazon S3. The default value is
+     *   `FailedEventsOnly` .
      *
      * You can update this backup mode from `FailedEventsOnly` to `AllEvents` . You can't update it
      * from `AllEvents` to `FailedEventsOnly` .

@@ -66,7 +66,7 @@ public class CfnPolicyPropsDsl {
      * The text that you supply must adhere to the rules of the policy type you specify in the
      * `Type` parameter. The following AWS Organizations quotas are enforced for the maximum size of
      * a policy document:
-     * * Service control policies: 5,120 bytes *(not characters)*
+     * * Service control policies: 5,120 characters
      * * AI services opt-out policies: 2,500 characters
      * * Backup policies: 10,000 characters
      * * Tag policies: 10,000 characters
@@ -92,7 +92,7 @@ public class CfnPolicyPropsDsl {
      * The text that you supply must adhere to the rules of the policy type you specify in the
      * `Type` parameter. The following AWS Organizations quotas are enforced for the maximum size of
      * a policy document:
-     * * Service control policies: 5,120 bytes *(not characters)*
+     * * Service control policies: 5,120 characters
      * * AI services opt-out policies: 2,500 characters
      * * Backup policies: 10,000 characters
      * * Tag policies: 10,000 characters

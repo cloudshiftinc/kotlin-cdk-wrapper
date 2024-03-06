@@ -18,8 +18,7 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.emrserverless.CfnApplication
 
 /**
- * The conﬁguration for an application to automatically stop after a certain amount of time being
- * idle.
+ * Configuration for Auto Stop of Application.
  *
  * Example:
  * ```
@@ -41,26 +40,24 @@ public class CfnApplicationAutoStopConfigurationPropertyDsl {
         CfnApplication.AutoStopConfigurationProperty.builder()
 
     /**
-     * @param enabled Enables the application to automatically stop after a certain amount of time
-     *   being idle. Defaults to true.
+     * @param enabled If set to true, the Application will automatically stop after being idle.
+     *   Defaults to true.
      */
     public fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
     }
 
     /**
-     * @param enabled Enables the application to automatically stop after a certain amount of time
-     *   being idle. Defaults to true.
+     * @param enabled If set to true, the Application will automatically stop after being idle.
+     *   Defaults to true.
      */
     public fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled)
     }
 
     /**
-     * @param idleTimeoutMinutes The amount of idle time in minutes after which your application
-     *   will automatically stop. Defaults to 15 minutes. *Minimum* : 1
-     *
-     * *Maximum* : 10080
+     * @param idleTimeoutMinutes The amount of time [in minutes] to wait before auto stopping the
+     *   Application when idle. Defaults to 15 minutes.
      */
     public fun idleTimeoutMinutes(idleTimeoutMinutes: Number) {
         cdkBuilder.idleTimeoutMinutes(idleTimeoutMinutes)

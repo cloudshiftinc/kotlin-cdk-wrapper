@@ -53,16 +53,16 @@ public class CfnAppImageConfigKernelGatewayImageConfigPropertyDsl {
     private val _kernelSpecs: MutableList<Any> = mutableListOf()
 
     /**
-     * @param fileSystemConfig The Amazon Elastic File System (EFS) storage configuration for a
-     *   SageMaker image.
+     * @param fileSystemConfig The Amazon Elastic File System storage configuration for a SageMaker
+     *   image.
      */
     public fun fileSystemConfig(fileSystemConfig: IResolvable) {
         cdkBuilder.fileSystemConfig(fileSystemConfig)
     }
 
     /**
-     * @param fileSystemConfig The Amazon Elastic File System (EFS) storage configuration for a
-     *   SageMaker image.
+     * @param fileSystemConfig The Amazon Elastic File System storage configuration for a SageMaker
+     *   image.
      */
     public fun fileSystemConfig(fileSystemConfig: CfnAppImageConfig.FileSystemConfigProperty) {
         cdkBuilder.fileSystemConfig(fileSystemConfig)

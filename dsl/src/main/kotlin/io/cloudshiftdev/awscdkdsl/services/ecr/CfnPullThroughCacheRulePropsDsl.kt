@@ -25,7 +25,9 @@ import software.amazon.awscdk.services.ecr.CfnPullThroughCacheRuleProps
  * import software.amazon.awscdk.services.ecr.*;
  * CfnPullThroughCacheRuleProps cfnPullThroughCacheRuleProps =
  * CfnPullThroughCacheRuleProps.builder()
+ * .credentialArn("credentialArn")
  * .ecrRepositoryPrefix("ecrRepositoryPrefix")
+ * .upstreamRegistry("upstreamRegistry")
  * .upstreamRegistryUrl("upstreamRegistryUrl")
  * .build();
  * ```
@@ -38,11 +40,27 @@ public class CfnPullThroughCacheRulePropsDsl {
         CfnPullThroughCacheRuleProps.builder()
 
     /**
+     * @param credentialArn The ARN of the Secrets Manager secret associated with the pull through
+     *   cache rule.
+     */
+    public fun credentialArn(credentialArn: String) {
+        cdkBuilder.credentialArn(credentialArn)
+    }
+
+    /**
      * @param ecrRepositoryPrefix The Amazon ECR repository prefix associated with the pull through
      *   cache rule.
      */
     public fun ecrRepositoryPrefix(ecrRepositoryPrefix: String) {
         cdkBuilder.ecrRepositoryPrefix(ecrRepositoryPrefix)
+    }
+
+    /**
+     * @param upstreamRegistry The name of the upstream source registry associated with the pull
+     *   through cache rule.
+     */
+    public fun upstreamRegistry(upstreamRegistry: String) {
+        cdkBuilder.upstreamRegistry(upstreamRegistry)
     }
 
     /**

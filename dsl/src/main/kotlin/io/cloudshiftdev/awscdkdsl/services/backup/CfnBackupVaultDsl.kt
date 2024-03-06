@@ -124,20 +124,6 @@ public class CfnBackupVaultDsl(
     }
 
     /**
-     * Metadata that you can assign to help organize the resources that you create.
-     *
-     * Each tag is a key-value pair.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html#cfn-backup-backupvault-backupvaulttags)
-     *
-     * @param backupVaultTags Metadata that you can assign to help organize the resources that you
-     *   create.
-     */
-    public fun backupVaultTags(backupVaultTags: IResolvable) {
-        cdkBuilder.backupVaultTags(backupVaultTags)
-    }
-
-    /**
      * A server-side encryption key you can specify to encrypt your backups from services that
      * support full AWS Backup management;
      *

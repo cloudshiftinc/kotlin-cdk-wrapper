@@ -22,7 +22,7 @@ import software.amazon.awscdk.services.fis.CfnExperimentTemplate
  *
  * For more information, see
  * [Resource filters](https://docs.aws.amazon.com/fis/latest/userguide/targets.html#target-filters)
- * in the *AWS Fault Injection Simulator User Guide* .
+ * in the *AWS Fault Injection Service User Guide* .
  *
  * Example:
  * ```

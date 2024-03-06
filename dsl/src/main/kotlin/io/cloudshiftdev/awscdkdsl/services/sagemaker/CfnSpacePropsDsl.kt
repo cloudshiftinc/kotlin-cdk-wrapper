@@ -34,7 +34,34 @@ import software.amazon.awscdk.services.sagemaker.CfnSpaceProps
  * .domainId("domainId")
  * .spaceName("spaceName")
  * // the properties below are optional
+ * .ownershipSettings(OwnershipSettingsProperty.builder()
+ * .ownerUserProfileName("ownerUserProfileName")
+ * .build())
+ * .spaceDisplayName("spaceDisplayName")
  * .spaceSettings(SpaceSettingsProperty.builder()
+ * .appType("appType")
+ * .codeEditorAppSettings(SpaceCodeEditorAppSettingsProperty.builder()
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .build())
+ * .customFileSystems(List.of(CustomFileSystemProperty.builder()
+ * .efsFileSystem(EFSFileSystemProperty.builder()
+ * .fileSystemId("fileSystemId")
+ * .build())
+ * .build()))
+ * .jupyterLabAppSettings(SpaceJupyterLabAppSettingsProperty.builder()
+ * .codeRepositories(List.of(CodeRepositoryProperty.builder()
+ * .repositoryUrl("repositoryUrl")
+ * .build()))
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .build())
  * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
  * .defaultResourceSpec(ResourceSpecProperty.builder()
  * .instanceType("instanceType")
@@ -55,6 +82,14 @@ import software.amazon.awscdk.services.sagemaker.CfnSpaceProps
  * .sageMakerImageVersionArn("sageMakerImageVersionArn")
  * .build())
  * .build())
+ * .spaceStorageSettings(SpaceStorageSettingsProperty.builder()
+ * .ebsStorageSettings(EbsStorageSettingsProperty.builder()
+ * .ebsVolumeSizeInGb(123)
+ * .build())
+ * .build())
+ * .build())
+ * .spaceSharingSettings(SpaceSharingSettingsProperty.builder()
+ * .sharingType("sharingType")
  * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -71,9 +106,24 @@ public class CfnSpacePropsDsl {
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
-    /** @param domainId The ID of the associated Domain. */
+    /** @param domainId The ID of the associated domain. */
     public fun domainId(domainId: String) {
         cdkBuilder.domainId(domainId)
+    }
+
+    /** @param ownershipSettings The collection of ownership settings for a space. */
+    public fun ownershipSettings(ownershipSettings: IResolvable) {
+        cdkBuilder.ownershipSettings(ownershipSettings)
+    }
+
+    /** @param ownershipSettings The collection of ownership settings for a space. */
+    public fun ownershipSettings(ownershipSettings: CfnSpace.OwnershipSettingsProperty) {
+        cdkBuilder.ownershipSettings(ownershipSettings)
+    }
+
+    /** @param spaceDisplayName The name of the space that appears in the Studio UI. */
+    public fun spaceDisplayName(spaceDisplayName: String) {
+        cdkBuilder.spaceDisplayName(spaceDisplayName)
     }
 
     /** @param spaceName The name of the space. */
@@ -89,6 +139,16 @@ public class CfnSpacePropsDsl {
     /** @param spaceSettings A collection of space settings. */
     public fun spaceSettings(spaceSettings: CfnSpace.SpaceSettingsProperty) {
         cdkBuilder.spaceSettings(spaceSettings)
+    }
+
+    /** @param spaceSharingSettings A collection of space sharing settings. */
+    public fun spaceSharingSettings(spaceSharingSettings: IResolvable) {
+        cdkBuilder.spaceSharingSettings(spaceSharingSettings)
+    }
+
+    /** @param spaceSharingSettings A collection of space sharing settings. */
+    public fun spaceSharingSettings(spaceSharingSettings: CfnSpace.SpaceSharingSettingsProperty) {
+        cdkBuilder.spaceSharingSettings(spaceSharingSettings)
     }
 
     /**

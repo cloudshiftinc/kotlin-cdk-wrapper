@@ -38,6 +38,7 @@ import software.amazon.awscdk.services.ecs.CfnTaskDefinitionProps
  * // the properties below are optional
  * .command(List.of("command"))
  * .cpu(123)
+ * .credentialSpecs(List.of("credentialSpecs"))
  * .dependsOn(List.of(ContainerDependencyProperty.builder()
  * .condition("condition")
  * .containerName("containerName")
@@ -194,6 +195,7 @@ import software.amazon.awscdk.services.ecs.CfnTaskDefinitionProps
  * .build()))
  * .taskRoleArn("taskRoleArn")
  * .volumes(List.of(VolumeProperty.builder()
+ * .configuredAtLaunch(false)
  * .dockerVolumeConfiguration(DockerVolumeConfigurationProperty.builder()
  * .autoprovision(false)
  * .driver("driver")

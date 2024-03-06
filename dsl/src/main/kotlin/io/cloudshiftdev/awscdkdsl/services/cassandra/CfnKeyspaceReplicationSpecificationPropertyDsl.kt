@@ -19,7 +19,7 @@ import software.amazon.awscdk.services.cassandra.CfnKeyspace
 
 /**
  * You can use `ReplicationSpecification` to configure the `ReplicationStrategy` of a keyspace in
- * Amazon Keyspaces.
+ * Amazon Keyspaces .
  *
  * The `ReplicationSpecification` property is `CreateOnly` and cannot be changed after the keyspace
  * has been created. This property applies automatically to all tables in the keyspace.

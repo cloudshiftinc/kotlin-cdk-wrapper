@@ -26,7 +26,8 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
  * statement.
  *
  * You cannot nest a `RuleGroupReferenceStatement` , for example for use inside a `NotStatement` or
- * `OrStatement` . You can only use a rule group reference statement at the top level inside a web
+ * `OrStatement` . You cannot use a rule group reference statement inside another rule group. You
+ * can only reference a rule group as a top-level statement within a rule that you define in a web
  * ACL.
  *
  * Example:

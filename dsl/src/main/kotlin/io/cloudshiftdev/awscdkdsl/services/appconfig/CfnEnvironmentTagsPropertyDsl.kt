@@ -16,11 +16,6 @@ import kotlin.String
 import software.amazon.awscdk.services.appconfig.CfnEnvironment
 
 /**
- * Metadata to assign to the environment.
- *
- * Tags help organize and categorize your AWS AppConfig resources. Each tag consists of a key and an
- * optional value, both of which you define.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -39,15 +34,12 @@ public class CfnEnvironmentTagsPropertyDsl {
     private val cdkBuilder: CfnEnvironment.TagsProperty.Builder =
         CfnEnvironment.TagsProperty.builder()
 
-    /**
-     * @param key The key-value string map. The valid character set is `[a-zA-Z+-=._:/]` . The tag
-     *   key can be up to 128 characters and must not start with `aws:` .
-     */
+    /** @param key the value to be set. */
     public fun key(key: String) {
         cdkBuilder.key(key)
     }
 
-    /** @param value The tag value can be up to 256 characters. */
+    /** @param value the value to be set. */
     public fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
     }

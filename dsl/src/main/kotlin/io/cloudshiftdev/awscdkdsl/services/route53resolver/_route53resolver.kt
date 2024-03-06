@@ -19,6 +19,8 @@ import software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroup
 import software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroupAssociation
 import software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroupAssociationProps
 import software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroupProps
+import software.amazon.awscdk.services.route53resolver.CfnOutpostResolver
+import software.amazon.awscdk.services.route53resolver.CfnOutpostResolverProps
 import software.amazon.awscdk.services.route53resolver.CfnResolverConfig
 import software.amazon.awscdk.services.route53resolver.CfnResolverConfigProps
 import software.amazon.awscdk.services.route53resolver.CfnResolverDNSSECConfig
@@ -129,6 +131,7 @@ public object route53resolver {
      * .blockOverrideDomain("blockOverrideDomain")
      * .blockOverrideTtl(123)
      * .blockResponse("blockResponse")
+     * .qtype("qtype")
      * .build()))
      * .name("name")
      * .tags(List.of(CfnTag.builder()
@@ -236,6 +239,7 @@ public object route53resolver {
      * .blockOverrideDomain("blockOverrideDomain")
      * .blockOverrideTtl(123)
      * .blockResponse("blockResponse")
+     * .qtype("qtype")
      * .build();
      * ```
      *
@@ -267,6 +271,7 @@ public object route53resolver {
      * .blockOverrideDomain("blockOverrideDomain")
      * .blockOverrideTtl(123)
      * .blockResponse("blockResponse")
+     * .qtype("qtype")
      * .build()))
      * .name("name")
      * .tags(List.of(CfnTag.builder()
@@ -282,6 +287,71 @@ public object route53resolver {
         block: CfnFirewallRuleGroupPropsDsl.() -> Unit = {}
     ): CfnFirewallRuleGroupProps {
         val builder = CfnFirewallRuleGroupPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Creates a Amazon Route 53 Resolver on an Outpost.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.route53resolver.*;
+     * CfnOutpostResolver cfnOutpostResolver = CfnOutpostResolver.Builder.create(this,
+     * "MyCfnOutpostResolver")
+     * .name("name")
+     * .outpostArn("outpostArn")
+     * .preferredInstanceType("preferredInstanceType")
+     * // the properties below are optional
+     * .instanceCount(123)
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-outpostresolver.html)
+     */
+    public inline fun cfnOutpostResolver(
+        scope: Construct,
+        id: String,
+        block: CfnOutpostResolverDsl.() -> Unit = {},
+    ): CfnOutpostResolver {
+        val builder = CfnOutpostResolverDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnOutpostResolver`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.route53resolver.*;
+     * CfnOutpostResolverProps cfnOutpostResolverProps = CfnOutpostResolverProps.builder()
+     * .name("name")
+     * .outpostArn("outpostArn")
+     * .preferredInstanceType("preferredInstanceType")
+     * // the properties below are optional
+     * .instanceCount(123)
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-outpostresolver.html)
+     */
+    public inline fun cfnOutpostResolverProps(
+        block: CfnOutpostResolverPropsDsl.() -> Unit = {}
+    ): CfnOutpostResolverProps {
+        val builder = CfnOutpostResolverPropsDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -418,6 +488,7 @@ public object route53resolver {
      * .name("name")
      * .outpostArn("outpostArn")
      * .preferredInstanceType("preferredInstanceType")
+     * .protocols(List.of("protocols"))
      * .resolverEndpointType("resolverEndpointType")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
@@ -489,6 +560,7 @@ public object route53resolver {
      * .name("name")
      * .outpostArn("outpostArn")
      * .preferredInstanceType("preferredInstanceType")
+     * .protocols(List.of("protocols"))
      * .resolverEndpointType("resolverEndpointType")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
@@ -641,6 +713,7 @@ public object route53resolver {
      * .ip("ip")
      * .ipv6("ipv6")
      * .port("port")
+     * .protocol("protocol")
      * .build()))
      * .build();
      * ```
@@ -743,6 +816,7 @@ public object route53resolver {
      * .ip("ip")
      * .ipv6("ipv6")
      * .port("port")
+     * .protocol("protocol")
      * .build()))
      * .build();
      * ```
@@ -771,6 +845,7 @@ public object route53resolver {
      * .ip("ip")
      * .ipv6("ipv6")
      * .port("port")
+     * .protocol("protocol")
      * .build();
      * ```
      *

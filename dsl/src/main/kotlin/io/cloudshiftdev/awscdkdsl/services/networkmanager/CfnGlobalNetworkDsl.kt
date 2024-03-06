@@ -30,7 +30,9 @@ import software.constructs.Construct
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.networkmanager.*;
  * CfnGlobalNetwork cfnGlobalNetwork = CfnGlobalNetwork.Builder.create(this, "MyCfnGlobalNetwork")
+ * .createdAt("createdAt")
  * .description("description")
+ * .state("state")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -50,6 +52,17 @@ public class CfnGlobalNetworkDsl(
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
+     * The date and time that the global network was created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-globalnetwork.html#cfn-networkmanager-globalnetwork-createdat)
+     *
+     * @param createdAt The date and time that the global network was created.
+     */
+    public fun createdAt(createdAt: String) {
+        cdkBuilder.createdAt(createdAt)
+    }
+
+    /**
      * A description of the global network.
      *
      * Constraints: Maximum length of 256 characters.
@@ -60,6 +73,17 @@ public class CfnGlobalNetworkDsl(
      */
     public fun description(description: String) {
         cdkBuilder.description(description)
+    }
+
+    /**
+     * The state of the global network.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-globalnetwork.html#cfn-networkmanager-globalnetwork-state)
+     *
+     * @param state The state of the global network.
+     */
+    public fun state(state: String) {
+        cdkBuilder.state(state)
     }
 
     /**

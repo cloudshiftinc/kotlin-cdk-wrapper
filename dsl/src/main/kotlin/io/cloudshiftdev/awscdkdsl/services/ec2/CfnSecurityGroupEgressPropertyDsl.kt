@@ -17,36 +17,24 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnSecurityGroup
 
 /**
- * Adds the specified egress rules to a security group for use with a VPC.
+ * Adds the specified outbound (egress) rule to a security group.
  *
- * An outbound rule permits instances to send traffic to the specified destination IPv4 or IPv6 CIDR
- * address ranges, or to the specified destination security groups for the same VPC.
- *
- * You specify a protocol for each rule (for example, TCP). For the TCP and UDP protocols, you must
- * also specify the destination port or port range. For the ICMP protocol, you must also specify the
- * ICMP type and code. You can use -1 for the type or code to mean all types or all codes.
- *
- * You must specify only one of the following properties: `CidrIp` , `CidrIpv6` ,
- * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
- *
- * You must specify a destination security group ( `DestinationPrefixListId` or
- * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ). If you do not specify
- * one of these parameters, the stack will launch successfully but the rule will not be added to the
- * security group.
- *
- * Rule changes are propagated to affected instances as quickly as possible. However, a small delay
- * might occur.
- *
- * For more information about VPC security group limits, see
- * [Amazon VPC Limits](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html) .
- *
- * Use `SecurityGroup.Ingress` and `SecurityGroup.Egress` only when necessary, typically to allow
- * security groups to reference each other in ingress and egress rules. Otherwise, use the embedded
- * ingress and egress rules of the security group. For more information, see
- * [Amazon EC2 Security Groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html)
+ * An outbound rule permits instances to send traffic to the specified IPv4 or IPv6 address range,
+ * the IP address ranges that are specified by a prefix list, or the instances that are associated
+ * with a destination security group. For more information, see
+ * [Security group rules](https://docs.aws.amazon.com/vpc/latest/userguide/security-group-rules.html)
  * .
  *
- * The EC2 Security Group Rule is an embedded property of the `AWS::EC2::SecurityGroup` type.
+ * You must specify exactly one of the following destinations: an IPv4 or IPv6 address range, a
+ * prefix list, or a security group. Otherwise, the stack launches successfully but the rule is not
+ * added to the security group.
+ *
+ * You must specify a protocol for each rule (for example, TCP). If the protocol is TCP or UDP, you
+ * must also specify a port or port range. If the protocol is ICMP or ICMPv6, you must also specify
+ * the ICMP/ICMPv6 type and code.
+ *
+ * Rule changes are propagated to instances associated with the security group as quickly as
+ * possible. However, a small delay might occur.
  *
  * Example:
  * ```
@@ -131,9 +119,7 @@ public class CfnSecurityGroupEgressPropertyDsl {
 
     /**
      * @param fromPort If the protocol is TCP or UDP, this is the start of the port range. If the
-     *   protocol is ICMP or ICMPv6, this is the type number. A value of -1 indicates all
-     *   ICMP/ICMPv6 types. If you specify all ICMP/ICMPv6 types, you must specify all ICMP/ICMPv6
-     *   codes.
+     *   protocol is ICMP or ICMPv6, this is the ICMP type or -1 (all ICMP types).
      */
     public fun fromPort(fromPort: Number) {
         cdkBuilder.fromPort(fromPort)
@@ -154,8 +140,8 @@ public class CfnSecurityGroupEgressPropertyDsl {
 
     /**
      * @param toPort If the protocol is TCP or UDP, this is the end of the port range. If the
-     *   protocol is ICMP or ICMPv6, this is the code. A value of -1 indicates all ICMP/ICMPv6
-     *   codes. If you specify all ICMP/ICMPv6 types, you must specify all ICMP/ICMPv6 codes.
+     *   protocol is ICMP or ICMPv6, this is the ICMP code or -1 (all ICMP codes). If the start port
+     *   is -1 (all ICMP types), then the end port must be -1 (all ICMP codes).
      */
     public fun toPort(toPort: Number) {
         cdkBuilder.toPort(toPort)

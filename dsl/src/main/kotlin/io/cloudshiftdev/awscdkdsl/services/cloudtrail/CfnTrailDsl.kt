@@ -237,11 +237,7 @@ public class CfnTrailDsl(
      *
      * You can configure up to five event selectors for a trail.
      *
-     * For more information about how to configure event selectors, see
-     * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#aws-resource-cloudtrail-trail--examples)
-     * and
-     * [Configuring event selectors](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-additional-cli-commands.html#configuring-event-selector-examples)
-     * in the *AWS CloudTrail User Guide* .
+     * You cannot apply both event selectors and advanced event selectors to a trail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-eventselectors)
      *
@@ -263,11 +259,7 @@ public class CfnTrailDsl(
      *
      * You can configure up to five event selectors for a trail.
      *
-     * For more information about how to configure event selectors, see
-     * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#aws-resource-cloudtrail-trail--examples)
-     * and
-     * [Configuring event selectors](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-additional-cli-commands.html#configuring-event-selector-examples)
-     * in the *AWS CloudTrail User Guide* .
+     * You cannot apply both event selectors and advanced event selectors to a trail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-eventselectors)
      *
@@ -289,11 +281,7 @@ public class CfnTrailDsl(
      *
      * You can configure up to five event selectors for a trail.
      *
-     * For more information about how to configure event selectors, see
-     * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#aws-resource-cloudtrail-trail--examples)
-     * and
-     * [Configuring event selectors](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-additional-cli-commands.html#configuring-event-selector-examples)
-     * in the *AWS CloudTrail User Guide* .
+     * You cannot apply both event selectors and advanced event selectors to a trail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-eventselectors)
      *
@@ -331,7 +319,7 @@ public class CfnTrailDsl(
     }
 
     /**
-     * A JSON string that contains the insight types you want to log on a trail.
+     * A JSON string that contains the Insights types you want to log on a trail.
      *
      * `ApiCallRateInsight` and `ApiErrorRateInsight` are valid Insight types.
      *
@@ -343,7 +331,7 @@ public class CfnTrailDsl(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-insightselectors)
      *
-     * @param insightSelectors A JSON string that contains the insight types you want to log on a
+     * @param insightSelectors A JSON string that contains the Insights types you want to log on a
      *   trail.
      */
     public fun insightSelectors(vararg insightSelectors: Any) {
@@ -351,7 +339,7 @@ public class CfnTrailDsl(
     }
 
     /**
-     * A JSON string that contains the insight types you want to log on a trail.
+     * A JSON string that contains the Insights types you want to log on a trail.
      *
      * `ApiCallRateInsight` and `ApiErrorRateInsight` are valid Insight types.
      *
@@ -363,7 +351,7 @@ public class CfnTrailDsl(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-insightselectors)
      *
-     * @param insightSelectors A JSON string that contains the insight types you want to log on a
+     * @param insightSelectors A JSON string that contains the Insights types you want to log on a
      *   trail.
      */
     public fun insightSelectors(insightSelectors: Collection<Any>) {
@@ -371,7 +359,7 @@ public class CfnTrailDsl(
     }
 
     /**
-     * A JSON string that contains the insight types you want to log on a trail.
+     * A JSON string that contains the Insights types you want to log on a trail.
      *
      * `ApiCallRateInsight` and `ApiErrorRateInsight` are valid Insight types.
      *
@@ -383,7 +371,7 @@ public class CfnTrailDsl(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-insightselectors)
      *
-     * @param insightSelectors A JSON string that contains the insight types you want to log on a
+     * @param insightSelectors A JSON string that contains the Insights types you want to log on a
      *   trail.
      */
     public fun insightSelectors(insightSelectors: IResolvable) {
@@ -453,11 +441,14 @@ public class CfnTrailDsl(
      * Organizations , or only for the current AWS account .
      *
      * The default is false, and cannot be true unless the call is made on behalf of an AWS account
-     * that is the management account or delegated administrator account for an organization in AWS
-     * Organizations . If the trail is not an organization trail and this is set to `true` , the
-     * trail will be created in all AWS accounts that belong to the organization. If the trail is an
-     * organization trail and this is set to `false` , the trail will remain in the current AWS
-     * account but be deleted from all member accounts in the organization.
+     * that is the management account for an organization in AWS Organizations . If the trail is not
+     * an organization trail and this is set to `true` , the trail will be created in all AWS
+     * accounts that belong to the organization. If the trail is an organization trail and this is
+     * set to `false` , the trail will remain in the current AWS account but be deleted from all
+     * member accounts in the organization.
+     *
+     * Only the management account for the organization can convert an organization trail to a
+     * non-organization trail, or convert a non-organization trail to an organization trail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-isorganizationtrail)
      *
@@ -473,11 +464,14 @@ public class CfnTrailDsl(
      * Organizations , or only for the current AWS account .
      *
      * The default is false, and cannot be true unless the call is made on behalf of an AWS account
-     * that is the management account or delegated administrator account for an organization in AWS
-     * Organizations . If the trail is not an organization trail and this is set to `true` , the
-     * trail will be created in all AWS accounts that belong to the organization. If the trail is an
-     * organization trail and this is set to `false` , the trail will remain in the current AWS
-     * account but be deleted from all member accounts in the organization.
+     * that is the management account for an organization in AWS Organizations . If the trail is not
+     * an organization trail and this is set to `true` , the trail will be created in all AWS
+     * accounts that belong to the organization. If the trail is an organization trail and this is
+     * set to `false` , the trail will remain in the current AWS account but be deleted from all
+     * member accounts in the organization.
+     *
+     * Only the management account for the organization can convert an organization trail to a
+     * non-organization trail, or convert a non-organization trail to an organization trail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-isorganizationtrail)
      *

@@ -22,7 +22,7 @@ import software.amazon.awscdk.services.mediatailor.CfnSourceLocation
  * For example, you can configure your source location server to be an origination server, such as
  * MediaPackage, and the segment delivery server to be a content delivery network (CDN), such as
  * CloudFront. If you don't specify a segment delivery server, then the source location server is
- * used.</p>
+ * used.
  *
  * Example:
  * ```
@@ -44,7 +44,7 @@ public class CfnSourceLocationDefaultSegmentDeliveryConfigurationPropertyDsl {
 
     /**
      * @param baseUrl The hostname of the server that will be used to serve segments. This string
-     *   must include the protocol, such as <b>https://</b>.</p>
+     *   must include the protocol, such as *https:// * .
      */
     public fun baseUrl(baseUrl: String) {
         cdkBuilder.baseUrl(baseUrl)

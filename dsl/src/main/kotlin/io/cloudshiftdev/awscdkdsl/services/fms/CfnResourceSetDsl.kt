@@ -110,54 +110,36 @@ public class CfnResourceSetDsl(
     }
 
     /**
-     * The resources included in the resource set.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-resourceset.html#cfn-fms-resourceset-resources)
      *
-     * @param resources The resources included in the resource set.
+     * @param resources
      */
     public fun resources(vararg resources: String) {
         _resources.addAll(listOf(*resources))
     }
 
     /**
-     * The resources included in the resource set.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-resourceset.html#cfn-fms-resourceset-resources)
      *
-     * @param resources The resources included in the resource set.
+     * @param resources
      */
     public fun resources(resources: Collection<String>) {
         _resources.addAll(resources)
     }
 
     /**
-     * A collection of key:value pairs associated with a resource set.
-     *
-     * The key:value pair can be anything you define. Typically, the tag key represents a category
-     * (such as "environment") and the tag value represents a specific value within that category
-     * (such as "test," "development," or "production"). You can add up to 50 tags to each AWS
-     * resource.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-resourceset.html#cfn-fms-resourceset-tags)
      *
-     * @param tags A collection of key:value pairs associated with a resource set.
+     * @param tags
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
     /**
-     * A collection of key:value pairs associated with a resource set.
-     *
-     * The key:value pair can be anything you define. Typically, the tag key represents a category
-     * (such as "environment") and the tag value represents a specific value within that category
-     * (such as "test," "development," or "production"). You can add up to 50 tags to each AWS
-     * resource.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-resourceset.html#cfn-fms-resourceset-tags)
      *
-     * @param tags A collection of key:value pairs associated with a resource set.
+     * @param tags
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)

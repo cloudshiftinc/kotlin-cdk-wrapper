@@ -264,6 +264,7 @@ public object apprunner {
      * .startCommand("startCommand")
      * .build())
      * .build())
+     * .sourceDirectory("sourceDirectory")
      * .build())
      * .imageRepository(ImageRepositoryProperty.builder()
      * .imageIdentifier("imageIdentifier")
@@ -310,6 +311,7 @@ public object apprunner {
      * .ingressConfiguration(IngressConfigurationProperty.builder()
      * .isPubliclyAccessible(false)
      * .build())
+     * .ipAddressType("ipAddressType")
      * .build())
      * .observabilityConfiguration(ServiceObservabilityConfigurationProperty.builder()
      * .observabilityEnabled(false)
@@ -476,6 +478,7 @@ public object apprunner {
      * .startCommand("startCommand")
      * .build())
      * .build())
+     * .sourceDirectory("sourceDirectory")
      * .build();
      * ```
      *
@@ -734,6 +737,7 @@ public object apprunner {
      * .ingressConfiguration(IngressConfigurationProperty.builder()
      * .isPubliclyAccessible(false)
      * .build())
+     * .ipAddressType("ipAddressType")
      * .build();
      * ```
      *
@@ -788,6 +792,7 @@ public object apprunner {
      * .startCommand("startCommand")
      * .build())
      * .build())
+     * .sourceDirectory("sourceDirectory")
      * .build())
      * .imageRepository(ImageRepositoryProperty.builder()
      * .imageIdentifier("imageIdentifier")
@@ -834,6 +839,7 @@ public object apprunner {
      * .ingressConfiguration(IngressConfigurationProperty.builder()
      * .isPubliclyAccessible(false)
      * .build())
+     * .ipAddressType("ipAddressType")
      * .build())
      * .observabilityConfiguration(ServiceObservabilityConfigurationProperty.builder()
      * .observabilityEnabled(false)
@@ -951,6 +957,7 @@ public object apprunner {
      * .startCommand("startCommand")
      * .build())
      * .build())
+     * .sourceDirectory("sourceDirectory")
      * .build())
      * .imageRepository(ImageRepositoryProperty.builder()
      * .imageIdentifier("imageIdentifier")

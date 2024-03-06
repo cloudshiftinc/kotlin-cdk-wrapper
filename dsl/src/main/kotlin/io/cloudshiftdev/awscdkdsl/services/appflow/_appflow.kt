@@ -249,6 +249,16 @@ public object appflow {
      * .build())
      * .build())
      * .serviceNow(ServiceNowConnectorProfileCredentialsProperty.builder()
+     * .oAuth2Credentials(OAuth2CredentialsProperty.builder()
+     * .accessToken("accessToken")
+     * .clientId("clientId")
+     * .clientSecret("clientSecret")
+     * .oAuthRequest(ConnectorOAuthRequestProperty.builder()
+     * .authCode("authCode")
+     * .redirectUri("redirectUri")
+     * .build())
+     * .refreshToken("refreshToken")
+     * .build())
      * .password("password")
      * .username("username")
      * .build())
@@ -607,6 +617,16 @@ public object appflow {
      * .build())
      * .build())
      * .serviceNow(ServiceNowConnectorProfileCredentialsProperty.builder()
+     * .oAuth2Credentials(OAuth2CredentialsProperty.builder()
+     * .accessToken("accessToken")
+     * .clientId("clientId")
+     * .clientSecret("clientSecret")
+     * .oAuthRequest(ConnectorOAuthRequestProperty.builder()
+     * .authCode("authCode")
+     * .redirectUri("redirectUri")
+     * .build())
+     * .refreshToken("refreshToken")
+     * .build())
      * .password("password")
      * .username("username")
      * .build())
@@ -859,6 +879,16 @@ public object appflow {
      * .build())
      * .build())
      * .serviceNow(ServiceNowConnectorProfileCredentialsProperty.builder()
+     * .oAuth2Credentials(OAuth2CredentialsProperty.builder()
+     * .accessToken("accessToken")
+     * .clientId("clientId")
+     * .clientSecret("clientSecret")
+     * .oAuthRequest(ConnectorOAuthRequestProperty.builder()
+     * .authCode("authCode")
+     * .redirectUri("redirectUri")
+     * .build())
+     * .refreshToken("refreshToken")
+     * .build())
      * .password("password")
      * .username("username")
      * .build())
@@ -1470,6 +1500,8 @@ public object appflow {
     }
 
     /**
+     * The connector-specific profile credentials required when using Salesforce Pardot.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -1498,6 +1530,8 @@ public object appflow {
     }
 
     /**
+     * The connector-specific profile properties required when using Salesforce Pardot.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -1646,6 +1680,16 @@ public object appflow {
      * .build())
      * .build())
      * .serviceNow(ServiceNowConnectorProfileCredentialsProperty.builder()
+     * .oAuth2Credentials(OAuth2CredentialsProperty.builder()
+     * .accessToken("accessToken")
+     * .clientId("clientId")
+     * .clientSecret("clientSecret")
+     * .oAuthRequest(ConnectorOAuthRequestProperty.builder()
+     * .authCode("authCode")
+     * .redirectUri("redirectUri")
+     * .build())
+     * .refreshToken("refreshToken")
+     * .build())
      * .password("password")
      * .username("username")
      * .build())
@@ -1980,6 +2024,16 @@ public object appflow {
      * import software.amazon.awscdk.services.appflow.*;
      * ServiceNowConnectorProfileCredentialsProperty serviceNowConnectorProfileCredentialsProperty =
      * ServiceNowConnectorProfileCredentialsProperty.builder()
+     * .oAuth2Credentials(OAuth2CredentialsProperty.builder()
+     * .accessToken("accessToken")
+     * .clientId("clientId")
+     * .clientSecret("clientSecret")
+     * .oAuthRequest(ConnectorOAuthRequestProperty.builder()
+     * .authCode("authCode")
+     * .redirectUri("redirectUri")
+     * .build())
+     * .refreshToken("refreshToken")
+     * .build())
      * .password("password")
      * .username("username")
      * .build();
@@ -2520,6 +2574,13 @@ public object appflow {
      * .build())
      * .sapoData(SAPODataSourcePropertiesProperty.builder()
      * .objectPath("objectPath")
+     * // the properties below are optional
+     * .paginationConfig(SAPODataPaginationConfigProperty.builder()
+     * .maxPageSize(123)
+     * .build())
+     * .parallelismConfig(SAPODataParallelismConfigProperty.builder()
+     * .maxParallelism(123)
+     * .build())
      * .build())
      * .serviceNow(ServiceNowSourcePropertiesProperty.builder()
      * .object("object")
@@ -2779,6 +2840,8 @@ public object appflow {
     }
 
     /**
+     * The API of the connector application that Amazon AppFlow uses to transfer your data.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -3396,7 +3459,9 @@ public object appflow {
     }
 
     /**
-     * Configurations of metadata catalog of the flow.
+     * Specifies the configuration that Amazon AppFlow uses when it catalogs your data.
+     *
+     * When Amazon AppFlow catalogs your data, it stores metadata in a data catalog.
      *
      * Example:
      * ```
@@ -3424,6 +3489,8 @@ public object appflow {
     }
 
     /**
+     * The properties that are applied when Salesforce Pardot is being used as a source.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -3670,6 +3737,13 @@ public object appflow {
      * .build())
      * .sapoData(SAPODataSourcePropertiesProperty.builder()
      * .objectPath("objectPath")
+     * // the properties below are optional
+     * .paginationConfig(SAPODataPaginationConfigProperty.builder()
+     * .maxPageSize(123)
+     * .build())
+     * .parallelismConfig(SAPODataParallelismConfigProperty.builder()
+     * .maxParallelism(123)
+     * .build())
      * .build())
      * .serviceNow(ServiceNowSourcePropertiesProperty.builder()
      * .object("object")
@@ -3967,6 +4041,54 @@ public object appflow {
     }
 
     /**
+     * SAP Source connector page size.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.appflow.*;
+     * SAPODataPaginationConfigProperty sAPODataPaginationConfigProperty =
+     * SAPODataPaginationConfigProperty.builder()
+     * .maxPageSize(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatapaginationconfig.html)
+     */
+    public inline fun cfnFlowSAPODataPaginationConfigProperty(
+        block: CfnFlowSAPODataPaginationConfigPropertyDsl.() -> Unit = {}
+    ): CfnFlow.SAPODataPaginationConfigProperty {
+        val builder = CfnFlowSAPODataPaginationConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * SAP Source connector parallelism factor.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.appflow.*;
+     * SAPODataParallelismConfigProperty sAPODataParallelismConfigProperty =
+     * SAPODataParallelismConfigProperty.builder()
+     * .maxParallelism(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodataparallelismconfig.html)
+     */
+    public inline fun cfnFlowSAPODataParallelismConfigProperty(
+        block: CfnFlowSAPODataParallelismConfigPropertyDsl.() -> Unit = {}
+    ): CfnFlow.SAPODataParallelismConfigProperty {
+        val builder = CfnFlowSAPODataParallelismConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The properties that are applied when using SAPOData as a flow source.
      *
      * Example:
@@ -3977,6 +4099,13 @@ public object appflow {
      * SAPODataSourcePropertiesProperty sAPODataSourcePropertiesProperty =
      * SAPODataSourcePropertiesProperty.builder()
      * .objectPath("objectPath")
+     * // the properties below are optional
+     * .paginationConfig(SAPODataPaginationConfigProperty.builder()
+     * .maxPageSize(123)
+     * .build())
+     * .parallelismConfig(SAPODataParallelismConfigProperty.builder()
+     * .maxParallelism(123)
+     * .build())
      * .build();
      * ```
      *
@@ -4247,6 +4376,13 @@ public object appflow {
      * .build())
      * .sapoData(SAPODataSourcePropertiesProperty.builder()
      * .objectPath("objectPath")
+     * // the properties below are optional
+     * .paginationConfig(SAPODataPaginationConfigProperty.builder()
+     * .maxPageSize(123)
+     * .build())
+     * .parallelismConfig(SAPODataParallelismConfigProperty.builder()
+     * .maxParallelism(123)
+     * .build())
      * .build())
      * .serviceNow(ServiceNowSourcePropertiesProperty.builder()
      * .object("object")
@@ -4343,6 +4479,13 @@ public object appflow {
      * .build())
      * .sapoData(SAPODataSourcePropertiesProperty.builder()
      * .objectPath("objectPath")
+     * // the properties below are optional
+     * .paginationConfig(SAPODataPaginationConfigProperty.builder()
+     * .maxPageSize(123)
+     * .build())
+     * .parallelismConfig(SAPODataParallelismConfigProperty.builder()
+     * .maxParallelism(123)
+     * .build())
      * .build())
      * .serviceNow(ServiceNowSourcePropertiesProperty.builder()
      * .object("object")

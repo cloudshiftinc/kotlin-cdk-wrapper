@@ -55,6 +55,10 @@ public object iotcoredeviceadvisor {
     }
 
     /**
+     * Information of a test device.
+     *
+     * A thing ARN, certificate ARN or device role ARN is required.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -106,6 +110,8 @@ public object iotcoredeviceadvisor {
     }
 
     /**
+     * Gets the suite definition configuration.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.

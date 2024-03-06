@@ -39,6 +39,7 @@ import software.amazon.awscdk.services.ecs.CfnTaskDefinition
  * // the properties below are optional
  * .command(List.of("command"))
  * .cpu(123)
+ * .credentialSpecs(List.of("credentialSpecs"))
  * .dependsOn(List.of(ContainerDependencyProperty.builder()
  * .condition("condition")
  * .containerName("containerName")
@@ -167,6 +168,8 @@ public class CfnTaskDefinitionContainerDefinitionPropertyDsl {
 
     private val _command: MutableList<String> = mutableListOf()
 
+    private val _credentialSpecs: MutableList<String> = mutableListOf()
+
     private val _dependsOn: MutableList<Any> = mutableListOf()
 
     private val _dnsSearchDomains: MutableList<String> = mutableListOf()
@@ -279,6 +282,80 @@ public class CfnTaskDefinitionContainerDefinitionPropertyDsl {
      */
     public fun cpu(cpu: Number) {
         cdkBuilder.cpu(cpu)
+    }
+
+    /**
+     * @param credentialSpecs A list of ARNs in SSM or Amazon S3 to a credential spec ( `CredSpec` )
+     *   file that configures the container for Active Directory authentication. We recommend that
+     *   you use this parameter instead of the `dockerSecurityOptions` . The maximum number of ARNs
+     *   is 1.
+     *
+     * There are two formats for each ARN.
+     * * **credentialspecdomainless:MyARN** - You use `credentialspecdomainless:MyARN` to provide a
+     *   `CredSpec` with an additional section for a secret in AWS Secrets Manager . You provide the
+     *   login credentials to the domain in the secret.
+     *
+     * Each task that runs on any container instance can join different domains.
+     *
+     * You can use this format without joining the container instance to a domain.
+     * * **credentialspec:MyARN** - You use `credentialspec:MyARN` to provide a `CredSpec` for a
+     *   single domain.
+     *
+     * You must join the container instance to the domain before you start any tasks that use this
+     * task definition.
+     *
+     * In both formats, replace `MyARN` with the ARN in SSM or Amazon S3.
+     *
+     * If you provide a `credentialspecdomainless:MyARN` , the `credspec` must provide a ARN in AWS
+     * Secrets Manager for a secret containing the username, password, and the domain to connect to.
+     * For better security, the instance isn't joined to the domain for domainless authentication.
+     * Other applications on the instance can't use the domainless credentials. You can use this
+     * parameter to run tasks on the same instance, even it the tasks need to join different
+     * domains. For more information, see
+     * [Using gMSAs for Windows Containers](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/windows-gmsa.html)
+     * and
+     * [Using gMSAs for Linux Containers](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/linux-gmsa.html)
+     * .
+     */
+    public fun credentialSpecs(vararg credentialSpecs: String) {
+        _credentialSpecs.addAll(listOf(*credentialSpecs))
+    }
+
+    /**
+     * @param credentialSpecs A list of ARNs in SSM or Amazon S3 to a credential spec ( `CredSpec` )
+     *   file that configures the container for Active Directory authentication. We recommend that
+     *   you use this parameter instead of the `dockerSecurityOptions` . The maximum number of ARNs
+     *   is 1.
+     *
+     * There are two formats for each ARN.
+     * * **credentialspecdomainless:MyARN** - You use `credentialspecdomainless:MyARN` to provide a
+     *   `CredSpec` with an additional section for a secret in AWS Secrets Manager . You provide the
+     *   login credentials to the domain in the secret.
+     *
+     * Each task that runs on any container instance can join different domains.
+     *
+     * You can use this format without joining the container instance to a domain.
+     * * **credentialspec:MyARN** - You use `credentialspec:MyARN` to provide a `CredSpec` for a
+     *   single domain.
+     *
+     * You must join the container instance to the domain before you start any tasks that use this
+     * task definition.
+     *
+     * In both formats, replace `MyARN` with the ARN in SSM or Amazon S3.
+     *
+     * If you provide a `credentialspecdomainless:MyARN` , the `credspec` must provide a ARN in AWS
+     * Secrets Manager for a secret containing the username, password, and the domain to connect to.
+     * For better security, the instance isn't joined to the domain for domainless authentication.
+     * Other applications on the instance can't use the domainless credentials. You can use this
+     * parameter to run tasks on the same instance, even it the tasks need to join different
+     * domains. For more information, see
+     * [Using gMSAs for Windows Containers](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/windows-gmsa.html)
+     * and
+     * [Using gMSAs for Linux Containers](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/linux-gmsa.html)
+     * .
+     */
+    public fun credentialSpecs(credentialSpecs: Collection<String>) {
+        _credentialSpecs.addAll(credentialSpecs)
     }
 
     /**
@@ -1583,15 +1660,6 @@ public class CfnTaskDefinitionContainerDefinitionPropertyDsl {
      *   [docker run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
      *   . For example, you can configure `net.ipv4.tcp_keepalive_time` setting to maintain longer
      *   lived connections.
-     *
-     * We don't recommended that you specify network-related `systemControls` parameters for
-     * multiple containers in a single task that also uses either the `awsvpc` or `host` network
-     * modes. For tasks that use the `awsvpc` network mode, the container that's started last
-     * determines which `systemControls` parameters take effect. For tasks that use the `host`
-     * network mode, it changes the container instance's namespaced kernel parameters as well as the
-     * containers. &gt; This parameter is not supported for Windows containers. &gt; This parameter
-     * is only supported for tasks that are hosted on AWS Fargate if the tasks are using platform
-     * version `1.4.0` or later (Linux). This isn't supported for Windows containers on Fargate.
      */
     public fun systemControls(vararg systemControls: Any) {
         _systemControls.addAll(listOf(*systemControls))
@@ -1607,15 +1675,6 @@ public class CfnTaskDefinitionContainerDefinitionPropertyDsl {
      *   [docker run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
      *   . For example, you can configure `net.ipv4.tcp_keepalive_time` setting to maintain longer
      *   lived connections.
-     *
-     * We don't recommended that you specify network-related `systemControls` parameters for
-     * multiple containers in a single task that also uses either the `awsvpc` or `host` network
-     * modes. For tasks that use the `awsvpc` network mode, the container that's started last
-     * determines which `systemControls` parameters take effect. For tasks that use the `host`
-     * network mode, it changes the container instance's namespaced kernel parameters as well as the
-     * containers. &gt; This parameter is not supported for Windows containers. &gt; This parameter
-     * is only supported for tasks that are hosted on AWS Fargate if the tasks are using platform
-     * version `1.4.0` or later (Linux). This isn't supported for Windows containers on Fargate.
      */
     public fun systemControls(systemControls: Collection<Any>) {
         _systemControls.addAll(systemControls)
@@ -1631,15 +1690,6 @@ public class CfnTaskDefinitionContainerDefinitionPropertyDsl {
      *   [docker run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
      *   . For example, you can configure `net.ipv4.tcp_keepalive_time` setting to maintain longer
      *   lived connections.
-     *
-     * We don't recommended that you specify network-related `systemControls` parameters for
-     * multiple containers in a single task that also uses either the `awsvpc` or `host` network
-     * modes. For tasks that use the `awsvpc` network mode, the container that's started last
-     * determines which `systemControls` parameters take effect. For tasks that use the `host`
-     * network mode, it changes the container instance's namespaced kernel parameters as well as the
-     * containers. &gt; This parameter is not supported for Windows containers. &gt; This parameter
-     * is only supported for tasks that are hosted on AWS Fargate if the tasks are using platform
-     * version `1.4.0` or later (Linux). This isn't supported for Windows containers on Fargate.
      */
     public fun systemControls(systemControls: IResolvable) {
         cdkBuilder.systemControls(systemControls)
@@ -1793,6 +1843,7 @@ public class CfnTaskDefinitionContainerDefinitionPropertyDsl {
 
     public fun build(): CfnTaskDefinition.ContainerDefinitionProperty {
         if (_command.isNotEmpty()) cdkBuilder.command(_command)
+        if (_credentialSpecs.isNotEmpty()) cdkBuilder.credentialSpecs(_credentialSpecs)
         if (_dependsOn.isNotEmpty()) cdkBuilder.dependsOn(_dependsOn)
         if (_dnsSearchDomains.isNotEmpty()) cdkBuilder.dnsSearchDomains(_dnsSearchDomains)
         if (_dnsServers.isNotEmpty()) cdkBuilder.dnsServers(_dnsServers)

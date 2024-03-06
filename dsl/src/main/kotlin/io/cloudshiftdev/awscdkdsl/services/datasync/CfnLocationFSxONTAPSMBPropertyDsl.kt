@@ -49,7 +49,9 @@ public class CfnLocationFSxONTAPSMBPropertyDsl {
 
     /**
      * @param domain Specifies the fully qualified domain name (FQDN) of the Microsoft Active
-     *   Directory that your storage virtual machine (SVM) belongs to.
+     *   Directory that your storage virtual machine (SVM) belongs to. If you have multiple domains
+     *   in your environment, configuring this setting makes sure that DataSync connects to the
+     *   right SVM.
      */
     public fun domain(domain: String) {
         cdkBuilder.domain(domain)

@@ -29,6 +29,7 @@ import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.logs.RetentionDays
+import software.amazon.awscdk.services.rds.CaCertificate
 import software.amazon.awscdk.services.rds.Credentials
 import software.amazon.awscdk.services.rds.DatabaseInstance
 import software.amazon.awscdk.services.rds.IInstanceEngine
@@ -151,6 +152,23 @@ public class DatabaseInstanceDsl(
     }
 
     /**
+     * The identifier of the CA certificate for this DB instance.
+     *
+     * Specifying or updating this property triggers a reboot.
+     *
+     * For RDS DB engines:
+     *
+     * Default: - RDS will choose a certificate authority
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.SSL-certificate-rotation.html)
+     *
+     * @param caCertificate The identifier of the CA certificate for this DB instance.
+     */
+    public fun caCertificate(caCertificate: CaCertificate) {
+        cdkBuilder.caCertificate(caCertificate)
+    }
+
+    /**
      * For supported engines, specifies the character set to associate with the DB instance.
      *
      * Default: - RDS default character set name
@@ -253,7 +271,7 @@ public class DatabaseInstanceDsl(
      * Indicates whether automated backups should be deleted or retained when you delete a DB
      * instance.
      *
-     * Default: false
+     * Default: true
      *
      * @param deleteAutomatedBackups Indicates whether automated backups should be deleted or
      *   retained when you delete a DB instance.
@@ -301,7 +319,7 @@ public class DatabaseInstanceDsl(
     /**
      * Whether to enable Performance Insights for the DB instance.
      *
-     * Default: - false, unless ``performanceInsightRentention`` or
+     * Default: - false, unless ``performanceInsightRetention`` or
      * ``performanceInsightEncryptionKey`` is set.
      *
      * @param enablePerformanceInsights Whether to enable Performance Insights for the DB instance.
@@ -582,7 +600,11 @@ public class DatabaseInstanceDsl(
     /**
      * Indicates whether the DB instance is an internet-facing instance.
      *
-     * Default: - `true` if `vpcSubnets` is `subnetType: SubnetType.PUBLIC`, `false` otherwise
+     * If not specified, the instance's vpcSubnets will be used to determine if the instance is
+     * internet-facing or not.
+     *
+     * Default: - `true` if the instance's `vpcSubnets` is `subnetType: SubnetType.PUBLIC`, `false`
+     * otherwise
      *
      * @param publiclyAccessible Indicates whether the DB instance is an internet-facing instance.
      */

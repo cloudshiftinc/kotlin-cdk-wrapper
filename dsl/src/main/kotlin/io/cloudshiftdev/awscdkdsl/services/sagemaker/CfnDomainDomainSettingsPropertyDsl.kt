@@ -29,6 +29,10 @@ import software.amazon.awscdk.services.sagemaker.CfnDomain
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.sagemaker.*;
  * DomainSettingsProperty domainSettingsProperty = DomainSettingsProperty.builder()
+ * .dockerSettings(DockerSettingsProperty.builder()
+ * .enableDockerAccess("enableDockerAccess")
+ * .vpcOnlyTrustedAccounts(List.of("vpcOnlyTrustedAccounts"))
+ * .build())
  * .rStudioServerProDomainSettings(RStudioServerProDomainSettingsProperty.builder()
  * .domainExecutionRoleArn("domainExecutionRoleArn")
  * // the properties below are optional
@@ -53,6 +57,22 @@ public class CfnDomainDomainSettingsPropertyDsl {
         CfnDomain.DomainSettingsProperty.builder()
 
     private val _securityGroupIds: MutableList<String> = mutableListOf()
+
+    /**
+     * @param dockerSettings A collection of settings that configure the domain's Docker
+     *   interaction.
+     */
+    public fun dockerSettings(dockerSettings: IResolvable) {
+        cdkBuilder.dockerSettings(dockerSettings)
+    }
+
+    /**
+     * @param dockerSettings A collection of settings that configure the domain's Docker
+     *   interaction.
+     */
+    public fun dockerSettings(dockerSettings: CfnDomain.DockerSettingsProperty) {
+        cdkBuilder.dockerSettings(dockerSettings)
+    }
 
     /**
      * @param rStudioServerProDomainSettings A collection of settings that configure the

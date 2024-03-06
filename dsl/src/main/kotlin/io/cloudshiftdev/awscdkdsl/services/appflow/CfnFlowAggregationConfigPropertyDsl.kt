@@ -45,7 +45,12 @@ public class CfnFlowAggregationConfigPropertyDsl {
         cdkBuilder.aggregationType(aggregationType)
     }
 
-    /** @param targetFileSize the value to be set. */
+    /**
+     * @param targetFileSize The desired file size, in MB, for each output file that Amazon AppFlow
+     *   writes to the flow destination. For each file, Amazon AppFlow attempts to achieve the size
+     *   that you specify. The actual file sizes might differ from this target based on the number
+     *   and size of the records that each file contains.
+     */
     public fun targetFileSize(targetFileSize: Number) {
         cdkBuilder.targetFileSize(targetFileSize)
     }

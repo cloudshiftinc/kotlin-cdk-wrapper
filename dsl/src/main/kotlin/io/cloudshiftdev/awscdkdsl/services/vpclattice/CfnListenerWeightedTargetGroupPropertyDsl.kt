@@ -45,7 +45,7 @@ public class CfnListenerWeightedTargetGroupPropertyDsl {
 
     /**
      * @param weight Only required if you specify multiple target groups for a forward action. The
-     *   "weight" determines how requests are distributed to the target group. For example, if you
+     *   weight determines how requests are distributed to the target group. For example, if you
      *   specify two target groups, each with a weight of 10, each target group receives half the
      *   requests. If you specify two target groups, one with a weight of 10 and the other with a
      *   weight of 20, the target group with a weight of 20 receives twice as many requests as the

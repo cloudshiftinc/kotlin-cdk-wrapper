@@ -104,8 +104,8 @@ public class CfnPlaybackConfigurationPropsDsl {
 
     /**
      * @param availSuppression The configuration for avail suppression, also known as ad
-     *   suppression. For more information about ad suppression, see Ad Suppression
-     *   (https://docs.aws.amazon.com/mediatailor/latest/ug/ad-behavior.html).
+     *   suppression. For more information about ad suppression, see
+     *   [Ad Suppression](https://docs.aws.amazon.com/mediatailor/latest/ug/ad-behavior.html) .
      */
     public fun availSuppression(availSuppression: IResolvable) {
         cdkBuilder.availSuppression(availSuppression)
@@ -113,8 +113,8 @@ public class CfnPlaybackConfigurationPropsDsl {
 
     /**
      * @param availSuppression The configuration for avail suppression, also known as ad
-     *   suppression. For more information about ad suppression, see Ad Suppression
-     *   (https://docs.aws.amazon.com/mediatailor/latest/ug/ad-behavior.html).
+     *   suppression. For more information about ad suppression, see
+     *   [Ad Suppression](https://docs.aws.amazon.com/mediatailor/latest/ug/ad-behavior.html) .
      */
     public fun availSuppression(
         availSuppression: CfnPlaybackConfiguration.AvailSuppressionProperty
@@ -124,8 +124,8 @@ public class CfnPlaybackConfigurationPropsDsl {
 
     /**
      * @param bumper The configuration for bumpers. Bumpers are short audio or video clips that play
-     *   at the start or before the end of an ad break. To learn more about bumpers, see Bumpers
-     *   (https://docs.aws.amazon.com/mediatailor/latest/ug/bumpers.html).
+     *   at the start or before the end of an ad break. To learn more about bumpers, see
+     *   [Bumpers](https://docs.aws.amazon.com/mediatailor/latest/ug/bumpers.html) .
      */
     public fun bumper(bumper: IResolvable) {
         cdkBuilder.bumper(bumper)
@@ -133,8 +133,8 @@ public class CfnPlaybackConfigurationPropsDsl {
 
     /**
      * @param bumper The configuration for bumpers. Bumpers are short audio or video clips that play
-     *   at the start or before the end of an ad break. To learn more about bumpers, see Bumpers
-     *   (https://docs.aws.amazon.com/mediatailor/latest/ug/bumpers.html).
+     *   at the start or before the end of an ad break. To learn more about bumpers, see
+     *   [Bumpers](https://docs.aws.amazon.com/mediatailor/latest/ug/bumpers.html) .
      */
     public fun bumper(bumper: CfnPlaybackConfiguration.BumperProperty) {
         cdkBuilder.bumper(bumper)
@@ -190,12 +190,12 @@ public class CfnPlaybackConfigurationPropsDsl {
         cdkBuilder.configurationAliases(configurationAliases)
     }
 
-    /** @param dashConfiguration The configuration for DASH PUT operations. */
+    /** @param dashConfiguration The configuration for a DASH source. */
     public fun dashConfiguration(dashConfiguration: IResolvable) {
         cdkBuilder.dashConfiguration(dashConfiguration)
     }
 
-    /** @param dashConfiguration The configuration for DASH PUT operations. */
+    /** @param dashConfiguration The configuration for a DASH source. */
     public fun dashConfiguration(
         dashConfiguration: CfnPlaybackConfiguration.DashConfigurationProperty
     ) {
@@ -253,34 +253,45 @@ public class CfnPlaybackConfigurationPropsDsl {
      * @param personalizationThresholdSeconds Defines the maximum duration of underfilled ad time
      *   (in seconds) allowed in an ad break. If the duration of underfilled ad time exceeds the
      *   personalization threshold, then the personalization of the ad break is abandoned and the
-     *   underlying content is shown. This feature applies to ad replacement in live and VOD
+     *   underlying content is shown. This feature applies to *ad replacement* in live and VOD
      *   streams, rather than ad insertion, because it relies on an underlying content stream. For
-     *   more information about ad break behavior, including ad replacement and insertion, see Ad
-     *   Behavior in AWS Elemental MediaTailor
-     *   (https://docs.aws.amazon.com/mediatailor/latest/ug/ad-behavior.html).
+     *   more information about ad break behavior, including ad replacement and insertion, see
+     *   [Ad Behavior in AWS Elemental MediaTailor](https://docs.aws.amazon.com/mediatailor/latest/ug/ad-behavior.html)
+     *   .
      */
     public fun personalizationThresholdSeconds(personalizationThresholdSeconds: Number) {
         cdkBuilder.personalizationThresholdSeconds(personalizationThresholdSeconds)
     }
 
     /**
-     * @param slateAdUrl The URL for a high-quality video asset to transcode and use to fill in time
-     *   that's not used by ads. AWS Elemental MediaTailor shows the slate to fill in gaps in media
-     *   content. Configuring the slate is optional for non-VPAID configurations. For VPAID, the
-     *   slate is required because MediaTailor provides it in the slots that are designated for
-     *   dynamic ad content. The slate must be a high-quality asset that contains both audio and
-     *   video.
+     * @param slateAdUrl The URL for a video asset to transcode and use to fill in time that's not
+     *   used by ads. AWS Elemental MediaTailor shows the slate to fill in gaps in media content.
+     *   Configuring the slate is optional for non-VPAID playback configurations. For VPAID, the
+     *   slate is required because MediaTailor provides it in the slots designated for dynamic ad
+     *   content. The slate must be a high-quality asset that contains both audio and video.
      */
     public fun slateAdUrl(slateAdUrl: String) {
         cdkBuilder.slateAdUrl(slateAdUrl)
     }
 
-    /** @param tags The tags to assign to the playback configuration. */
+    /**
+     * @param tags The tags to assign to the playback configuration. Tags are key-value pairs that
+     *   you can associate with Amazon resources to help with organization, access control, and cost
+     *   tracking. For more information, see
+     *   [Tagging AWS Elemental MediaTailor Resources](https://docs.aws.amazon.com/mediatailor/latest/ug/tagging.html)
+     *   .
+     */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
-    /** @param tags The tags to assign to the playback configuration. */
+    /**
+     * @param tags The tags to assign to the playback configuration. Tags are key-value pairs that
+     *   you can associate with Amazon resources to help with organization, access control, and cost
+     *   tracking. For more information, see
+     *   [Tagging AWS Elemental MediaTailor Resources](https://docs.aws.amazon.com/mediatailor/latest/ug/tagging.html)
+     *   .
+     */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
     }

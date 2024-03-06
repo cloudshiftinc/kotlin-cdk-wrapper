@@ -80,7 +80,8 @@ public class CfnDatabasePropsDsl {
 
     /**
      * @param backupRetention A Boolean value indicating whether automated backup retention is
-     *   enabled for the database.
+     *   enabled for the database. Data Import Mode is enabled when `BackupRetention` is set to
+     *   `false` , and is disabled when `BackupRetention` is set to `true` .
      */
     public fun backupRetention(backupRetention: Boolean) {
         cdkBuilder.backupRetention(backupRetention)
@@ -88,7 +89,8 @@ public class CfnDatabasePropsDsl {
 
     /**
      * @param backupRetention A Boolean value indicating whether automated backup retention is
-     *   enabled for the database.
+     *   enabled for the database. Data Import Mode is enabled when `BackupRetention` is set to
+     *   `false` , and is disabled when `BackupRetention` is set to `true` .
      */
     public fun backupRetention(backupRetention: IResolvable) {
         cdkBuilder.backupRetention(backupRetention)

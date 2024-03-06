@@ -378,22 +378,22 @@ public class CfnJobDsl(
     }
 
     /**
-     * Output location.
+     * The location in Amazon S3 where the job writes its output.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-job.html#cfn-databrew-job-outputlocation)
      *
-     * @param outputLocation Output location.
+     * @param outputLocation The location in Amazon S3 where the job writes its output.
      */
     public fun outputLocation(outputLocation: IResolvable) {
         cdkBuilder.outputLocation(outputLocation)
     }
 
     /**
-     * Output location.
+     * The location in Amazon S3 where the job writes its output.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-job.html#cfn-databrew-job-outputlocation)
      *
-     * @param outputLocation Output location.
+     * @param outputLocation The location in Amazon S3 where the job writes its output.
      */
     public fun outputLocation(outputLocation: CfnJob.OutputLocationProperty) {
         cdkBuilder.outputLocation(outputLocation)

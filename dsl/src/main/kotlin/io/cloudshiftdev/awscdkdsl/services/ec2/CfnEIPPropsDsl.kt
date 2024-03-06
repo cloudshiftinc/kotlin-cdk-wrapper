@@ -74,9 +74,6 @@ public class CfnEIPPropsDsl {
      * Use
      * [DescribeAvailabilityZones](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAvailabilityZones.html)
      * to view the network border groups.
-     *
-     * You cannot use a network border group with EC2 Classic. If you attempt this operation on EC2
-     * Classic, you receive an `InvalidParameterCombination` error.
      */
     public fun networkBorderGroup(networkBorderGroup: String) {
         cdkBuilder.networkBorderGroup(networkBorderGroup)

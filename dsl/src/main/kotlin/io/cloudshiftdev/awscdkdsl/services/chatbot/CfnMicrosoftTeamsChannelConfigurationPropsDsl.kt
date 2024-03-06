@@ -120,12 +120,7 @@ public class CfnMicrosoftTeamsChannelConfigurationPropsDsl {
         cdkBuilder.teamId(teamId)
     }
 
-    /**
-     * @param teamsChannelId The ID of the Microsoft Teams channel. To get the channel ID, open
-     *   Microsoft Teams, right click on the channel name in the left pane, then choose Copy. An
-     *   example of the channel ID syntax is: `19%3ab6ef35dc342d56ba5654e6fc6d25a071%40thread.tacv2`
-     *   .
-     */
+    /** @param teamsChannelId The id of the Microsoft Teams channel. */
     public fun teamsChannelId(teamsChannelId: String) {
         cdkBuilder.teamsChannelId(teamsChannelId)
     }

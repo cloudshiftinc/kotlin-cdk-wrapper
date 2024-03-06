@@ -17,8 +17,8 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2
 
 /**
- * For a SQL-based Kinesis Data Analytics application, describes the reference data source by
- * providing the source information (Amazon S3 bucket name and object key name), the resulting
+ * For a SQL-based Managed Service for Apache Flink application, describes the reference data source
+ * by providing the source information (Amazon S3 bucket name and object key name), the resulting
  * in-application table name that is created, and the necessary schema to map the data elements in
  * the Amazon S3 object to the in-application table.
  *
@@ -90,7 +90,7 @@ public class CfnApplicationReferenceDataSourceV2ReferenceDataSourcePropertyDsl {
      * @param s3ReferenceDataSource Identifies the S3 bucket and object that contains the reference
      *   data. A Kinesis Data Analytics application loads reference data only once. If the data
      *   changes, you call the
-     *   [UpdateApplication](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_UpdateApplication.html)
+     *   [UpdateApplication](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_UpdateApplication.html)
      *   operation to trigger reloading of data into your application.
      */
     public fun s3ReferenceDataSource(s3ReferenceDataSource: IResolvable) {
@@ -101,7 +101,7 @@ public class CfnApplicationReferenceDataSourceV2ReferenceDataSourcePropertyDsl {
      * @param s3ReferenceDataSource Identifies the S3 bucket and object that contains the reference
      *   data. A Kinesis Data Analytics application loads reference data only once. If the data
      *   changes, you call the
-     *   [UpdateApplication](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_UpdateApplication.html)
+     *   [UpdateApplication](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_UpdateApplication.html)
      *   operation to trigger reloading of data into your application.
      */
     public fun s3ReferenceDataSource(

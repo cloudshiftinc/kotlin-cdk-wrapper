@@ -104,10 +104,6 @@ public class CfnImageVersionDsl(
     /**
      * The container image that the SageMaker image version is based on.
      *
-     * *Length Constraints* : Minimum length of 1. Maximum length of 255.
-     *
-     * *Pattern* : `.*`
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-imageversion.html#cfn-sagemaker-imageversion-baseimage)
      *
      * @param baseImage The container image that the SageMaker image version is based on.

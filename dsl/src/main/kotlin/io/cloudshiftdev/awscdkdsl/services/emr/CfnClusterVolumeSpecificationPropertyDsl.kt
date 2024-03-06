@@ -56,7 +56,10 @@ public class CfnClusterVolumeSpecificationPropertyDsl {
         cdkBuilder.sizeInGb(sizeInGb)
     }
 
-    /** @param throughput the value to be set. */
+    /**
+     * @param throughput The throughput, in mebibyte per second (MiB/s). This optional parameter can
+     *   be a number from 125 - 1000 and is valid only for gp3 volumes.
+     */
     public fun throughput(throughput: Number) {
         cdkBuilder.throughput(throughput)
     }

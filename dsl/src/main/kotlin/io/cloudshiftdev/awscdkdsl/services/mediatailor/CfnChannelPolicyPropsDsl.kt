@@ -39,19 +39,25 @@ import software.amazon.awscdk.services.mediatailor.CfnChannelPolicyProps
 public class CfnChannelPolicyPropsDsl {
     private val cdkBuilder: CfnChannelPolicyProps.Builder = CfnChannelPolicyProps.builder()
 
-    /** @param channelName the value to be set. */
+    /** @param channelName The name of the channel associated with this Channel Policy. */
     public fun channelName(channelName: String) {
         cdkBuilder.channelName(channelName)
     }
 
-    /** @param policy the value to be set. */
+    /**
+     * @param policy The IAM policy for the channel. IAM policies are used to control access to your
+     *   channel.
+     */
     public fun policy(policy: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
         builder.apply(policy)
         cdkBuilder.policy(builder.map)
     }
 
-    /** @param policy the value to be set. */
+    /**
+     * @param policy The IAM policy for the channel. IAM policies are used to control access to your
+     *   channel.
+     */
     public fun policy(policy: Any) {
         cdkBuilder.policy(policy)
     }

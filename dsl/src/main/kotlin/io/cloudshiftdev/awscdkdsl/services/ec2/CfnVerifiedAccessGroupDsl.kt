@@ -24,7 +24,12 @@ import software.amazon.awscdk.services.ec2.CfnVerifiedAccessGroup
 import software.constructs.Construct
 
 /**
- * Describes a Verified Access group.
+ * An AWS Verified Access group is a collection of AWS Verified Access endpoints who's associated
+ * applications have similar security requirements.
+ *
+ * Each instance within a Verified Access group shares an Verified Access policy. For example, you
+ * can group all Verified Access instances associated with "sales" applications together and use one
+ * common Verified Access policy.
  *
  * Example:
  * ```
@@ -38,6 +43,10 @@ import software.constructs.Construct
  * .description("description")
  * .policyDocument("policyDocument")
  * .policyEnabled(false)
+ * .sseSpecification(SseSpecificationProperty.builder()
+ * .customerManagedKeyEnabled(false)
+ * .kmsKeyArn("kmsKeyArn")
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -99,6 +108,28 @@ public class CfnVerifiedAccessGroupDsl(
      */
     public fun policyEnabled(policyEnabled: IResolvable) {
         cdkBuilder.policyEnabled(policyEnabled)
+    }
+
+    /**
+     * The options for additional server side encryption.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessgroup.html#cfn-ec2-verifiedaccessgroup-ssespecification)
+     *
+     * @param sseSpecification The options for additional server side encryption.
+     */
+    public fun sseSpecification(sseSpecification: IResolvable) {
+        cdkBuilder.sseSpecification(sseSpecification)
+    }
+
+    /**
+     * The options for additional server side encryption.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessgroup.html#cfn-ec2-verifiedaccessgroup-ssespecification)
+     *
+     * @param sseSpecification The options for additional server side encryption.
+     */
+    public fun sseSpecification(sseSpecification: CfnVerifiedAccessGroup.SseSpecificationProperty) {
+        cdkBuilder.sseSpecification(sseSpecification)
     }
 
     /**

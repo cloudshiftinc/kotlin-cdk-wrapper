@@ -64,6 +64,8 @@ import software.amazon.awscdk.services.iam.IRole
  * .version("version")
  * .build())
  * .maxSize(123)
+ * .maxUnavailable(123)
+ * .maxUnavailablePercentage(123)
  * .minSize(123)
  * .nodegroupName("nodegroupName")
  * .nodeRole(role)
@@ -177,6 +179,28 @@ public class NodegroupPropsDsl {
      */
     public fun maxSize(maxSize: Number) {
         cdkBuilder.maxSize(maxSize)
+    }
+
+    /**
+     * @param maxUnavailable The maximum number of nodes unavailable at once during a version
+     *   update. Nodes will be updated in parallel. The maximum number is 100.
+     *
+     * This value or `maxUnavailablePercentage` is required to have a value for custom update
+     * configurations to be applied.
+     */
+    public fun maxUnavailable(maxUnavailable: Number) {
+        cdkBuilder.maxUnavailable(maxUnavailable)
+    }
+
+    /**
+     * @param maxUnavailablePercentage The maximum percentage of nodes unavailable during a version
+     *   update. This percentage of nodes will be updated in parallel, up to 100 nodes at once.
+     *
+     * This value or `maxUnavailable` is required to have a value for custom update configurations
+     * to be applied.
+     */
+    public fun maxUnavailablePercentage(maxUnavailablePercentage: Number) {
+        cdkBuilder.maxUnavailablePercentage(maxUnavailablePercentage)
     }
 
     /**

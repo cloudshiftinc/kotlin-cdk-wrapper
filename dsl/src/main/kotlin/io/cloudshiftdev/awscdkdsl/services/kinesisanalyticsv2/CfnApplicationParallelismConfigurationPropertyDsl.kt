@@ -51,16 +51,16 @@ public class CfnApplicationParallelismConfigurationPropertyDsl {
         CfnApplication.ParallelismConfigurationProperty.builder()
 
     /**
-     * @param autoScalingEnabled Describes whether the Kinesis Data Analytics service can increase
-     *   the parallelism of the application in response to increased throughput.
+     * @param autoScalingEnabled Describes whether the Managed Service for Apache Flink service can
+     *   increase the parallelism of the application in response to increased throughput.
      */
     public fun autoScalingEnabled(autoScalingEnabled: Boolean) {
         cdkBuilder.autoScalingEnabled(autoScalingEnabled)
     }
 
     /**
-     * @param autoScalingEnabled Describes whether the Kinesis Data Analytics service can increase
-     *   the parallelism of the application in response to increased throughput.
+     * @param autoScalingEnabled Describes whether the Managed Service for Apache Flink service can
+     *   increase the parallelism of the application in response to increased throughput.
      */
     public fun autoScalingEnabled(autoScalingEnabled: IResolvable) {
         cdkBuilder.autoScalingEnabled(autoScalingEnabled)
@@ -68,9 +68,9 @@ public class CfnApplicationParallelismConfigurationPropertyDsl {
 
     /**
      * @param configurationType Describes whether the application uses the default parallelism for
-     *   the Kinesis Data Analytics service. You must set this property to `CUSTOM` in order to
-     *   change your application's `AutoScalingEnabled` , `Parallelism` , or `ParallelismPerKPU`
-     *   properties.
+     *   the Managed Service for Apache Flink service. You must set this property to `CUSTOM` in
+     *   order to change your application's `AutoScalingEnabled` , `Parallelism` , or
+     *   `ParallelismPerKPU` properties.
      */
     public fun configurationType(configurationType: String) {
         cdkBuilder.configurationType(configurationType)
@@ -80,7 +80,7 @@ public class CfnApplicationParallelismConfigurationPropertyDsl {
      * @param parallelism Describes the initial number of parallel tasks that a Java-based Kinesis
      *   Data Analytics application can perform. The Kinesis Data Analytics service can increase
      *   this number automatically if
-     *   [ParallelismConfiguration:AutoScalingEnabled](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_ParallelismConfiguration.html#kinesisanalytics-Type-ParallelismConfiguration-AutoScalingEnabled.html)
+     *   [ParallelismConfiguration:AutoScalingEnabled](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_ParallelismConfiguration.html#kinesisanalytics-Type-ParallelismConfiguration-AutoScalingEnabled.html)
      *   is set to `true` .
      */
     public fun parallelism(parallelism: Number) {

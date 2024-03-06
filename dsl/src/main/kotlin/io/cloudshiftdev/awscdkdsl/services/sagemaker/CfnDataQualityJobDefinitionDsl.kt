@@ -60,6 +60,7 @@ import software.constructs.Construct
  * .build())
  * .localPath("localPath")
  * // the properties below are optional
+ * .excludeFeaturesAttribute("excludeFeaturesAttribute")
  * .s3DataDistributionType("s3DataDistributionType")
  * .s3InputMode("s3InputMode")
  * .build())
@@ -67,6 +68,7 @@ import software.constructs.Construct
  * .endpointName("endpointName")
  * .localPath("localPath")
  * // the properties below are optional
+ * .excludeFeaturesAttribute("excludeFeaturesAttribute")
  * .s3DataDistributionType("s3DataDistributionType")
  * .s3InputMode("s3InputMode")
  * .build())

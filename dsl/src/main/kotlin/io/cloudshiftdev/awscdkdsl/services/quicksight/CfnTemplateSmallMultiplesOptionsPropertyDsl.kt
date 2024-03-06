@@ -53,6 +53,14 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * .visibility("visibility")
  * .build())
  * .build())
+ * .xAxis(SmallMultiplesAxisPropertiesProperty.builder()
+ * .placement("placement")
+ * .scale("scale")
+ * .build())
+ * .yAxis(SmallMultiplesAxisPropertiesProperty.builder()
+ * .placement("placement")
+ * .scale("scale")
+ * .build())
  * .build();
  * ```
  *
@@ -89,6 +97,26 @@ public class CfnTemplateSmallMultiplesOptionsPropertyDsl {
     /** @param panelConfiguration Configures the display options for each small multiples panel. */
     public fun panelConfiguration(panelConfiguration: CfnTemplate.PanelConfigurationProperty) {
         cdkBuilder.panelConfiguration(panelConfiguration)
+    }
+
+    /** @param xAxis The properties of a small multiples X axis. */
+    public fun xAxis(xAxis: IResolvable) {
+        cdkBuilder.xAxis(xAxis)
+    }
+
+    /** @param xAxis The properties of a small multiples X axis. */
+    public fun xAxis(xAxis: CfnTemplate.SmallMultiplesAxisPropertiesProperty) {
+        cdkBuilder.xAxis(xAxis)
+    }
+
+    /** @param yAxis The properties of a small multiples Y axis. */
+    public fun yAxis(yAxis: IResolvable) {
+        cdkBuilder.yAxis(yAxis)
+    }
+
+    /** @param yAxis The properties of a small multiples Y axis. */
+    public fun yAxis(yAxis: CfnTemplate.SmallMultiplesAxisPropertiesProperty) {
+        cdkBuilder.yAxis(yAxis)
     }
 
     public fun build(): CfnTemplate.SmallMultiplesOptionsProperty = cdkBuilder.build()

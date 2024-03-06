@@ -70,7 +70,7 @@ public class CfnFargateProfileSelectorPropertyDsl {
         cdkBuilder.labels(labels)
     }
 
-    /** @param namespace The Kubernetes namespace that the selector should match. */
+    /** @param namespace The Kubernetes `namespace` that the selector should match. */
     public fun namespace(namespace: String) {
         cdkBuilder.namespace(namespace)
     }

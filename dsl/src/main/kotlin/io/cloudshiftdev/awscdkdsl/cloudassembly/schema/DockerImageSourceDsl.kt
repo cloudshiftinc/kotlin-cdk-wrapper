@@ -12,6 +12,7 @@
 package io.cloudshiftdev.awscdkdsl.cloudassembly.schema
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -29,6 +30,7 @@ import software.amazon.awscdk.cloudassembly.schema.DockerImageSource
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.cloudassembly.schema.*;
  * DockerImageSource dockerImageSource = DockerImageSource.builder()
+ * .cacheDisabled(false)
  * .cacheFrom(List.of(DockerCacheOption.builder()
  * .type("type")
  * // the properties below are optional
@@ -65,6 +67,13 @@ public class DockerImageSourceDsl {
     private val _dockerOutputs: MutableList<String> = mutableListOf()
 
     private val _executable: MutableList<String> = mutableListOf()
+
+    /**
+     * @param cacheDisabled Disable the cache and pass `--no-cache` to the `docker build` command.
+     */
+    public fun cacheDisabled(cacheDisabled: Boolean) {
+        cdkBuilder.cacheDisabled(cacheDisabled)
+    }
 
     /** @param cacheFrom Cache from options to pass to the `docker build` command. */
     public fun cacheFrom(cacheFrom: DockerCacheOptionDsl.() -> Unit) {

@@ -52,8 +52,10 @@ public class CfnPublicRepositoryPropsDsl {
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
-     * @param repositoryCatalogData The CatalogData property type specifies Catalog data for ECR
-     *   Public Repository. For information about Catalog Data, see <link>
+     * @param repositoryCatalogData The details about the repository that are publicly visible in
+     *   the Amazon ECR Public Gallery. For more information, see
+     *   [Amazon ECR Public repository catalog data](https://docs.aws.amazon.com/AmazonECR/latest/public/public-repository-catalog-data.html)
+     *   in the *Amazon ECR Public User Guide* .
      */
     public fun repositoryCatalogData(repositoryCatalogData: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
@@ -62,8 +64,10 @@ public class CfnPublicRepositoryPropsDsl {
     }
 
     /**
-     * @param repositoryCatalogData The CatalogData property type specifies Catalog data for ECR
-     *   Public Repository. For information about Catalog Data, see <link>
+     * @param repositoryCatalogData The details about the repository that are publicly visible in
+     *   the Amazon ECR Public Gallery. For more information, see
+     *   [Amazon ECR Public repository catalog data](https://docs.aws.amazon.com/AmazonECR/latest/public/public-repository-catalog-data.html)
+     *   in the *Amazon ECR Public User Guide* .
      */
     public fun repositoryCatalogData(repositoryCatalogData: Any) {
         cdkBuilder.repositoryCatalogData(repositoryCatalogData)

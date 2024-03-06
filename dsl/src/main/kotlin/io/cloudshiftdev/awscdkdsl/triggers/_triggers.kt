@@ -29,7 +29,7 @@ public object triggers {
      * import software.amazon.awscdk.triggers.*;
      * Function func = Function.Builder.create(this, "MyFunction")
      * .handler("index.handler")
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_18_X)
      * .code(Code.fromInline("foo"))
      * .build();
      * Trigger.Builder.create(this, "MyTrigger")
@@ -56,7 +56,7 @@ public object triggers {
      * ```
      * import software.amazon.awscdk.triggers.*;
      * TriggerFunction.Builder.create(this, "MyTrigger")
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_18_X)
      * .handler("index.handler")
      * .code(Code.fromAsset(__dirname + "/my-trigger"))
      * .build();
@@ -79,7 +79,7 @@ public object triggers {
      * ```
      * import software.amazon.awscdk.triggers.*;
      * TriggerFunction.Builder.create(this, "MyTrigger")
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_18_X)
      * .handler("index.handler")
      * .code(Code.fromAsset(__dirname + "/my-trigger"))
      * .build();
@@ -124,7 +124,7 @@ public object triggers {
      * import software.amazon.awscdk.triggers.*;
      * Function func = Function.Builder.create(this, "MyFunction")
      * .handler("index.handler")
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_18_X)
      * .code(Code.fromInline("foo"))
      * .build();
      * Trigger.Builder.create(this, "MyTrigger")

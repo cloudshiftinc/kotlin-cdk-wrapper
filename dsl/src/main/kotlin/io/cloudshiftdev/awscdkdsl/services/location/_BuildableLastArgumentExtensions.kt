@@ -12,8 +12,18 @@
 package io.cloudshiftdev.awscdkdsl.services.location
 
 import kotlin.Unit
+import software.amazon.awscdk.services.location.CfnAPIKey
 import software.amazon.awscdk.services.location.CfnMap
 import software.amazon.awscdk.services.location.CfnPlaceIndex
+
+/** The API key restrictions for the API key resource. */
+public inline fun CfnAPIKey.setRestrictions(
+    block: CfnAPIKeyApiKeyRestrictionsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnAPIKeyApiKeyRestrictionsPropertyDsl()
+    builder.apply(block)
+    return setRestrictions(builder.build())
+}
 
 /**
  * Specifies the `MapConfiguration` , including the map style, for the map resource that you create.

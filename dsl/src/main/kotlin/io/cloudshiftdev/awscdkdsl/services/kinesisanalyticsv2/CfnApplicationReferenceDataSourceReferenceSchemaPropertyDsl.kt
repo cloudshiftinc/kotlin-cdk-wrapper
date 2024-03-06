@@ -20,8 +20,8 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSource
 
 /**
- * For a SQL-based Kinesis Data Analytics application, describes the format of the data in the
- * streaming source, and how each data element maps to corresponding columns created in the
+ * For a SQL-based Managed Service for Apache Flink application, describes the format of the data in
+ * the streaming source, and how each data element maps to corresponding columns created in the
  * in-application stream.
  *
  * Example:

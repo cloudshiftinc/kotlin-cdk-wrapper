@@ -59,11 +59,7 @@ public class CfnApplicationInitialCapacityConfigPropertyDsl {
         cdkBuilder.workerConfiguration(workerConfiguration)
     }
 
-    /**
-     * @param workerCount The number of workers in the initial capacity configuration. *Minimum* : 1
-     *
-     * *Maximum* : 1000000
-     */
+    /** @param workerCount The number of workers in the initial capacity configuration. */
     public fun workerCount(workerCount: Number) {
         cdkBuilder.workerCount(workerCount)
     }

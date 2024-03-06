@@ -21,17 +21,16 @@ import software.amazon.awscdk.services.ec2.SecurityGroupProps
  * Example:
  * ```
  * Vpc vpc;
- * SecurityGroup sg1 = SecurityGroup.Builder.create(this, "sg1")
+ * SecurityGroup securityGroup1 = SecurityGroup.Builder.create(this,
+ * "SecurityGroup1").vpc(vpc).build();
+ * ApplicationLoadBalancer lb = ApplicationLoadBalancer.Builder.create(this, "LB")
  * .vpc(vpc)
+ * .internetFacing(true)
+ * .securityGroup(securityGroup1)
  * .build();
- * SecurityGroup sg2 = SecurityGroup.Builder.create(this, "sg2")
- * .vpc(vpc)
- * .build();
- * LaunchTemplate launchTemplate = LaunchTemplate.Builder.create(this, "LaunchTemplate")
- * .machineImage(MachineImage.latestAmazonLinux2023())
- * .securityGroup(sg1)
- * .build();
- * launchTemplate.addSecurityGroup(sg2);
+ * SecurityGroup securityGroup2 = SecurityGroup.Builder.create(this,
+ * "SecurityGroup2").vpc(vpc).build();
+ * lb.addSecurityGroup(securityGroup2);
  * ```
  */
 @CdkDslMarker

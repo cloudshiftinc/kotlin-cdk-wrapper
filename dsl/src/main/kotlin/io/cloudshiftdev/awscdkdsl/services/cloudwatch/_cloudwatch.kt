@@ -65,9 +65,13 @@ import software.amazon.awscdk.services.cloudwatch.SingleValueWidget
 import software.amazon.awscdk.services.cloudwatch.SingleValueWidgetProps
 import software.amazon.awscdk.services.cloudwatch.Spacer
 import software.amazon.awscdk.services.cloudwatch.SpacerProps
+import software.amazon.awscdk.services.cloudwatch.TableSummaryProps
+import software.amazon.awscdk.services.cloudwatch.TableWidget
+import software.amazon.awscdk.services.cloudwatch.TableWidgetProps
 import software.amazon.awscdk.services.cloudwatch.TextWidget
 import software.amazon.awscdk.services.cloudwatch.TextWidgetProps
 import software.amazon.awscdk.services.cloudwatch.VariableValue
+import software.amazon.awscdk.services.cloudwatch.VerticalAnnotation
 import software.amazon.awscdk.services.cloudwatch.YAxisProps
 import software.constructs.Construct
 
@@ -549,6 +553,10 @@ public object cloudwatch {
      * The band represents the expected "normal" range for the metric values. Anomaly detection
      * bands can be used for visualization of a metric's expected values, and for alarms.
      *
+     * For more information see
+     * [Using CloudWatch anomaly detection.](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Anomaly_Detection.html)
+     * .
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -964,6 +972,9 @@ public object cloudwatch {
     /**
      * Designates the CloudWatch metric and statistic that provides the time series the anomaly
      * detector uses as input.
+     *
+     * If you have enabled unified cross-account observability, and this account is a monitoring
+     * account, the metric can be in the same account or a source account.
      *
      * Example:
      * ```
@@ -2300,6 +2311,68 @@ public object cloudwatch {
     }
 
     /**
+     * Properties for TableWidget's summary columns.
+     *
+     * Example:
+     * ```
+     * Dashboard dashboard;
+     * dashboard.addWidgets(TableWidget.Builder.create()
+     * // ...
+     * .summary(TableSummaryProps.builder()
+     * .columns(List.of(TableSummaryColumn.AVERAGE))
+     * .hideNonSummaryColumns(true)
+     * .sticky(true)
+     * .build())
+     * .build());
+     * ```
+     */
+    public inline fun tableSummaryProps(
+        block: TableSummaryPropsDsl.() -> Unit = {}
+    ): TableSummaryProps {
+        val builder = TableSummaryPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A dashboard widget that displays metrics.
+     *
+     * Example:
+     * ```
+     * Dashboard dashboard;
+     * dashboard.addWidgets(TableWidget.Builder.create()
+     * // ...
+     * .layout(TableLayout.VERTICAL)
+     * .build());
+     * ```
+     */
+    public inline fun tableWidget(block: TableWidgetDsl.() -> Unit = {}): TableWidget {
+        val builder = TableWidgetDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for a TableWidget.
+     *
+     * Example:
+     * ```
+     * Dashboard dashboard;
+     * dashboard.addWidgets(TableWidget.Builder.create()
+     * // ...
+     * .layout(TableLayout.VERTICAL)
+     * .build());
+     * ```
+     */
+    public inline fun tableWidgetProps(
+        block: TableWidgetPropsDsl.() -> Unit = {}
+    ): TableWidgetProps {
+        val builder = TableWidgetPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * A dashboard widget that displays MarkDown.
      *
      * Example:
@@ -2355,6 +2428,32 @@ public object cloudwatch {
      */
     public inline fun variableValue(block: VariableValueDsl.() -> Unit = {}): VariableValue {
         val builder = VariableValueDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Vertical annotation to be added to a graph.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.cloudwatch.*;
+     * VerticalAnnotation verticalAnnotation = VerticalAnnotation.builder()
+     * .date("date")
+     * // the properties below are optional
+     * .color("color")
+     * .fill(VerticalShading.NONE)
+     * .label("label")
+     * .visible(false)
+     * .build();
+     * ```
+     */
+    public inline fun verticalAnnotation(
+        block: VerticalAnnotationDsl.() -> Unit = {}
+    ): VerticalAnnotation {
+        val builder = VerticalAnnotationDsl()
         builder.apply(block)
         return builder.build()
     }

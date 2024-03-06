@@ -27,14 +27,9 @@ import software.amazon.awscdk.services.ec2.LogFormat
  *
  * Example:
  * ```
- * Vpc vpc;
- * LogGroup logGroup = new LogGroup(this, "MyCustomLogGroup");
- * Role role = Role.Builder.create(this, "MyCustomRole")
- * .assumedBy(new ServicePrincipal("vpc-flow-logs.amazonaws.com"))
- * .build();
- * FlowLog.Builder.create(this, "FlowLog")
- * .resourceType(FlowLogResourceType.fromVpc(vpc))
- * .destination(FlowLogDestination.toCloudWatchLogs(logGroup, role))
+ * CfnTransitGateway tgw;
+ * FlowLog.Builder.create(this, "TransitGatewayFlowLog")
+ * .resourceType(FlowLogResourceType.fromTransitGatewayId(tgw.getRef()))
  * .build();
  * ```
  */
@@ -86,7 +81,8 @@ public class FlowLogPropsDsl {
 
     /**
      * @param maxAggregationInterval The maximum interval of time during which a flow of packets is
-     *   captured and aggregated into a flow log record.
+     *   captured and aggregated into a flow log record. When creating flow logs for a Transit
+     *   Gateway or Transit Gateway Attachment, this property must be ONE_MINUTES.
      */
     public fun maxAggregationInterval(maxAggregationInterval: FlowLogMaxAggregationInterval) {
         cdkBuilder.maxAggregationInterval(maxAggregationInterval)
@@ -99,7 +95,8 @@ public class FlowLogPropsDsl {
 
     /**
      * @param trafficType The type of traffic to log. You can log traffic that the resource accepts
-     *   or rejects, or all traffic.
+     *   or rejects, or all traffic. When the target is either `TransitGateway` or
+     *   `TransitGatewayAttachment`, setting the traffic type is not possible.
      */
     public fun trafficType(trafficType: FlowLogTrafficType) {
         cdkBuilder.trafficType(trafficType)

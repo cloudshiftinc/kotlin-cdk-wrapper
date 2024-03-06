@@ -105,9 +105,8 @@ public class CfnInstancePropsDsl {
      *
      * The default setting is `INHERIT` . To specify an agent version, you must use the complete
      * version number, not the abbreviated number shown on the console. For a list of available
-     * agent version numbers, call
-     * [DescribeAgentVersions](https://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeAgentVersions)
-     * . AgentVersion cannot be set to Chef 12.2.
+     * agent version numbers, call `DescribeAgentVersions` . AgentVersion cannot be set to Chef
+     * 12.2.
      */
     public fun agentVersion(agentVersion: String) {
         cdkBuilder.agentVersion(agentVersion)
@@ -216,9 +215,8 @@ public class CfnInstancePropsDsl {
      * @param installUpdatesOnBoot Whether to install operating system and package updates when the
      *   instance boots. The default value is `true` . To control when updates are installed, set
      *   this value to `false` . You must then update your instances manually by using
-     *   [CreateDeployment](https://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/CreateDeployment)
-     *   to run the `update_dependencies` stack command or by manually running `yum` (Amazon Linux)
-     *   or `apt-get` (Ubuntu) on the instances.
+     *   `CreateDeployment` to run the `update_dependencies` stack command or by manually running
+     *   `yum` (Amazon Linux) or `apt-get` (Ubuntu) on the instances.
      *
      * We strongly recommend using the default value of `true` to ensure that your instances have
      * the latest security updates.
@@ -231,9 +229,8 @@ public class CfnInstancePropsDsl {
      * @param installUpdatesOnBoot Whether to install operating system and package updates when the
      *   instance boots. The default value is `true` . To control when updates are installed, set
      *   this value to `false` . You must then update your instances manually by using
-     *   [CreateDeployment](https://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/CreateDeployment)
-     *   to run the `update_dependencies` stack command or by manually running `yum` (Amazon Linux)
-     *   or `apt-get` (Ubuntu) on the instances.
+     *   `CreateDeployment` to run the `update_dependencies` stack command or by manually running
+     *   `yum` (Amazon Linux) or `apt-get` (Ubuntu) on the instances.
      *
      * We strongly recommend using the default value of `true` to ensure that your instances have
      * the latest security updates.
@@ -284,11 +281,9 @@ public class CfnInstancePropsDsl {
      * .
      *
      * The default option is the current Amazon Linux version. If you set this parameter to `Custom`
-     * , you must use the
-     * [CreateInstance](https://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/CreateInstance)
-     * action's AmiId parameter to specify the custom AMI that you want to use. Block device
-     * mappings are not supported if the value is `Custom` . For more information about how to use
-     * custom AMIs with AWS OpsWorks Stacks, see
+     * , you must use the `CreateInstance` action's AmiId parameter to specify the custom AMI that
+     * you want to use. Block device mappings are not supported if the value is `Custom` . For more
+     * information about how to use custom AMIs with AWS OpsWorks Stacks, see
      * [Using Custom AMIs](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-custom-ami.html)
      * .
      */

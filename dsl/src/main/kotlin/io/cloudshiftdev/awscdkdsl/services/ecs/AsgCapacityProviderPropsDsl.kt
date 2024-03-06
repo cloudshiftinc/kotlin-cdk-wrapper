@@ -69,10 +69,22 @@ public class AsgCapacityProviderPropsDsl {
     /**
      * @param capacityProviderName The name of the capacity provider. If a name is specified, it
      *   cannot start with `aws`, `ecs`, or `fargate`. If no name is specified, a default name in
-     *   the CFNStackName-CFNResourceName-RandomString format is used.
+     *   the CFNStackName-CFNResourceName-RandomString format is used. If the stack name starts with
+     *   `aws`, `ecs`, or `fargate`, a unique resource name is generated that starts with `cp-`.
      */
     public fun capacityProviderName(capacityProviderName: String) {
         cdkBuilder.capacityProviderName(capacityProviderName)
+    }
+
+    /**
+     * @param enableManagedDraining Managed instance draining facilitates graceful termination of
+     *   Amazon ECS instances. This allows your service workloads to stop safely and be rescheduled
+     *   to non-terminating instances. Infrastructure maintenance and updates are preformed without
+     *   disruptions to workloads. To use managed instance draining, set enableManagedDraining to
+     *   true.
+     */
+    public fun enableManagedDraining(enableManagedDraining: Boolean) {
+        cdkBuilder.enableManagedDraining(enableManagedDraining)
     }
 
     /**
@@ -100,6 +112,15 @@ public class AsgCapacityProviderPropsDsl {
      */
     public fun enableManagedTerminationProtection(enableManagedTerminationProtection: Boolean) {
         cdkBuilder.enableManagedTerminationProtection(enableManagedTerminationProtection)
+    }
+
+    /**
+     * @param instanceWarmupPeriod The period of time, in seconds, after a newly launched Amazon EC2
+     *   instance can contribute to CloudWatch metrics for Auto Scaling group. Must be between 0
+     *   and 10000.
+     */
+    public fun instanceWarmupPeriod(instanceWarmupPeriod: Number) {
+        cdkBuilder.instanceWarmupPeriod(instanceWarmupPeriod)
     }
 
     /**

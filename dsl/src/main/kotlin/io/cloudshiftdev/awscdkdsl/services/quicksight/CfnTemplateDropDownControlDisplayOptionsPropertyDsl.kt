@@ -25,6 +25,10 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * import software.amazon.awscdk.services.quicksight.*;
  * DropDownControlDisplayOptionsProperty dropDownControlDisplayOptionsProperty =
  * DropDownControlDisplayOptionsProperty.builder()
+ * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+ * .infoIconText("infoIconText")
+ * .visibility("visibility")
+ * .build())
  * .selectAllOptions(ListControlSelectAllOptionsProperty.builder()
  * .visibility("visibility")
  * .build())
@@ -52,6 +56,18 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
 public class CfnTemplateDropDownControlDisplayOptionsPropertyDsl {
     private val cdkBuilder: CfnTemplate.DropDownControlDisplayOptionsProperty.Builder =
         CfnTemplate.DropDownControlDisplayOptionsProperty.builder()
+
+    /** @param infoIconLabelOptions The configuration of info icon label options. */
+    public fun infoIconLabelOptions(infoIconLabelOptions: IResolvable) {
+        cdkBuilder.infoIconLabelOptions(infoIconLabelOptions)
+    }
+
+    /** @param infoIconLabelOptions The configuration of info icon label options. */
+    public fun infoIconLabelOptions(
+        infoIconLabelOptions: CfnTemplate.SheetControlInfoIconLabelOptionsProperty
+    ) {
+        cdkBuilder.infoIconLabelOptions(infoIconLabelOptions)
+    }
 
     /**
      * @param selectAllOptions The configuration of the `Select all` options in a dropdown control.

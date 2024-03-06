@@ -18,14 +18,15 @@ import kotlin.Unit
 import software.amazon.awscdk.services.cloudwatch.Metric
 import software.amazon.awscdk.services.iam.AddToResourcePolicyResult
 import software.amazon.awscdk.services.sns.ITopic
+import software.amazon.awscdk.services.sns.Topic
 import software.amazon.awscdk.services.sns.TopicBase
 
 /**
  * Adds a statement to the IAM resource policy associated with this topic.
  *
  * If this topic was created in this stack (`new Topic`), a topic policy will be automatically
- * created upon the first call to `addToPolicy`. If the topic is imported (`Topic.import`), then
- * this is a no-op.
+ * created upon the first call to `addToResourcePolicy`. If the topic is imported (`Topic.import`),
+ * then this is a no-op.
  *
  * @param statement
  */
@@ -185,11 +186,22 @@ public inline fun ITopic.metricSMSSuccessRate(block: MetricOptionsDsl.() -> Unit
 }
 
 /**
+ * Adds a delivery status logging configuration to the topic.
+ *
+ * @param config
+ */
+public inline fun Topic.addLoggingConfig(block: LoggingConfigDsl.() -> Unit = {}) {
+    val builder = LoggingConfigDsl()
+    builder.apply(block)
+    return addLoggingConfig(builder.build())
+}
+
+/**
  * Adds a statement to the IAM resource policy associated with this topic.
  *
  * If this topic was created in this stack (`new Topic`), a topic policy will be automatically
- * created upon the first call to `addToPolicy`. If the topic is imported (`Topic.import`), then
- * this is a no-op.
+ * created upon the first call to `addToResourcePolicy`. If the topic is imported (`Topic.import`),
+ * then this is a no-op.
  *
  * @param statement
  */

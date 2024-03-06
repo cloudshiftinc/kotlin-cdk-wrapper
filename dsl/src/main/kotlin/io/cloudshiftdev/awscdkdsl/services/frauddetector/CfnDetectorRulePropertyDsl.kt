@@ -25,9 +25,6 @@ import software.amazon.awscdk.services.frauddetector.CfnDetector
 /**
  * A rule.
  *
- * Rule is a condition that tells Amazon Fraud Detector how to interpret variables values during a
- * fraud prediction.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -102,7 +99,7 @@ public class CfnDetectorRulePropertyDsl {
         cdkBuilder.expression(expression)
     }
 
-    /** @param language The rule language. */
+    /** @param language The rule language. Valid Value: DETECTORPL */
     public fun language(language: String) {
         cdkBuilder.language(language)
     }

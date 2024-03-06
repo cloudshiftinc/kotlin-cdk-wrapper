@@ -38,8 +38,7 @@ import software.constructs.Construct
  *   specified Amazon VPCs.
  * * A DNS Firewall policy, which provides Amazon Route 53 Resolver DNS Firewall rules to filter DNS
  *   queries for specified Amazon VPCs.
- * * A third-party firewall policy, which manages a third-party firewall service such as the Palo
- *   Alto Networks Cloud Next-Generation Firewall.
+ * * A third-party firewall policy, which manages a third-party firewall service.
  *
  * Each policy is specific to one of the types. If you want to enforce more than one policy type
  * across accounts, create multiple policies. You can create multiple policies for each type.
@@ -450,13 +449,18 @@ public class CfnPolicyDsl(
      * . To apply this policy to multiple resource types, specify a resource type of
      * `ResourceTypeList` and then specify the resource types in a `ResourceTypeList` .
      *
-     * For AWS WAF and Shield Advanced, example resource types include
-     * `AWS::ElasticLoadBalancingV2::LoadBalancer` and `AWS::CloudFront::Distribution` . For a
-     * security group common policy, valid values are `AWS::EC2::NetworkInterface` and
-     * `AWS::EC2::Instance` . For a security group content audit policy, valid values are
-     * `AWS::EC2::SecurityGroup` , `AWS::EC2::NetworkInterface` , and `AWS::EC2::Instance` . For a
-     * security group usage audit policy, the value is `AWS::EC2::SecurityGroup` . For an AWS
-     * Network Firewall policy or DNS Firewall policy, the value is `AWS::EC2::VPC` .
+     * The following are valid resource types for each Firewall Manager policy type:
+     * * AWS WAF Classic - `AWS::ApiGateway::Stage` , `AWS::CloudFront::Distribution` , and
+     *   `AWS::ElasticLoadBalancingV2::LoadBalancer` .
+     * * AWS WAF - `AWS::ApiGateway::Stage` , `AWS::ElasticLoadBalancingV2::LoadBalancer` , and
+     *   `AWS::CloudFront::Distribution` .
+     * * DNS Firewall, AWS Network Firewall , and third-party firewall - `AWS::EC2::VPC` .
+     * * AWS Shield Advanced - `AWS::ElasticLoadBalancingV2::LoadBalancer` ,
+     *   `AWS::ElasticLoadBalancing::LoadBalancer` , `AWS::EC2::EIP` , and
+     *   `AWS::CloudFront::Distribution` .
+     * * Security group content audit - `AWS::EC2::SecurityGroup` , `AWS::EC2::NetworkInterface` ,
+     *   and `AWS::EC2::Instance` .
+     * * Security group usage audit - `AWS::EC2::SecurityGroup` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-resourcetype)
      *
@@ -610,21 +614,22 @@ public class CfnPolicyDsl(
      * To use the distributed deployment model, you must set
      * [FirewallDeploymentModel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkfirewallpolicy.html)
      * to `DISTRIBUTED` .
-     * * Example: `THIRD_PARTY_FIREWALL` - Palo Alto Networks Cloud Next-Generation Firewall
-     *   centralized deployment model
+     * * Example: `THIRD_PARTY_FIREWALL` - Centralized deployment model
      *
-     * `"{ \"type\":\"THIRD_PARTY_FIREWALL\",
-     * \"thirdPartyFirewall\":\"PALO_ALTO_NETWORKS_CLOUD_NGFW\", \"thirdPartyFirewallConfig\":{
-     * \"thirdPartyFirewallPolicyList\":[\"global-1\"]
+     * Replace `THIRD_PARTY_FIREWALL_NAME` with the third-party firewall name.
+     *
+     * `"{ \"type\":\"THIRD_PARTY_FIREWALL\", \"thirdPartyFirewall\":\"THIRD_PARTY_FIREWALL_NAME\",
+     * \"thirdPartyFirewallConfig\":{ \"thirdPartyFirewallPolicyList\":[\"global-1\"]
      * },\"firewallDeploymentModel\":{\"centralizedFirewallDeploymentModel\":{\"centralizedFirewallOrchestrationConfig\":{\"inspectionVpcIds\":[{\"resourceId\":\"vpc-1234\",\"accountId\":\"123456789011\"}],\"firewallCreationConfig\":{\"endpointLocation\":{\"availabilityZoneConfigList\":[{\"availabilityZoneId\":null,\"availabilityZoneName\":\"us-east-1a\",\"allowedIPV4CidrList\":[\"10.0.0.0/28\"]}]}},\"allowedIPV4CidrList\":[]}}}}"`
      *
      * To use the distributed deployment model, you must set
      * [FirewallDeploymentModel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-thirdpartyfirewallpolicy.html)
      * to `CENTRALIZED` .
-     * * Example: `THIRD_PARTY_FIREWALL` - Palo Alto Networks Cloud Next-Generation Firewall
-     *   distributed deployment model
+     * * Example: `THIRD_PARTY_FIREWALL` - Distributed deployment model
      *
-     * `"{\"type\":\"THIRD_PARTY_FIREWALL\",\"thirdPartyFirewall\":\"PALO_ALTO_NETWORKS_CLOUD_NGFW\",\"thirdPartyFirewallConfig\":{\"thirdPartyFirewallPolicyList\":[\"global-1\"]
+     * Replace `THIRD_PARTY_FIREWALL_NAME` with the third-party firewall name.
+     *
+     * `"{\"type\":\"THIRD_PARTY_FIREWALL\",\"thirdPartyFirewall\":\"THIRD_PARTY_FIREWALL_NAME\",\"thirdPartyFirewallConfig\":{\"thirdPartyFirewallPolicyList\":[\"global-1\"]
      * },\"firewallDeploymentModel\":{ \"distributedFirewallDeploymentModel\":{
      * \"distributedFirewallOrchestrationConfig\":{\"firewallCreationConfig\":{\"endpointLocation\":{
      * \"availabilityZoneConfigList\":[ {\"availabilityZoneName\":\"${AvailabilityZone}\" } ] } },
@@ -770,21 +775,22 @@ public class CfnPolicyDsl(
      * To use the distributed deployment model, you must set
      * [FirewallDeploymentModel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkfirewallpolicy.html)
      * to `DISTRIBUTED` .
-     * * Example: `THIRD_PARTY_FIREWALL` - Palo Alto Networks Cloud Next-Generation Firewall
-     *   centralized deployment model
+     * * Example: `THIRD_PARTY_FIREWALL` - Centralized deployment model
      *
-     * `"{ \"type\":\"THIRD_PARTY_FIREWALL\",
-     * \"thirdPartyFirewall\":\"PALO_ALTO_NETWORKS_CLOUD_NGFW\", \"thirdPartyFirewallConfig\":{
-     * \"thirdPartyFirewallPolicyList\":[\"global-1\"]
+     * Replace `THIRD_PARTY_FIREWALL_NAME` with the third-party firewall name.
+     *
+     * `"{ \"type\":\"THIRD_PARTY_FIREWALL\", \"thirdPartyFirewall\":\"THIRD_PARTY_FIREWALL_NAME\",
+     * \"thirdPartyFirewallConfig\":{ \"thirdPartyFirewallPolicyList\":[\"global-1\"]
      * },\"firewallDeploymentModel\":{\"centralizedFirewallDeploymentModel\":{\"centralizedFirewallOrchestrationConfig\":{\"inspectionVpcIds\":[{\"resourceId\":\"vpc-1234\",\"accountId\":\"123456789011\"}],\"firewallCreationConfig\":{\"endpointLocation\":{\"availabilityZoneConfigList\":[{\"availabilityZoneId\":null,\"availabilityZoneName\":\"us-east-1a\",\"allowedIPV4CidrList\":[\"10.0.0.0/28\"]}]}},\"allowedIPV4CidrList\":[]}}}}"`
      *
      * To use the distributed deployment model, you must set
      * [FirewallDeploymentModel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-thirdpartyfirewallpolicy.html)
      * to `CENTRALIZED` .
-     * * Example: `THIRD_PARTY_FIREWALL` - Palo Alto Networks Cloud Next-Generation Firewall
-     *   distributed deployment model
+     * * Example: `THIRD_PARTY_FIREWALL` - Distributed deployment model
      *
-     * `"{\"type\":\"THIRD_PARTY_FIREWALL\",\"thirdPartyFirewall\":\"PALO_ALTO_NETWORKS_CLOUD_NGFW\",\"thirdPartyFirewallConfig\":{\"thirdPartyFirewallPolicyList\":[\"global-1\"]
+     * Replace `THIRD_PARTY_FIREWALL_NAME` with the third-party firewall name.
+     *
+     * `"{\"type\":\"THIRD_PARTY_FIREWALL\",\"thirdPartyFirewall\":\"THIRD_PARTY_FIREWALL_NAME\",\"thirdPartyFirewallConfig\":{\"thirdPartyFirewallPolicyList\":[\"global-1\"]
      * },\"firewallDeploymentModel\":{ \"distributedFirewallDeploymentModel\":{
      * \"distributedFirewallOrchestrationConfig\":{\"firewallCreationConfig\":{\"endpointLocation\":{
      * \"availabilityZoneConfigList\":[ {\"availabilityZoneName\":\"${AvailabilityZone}\" } ] } },

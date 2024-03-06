@@ -24,6 +24,7 @@ import software.amazon.awscdk.ExportValueOptions
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.*;
  * ExportValueOptions exportValueOptions = ExportValueOptions.builder()
+ * .description("description")
  * .name("name")
  * .build();
  * ```
@@ -31,6 +32,11 @@ import software.amazon.awscdk.ExportValueOptions
 @CdkDslMarker
 public class ExportValueOptionsDsl {
     private val cdkBuilder: ExportValueOptions.Builder = ExportValueOptions.builder()
+
+    /** @param description The description of the outputs. */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
     /** @param name The name of the export to create. */
     public fun name(name: String) {

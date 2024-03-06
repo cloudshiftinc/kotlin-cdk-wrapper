@@ -35,15 +35,14 @@ import software.constructs.Construct
  *
  * Example:
  * ```
- * CallAwsService detectLabels = CallAwsService.Builder.create(this, "DetectLabels")
- * .service("rekognition")
- * .action("detectLabels")
- * .iamResources(List.of("*"))
- * .additionalIamStatements(List.of(
- * PolicyStatement.Builder.create()
- * .actions(List.of("s3:getObject"))
- * .resources(List.of("arn:aws:s3:::my-bucket/ *"))
- * .build()))
+ * Bucket myBucket;
+ * CallAwsService getObject = CallAwsService.Builder.create(this, "GetObject")
+ * .service("s3")
+ * .action("getObject")
+ * .parameters(Map.of(
+ * "Bucket", myBucket.getBucketName(),
+ * "Key", JsonPath.stringAt("$.key")))
+ * .iamResources(List.of(myBucket.arnForObjects("*")))
  * .build();
  * ```
  */
@@ -233,13 +232,15 @@ public class CallAwsServiceDsl(
     /**
      * AWS Step Functions integrates with services directly in the Amazon States Language.
      *
-     * You can control these AWS services using service integration patterns
+     * You can control these AWS services using service integration patterns.
+     *
+     * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      *
      * Default: - `IntegrationPattern.REQUEST_RESPONSE` for most tasks. `IntegrationPattern.RUN_JOB`
      * for the following exceptions: `BatchSubmitJob`, `EmrAddStep`, `EmrCreateCluster`,
      * `EmrTerminationCluster`, and `EmrContainersStartJobRun`.
      *
-     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html#connect-wait-token)
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-supported-services.html)
      *
      * @param integrationPattern AWS Step Functions integrates with services directly in the Amazon
      *   States Language.
@@ -353,6 +354,17 @@ public class CallAwsServiceDsl(
      */
     public fun service(service: String) {
         cdkBuilder.service(service)
+    }
+
+    /**
+     * Optional name for this state.
+     *
+     * Default: - The construct ID will be used as state name
+     *
+     * @param stateName Optional name for this state.
+     */
+    public fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
     }
 
     /**

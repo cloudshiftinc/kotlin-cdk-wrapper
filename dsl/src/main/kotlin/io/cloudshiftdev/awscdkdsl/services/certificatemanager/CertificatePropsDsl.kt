@@ -18,6 +18,7 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.certificatemanager.CertificateProps
 import software.amazon.awscdk.services.certificatemanager.CertificateValidation
+import software.amazon.awscdk.services.certificatemanager.KeyAlgorithm
 
 /**
  * Properties for your certificate.
@@ -60,6 +61,14 @@ public class CertificatePropsDsl {
      */
     public fun domainName(domainName: String) {
         cdkBuilder.domainName(domainName)
+    }
+
+    /**
+     * @param keyAlgorithm Specifies the algorithm of the public and private key pair that your
+     *   certificate uses to encrypt data.
+     */
+    public fun keyAlgorithm(keyAlgorithm: KeyAlgorithm) {
+        cdkBuilder.keyAlgorithm(keyAlgorithm)
     }
 
     /**

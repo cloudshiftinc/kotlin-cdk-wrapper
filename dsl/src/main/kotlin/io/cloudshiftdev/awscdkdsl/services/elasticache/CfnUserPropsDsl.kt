@@ -69,8 +69,7 @@ public class CfnUserPropsDsl {
      *   the possible JSON values:.
      *
      * ```
-     * { Type: &lt;iam | no-password-required | password&gt; Passwords: ["*****", "******"] // If Type
-     * is password.
+     * { Passwords: ["*****", "******"] // If Type is password.
      * }
      * ```
      */
@@ -85,8 +84,7 @@ public class CfnUserPropsDsl {
      *   the possible JSON values:.
      *
      * ```
-     * { Type: &lt;iam | no-password-required | password&gt; Passwords: ["*****", "******"] // If Type
-     * is password.
+     * { Passwords: ["*****", "******"] // If Type is password.
      * }
      * ```
      */

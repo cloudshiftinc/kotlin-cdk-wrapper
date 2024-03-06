@@ -45,6 +45,8 @@ public class CfnDashboardDsl(
 ) {
     private val cdkBuilder: CfnDashboard.Builder = CfnDashboard.Builder.create(scope, id)
 
+    private val _linkEntities: MutableList<String> = mutableListOf()
+
     private val _permissions: MutableList<Any> = mutableListOf()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
@@ -129,6 +131,52 @@ public class CfnDashboardDsl(
      */
     public fun definition(definition: CfnDashboard.DashboardVersionDefinitionProperty) {
         cdkBuilder.definition(definition)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dashboard.html#cfn-quicksight-dashboard-linkentities)
+     *
+     * @param linkEntities
+     */
+    public fun linkEntities(vararg linkEntities: String) {
+        _linkEntities.addAll(listOf(*linkEntities))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dashboard.html#cfn-quicksight-dashboard-linkentities)
+     *
+     * @param linkEntities
+     */
+    public fun linkEntities(linkEntities: Collection<String>) {
+        _linkEntities.addAll(linkEntities)
+    }
+
+    /**
+     * A structure that contains the link sharing configurations that you want to apply overrides
+     * to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dashboard.html#cfn-quicksight-dashboard-linksharingconfiguration)
+     *
+     * @param linkSharingConfiguration A structure that contains the link sharing configurations
+     *   that you want to apply overrides to.
+     */
+    public fun linkSharingConfiguration(linkSharingConfiguration: IResolvable) {
+        cdkBuilder.linkSharingConfiguration(linkSharingConfiguration)
+    }
+
+    /**
+     * A structure that contains the link sharing configurations that you want to apply overrides
+     * to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dashboard.html#cfn-quicksight-dashboard-linksharingconfiguration)
+     *
+     * @param linkSharingConfiguration A structure that contains the link sharing configurations
+     *   that you want to apply overrides to.
+     */
+    public fun linkSharingConfiguration(
+        linkSharingConfiguration: CfnDashboard.LinkSharingConfigurationProperty
+    ) {
+        cdkBuilder.linkSharingConfiguration(linkSharingConfiguration)
     }
 
     /**
@@ -306,6 +354,36 @@ public class CfnDashboardDsl(
     }
 
     /**
+     * The option to relax the validation that is required to create and update analyses,
+     * dashboards, and templates with definition objects.
+     *
+     * When you set this value to `LENIENT` , validation is skipped for specific errors.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dashboard.html#cfn-quicksight-dashboard-validationstrategy)
+     *
+     * @param validationStrategy The option to relax the validation that is required to create and
+     *   update analyses, dashboards, and templates with definition objects.
+     */
+    public fun validationStrategy(validationStrategy: IResolvable) {
+        cdkBuilder.validationStrategy(validationStrategy)
+    }
+
+    /**
+     * The option to relax the validation that is required to create and update analyses,
+     * dashboards, and templates with definition objects.
+     *
+     * When you set this value to `LENIENT` , validation is skipped for specific errors.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dashboard.html#cfn-quicksight-dashboard-validationstrategy)
+     *
+     * @param validationStrategy The option to relax the validation that is required to create and
+     *   update analyses, dashboards, and templates with definition objects.
+     */
+    public fun validationStrategy(validationStrategy: CfnDashboard.ValidationStrategyProperty) {
+        cdkBuilder.validationStrategy(validationStrategy)
+    }
+
+    /**
      * A description for the first version of the dashboard being created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dashboard.html#cfn-quicksight-dashboard-versiondescription)
@@ -317,6 +395,7 @@ public class CfnDashboardDsl(
     }
 
     public fun build(): CfnDashboard {
+        if (_linkEntities.isNotEmpty()) cdkBuilder.linkEntities(_linkEntities)
         if (_permissions.isNotEmpty()) cdkBuilder.permissions(_permissions)
         if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
         return cdkBuilder.build()

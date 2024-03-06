@@ -17,6 +17,7 @@ import io.cloudshiftdev.awscdkdsl.services.ecs.CapacityProviderStrategyDsl
 import io.cloudshiftdev.awscdkdsl.services.ecs.CloudMapOptionsDsl
 import io.cloudshiftdev.awscdkdsl.services.ecs.DeploymentCircuitBreakerDsl
 import io.cloudshiftdev.awscdkdsl.services.ecs.DeploymentControllerDsl
+import io.cloudshiftdev.awscdkdsl.services.ecs.HealthCheckDsl
 import io.cloudshiftdev.awscdkdsl.services.ecs.RuntimePlatformDsl
 import kotlin.Boolean
 import kotlin.Number
@@ -35,6 +36,7 @@ import software.amazon.awscdk.services.ecs.DeploymentCircuitBreaker
 import software.amazon.awscdk.services.ecs.DeploymentController
 import software.amazon.awscdk.services.ecs.FargatePlatformVersion
 import software.amazon.awscdk.services.ecs.FargateTaskDefinition
+import software.amazon.awscdk.services.ecs.HealthCheck
 import software.amazon.awscdk.services.ecs.ICluster
 import software.amazon.awscdk.services.ecs.PropagatedTagSource
 import software.amazon.awscdk.services.ecs.RuntimePlatform
@@ -328,6 +330,48 @@ public class ApplicationLoadBalancedFargateServiceDsl(
      */
     public fun enableExecuteCommand(enableExecuteCommand: Boolean) {
         cdkBuilder.enableExecuteCommand(enableExecuteCommand)
+    }
+
+    /**
+     * The amount (in GiB) of ephemeral storage to be allocated to the task.
+     *
+     * The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
+     *
+     * Only supported in Fargate platform version 1.4.0 or later.
+     *
+     * Default: Undefined, in which case, the task will receive 20GiB ephemeral storage.
+     *
+     * @param ephemeralStorageGiB The amount (in GiB) of ephemeral storage to be allocated to the
+     *   task.
+     */
+    public fun ephemeralStorageGiB(ephemeralStorageGiB: Number) {
+        cdkBuilder.ephemeralStorageGiB(ephemeralStorageGiB)
+    }
+
+    /**
+     * The health check command and associated configuration parameters for the container.
+     *
+     * Default: - Health check configuration from container.
+     *
+     * @param healthCheck The health check command and associated configuration parameters for the
+     *   container.
+     */
+    public fun healthCheck(healthCheck: HealthCheckDsl.() -> Unit = {}) {
+        val builder = HealthCheckDsl()
+        builder.apply(healthCheck)
+        cdkBuilder.healthCheck(builder.build())
+    }
+
+    /**
+     * The health check command and associated configuration parameters for the container.
+     *
+     * Default: - Health check configuration from container.
+     *
+     * @param healthCheck The health check command and associated configuration parameters for the
+     *   container.
+     */
+    public fun healthCheck(healthCheck: HealthCheck) {
+        cdkBuilder.healthCheck(healthCheck)
     }
 
     /**

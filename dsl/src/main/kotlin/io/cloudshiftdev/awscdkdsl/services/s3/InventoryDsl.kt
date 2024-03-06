@@ -93,7 +93,10 @@ public class InventoryDsl {
         cdkBuilder.includeObjectVersions(includeObjectVersions)
     }
 
-    /** @param inventoryId The inventory configuration ID. */
+    /**
+     * @param inventoryId The inventory configuration ID. Should be limited to 64 characters and can
+     *   only contain letters, numbers, periods, dashes, and underscores.
+     */
     public fun inventoryId(inventoryId: String) {
         cdkBuilder.inventoryId(inventoryId)
     }

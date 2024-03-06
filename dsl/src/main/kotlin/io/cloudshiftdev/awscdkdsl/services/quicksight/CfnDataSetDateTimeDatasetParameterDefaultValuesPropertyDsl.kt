@@ -42,12 +42,18 @@ public class CfnDataSetDateTimeDatasetParameterDefaultValuesPropertyDsl {
 
     private val _staticValues: MutableList<String> = mutableListOf()
 
-    /** @param staticValues the value to be set. */
+    /**
+     * @param staticValues A list of static default values for a given date time parameter. The
+     *   valid format for this property is `yyyy-MM-dd’T’HH:mm:ss’Z’` .
+     */
     public fun staticValues(vararg staticValues: String) {
         _staticValues.addAll(listOf(*staticValues))
     }
 
-    /** @param staticValues the value to be set. */
+    /**
+     * @param staticValues A list of static default values for a given date time parameter. The
+     *   valid format for this property is `yyyy-MM-dd’T’HH:mm:ss’Z’` .
+     */
     public fun staticValues(staticValues: Collection<String>) {
         _staticValues.addAll(staticValues)
     }

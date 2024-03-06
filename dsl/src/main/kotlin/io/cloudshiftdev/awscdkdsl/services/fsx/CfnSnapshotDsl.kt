@@ -63,30 +63,22 @@ public class CfnSnapshotDsl(
     }
 
     /**
-     * An array of key-value pairs to apply to this resource.
-     *
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * .
+     * A list of `Tag` values, with a maximum of 50 elements.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-snapshot.html#cfn-fsx-snapshot-tags)
      *
-     * @param tags An array of key-value pairs to apply to this resource.
+     * @param tags A list of `Tag` values, with a maximum of 50 elements.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
     /**
-     * An array of key-value pairs to apply to this resource.
-     *
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * .
+     * A list of `Tag` values, with a maximum of 50 elements.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-snapshot.html#cfn-fsx-snapshot-tags)
      *
-     * @param tags An array of key-value pairs to apply to this resource.
+     * @param tags A list of `Tag` values, with a maximum of 50 elements.
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)

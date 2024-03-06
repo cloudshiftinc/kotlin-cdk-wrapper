@@ -19,7 +19,8 @@ import software.amazon.awscdk.services.mediatailor.CfnSourceLocation
  * AWS Secrets Manager access token configuration parameters.
  *
  * For information about Secrets Manager access token authentication, see
- * [Working with AWS Secrets Manager access token authentication](https://docs.aws.amazon.com/mediatailor/latest/ug/channel-assembly-access-configuration-access-token.html).</p>
+ * [Working with AWS Secrets Manager access token authentication](https://docs.aws.amazon.com/mediatailor/latest/ug/channel-assembly-access-configuration-access-token.html)
+ * .
  *
  * Example:
  * ```
@@ -44,7 +45,7 @@ public class CfnSourceLocationSecretsManagerAccessTokenConfigurationPropertyDsl 
 
     /**
      * @param headerName The name of the HTTP header used to supply the access token in requests to
-     *   the source location.</p>.
+     *   the source location.
      */
     public fun headerName(headerName: String) {
         cdkBuilder.headerName(headerName)
@@ -52,7 +53,7 @@ public class CfnSourceLocationSecretsManagerAccessTokenConfigurationPropertyDsl 
 
     /**
      * @param secretArn The Amazon Resource Name (ARN) of the AWS Secrets Manager secret that
-     *   contains the access token.</p>.
+     *   contains the access token.
      */
     public fun secretArn(secretArn: String) {
         cdkBuilder.secretArn(secretArn)
@@ -62,7 +63,7 @@ public class CfnSourceLocationSecretsManagerAccessTokenConfigurationPropertyDsl 
      * @param secretStringKey The AWS Secrets Manager
      *   [SecretString](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_CreateSecret.html#SecretsManager-CreateSecret-request-SecretString.html)
      *   key associated with the access token. MediaTailor uses the key to look up SecretString key
-     *   and value pair containing the access token.</p>.
+     *   and value pair containing the access token.
      */
     public fun secretStringKey(secretStringKey: String) {
         cdkBuilder.secretStringKey(secretStringKey)

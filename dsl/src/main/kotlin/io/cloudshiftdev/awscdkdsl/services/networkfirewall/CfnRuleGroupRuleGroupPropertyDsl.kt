@@ -164,7 +164,10 @@ public class CfnRuleGroupRuleGroupPropertyDsl {
     /**
      * @param statefulRuleOptions Additional options governing how Network Firewall handles stateful
      *   rules. The policies where you use your stateful rule group must have stateful rule options
-     *   settings that are compatible with these settings.
+     *   settings that are compatible with these settings. Some limitations apply; for more
+     *   information, see
+     *   [Strict evaluation order](https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-limitations-caveats.html)
+     *   in the *AWS Network Firewall Developer Guide* .
      */
     public fun statefulRuleOptions(statefulRuleOptions: IResolvable) {
         cdkBuilder.statefulRuleOptions(statefulRuleOptions)
@@ -173,7 +176,10 @@ public class CfnRuleGroupRuleGroupPropertyDsl {
     /**
      * @param statefulRuleOptions Additional options governing how Network Firewall handles stateful
      *   rules. The policies where you use your stateful rule group must have stateful rule options
-     *   settings that are compatible with these settings.
+     *   settings that are compatible with these settings. Some limitations apply; for more
+     *   information, see
+     *   [Strict evaluation order](https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-limitations-caveats.html)
+     *   in the *AWS Network Firewall Developer Guide* .
      */
     public fun statefulRuleOptions(statefulRuleOptions: CfnRuleGroup.StatefulRuleOptionsProperty) {
         cdkBuilder.statefulRuleOptions(statefulRuleOptions)

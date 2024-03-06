@@ -676,10 +676,8 @@ public object athena {
     }
 
     /**
-     * The result configuration information about the queries in this workgroup that will be
-     * updated.
-     *
-     * Includes the updated results location and an updated option for encrypting query results.
+     * The information about the updates in the query results, such as output location and
+     * encryption configuration for the query results.
      *
      * Example:
      * ```

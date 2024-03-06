@@ -183,11 +183,6 @@ public object iot1click {
     }
 
     /**
-     * In AWS CloudFormation , use the `DeviceTemplate` property type to define the template for an
-     * AWS IoT 1-Click project.
-     *
-     * `DeviceTemplate` is a property of the `AWS::IoT1Click::Project` resource.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.

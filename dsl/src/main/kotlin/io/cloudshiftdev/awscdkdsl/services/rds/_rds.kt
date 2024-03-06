@@ -44,6 +44,8 @@ import software.amazon.awscdk.services.rds.CfnEventSubscription
 import software.amazon.awscdk.services.rds.CfnEventSubscriptionProps
 import software.amazon.awscdk.services.rds.CfnGlobalCluster
 import software.amazon.awscdk.services.rds.CfnGlobalClusterProps
+import software.amazon.awscdk.services.rds.CfnIntegration
+import software.amazon.awscdk.services.rds.CfnIntegrationProps
 import software.amazon.awscdk.services.rds.CfnOptionGroup
 import software.amazon.awscdk.services.rds.CfnOptionGroupProps
 import software.amazon.awscdk.services.rds.ClusterEngineBindOptions
@@ -152,7 +154,7 @@ public object rds {
      * ```
      * Vpc vpc;
      * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
-     * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_2_08_1).build()))
+     * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_3_01_0).build()))
      * .writer(ClusterInstance.provisioned("writer", ProvisionedClusterInstanceProps.builder()
      * .instanceType(InstanceType.of(InstanceClass.R6G, InstanceSize.XLARGE4))
      * .build()))
@@ -185,12 +187,15 @@ public object rds {
      * .engine(DatabaseClusterEngine.auroraPostgres(AuroraPostgresClusterEngineProps.builder().version(AuroraPostgresEngineVersion.VER_15_2).build()))
      * .credentials(Credentials.fromUsername("adminuser",
      * CredentialsFromUsernameOptions.builder().password(SecretValue.unsafePlainText("7959866cacc02c2d243ecfe177464fe6")).build()))
-     * .instanceProps(InstanceProps.builder()
-     * .instanceType(InstanceType.of(InstanceClass.X2G, InstanceSize.XLARGE))
-     * .vpcSubnets(SubnetSelection.builder().subnetType(SubnetType.PUBLIC).build())
-     * .vpc(vpc)
-     * .build())
+     * .writer(ClusterInstance.provisioned("writer", ProvisionedClusterInstanceProps.builder()
+     * .publiclyAccessible(false)
+     * .build()))
+     * .readers(List.of(ClusterInstance.provisioned("reader")))
      * .storageType(DBClusterStorageType.AURORA_IOPT1)
+     * .vpcSubnets(SubnetSelection.builder()
+     * .subnetType(SubnetType.PRIVATE_WITH_EGRESS)
+     * .build())
+     * .vpc(vpc)
      * .build();
      * ```
      */
@@ -418,6 +423,7 @@ public object rds {
      * .domain("domain")
      * .domainIamRoleName("domainIamRoleName")
      * .enableCloudwatchLogsExports(List.of("enableCloudwatchLogsExports"))
+     * .enableGlobalWriteForwarding(false)
      * .enableHttpEndpoint(false)
      * .enableIamDatabaseAuthentication(false)
      * .engine("engine")
@@ -676,6 +682,7 @@ public object rds {
      * .domain("domain")
      * .domainIamRoleName("domainIamRoleName")
      * .enableCloudwatchLogsExports(List.of("enableCloudwatchLogsExports"))
+     * .enableGlobalWriteForwarding(false)
      * .enableHttpEndpoint(false)
      * .enableIamDatabaseAuthentication(false)
      * .engine("engine")
@@ -785,7 +792,7 @@ public object rds {
      * [Using Amazon Aurora Serverless](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html)
      * in the *Amazon Aurora User Guide* .
      *
-     * This property is only supported for Aurora Serverless v1. For Aurora Serverless v2, use
+     * This property is only supported for Aurora Serverless v1. For Aurora Serverless v2, Use the
      * `ServerlessV2ScalingConfiguration` property.
      *
      * Valid for: Aurora DB clusters only
@@ -830,7 +837,7 @@ public object rds {
      * [Clusters that use Aurora Serverless v2 must have a capacity range specified](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.requirements.html#aurora-serverless-v2.requirements.capacity-range)
      * in the *Amazon Aurora User Guide* .
      *
-     * This property is only supported for Aurora Serverless v2. For Aurora Serverless v1, use
+     * This property is only supported for Aurora Serverless v2. For Aurora Serverless v1, Use the
      * `ScalingConfiguration` property.
      *
      * Example:
@@ -900,14 +907,13 @@ public object rds {
      *   your DB instance changes and add the `DBSnapshotIdentifier` property with the ID of the DB
      *   snapshot that you want to use.
      *
-     * After you restore a DB instance with a `DBSnapshotIdentifier` property, you must specify the
-     * same `DBSnapshotIdentifier` property for any future updates to the DB instance. When you
-     * specify this property for an update, the DB instance is not restored from the DB snapshot
-     * again, and the data in the database is not changed. However, if you don't specify the
-     * `DBSnapshotIdentifier` property, an empty DB instance is created, and the original DB
-     * instance is deleted. If you specify a property that is different from the previous snapshot
-     * restore property, a new DB instance is restored from the specified `DBSnapshotIdentifier`
-     * property, and the original DB instance is deleted.
+     * After you restore a DB instance with a `DBSnapshotIdentifier` property, you can delete the
+     * `DBSnapshotIdentifier` property. When you specify this property for an update, the DB
+     * instance is not restored from the DB snapshot again, and the data in the database is not
+     * changed. However, if you don't specify the `DBSnapshotIdentifier` property, an empty DB
+     * instance is created, and the original DB instance is deleted. If you specify a property that
+     * is different from the previous snapshot restore property, a new DB instance is restored from
+     * the specified `DBSnapshotIdentifier` property, and the original DB instance is deleted.
      * * Update the stack.
      *
      * For more information about updating other properties of this resource, see
@@ -944,6 +950,7 @@ public object rds {
      * .featureName("featureName")
      * .roleArn("roleArn")
      * .build()))
+     * .automaticBackupReplicationRegion("automaticBackupReplicationRegion")
      * .autoMinorVersionUpgrade(false)
      * .availabilityZone("availabilityZone")
      * .backupRetentionPeriod(123)
@@ -965,10 +972,15 @@ public object rds {
      * .dbSecurityGroups(List.of("dbSecurityGroups"))
      * .dbSnapshotIdentifier("dbSnapshotIdentifier")
      * .dbSubnetGroupName("dbSubnetGroupName")
+     * .dedicatedLogVolume(false)
      * .deleteAutomatedBackups(false)
      * .deletionProtection(false)
      * .domain("domain")
+     * .domainAuthSecretArn("domainAuthSecretArn")
+     * .domainDnsIps(List.of("domainDnsIps"))
+     * .domainFqdn("domainFqdn")
      * .domainIamRoleName("domainIamRoleName")
+     * .domainOu("domainOu")
      * .enableCloudwatchLogsExports(List.of("enableCloudwatchLogsExports"))
      * .enableIamDatabaseAuthentication(false)
      * .enablePerformanceInsights(false)
@@ -1073,8 +1085,8 @@ public object rds {
     }
 
     /**
-     * Describes an AWS Identity and Access Management (IAM) role that is associated with a DB
-     * instance.
+     * Information about an AWS Identity and Access Management (IAM) role that is associated with a
+     * DB instance.
      *
      * Example:
      * ```
@@ -1201,6 +1213,7 @@ public object rds {
      * .featureName("featureName")
      * .roleArn("roleArn")
      * .build()))
+     * .automaticBackupReplicationRegion("automaticBackupReplicationRegion")
      * .autoMinorVersionUpgrade(false)
      * .availabilityZone("availabilityZone")
      * .backupRetentionPeriod(123)
@@ -1222,10 +1235,15 @@ public object rds {
      * .dbSecurityGroups(List.of("dbSecurityGroups"))
      * .dbSnapshotIdentifier("dbSnapshotIdentifier")
      * .dbSubnetGroupName("dbSubnetGroupName")
+     * .dedicatedLogVolume(false)
      * .deleteAutomatedBackups(false)
      * .deletionProtection(false)
      * .domain("domain")
+     * .domainAuthSecretArn("domainAuthSecretArn")
+     * .domainDnsIps(List.of("domainDnsIps"))
+     * .domainFqdn("domainFqdn")
      * .domainIamRoleName("domainIamRoleName")
+     * .domainOu("domainOu")
      * .enableCloudwatchLogsExports(List.of("enableCloudwatchLogsExports"))
      * .enableIamDatabaseAuthentication(false)
      * .enablePerformanceInsights(false)
@@ -2178,6 +2196,74 @@ public object rds {
     }
 
     /**
+     * A zero-ETL integration with Amazon Redshift.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.rds.*;
+     * CfnIntegration cfnIntegration = CfnIntegration.Builder.create(this, "MyCfnIntegration")
+     * .sourceArn("sourceArn")
+     * .targetArn("targetArn")
+     * // the properties below are optional
+     * .additionalEncryptionContext(Map.of(
+     * "additionalEncryptionContextKey", "additionalEncryptionContext"))
+     * .integrationName("integrationName")
+     * .kmsKeyId("kmsKeyId")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-integration.html)
+     */
+    public inline fun cfnIntegration(
+        scope: Construct,
+        id: String,
+        block: CfnIntegrationDsl.() -> Unit = {},
+    ): CfnIntegration {
+        val builder = CfnIntegrationDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnIntegration`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.rds.*;
+     * CfnIntegrationProps cfnIntegrationProps = CfnIntegrationProps.builder()
+     * .sourceArn("sourceArn")
+     * .targetArn("targetArn")
+     * // the properties below are optional
+     * .additionalEncryptionContext(Map.of(
+     * "additionalEncryptionContextKey", "additionalEncryptionContext"))
+     * .integrationName("integrationName")
+     * .kmsKeyId("kmsKeyId")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-integration.html)
+     */
+    public inline fun cfnIntegrationProps(
+        block: CfnIntegrationPropsDsl.() -> Unit = {}
+    ): CfnIntegrationProps {
+        val builder = CfnIntegrationPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The `AWS::RDS::OptionGroup` resource creates or updates an option group, to enable and
      * configure features that are specific to a particular DB engine.
      *
@@ -2437,11 +2523,13 @@ public object rds {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.kms.*;
      * import software.amazon.awscdk.services.rds.*;
+     * CaCertificate caCertificate;
      * Key key;
      * ParameterGroup parameterGroup;
      * ClusterInstanceOptions clusterInstanceOptions = ClusterInstanceOptions.builder()
      * .allowMajorVersionUpgrade(false)
      * .autoMinorVersionUpgrade(false)
+     * .caCertificate(caCertificate)
      * .enablePerformanceInsights(false)
      * .instanceIdentifier("instanceIdentifier")
      * .isFromLegacyInstanceProps(false)
@@ -2471,6 +2559,7 @@ public object rds {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.kms.*;
      * import software.amazon.awscdk.services.rds.*;
+     * CaCertificate caCertificate;
      * ClusterInstanceType clusterInstanceType;
      * Key key;
      * ParameterGroup parameterGroup;
@@ -2479,6 +2568,7 @@ public object rds {
      * // the properties below are optional
      * .allowMajorVersionUpgrade(false)
      * .autoMinorVersionUpgrade(false)
+     * .caCertificate(caCertificate)
      * .enablePerformanceInsights(false)
      * .instanceIdentifier("instanceIdentifier")
      * .isFromLegacyInstanceProps(false)
@@ -2579,12 +2669,15 @@ public object rds {
      * .engine(DatabaseClusterEngine.auroraPostgres(AuroraPostgresClusterEngineProps.builder().version(AuroraPostgresEngineVersion.VER_15_2).build()))
      * .credentials(Credentials.fromUsername("adminuser",
      * CredentialsFromUsernameOptions.builder().password(SecretValue.unsafePlainText("7959866cacc02c2d243ecfe177464fe6")).build()))
-     * .instanceProps(InstanceProps.builder()
-     * .instanceType(InstanceType.of(InstanceClass.X2G, InstanceSize.XLARGE))
-     * .vpcSubnets(SubnetSelection.builder().subnetType(SubnetType.PUBLIC).build())
-     * .vpc(vpc)
-     * .build())
+     * .writer(ClusterInstance.provisioned("writer", ProvisionedClusterInstanceProps.builder()
+     * .publiclyAccessible(false)
+     * .build()))
+     * .readers(List.of(ClusterInstance.provisioned("reader")))
      * .storageType(DBClusterStorageType.AURORA_IOPT1)
+     * .vpcSubnets(SubnetSelection.builder()
+     * .subnetType(SubnetType.PRIVATE_WITH_EGRESS)
+     * .build())
+     * .vpc(vpc)
      * .build();
      * ```
      */
@@ -2603,7 +2696,7 @@ public object rds {
      * ```
      * Vpc vpc;
      * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
-     * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_2_08_1).build()))
+     * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_3_01_0).build()))
      * .writer(ClusterInstance.provisioned("writer", ProvisionedClusterInstanceProps.builder()
      * .instanceType(InstanceType.of(InstanceClass.R6G, InstanceSize.XLARGE4))
      * .build()))
@@ -2712,7 +2805,7 @@ public object rds {
      * ```
      * Vpc vpc;
      * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
-     * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_2_08_1).build()))
+     * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_3_01_0).build()))
      * .writer(ClusterInstance.provisioned("writer", ProvisionedClusterInstanceProps.builder()
      * .instanceType(InstanceType.of(InstanceClass.R6G, InstanceSize.XLARGE4))
      * .build()))
@@ -2878,6 +2971,7 @@ public object rds {
      * import software.amazon.awscdk.services.rds.*;
      * import software.amazon.awscdk.services.s3.*;
      * Bucket bucket;
+     * CaCertificate caCertificate;
      * Key key;
      * OptionGroup optionGroup;
      * ParameterGroup parameterGroup;
@@ -2893,6 +2987,7 @@ public object rds {
      * .autoMinorVersionUpgrade(false)
      * .availabilityZone("availabilityZone")
      * .backupRetention(Duration.minutes(30))
+     * .caCertificate(caCertificate)
      * .cloudwatchLogsExports(List.of("cloudwatchLogsExports"))
      * .cloudwatchLogsRetention(RetentionDays.ONE_DAY)
      * .cloudwatchLogsRetentionRole(role)
@@ -3063,6 +3158,7 @@ public object rds {
      * import software.amazon.awscdk.services.rds.*;
      * import software.amazon.awscdk.services.s3.*;
      * Bucket bucket;
+     * CaCertificate caCertificate;
      * IInstanceEngine instanceEngine;
      * InstanceType instanceType;
      * Key key;
@@ -3083,6 +3179,7 @@ public object rds {
      * .autoMinorVersionUpgrade(false)
      * .availabilityZone("availabilityZone")
      * .backupRetention(Duration.minutes(30))
+     * .caCertificate(caCertificate)
      * .cloudwatchLogsExports(List.of("cloudwatchLogsExports"))
      * .cloudwatchLogsRetention(RetentionDays.ONE_DAY)
      * .cloudwatchLogsRetentionRole(role)
@@ -3163,10 +3260,8 @@ public object rds {
      * .proxyTarget(ProxyTarget.fromCluster(cluster))
      * .secrets(List.of(cluster.getSecret()))
      * .vpc(vpc)
+     * .clientPasswordAuthType(ClientPasswordAuthType.MYSQL_NATIVE_PASSWORD)
      * .build();
-     * Role role = Role.Builder.create(this, "DBProxyRole").assumedBy(new
-     * AccountPrincipal(this.account)).build();
-     * proxy.grantConnect(role, "admin");
      * ```
      */
     public inline fun databaseProxy(
@@ -3645,7 +3740,7 @@ public object rds {
      * Function fn = Function.Builder.create(this, "Function")
      * .code(Code.fromInline("exports.handler = (event) =&gt; console.log(event);"))
      * .handler("index.handler")
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_18_X)
      * .build();
      * Rule availabilityRule = instance.onEvent("Availability", OnEventOptions.builder().target(new
      * LambdaFunction(fn)).build());
@@ -3724,7 +3819,7 @@ public object rds {
      * Function fn = Function.Builder.create(this, "Function")
      * .code(Code.fromInline("exports.handler = (event) =&gt; console.log(event);"))
      * .handler("index.handler")
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_18_X)
      * .build();
      * Rule availabilityRule = instance.onEvent("Availability", OnEventOptions.builder().target(new
      * LambdaFunction(fn)).build());
@@ -3870,7 +3965,7 @@ public object rds {
      * "ServerlessCluster")
      * .engine(DatabaseClusterEngine.AURORA_POSTGRESQL)
      * .parameterGroup(ParameterGroup.fromParameterGroupName(this, "ParameterGroup",
-     * "default.aurora-postgresql10"))
+     * "default.aurora-postgresql11"))
      * .vpc(vpc)
      * .build();
      * Construct myCoolConstruct = new Construct(this, "MyCoolConstruct");
@@ -4035,7 +4130,7 @@ public object rds {
      * Function fn = Function.Builder.create(this, "Function")
      * .code(Code.fromInline("exports.handler = (event) =&gt; console.log(event);"))
      * .handler("index.handler")
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_18_X)
      * .build();
      * Rule availabilityRule = instance.onEvent("Availability", OnEventOptions.builder().target(new
      * LambdaFunction(fn)).build());
@@ -4136,7 +4231,7 @@ public object rds {
      * ```
      * Vpc vpc;
      * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
-     * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_2_08_1).build()))
+     * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_3_01_0).build()))
      * .writer(ClusterInstance.provisioned("writer", ProvisionedClusterInstanceProps.builder()
      * .instanceType(InstanceType.of(InstanceClass.R6G, InstanceSize.XLARGE4))
      * .build()))
@@ -4419,12 +4514,14 @@ public object rds {
      * .copyTagsToSnapshot(true) // whether to save the cluster tags when creating the snapshot.
      * Default is 'true'
      * .parameterGroup(ParameterGroup.fromParameterGroupName(this, "ParameterGroup",
-     * "default.aurora-postgresql10"))
+     * "default.aurora-postgresql11"))
      * .vpc(vpc)
      * .scaling(ServerlessScalingOptions.builder()
      * .autoPause(Duration.minutes(10)) // default is to pause after 5 minutes of idle time
      * .minCapacity(AuroraCapacityUnit.ACU_8) // default is 2 Aurora capacity units (ACUs)
-     * .maxCapacity(AuroraCapacityUnit.ACU_32)
+     * .maxCapacity(AuroraCapacityUnit.ACU_32) // default is 16 Aurora capacity units (ACUs)
+     * .timeout(Duration.seconds(100)) // default is 5 minutes
+     * .timeoutAction(TimeoutAction.FORCE_APPLY_CAPACITY_CHANGE)
      * .build())
      * .build();
      * ```
@@ -4444,11 +4541,14 @@ public object rds {
      * ```
      * Vpc vpc;
      * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
-     * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_2_08_1).build()))
-     * .writer(ClusterInstance.serverlessV2("writer"))
-     * .readers(List.of(ClusterInstance.serverlessV2("reader1",
-     * ServerlessV2ClusterInstanceProps.builder().scaleWithWriter(true).build()),
-     * ClusterInstance.serverlessV2("reader2")))
+     * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_3_01_0).build()))
+     * .writer(ClusterInstance.provisioned("writer", ProvisionedClusterInstanceProps.builder()
+     * .caCertificate(CaCertificate.RDS_CA_RDS2048_G1)
+     * .build()))
+     * .readers(List.of(ClusterInstance.serverlessV2("reader",
+     * ServerlessV2ClusterInstanceProps.builder()
+     * .caCertificate(CaCertificate.of("custom-ca"))
+     * .build())))
      * .vpc(vpc)
      * .build();
      * ```

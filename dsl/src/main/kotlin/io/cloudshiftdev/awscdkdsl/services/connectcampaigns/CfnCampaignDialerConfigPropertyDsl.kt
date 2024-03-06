@@ -24,11 +24,18 @@ import software.amazon.awscdk.services.connectcampaigns.CfnCampaign
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.connectcampaigns.*;
  * DialerConfigProperty dialerConfigProperty = DialerConfigProperty.builder()
+ * .agentlessDialerConfig(AgentlessDialerConfigProperty.builder()
+ * .dialingCapacity(123)
+ * .build())
  * .predictiveDialerConfig(PredictiveDialerConfigProperty.builder()
  * .bandwidthAllocation(123)
+ * // the properties below are optional
+ * .dialingCapacity(123)
  * .build())
  * .progressiveDialerConfig(ProgressiveDialerConfigProperty.builder()
  * .bandwidthAllocation(123)
+ * // the properties below are optional
+ * .dialingCapacity(123)
  * .build())
  * .build();
  * ```
@@ -39,6 +46,18 @@ import software.amazon.awscdk.services.connectcampaigns.CfnCampaign
 public class CfnCampaignDialerConfigPropertyDsl {
     private val cdkBuilder: CfnCampaign.DialerConfigProperty.Builder =
         CfnCampaign.DialerConfigProperty.builder()
+
+    /** @param agentlessDialerConfig The configuration of the agentless dialer. */
+    public fun agentlessDialerConfig(agentlessDialerConfig: IResolvable) {
+        cdkBuilder.agentlessDialerConfig(agentlessDialerConfig)
+    }
+
+    /** @param agentlessDialerConfig The configuration of the agentless dialer. */
+    public fun agentlessDialerConfig(
+        agentlessDialerConfig: CfnCampaign.AgentlessDialerConfigProperty
+    ) {
+        cdkBuilder.agentlessDialerConfig(agentlessDialerConfig)
+    }
 
     /** @param predictiveDialerConfig The configuration of the predictive dialer. */
     public fun predictiveDialerConfig(predictiveDialerConfig: IResolvable) {

@@ -61,7 +61,7 @@ public class CfnSegmentPropsDsl {
     /**
      * @param pattern The pattern to use for the segment. For more information about pattern syntax,
      *   see
-     *   [Segment rule pattern syntax](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments-syntax.html)
+     *   [Segment rule pattern syntax](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html#CloudWatch-Evidently-segments-syntax)
      *   .
      */
     public fun pattern(pattern: String) {

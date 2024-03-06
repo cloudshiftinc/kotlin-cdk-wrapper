@@ -23,8 +23,9 @@ import software.amazon.awscdk.services.lambda.CfnFunction
  * can specify the location of an object in Amazon S3. For Node.js and Python functions, you can
  * specify the function code inline in the template.
  *
- * Changes to a deployment package in Amazon S3 are not detected automatically during stack updates.
- * To update the function code, change the object key or version in the template.
+ * Changes to a deployment package in Amazon S3 or a container image in ECR are not detected
+ * automatically during stack updates. To update the function code, change the object key or version
+ * in the template.
  *
  * Example:
  * ```

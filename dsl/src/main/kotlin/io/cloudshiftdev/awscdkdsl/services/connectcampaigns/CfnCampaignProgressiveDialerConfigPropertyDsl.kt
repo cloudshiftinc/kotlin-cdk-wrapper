@@ -26,6 +26,8 @@ import software.amazon.awscdk.services.connectcampaigns.CfnCampaign
  * ProgressiveDialerConfigProperty progressiveDialerConfigProperty =
  * ProgressiveDialerConfigProperty.builder()
  * .bandwidthAllocation(123)
+ * // the properties below are optional
+ * .dialingCapacity(123)
  * .build();
  * ```
  *
@@ -39,6 +41,13 @@ public class CfnCampaignProgressiveDialerConfigPropertyDsl {
     /** @param bandwidthAllocation Bandwidth allocation for the progressive dialer. */
     public fun bandwidthAllocation(bandwidthAllocation: Number) {
         cdkBuilder.bandwidthAllocation(bandwidthAllocation)
+    }
+
+    /**
+     * @param dialingCapacity The allocation of dialing capacity between multiple active campaigns.
+     */
+    public fun dialingCapacity(dialingCapacity: Number) {
+        cdkBuilder.dialingCapacity(dialingCapacity)
     }
 
     public fun build(): CfnCampaign.ProgressiveDialerConfigProperty = cdkBuilder.build()

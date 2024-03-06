@@ -881,17 +881,9 @@ public class CfnReplicationGroupDsl(
     }
 
     /**
-     * The replication group identifier. This parameter is stored as a lowercase string.
-     *
-     * Constraints:
-     * * A name must contain from 1 to 40 alphanumeric characters or hyphens.
-     * * The first character must be a letter.
-     * * A name cannot end with a hyphen or contain two consecutive hyphens.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-replicationgroupid)
      *
-     * @param replicationGroupId The replication group identifier. This parameter is stored as a
-     *   lowercase string.
+     * @param replicationGroupId
      */
     public fun replicationGroupId(replicationGroupId: String) {
         cdkBuilder.replicationGroupId(replicationGroupId)

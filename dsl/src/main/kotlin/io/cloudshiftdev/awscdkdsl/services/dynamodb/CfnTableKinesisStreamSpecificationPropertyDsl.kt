@@ -26,6 +26,8 @@ import software.amazon.awscdk.services.dynamodb.CfnTable
  * KinesisStreamSpecificationProperty kinesisStreamSpecificationProperty =
  * KinesisStreamSpecificationProperty.builder()
  * .streamArn("streamArn")
+ * // the properties below are optional
+ * .approximateCreationDateTimePrecision("approximateCreationDateTimePrecision")
  * .build();
  * ```
  *
@@ -35,6 +37,14 @@ import software.amazon.awscdk.services.dynamodb.CfnTable
 public class CfnTableKinesisStreamSpecificationPropertyDsl {
     private val cdkBuilder: CfnTable.KinesisStreamSpecificationProperty.Builder =
         CfnTable.KinesisStreamSpecificationProperty.builder()
+
+    /**
+     * @param approximateCreationDateTimePrecision The precision for the time and date that the
+     *   stream was created.
+     */
+    public fun approximateCreationDateTimePrecision(approximateCreationDateTimePrecision: String) {
+        cdkBuilder.approximateCreationDateTimePrecision(approximateCreationDateTimePrecision)
+    }
 
     /**
      * @param streamArn The ARN for a specific Kinesis data stream. Length Constraints: Minimum

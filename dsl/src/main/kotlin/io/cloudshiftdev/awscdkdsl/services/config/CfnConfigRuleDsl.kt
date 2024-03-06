@@ -127,22 +127,26 @@ public class CfnConfigRuleDsl(
     private val _evaluationModes: MutableList<Any> = mutableListOf()
 
     /**
-     * Compliance details of the Config rule.
+     * Indicates whether an AWS resource or AWS Config rule is compliant and provides the number of
+     * contributors that affect the compliance.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-compliance)
      *
-     * @param compliance Compliance details of the Config rule.
+     * @param compliance Indicates whether an AWS resource or AWS Config rule is compliant and
+     *   provides the number of contributors that affect the compliance.
      */
     public fun compliance(compliance: IResolvable) {
         cdkBuilder.compliance(compliance)
     }
 
     /**
-     * Compliance details of the Config rule.
+     * Indicates whether an AWS resource or AWS Config rule is compliant and provides the number of
+     * contributors that affect the compliance.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-compliance)
      *
-     * @param compliance Compliance details of the Config rule.
+     * @param compliance Indicates whether an AWS resource or AWS Config rule is compliant and
+     *   provides the number of contributors that affect the compliance.
      */
     public fun compliance(compliance: CfnConfigRule.ComplianceProperty) {
         cdkBuilder.compliance(compliance)
@@ -176,33 +180,42 @@ public class CfnConfigRuleDsl(
     }
 
     /**
-     * List of EvaluationModeConfiguration objects.
+     * The modes the AWS Config rule can be evaluated in.
+     *
+     * The valid values are distinct objects. By default, the value is Detective evaluation mode
+     * only.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-evaluationmodes)
      *
-     * @param evaluationModes List of EvaluationModeConfiguration objects.
+     * @param evaluationModes The modes the AWS Config rule can be evaluated in.
      */
     public fun evaluationModes(vararg evaluationModes: Any) {
         _evaluationModes.addAll(listOf(*evaluationModes))
     }
 
     /**
-     * List of EvaluationModeConfiguration objects.
+     * The modes the AWS Config rule can be evaluated in.
+     *
+     * The valid values are distinct objects. By default, the value is Detective evaluation mode
+     * only.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-evaluationmodes)
      *
-     * @param evaluationModes List of EvaluationModeConfiguration objects.
+     * @param evaluationModes The modes the AWS Config rule can be evaluated in.
      */
     public fun evaluationModes(evaluationModes: Collection<Any>) {
         _evaluationModes.addAll(evaluationModes)
     }
 
     /**
-     * List of EvaluationModeConfiguration objects.
+     * The modes the AWS Config rule can be evaluated in.
+     *
+     * The valid values are distinct objects. By default, the value is Detective evaluation mode
+     * only.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-evaluationmodes)
      *
-     * @param evaluationModes List of EvaluationModeConfiguration objects.
+     * @param evaluationModes The modes the AWS Config rule can be evaluated in.
      */
     public fun evaluationModes(evaluationModes: IResolvable) {
         cdkBuilder.evaluationModes(evaluationModes)

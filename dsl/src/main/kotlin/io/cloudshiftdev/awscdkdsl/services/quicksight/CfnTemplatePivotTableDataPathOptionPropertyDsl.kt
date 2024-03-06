@@ -30,6 +30,9 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * PivotTableDataPathOptionProperty pivotTableDataPathOptionProperty =
  * PivotTableDataPathOptionProperty.builder()
  * .dataPathList(List.of(DataPathValueProperty.builder()
+ * .dataPathType(DataPathTypeProperty.builder()
+ * .pivotTableDataPathType("pivotTableDataPathType")
+ * .build())
  * .fieldId("fieldId")
  * .fieldValue("fieldValue")
  * .build()))

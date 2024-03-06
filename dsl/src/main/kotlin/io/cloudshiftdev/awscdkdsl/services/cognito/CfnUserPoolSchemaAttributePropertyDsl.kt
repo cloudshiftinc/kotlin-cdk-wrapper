@@ -58,7 +58,12 @@ public class CfnUserPoolSchemaAttributePropertyDsl {
     private val cdkBuilder: CfnUserPool.SchemaAttributeProperty.Builder =
         CfnUserPool.SchemaAttributeProperty.builder()
 
-    /** @param attributeDataType The data format of the values for your attribute. */
+    /**
+     * @param attributeDataType The data format of the values for your attribute. When you choose an
+     *   `AttributeDataType` , Amazon Cognito validates the input against the data type. A custom
+     *   attribute value in your user's ID token is always a string, for example `"custom:isMember"
+     *   : "true"` or `"custom:YearsAsMember" : "12"` .
+     */
     public fun attributeDataType(attributeDataType: String) {
         cdkBuilder.attributeDataType(attributeDataType)
     }
@@ -114,8 +119,13 @@ public class CfnUserPoolSchemaAttributePropertyDsl {
     }
 
     /**
-     * @param name The name of your user pool attribute, for example `username` or
-     *   `custom:costcenter` .
+     * @param name The name of your user pool attribute. When you create or update a user pool,
+     *   adding a schema attribute creates a custom or developer-only attribute. When you add an
+     *   attribute with a `Name` value of `MyAttribute` , Amazon Cognito creates the custom
+     *   attribute `custom:MyAttribute` . When `DeveloperOnlyAttribute` is `true` , Amazon Cognito
+     *   creates your attribute as `dev:MyAttribute` . In an operation that describes a user pool,
+     *   Amazon Cognito returns this value as `value` for standard attributes, `custom:value` for
+     *   custom attributes, and `dev:value` for developer-only attributes..
      */
     public fun name(name: String) {
         cdkBuilder.name(name)

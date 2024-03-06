@@ -30,6 +30,8 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * .audioFramesPerPes(123)
  * .audioPids("audioPids")
  * .ecmPid("ecmPid")
+ * .klvBehavior("klvBehavior")
+ * .klvDataPids("klvDataPids")
  * .nielsenId3Behavior("nielsenId3Behavior")
  * .patInterval(123)
  * .pcrControl("pcrControl")
@@ -71,6 +73,16 @@ public class CfnChannelM3u8SettingsPropertyDsl {
     /** @param ecmPid This parameter is unused and deprecated. */
     public fun ecmPid(ecmPid: String) {
         cdkBuilder.ecmPid(ecmPid)
+    }
+
+    /** @param klvBehavior the value to be set. */
+    public fun klvBehavior(klvBehavior: String) {
+        cdkBuilder.klvBehavior(klvBehavior)
+    }
+
+    /** @param klvDataPids the value to be set. */
+    public fun klvDataPids(klvDataPids: String) {
+        cdkBuilder.klvDataPids(klvDataPids)
     }
 
     /**

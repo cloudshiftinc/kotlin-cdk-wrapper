@@ -58,6 +58,7 @@ import software.amazon.awscdk.services.codecommit.RepositoryProps
  * .runOrder(3)
  * .build()));
  * Pipeline.Builder.create(stack, "Pipeline")
+ * .crossAccountKeys(true)
  * .stages(List.of(sourceStage, prodStage))
  * .build();
  * ```

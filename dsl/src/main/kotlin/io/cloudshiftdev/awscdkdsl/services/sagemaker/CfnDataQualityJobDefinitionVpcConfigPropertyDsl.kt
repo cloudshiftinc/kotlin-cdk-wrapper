@@ -18,13 +18,11 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinition
 
 /**
- * Specifies a VPC that your training jobs and hosted models have access to.
+ * Specifies an Amazon Virtual Private Cloud (VPC) that your SageMaker jobs, hosted models, and
+ * compute resources have access to.
  *
- * Control access to and from your training and model containers by configuring the VPC. For more
- * information, see
- * [Protect Endpoints by Using an Amazon Virtual Private Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/host-vpc.html)
- * and
- * [Protect Training Jobs by Using an Amazon Virtual Private Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html)
+ * You can control access to and from your resources by configuring a VPC. For more information, see
+ * [Give SageMaker Access to Resources in your Amazon VPC](https://docs.aws.amazon.com/sagemaker/latest/dg/infrastructure-give-access.html)
  * .
  *
  * Example:
@@ -50,7 +48,7 @@ public class CfnDataQualityJobDefinitionVpcConfigPropertyDsl {
     private val _subnets: MutableList<String> = mutableListOf()
 
     /**
-     * @param securityGroupIds The VPC security group IDs, in the form sg-xxxxxxxx. Specify the
+     * @param securityGroupIds The VPC security group IDs, in the form `sg-xxxxxxxx` . Specify the
      *   security groups for the VPC that is specified in the `Subnets` field.
      */
     public fun securityGroupIds(vararg securityGroupIds: String) {
@@ -58,7 +56,7 @@ public class CfnDataQualityJobDefinitionVpcConfigPropertyDsl {
     }
 
     /**
-     * @param securityGroupIds The VPC security group IDs, in the form sg-xxxxxxxx. Specify the
+     * @param securityGroupIds The VPC security group IDs, in the form `sg-xxxxxxxx` . Specify the
      *   security groups for the VPC that is specified in the `Subnets` field.
      */
     public fun securityGroupIds(securityGroupIds: Collection<String>) {

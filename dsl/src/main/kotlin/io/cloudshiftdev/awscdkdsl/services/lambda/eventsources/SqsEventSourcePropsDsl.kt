@@ -28,8 +28,7 @@ import software.amazon.awscdk.services.lambda.eventsources.SqsEventSourceProps
  * import software.amazon.awscdk.services.lambda.eventsources.SqsEventSource;
  * Function fn;
  * Queue queue = Queue.Builder.create(this, "MyQueue")
- * .visibilityTimeout(Duration.seconds(30)) // default,
- * .receiveMessageWaitTime(Duration.seconds(20))
+ * .visibilityTimeout(Duration.seconds(30))
  * .build();
  * fn.addEventSource(SqsEventSource.Builder.create(queue)
  * .batchSize(10) // default

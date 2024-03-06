@@ -16,8 +16,6 @@ import kotlin.String
 import software.amazon.awscdk.services.emrserverless.CfnApplication
 
 /**
- * The resource configuration of the initial capacity configuration.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -39,27 +37,24 @@ public class CfnApplicationWorkerConfigurationPropertyDsl {
         CfnApplication.WorkerConfigurationProperty.builder()
 
     /**
-     * @param cpu *Minimum* : 1. *Maximum* : 15
-     *
-     * *Pattern* : `^[1-9][0-9]*(\\s)?(vCPU|vcpu|VCPU)?$`
+     * @param cpu Per worker CPU resource. vCPU is the only supported unit and specifying vCPU is
+     *   optional.
      */
     public fun cpu(cpu: String) {
         cdkBuilder.cpu(cpu)
     }
 
     /**
-     * @param disk *Minimum* : 1. *Maximum* : 15
-     *
-     * *Pattern* : `^[1-9][0-9]*(\\s)?(GB|gb|gB|Gb)$"`
+     * @param disk Per worker Disk resource. GB is the only supported unit and specifying GB is
+     *   optional
      */
     public fun disk(disk: String) {
         cdkBuilder.disk(disk)
     }
 
     /**
-     * @param memory *Minimum* : 1. *Maximum* : 15
-     *
-     * *Pattern* : `^[1-9][0-9]*(\\s)?(GB|gb|gB|Gb)?$`
+     * @param memory Per worker memory resource. GB is the only supported unit and specifying GB is
+     *   optional.
      */
     public fun memory(memory: String) {
         cdkBuilder.memory(memory)

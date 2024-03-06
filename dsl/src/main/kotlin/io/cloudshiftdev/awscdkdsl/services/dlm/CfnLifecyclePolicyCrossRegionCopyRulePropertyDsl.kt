@@ -18,10 +18,12 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dlm.CfnLifecyclePolicy
 
 /**
- * *[Snapshot and AMI policies only]* Specifies a cross-Region copy rule for snapshot and AMI
- * policies.
+ * *[Custom snapshot and AMI policies only]* Specifies a cross-Region copy rule for a snapshot and
+ * AMI policies.
  *
- * To specify a cross-Region copy action for event-based polices, use `CrossRegionCopyAction` .
+ * To specify a cross-Region copy action for event-based polices, use
+ * [CrossRegionCopyAction](https://docs.aws.amazon.com/dlm/latest/APIReference/API_CrossRegionCopyAction.html)
+ * .
  *
  * Example:
  * ```
@@ -77,12 +79,18 @@ public class CfnLifecyclePolicyCrossRegionCopyRulePropertyDsl {
         cdkBuilder.copyTags(copyTags)
     }
 
-    /** @param deprecateRule the value to be set. */
+    /**
+     * @param deprecateRule *[Custom AMI policies only]* The AMI deprecation rule for cross-Region
+     *   AMI copies created by the rule.
+     */
     public fun deprecateRule(deprecateRule: IResolvable) {
         cdkBuilder.deprecateRule(deprecateRule)
     }
 
-    /** @param deprecateRule the value to be set. */
+    /**
+     * @param deprecateRule *[Custom AMI policies only]* The AMI deprecation rule for cross-Region
+     *   AMI copies created by the rule.
+     */
     public fun deprecateRule(
         deprecateRule: CfnLifecyclePolicy.CrossRegionCopyDeprecateRuleProperty
     ) {
@@ -124,19 +132,21 @@ public class CfnLifecyclePolicyCrossRegionCopyRulePropertyDsl {
     }
 
     /**
-     * @param target The target Region or the Amazon Resource Name (ARN) of the target Outpost for
-     *   the snapshot copies. Use this parameter instead of *TargetRegion* . Do not specify both.
+     * @param target Use this parameter for snapshot policies only. For AMI policies, use
+     *   *TargetRegion* instead. *[Custom snapshot policies only]* The target Region or the Amazon
+     *   Resource Name (ARN) of the target Outpost for the snapshot copies.
      */
     public fun target(target: String) {
         cdkBuilder.target(target)
     }
 
     /**
-     * @param targetRegion Avoid using this parameter when creating new policies. Instead, use
-     *   *Target* to specify a target Region or a target Outpost for snapshot copies.
+     * @param targetRegion Use this parameter for AMI policies only. For snapshot policies, use
+     *   *Target* instead. For snapshot policies created before the *Target* parameter was
+     *   introduced, this parameter indicates the target Region for snapshot copies.
      *
-     * For policies created before the *Target* parameter was introduced, this parameter indicates
-     * the target Region for snapshot copies.
+     * *[Custom AMI policies only]* The target Region or the Amazon Resource Name (ARN) of the
+     * target Outpost for the snapshot copies.
      */
     public fun targetRegion(targetRegion: String) {
         cdkBuilder.targetRegion(targetRegion)

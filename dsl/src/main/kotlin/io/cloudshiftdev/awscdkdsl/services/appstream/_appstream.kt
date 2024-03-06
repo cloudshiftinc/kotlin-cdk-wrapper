@@ -842,6 +842,7 @@ public object appstream {
      * import software.amazon.awscdk.services.appstream.*;
      * ComputeCapacityProperty computeCapacityProperty = ComputeCapacityProperty.builder()
      * .desiredInstances(123)
+     * .desiredSessions(123)
      * .build();
      * ```
      *
@@ -1177,6 +1178,8 @@ public object appstream {
      * .userSettings(List.of(UserSettingProperty.builder()
      * .action("action")
      * .permission("permission")
+     * // the properties below are optional
+     * .maximumLength(123)
      * .build()))
      * .build();
      * ```
@@ -1341,6 +1344,8 @@ public object appstream {
      * .userSettings(List.of(UserSettingProperty.builder()
      * .action("action")
      * .permission("permission")
+     * // the properties below are optional
+     * .maximumLength(123)
      * .build()))
      * .build();
      * ```
@@ -1477,6 +1482,8 @@ public object appstream {
      * UserSettingProperty userSettingProperty = UserSettingProperty.builder()
      * .action("action")
      * .permission("permission")
+     * // the properties below are optional
+     * .maximumLength(123)
      * .build();
      * ```
      *

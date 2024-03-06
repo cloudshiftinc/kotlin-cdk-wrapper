@@ -32,6 +32,10 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * // the properties below are optional
  * .delimiter("delimiter")
  * .displayOptions(TextAreaControlDisplayOptionsProperty.builder()
+ * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+ * .infoIconText("infoIconText")
+ * .visibility("visibility")
+ * .build())
  * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
  * .visibility("visibility")
  * .build())

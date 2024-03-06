@@ -29,21 +29,28 @@ public object connectcampaigns {
      * CfnCampaign cfnCampaign = CfnCampaign.Builder.create(this, "MyCfnCampaign")
      * .connectInstanceArn("connectInstanceArn")
      * .dialerConfig(DialerConfigProperty.builder()
+     * .agentlessDialerConfig(AgentlessDialerConfigProperty.builder()
+     * .dialingCapacity(123)
+     * .build())
      * .predictiveDialerConfig(PredictiveDialerConfigProperty.builder()
      * .bandwidthAllocation(123)
+     * // the properties below are optional
+     * .dialingCapacity(123)
      * .build())
      * .progressiveDialerConfig(ProgressiveDialerConfigProperty.builder()
      * .bandwidthAllocation(123)
+     * // the properties below are optional
+     * .dialingCapacity(123)
      * .build())
      * .build())
      * .name("name")
      * .outboundCallConfig(OutboundCallConfigProperty.builder()
      * .connectContactFlowArn("connectContactFlowArn")
-     * .connectQueueArn("connectQueueArn")
      * // the properties below are optional
      * .answerMachineDetectionConfig(AnswerMachineDetectionConfigProperty.builder()
      * .enableAnswerMachineDetection(false)
      * .build())
+     * .connectQueueArn("connectQueueArn")
      * .connectSourcePhoneNumber("connectSourcePhoneNumber")
      * .build())
      * // the properties below are optional
@@ -67,7 +74,31 @@ public object connectcampaigns {
     }
 
     /**
-     * The configuration used for answering machine detection during outbound calls.
+     * Contains agentless dialer configuration for an outbound campaign.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.connectcampaigns.*;
+     * AgentlessDialerConfigProperty agentlessDialerConfigProperty =
+     * AgentlessDialerConfigProperty.builder()
+     * .dialingCapacity(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-agentlessdialerconfig.html)
+     */
+    public inline fun cfnCampaignAgentlessDialerConfigProperty(
+        block: CfnCampaignAgentlessDialerConfigPropertyDsl.() -> Unit = {}
+    ): CfnCampaign.AgentlessDialerConfigProperty {
+        val builder = CfnCampaignAgentlessDialerConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Contains information about answering machine detection.
      *
      * Example:
      * ```
@@ -99,11 +130,18 @@ public object connectcampaigns {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.connectcampaigns.*;
      * DialerConfigProperty dialerConfigProperty = DialerConfigProperty.builder()
+     * .agentlessDialerConfig(AgentlessDialerConfigProperty.builder()
+     * .dialingCapacity(123)
+     * .build())
      * .predictiveDialerConfig(PredictiveDialerConfigProperty.builder()
      * .bandwidthAllocation(123)
+     * // the properties below are optional
+     * .dialingCapacity(123)
      * .build())
      * .progressiveDialerConfig(ProgressiveDialerConfigProperty.builder()
      * .bandwidthAllocation(123)
+     * // the properties below are optional
+     * .dialingCapacity(123)
      * .build())
      * .build();
      * ```
@@ -128,11 +166,11 @@ public object connectcampaigns {
      * import software.amazon.awscdk.services.connectcampaigns.*;
      * OutboundCallConfigProperty outboundCallConfigProperty = OutboundCallConfigProperty.builder()
      * .connectContactFlowArn("connectContactFlowArn")
-     * .connectQueueArn("connectQueueArn")
      * // the properties below are optional
      * .answerMachineDetectionConfig(AnswerMachineDetectionConfigProperty.builder()
      * .enableAnswerMachineDetection(false)
      * .build())
+     * .connectQueueArn("connectQueueArn")
      * .connectSourcePhoneNumber("connectSourcePhoneNumber")
      * .build();
      * ```
@@ -158,6 +196,8 @@ public object connectcampaigns {
      * PredictiveDialerConfigProperty predictiveDialerConfigProperty =
      * PredictiveDialerConfigProperty.builder()
      * .bandwidthAllocation(123)
+     * // the properties below are optional
+     * .dialingCapacity(123)
      * .build();
      * ```
      *
@@ -182,6 +222,8 @@ public object connectcampaigns {
      * ProgressiveDialerConfigProperty progressiveDialerConfigProperty =
      * ProgressiveDialerConfigProperty.builder()
      * .bandwidthAllocation(123)
+     * // the properties below are optional
+     * .dialingCapacity(123)
      * .build();
      * ```
      *
@@ -206,21 +248,28 @@ public object connectcampaigns {
      * CfnCampaignProps cfnCampaignProps = CfnCampaignProps.builder()
      * .connectInstanceArn("connectInstanceArn")
      * .dialerConfig(DialerConfigProperty.builder()
+     * .agentlessDialerConfig(AgentlessDialerConfigProperty.builder()
+     * .dialingCapacity(123)
+     * .build())
      * .predictiveDialerConfig(PredictiveDialerConfigProperty.builder()
      * .bandwidthAllocation(123)
+     * // the properties below are optional
+     * .dialingCapacity(123)
      * .build())
      * .progressiveDialerConfig(ProgressiveDialerConfigProperty.builder()
      * .bandwidthAllocation(123)
+     * // the properties below are optional
+     * .dialingCapacity(123)
      * .build())
      * .build())
      * .name("name")
      * .outboundCallConfig(OutboundCallConfigProperty.builder()
      * .connectContactFlowArn("connectContactFlowArn")
-     * .connectQueueArn("connectQueueArn")
      * // the properties below are optional
      * .answerMachineDetectionConfig(AnswerMachineDetectionConfigProperty.builder()
      * .enableAnswerMachineDetection(false)
      * .build())
+     * .connectQueueArn("connectQueueArn")
      * .connectSourcePhoneNumber("connectSourcePhoneNumber")
      * .build())
      * // the properties below are optional

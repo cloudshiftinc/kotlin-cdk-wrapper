@@ -23,9 +23,10 @@ import software.constructs.Construct
 
 public object managedblockchain {
     /**
-     * Creates a new accessor for use with Managed Blockchain Ethereum nodes.
+     * Creates a new accessor for use with Amazon Managed Blockchain service that supports token
+     * based access.
      *
-     * An accessor contains information required for token based access to your Ethereum nodes.
+     * The accessor contains information required for token based access.
      *
      * Example:
      * ```
@@ -35,6 +36,7 @@ public object managedblockchain {
      * CfnAccessor cfnAccessor = CfnAccessor.Builder.create(this, "MyCfnAccessor")
      * .accessorType("accessorType")
      * // the properties below are optional
+     * .networkType("networkType")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -65,6 +67,7 @@ public object managedblockchain {
      * CfnAccessorProps cfnAccessorProps = CfnAccessorProps.builder()
      * .accessorType("accessorType")
      * // the properties below are optional
+     * .networkType("networkType")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")

@@ -40,6 +40,7 @@ import software.constructs.Construct
  * .anywhereConfiguration(AnywhereConfigurationProperty.builder()
  * .cost("cost")
  * .build())
+ * .applyCapacity("applyCapacity")
  * .buildId("buildId")
  * .certificateConfiguration(CertificateConfigurationProperty.builder()
  * .certificateType("certificateType")
@@ -56,6 +57,7 @@ import software.constructs.Construct
  * .ec2InstanceType("ec2InstanceType")
  * .fleetType("fleetType")
  * .instanceRoleArn("instanceRoleArn")
+ * .instanceRoleCredentialsProvider("instanceRoleCredentialsProvider")
  * .locations(List.of(LocationConfigurationProperty.builder()
  * .location("location")
  * // the properties below are optional
@@ -86,6 +88,23 @@ import software.constructs.Construct
  * .parameters("parameters")
  * .build()))
  * .build())
+ * .scalingPolicies(List.of(ScalingPolicyProperty.builder()
+ * .metricName("metricName")
+ * .name("name")
+ * // the properties below are optional
+ * .comparisonOperator("comparisonOperator")
+ * .evaluationPeriods(123)
+ * .location("location")
+ * .policyType("policyType")
+ * .scalingAdjustment(123)
+ * .scalingAdjustmentType("scalingAdjustmentType")
+ * .status("status")
+ * .targetConfiguration(TargetConfigurationProperty.builder()
+ * .targetValue(123)
+ * .build())
+ * .threshold(123)
+ * .updateStatus("updateStatus")
+ * .build()))
  * .scriptId("scriptId")
  * .serverLaunchParameters("serverLaunchParameters")
  * .serverLaunchPath("serverLaunchPath")
@@ -109,28 +128,51 @@ public class CfnFleetDsl(
 
     private val _metricGroups: MutableList<String> = mutableListOf()
 
+    private val _scalingPolicies: MutableList<Any> = mutableListOf()
+
     /**
-     * Configuration for Anywhere fleet.
+     * Amazon GameLift Anywhere configuration options.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-anywhereconfiguration)
      *
-     * @param anywhereConfiguration Configuration for Anywhere fleet.
+     * @param anywhereConfiguration Amazon GameLift Anywhere configuration options.
      */
     public fun anywhereConfiguration(anywhereConfiguration: IResolvable) {
         cdkBuilder.anywhereConfiguration(anywhereConfiguration)
     }
 
     /**
-     * Configuration for Anywhere fleet.
+     * Amazon GameLift Anywhere configuration options.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-anywhereconfiguration)
      *
-     * @param anywhereConfiguration Configuration for Anywhere fleet.
+     * @param anywhereConfiguration Amazon GameLift Anywhere configuration options.
      */
     public fun anywhereConfiguration(
         anywhereConfiguration: CfnFleet.AnywhereConfigurationProperty
     ) {
         cdkBuilder.anywhereConfiguration(anywhereConfiguration)
+    }
+
+    /**
+     * Current resource capacity settings in a specified fleet or location.
+     *
+     * The location value might refer to a fleet's remote location or its home Region.
+     *
+     * *Related actions*
+     *
+     * [DescribeFleetCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetCapacity.html)
+     * |
+     * [DescribeFleetLocationCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetLocationCapacity.html)
+     * |
+     * [UpdateFleetCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateFleetCapacity.html)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-applycapacity)
+     *
+     * @param applyCapacity Current resource capacity settings in a specified fleet or location.
+     */
+    public fun applyCapacity(applyCapacity: String) {
+        cdkBuilder.applyCapacity(applyCapacity)
     }
 
     /**
@@ -208,7 +250,7 @@ public class CfnFleetDsl(
      * The type of compute resource used to host your game servers.
      *
      * You can use your own compute resources with Amazon GameLift Anywhere or use Amazon EC2
-     * instances with managed Amazon GameLift.
+     * instances with managed Amazon GameLift. By default, this property is set to `EC2` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-computetype)
      *
@@ -317,7 +359,7 @@ public class CfnFleetDsl(
      *
      * By default, this property is set to `ON_DEMAND` . Learn more about when to use
      * [On-Demand versus Spot Instances](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-ec2-instances.html#gamelift-ec2-instances-spot)
-     * . This property cannot be changed after the fleet is created.
+     * . This fleet property can't be changed after the fleet is created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-fleettype)
      *
@@ -328,23 +370,42 @@ public class CfnFleetDsl(
     }
 
     /**
-     * A unique identifier for an IAM role that manages access to your AWS services.
+     * A unique identifier for an IAM role with access permissions to other AWS services.
      *
-     * With an instance role ARN set, any application that runs on an instance in this fleet can
-     * assume the role, including install scripts, server processes, and daemons (background
-     * processes). Create a role or look up a role's ARN by using the
-     * [IAM dashboard](https://docs.aws.amazon.com/iam/) in the AWS Management Console . Learn more
-     * about using on-box credentials for your game servers at
-     * [Access external resources from a game server](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-resources.html)
-     * . This property cannot be changed after the fleet is created.
+     * Any application that runs on an instance in the fleet--including install scripts, server
+     * processes, and other processes--can use these permissions to interact with AWS resources that
+     * you own or have access to. For more information about using the role with your game server
+     * builds, see
+     * [Communicate with other AWS resources from your fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-resources.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-instancerolearn)
      *
-     * @param instanceRoleArn A unique identifier for an IAM role that manages access to your AWS
-     *   services.
+     * @param instanceRoleArn A unique identifier for an IAM role with access permissions to other
+     *   AWS services.
      */
     public fun instanceRoleArn(instanceRoleArn: String) {
         cdkBuilder.instanceRoleArn(instanceRoleArn)
+    }
+
+    /**
+     * Indicates that fleet instances maintain a shared credentials file for the IAM role defined in
+     * `InstanceRoleArn` .
+     *
+     * Shared credentials allow applications that are deployed with the game server executable to
+     * communicate with other AWS resources. This property is used only when the game server is
+     * integrated with the server SDK version 5.x. For more information about using shared
+     * credentials, see
+     * [Communicate with other AWS resources from your fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-resources.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-instancerolecredentialsprovider)
+     *
+     * @param instanceRoleCredentialsProvider Indicates that fleet instances maintain a shared
+     *   credentials file for the IAM role defined in `InstanceRoleArn` .
+     */
+    public fun instanceRoleCredentialsProvider(instanceRoleCredentialsProvider: String) {
+        cdkBuilder.instanceRoleCredentialsProvider(instanceRoleCredentialsProvider)
     }
 
     /**
@@ -627,6 +688,45 @@ public class CfnFleetDsl(
     }
 
     /**
+     * Rule that controls how a fleet is scaled.
+     *
+     * Scaling policies are uniquely identified by the combination of name and fleet ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-scalingpolicies)
+     *
+     * @param scalingPolicies Rule that controls how a fleet is scaled.
+     */
+    public fun scalingPolicies(vararg scalingPolicies: Any) {
+        _scalingPolicies.addAll(listOf(*scalingPolicies))
+    }
+
+    /**
+     * Rule that controls how a fleet is scaled.
+     *
+     * Scaling policies are uniquely identified by the combination of name and fleet ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-scalingpolicies)
+     *
+     * @param scalingPolicies Rule that controls how a fleet is scaled.
+     */
+    public fun scalingPolicies(scalingPolicies: Collection<Any>) {
+        _scalingPolicies.addAll(scalingPolicies)
+    }
+
+    /**
+     * Rule that controls how a fleet is scaled.
+     *
+     * Scaling policies are uniquely identified by the combination of name and fleet ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-scalingpolicies)
+     *
+     * @param scalingPolicies Rule that controls how a fleet is scaled.
+     */
+    public fun scalingPolicies(scalingPolicies: IResolvable) {
+        cdkBuilder.scalingPolicies(scalingPolicies)
+    }
+
+    /**
      * The unique identifier for a Realtime configuration script to be deployed on fleet instances.
      *
      * You can use either the script ID or ARN. Scripts must be uploaded to Amazon GameLift prior to
@@ -687,6 +787,7 @@ public class CfnFleetDsl(
         if (_locations.isNotEmpty()) cdkBuilder.locations(_locations)
         if (_logPaths.isNotEmpty()) cdkBuilder.logPaths(_logPaths)
         if (_metricGroups.isNotEmpty()) cdkBuilder.metricGroups(_metricGroups)
+        if (_scalingPolicies.isNotEmpty()) cdkBuilder.scalingPolicies(_scalingPolicies)
         return cdkBuilder.build()
     }
 }

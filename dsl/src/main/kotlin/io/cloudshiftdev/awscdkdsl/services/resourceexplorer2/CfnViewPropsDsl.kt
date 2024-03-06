@@ -38,6 +38,7 @@ import software.amazon.awscdk.services.resourceexplorer2.CfnViewProps
  * .includedProperties(List.of(IncludedPropertyProperty.builder()
  * .name("name")
  * .build()))
+ * .scope("scope")
  * .tags(Map.of(
  * "tagsKey", "tags"))
  * .build();
@@ -121,6 +122,14 @@ public class CfnViewPropsDsl {
      */
     public fun includedProperties(includedProperties: IResolvable) {
         cdkBuilder.includedProperties(includedProperties)
+    }
+
+    /**
+     * @param scope The root ARN of the account, an organizational unit (OU), or an organization
+     *   ARN. If left empty, the default is account.
+     */
+    public fun scope(scope: String) {
+        cdkBuilder.scope(scope)
     }
 
     /** @param tags Tag key and value pairs that are attached to the view. */

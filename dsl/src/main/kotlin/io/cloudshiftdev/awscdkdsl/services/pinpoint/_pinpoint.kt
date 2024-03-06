@@ -1151,8 +1151,6 @@ public object pinpoint {
     }
 
     /**
-     * Specifies attribute-based criteria for including or excluding endpoints from a segment.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -1900,10 +1898,6 @@ public object pinpoint {
     }
 
     /**
-     * Specifies metric-based criteria for including or excluding endpoints from a segment.
-     *
-     * These criteria derive from custom metrics that you define for endpoints.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -2982,10 +2976,12 @@ public object pinpoint {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.pinpoint.*;
      * CfnGCMChannel cfnGCMChannel = CfnGCMChannel.Builder.create(this, "MyCfnGCMChannel")
-     * .apiKey("apiKey")
      * .applicationId("applicationId")
      * // the properties below are optional
+     * .apiKey("apiKey")
+     * .defaultAuthenticationMethod("defaultAuthenticationMethod")
      * .enabled(false)
+     * .serviceJson("serviceJson")
      * .build();
      * ```
      *
@@ -3010,10 +3006,12 @@ public object pinpoint {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.pinpoint.*;
      * CfnGCMChannelProps cfnGCMChannelProps = CfnGCMChannelProps.builder()
-     * .apiKey("apiKey")
      * .applicationId("applicationId")
      * // the properties below are optional
+     * .apiKey("apiKey")
+     * .defaultAuthenticationMethod("defaultAuthenticationMethod")
      * .enabled(false)
+     * .serviceJson("serviceJson")
      * .build();
      * ```
      *
@@ -3890,8 +3888,6 @@ public object pinpoint {
     }
 
     /**
-     * Specifies attribute-based criteria for including or excluding endpoints from a segment.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.

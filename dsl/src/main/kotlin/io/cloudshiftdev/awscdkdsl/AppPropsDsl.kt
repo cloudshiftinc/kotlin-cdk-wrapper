@@ -29,9 +29,11 @@ import software.amazon.awscdk.IReusableStackSynthesizer
  *
  * Example:
  * ```
+ * import software.amazon.awscdk.services.s3.BucketEncryption;
  * App app = App.Builder.create()
  * .defaultStackSynthesizer(AppStagingSynthesizer.defaultResources(DefaultResourcesOptions.builder()
  * .appId("my-app-id")
+ * .stagingBucketEncryption(BucketEncryption.S3_MANAGED)
  * .deploymentIdentities(DeploymentIdentities.cliCredentials())
  * .build()))
  * .build();

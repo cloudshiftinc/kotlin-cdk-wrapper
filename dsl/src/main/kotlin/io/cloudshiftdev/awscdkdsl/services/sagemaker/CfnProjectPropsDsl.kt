@@ -67,14 +67,24 @@ public class CfnProjectPropsDsl {
         cdkBuilder.projectName(projectName)
     }
 
-    /** @param serviceCatalogProvisionedProductDetails Provisioned ServiceCatalog Details. */
+    /**
+     * @param serviceCatalogProvisionedProductDetails Details of a provisioned service catalog
+     *   product. For information about service catalog, see
+     *   [What is AWS Service Catalog](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html)
+     *   .
+     */
     public fun serviceCatalogProvisionedProductDetails(
         serviceCatalogProvisionedProductDetails: IResolvable
     ) {
         cdkBuilder.serviceCatalogProvisionedProductDetails(serviceCatalogProvisionedProductDetails)
     }
 
-    /** @param serviceCatalogProvisionedProductDetails Provisioned ServiceCatalog Details. */
+    /**
+     * @param serviceCatalogProvisionedProductDetails Details of a provisioned service catalog
+     *   product. For information about service catalog, see
+     *   [What is AWS Service Catalog](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html)
+     *   .
+     */
     public fun serviceCatalogProvisionedProductDetails(
         serviceCatalogProvisionedProductDetails:
             CfnProject.ServiceCatalogProvisionedProductDetailsProperty

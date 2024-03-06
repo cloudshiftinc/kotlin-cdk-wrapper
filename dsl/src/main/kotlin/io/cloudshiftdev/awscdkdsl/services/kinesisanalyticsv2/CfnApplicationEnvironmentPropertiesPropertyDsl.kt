@@ -19,7 +19,7 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
 
 /**
- * Describes execution properties for a Flink-based Kinesis Data Analytics application.
+ * Describes execution properties for a Managed Service for Apache Flink application.
  *
  * Example:
  * ```

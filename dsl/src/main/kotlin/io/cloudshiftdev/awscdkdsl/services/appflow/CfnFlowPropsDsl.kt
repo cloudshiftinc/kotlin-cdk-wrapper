@@ -222,6 +222,13 @@ import software.amazon.awscdk.services.appflow.CfnFlowProps
  * .build())
  * .sapoData(SAPODataSourcePropertiesProperty.builder()
  * .objectPath("objectPath")
+ * // the properties below are optional
+ * .paginationConfig(SAPODataPaginationConfigProperty.builder()
+ * .maxPageSize(123)
+ * .build())
+ * .parallelismConfig(SAPODataParallelismConfigProperty.builder()
+ * .maxParallelism(123)
+ * .build())
  * .build())
  * .serviceNow(ServiceNowSourcePropertiesProperty.builder()
  * .object("object")
@@ -393,12 +400,20 @@ public class CfnFlowPropsDsl {
         cdkBuilder.kmsArn(kmsArn)
     }
 
-    /** @param metadataCatalogConfig Configurations of metadata catalog of the flow. */
+    /**
+     * @param metadataCatalogConfig Specifies the configuration that Amazon AppFlow uses when it
+     *   catalogs your data. When Amazon AppFlow catalogs your data, it stores metadata in a data
+     *   catalog.
+     */
     public fun metadataCatalogConfig(metadataCatalogConfig: IResolvable) {
         cdkBuilder.metadataCatalogConfig(metadataCatalogConfig)
     }
 
-    /** @param metadataCatalogConfig Configurations of metadata catalog of the flow. */
+    /**
+     * @param metadataCatalogConfig Specifies the configuration that Amazon AppFlow uses when it
+     *   catalogs your data. When Amazon AppFlow catalogs your data, it stores metadata in a data
+     *   catalog.
+     */
     public fun metadataCatalogConfig(metadataCatalogConfig: CfnFlow.MetadataCatalogConfigProperty) {
         cdkBuilder.metadataCatalogConfig(metadataCatalogConfig)
     }

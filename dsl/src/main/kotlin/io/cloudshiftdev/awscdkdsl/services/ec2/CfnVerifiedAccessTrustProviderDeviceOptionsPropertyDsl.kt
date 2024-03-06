@@ -24,6 +24,7 @@ import software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.ec2.*;
  * DeviceOptionsProperty deviceOptionsProperty = DeviceOptionsProperty.builder()
+ * .publicSigningKeyUrl("publicSigningKeyUrl")
  * .tenantId("tenantId")
  * .build();
  * ```
@@ -34,6 +35,14 @@ import software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider
 public class CfnVerifiedAccessTrustProviderDeviceOptionsPropertyDsl {
     private val cdkBuilder: CfnVerifiedAccessTrustProvider.DeviceOptionsProperty.Builder =
         CfnVerifiedAccessTrustProvider.DeviceOptionsProperty.builder()
+
+    /**
+     * @param publicSigningKeyUrl The URL AWS Verified Access will use to verify the authenticity of
+     *   the device tokens.
+     */
+    public fun publicSigningKeyUrl(publicSigningKeyUrl: String) {
+        cdkBuilder.publicSigningKeyUrl(publicSigningKeyUrl)
+    }
 
     /** @param tenantId The ID of the tenant application with the device-identity provider. */
     public fun tenantId(tenantId: String) {

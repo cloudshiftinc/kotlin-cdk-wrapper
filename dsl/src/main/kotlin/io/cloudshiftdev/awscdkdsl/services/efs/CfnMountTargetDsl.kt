@@ -101,8 +101,8 @@ public class CfnMountTargetDsl(
     /**
      * The ID of the subnet to add the mount target in.
      *
-     * For file systems that use One Zone storage classes, use the subnet that is associated with
-     * the file system's Availability Zone.
+     * For One Zone file systems, use the subnet that is associated with the file system's
+     * Availability Zone.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html#cfn-efs-mounttarget-subnetid)
      *

@@ -47,6 +47,18 @@ public inline fun CfnAnalysis.setSourceEntity(
     return setSourceEntity(builder.build())
 }
 
+/**
+ * The option to relax the validation that is required to create and update analyses, dashboards,
+ * and templates with definition objects.
+ */
+public inline fun CfnAnalysis.setValidationStrategy(
+    block: CfnAnalysisValidationStrategyPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnAnalysisValidationStrategyPropertyDsl()
+    builder.apply(block)
+    return setValidationStrategy(builder.build())
+}
+
 /** Options for publishing the dashboard when you create it:. */
 public inline fun CfnDashboard.setDashboardPublishOptions(
     block: CfnDashboardDashboardPublishOptionsPropertyDsl.() -> Unit = {}
@@ -63,6 +75,17 @@ public inline fun CfnDashboard.setDefinition(
     val builder = CfnDashboardDashboardVersionDefinitionPropertyDsl()
     builder.apply(block)
     return setDefinition(builder.build())
+}
+
+/**
+ * A structure that contains the link sharing configurations that you want to apply overrides to.
+ */
+public inline fun CfnDashboard.setLinkSharingConfiguration(
+    block: CfnDashboardLinkSharingConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnDashboardLinkSharingConfigurationPropertyDsl()
+    builder.apply(block)
+    return setLinkSharingConfiguration(builder.build())
 }
 
 /**
@@ -86,7 +109,19 @@ public inline fun CfnDashboard.setSourceEntity(
     return setSourceEntity(builder.build())
 }
 
-/** The dataset refresh properties for the dataset.</p>. */
+/**
+ * The option to relax the validation that is required to create and update analyses, dashboards,
+ * and templates with definition objects.
+ */
+public inline fun CfnDashboard.setValidationStrategy(
+    block: CfnDashboardValidationStrategyPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnDashboardValidationStrategyPropertyDsl()
+    builder.apply(block)
+    return setValidationStrategy(builder.build())
+}
+
+/** The refresh properties of a dataset. */
 public inline fun CfnDataSet.setDataSetRefreshProperties(
     block: CfnDataSetDataSetRefreshPropertiesPropertyDsl.() -> Unit = {}
 ) {
@@ -207,6 +242,18 @@ public inline fun CfnTemplate.setSourceEntity(
     val builder = CfnTemplateTemplateSourceEntityPropertyDsl()
     builder.apply(block)
     return setSourceEntity(builder.build())
+}
+
+/**
+ * The option to relax the validation that is required to create and update analyses, dashboards,
+ * and templates with definition objects.
+ */
+public inline fun CfnTemplate.setValidationStrategy(
+    block: CfnTemplateValidationStrategyPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnTemplateValidationStrategyPropertyDsl()
+    builder.apply(block)
+    return setValidationStrategy(builder.build())
 }
 
 /** The theme configuration, which contains the theme display properties. */

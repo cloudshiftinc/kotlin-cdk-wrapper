@@ -42,7 +42,7 @@ public class CfnWorkteamCognitoMemberDefinitionPropertyDsl {
 
     /**
      * @param cognitoClientId An identifier for an application client. You must create the app
-     *   client ID using Amazon Cognito.
+     *   client ID using Amazon Cognito .
      */
     public fun cognitoClientId(cognitoClientId: String) {
         cdkBuilder.cognitoClientId(cognitoClientId)

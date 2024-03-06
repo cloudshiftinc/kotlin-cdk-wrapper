@@ -102,6 +102,16 @@ public class ScheduledFargateTaskImageOptionsDsl {
     }
 
     /**
+     * @param ephemeralStorageGiB The amount (in GiB) of ephemeral storage to be allocated to the
+     *   task. The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
+     *
+     * Only supported in Fargate platform version 1.4.0 or later.
+     */
+    public fun ephemeralStorageGiB(ephemeralStorageGiB: Number) {
+        cdkBuilder.ephemeralStorageGiB(ephemeralStorageGiB)
+    }
+
+    /**
      * @param image The image used to start a container. Image or taskDefinition must be specified,
      *   but not both.
      */

@@ -54,7 +54,7 @@ public inline fun CfnJob.setJobSample(block: CfnJobJobSamplePropertyDsl.() -> Un
     return setJobSample(builder.build())
 }
 
-/** Output location. */
+/** The location in Amazon S3 where the job writes its output. */
 public inline fun CfnJob.setOutputLocation(block: CfnJobOutputLocationPropertyDsl.() -> Unit = {}) {
     val builder = CfnJobOutputLocationPropertyDsl()
     builder.apply(block)

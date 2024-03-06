@@ -41,12 +41,12 @@ public class CfnClusterTlsPropertyDsl {
 
     private val _certificateAuthorityArnList: MutableList<String> = mutableListOf()
 
-    /** @param certificateAuthorityArnList List of AWS Private CA ARNs. */
+    /** @param certificateAuthorityArnList List of AWS Private CA Amazon Resource Name (ARN)s. */
     public fun certificateAuthorityArnList(vararg certificateAuthorityArnList: String) {
         _certificateAuthorityArnList.addAll(listOf(*certificateAuthorityArnList))
     }
 
-    /** @param certificateAuthorityArnList List of AWS Private CA ARNs. */
+    /** @param certificateAuthorityArnList List of AWS Private CA Amazon Resource Name (ARN)s. */
     public fun certificateAuthorityArnList(certificateAuthorityArnList: Collection<String>) {
         _certificateAuthorityArnList.addAll(certificateAuthorityArnList)
     }

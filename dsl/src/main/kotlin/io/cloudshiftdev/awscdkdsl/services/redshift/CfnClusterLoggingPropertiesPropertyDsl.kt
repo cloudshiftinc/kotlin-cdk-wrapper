@@ -26,7 +26,6 @@ import software.amazon.awscdk.services.redshift.CfnCluster
  * import software.amazon.awscdk.services.redshift.*;
  * LoggingPropertiesProperty loggingPropertiesProperty = LoggingPropertiesProperty.builder()
  * .bucketName("bucketName")
- * // the properties below are optional
  * .s3KeyPrefix("s3KeyPrefix")
  * .build();
  * ```

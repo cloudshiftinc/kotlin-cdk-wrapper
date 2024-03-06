@@ -35,6 +35,7 @@ import software.amazon.awscdk.services.sns.StringConditions
  * "color", SubscriptionFilter.stringFilter(StringConditions.builder()
  * .allowlist(List.of("red", "orange"))
  * .matchPrefixes(List.of("bl"))
+ * .matchSuffixes(List.of("ue"))
  * .build()),
  * "size", SubscriptionFilter.stringFilter(StringConditions.builder()
  * .denylist(List.of("small", "medium"))
@@ -56,6 +57,8 @@ public class StringConditionsDsl {
     private val _denylist: MutableList<String> = mutableListOf()
 
     private val _matchPrefixes: MutableList<String> = mutableListOf()
+
+    private val _matchSuffixes: MutableList<String> = mutableListOf()
 
     /** @param allowlist Match one or more values. */
     public fun allowlist(vararg allowlist: String) {
@@ -87,10 +90,21 @@ public class StringConditionsDsl {
         _matchPrefixes.addAll(matchPrefixes)
     }
 
+    /** @param matchSuffixes Matches values that end with the specified suffixes. */
+    public fun matchSuffixes(vararg matchSuffixes: String) {
+        _matchSuffixes.addAll(listOf(*matchSuffixes))
+    }
+
+    /** @param matchSuffixes Matches values that end with the specified suffixes. */
+    public fun matchSuffixes(matchSuffixes: Collection<String>) {
+        _matchSuffixes.addAll(matchSuffixes)
+    }
+
     public fun build(): StringConditions {
         if (_allowlist.isNotEmpty()) cdkBuilder.allowlist(_allowlist)
         if (_denylist.isNotEmpty()) cdkBuilder.denylist(_denylist)
         if (_matchPrefixes.isNotEmpty()) cdkBuilder.matchPrefixes(_matchPrefixes)
+        if (_matchSuffixes.isNotEmpty()) cdkBuilder.matchSuffixes(_matchSuffixes)
         return cdkBuilder.build()
     }
 }

@@ -28,16 +28,23 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy
  *
  * Example:
  * ```
- * import software.amazon.awscdk.services.apigatewayv2.integrations.alpha.HttpNlbIntegration;
- * Vpc vpc = new Vpc(this, "VPC");
- * NetworkLoadBalancer lb = NetworkLoadBalancer.Builder.create(this, "lb").vpc(vpc).build();
- * NetworkListener listener = lb.addListener("listener",
+ * import software.amazon.awscdk.services.elasticloadbalancing.*;
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * LoadBalancer clb;
+ * ApplicationLoadBalancer alb;
+ * NetworkLoadBalancer nlb;
+ * ApplicationListener albListener = alb.addListener("ALBListener",
+ * BaseApplicationListenerProps.builder().port(80).build());
+ * ApplicationTargetGroup albTargetGroup = albListener.addTargets("ALBFleet",
+ * AddApplicationTargetsProps.builder().port(80).build());
+ * NetworkListener nlbListener = nlb.addListener("NLBListener",
  * BaseNetworkListenerProps.builder().port(80).build());
- * listener.addTargets("target", AddNetworkTargetsProps.builder()
- * .port(80)
- * .build());
- * HttpApi httpEndpoint = HttpApi.Builder.create(this, "HttpProxyPrivateApi")
- * .defaultIntegration(new HttpNlbIntegration("DefaultIntegration", listener))
+ * NetworkTargetGroup nlbTargetGroup = nlbListener.addTargets("NLBFleet",
+ * AddNetworkTargetsProps.builder().port(80).build());
+ * ServerDeploymentGroup deploymentGroup = ServerDeploymentGroup.Builder.create(this,
+ * "DeploymentGroup")
+ * .loadBalancers(List.of(LoadBalancer.classic(clb), LoadBalancer.application(albTargetGroup),
+ * LoadBalancer.network(nlbTargetGroup)))
  * .build();
  * ```
  */

@@ -11,11 +11,14 @@
 
 package io.cloudshiftdev.awscdkdsl.services.backup
 
+import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Any
 import kotlin.String
+import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.backup.CfnFrameworkProps
 
@@ -56,7 +59,7 @@ public class CfnFrameworkPropsDsl {
 
     private val _frameworkControls: MutableList<Any> = mutableListOf()
 
-    private val _frameworkTags: MutableList<Any> = mutableListOf()
+    private val _frameworkTags: MutableList<CfnTag> = mutableListOf()
 
     /**
      * @param frameworkControls Contains detailed information about all of the controls of a
@@ -100,18 +103,13 @@ public class CfnFrameworkPropsDsl {
     }
 
     /** @param frameworkTags A list of tags with which to tag your framework. */
-    public fun frameworkTags(vararg frameworkTags: Any) {
-        _frameworkTags.addAll(listOf(*frameworkTags))
+    public fun frameworkTags(frameworkTags: CfnTagDsl.() -> Unit) {
+        _frameworkTags.add(CfnTagDsl().apply(frameworkTags).build())
     }
 
     /** @param frameworkTags A list of tags with which to tag your framework. */
-    public fun frameworkTags(frameworkTags: Collection<Any>) {
+    public fun frameworkTags(frameworkTags: Collection<CfnTag>) {
         _frameworkTags.addAll(frameworkTags)
-    }
-
-    /** @param frameworkTags A list of tags with which to tag your framework. */
-    public fun frameworkTags(frameworkTags: IResolvable) {
-        cdkBuilder.frameworkTags(frameworkTags)
     }
 
     public fun build(): CfnFrameworkProps {

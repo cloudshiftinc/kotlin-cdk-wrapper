@@ -135,20 +135,15 @@ public object autoscaling {
      *
      * Example:
      * ```
-     * Vpc vpc;
-     * InstanceType instanceType;
-     * IMachineImage machineImage;
-     * AutoScalingGroup.Builder.create(this, "ASG")
-     * .vpc(vpc)
-     * .instanceType(instanceType)
-     * .machineImage(machineImage)
-     * // ...
-     * .init(CloudFormationInit.fromElements(InitFile.fromString("/etc/my_instance", "This got written
-     * during instance startup")))
-     * .signals(Signals.waitForAll(SignalsOptions.builder()
-     * .timeout(Duration.minutes(10))
-     * .build()))
-     * .build();
+     * Cluster cluster;
+     * AutoScalingGroup asg;
+     * ICluster importedCluster = Cluster.fromClusterAttributes(this, "ImportedCluster",
+     * ClusterAttributes.builder()
+     * .clusterName(cluster.getClusterName())
+     * .clusterSecurityGroupId(cluster.getClusterSecurityGroupId())
+     * .build());
+     * importedCluster.connectAutoScalingGroupCapacity(asg,
+     * AutoScalingGroupOptions.builder().build());
      * ```
      */
     public inline fun autoScalingGroup(
@@ -288,6 +283,8 @@ public object autoscaling {
      * .scalingSteps(List.of(ScalingInterval.builder().upper(10).change(-1).build(),
      * ScalingInterval.builder().lower(50).change(+1).build(),
      * ScalingInterval.builder().lower(70).change(+3).build()))
+     * .evaluationPeriods(10)
+     * .datapointsToAlarm(5)
      * // Change this to AdjustmentType.PERCENT_CHANGE_IN_CAPACITY to interpret the
      * // 'change' numbers before as percentages instead of capacity counts.
      * .adjustmentType(AdjustmentType.CHANGE_IN_CAPACITY)
@@ -396,10 +393,11 @@ public object autoscaling {
      * either a
      * [launch template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)
      * or a launch configuration. We strongly recommend that you do not use launch configurations.
-     * They do not provide full functionality for Amazon EC2 Auto Scaling or Amazon EC2. For more
-     * information, see
+     * For more information, see
      * [Launch configurations](https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-configurations.html)
-     * and
+     * in the *Amazon EC2 Auto Scaling User Guide* .
+     *
+     * For help migrating from launch configurations to launch templates, see
      * [Migrate AWS CloudFormation stacks from launch configurations to launch templates](https://docs.aws.amazon.com/autoscaling/ec2/userguide/migrate-launch-configurations-with-cloudformation.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      *
@@ -424,6 +422,10 @@ public object autoscaling {
      * .healthCheckGracePeriod(123)
      * .healthCheckType("healthCheckType")
      * .instanceId("instanceId")
+     * .instanceMaintenancePolicy(InstanceMaintenancePolicyProperty.builder()
+     * .maxHealthyPercentage(123)
+     * .minHealthyPercentage(123)
+     * .build())
      * .launchConfigurationName("launchConfigurationName")
      * .launchTemplate(LaunchTemplateSpecificationProperty.builder()
      * .version("version")
@@ -459,6 +461,15 @@ public object autoscaling {
      * // the properties below are optional
      * .overrides(List.of(LaunchTemplateOverridesProperty.builder()
      * .instanceRequirements(InstanceRequirementsProperty.builder()
+     * .memoryMiB(MemoryMiBRequestProperty.builder()
+     * .max(123)
+     * .min(123)
+     * .build())
+     * .vCpuCount(VCpuCountRequestProperty.builder()
+     * .max(123)
+     * .min(123)
+     * .build())
+     * // the properties below are optional
      * .acceleratorCount(AcceleratorCountRequestProperty.builder()
      * .max(123)
      * .min(123)
@@ -482,11 +493,8 @@ public object autoscaling {
      * .instanceGenerations(List.of("instanceGenerations"))
      * .localStorage("localStorage")
      * .localStorageTypes(List.of("localStorageTypes"))
+     * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
      * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
-     * .max(123)
-     * .min(123)
-     * .build())
-     * .memoryMiB(MemoryMiBRequestProperty.builder()
      * .max(123)
      * .min(123)
      * .build())
@@ -502,10 +510,6 @@ public object autoscaling {
      * .requireHibernateSupport(false)
      * .spotMaxPricePercentageOverLowestPrice(123)
      * .totalLocalStorageGb(TotalLocalStorageGBRequestProperty.builder()
-     * .max(123)
-     * .min(123)
-     * .build())
-     * .vCpuCount(VCpuCountRequestProperty.builder()
      * .max(123)
      * .min(123)
      * .build())
@@ -531,6 +535,11 @@ public object autoscaling {
      * .build())
      * .build())
      * .newInstancesProtectedFromScaleIn(false)
+     * .notificationConfiguration(NotificationConfigurationProperty.builder()
+     * .topicArn("topicArn")
+     * // the properties below are optional
+     * .notificationTypes(List.of("notificationTypes"))
+     * .build())
      * .notificationConfigurations(List.of(NotificationConfigurationProperty.builder()
      * .topicArn("topicArn")
      * // the properties below are optional
@@ -647,6 +656,37 @@ public object autoscaling {
     }
 
     /**
+     * `InstanceMaintenancePolicy` is a property of the
+     * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
+     * resource.
+     *
+     * For more information, see
+     * [Instance maintenance policies](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-maintenance-policy.html)
+     * in the *Amazon EC2 Auto Scaling User Guide* .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.autoscaling.*;
+     * InstanceMaintenancePolicyProperty instanceMaintenancePolicyProperty =
+     * InstanceMaintenancePolicyProperty.builder()
+     * .maxHealthyPercentage(123)
+     * .minHealthyPercentage(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancemaintenancepolicy.html)
+     */
+    public inline fun cfnAutoScalingGroupInstanceMaintenancePolicyProperty(
+        block: CfnAutoScalingGroupInstanceMaintenancePolicyPropertyDsl.() -> Unit = {}
+    ): CfnAutoScalingGroup.InstanceMaintenancePolicyProperty {
+        val builder = CfnAutoScalingGroupInstanceMaintenancePolicyPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The attributes for the instance types for a mixed instances policy.
      *
      * Amazon EC2 Auto Scaling uses your specified requirements to identify instance types. Then, it
@@ -669,7 +709,7 @@ public object autoscaling {
      * unspecified optional attribute is set to its default.
      *
      * For an example template, see
-     * [Auto scaling template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)
+     * [Configure Amazon EC2 Auto Scaling resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html)
      * .
      *
      * For more information, see
@@ -685,60 +725,19 @@ public object autoscaling {
      *
      * Example:
      * ```
-     * // The code below shows an example of how to instantiate this type.
-     * // The values are placeholders you should change.
-     * import software.amazon.awscdk.services.autoscaling.*;
-     * InstanceRequirementsProperty instanceRequirementsProperty =
-     * InstanceRequirementsProperty.builder()
-     * .acceleratorCount(AcceleratorCountRequestProperty.builder()
-     * .max(123)
-     * .min(123)
+     * Vpc vpc;
+     * LaunchTemplate launchTemplate1;
+     * AutoScalingGroup.Builder.create(this, "ASG")
+     * .vpc(vpc)
+     * .mixedInstancesPolicy(MixedInstancesPolicy.builder()
+     * .launchTemplate(launchTemplate1)
+     * .launchTemplateOverrides(List.of(LaunchTemplateOverrides.builder()
+     * .instanceRequirements(InstanceRequirementsProperty.builder()
+     * .vCpuCount(VCpuCountRequestProperty.builder().min(4).max(8).build())
+     * .memoryMiB(MemoryMiBRequestProperty.builder().min(16384).build())
+     * .cpuManufacturers(List.of("intel"))
      * .build())
-     * .acceleratorManufacturers(List.of("acceleratorManufacturers"))
-     * .acceleratorNames(List.of("acceleratorNames"))
-     * .acceleratorTotalMemoryMiB(AcceleratorTotalMemoryMiBRequestProperty.builder()
-     * .max(123)
-     * .min(123)
-     * .build())
-     * .acceleratorTypes(List.of("acceleratorTypes"))
-     * .allowedInstanceTypes(List.of("allowedInstanceTypes"))
-     * .bareMetal("bareMetal")
-     * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty.builder()
-     * .max(123)
-     * .min(123)
-     * .build())
-     * .burstablePerformance("burstablePerformance")
-     * .cpuManufacturers(List.of("cpuManufacturers"))
-     * .excludedInstanceTypes(List.of("excludedInstanceTypes"))
-     * .instanceGenerations(List.of("instanceGenerations"))
-     * .localStorage("localStorage")
-     * .localStorageTypes(List.of("localStorageTypes"))
-     * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
-     * .max(123)
-     * .min(123)
-     * .build())
-     * .memoryMiB(MemoryMiBRequestProperty.builder()
-     * .max(123)
-     * .min(123)
-     * .build())
-     * .networkBandwidthGbps(NetworkBandwidthGbpsRequestProperty.builder()
-     * .max(123)
-     * .min(123)
-     * .build())
-     * .networkInterfaceCount(NetworkInterfaceCountRequestProperty.builder()
-     * .max(123)
-     * .min(123)
-     * .build())
-     * .onDemandMaxPricePercentageOverLowestPrice(123)
-     * .requireHibernateSupport(false)
-     * .spotMaxPricePercentageOverLowestPrice(123)
-     * .totalLocalStorageGb(TotalLocalStorageGBRequestProperty.builder()
-     * .max(123)
-     * .min(123)
-     * .build())
-     * .vCpuCount(VCpuCountRequestProperty.builder()
-     * .max(123)
-     * .min(123)
+     * .build()))
      * .build())
      * .build();
      * ```
@@ -822,6 +821,15 @@ public object autoscaling {
      * LaunchTemplateOverridesProperty launchTemplateOverridesProperty =
      * LaunchTemplateOverridesProperty.builder()
      * .instanceRequirements(InstanceRequirementsProperty.builder()
+     * .memoryMiB(MemoryMiBRequestProperty.builder()
+     * .max(123)
+     * .min(123)
+     * .build())
+     * .vCpuCount(VCpuCountRequestProperty.builder()
+     * .max(123)
+     * .min(123)
+     * .build())
+     * // the properties below are optional
      * .acceleratorCount(AcceleratorCountRequestProperty.builder()
      * .max(123)
      * .min(123)
@@ -845,11 +853,8 @@ public object autoscaling {
      * .instanceGenerations(List.of("instanceGenerations"))
      * .localStorage("localStorage")
      * .localStorageTypes(List.of("localStorageTypes"))
+     * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
      * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
-     * .max(123)
-     * .min(123)
-     * .build())
-     * .memoryMiB(MemoryMiBRequestProperty.builder()
      * .max(123)
      * .min(123)
      * .build())
@@ -865,10 +870,6 @@ public object autoscaling {
      * .requireHibernateSupport(false)
      * .spotMaxPricePercentageOverLowestPrice(123)
      * .totalLocalStorageGb(TotalLocalStorageGBRequestProperty.builder()
-     * .max(123)
-     * .min(123)
-     * .build())
-     * .vCpuCount(VCpuCountRequestProperty.builder()
      * .max(123)
      * .min(123)
      * .build())
@@ -917,6 +918,15 @@ public object autoscaling {
      * // the properties below are optional
      * .overrides(List.of(LaunchTemplateOverridesProperty.builder()
      * .instanceRequirements(InstanceRequirementsProperty.builder()
+     * .memoryMiB(MemoryMiBRequestProperty.builder()
+     * .max(123)
+     * .min(123)
+     * .build())
+     * .vCpuCount(VCpuCountRequestProperty.builder()
+     * .max(123)
+     * .min(123)
+     * .build())
+     * // the properties below are optional
      * .acceleratorCount(AcceleratorCountRequestProperty.builder()
      * .max(123)
      * .min(123)
@@ -940,11 +950,8 @@ public object autoscaling {
      * .instanceGenerations(List.of("instanceGenerations"))
      * .localStorage("localStorage")
      * .localStorageTypes(List.of("localStorageTypes"))
+     * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
      * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
-     * .max(123)
-     * .min(123)
-     * .build())
-     * .memoryMiB(MemoryMiBRequestProperty.builder()
      * .max(123)
      * .min(123)
      * .build())
@@ -960,10 +967,6 @@ public object autoscaling {
      * .requireHibernateSupport(false)
      * .spotMaxPricePercentageOverLowestPrice(123)
      * .totalLocalStorageGb(TotalLocalStorageGBRequestProperty.builder()
-     * .max(123)
-     * .min(123)
-     * .build())
-     * .vCpuCount(VCpuCountRequestProperty.builder()
      * .max(123)
      * .min(123)
      * .build())
@@ -998,7 +1001,7 @@ public object autoscaling {
      * * The version of the launch template.
      *
      * `LaunchTemplateSpecification` is property of the
-     * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html)
+     * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
      * resource. It is also a property of the
      * [AWS::AutoScaling::AutoScalingGroup LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplate.html)
      * and
@@ -1012,10 +1015,8 @@ public object autoscaling {
      * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      * For examples of launch templates, see
-     * [Auto scaling template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)
-     * and the
-     * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate--examples)
-     * section in the `AWS::EC2::LaunchTemplate` resource.
+     * [Create launch templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-launch-templates.html)
+     * .
      *
      * Example:
      * ```
@@ -1044,7 +1045,7 @@ public object autoscaling {
     /**
      * `LifecycleHookSpecification` specifies a lifecycle hook for the
      * `LifecycleHookSpecificationList` property of the
-     * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html)
+     * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
      * resource. A lifecycle hook specifies actions to perform when Amazon EC2 Auto Scaling launches
      * or terminates instances.
      *
@@ -1139,14 +1140,14 @@ public object autoscaling {
 
     /**
      * `MetricsCollection` is a property of the
-     * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html)
+     * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
      * resource that describes the group metrics that an Amazon EC2 Auto Scaling group sends to
      * Amazon CloudWatch. These metrics describe the group rather than any of its instances.
      *
      * For more information, see
      * [Monitor CloudWatch metrics for your Auto Scaling groups and instances](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-monitoring.html)
      * in the *Amazon EC2 Auto Scaling User Guide* . You can find a sample template snippet in the
-     * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#aws-properties-as-group--examples)
+     * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#aws-resource-autoscaling-autoscalinggroup--examples)
      * section of the `AWS::AutoScaling::AutoScalingGroup` resource.
      *
      * Example:
@@ -1192,7 +1193,7 @@ public object autoscaling {
      * replacement instance to maintain the desired capacity for the group.
      *
      * `MixedInstancesPolicy` is a property of the
-     * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html)
+     * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
      * resource.
      *
      * Example:
@@ -1212,6 +1213,15 @@ public object autoscaling {
      * // the properties below are optional
      * .overrides(List.of(LaunchTemplateOverridesProperty.builder()
      * .instanceRequirements(InstanceRequirementsProperty.builder()
+     * .memoryMiB(MemoryMiBRequestProperty.builder()
+     * .max(123)
+     * .min(123)
+     * .build())
+     * .vCpuCount(VCpuCountRequestProperty.builder()
+     * .max(123)
+     * .min(123)
+     * .build())
+     * // the properties below are optional
      * .acceleratorCount(AcceleratorCountRequestProperty.builder()
      * .max(123)
      * .min(123)
@@ -1235,11 +1245,8 @@ public object autoscaling {
      * .instanceGenerations(List.of("instanceGenerations"))
      * .localStorage("localStorage")
      * .localStorageTypes(List.of("localStorageTypes"))
+     * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
      * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
-     * .max(123)
-     * .min(123)
-     * .build())
-     * .memoryMiB(MemoryMiBRequestProperty.builder()
      * .max(123)
      * .min(123)
      * .build())
@@ -1255,10 +1262,6 @@ public object autoscaling {
      * .requireHibernateSupport(false)
      * .spotMaxPricePercentageOverLowestPrice(123)
      * .totalLocalStorageGb(TotalLocalStorageGBRequestProperty.builder()
-     * .max(123)
-     * .min(123)
-     * .build())
-     * .vCpuCount(VCpuCountRequestProperty.builder()
      * .max(123)
      * .min(123)
      * .build())
@@ -1361,11 +1364,11 @@ public object autoscaling {
     /**
      * A structure that specifies an Amazon SNS notification configuration for the
      * `NotificationConfigurations` property of the
-     * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html)
+     * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
      * resource.
      *
      * For an example template snippet, see
-     * [Auto scaling template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)
+     * [Configure Amazon EC2 Auto Scaling resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html)
      * .
      *
      * For more information, see
@@ -1418,6 +1421,10 @@ public object autoscaling {
      * .healthCheckGracePeriod(123)
      * .healthCheckType("healthCheckType")
      * .instanceId("instanceId")
+     * .instanceMaintenancePolicy(InstanceMaintenancePolicyProperty.builder()
+     * .maxHealthyPercentage(123)
+     * .minHealthyPercentage(123)
+     * .build())
      * .launchConfigurationName("launchConfigurationName")
      * .launchTemplate(LaunchTemplateSpecificationProperty.builder()
      * .version("version")
@@ -1453,6 +1460,15 @@ public object autoscaling {
      * // the properties below are optional
      * .overrides(List.of(LaunchTemplateOverridesProperty.builder()
      * .instanceRequirements(InstanceRequirementsProperty.builder()
+     * .memoryMiB(MemoryMiBRequestProperty.builder()
+     * .max(123)
+     * .min(123)
+     * .build())
+     * .vCpuCount(VCpuCountRequestProperty.builder()
+     * .max(123)
+     * .min(123)
+     * .build())
+     * // the properties below are optional
      * .acceleratorCount(AcceleratorCountRequestProperty.builder()
      * .max(123)
      * .min(123)
@@ -1476,11 +1492,8 @@ public object autoscaling {
      * .instanceGenerations(List.of("instanceGenerations"))
      * .localStorage("localStorage")
      * .localStorageTypes(List.of("localStorageTypes"))
+     * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
      * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
-     * .max(123)
-     * .min(123)
-     * .build())
-     * .memoryMiB(MemoryMiBRequestProperty.builder()
      * .max(123)
      * .min(123)
      * .build())
@@ -1496,10 +1509,6 @@ public object autoscaling {
      * .requireHibernateSupport(false)
      * .spotMaxPricePercentageOverLowestPrice(123)
      * .totalLocalStorageGb(TotalLocalStorageGBRequestProperty.builder()
-     * .max(123)
-     * .min(123)
-     * .build())
-     * .vCpuCount(VCpuCountRequestProperty.builder()
      * .max(123)
      * .min(123)
      * .build())
@@ -1525,6 +1534,11 @@ public object autoscaling {
      * .build())
      * .build())
      * .newInstancesProtectedFromScaleIn(false)
+     * .notificationConfiguration(NotificationConfigurationProperty.builder()
+     * .topicArn("topicArn")
+     * // the properties below are optional
+     * .notificationTypes(List.of("notificationTypes"))
+     * .build())
      * .notificationConfigurations(List.of(NotificationConfigurationProperty.builder()
      * .topicArn("topicArn")
      * // the properties below are optional
@@ -1555,13 +1569,13 @@ public object autoscaling {
 
     /**
      * A structure that specifies a tag for the `Tags` property of
-     * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html)
+     * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
      * resource.
      *
      * For more information, see
      * [Tag Auto Scaling groups and instances](https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-tagging.html)
      * in the *Amazon EC2 Auto Scaling User Guide* . You can find a sample template snippet in the
-     * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#aws-properties-as-group--examples)
+     * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#aws-resource-autoscaling-autoscalinggroup--examples)
      * section of the `AWS::AutoScaling::AutoScalingGroup` resource.
      *
      * CloudFormation adds the following tags to all Auto Scaling groups and associated instances:
@@ -1655,17 +1669,18 @@ public object autoscaling {
      * `AWS::AutoScaling::LaunchConfiguration` resource, you can specify an
      * [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html)
      * for the group. You can find sample update policies for rolling updates in
-     * [Auto scaling template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)
+     * [Configure Amazon EC2 Auto Scaling resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html)
      * .
      *
      * Amazon EC2 Auto Scaling configures instances launched as part of an Auto Scaling group using
      * either a
      * [launch template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)
      * or a launch configuration. We strongly recommend that you do not use launch configurations.
-     * They do not provide full functionality for Amazon EC2 Auto Scaling or Amazon EC2. For more
-     * information, see
+     * For more information, see
      * [Launch configurations](https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-configurations.html)
-     * and
+     * in the *Amazon EC2 Auto Scaling User Guide* .
+     *
+     * For help migrating from launch configurations to launch templates, see
      * [Migrate AWS CloudFormation stacks from launch configurations to launch templates](https://docs.aws.amazon.com/autoscaling/ec2/userguide/migrate-launch-configurations-with-cloudformation.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      *
@@ -1732,7 +1747,7 @@ public object autoscaling {
     /**
      * `BlockDeviceMapping` specifies a block device mapping for the `BlockDeviceMappings` property
      * of the
-     * [AWS::AutoScaling::LaunchConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html)
+     * [AWS::AutoScaling::LaunchConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html)
      * resource.
      *
      * Each instance that is launched has an associated root device volume, either an Amazon EBS
@@ -1777,7 +1792,7 @@ public object autoscaling {
 
     /**
      * `BlockDevice` is a property of the `EBS` property of the
-     * [AWS::AutoScaling::LaunchConfiguration BlockDeviceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html)
+     * [AWS::AutoScaling::LaunchConfiguration BlockDeviceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-launchconfiguration-blockdevicemapping.html)
      * property type that describes an Amazon EBS volume.
      *
      * Example:
@@ -1808,7 +1823,7 @@ public object autoscaling {
 
     /**
      * `MetadataOptions` is a property of
-     * [AWS::AutoScaling::LaunchConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html)
+     * [AWS::AutoScaling::LaunchConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html)
      * that describes metadata options for the instances.
      *
      * For more information, see
@@ -2320,8 +2335,7 @@ public object autoscaling {
      * [AWS::AutoScaling::ScalingPolicy MetricDataQuery](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdataquery.html)
      * property type.
      *
-     * This structure defines the CloudWatch metric to return, along with the statistic, period, and
-     * unit.
+     * This structure defines the CloudWatch metric to return, along with the statistic and unit.
      *
      * For more information about the CloudWatch terminology below, see
      * [Amazon CloudWatch concepts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html)
@@ -2391,7 +2405,7 @@ public object autoscaling {
 
     /**
      * `PredictiveScalingConfiguration` is a property of the
-     * [AWS::AutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html)
+     * [AWS::AutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-scalingpolicy.html)
      * resource that specifies a predictive scaling policy for Amazon EC2 Auto Scaling.
      *
      * For more information, see
@@ -3043,7 +3057,7 @@ public object autoscaling {
 
     /**
      * `StepAdjustment` specifies a step adjustment for the `StepAdjustments` property of the
-     * [AWS::AutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html)
+     * [AWS::AutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-scalingpolicy.html)
      * resource.
      *
      * For the following examples, suppose that you have an alarm with a breach threshold of 50:
@@ -3065,7 +3079,7 @@ public object autoscaling {
      * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      * You can find a sample template snippet in the
-     * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#aws-properties-as-policy--examples)
+     * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-scalingpolicy.html#aws-resource-autoscaling-scalingpolicy--examples)
      * section of the `AWS::AutoScaling::ScalingPolicy` resource.
      *
      * Example:
@@ -3093,7 +3107,7 @@ public object autoscaling {
 
     /**
      * `TargetTrackingConfiguration` is a property of the
-     * [AWS::AutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html)
+     * [AWS::AutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-scalingpolicy.html)
      * resource that specifies a target tracking scaling policy configuration for Amazon EC2 Auto
      * Scaling.
      *
@@ -3157,7 +3171,7 @@ public object autoscaling {
      * suspend scheduled actions by specifying an
      * [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html)
      * for the Auto Scaling group. You can find a sample update policy for rolling updates in
-     * [Auto scaling template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)
+     * [Configure Amazon EC2 Auto Scaling resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html)
      * .
      *
      * For more information, see
@@ -3661,8 +3675,61 @@ public object autoscaling {
      * InstanceType instanceType;
      * LaunchTemplate launchTemplate;
      * LaunchTemplateOverrides launchTemplateOverrides = LaunchTemplateOverrides.builder()
-     * .instanceType(instanceType)
+     * .instanceRequirements(InstanceRequirementsProperty.builder()
+     * .memoryMiB(MemoryMiBRequestProperty.builder()
+     * .max(123)
+     * .min(123)
+     * .build())
+     * .vCpuCount(VCpuCountRequestProperty.builder()
+     * .max(123)
+     * .min(123)
+     * .build())
      * // the properties below are optional
+     * .acceleratorCount(AcceleratorCountRequestProperty.builder()
+     * .max(123)
+     * .min(123)
+     * .build())
+     * .acceleratorManufacturers(List.of("acceleratorManufacturers"))
+     * .acceleratorNames(List.of("acceleratorNames"))
+     * .acceleratorTotalMemoryMiB(AcceleratorTotalMemoryMiBRequestProperty.builder()
+     * .max(123)
+     * .min(123)
+     * .build())
+     * .acceleratorTypes(List.of("acceleratorTypes"))
+     * .allowedInstanceTypes(List.of("allowedInstanceTypes"))
+     * .bareMetal("bareMetal")
+     * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty.builder()
+     * .max(123)
+     * .min(123)
+     * .build())
+     * .burstablePerformance("burstablePerformance")
+     * .cpuManufacturers(List.of("cpuManufacturers"))
+     * .excludedInstanceTypes(List.of("excludedInstanceTypes"))
+     * .instanceGenerations(List.of("instanceGenerations"))
+     * .localStorage("localStorage")
+     * .localStorageTypes(List.of("localStorageTypes"))
+     * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
+     * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
+     * .max(123)
+     * .min(123)
+     * .build())
+     * .networkBandwidthGbps(NetworkBandwidthGbpsRequestProperty.builder()
+     * .max(123)
+     * .min(123)
+     * .build())
+     * .networkInterfaceCount(NetworkInterfaceCountRequestProperty.builder()
+     * .max(123)
+     * .min(123)
+     * .build())
+     * .onDemandMaxPricePercentageOverLowestPrice(123)
+     * .requireHibernateSupport(false)
+     * .spotMaxPricePercentageOverLowestPrice(123)
+     * .totalLocalStorageGb(TotalLocalStorageGBRequestProperty.builder()
+     * .max(123)
+     * .min(123)
+     * .build())
+     * .build())
+     * .instanceType(instanceType)
      * .launchTemplate(launchTemplate)
      * .weightedCapacity(123)
      * .build();
@@ -4165,6 +4232,7 @@ public object autoscaling {
      * // the properties below are optional
      * .adjustmentType(AdjustmentType.CHANGE_IN_CAPACITY)
      * .cooldown(Duration.minutes(30))
+     * .datapointsToAlarm(123)
      * .estimatedInstanceWarmup(Duration.minutes(30))
      * .evaluationPeriods(123)
      * .metricAggregationType(MetricAggregationType.AVERAGE)
@@ -4204,6 +4272,7 @@ public object autoscaling {
      * // the properties below are optional
      * .adjustmentType(AdjustmentType.CHANGE_IN_CAPACITY)
      * .cooldown(Duration.minutes(30))
+     * .datapointsToAlarm(123)
      * .estimatedInstanceWarmup(Duration.minutes(30))
      * .evaluationPeriods(123)
      * .metricAggregationType(MetricAggregationType.AVERAGE)

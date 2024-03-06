@@ -61,8 +61,8 @@ public class CfnLoggingConfigurationLogDestinationConfigPropertyDsl {
      *   `logGroup` . The following example specifies a log group named `alert-log-group` :
      *
      * `"LogDestination": { "logGroup": "alert-log-group" }`
-     * * For a Kinesis Data Firehose delivery stream, provide the name of the delivery stream, with
-     *   key `deliveryStream` . The following example specifies a delivery stream named
+     * * For a Firehose delivery stream, provide the name of the delivery stream, with key
+     *   `deliveryStream` . The following example specifies a delivery stream named
      *   `alert-delivery-stream` :
      *
      * `"LogDestination": { "deliveryStream": "alert-delivery-stream" }`
@@ -83,8 +83,8 @@ public class CfnLoggingConfigurationLogDestinationConfigPropertyDsl {
      *   `logGroup` . The following example specifies a log group named `alert-log-group` :
      *
      * `"LogDestination": { "logGroup": "alert-log-group" }`
-     * * For a Kinesis Data Firehose delivery stream, provide the name of the delivery stream, with
-     *   key `deliveryStream` . The following example specifies a delivery stream named
+     * * For a Firehose delivery stream, provide the name of the delivery stream, with key
+     *   `deliveryStream` . The following example specifies a delivery stream named
      *   `alert-delivery-stream` :
      *
      * `"LogDestination": { "deliveryStream": "alert-delivery-stream" }`
@@ -95,8 +95,7 @@ public class CfnLoggingConfigurationLogDestinationConfigPropertyDsl {
 
     /**
      * @param logDestinationType The type of storage destination to send these logs to. You can send
-     *   logs to an Amazon S3 bucket, a CloudWatch log group, or a Kinesis Data Firehose delivery
-     *   stream.
+     *   logs to an Amazon S3 bucket, a CloudWatch log group, or a Firehose delivery stream.
      */
     public fun logDestinationType(logDestinationType: String) {
         cdkBuilder.logDestinationType(logDestinationType)

@@ -51,6 +51,7 @@ import software.constructs.Construct
  * .acceptanceTimeoutSeconds(123)
  * .additionalPlayerCount(123)
  * .backfillMode("backfillMode")
+ * .creationTime("creationTime")
  * .customEventData("customEventData")
  * .description("description")
  * .flexMatchMode("flexMatchMode")
@@ -61,6 +62,7 @@ import software.constructs.Construct
  * .gameSessionData("gameSessionData")
  * .gameSessionQueueArns(List.of("gameSessionQueueArns"))
  * .notificationTarget("notificationTarget")
+ * .ruleSetArn("ruleSetArn")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -166,6 +168,19 @@ public class CfnMatchmakingConfigurationDsl(
      */
     public fun backfillMode(backfillMode: String) {
         cdkBuilder.backfillMode(backfillMode)
+    }
+
+    /**
+     * A time stamp indicating when this data object was created.
+     *
+     * Format is a number expressed in Unix time as milliseconds (for example `"1469498468.057"` ).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-matchmakingconfiguration.html#cfn-gamelift-matchmakingconfiguration-creationtime)
+     *
+     * @param creationTime A time stamp indicating when this data object was created.
+     */
+    public fun creationTime(creationTime: String) {
+        cdkBuilder.creationTime(creationTime)
     }
 
     /**
@@ -368,6 +383,21 @@ public class CfnMatchmakingConfigurationDsl(
      */
     public fun requestTimeoutSeconds(requestTimeoutSeconds: Number) {
         cdkBuilder.requestTimeoutSeconds(requestTimeoutSeconds)
+    }
+
+    /**
+     * The Amazon Resource Name (
+     * [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) associated with
+     * the GameLift matchmaking rule set resource that this configuration uses.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-matchmakingconfiguration.html#cfn-gamelift-matchmakingconfiguration-rulesetarn)
+     *
+     * @param ruleSetArn The Amazon Resource Name (
+     *   [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) associated with
+     *   the GameLift matchmaking rule set resource that this configuration uses.
+     */
+    public fun ruleSetArn(ruleSetArn: String) {
+        cdkBuilder.ruleSetArn(ruleSetArn)
     }
 
     /**

@@ -86,6 +86,9 @@ import software.amazon.awscdk.services.batch.CfnJobDefinition
  * .build())
  * .privileged(false)
  * .readonlyRootFilesystem(false)
+ * .repositoryCredentials(RepositoryCredentialsProperty.builder()
+ * .credentialsParameter("credentialsParameter")
+ * .build())
  * .resourceRequirements(List.of(ResourceRequirementProperty.builder()
  * .type("type")
  * .value("value")
@@ -545,6 +548,18 @@ public class CfnJobDefinitionContainerPropertiesPropertyDsl {
      */
     public fun readonlyRootFilesystem(readonlyRootFilesystem: IResolvable) {
         cdkBuilder.readonlyRootFilesystem(readonlyRootFilesystem)
+    }
+
+    /** @param repositoryCredentials The private repository authentication credentials to use. */
+    public fun repositoryCredentials(repositoryCredentials: IResolvable) {
+        cdkBuilder.repositoryCredentials(repositoryCredentials)
+    }
+
+    /** @param repositoryCredentials The private repository authentication credentials to use. */
+    public fun repositoryCredentials(
+        repositoryCredentials: CfnJobDefinition.RepositoryCredentialsProperty
+    ) {
+        cdkBuilder.repositoryCredentials(repositoryCredentials)
     }
 
     /**

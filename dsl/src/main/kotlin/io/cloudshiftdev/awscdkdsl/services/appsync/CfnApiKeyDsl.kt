@@ -29,7 +29,6 @@ import software.constructs.Construct
  * CfnApiKey cfnApiKey = CfnApiKey.Builder.create(this, "MyCfnApiKey")
  * .apiId("apiId")
  * // the properties below are optional
- * .apiKeyId("apiKeyId")
  * .description("description")
  * .expires(123)
  * .build();
@@ -53,17 +52,6 @@ public class CfnApiKeyDsl(
      */
     public fun apiId(apiId: String) {
         cdkBuilder.apiId(apiId)
-    }
-
-    /**
-     * The API key ID.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html#cfn-appsync-apikey-apikeyid)
-     *
-     * @param apiKeyId The API key ID.
-     */
-    public fun apiKeyId(apiKeyId: String) {
-        cdkBuilder.apiKeyId(apiKeyId)
     }
 
     /**

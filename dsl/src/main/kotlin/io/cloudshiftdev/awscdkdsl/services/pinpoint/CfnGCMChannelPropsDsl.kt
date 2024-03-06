@@ -26,10 +26,12 @@ import software.amazon.awscdk.services.pinpoint.CfnGCMChannelProps
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.pinpoint.*;
  * CfnGCMChannelProps cfnGCMChannelProps = CfnGCMChannelProps.builder()
- * .apiKey("apiKey")
  * .applicationId("applicationId")
  * // the properties below are optional
+ * .apiKey("apiKey")
+ * .defaultAuthenticationMethod("defaultAuthenticationMethod")
  * .enabled(false)
+ * .serviceJson("serviceJson")
  * .build();
  * ```
  *
@@ -56,6 +58,14 @@ public class CfnGCMChannelPropsDsl {
     }
 
     /**
+     * @param defaultAuthenticationMethod The default authentication method used for GCM. Values are
+     *   either "TOKEN" or "KEY". Defaults to "KEY".
+     */
+    public fun defaultAuthenticationMethod(defaultAuthenticationMethod: String) {
+        cdkBuilder.defaultAuthenticationMethod(defaultAuthenticationMethod)
+    }
+
+    /**
      * @param enabled Specifies whether to enable the GCM channel for the Amazon Pinpoint
      *   application.
      */
@@ -69,6 +79,16 @@ public class CfnGCMChannelPropsDsl {
      */
     public fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled)
+    }
+
+    /**
+     * @param serviceJson The contents of the JSON file provided by Google during registration in
+     *   order to generate an access token for authentication. For more information see
+     *   [Migrate from legacy FCM APIs to HTTP v1](https://docs.aws.amazon.com/https://firebase.google.com/docs/cloud-messaging/migrate-v1)
+     *   .
+     */
+    public fun serviceJson(serviceJson: String) {
+        cdkBuilder.serviceJson(serviceJson)
     }
 
     public fun build(): CfnGCMChannelProps = cdkBuilder.build()

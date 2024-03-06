@@ -151,13 +151,13 @@ public class CfnBridgeDsl(
     }
 
     /**
-     * The network output name.
+     * The name of the bridge.
      *
-     * This name is used to reference the output and must be unique among outputs in this bridge.
+     * This name can not be modified after the bridge is created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-name)
      *
-     * @param name The network output name.
+     * @param name The name of the bridge.
      */
     public fun name(name: String) {
         cdkBuilder.name(name)

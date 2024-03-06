@@ -17,7 +17,9 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
 /**
- * Provides the configuration information to connect to a index.
+ * Provides the configuration information to an
+ * [Amazon Kendra supported database](https://docs.aws.amazon.com/kendra/latest/dg/data-source-database.html)
+ * .
  *
  * Example:
  * ```

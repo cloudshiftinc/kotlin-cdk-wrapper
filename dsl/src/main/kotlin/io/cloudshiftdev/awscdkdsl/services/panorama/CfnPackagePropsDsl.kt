@@ -60,12 +60,12 @@ public class CfnPackagePropsDsl {
         cdkBuilder.packageName(packageName)
     }
 
-    /** @param storageLocation the value to be set. */
+    /** @param storageLocation A storage location. */
     public fun storageLocation(storageLocation: IResolvable) {
         cdkBuilder.storageLocation(storageLocation)
     }
 
-    /** @param storageLocation the value to be set. */
+    /** @param storageLocation A storage location. */
     public fun storageLocation(storageLocation: CfnPackage.StorageLocationProperty) {
         cdkBuilder.storageLocation(storageLocation)
     }

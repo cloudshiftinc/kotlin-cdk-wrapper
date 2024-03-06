@@ -20,14 +20,16 @@ import software.amazon.awscdk.services.stepfunctions.ChoiceProps
  *
  * Example:
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import software.amazon.awscdk.services.stepfunctions.*;
- * ChoiceProps choiceProps = ChoiceProps.builder()
- * .comment("comment")
- * .inputPath("inputPath")
- * .outputPath("outputPath")
+ * Choice choice = Choice.Builder.create(this, "What color is it?")
+ * .comment("color comment")
  * .build();
+ * Pass handleBlueItem = new Pass(this, "HandleBlueItem");
+ * Pass handleOtherItemColor = new Pass(this, "HanldeOtherItemColor");
+ * choice.when(Condition.stringEquals("$.color", "BLUE"), handleBlueItem,
+ * ChoiceTransitionOptions.builder()
+ * .comment("blue item comment")
+ * .build());
+ * choice.otherwise(handleOtherItemColor);
  * ```
  */
 @CdkDslMarker
@@ -55,6 +57,11 @@ public class ChoicePropsDsl {
      */
     public fun outputPath(outputPath: String) {
         cdkBuilder.outputPath(outputPath)
+    }
+
+    /** @param stateName Optional name for this state. */
+    public fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
     }
 
     public fun build(): ChoiceProps = cdkBuilder.build()

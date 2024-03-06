@@ -30,12 +30,14 @@ import software.amazon.awscdk.services.ecs.CfnTaskDefinition
 import software.amazon.awscdk.services.ecs.CfnTaskSet
 import software.amazon.awscdk.services.ecs.Cluster
 import software.amazon.awscdk.services.ecs.ContainerDefinition
+import software.amazon.awscdk.services.ecs.Ec2TaskDefinition
 import software.amazon.awscdk.services.ecs.ExternalService
 import software.amazon.awscdk.services.ecs.ExternalTaskDefinition
 import software.amazon.awscdk.services.ecs.FirelensLogRouter
 import software.amazon.awscdk.services.ecs.IEcsLoadBalancerTarget
 import software.amazon.awscdk.services.ecs.LinuxParameters
 import software.amazon.awscdk.services.ecs.ScalableTaskCount
+import software.amazon.awscdk.services.ecs.ServiceManagedVolume
 import software.amazon.awscdk.services.ecs.TaskDefinition
 import software.amazon.awscdk.services.servicediscovery.INamespace
 import software.amazon.awscdk.services.servicediscovery.Service
@@ -543,6 +545,24 @@ public inline fun ContainerDefinition.addVolumesFrom(block: VolumeFromDsl.() -> 
 }
 
 /**
+ * Tasks running in AWSVPC networking mode requires an additional environment variable for the
+ * region to be sourced.
+ *
+ * This override adds in the additional environment variable as required
+ *
+ * @param id
+ * @param props
+ */
+public inline fun Ec2TaskDefinition.addContainer(
+    id: String,
+    block: ContainerDefinitionOptionsDsl.() -> Unit = {}
+): ContainerDefinition {
+    val builder = ContainerDefinitionOptionsDsl()
+    builder.apply(block)
+    return addContainer(id, builder.build())
+}
+
+/**
  * Overriden method to throw error as `associateCloudMapService` is not supported for external
  * service.
  *
@@ -733,6 +753,21 @@ public inline fun ScalableTaskCount.scaleToTrackCustomMetric(
     val builder = TrackCustomMetricPropsDsl()
     builder.apply(block)
     return scaleToTrackCustomMetric(id, builder.build())
+}
+
+/**
+ * Mounts the service managed volume to a specified container at a defined mount point.
+ *
+ * @param container The container to mount the volume on.
+ * @param mountPoint The mounting point details within the container.
+ */
+public inline fun ServiceManagedVolume.mountIn(
+    container: ContainerDefinition,
+    block: ContainerMountPointDsl.() -> Unit = {}
+) {
+    val builder = ContainerMountPointDsl()
+    builder.apply(block)
+    return mountIn(container, builder.build())
 }
 
 /**

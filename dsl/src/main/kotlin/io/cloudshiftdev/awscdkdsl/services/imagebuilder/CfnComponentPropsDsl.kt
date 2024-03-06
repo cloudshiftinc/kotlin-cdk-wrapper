@@ -52,7 +52,7 @@ public class CfnComponentPropsDsl {
 
     /**
      * @param changeDescription The change description of the component. Describes what change has
-     *   been made in this version, or what makes this version different from other versions of this
+     *   been made in this version, or what makes this version different from other versions of the
      *   component.
      */
     public fun changeDescription(changeDescription: String) {

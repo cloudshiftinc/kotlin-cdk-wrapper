@@ -58,10 +58,10 @@ public class NetworkAclDsl(
     /**
      * The name of the NetworkAcl.
      *
-     * It is not recommended to use an explicit name.
+     * Since the NetworkAcl resource doesn't support providing a physical name, the value provided
+     * here will be recorded in the `Name` tag.
      *
-     * Default: If you don't specify a networkAclName, AWS CloudFormation generates a unique
-     * physical ID and uses that ID for the group name.
+     * Default: CDK generated name
      *
      * @param networkAclName The name of the NetworkAcl.
      */

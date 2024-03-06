@@ -41,6 +41,7 @@ import software.constructs.Construct
  * // the properties below are optional
  * .description("description")
  * .fileFormat("fileFormat")
+ * .languageCode("languageCode")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -101,6 +102,17 @@ public class CfnFaqDsl(
      */
     public fun indexId(indexId: String) {
         cdkBuilder.indexId(indexId)
+    }
+
+    /**
+     * The code for a language.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendra-faq.html#cfn-kendra-faq-languagecode)
+     *
+     * @param languageCode The code for a language.
+     */
+    public fun languageCode(languageCode: String) {
+        cdkBuilder.languageCode(languageCode)
     }
 
     /**

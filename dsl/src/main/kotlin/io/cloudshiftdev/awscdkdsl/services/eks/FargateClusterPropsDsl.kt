@@ -41,7 +41,7 @@ import software.amazon.awscdk.services.lambda.ILayerVersion
  * Example:
  * ```
  * FargateCluster cluster = FargateCluster.Builder.create(this, "MyCluster")
- * .version(KubernetesVersion.V1_27)
+ * .version(KubernetesVersion.V1_29)
  * .build();
  * ```
  */
@@ -192,7 +192,7 @@ public class FargateClusterPropsDsl {
      * ```
      * LayerVersion layer = LayerVersion.Builder.create(this, "proxy-agent-layer")
      * .code(Code.fromAsset(String.format("%s/layer.zip", __dirname)))
-     * .compatibleRuntimes(List.of(Runtime.NODEJS_14_X))
+     * .compatibleRuntimes(List.of(Runtime.NODEJS_LATEST))
      * .build();
      * ```
      */
@@ -277,10 +277,8 @@ public class FargateClusterPropsDsl {
     }
 
     /**
-     * @param vpcSubnets Where to place EKS Control Plane ENIs. If you want to create public load
-     *   balancers, this must include public subnets.
-     *
-     * For example, to only select private subnets, supply the following:
+     * @param vpcSubnets Where to place EKS Control Plane ENIs. For example, to only select private
+     *   subnets, supply the following:
      *
      * `vpcSubnets: [{ subnetType: ec2.SubnetType.PRIVATE_WITH_EGRESS }]`
      */
@@ -289,10 +287,8 @@ public class FargateClusterPropsDsl {
     }
 
     /**
-     * @param vpcSubnets Where to place EKS Control Plane ENIs. If you want to create public load
-     *   balancers, this must include public subnets.
-     *
-     * For example, to only select private subnets, supply the following:
+     * @param vpcSubnets Where to place EKS Control Plane ENIs. For example, to only select private
+     *   subnets, supply the following:
      *
      * `vpcSubnets: [{ subnetType: ec2.SubnetType.PRIVATE_WITH_EGRESS }]`
      */

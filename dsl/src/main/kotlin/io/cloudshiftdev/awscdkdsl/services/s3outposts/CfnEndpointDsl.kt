@@ -92,18 +92,22 @@ public class CfnEndpointDsl(
     }
 
     /**
+     * The failure reason, if any, for a create or delete endpoint operation.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-endpoint.html#cfn-s3outposts-endpoint-failedreason)
      *
-     * @param failedReason
+     * @param failedReason The failure reason, if any, for a create or delete endpoint operation.
      */
     public fun failedReason(failedReason: IResolvable) {
         cdkBuilder.failedReason(failedReason)
     }
 
     /**
+     * The failure reason, if any, for a create or delete endpoint operation.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-endpoint.html#cfn-s3outposts-endpoint-failedreason)
      *
-     * @param failedReason
+     * @param failedReason The failure reason, if any, for a create or delete endpoint operation.
      */
     public fun failedReason(failedReason: CfnEndpoint.FailedReasonProperty) {
         cdkBuilder.failedReason(failedReason)
@@ -121,22 +125,22 @@ public class CfnEndpointDsl(
     }
 
     /**
-     * The ID of the security group to use with the endpoint.
+     * The ID of the security group used for the endpoint.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-endpoint.html#cfn-s3outposts-endpoint-securitygroupid)
      *
-     * @param securityGroupId The ID of the security group to use with the endpoint.
+     * @param securityGroupId The ID of the security group used for the endpoint.
      */
     public fun securityGroupId(securityGroupId: String) {
         cdkBuilder.securityGroupId(securityGroupId)
     }
 
     /**
-     * The ID of the subnet.
+     * The ID of the subnet used for the endpoint.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-endpoint.html#cfn-s3outposts-endpoint-subnetid)
      *
-     * @param subnetId The ID of the subnet.
+     * @param subnetId The ID of the subnet used for the endpoint.
      */
     public fun subnetId(subnetId: String) {
         cdkBuilder.subnetId(subnetId)

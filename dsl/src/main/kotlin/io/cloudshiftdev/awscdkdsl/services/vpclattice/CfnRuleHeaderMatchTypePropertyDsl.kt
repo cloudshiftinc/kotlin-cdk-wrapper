@@ -18,8 +18,6 @@ import software.amazon.awscdk.services.vpclattice.CfnRule
 /**
  * Describes a header match type.
  *
- * Only one can be provided.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -39,17 +37,17 @@ public class CfnRuleHeaderMatchTypePropertyDsl {
     private val cdkBuilder: CfnRule.HeaderMatchTypeProperty.Builder =
         CfnRule.HeaderMatchTypeProperty.builder()
 
-    /** @param contains Specifies a contains type match. */
+    /** @param contains A contains type match. */
     public fun contains(contains: String) {
         cdkBuilder.contains(contains)
     }
 
-    /** @param exact Specifies an exact type match. */
+    /** @param exact An exact type match. */
     public fun exact(exact: String) {
         cdkBuilder.exact(exact)
     }
 
-    /** @param prefix Specifies a prefix type match. Matches the value with the prefix. */
+    /** @param prefix A prefix type match. Matches the value with the prefix. */
     public fun prefix(prefix: String) {
         cdkBuilder.prefix(prefix)
     }

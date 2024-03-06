@@ -21,7 +21,8 @@ import software.constructs.Construct
 /**
  * An object that provides information about a solution.
  *
- * A solution is a trained model that can be deployed as a campaign.
+ * A solution includes the custom recipe, customized parameters, and trained models (Solution
+ * Versions) that Amazon Personalize uses to generate recommendations.
  *
  * Example:
  * ```

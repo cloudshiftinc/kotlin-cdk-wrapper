@@ -12,6 +12,8 @@
 package io.cloudshiftdev.awscdkdsl.services.events
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import io.cloudshiftdev.awscdkdsl.common.MapBuilder
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -20,20 +22,28 @@ import software.amazon.awscdk.services.events.CfnEventBus
 import software.constructs.Construct
 
 /**
- * Creates a new event bus within your account.
+ * Specifies an event bus within your account.
  *
  * This can be a custom event bus which you can use to receive events from your custom applications
  * and services, or it can be a partner event bus which can be matched to a partner event source.
+ *
+ * As an aid to help you jumpstart developing CloudFormation templates, the EventBridge console
+ * enables you to create templates from the existing event buses in your account. For more
+ * information, see
+ * [Generating CloudFormation templates from an EventBridge event bus](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-generate-event-bus-template.html)
+ * in the *Amazon EventBridge User Guide* .
  *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.events.*;
+ * Object policy;
  * CfnEventBus cfnEventBus = CfnEventBus.Builder.create(this, "MyCfnEventBus")
  * .name("name")
  * // the properties below are optional
  * .eventSourceName("eventSourceName")
+ * .policy(policy)
  * .tags(List.of(TagEntryProperty.builder()
  * .key("key")
  * .value("value")
@@ -81,6 +91,34 @@ public class CfnEventBusDsl(
      */
     public fun name(name: String) {
         cdkBuilder.name(name)
+    }
+
+    /**
+     * The permissions policy of the event bus, describing which other AWS accounts can write events
+     * to this event bus.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbus.html#cfn-events-eventbus-policy)
+     *
+     * @param policy The permissions policy of the event bus, describing which other AWS accounts
+     *   can write events to this event bus.
+     */
+    public fun policy(policy: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(policy)
+        cdkBuilder.policy(builder.map)
+    }
+
+    /**
+     * The permissions policy of the event bus, describing which other AWS accounts can write events
+     * to this event bus.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbus.html#cfn-events-eventbus-policy)
+     *
+     * @param policy The permissions policy of the event bus, describing which other AWS accounts
+     *   can write events to this event bus.
+     */
+    public fun policy(policy: Any) {
+        cdkBuilder.policy(policy)
     }
 
     /**

@@ -49,7 +49,7 @@ public class CfnDeliveryStreamParquetSerDePropertyDsl {
     /**
      * @param blockSizeBytes The Hadoop Distributed File System (HDFS) block size. This is useful if
      *   you intend to copy the data from Amazon S3 to HDFS before querying. The default is 256 MiB
-     *   and the minimum is 64 MiB. Kinesis Data Firehose uses this value for padding calculations.
+     *   and the minimum is 64 MiB. Firehose uses this value for padding calculations.
      */
     public fun blockSizeBytes(blockSizeBytes: Number) {
         cdkBuilder.blockSizeBytes(blockSizeBytes)

@@ -17,6 +17,7 @@ import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.Duration
+import software.amazon.awscdk.services.stepfunctions.JitterType
 import software.amazon.awscdk.services.stepfunctions.RetryProps
 
 /**
@@ -32,8 +33,12 @@ import software.amazon.awscdk.services.stepfunctions.RetryProps
  * parallel.branch(shipItem);
  * parallel.branch(sendInvoice);
  * parallel.branch(restock);
- * // Retry the whole workflow if something goes wrong
- * parallel.addRetry(RetryProps.builder().maxAttempts(1).build());
+ * // Retry the whole workflow if something goes wrong with exponential backoff
+ * parallel.addRetry(RetryProps.builder()
+ * .maxAttempts(1)
+ * .maxDelay(Duration.seconds(5))
+ * .jitterStrategy(JitterType.FULL)
+ * .build());
  * // How to recover from errors
  * Pass sendFailureNotification = new Pass(this, "SendFailureNotification");
  * parallel.addCatch(sendFailureNotification);
@@ -76,12 +81,22 @@ public class RetryPropsDsl {
         cdkBuilder.interval(interval)
     }
 
+    /** @param jitterStrategy Introduces a randomization over the retry interval. */
+    public fun jitterStrategy(jitterStrategy: JitterType) {
+        cdkBuilder.jitterStrategy(jitterStrategy)
+    }
+
     /**
      * @param maxAttempts How many times to retry this particular error. May be 0 to disable retry
      *   for specific errors (in case you have a catch-all retry policy).
      */
     public fun maxAttempts(maxAttempts: Number) {
         cdkBuilder.maxAttempts(maxAttempts)
+    }
+
+    /** @param maxDelay Maximum limit on retry interval growth during exponential backoff. */
+    public fun maxDelay(maxDelay: Duration) {
+        cdkBuilder.maxDelay(maxDelay)
     }
 
     public fun build(): RetryProps {

@@ -39,21 +39,25 @@ import software.amazon.awscdk.IReusableStackSynthesizer
  * Example:
  * ```
  * import software.amazon.awscdk.*;
- * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.s3.*;
+ * IBucket bucket;
  * App app = new App();
- * Stack stack = new Stack(app, "aws-servicediscovery-integ");
- * PublicDnsNamespace namespace = PublicDnsNamespace.Builder.create(stack, "Namespace")
- * .name("foobar.com")
+ * Stack stack = new Stack(app, "Stack");
+ * Table.Builder.create(stack, "Table")
+ * .partitionKey(Attribute.builder()
+ * .name("id")
+ * .type(AttributeType.STRING)
+ * .build())
+ * .importSource(ImportSourceSpecification.builder()
+ * .compressionType(InputCompressionType.GZIP)
+ * .inputFormat(InputFormat.csv(CsvOptions.builder()
+ * .delimiter(",")
+ * .headerList(List.of("id", "name"))
+ * .build()))
+ * .bucket(bucket)
+ * .keyPrefix("prefix")
+ * .build())
  * .build();
- * Service service = namespace.createService("Service", DnsServiceProps.builder()
- * .name("foo")
- * .dnsRecordType(DnsRecordType.CNAME)
- * .dnsTtl(Duration.seconds(30))
- * .build());
- * service.registerCnameInstance("CnameInstance", CnameInstanceBaseProps.builder()
- * .instanceCname("service.pizza")
- * .build());
- * app.synth();
  * ```
  *
  * [Documentation](https://docs.aws.amazon.com/cdk/latest/guide/apps.html)

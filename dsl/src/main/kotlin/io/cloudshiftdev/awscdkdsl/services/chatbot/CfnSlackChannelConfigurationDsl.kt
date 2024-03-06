@@ -26,9 +26,8 @@ import software.constructs.Construct
  *
  * This resource requires some setup to be done in the AWS Chatbot console. To provide the required
  * Slack workspace ID, you must perform the initial authorization flow with Slack in the AWS Chatbot
- * console, then copy and paste the workspace ID from the console. For more details, see steps 1-4
- * in
- * [Setting Up AWS Chatbot with Slack](https://docs.aws.amazon.com/chatbot/latest/adminguide/setting-up.html#Setup_intro)
+ * console, then copy and paste the workspace ID from the console. For more details, see
+ * [Configure a Slack client](https://docs.aws.amazon.com/chatbot/latest/adminguide/slack-setup.html#slack-client-setup)
  * in the *AWS Chatbot User Guide* .
  *
  * Example:

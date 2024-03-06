@@ -16,8 +16,10 @@ import kotlin.String
 import software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration
 
 /**
- * The launch template that the fast-launch enabled Windows AMI uses when it launches Windows
- * instances to create pre-provisioned snapshots.
+ * Identifies the launch template that the associated Windows AMI uses for launching an instance
+ * when faster launching is enabled.
+ *
+ * You can specify either the `launchTemplateName` or the `launchTemplateId` , but not both.
  *
  * Example:
  * ```

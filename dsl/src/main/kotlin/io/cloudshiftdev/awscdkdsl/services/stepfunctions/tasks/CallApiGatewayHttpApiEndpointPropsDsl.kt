@@ -34,7 +34,7 @@ import software.amazon.awscdk.services.stepfunctions.tasks.HttpMethod
  *
  * Example:
  * ```
- * import software.amazon.awscdk.services.apigatewayv2.alpha.*;
+ * import software.amazon.awscdk.services.apigatewayv2.*;
  * HttpApi httpApi = new HttpApi(this, "MyHttpApi");
  * CallApiGatewayHttpApiEndpoint invokeTask = CallApiGatewayHttpApiEndpoint.Builder.create(this,
  * "Call HTTP API")
@@ -125,7 +125,9 @@ public class CallApiGatewayHttpApiEndpointPropsDsl {
 
     /**
      * @param integrationPattern AWS Step Functions integrates with services directly in the Amazon
-     *   States Language. You can control these AWS services using service integration patterns
+     *   States Language. You can control these AWS services using service integration patterns.
+     *
+     * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      */
     public fun integrationPattern(integrationPattern: IntegrationPattern) {
         cdkBuilder.integrationPattern(integrationPattern)
@@ -187,6 +189,11 @@ public class CallApiGatewayHttpApiEndpointPropsDsl {
     /** @param stageName Name of the stage where the API is deployed to in API Gateway. */
     public fun stageName(stageName: String) {
         cdkBuilder.stageName(stageName)
+    }
+
+    /** @param stateName Optional name for this state. */
+    public fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
     }
 
     /**

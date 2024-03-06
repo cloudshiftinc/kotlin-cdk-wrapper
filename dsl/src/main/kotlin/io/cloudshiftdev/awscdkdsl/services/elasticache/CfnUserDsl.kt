@@ -80,8 +80,7 @@ public class CfnUserDsl(
      * Specifies the authentication mode to use. Below is an example of the possible JSON values:.
      *
      * ```
-     * { Type: &lt;iam | no-password-required | password&gt; Passwords: ["*****", "******"] // If Type
-     * is password.
+     * { Passwords: ["*****", "******"] // If Type is password.
      * }
      * ```
      *
@@ -100,8 +99,7 @@ public class CfnUserDsl(
      * Specifies the authentication mode to use. Below is an example of the possible JSON values:.
      *
      * ```
-     * { Type: &lt;iam | no-password-required | password&gt; Passwords: ["*****", "******"] // If Type
-     * is password.
+     * { Passwords: ["*****", "******"] // If Type is password.
      * }
      * ```
      *

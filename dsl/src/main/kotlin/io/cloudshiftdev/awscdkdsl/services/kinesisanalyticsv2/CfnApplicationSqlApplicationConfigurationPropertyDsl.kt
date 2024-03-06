@@ -19,8 +19,8 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
 
 /**
- * Describes the inputs, outputs, and reference data sources for a SQL-based Kinesis Data Analytics
- * application.
+ * Describes the inputs, outputs, and reference data sources for a SQL-based Managed Service for
+ * Apache Flink application.
  *
  * Example:
  * ```
@@ -84,7 +84,7 @@ public class CfnApplicationSqlApplicationConfigurationPropertyDsl {
 
     /**
      * @param inputs The array of
-     *   [Input](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_Input.html) objects
+     *   [Input](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_Input.html) objects
      *   describing the input streams used by the application.
      */
     public fun inputs(vararg inputs: Any) {
@@ -93,7 +93,7 @@ public class CfnApplicationSqlApplicationConfigurationPropertyDsl {
 
     /**
      * @param inputs The array of
-     *   [Input](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_Input.html) objects
+     *   [Input](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_Input.html) objects
      *   describing the input streams used by the application.
      */
     public fun inputs(inputs: Collection<Any>) {
@@ -102,7 +102,7 @@ public class CfnApplicationSqlApplicationConfigurationPropertyDsl {
 
     /**
      * @param inputs The array of
-     *   [Input](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_Input.html) objects
+     *   [Input](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_Input.html) objects
      *   describing the input streams used by the application.
      */
     public fun inputs(inputs: IResolvable) {

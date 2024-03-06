@@ -156,7 +156,11 @@ public class CfnSecurityGroupPropsDsl {
         _tags.addAll(tags)
     }
 
-    /** @param vpcId The ID of the VPC for the security group. */
+    /**
+     * @param vpcId The ID of the VPC for the security group. If you do not specify a VPC, the
+     *   default is to use the default VPC for the Region. If there's no specified VPC and no
+     *   default VPC, security group creation fails.
+     */
     public fun vpcId(vpcId: String) {
         cdkBuilder.vpcId(vpcId)
     }

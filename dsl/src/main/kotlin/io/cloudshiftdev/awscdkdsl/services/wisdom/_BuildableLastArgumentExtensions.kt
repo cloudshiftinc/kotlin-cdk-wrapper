@@ -16,7 +16,7 @@ import software.amazon.awscdk.services.wisdom.CfnAssistant
 import software.amazon.awscdk.services.wisdom.CfnAssistantAssociation
 import software.amazon.awscdk.services.wisdom.CfnKnowledgeBase
 
-/** The KMS key used for encryption. */
+/** The configuration information for the customer managed key used for encryption. */
 public inline fun CfnAssistant.setServerSideEncryptionConfiguration(
     block: CfnAssistantServerSideEncryptionConfigurationPropertyDsl.() -> Unit = {}
 ) {
@@ -43,7 +43,10 @@ public inline fun CfnKnowledgeBase.setRenderingConfiguration(
     return setRenderingConfiguration(builder.build())
 }
 
-/** The KMS key used for encryption. */
+/**
+ * This customer managed key must have a policy that allows `kms:CreateGrant` and `kms:DescribeKey`
+ * permissions to the IAM identity using the key to invoke Wisdom.
+ */
 public inline fun CfnKnowledgeBase.setServerSideEncryptionConfiguration(
     block: CfnKnowledgeBaseServerSideEncryptionConfigurationPropertyDsl.() -> Unit = {}
 ) {

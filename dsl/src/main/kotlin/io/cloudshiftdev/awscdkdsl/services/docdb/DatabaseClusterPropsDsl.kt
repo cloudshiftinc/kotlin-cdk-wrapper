@@ -45,7 +45,7 @@ import software.amazon.awscdk.services.logs.RetentionDays
  * .subnetType(SubnetType.PUBLIC)
  * .build())
  * .vpc(vpc)
- * .deletionProtection(true)
+ * .removalPolicy(RemovalPolicy.SNAPSHOT)
  * .build();
  * ```
  */
@@ -135,6 +135,14 @@ public class DatabaseClusterPropsDsl {
         cdkBuilder.instanceIdentifierBase(instanceIdentifierBase)
     }
 
+    /**
+     * @param instanceRemovalPolicy The removal policy to apply to the cluster's instances. Cannot
+     *   be set to `SNAPSHOT`.
+     */
+    public fun instanceRemovalPolicy(instanceRemovalPolicy: RemovalPolicy) {
+        cdkBuilder.instanceRemovalPolicy(instanceRemovalPolicy)
+    }
+
     /** @param instanceType What type of instance to start for the replicas. */
     public fun instanceType(instanceType: InstanceType) {
         cdkBuilder.instanceType(instanceType)
@@ -187,6 +195,11 @@ public class DatabaseClusterPropsDsl {
      *   removed or replaced during a stack update, or when the stack is deleted. This removal
      *   policy also applies to the implicit security group created for the cluster if one is not
      *   supplied as a parameter.
+     *
+     * When set to `SNAPSHOT`, the removal policy for the instances and the security group will
+     * default to `DESTROY` as those resources do not support the policy.
+     *
+     * Use the `instanceRemovalPolicy` and `securityGroupRemovalPolicy` to change the behavior.
      */
     public fun removalPolicy(removalPolicy: RemovalPolicy) {
         cdkBuilder.removalPolicy(removalPolicy)
@@ -195,6 +208,14 @@ public class DatabaseClusterPropsDsl {
     /** @param securityGroup Security group. */
     public fun securityGroup(securityGroup: ISecurityGroup) {
         cdkBuilder.securityGroup(securityGroup)
+    }
+
+    /**
+     * @param securityGroupRemovalPolicy The removal policy to apply to the cluster's security
+     *   group. Cannot be set to `SNAPSHOT`.
+     */
+    public fun securityGroupRemovalPolicy(securityGroupRemovalPolicy: RemovalPolicy) {
+        cdkBuilder.securityGroupRemovalPolicy(securityGroupRemovalPolicy)
     }
 
     /** @param storageEncrypted Whether to enable storage encryption. */

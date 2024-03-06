@@ -19,7 +19,7 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
 
 /**
- * Specifies the creation parameters for a Kinesis Data Analytics application.
+ * Specifies the creation parameters for a Managed Service for Apache Flink application.
  *
  * Example:
  * ```
@@ -165,16 +165,16 @@ public class CfnApplicationApplicationConfigurationPropertyDsl {
     private val _vpcConfigurations: MutableList<Any> = mutableListOf()
 
     /**
-     * @param applicationCodeConfiguration The code location and type parameters for a Flink-based
-     *   Kinesis Data Analytics application.
+     * @param applicationCodeConfiguration The code location and type parameters for a Managed
+     *   Service for Apache Flink application.
      */
     public fun applicationCodeConfiguration(applicationCodeConfiguration: IResolvable) {
         cdkBuilder.applicationCodeConfiguration(applicationCodeConfiguration)
     }
 
     /**
-     * @param applicationCodeConfiguration The code location and type parameters for a Flink-based
-     *   Kinesis Data Analytics application.
+     * @param applicationCodeConfiguration The code location and type parameters for a Managed
+     *   Service for Apache Flink application.
      */
     public fun applicationCodeConfiguration(
         applicationCodeConfiguration: CfnApplication.ApplicationCodeConfigurationProperty
@@ -183,16 +183,16 @@ public class CfnApplicationApplicationConfigurationPropertyDsl {
     }
 
     /**
-     * @param applicationSnapshotConfiguration Describes whether snapshots are enabled for a
-     *   Flink-based Kinesis Data Analytics application.
+     * @param applicationSnapshotConfiguration Describes whether snapshots are enabled for a Managed
+     *   Service for Apache Flink application.
      */
     public fun applicationSnapshotConfiguration(applicationSnapshotConfiguration: IResolvable) {
         cdkBuilder.applicationSnapshotConfiguration(applicationSnapshotConfiguration)
     }
 
     /**
-     * @param applicationSnapshotConfiguration Describes whether snapshots are enabled for a
-     *   Flink-based Kinesis Data Analytics application.
+     * @param applicationSnapshotConfiguration Describes whether snapshots are enabled for a Managed
+     *   Service for Apache Flink application.
      */
     public fun applicationSnapshotConfiguration(
         applicationSnapshotConfiguration: CfnApplication.ApplicationSnapshotConfigurationProperty
@@ -201,16 +201,16 @@ public class CfnApplicationApplicationConfigurationPropertyDsl {
     }
 
     /**
-     * @param environmentProperties Describes execution properties for a Flink-based Kinesis Data
-     *   Analytics application.
+     * @param environmentProperties Describes execution properties for a Managed Service for Apache
+     *   Flink application.
      */
     public fun environmentProperties(environmentProperties: IResolvable) {
         cdkBuilder.environmentProperties(environmentProperties)
     }
 
     /**
-     * @param environmentProperties Describes execution properties for a Flink-based Kinesis Data
-     *   Analytics application.
+     * @param environmentProperties Describes execution properties for a Managed Service for Apache
+     *   Flink application.
      */
     public fun environmentProperties(
         environmentProperties: CfnApplication.EnvironmentPropertiesProperty
@@ -219,16 +219,16 @@ public class CfnApplicationApplicationConfigurationPropertyDsl {
     }
 
     /**
-     * @param flinkApplicationConfiguration The creation and update parameters for a Flink-based
-     *   Kinesis Data Analytics application.
+     * @param flinkApplicationConfiguration The creation and update parameters for a Managed Service
+     *   for Apache Flink application.
      */
     public fun flinkApplicationConfiguration(flinkApplicationConfiguration: IResolvable) {
         cdkBuilder.flinkApplicationConfiguration(flinkApplicationConfiguration)
     }
 
     /**
-     * @param flinkApplicationConfiguration The creation and update parameters for a Flink-based
-     *   Kinesis Data Analytics application.
+     * @param flinkApplicationConfiguration The creation and update parameters for a Managed Service
+     *   for Apache Flink application.
      */
     public fun flinkApplicationConfiguration(
         flinkApplicationConfiguration: CfnApplication.FlinkApplicationConfigurationProperty
@@ -237,16 +237,16 @@ public class CfnApplicationApplicationConfigurationPropertyDsl {
     }
 
     /**
-     * @param sqlApplicationConfiguration The creation and update parameters for a SQL-based Kinesis
-     *   Data Analytics application.
+     * @param sqlApplicationConfiguration The creation and update parameters for a SQL-based Managed
+     *   Service for Apache Flink application.
      */
     public fun sqlApplicationConfiguration(sqlApplicationConfiguration: IResolvable) {
         cdkBuilder.sqlApplicationConfiguration(sqlApplicationConfiguration)
     }
 
     /**
-     * @param sqlApplicationConfiguration The creation and update parameters for a SQL-based Kinesis
-     *   Data Analytics application.
+     * @param sqlApplicationConfiguration The creation and update parameters for a SQL-based Managed
+     *   Service for Apache Flink application.
      */
     public fun sqlApplicationConfiguration(
         sqlApplicationConfiguration: CfnApplication.SqlApplicationConfigurationProperty

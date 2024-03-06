@@ -172,6 +172,7 @@ public object billingconductor {
      * .billingGroupArn("billingGroupArn")
      * .name("name")
      * // the properties below are optional
+     * .accountId("accountId")
      * .billingPeriodRange(BillingPeriodRangeProperty.builder()
      * .exclusiveEndBillingPeriod("exclusiveEndBillingPeriod")
      * .inclusiveStartBillingPeriod("inclusiveStartBillingPeriod")
@@ -182,6 +183,11 @@ public object billingconductor {
      * .flat(CustomLineItemFlatChargeDetailsProperty.builder()
      * .chargeValue(123)
      * .build())
+     * .lineItemFilters(List.of(LineItemFilterProperty.builder()
+     * .attribute("attribute")
+     * .matchOption("matchOption")
+     * .values(List.of("values"))
+     * .build()))
      * .percentage(CustomLineItemPercentageChargeDetailsProperty.builder()
      * .percentageValue(123)
      * // the properties below are optional
@@ -249,6 +255,11 @@ public object billingconductor {
      * .flat(CustomLineItemFlatChargeDetailsProperty.builder()
      * .chargeValue(123)
      * .build())
+     * .lineItemFilters(List.of(LineItemFilterProperty.builder()
+     * .attribute("attribute")
+     * .matchOption("matchOption")
+     * .values(List.of("values"))
+     * .build()))
      * .percentage(CustomLineItemPercentageChargeDetailsProperty.builder()
      * .percentageValue(123)
      * // the properties below are optional
@@ -320,6 +331,35 @@ public object billingconductor {
     }
 
     /**
+     * A representation of the line item filter for your custom line item.
+     *
+     * You can use line item filters to include or exclude specific resource values from the billing
+     * group's total cost. For example, if you create a custom line item and you want to filter out
+     * a value, such as Savings Plan discounts, you can update `LineItemFilter` to exclude it.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.billingconductor.*;
+     * LineItemFilterProperty lineItemFilterProperty = LineItemFilterProperty.builder()
+     * .attribute("attribute")
+     * .matchOption("matchOption")
+     * .values(List.of("values"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-lineitemfilter.html)
+     */
+    public inline fun cfnCustomLineItemLineItemFilterProperty(
+        block: CfnCustomLineItemLineItemFilterPropertyDsl.() -> Unit = {}
+    ): CfnCustomLineItem.LineItemFilterProperty {
+        val builder = CfnCustomLineItemLineItemFilterPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Properties for defining a `CfnCustomLineItem`.
      *
      * Example:
@@ -331,6 +371,7 @@ public object billingconductor {
      * .billingGroupArn("billingGroupArn")
      * .name("name")
      * // the properties below are optional
+     * .accountId("accountId")
      * .billingPeriodRange(BillingPeriodRangeProperty.builder()
      * .exclusiveEndBillingPeriod("exclusiveEndBillingPeriod")
      * .inclusiveStartBillingPeriod("inclusiveStartBillingPeriod")
@@ -341,6 +382,11 @@ public object billingconductor {
      * .flat(CustomLineItemFlatChargeDetailsProperty.builder()
      * .chargeValue(123)
      * .build())
+     * .lineItemFilters(List.of(LineItemFilterProperty.builder()
+     * .attribute("attribute")
+     * .matchOption("matchOption")
+     * .values(List.of("values"))
+     * .build()))
      * .percentage(CustomLineItemPercentageChargeDetailsProperty.builder()
      * .percentageValue(123)
      * // the properties below are optional

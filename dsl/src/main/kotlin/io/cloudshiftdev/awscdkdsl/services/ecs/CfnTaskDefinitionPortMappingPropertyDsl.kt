@@ -64,6 +64,9 @@ public class CfnTaskDefinitionPortMappingPropertyDsl {
      * If you don't set a value for this parameter, then TCP is used. However, Amazon ECS doesn't
      * add protocol-specific telemetry for TCP.
      *
+     * `appProtocol` is immutable in a Service Connect service. Updating this field requires a
+     * service deletion and redeployment.
+     *
      * Tasks that run in a namespace can use short names to connect to services in the namespace.
      * Tasks can connect to services across all of the clusters in the namespace. Tasks connect
      * through a managed proxy container that collects logs and metrics for increased visibility.
@@ -102,8 +105,8 @@ public class CfnTaskDefinitionPortMappingPropertyDsl {
      *   least version 1.67.0-1 of the `ecs-init` package
      * * You can specify a maximum of 100 port ranges per container.
      * * You do not specify a `hostPortRange` . The value of the `hostPortRange` is set as follows:
-     * * For containers in a task with the `awsvpc` network mode, the `hostPort` is set to the same
-     *   value as the `containerPort` . This is a static mapping strategy.
+     * * For containers in a task with the `awsvpc` network mode, the `hostPortRange` is set to the
+     *   same value as the `containerPortRange` . This is a static mapping strategy.
      * * For containers in a task with the `bridge` network mode, the Amazon ECS agent finds open
      *   host ports from the default ephemeral range and passes it to docker to bind them to the
      *   container ports.
@@ -185,7 +188,8 @@ public class CfnTaskDefinitionPortMappingPropertyDsl {
 
     /**
      * @param protocol The protocol used for the port mapping. Valid values are `tcp` and `udp` .
-     *   The default is `tcp` .
+     *   The default is `tcp` . `protocol` is immutable in a Service Connect service. Updating this
+     *   field requires a service deletion and redeployment.
      */
     public fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)

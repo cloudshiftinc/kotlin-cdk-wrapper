@@ -94,6 +94,9 @@ public object codedeploy {
      * // whether to ignore failure to fetch the status of alarms from CloudWatch
      * // default: false
      * .ignorePollAlarmsFailure(false)
+     * // whether to skip the step of checking CloudWatch alarms during the deployment process
+     * // default: false
+     * .ignoreAlarmConfiguration(false)
      * // auto-rollback configuration
      * .autoRollback(AutoRollbackConfig.builder()
      * .failedDeployment(true) // default: true
@@ -275,8 +278,8 @@ public object codedeploy {
      * deployment success conditions, and deployment failure conditions that AWS CodeDeploy uses
      * during a deployment.
      *
-     * The deployment configuration specifies, through the use of a `MinimumHealthyHosts` value, the
-     * number or percentage of instances that must remain available at any time during a deployment.
+     * The deployment configuration specifies the number or percentage of instances that must remain
+     * available at any time during a deployment.
      *
      * Example:
      * ```
@@ -303,6 +306,14 @@ public object codedeploy {
      * .linearPercentage(123)
      * .build())
      * .build())
+     * .zonalConfig(ZonalConfigProperty.builder()
+     * .firstZoneMonitorDurationInSeconds(123)
+     * .minimumHealthyHostsPerZone(MinimumHealthyHostsPerZoneProperty.builder()
+     * .type("type")
+     * .value(123)
+     * .build())
+     * .monitorDurationInSeconds(123)
+     * .build())
      * .build();
      * ```
      *
@@ -314,6 +325,31 @@ public object codedeploy {
         block: CfnDeploymentConfigDsl.() -> Unit = {},
     ): CfnDeploymentConfig {
         val builder = CfnDeploymentConfigDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Information about the minimum number of healthy instances per Availability Zone.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.codedeploy.*;
+     * MinimumHealthyHostsPerZoneProperty minimumHealthyHostsPerZoneProperty =
+     * MinimumHealthyHostsPerZoneProperty.builder()
+     * .type("type")
+     * .value(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhostsperzone.html)
+     */
+    public inline fun cfnDeploymentConfigMinimumHealthyHostsPerZoneProperty(
+        block: CfnDeploymentConfigMinimumHealthyHostsPerZonePropertyDsl.() -> Unit = {}
+    ): CfnDeploymentConfig.MinimumHealthyHostsPerZoneProperty {
+        val builder = CfnDeploymentConfigMinimumHealthyHostsPerZonePropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -371,6 +407,14 @@ public object codedeploy {
      * .linearInterval(123)
      * .linearPercentage(123)
      * .build())
+     * .build())
+     * .zonalConfig(ZonalConfigProperty.builder()
+     * .firstZoneMonitorDurationInSeconds(123)
+     * .minimumHealthyHostsPerZone(MinimumHealthyHostsPerZoneProperty.builder()
+     * .type("type")
+     * .value(123)
+     * .build())
+     * .monitorDurationInSeconds(123)
      * .build())
      * .build();
      * ```
@@ -472,6 +516,44 @@ public object codedeploy {
         block: CfnDeploymentConfigTrafficRoutingConfigPropertyDsl.() -> Unit = {}
     ): CfnDeploymentConfig.TrafficRoutingConfigProperty {
         val builder = CfnDeploymentConfigTrafficRoutingConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Configure the `ZonalConfig` object if you want AWS CodeDeploy to deploy your application to
+     * one
+     * [Availability Zone](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-availability-zones)
+     * at a time, within an AWS Region. By deploying to one Availability Zone at a time, you can
+     * expose your deployment to a progressively larger audience as confidence in the deployment's
+     * performance and viability grows. If you don't configure the `ZonalConfig` object, CodeDeploy
+     * deploys your application to a random selection of hosts across a Region.
+     *
+     * For more information about the zonal configuration feature, see
+     * [zonal configuration](https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-configurations-create.html#zonal-config)
+     * in the *CodeDeploy User Guide* .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.codedeploy.*;
+     * ZonalConfigProperty zonalConfigProperty = ZonalConfigProperty.builder()
+     * .firstZoneMonitorDurationInSeconds(123)
+     * .minimumHealthyHostsPerZone(MinimumHealthyHostsPerZoneProperty.builder()
+     * .type("type")
+     * .value(123)
+     * .build())
+     * .monitorDurationInSeconds(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-zonalconfig.html)
+     */
+    public inline fun cfnDeploymentConfigZonalConfigProperty(
+        block: CfnDeploymentConfigZonalConfigPropertyDsl.() -> Unit = {}
+    ): CfnDeploymentConfig.ZonalConfigProperty {
+        val builder = CfnDeploymentConfigZonalConfigPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -608,6 +690,7 @@ public object codedeploy {
      * .key("key")
      * .value("value")
      * .build()))
+     * .terminationHookEnabled(false)
      * .triggerConfigurations(List.of(TriggerConfigProperty.builder()
      * .triggerEvents(List.of("triggerEvents"))
      * .triggerName("triggerName")
@@ -1346,6 +1429,7 @@ public object codedeploy {
      * .key("key")
      * .value("value")
      * .build()))
+     * .terminationHookEnabled(false)
      * .triggerConfigurations(List.of(TriggerConfigProperty.builder()
      * .triggerEvents(List.of("triggerEvents"))
      * .triggerName("triggerName")
@@ -1504,6 +1588,11 @@ public object codedeploy {
     }
 
     /**
+     * Information about two target groups and how traffic is routed during an Amazon ECS
+     * deployment.
+     *
+     * An optional test traffic route can be specified.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -1533,6 +1622,11 @@ public object codedeploy {
     }
 
     /**
+     * Information about a listener.
+     *
+     * The listener contains the path used to route traffic that is received from the load balancer
+     * to a target group.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -2188,14 +2282,14 @@ public object codedeploy {
      *
      * Example:
      * ```
-     * import software.amazon.awscdk.services.elasticloadbalancing.*;
-     * LoadBalancer lb;
-     * lb.addListener(LoadBalancerListener.builder()
-     * .externalPort(80)
-     * .build());
+     * ApplicationLoadBalancer alb;
+     * ApplicationListener listener = alb.addListener("Listener",
+     * BaseApplicationListenerProps.builder().port(80).build());
+     * ApplicationTargetGroup targetGroup = listener.addTargets("Fleet",
+     * AddApplicationTargetsProps.builder().port(80).build());
      * ServerDeploymentGroup deploymentGroup = ServerDeploymentGroup.Builder.create(this,
      * "DeploymentGroup")
-     * .loadBalancer(LoadBalancer.classic(lb))
+     * .loadBalancer(LoadBalancer.application(targetGroup))
      * .build();
      * ```
      */
@@ -2238,14 +2332,14 @@ public object codedeploy {
      *
      * Example:
      * ```
-     * import software.amazon.awscdk.services.elasticloadbalancing.*;
-     * LoadBalancer lb;
-     * lb.addListener(LoadBalancerListener.builder()
-     * .externalPort(80)
-     * .build());
+     * ApplicationLoadBalancer alb;
+     * ApplicationListener listener = alb.addListener("Listener",
+     * BaseApplicationListenerProps.builder().port(80).build());
+     * ApplicationTargetGroup targetGroup = listener.addTargets("Fleet",
+     * AddApplicationTargetsProps.builder().port(80).build());
      * ServerDeploymentGroup deploymentGroup = ServerDeploymentGroup.Builder.create(this,
      * "DeploymentGroup")
-     * .loadBalancer(LoadBalancer.classic(lb))
+     * .loadBalancer(LoadBalancer.application(targetGroup))
      * .build();
      * ```
      */

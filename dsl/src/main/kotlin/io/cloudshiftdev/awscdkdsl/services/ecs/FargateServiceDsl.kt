@@ -32,7 +32,9 @@ import software.amazon.awscdk.services.ecs.FargateService
 import software.amazon.awscdk.services.ecs.ICluster
 import software.amazon.awscdk.services.ecs.PropagatedTagSource
 import software.amazon.awscdk.services.ecs.ServiceConnectProps
+import software.amazon.awscdk.services.ecs.ServiceManagedVolume
 import software.amazon.awscdk.services.ecs.TaskDefinition
+import software.amazon.awscdk.services.ecs.TaskDefinitionRevision
 import software.constructs.Construct
 
 /**
@@ -75,6 +77,8 @@ public class FargateServiceDsl(
     private val _capacityProviderStrategies: MutableList<CapacityProviderStrategy> = mutableListOf()
 
     private val _securityGroups: MutableList<ISecurityGroup> = mutableListOf()
+
+    private val _volumeConfigurations: MutableList<ServiceManagedVolume> = mutableListOf()
 
     /**
      * Specifies whether the task's elastic network interface receives a public IP address.
@@ -431,6 +435,44 @@ public class FargateServiceDsl(
     }
 
     /**
+     * Revision number for the task definition or `latest` to use the latest active task revision.
+     *
+     * Default: - Uses the revision of the passed task definition deployed by CloudFormation
+     *
+     * @param taskDefinitionRevision Revision number for the task definition or `latest` to use the
+     *   latest active task revision.
+     */
+    public fun taskDefinitionRevision(taskDefinitionRevision: TaskDefinitionRevision) {
+        cdkBuilder.taskDefinitionRevision(taskDefinitionRevision)
+    }
+
+    /**
+     * Configuration details for a volume used by the service.
+     *
+     * This allows you to specify details about the EBS volume that can be attched to ECS tasks.
+     *
+     * Default: - undefined
+     *
+     * @param volumeConfigurations Configuration details for a volume used by the service.
+     */
+    public fun volumeConfigurations(vararg volumeConfigurations: ServiceManagedVolume) {
+        _volumeConfigurations.addAll(listOf(*volumeConfigurations))
+    }
+
+    /**
+     * Configuration details for a volume used by the service.
+     *
+     * This allows you to specify details about the EBS volume that can be attched to ECS tasks.
+     *
+     * Default: - undefined
+     *
+     * @param volumeConfigurations Configuration details for a volume used by the service.
+     */
+    public fun volumeConfigurations(volumeConfigurations: Collection<ServiceManagedVolume>) {
+        _volumeConfigurations.addAll(volumeConfigurations)
+    }
+
+    /**
      * The subnets to associate with the service.
      *
      * Default: - Public subnets if `assignPublicIp` is set, otherwise the first available one of
@@ -460,6 +502,8 @@ public class FargateServiceDsl(
         if (_capacityProviderStrategies.isNotEmpty())
             cdkBuilder.capacityProviderStrategies(_capacityProviderStrategies)
         if (_securityGroups.isNotEmpty()) cdkBuilder.securityGroups(_securityGroups)
+        if (_volumeConfigurations.isNotEmpty())
+            cdkBuilder.volumeConfigurations(_volumeConfigurations)
         return cdkBuilder.build()
     }
 }

@@ -61,12 +61,18 @@ public class CfnFlowCustomConnectorSourcePropertiesPropertyDsl {
         cdkBuilder.customProperties(customProperties)
     }
 
-    /** @param dataTransferApi the value to be set. */
+    /**
+     * @param dataTransferApi The API of the connector application that Amazon AppFlow uses to
+     *   transfer your data.
+     */
     public fun dataTransferApi(dataTransferApi: IResolvable) {
         cdkBuilder.dataTransferApi(dataTransferApi)
     }
 
-    /** @param dataTransferApi the value to be set. */
+    /**
+     * @param dataTransferApi The API of the connector application that Amazon AppFlow uses to
+     *   transfer your data.
+     */
     public fun dataTransferApi(dataTransferApi: CfnFlow.DataTransferApiProperty) {
         cdkBuilder.dataTransferApi(dataTransferApi)
     }

@@ -38,6 +38,7 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * .vbrQuality("vbrQuality")
  * .build())
  * .ac3Settings(Ac3SettingsProperty.builder()
+ * .attenuationControl("attenuationControl")
  * .bitrate(123)
  * .bitstreamMode("bitstreamMode")
  * .codingMode("codingMode")

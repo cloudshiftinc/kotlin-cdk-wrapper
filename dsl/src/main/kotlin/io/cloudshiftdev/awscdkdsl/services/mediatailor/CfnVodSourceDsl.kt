@@ -24,7 +24,7 @@ import software.amazon.awscdk.services.mediatailor.CfnVodSource
 import software.constructs.Construct
 
 /**
- * Definition of AWS::MediaTailor::VodSource Resource Type.
+ * The VOD source configuration parameters.
  *
  * Example:
  * ```
@@ -61,76 +61,88 @@ public class CfnVodSourceDsl(
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
-     * A list of HTTP package configuration parameters for this VOD source.</p>.
+     * The HTTP package configurations for the VOD source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-vodsource.html#cfn-mediatailor-vodsource-httppackageconfigurations)
      *
-     * @param httpPackageConfigurations A list of HTTP package configuration parameters for this VOD
-     *   source.</p>.
+     * @param httpPackageConfigurations The HTTP package configurations for the VOD source.
      */
     public fun httpPackageConfigurations(vararg httpPackageConfigurations: Any) {
         _httpPackageConfigurations.addAll(listOf(*httpPackageConfigurations))
     }
 
     /**
-     * A list of HTTP package configuration parameters for this VOD source.</p>.
+     * The HTTP package configurations for the VOD source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-vodsource.html#cfn-mediatailor-vodsource-httppackageconfigurations)
      *
-     * @param httpPackageConfigurations A list of HTTP package configuration parameters for this VOD
-     *   source.</p>.
+     * @param httpPackageConfigurations The HTTP package configurations for the VOD source.
      */
     public fun httpPackageConfigurations(httpPackageConfigurations: Collection<Any>) {
         _httpPackageConfigurations.addAll(httpPackageConfigurations)
     }
 
     /**
-     * A list of HTTP package configuration parameters for this VOD source.</p>.
+     * The HTTP package configurations for the VOD source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-vodsource.html#cfn-mediatailor-vodsource-httppackageconfigurations)
      *
-     * @param httpPackageConfigurations A list of HTTP package configuration parameters for this VOD
-     *   source.</p>.
+     * @param httpPackageConfigurations The HTTP package configurations for the VOD source.
      */
     public fun httpPackageConfigurations(httpPackageConfigurations: IResolvable) {
         cdkBuilder.httpPackageConfigurations(httpPackageConfigurations)
     }
 
     /**
+     * The name of the source location that the VOD source is associated with.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-vodsource.html#cfn-mediatailor-vodsource-sourcelocationname)
      *
-     * @param sourceLocationName
+     * @param sourceLocationName The name of the source location that the VOD source is associated
+     *   with.
      */
     public fun sourceLocationName(sourceLocationName: String) {
         cdkBuilder.sourceLocationName(sourceLocationName)
     }
 
     /**
-     * The tags to assign to the VOD source.
+     * The tags assigned to the VOD source.
+     *
+     * Tags are key-value pairs that you can associate with Amazon resources to help with
+     * organization, access control, and cost tracking. For more information, see
+     * [Tagging AWS Elemental MediaTailor Resources](https://docs.aws.amazon.com/mediatailor/latest/ug/tagging.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-vodsource.html#cfn-mediatailor-vodsource-tags)
      *
-     * @param tags The tags to assign to the VOD source.
+     * @param tags The tags assigned to the VOD source.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
     /**
-     * The tags to assign to the VOD source.
+     * The tags assigned to the VOD source.
+     *
+     * Tags are key-value pairs that you can associate with Amazon resources to help with
+     * organization, access control, and cost tracking. For more information, see
+     * [Tagging AWS Elemental MediaTailor Resources](https://docs.aws.amazon.com/mediatailor/latest/ug/tagging.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-vodsource.html#cfn-mediatailor-vodsource-tags)
      *
-     * @param tags The tags to assign to the VOD source.
+     * @param tags The tags assigned to the VOD source.
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
     }
 
     /**
+     * The name of the VOD source.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-vodsource.html#cfn-mediatailor-vodsource-vodsourcename)
      *
-     * @param vodSourceName
+     * @param vodSourceName The name of the VOD source.
      */
     public fun vodSourceName(vodSourceName: String) {
         cdkBuilder.vodSourceName(vodSourceName)

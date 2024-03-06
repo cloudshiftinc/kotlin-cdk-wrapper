@@ -90,6 +90,15 @@ public class CfnOutputDsl(
     }
 
     /**
+     * The key of the property returned by aws cloudformation describe-stacks command.
+     *
+     * @param key The key of the property returned by aws cloudformation describe-stacks command.
+     */
+    public fun key(key: String) {
+        cdkBuilder.key(key)
+    }
+
+    /**
      * The value of the property returned by the aws cloudformation describe-stacks command.
      *
      * The value of an output can include literals, parameter references, pseudo-parameters, a

@@ -78,7 +78,9 @@ import software.constructs.Construct
  * .toPort(123)
  * .build()))
  * // the properties below are optional
- * .monthlyTransfer(123)
+ * .monthlyTransfer(MonthlyTransferProperty.builder()
+ * .gbPerMonthAllocated("gbPerMonthAllocated")
+ * .build())
  * .build())
  * .state(StateProperty.builder()
  * .code(123)

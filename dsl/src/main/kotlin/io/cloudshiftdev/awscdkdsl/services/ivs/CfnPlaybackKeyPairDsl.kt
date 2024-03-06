@@ -26,8 +26,8 @@ import software.constructs.Construct
  *
  * uses a public playback key to validate playback tokens that have been signed with the
  * corresponding private key. For more information, see
- * [Setting Up Private Channels](https://docs.aws.amazon.com/ivs/latest/userguide/private-channels.html)
- * in the *Amazon Interactive Video Service User Guide* .
+ * [Setting Up Private Channels](https://docs.aws.amazon.com/ivs/latest/LowLatencyUserGuide/private-channels.html)
+ * in the *Amazon IVS Low-Latency Streaming User Guide* .
  *
  * Example:
  * ```
@@ -85,7 +85,7 @@ public class CfnPlaybackKeyPairDsl(
      * An array of key-value pairs to apply to this resource.
      *
      * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-playbackkeypair-tag.html)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-playbackkeypair.html#cfn-ivs-playbackkeypair-tags)
@@ -100,7 +100,7 @@ public class CfnPlaybackKeyPairDsl(
      * An array of key-value pairs to apply to this resource.
      *
      * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-playbackkeypair-tag.html)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-playbackkeypair.html#cfn-ivs-playbackkeypair-tags)

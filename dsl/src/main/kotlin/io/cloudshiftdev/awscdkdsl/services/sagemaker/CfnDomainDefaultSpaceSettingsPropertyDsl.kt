@@ -19,7 +19,7 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnDomain
 
 /**
- * A collection of settings that apply to spaces created in the Domain.
+ * A collection of settings that apply to spaces created in the domain.
  *
  * Example:
  * ```
@@ -95,16 +95,16 @@ public class CfnDomainDefaultSpaceSettingsPropertyDsl {
     }
 
     /**
-     * @param securityGroups The security group IDs for the Amazon Virtual Private Cloud that the
-     *   space uses for communication.
+     * @param securityGroups The security group IDs for the Amazon VPC that the space uses for
+     *   communication.
      */
     public fun securityGroups(vararg securityGroups: String) {
         _securityGroups.addAll(listOf(*securityGroups))
     }
 
     /**
-     * @param securityGroups The security group IDs for the Amazon Virtual Private Cloud that the
-     *   space uses for communication.
+     * @param securityGroups The security group IDs for the Amazon VPC that the space uses for
+     *   communication.
      */
     public fun securityGroups(securityGroups: Collection<String>) {
         _securityGroups.addAll(securityGroups)

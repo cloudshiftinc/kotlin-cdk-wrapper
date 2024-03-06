@@ -67,9 +67,8 @@ public class CfnMissionProfilePropsDsl {
 
     /**
      * @param contactPostPassDurationSeconds Amount of time in seconds after a contact ends that
-     *   you’d like to receive a CloudWatch Event indicating the pass has finished. For more
-     *   information on CloudWatch Events, see the
-     *   [What Is CloudWatch Events?](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/WhatIsCloudWatchEvents.html)
+     *   you’d like to receive a Ground Station Contact State Change indicating the pass has
+     *   finished.
      */
     public fun contactPostPassDurationSeconds(contactPostPassDurationSeconds: Number) {
         cdkBuilder.contactPostPassDurationSeconds(contactPostPassDurationSeconds)
@@ -77,9 +76,8 @@ public class CfnMissionProfilePropsDsl {
 
     /**
      * @param contactPrePassDurationSeconds Amount of time in seconds prior to contact start that
-     *   you'd like to receive a CloudWatch Event indicating an upcoming pass. For more information
-     *   on CloudWatch Events, see the
-     *   [What Is CloudWatch Events?](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/WhatIsCloudWatchEvents.html)
+     *   you'd like to receive a Ground Station Contact State Change Event indicating an upcoming
+     *   pass.
      */
     public fun contactPrePassDurationSeconds(contactPrePassDurationSeconds: Number) {
         cdkBuilder.contactPrePassDurationSeconds(contactPrePassDurationSeconds)

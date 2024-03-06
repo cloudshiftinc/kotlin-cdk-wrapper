@@ -122,16 +122,16 @@ public class CfnComponentTypePropertyDefinitionPropertyDsl {
     }
 
     /**
-     * @param isExternalId A boolean value that specifies whether the property ID comes from an
-     *   external data store.
+     * @param isExternalId A Boolean value that specifies whether the property ID comes from an
+     *   external data source.
      */
     public fun isExternalId(isExternalId: Boolean) {
         cdkBuilder.isExternalId(isExternalId)
     }
 
     /**
-     * @param isExternalId A boolean value that specifies whether the property ID comes from an
-     *   external data store.
+     * @param isExternalId A Boolean value that specifies whether the property ID comes from an
+     *   external data source.
      */
     public fun isExternalId(isExternalId: IResolvable) {
         cdkBuilder.isExternalId(isExternalId)

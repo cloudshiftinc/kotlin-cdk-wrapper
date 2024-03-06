@@ -36,11 +36,11 @@ import software.constructs.Construct
  * import software.amazon.awscdk.services.guardduty.*;
  * CfnThreatIntelSet cfnThreatIntelSet = CfnThreatIntelSet.Builder.create(this,
  * "MyCfnThreatIntelSet")
- * .activate(false)
- * .detectorId("detectorId")
  * .format("format")
  * .location("location")
  * // the properties below are optional
+ * .activate(false)
+ * .detectorId("detectorId")
  * .name("name")
  * .tags(List.of(CfnTag.builder()
  * .key("key")

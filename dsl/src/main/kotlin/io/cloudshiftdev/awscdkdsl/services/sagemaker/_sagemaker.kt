@@ -37,6 +37,8 @@ import software.amazon.awscdk.services.sagemaker.CfnImage
 import software.amazon.awscdk.services.sagemaker.CfnImageProps
 import software.amazon.awscdk.services.sagemaker.CfnImageVersion
 import software.amazon.awscdk.services.sagemaker.CfnImageVersionProps
+import software.amazon.awscdk.services.sagemaker.CfnInferenceComponent
+import software.amazon.awscdk.services.sagemaker.CfnInferenceComponentProps
 import software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment
 import software.amazon.awscdk.services.sagemaker.CfnInferenceExperimentProps
 import software.amazon.awscdk.services.sagemaker.CfnModel
@@ -75,9 +77,9 @@ public object sagemaker {
     /**
      * Creates a running app for the specified UserProfile.
      *
-     * This operation is automatically invoked by Amazon SageMaker Studio upon access to the
-     * associated Domain, and when new kernel configurations are selected by the user. A user may
-     * have multiple Apps active simultaneously.
+     * This operation is automatically invoked by Amazon SageMaker upon access to the associated
+     * Domain, and when new kernel configurations are selected by the user. A user may have multiple
+     * Apps active simultaneously.
      *
      * Example:
      * ```
@@ -117,8 +119,8 @@ public object sagemaker {
     /**
      * Creates a configuration for running a SageMaker image as a KernelGateway app.
      *
-     * The configuration specifies the Amazon Elastic File System (EFS) storage volume on the image,
-     * and a list of the kernels in the image.
+     * The configuration specifies the Amazon Elastic File System storage volume on the image, and a
+     * list of the kernels in the image.
      *
      * Example:
      * ```
@@ -129,6 +131,16 @@ public object sagemaker {
      * "MyCfnAppImageConfig")
      * .appImageConfigName("appImageConfigName")
      * // the properties below are optional
+     * .jupyterLabAppImageConfig(JupyterLabAppImageConfigProperty.builder()
+     * .containerConfig(ContainerConfigProperty.builder()
+     * .containerArguments(List.of("containerArguments"))
+     * .containerEntrypoint(List.of("containerEntrypoint"))
+     * .containerEnvironmentVariables(List.of(CustomImageContainerEnvironmentVariableProperty.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build())
+     * .build())
      * .kernelGatewayImageConfig(KernelGatewayImageConfigProperty.builder()
      * .kernelSpecs(List.of(KernelSpecProperty.builder()
      * .name("name")
@@ -162,7 +174,60 @@ public object sagemaker {
     }
 
     /**
-     * The Amazon Elastic File System (EFS) storage configuration for a SageMaker image.
+     * The configuration used to run the application image container.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * ContainerConfigProperty containerConfigProperty = ContainerConfigProperty.builder()
+     * .containerArguments(List.of("containerArguments"))
+     * .containerEntrypoint(List.of("containerEntrypoint"))
+     * .containerEnvironmentVariables(List.of(CustomImageContainerEnvironmentVariableProperty.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-containerconfig.html)
+     */
+    public inline fun cfnAppImageConfigContainerConfigProperty(
+        block: CfnAppImageConfigContainerConfigPropertyDsl.() -> Unit = {}
+    ): CfnAppImageConfig.ContainerConfigProperty {
+        val builder = CfnAppImageConfigContainerConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The environment variables to set in the container.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * CustomImageContainerEnvironmentVariableProperty customImageContainerEnvironmentVariableProperty
+     * = CustomImageContainerEnvironmentVariableProperty.builder()
+     * .key("key")
+     * .value("value")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-customimagecontainerenvironmentvariable.html)
+     */
+    public inline fun cfnAppImageConfigCustomImageContainerEnvironmentVariableProperty(
+        block: CfnAppImageConfigCustomImageContainerEnvironmentVariablePropertyDsl.() -> Unit = {}
+    ): CfnAppImageConfig.CustomImageContainerEnvironmentVariableProperty {
+        val builder = CfnAppImageConfigCustomImageContainerEnvironmentVariablePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The Amazon Elastic File System storage configuration for a SageMaker image.
      *
      * Example:
      * ```
@@ -182,6 +247,38 @@ public object sagemaker {
         block: CfnAppImageConfigFileSystemConfigPropertyDsl.() -> Unit = {}
     ): CfnAppImageConfig.FileSystemConfigProperty {
         val builder = CfnAppImageConfigFileSystemConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The configuration for the file system and kernels in a SageMaker image running as a
+     * JupyterLab app.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * JupyterLabAppImageConfigProperty jupyterLabAppImageConfigProperty =
+     * JupyterLabAppImageConfigProperty.builder()
+     * .containerConfig(ContainerConfigProperty.builder()
+     * .containerArguments(List.of("containerArguments"))
+     * .containerEntrypoint(List.of("containerEntrypoint"))
+     * .containerEnvironmentVariables(List.of(CustomImageContainerEnvironmentVariableProperty.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-jupyterlabappimageconfig.html)
+     */
+    public inline fun cfnAppImageConfigJupyterLabAppImageConfigProperty(
+        block: CfnAppImageConfigJupyterLabAppImageConfigPropertyDsl.() -> Unit = {}
+    ): CfnAppImageConfig.JupyterLabAppImageConfigProperty {
+        val builder = CfnAppImageConfigJupyterLabAppImageConfigPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -257,6 +354,16 @@ public object sagemaker {
      * CfnAppImageConfigProps cfnAppImageConfigProps = CfnAppImageConfigProps.builder()
      * .appImageConfigName("appImageConfigName")
      * // the properties below are optional
+     * .jupyterLabAppImageConfig(JupyterLabAppImageConfigProperty.builder()
+     * .containerConfig(ContainerConfigProperty.builder()
+     * .containerArguments(List.of("containerArguments"))
+     * .containerEntrypoint(List.of("containerEntrypoint"))
+     * .containerEnvironmentVariables(List.of(CustomImageContainerEnvironmentVariableProperty.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build())
+     * .build())
      * .kernelGatewayImageConfig(KernelGatewayImageConfigProperty.builder()
      * .kernelSpecs(List.of(KernelSpecProperty.builder()
      * .name("name")
@@ -491,6 +598,7 @@ public object sagemaker {
      * .build())
      * .localPath("localPath")
      * // the properties below are optional
+     * .excludeFeaturesAttribute("excludeFeaturesAttribute")
      * .s3DataDistributionType("s3DataDistributionType")
      * .s3InputMode("s3InputMode")
      * .build())
@@ -498,6 +606,7 @@ public object sagemaker {
      * .endpointName("endpointName")
      * .localPath("localPath")
      * // the properties below are optional
+     * .excludeFeaturesAttribute("excludeFeaturesAttribute")
      * .s3DataDistributionType("s3DataDistributionType")
      * .s3InputMode("s3InputMode")
      * .build())
@@ -567,7 +676,7 @@ public object sagemaker {
     }
 
     /**
-     * The batch transform input for a monitoring job.
+     * Input object for the batch transform job.
      *
      * Example:
      * ```
@@ -587,6 +696,7 @@ public object sagemaker {
      * .build())
      * .localPath("localPath")
      * // the properties below are optional
+     * .excludeFeaturesAttribute("excludeFeaturesAttribute")
      * .s3DataDistributionType("s3DataDistributionType")
      * .s3InputMode("s3InputMode")
      * .build();
@@ -763,6 +873,7 @@ public object sagemaker {
      * .build())
      * .localPath("localPath")
      * // the properties below are optional
+     * .excludeFeaturesAttribute("excludeFeaturesAttribute")
      * .s3DataDistributionType("s3DataDistributionType")
      * .s3InputMode("s3InputMode")
      * .build())
@@ -770,6 +881,7 @@ public object sagemaker {
      * .endpointName("endpointName")
      * .localPath("localPath")
      * // the properties below are optional
+     * .excludeFeaturesAttribute("excludeFeaturesAttribute")
      * .s3DataDistributionType("s3DataDistributionType")
      * .s3InputMode("s3InputMode")
      * .build())
@@ -827,6 +939,7 @@ public object sagemaker {
      * .endpointName("endpointName")
      * .localPath("localPath")
      * // the properties below are optional
+     * .excludeFeaturesAttribute("excludeFeaturesAttribute")
      * .s3DataDistributionType("s3DataDistributionType")
      * .s3InputMode("s3InputMode")
      * .build();
@@ -1019,6 +1132,7 @@ public object sagemaker {
      * .build())
      * .localPath("localPath")
      * // the properties below are optional
+     * .excludeFeaturesAttribute("excludeFeaturesAttribute")
      * .s3DataDistributionType("s3DataDistributionType")
      * .s3InputMode("s3InputMode")
      * .build())
@@ -1026,6 +1140,7 @@ public object sagemaker {
      * .endpointName("endpointName")
      * .localPath("localPath")
      * // the properties below are optional
+     * .excludeFeaturesAttribute("excludeFeaturesAttribute")
      * .s3DataDistributionType("s3DataDistributionType")
      * .s3InputMode("s3InputMode")
      * .build())
@@ -1183,13 +1298,12 @@ public object sagemaker {
     }
 
     /**
-     * Specifies a VPC that your training jobs and hosted models have access to.
+     * Specifies an Amazon Virtual Private Cloud (VPC) that your SageMaker jobs, hosted models, and
+     * compute resources have access to.
      *
-     * Control access to and from your training and model containers by configuring the VPC. For
-     * more information, see
-     * [Protect Endpoints by Using an Amazon Virtual Private Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/host-vpc.html)
-     * and
-     * [Protect Training Jobs by Using an Amazon Virtual Private Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html)
+     * You can control access to and from your resources by configuring a VPC. For more information,
+     * see
+     * [Give SageMaker Access to Resources in your Amazon VPC](https://docs.aws.amazon.com/sagemaker/latest/dg/infrastructure-give-access.html)
      * .
      *
      * Example:
@@ -1411,12 +1525,12 @@ public object sagemaker {
     }
 
     /**
-     * Creates a `Domain` used by Amazon SageMaker Studio.
+     * Creates a `Domain` .
      *
-     * A domain consists of an associated Amazon Elastic File System (EFS) volume, a list of
-     * authorized users, and a variety of security, application, policy, and Amazon Virtual Private
-     * Cloud (VPC) configurations. Users within a domain can share notebook files and other
-     * artifacts with each other.
+     * A domain consists of an associated Amazon Elastic File System volume, a list of authorized
+     * users, and a variety of security, application, policy, and Amazon Virtual Private Cloud (VPC)
+     * configurations. Users within a domain can share notebook files and other artifacts with each
+     * other.
      *
      * *EFS storage*
      *
@@ -1432,24 +1546,24 @@ public object sagemaker {
      *
      * *VPC configuration*
      *
-     * All SageMaker Studio traffic between the domain and the EFS volume is through the specified
-     * VPC and subnets. For other Studio traffic, you can specify the `AppNetworkAccessType`
-     * parameter. `AppNetworkAccessType` corresponds to the network access type that you choose when
-     * you onboard to Studio. The following options are available:
+     * All traffic between the domain and the Amazon EFS volume is through the specified VPC and
+     * subnets. For other traffic, you can specify the `AppNetworkAccessType` parameter.
+     * `AppNetworkAccessType` corresponds to the network access type that you choose when you
+     * onboard to the domain. The following options are available:
      * * `PublicInternetOnly` - Non-EFS traffic goes through a VPC managed by Amazon SageMaker,
      *   which allows internet access. This is the default value.
-     * * `VpcOnly` - All Studio traffic is through the specified VPC and subnets. Internet access is
+     * * `VpcOnly` - All traffic is through the specified VPC and subnets. Internet access is
      *   disabled by default. To allow internet access, you must specify a NAT gateway.
      *
-     * When internet access is disabled, you won't be able to run a Studio notebook or to train or
-     * host models unless your VPC has an interface endpoint to the SageMaker API and runtime or a
-     * NAT gateway and your security groups allow outbound connections.
+     * When internet access is disabled, you won't be able to run a Amazon SageMaker Studio notebook
+     * or to train or host models unless your VPC has an interface endpoint to the SageMaker API and
+     * runtime or a NAT gateway and your security groups allow outbound connections.
      *
      * NFS traffic over TCP on port 2049 needs to be allowed in both inbound and outbound rules in
-     * order to launch a SageMaker Studio app successfully.
+     * order to launch a Amazon SageMaker Studio app successfully.
      *
      * For more information, see
-     * [Connect SageMaker Studio Notebooks to Resources in a VPC](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-notebooks-and-internet-access.html)
+     * [Connect Amazon SageMaker Studio Notebooks to Resources in a VPC](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-notebooks-and-internet-access.html)
      * .
      *
      * Example:
@@ -1462,6 +1576,45 @@ public object sagemaker {
      * .defaultUserSettings(UserSettingsProperty.builder()
      * .executionRole("executionRole")
      * // the properties below are optional
+     * .codeEditorAppSettings(CodeEditorAppSettingsProperty.builder()
+     * .defaultResourceSpec(ResourceSpecProperty.builder()
+     * .instanceType("instanceType")
+     * .lifecycleConfigArn("lifecycleConfigArn")
+     * .sageMakerImageArn("sageMakerImageArn")
+     * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+     * .build())
+     * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
+     * .build())
+     * .customFileSystemConfigs(List.of(CustomFileSystemConfigProperty.builder()
+     * .efsFileSystemConfig(EFSFileSystemConfigProperty.builder()
+     * .fileSystemId("fileSystemId")
+     * // the properties below are optional
+     * .fileSystemPath("fileSystemPath")
+     * .build())
+     * .build()))
+     * .customPosixUserConfig(CustomPosixUserConfigProperty.builder()
+     * .gid(123)
+     * .uid(123)
+     * .build())
+     * .defaultLandingUri("defaultLandingUri")
+     * .jupyterLabAppSettings(JupyterLabAppSettingsProperty.builder()
+     * .codeRepositories(List.of(CodeRepositoryProperty.builder()
+     * .repositoryUrl("repositoryUrl")
+     * .build()))
+     * .customImages(List.of(CustomImageProperty.builder()
+     * .appImageConfigName("appImageConfigName")
+     * .imageName("imageName")
+     * // the properties below are optional
+     * .imageVersionNumber(123)
+     * .build()))
+     * .defaultResourceSpec(ResourceSpecProperty.builder()
+     * .instanceType("instanceType")
+     * .lifecycleConfigArn("lifecycleConfigArn")
+     * .sageMakerImageArn("sageMakerImageArn")
+     * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+     * .build())
+     * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
+     * .build())
      * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
      * .defaultResourceSpec(ResourceSpecProperty.builder()
      * .instanceType("instanceType")
@@ -1508,6 +1661,13 @@ public object sagemaker {
      * .s3KmsKeyId("s3KmsKeyId")
      * .s3OutputPath("s3OutputPath")
      * .build())
+     * .spaceStorageSettings(DefaultSpaceStorageSettingsProperty.builder()
+     * .defaultEbsStorageSettings(DefaultEbsStorageSettingsProperty.builder()
+     * .defaultEbsVolumeSizeInGb(123)
+     * .maximumEbsVolumeSizeInGb(123)
+     * .build())
+     * .build())
+     * .studioWebPortal("studioWebPortal")
      * .build())
      * .domainName("domainName")
      * .subnetIds(List.of("subnetIds"))
@@ -1543,6 +1703,10 @@ public object sagemaker {
      * .securityGroups(List.of("securityGroups"))
      * .build())
      * .domainSettings(DomainSettingsProperty.builder()
+     * .dockerSettings(DockerSettingsProperty.builder()
+     * .enableDockerAccess("enableDockerAccess")
+     * .vpcOnlyTrustedAccounts(List.of("vpcOnlyTrustedAccounts"))
+     * .build())
      * .rStudioServerProDomainSettings(RStudioServerProDomainSettingsProperty.builder()
      * .domainExecutionRoleArn("domainExecutionRoleArn")
      * // the properties below are optional
@@ -1578,6 +1742,95 @@ public object sagemaker {
     }
 
     /**
+     * The Code Editor application settings.
+     *
+     * For more information about Code Editor, see
+     * [Get started with Code Editor in Amazon SageMaker](https://docs.aws.amazon.com/sagemaker/latest/dg/code-editor.html)
+     * .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * CodeEditorAppSettingsProperty codeEditorAppSettingsProperty =
+     * CodeEditorAppSettingsProperty.builder()
+     * .defaultResourceSpec(ResourceSpecProperty.builder()
+     * .instanceType("instanceType")
+     * .lifecycleConfigArn("lifecycleConfigArn")
+     * .sageMakerImageArn("sageMakerImageArn")
+     * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+     * .build())
+     * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-codeeditorappsettings.html)
+     */
+    public inline fun cfnDomainCodeEditorAppSettingsProperty(
+        block: CfnDomainCodeEditorAppSettingsPropertyDsl.() -> Unit = {}
+    ): CfnDomain.CodeEditorAppSettingsProperty {
+        val builder = CfnDomainCodeEditorAppSettingsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A Git repository that SageMaker automatically displays to users for cloning in the
+     * JupyterServer application.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * CodeRepositoryProperty codeRepositoryProperty = CodeRepositoryProperty.builder()
+     * .repositoryUrl("repositoryUrl")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-coderepository.html)
+     */
+    public inline fun cfnDomainCodeRepositoryProperty(
+        block: CfnDomainCodeRepositoryPropertyDsl.() -> Unit = {}
+    ): CfnDomain.CodeRepositoryProperty {
+        val builder = CfnDomainCodeRepositoryPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The settings for assigning a custom file system to a user profile or space for an Amazon
+     * SageMaker Domain.
+     *
+     * Permitted users can access this file system in Amazon SageMaker Studio.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * CustomFileSystemConfigProperty customFileSystemConfigProperty =
+     * CustomFileSystemConfigProperty.builder()
+     * .efsFileSystemConfig(EFSFileSystemConfigProperty.builder()
+     * .fileSystemId("fileSystemId")
+     * // the properties below are optional
+     * .fileSystemPath("fileSystemPath")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customfilesystemconfig.html)
+     */
+    public inline fun cfnDomainCustomFileSystemConfigProperty(
+        block: CfnDomainCustomFileSystemConfigPropertyDsl.() -> Unit = {}
+    ): CfnDomain.CustomFileSystemConfigProperty {
+        val builder = CfnDomainCustomFileSystemConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * A custom SageMaker image.
      *
      * For more information, see
@@ -1608,7 +1861,58 @@ public object sagemaker {
     }
 
     /**
-     * A collection of settings that apply to spaces created in the Domain.
+     * Details about the POSIX identity that is used for file system operations.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * CustomPosixUserConfigProperty customPosixUserConfigProperty =
+     * CustomPosixUserConfigProperty.builder()
+     * .gid(123)
+     * .uid(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customposixuserconfig.html)
+     */
+    public inline fun cfnDomainCustomPosixUserConfigProperty(
+        block: CfnDomainCustomPosixUserConfigPropertyDsl.() -> Unit = {}
+    ): CfnDomain.CustomPosixUserConfigProperty {
+        val builder = CfnDomainCustomPosixUserConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A collection of default EBS storage settings that applies to private spaces created within a
+     * domain or user profile.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * DefaultEbsStorageSettingsProperty defaultEbsStorageSettingsProperty =
+     * DefaultEbsStorageSettingsProperty.builder()
+     * .defaultEbsVolumeSizeInGb(123)
+     * .maximumEbsVolumeSizeInGb(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultebsstoragesettings.html)
+     */
+    public inline fun cfnDomainDefaultEbsStorageSettingsProperty(
+        block: CfnDomainDefaultEbsStorageSettingsPropertyDsl.() -> Unit = {}
+    ): CfnDomain.DefaultEbsStorageSettingsProperty {
+        val builder = CfnDomainDefaultEbsStorageSettingsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A collection of settings that apply to spaces created in the domain.
      *
      * Example:
      * ```
@@ -1656,6 +1960,57 @@ public object sagemaker {
     }
 
     /**
+     * The default storage settings for a private space.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * DefaultSpaceStorageSettingsProperty defaultSpaceStorageSettingsProperty =
+     * DefaultSpaceStorageSettingsProperty.builder()
+     * .defaultEbsStorageSettings(DefaultEbsStorageSettingsProperty.builder()
+     * .defaultEbsVolumeSizeInGb(123)
+     * .maximumEbsVolumeSizeInGb(123)
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultspacestoragesettings.html)
+     */
+    public inline fun cfnDomainDefaultSpaceStorageSettingsProperty(
+        block: CfnDomainDefaultSpaceStorageSettingsPropertyDsl.() -> Unit = {}
+    ): CfnDomain.DefaultSpaceStorageSettingsProperty {
+        val builder = CfnDomainDefaultSpaceStorageSettingsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A collection of settings that configure the domain's Docker interaction.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * DockerSettingsProperty dockerSettingsProperty = DockerSettingsProperty.builder()
+     * .enableDockerAccess("enableDockerAccess")
+     * .vpcOnlyTrustedAccounts(List.of("vpcOnlyTrustedAccounts"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-dockersettings.html)
+     */
+    public inline fun cfnDomainDockerSettingsProperty(
+        block: CfnDomainDockerSettingsPropertyDsl.() -> Unit = {}
+    ): CfnDomain.DockerSettingsProperty {
+        val builder = CfnDomainDockerSettingsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * A collection of settings that apply to the `SageMaker Domain` .
      *
      * These settings are specified through the `CreateDomain` API call.
@@ -1666,6 +2021,10 @@ public object sagemaker {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.sagemaker.*;
      * DomainSettingsProperty domainSettingsProperty = DomainSettingsProperty.builder()
+     * .dockerSettings(DockerSettingsProperty.builder()
+     * .enableDockerAccess("enableDockerAccess")
+     * .vpcOnlyTrustedAccounts(List.of("vpcOnlyTrustedAccounts"))
+     * .build())
      * .rStudioServerProDomainSettings(RStudioServerProDomainSettingsProperty.builder()
      * .domainExecutionRoleArn("domainExecutionRoleArn")
      * // the properties below are optional
@@ -1688,6 +2047,71 @@ public object sagemaker {
         block: CfnDomainDomainSettingsPropertyDsl.() -> Unit = {}
     ): CfnDomain.DomainSettingsProperty {
         val builder = CfnDomainDomainSettingsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The settings for assigning a custom Amazon EFS file system to a user profile or space for an
+     * Amazon SageMaker Domain.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * EFSFileSystemConfigProperty eFSFileSystemConfigProperty = EFSFileSystemConfigProperty.builder()
+     * .fileSystemId("fileSystemId")
+     * // the properties below are optional
+     * .fileSystemPath("fileSystemPath")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-efsfilesystemconfig.html)
+     */
+    public inline fun cfnDomainEFSFileSystemConfigProperty(
+        block: CfnDomainEFSFileSystemConfigPropertyDsl.() -> Unit = {}
+    ): CfnDomain.EFSFileSystemConfigProperty {
+        val builder = CfnDomainEFSFileSystemConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The settings for the JupyterLab application.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * JupyterLabAppSettingsProperty jupyterLabAppSettingsProperty =
+     * JupyterLabAppSettingsProperty.builder()
+     * .codeRepositories(List.of(CodeRepositoryProperty.builder()
+     * .repositoryUrl("repositoryUrl")
+     * .build()))
+     * .customImages(List.of(CustomImageProperty.builder()
+     * .appImageConfigName("appImageConfigName")
+     * .imageName("imageName")
+     * // the properties below are optional
+     * .imageVersionNumber(123)
+     * .build()))
+     * .defaultResourceSpec(ResourceSpecProperty.builder()
+     * .instanceType("instanceType")
+     * .lifecycleConfigArn("lifecycleConfigArn")
+     * .sageMakerImageArn("sageMakerImageArn")
+     * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+     * .build())
+     * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-jupyterlabappsettings.html)
+     */
+    public inline fun cfnDomainJupyterLabAppSettingsProperty(
+        block: CfnDomainJupyterLabAppSettingsPropertyDsl.() -> Unit = {}
+    ): CfnDomain.JupyterLabAppSettingsProperty {
+        val builder = CfnDomainJupyterLabAppSettingsPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -1769,6 +2193,45 @@ public object sagemaker {
      * .defaultUserSettings(UserSettingsProperty.builder()
      * .executionRole("executionRole")
      * // the properties below are optional
+     * .codeEditorAppSettings(CodeEditorAppSettingsProperty.builder()
+     * .defaultResourceSpec(ResourceSpecProperty.builder()
+     * .instanceType("instanceType")
+     * .lifecycleConfigArn("lifecycleConfigArn")
+     * .sageMakerImageArn("sageMakerImageArn")
+     * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+     * .build())
+     * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
+     * .build())
+     * .customFileSystemConfigs(List.of(CustomFileSystemConfigProperty.builder()
+     * .efsFileSystemConfig(EFSFileSystemConfigProperty.builder()
+     * .fileSystemId("fileSystemId")
+     * // the properties below are optional
+     * .fileSystemPath("fileSystemPath")
+     * .build())
+     * .build()))
+     * .customPosixUserConfig(CustomPosixUserConfigProperty.builder()
+     * .gid(123)
+     * .uid(123)
+     * .build())
+     * .defaultLandingUri("defaultLandingUri")
+     * .jupyterLabAppSettings(JupyterLabAppSettingsProperty.builder()
+     * .codeRepositories(List.of(CodeRepositoryProperty.builder()
+     * .repositoryUrl("repositoryUrl")
+     * .build()))
+     * .customImages(List.of(CustomImageProperty.builder()
+     * .appImageConfigName("appImageConfigName")
+     * .imageName("imageName")
+     * // the properties below are optional
+     * .imageVersionNumber(123)
+     * .build()))
+     * .defaultResourceSpec(ResourceSpecProperty.builder()
+     * .instanceType("instanceType")
+     * .lifecycleConfigArn("lifecycleConfigArn")
+     * .sageMakerImageArn("sageMakerImageArn")
+     * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+     * .build())
+     * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
+     * .build())
      * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
      * .defaultResourceSpec(ResourceSpecProperty.builder()
      * .instanceType("instanceType")
@@ -1815,6 +2278,13 @@ public object sagemaker {
      * .s3KmsKeyId("s3KmsKeyId")
      * .s3OutputPath("s3OutputPath")
      * .build())
+     * .spaceStorageSettings(DefaultSpaceStorageSettingsProperty.builder()
+     * .defaultEbsStorageSettings(DefaultEbsStorageSettingsProperty.builder()
+     * .defaultEbsVolumeSizeInGb(123)
+     * .maximumEbsVolumeSizeInGb(123)
+     * .build())
+     * .build())
+     * .studioWebPortal("studioWebPortal")
      * .build())
      * .domainName("domainName")
      * .subnetIds(List.of("subnetIds"))
@@ -1850,6 +2320,10 @@ public object sagemaker {
      * .securityGroups(List.of("securityGroups"))
      * .build())
      * .domainSettings(DomainSettingsProperty.builder()
+     * .dockerSettings(DockerSettingsProperty.builder()
+     * .enableDockerAccess("enableDockerAccess")
+     * .vpcOnlyTrustedAccounts(List.of("vpcOnlyTrustedAccounts"))
+     * .build())
      * .rStudioServerProDomainSettings(RStudioServerProDomainSettingsProperty.builder()
      * .domainExecutionRoleArn("domainExecutionRoleArn")
      * // the properties below are optional
@@ -2051,6 +2525,45 @@ public object sagemaker {
      * UserSettingsProperty userSettingsProperty = UserSettingsProperty.builder()
      * .executionRole("executionRole")
      * // the properties below are optional
+     * .codeEditorAppSettings(CodeEditorAppSettingsProperty.builder()
+     * .defaultResourceSpec(ResourceSpecProperty.builder()
+     * .instanceType("instanceType")
+     * .lifecycleConfigArn("lifecycleConfigArn")
+     * .sageMakerImageArn("sageMakerImageArn")
+     * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+     * .build())
+     * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
+     * .build())
+     * .customFileSystemConfigs(List.of(CustomFileSystemConfigProperty.builder()
+     * .efsFileSystemConfig(EFSFileSystemConfigProperty.builder()
+     * .fileSystemId("fileSystemId")
+     * // the properties below are optional
+     * .fileSystemPath("fileSystemPath")
+     * .build())
+     * .build()))
+     * .customPosixUserConfig(CustomPosixUserConfigProperty.builder()
+     * .gid(123)
+     * .uid(123)
+     * .build())
+     * .defaultLandingUri("defaultLandingUri")
+     * .jupyterLabAppSettings(JupyterLabAppSettingsProperty.builder()
+     * .codeRepositories(List.of(CodeRepositoryProperty.builder()
+     * .repositoryUrl("repositoryUrl")
+     * .build()))
+     * .customImages(List.of(CustomImageProperty.builder()
+     * .appImageConfigName("appImageConfigName")
+     * .imageName("imageName")
+     * // the properties below are optional
+     * .imageVersionNumber(123)
+     * .build()))
+     * .defaultResourceSpec(ResourceSpecProperty.builder()
+     * .instanceType("instanceType")
+     * .lifecycleConfigArn("lifecycleConfigArn")
+     * .sageMakerImageArn("sageMakerImageArn")
+     * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+     * .build())
+     * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
+     * .build())
      * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
      * .defaultResourceSpec(ResourceSpecProperty.builder()
      * .instanceType("instanceType")
@@ -2097,6 +2610,13 @@ public object sagemaker {
      * .s3KmsKeyId("s3KmsKeyId")
      * .s3OutputPath("s3OutputPath")
      * .build())
+     * .spaceStorageSettings(DefaultSpaceStorageSettingsProperty.builder()
+     * .defaultEbsStorageSettings(DefaultEbsStorageSettingsProperty.builder()
+     * .defaultEbsVolumeSizeInGb(123)
+     * .maximumEbsVolumeSizeInGb(123)
+     * .build())
+     * .build())
+     * .studioWebPortal("studioWebPortal")
      * .build();
      * ```
      *
@@ -2333,16 +2853,24 @@ public object sagemaker {
      * CfnEndpointConfig cfnEndpointConfig = CfnEndpointConfig.Builder.create(this,
      * "MyCfnEndpointConfig")
      * .productionVariants(List.of(ProductionVariantProperty.builder()
-     * .initialVariantWeight(123)
-     * .modelName("modelName")
      * .variantName("variantName")
      * // the properties below are optional
      * .acceleratorType("acceleratorType")
      * .containerStartupHealthCheckTimeoutInSeconds(123)
      * .enableSsmAccess(false)
      * .initialInstanceCount(123)
+     * .initialVariantWeight(123)
      * .instanceType("instanceType")
+     * .managedInstanceScaling(ManagedInstanceScalingProperty.builder()
+     * .maxInstanceCount(123)
+     * .minInstanceCount(123)
+     * .status("status")
+     * .build())
      * .modelDataDownloadTimeoutInSeconds(123)
+     * .modelName("modelName")
+     * .routingConfig(RoutingConfigProperty.builder()
+     * .routingStrategy("routingStrategy")
+     * .build())
      * .serverlessConfig(ServerlessConfigProperty.builder()
      * .maxConcurrency(123)
      * .memorySizeInMb(123)
@@ -2382,7 +2910,9 @@ public object sagemaker {
      * .enableCapture(false)
      * .kmsKeyId("kmsKeyId")
      * .build())
+     * .enableNetworkIsolation(false)
      * .endpointConfigName("endpointConfigName")
+     * .executionRoleArn("executionRoleArn")
      * .explainerConfig(ExplainerConfigProperty.builder()
      * .clarifyExplainerConfig(ClarifyExplainerConfigProperty.builder()
      * .shapConfig(ClarifyShapConfigProperty.builder()
@@ -2419,16 +2949,24 @@ public object sagemaker {
      * .build())
      * .kmsKeyId("kmsKeyId")
      * .shadowProductionVariants(List.of(ProductionVariantProperty.builder()
-     * .initialVariantWeight(123)
-     * .modelName("modelName")
      * .variantName("variantName")
      * // the properties below are optional
      * .acceleratorType("acceleratorType")
      * .containerStartupHealthCheckTimeoutInSeconds(123)
      * .enableSsmAccess(false)
      * .initialInstanceCount(123)
+     * .initialVariantWeight(123)
      * .instanceType("instanceType")
+     * .managedInstanceScaling(ManagedInstanceScalingProperty.builder()
+     * .maxInstanceCount(123)
+     * .minInstanceCount(123)
+     * .status("status")
+     * .build())
      * .modelDataDownloadTimeoutInSeconds(123)
+     * .modelName("modelName")
+     * .routingConfig(RoutingConfigProperty.builder()
+     * .routingStrategy("routingStrategy")
+     * .build())
      * .serverlessConfig(ServerlessConfigProperty.builder()
      * .maxConcurrency(123)
      * .memorySizeInMb(123)
@@ -2441,6 +2979,10 @@ public object sagemaker {
      * .key("key")
      * .value("value")
      * .build()))
+     * .vpcConfig(VpcConfigProperty.builder()
+     * .securityGroupIds(List.of("securityGroupIds"))
+     * .subnets(List.of("subnets"))
+     * .build())
      * .build();
      * ```
      *
@@ -2625,6 +3167,8 @@ public object sagemaker {
     }
 
     /**
+     * The configuration parameters for the SageMaker Clarify explainer.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -2676,6 +3220,8 @@ public object sagemaker {
     }
 
     /**
+     * The inference configuration parameter for the model container.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -2708,6 +3254,17 @@ public object sagemaker {
     }
 
     /**
+     * The configuration for the
+     * [SHAP baseline](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-feature-attribute-shap-baselines.html)
+     * (also called the background or reference dataset) of the Kernal SHAP algorithm.
+     * * The number of records in the baseline data determines the size of the synthetic dataset,
+     *   which has an impact on latency of explainability requests. For more information, see the
+     *   *Synthetic data* of
+     *   [Configure and create an endpoint](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html)
+     *   .
+     * * `ShapBaseline` and `ShapBaselineUri` are mutually exclusive parameters. One or the either
+     *   is required to configure a SHAP baseline.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -2732,6 +3289,8 @@ public object sagemaker {
     }
 
     /**
+     * The configuration for SHAP analysis using SageMaker Clarify Explainer.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -2765,6 +3324,11 @@ public object sagemaker {
     }
 
     /**
+     * A parameter used to configure the SageMaker Clarify explainer to treat text features as text
+     * so that explanations are provided for individual units of text.
+     *
+     * Required only for natural language processing (NLP) explainability.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -2821,6 +3385,8 @@ public object sagemaker {
     }
 
     /**
+     * A parameter to activate explainers.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -2873,6 +3439,30 @@ public object sagemaker {
     }
 
     /**
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * ManagedInstanceScalingProperty managedInstanceScalingProperty =
+     * ManagedInstanceScalingProperty.builder()
+     * .maxInstanceCount(123)
+     * .minInstanceCount(123)
+     * .status("status")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-managedinstancescaling.html)
+     */
+    public inline fun cfnEndpointConfigManagedInstanceScalingProperty(
+        block: CfnEndpointConfigManagedInstanceScalingPropertyDsl.() -> Unit = {}
+    ): CfnEndpointConfig.ManagedInstanceScalingProperty {
+        val builder = CfnEndpointConfigManagedInstanceScalingPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Specifies a model that you want to host and the resources to deploy for hosting it.
      *
      * If you are deploying multiple models, tell Amazon SageMaker how to distribute traffic among
@@ -2884,16 +3474,24 @@ public object sagemaker {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.sagemaker.*;
      * ProductionVariantProperty productionVariantProperty = ProductionVariantProperty.builder()
-     * .initialVariantWeight(123)
-     * .modelName("modelName")
      * .variantName("variantName")
      * // the properties below are optional
      * .acceleratorType("acceleratorType")
      * .containerStartupHealthCheckTimeoutInSeconds(123)
      * .enableSsmAccess(false)
      * .initialInstanceCount(123)
+     * .initialVariantWeight(123)
      * .instanceType("instanceType")
+     * .managedInstanceScaling(ManagedInstanceScalingProperty.builder()
+     * .maxInstanceCount(123)
+     * .minInstanceCount(123)
+     * .status("status")
+     * .build())
      * .modelDataDownloadTimeoutInSeconds(123)
+     * .modelName("modelName")
+     * .routingConfig(RoutingConfigProperty.builder()
+     * .routingStrategy("routingStrategy")
+     * .build())
      * .serverlessConfig(ServerlessConfigProperty.builder()
      * .maxConcurrency(123)
      * .memorySizeInMb(123)
@@ -2924,16 +3522,24 @@ public object sagemaker {
      * import software.amazon.awscdk.services.sagemaker.*;
      * CfnEndpointConfigProps cfnEndpointConfigProps = CfnEndpointConfigProps.builder()
      * .productionVariants(List.of(ProductionVariantProperty.builder()
-     * .initialVariantWeight(123)
-     * .modelName("modelName")
      * .variantName("variantName")
      * // the properties below are optional
      * .acceleratorType("acceleratorType")
      * .containerStartupHealthCheckTimeoutInSeconds(123)
      * .enableSsmAccess(false)
      * .initialInstanceCount(123)
+     * .initialVariantWeight(123)
      * .instanceType("instanceType")
+     * .managedInstanceScaling(ManagedInstanceScalingProperty.builder()
+     * .maxInstanceCount(123)
+     * .minInstanceCount(123)
+     * .status("status")
+     * .build())
      * .modelDataDownloadTimeoutInSeconds(123)
+     * .modelName("modelName")
+     * .routingConfig(RoutingConfigProperty.builder()
+     * .routingStrategy("routingStrategy")
+     * .build())
      * .serverlessConfig(ServerlessConfigProperty.builder()
      * .maxConcurrency(123)
      * .memorySizeInMb(123)
@@ -2973,7 +3579,9 @@ public object sagemaker {
      * .enableCapture(false)
      * .kmsKeyId("kmsKeyId")
      * .build())
+     * .enableNetworkIsolation(false)
      * .endpointConfigName("endpointConfigName")
+     * .executionRoleArn("executionRoleArn")
      * .explainerConfig(ExplainerConfigProperty.builder()
      * .clarifyExplainerConfig(ClarifyExplainerConfigProperty.builder()
      * .shapConfig(ClarifyShapConfigProperty.builder()
@@ -3010,16 +3618,24 @@ public object sagemaker {
      * .build())
      * .kmsKeyId("kmsKeyId")
      * .shadowProductionVariants(List.of(ProductionVariantProperty.builder()
-     * .initialVariantWeight(123)
-     * .modelName("modelName")
      * .variantName("variantName")
      * // the properties below are optional
      * .acceleratorType("acceleratorType")
      * .containerStartupHealthCheckTimeoutInSeconds(123)
      * .enableSsmAccess(false)
      * .initialInstanceCount(123)
+     * .initialVariantWeight(123)
      * .instanceType("instanceType")
+     * .managedInstanceScaling(ManagedInstanceScalingProperty.builder()
+     * .maxInstanceCount(123)
+     * .minInstanceCount(123)
+     * .status("status")
+     * .build())
      * .modelDataDownloadTimeoutInSeconds(123)
+     * .modelName("modelName")
+     * .routingConfig(RoutingConfigProperty.builder()
+     * .routingStrategy("routingStrategy")
+     * .build())
      * .serverlessConfig(ServerlessConfigProperty.builder()
      * .maxConcurrency(123)
      * .memorySizeInMb(123)
@@ -3032,6 +3648,10 @@ public object sagemaker {
      * .key("key")
      * .value("value")
      * .build()))
+     * .vpcConfig(VpcConfigProperty.builder()
+     * .securityGroupIds(List.of("securityGroupIds"))
+     * .subnets(List.of("subnets"))
+     * .build())
      * .build();
      * ```
      *
@@ -3041,6 +3661,27 @@ public object sagemaker {
         block: CfnEndpointConfigPropsDsl.() -> Unit = {}
     ): CfnEndpointConfigProps {
         val builder = CfnEndpointConfigPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * RoutingConfigProperty routingConfigProperty = RoutingConfigProperty.builder()
+     * .routingStrategy("routingStrategy")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-routingconfig.html)
+     */
+    public inline fun cfnEndpointConfigRoutingConfigProperty(
+        block: CfnEndpointConfigRoutingConfigPropertyDsl.() -> Unit = {}
+    ): CfnEndpointConfig.RoutingConfigProperty {
+        val builder = CfnEndpointConfigRoutingConfigPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -3067,6 +3708,28 @@ public object sagemaker {
         block: CfnEndpointConfigServerlessConfigPropertyDsl.() -> Unit = {}
     ): CfnEndpointConfig.ServerlessConfigProperty {
         val builder = CfnEndpointConfigServerlessConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * VpcConfigProperty vpcConfigProperty = VpcConfigProperty.builder()
+     * .securityGroupIds(List.of("securityGroupIds"))
+     * .subnets(List.of("subnets"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-vpcconfig.html)
+     */
+    public inline fun cfnEndpointConfigVpcConfigProperty(
+        block: CfnEndpointConfigVpcConfigPropertyDsl.() -> Unit = {}
+    ): CfnEndpointConfig.VpcConfigProperty {
+        val builder = CfnEndpointConfigVpcConfigPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -3339,6 +4002,12 @@ public object sagemaker {
      * .key("key")
      * .value("value")
      * .build()))
+     * .throughputConfig(ThroughputConfigProperty.builder()
+     * .throughputMode("throughputMode")
+     * // the properties below are optional
+     * .provisionedReadCapacityUnits(123)
+     * .provisionedWriteCapacityUnits(123)
+     * .build())
      * .build();
      * ```
      *
@@ -3466,6 +4135,11 @@ public object sagemaker {
      * .securityConfig(OnlineStoreSecurityConfigProperty.builder()
      * .kmsKeyId("kmsKeyId")
      * .build())
+     * .storageType("storageType")
+     * .ttlDuration(TtlDurationProperty.builder()
+     * .unit("unit")
+     * .value(123)
+     * .build())
      * .build();
      * ```
      *
@@ -3530,6 +4204,12 @@ public object sagemaker {
      * .key("key")
      * .value("value")
      * .build()))
+     * .throughputConfig(ThroughputConfigProperty.builder()
+     * .throughputMode("throughputMode")
+     * // the properties below are optional
+     * .provisionedReadCapacityUnits(123)
+     * .provisionedWriteCapacityUnits(123)
+     * .build())
      * .build();
      * ```
      *
@@ -3570,10 +4250,77 @@ public object sagemaker {
     }
 
     /**
+     * Used to set feature group throughput configuration.
+     *
+     * There are two modes: `ON_DEMAND` and `PROVISIONED` . With on-demand mode, you are charged for
+     * data reads and writes that your application performs on your feature group. You do not need
+     * to specify read and write throughput because Feature Store accommodates your workloads as
+     * they ramp up and down. You can switch a feature group to on-demand only once in a 24 hour
+     * period. With provisioned throughput mode, you specify the read and write capacity per second
+     * that you expect your application to require, and you are billed based on those limits.
+     * Exceeding provisioned throughput will result in your requests being throttled.
+     *
+     * Note: `PROVISIONED` throughput mode is supported only for feature groups that are
+     * offline-only, or use the
+     * [`Standard`](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_OnlineStoreConfig.html#sagemaker-Type-OnlineStoreConfig-StorageType)
+     * tier online store.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * ThroughputConfigProperty throughputConfigProperty = ThroughputConfigProperty.builder()
+     * .throughputMode("throughputMode")
+     * // the properties below are optional
+     * .provisionedReadCapacityUnits(123)
+     * .provisionedWriteCapacityUnits(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-throughputconfig.html)
+     */
+    public inline fun cfnFeatureGroupThroughputConfigProperty(
+        block: CfnFeatureGroupThroughputConfigPropertyDsl.() -> Unit = {}
+    ): CfnFeatureGroup.ThroughputConfigProperty {
+        val builder = CfnFeatureGroupThroughputConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Time to live duration, where the record is hard deleted after the expiration time is reached;
+     *
+     * `ExpiresAt` = `EventTime` + `TtlDuration` . For information on HardDelete, see the
+     * [DeleteRecord](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_feature_store_DeleteRecord.html)
+     * API in the Amazon SageMaker API Reference guide.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * TtlDurationProperty ttlDurationProperty = TtlDurationProperty.builder()
+     * .unit("unit")
+     * .value(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-ttlduration.html)
+     */
+    public inline fun cfnFeatureGroupTtlDurationProperty(
+        block: CfnFeatureGroupTtlDurationPropertyDsl.() -> Unit = {}
+    ): CfnFeatureGroup.TtlDurationProperty {
+        val builder = CfnFeatureGroupTtlDurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Creates a custom SageMaker image.
      *
      * A SageMaker image is a set of image versions. Each image version represents a container image
-     * stored in Amazon Elastic Container Registry (ECR). For more information, see
+     * stored in Amazon ECR. For more information, see
      * [Bring your own SageMaker image](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-byoi.html)
      * .
      *
@@ -3720,6 +4467,343 @@ public object sagemaker {
     }
 
     /**
+     * Creates an inference component, which is a SageMaker hosting object that you can use to
+     * deploy a model to an endpoint.
+     *
+     * In the inference component settings, you specify the model, the endpoint, and how the model
+     * utilizes the resources that the endpoint hosts. You can optimize resource utilization by
+     * tailoring how the required CPU cores, accelerators, and memory are allocated. You can deploy
+     * multiple inference components to an endpoint, where each inference component contains one
+     * model and the resource utilization needs for that individual model. After you deploy an
+     * inference component, you can directly invoke the associated model when you use the
+     * InvokeEndpoint API action.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * CfnInferenceComponent cfnInferenceComponent = CfnInferenceComponent.Builder.create(this,
+     * "MyCfnInferenceComponent")
+     * .endpointName("endpointName")
+     * .runtimeConfig(InferenceComponentRuntimeConfigProperty.builder()
+     * .copyCount(123)
+     * .currentCopyCount(123)
+     * .desiredCopyCount(123)
+     * .build())
+     * .specification(InferenceComponentSpecificationProperty.builder()
+     * .computeResourceRequirements(InferenceComponentComputeResourceRequirementsProperty.builder()
+     * .maxMemoryRequiredInMb(123)
+     * .minMemoryRequiredInMb(123)
+     * .numberOfAcceleratorDevicesRequired(123)
+     * .numberOfCpuCoresRequired(123)
+     * .build())
+     * // the properties below are optional
+     * .container(InferenceComponentContainerSpecificationProperty.builder()
+     * .artifactUrl("artifactUrl")
+     * .deployedImage(DeployedImageProperty.builder()
+     * .resolutionTime("resolutionTime")
+     * .resolvedImage("resolvedImage")
+     * .specifiedImage("specifiedImage")
+     * .build())
+     * .environment(Map.of(
+     * "environmentKey", "environment"))
+     * .image("image")
+     * .build())
+     * .modelName("modelName")
+     * .startupParameters(InferenceComponentStartupParametersProperty.builder()
+     * .containerStartupHealthCheckTimeoutInSeconds(123)
+     * .modelDataDownloadTimeoutInSeconds(123)
+     * .build())
+     * .build())
+     * .variantName("variantName")
+     * // the properties below are optional
+     * .endpointArn("endpointArn")
+     * .inferenceComponentName("inferenceComponentName")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-inferencecomponent.html)
+     */
+    public inline fun cfnInferenceComponent(
+        scope: Construct,
+        id: String,
+        block: CfnInferenceComponentDsl.() -> Unit = {},
+    ): CfnInferenceComponent {
+        val builder = CfnInferenceComponentDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Gets the Amazon EC2 Container Registry path of the docker image of the model that is hosted
+     * in this
+     * [ProductionVariant](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ProductionVariant.html)
+     * .
+     *
+     * If you used the `registry/repository[:tag]` form to specify the image path of the primary
+     * container when you created the model hosted in this `ProductionVariant` , the path resolves
+     * to a path of the form `registry/repository[&#64;digest]` . A digest is a hash value that
+     * identifies a specific version of an image. For information about Amazon ECR paths, see
+     * [Pulling an Image](https://docs.aws.amazon.com//AmazonECR/latest/userguide/docker-pull-ecr-image.html)
+     * in the *Amazon ECR User Guide* .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * DeployedImageProperty deployedImageProperty = DeployedImageProperty.builder()
+     * .resolutionTime("resolutionTime")
+     * .resolvedImage("resolvedImage")
+     * .specifiedImage("specifiedImage")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-deployedimage.html)
+     */
+    public inline fun cfnInferenceComponentDeployedImageProperty(
+        block: CfnInferenceComponentDeployedImagePropertyDsl.() -> Unit = {}
+    ): CfnInferenceComponent.DeployedImageProperty {
+        val builder = CfnInferenceComponentDeployedImagePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Defines the compute resources to allocate to run a model that you assign to an inference
+     * component.
+     *
+     * These resources include CPU cores, accelerators, and memory.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * InferenceComponentComputeResourceRequirementsProperty
+     * inferenceComponentComputeResourceRequirementsProperty =
+     * InferenceComponentComputeResourceRequirementsProperty.builder()
+     * .maxMemoryRequiredInMb(123)
+     * .minMemoryRequiredInMb(123)
+     * .numberOfAcceleratorDevicesRequired(123)
+     * .numberOfCpuCoresRequired(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements.html)
+     */
+    public inline fun cfnInferenceComponentInferenceComponentComputeResourceRequirementsProperty(
+        block:
+            CfnInferenceComponentInferenceComponentComputeResourceRequirementsPropertyDsl.(
+            ) -> Unit =
+            {}
+    ): CfnInferenceComponent.InferenceComponentComputeResourceRequirementsProperty {
+        val builder =
+            CfnInferenceComponentInferenceComponentComputeResourceRequirementsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Defines a container that provides the runtime environment for a model that you deploy with an
+     * inference component.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * InferenceComponentContainerSpecificationProperty
+     * inferenceComponentContainerSpecificationProperty =
+     * InferenceComponentContainerSpecificationProperty.builder()
+     * .artifactUrl("artifactUrl")
+     * .deployedImage(DeployedImageProperty.builder()
+     * .resolutionTime("resolutionTime")
+     * .resolvedImage("resolvedImage")
+     * .specifiedImage("specifiedImage")
+     * .build())
+     * .environment(Map.of(
+     * "environmentKey", "environment"))
+     * .image("image")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentcontainerspecification.html)
+     */
+    public inline fun cfnInferenceComponentInferenceComponentContainerSpecificationProperty(
+        block: CfnInferenceComponentInferenceComponentContainerSpecificationPropertyDsl.() -> Unit =
+            {}
+    ): CfnInferenceComponent.InferenceComponentContainerSpecificationProperty {
+        val builder = CfnInferenceComponentInferenceComponentContainerSpecificationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Runtime settings for a model that is deployed with an inference component.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * InferenceComponentRuntimeConfigProperty inferenceComponentRuntimeConfigProperty =
+     * InferenceComponentRuntimeConfigProperty.builder()
+     * .copyCount(123)
+     * .currentCopyCount(123)
+     * .desiredCopyCount(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentruntimeconfig.html)
+     */
+    public inline fun cfnInferenceComponentInferenceComponentRuntimeConfigProperty(
+        block: CfnInferenceComponentInferenceComponentRuntimeConfigPropertyDsl.() -> Unit = {}
+    ): CfnInferenceComponent.InferenceComponentRuntimeConfigProperty {
+        val builder = CfnInferenceComponentInferenceComponentRuntimeConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Details about the resources to deploy with this inference component, including the model,
+     * container, and compute resources.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * InferenceComponentSpecificationProperty inferenceComponentSpecificationProperty =
+     * InferenceComponentSpecificationProperty.builder()
+     * .computeResourceRequirements(InferenceComponentComputeResourceRequirementsProperty.builder()
+     * .maxMemoryRequiredInMb(123)
+     * .minMemoryRequiredInMb(123)
+     * .numberOfAcceleratorDevicesRequired(123)
+     * .numberOfCpuCoresRequired(123)
+     * .build())
+     * // the properties below are optional
+     * .container(InferenceComponentContainerSpecificationProperty.builder()
+     * .artifactUrl("artifactUrl")
+     * .deployedImage(DeployedImageProperty.builder()
+     * .resolutionTime("resolutionTime")
+     * .resolvedImage("resolvedImage")
+     * .specifiedImage("specifiedImage")
+     * .build())
+     * .environment(Map.of(
+     * "environmentKey", "environment"))
+     * .image("image")
+     * .build())
+     * .modelName("modelName")
+     * .startupParameters(InferenceComponentStartupParametersProperty.builder()
+     * .containerStartupHealthCheckTimeoutInSeconds(123)
+     * .modelDataDownloadTimeoutInSeconds(123)
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentspecification.html)
+     */
+    public inline fun cfnInferenceComponentInferenceComponentSpecificationProperty(
+        block: CfnInferenceComponentInferenceComponentSpecificationPropertyDsl.() -> Unit = {}
+    ): CfnInferenceComponent.InferenceComponentSpecificationProperty {
+        val builder = CfnInferenceComponentInferenceComponentSpecificationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Settings that take effect while the model container starts up.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * InferenceComponentStartupParametersProperty inferenceComponentStartupParametersProperty =
+     * InferenceComponentStartupParametersProperty.builder()
+     * .containerStartupHealthCheckTimeoutInSeconds(123)
+     * .modelDataDownloadTimeoutInSeconds(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentstartupparameters.html)
+     */
+    public inline fun cfnInferenceComponentInferenceComponentStartupParametersProperty(
+        block: CfnInferenceComponentInferenceComponentStartupParametersPropertyDsl.() -> Unit = {}
+    ): CfnInferenceComponent.InferenceComponentStartupParametersProperty {
+        val builder = CfnInferenceComponentInferenceComponentStartupParametersPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnInferenceComponent`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * CfnInferenceComponentProps cfnInferenceComponentProps = CfnInferenceComponentProps.builder()
+     * .endpointName("endpointName")
+     * .runtimeConfig(InferenceComponentRuntimeConfigProperty.builder()
+     * .copyCount(123)
+     * .currentCopyCount(123)
+     * .desiredCopyCount(123)
+     * .build())
+     * .specification(InferenceComponentSpecificationProperty.builder()
+     * .computeResourceRequirements(InferenceComponentComputeResourceRequirementsProperty.builder()
+     * .maxMemoryRequiredInMb(123)
+     * .minMemoryRequiredInMb(123)
+     * .numberOfAcceleratorDevicesRequired(123)
+     * .numberOfCpuCoresRequired(123)
+     * .build())
+     * // the properties below are optional
+     * .container(InferenceComponentContainerSpecificationProperty.builder()
+     * .artifactUrl("artifactUrl")
+     * .deployedImage(DeployedImageProperty.builder()
+     * .resolutionTime("resolutionTime")
+     * .resolvedImage("resolvedImage")
+     * .specifiedImage("specifiedImage")
+     * .build())
+     * .environment(Map.of(
+     * "environmentKey", "environment"))
+     * .image("image")
+     * .build())
+     * .modelName("modelName")
+     * .startupParameters(InferenceComponentStartupParametersProperty.builder()
+     * .containerStartupHealthCheckTimeoutInSeconds(123)
+     * .modelDataDownloadTimeoutInSeconds(123)
+     * .build())
+     * .build())
+     * .variantName("variantName")
+     * // the properties below are optional
+     * .endpointArn("endpointArn")
+     * .inferenceComponentName("inferenceComponentName")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-inferencecomponent.html)
+     */
+    public inline fun cfnInferenceComponentProps(
+        block: CfnInferenceComponentPropsDsl.() -> Unit = {}
+    ): CfnInferenceComponentProps {
+        val builder = CfnInferenceComponentPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Creates an inference experiment using the configurations specified in the request.
      *
      * Use this API to setup and schedule an experiment to compare model variants on a Amazon
@@ -3803,7 +4887,8 @@ public object sagemaker {
     /**
      * Configuration specifying how to treat different headers.
      *
-     * If no headers are specified SageMaker will by default base64 encode when capturing the data.
+     * If no headers are specified Amazon SageMaker will by default base64 encode when capturing the
+     * data.
      *
      * Example:
      * ```
@@ -4135,8 +5220,6 @@ public object sagemaker {
      * import software.amazon.awscdk.services.sagemaker.*;
      * Object environment;
      * CfnModel cfnModel = CfnModel.Builder.create(this, "MyCfnModel")
-     * .executionRoleArn("executionRoleArn")
-     * // the properties below are optional
      * .containers(List.of(ContainerDefinitionProperty.builder()
      * .containerHostname("containerHostname")
      * .environment(environment)
@@ -4150,6 +5233,17 @@ public object sagemaker {
      * .build())
      * .inferenceSpecificationName("inferenceSpecificationName")
      * .mode("mode")
+     * .modelDataSource(ModelDataSourceProperty.builder()
+     * .s3DataSource(S3DataSourceProperty.builder()
+     * .compressionType("compressionType")
+     * .s3DataType("s3DataType")
+     * .s3Uri("s3Uri")
+     * // the properties below are optional
+     * .modelAccessConfig(ModelAccessConfigProperty.builder()
+     * .acceptEula(false)
+     * .build())
+     * .build())
+     * .build())
      * .modelDataUrl("modelDataUrl")
      * .modelPackageName("modelPackageName")
      * .multiModelConfig(MultiModelConfigProperty.builder()
@@ -4157,6 +5251,7 @@ public object sagemaker {
      * .build())
      * .build()))
      * .enableNetworkIsolation(false)
+     * .executionRoleArn("executionRoleArn")
      * .inferenceExecutionConfig(InferenceExecutionConfigProperty.builder()
      * .mode("mode")
      * .build())
@@ -4174,6 +5269,17 @@ public object sagemaker {
      * .build())
      * .inferenceSpecificationName("inferenceSpecificationName")
      * .mode("mode")
+     * .modelDataSource(ModelDataSourceProperty.builder()
+     * .s3DataSource(S3DataSourceProperty.builder()
+     * .compressionType("compressionType")
+     * .s3DataType("s3DataType")
+     * .s3Uri("s3Uri")
+     * // the properties below are optional
+     * .modelAccessConfig(ModelAccessConfigProperty.builder()
+     * .acceptEula(false)
+     * .build())
+     * .build())
+     * .build())
      * .modelDataUrl("modelDataUrl")
      * .modelPackageName("modelPackageName")
      * .multiModelConfig(MultiModelConfigProperty.builder()
@@ -4323,7 +5429,7 @@ public object sagemaker {
     }
 
     /**
-     * The batch transform input for a monitoring job.
+     * Input object for the batch transform job.
      *
      * Example:
      * ```
@@ -4967,13 +6073,12 @@ public object sagemaker {
     }
 
     /**
-     * Specifies a VPC that your training jobs and hosted models have access to.
+     * Specifies an Amazon Virtual Private Cloud (VPC) that your SageMaker jobs, hosted models, and
+     * compute resources have access to.
      *
-     * Control access to and from your training and model containers by configuring the VPC. For
-     * more information, see
-     * [Protect Endpoints by Using an Amazon Virtual Private Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/host-vpc.html)
-     * and
-     * [Protect Training Jobs by Using an Amazon Virtual Private Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html)
+     * You can control access to and from your resources by configuring a VPC. For more information,
+     * see
+     * [Give SageMaker Access to Resources in your Amazon VPC](https://docs.aws.amazon.com/sagemaker/latest/dg/infrastructure-give-access.html)
      * .
      *
      * Example:
@@ -6177,6 +7282,17 @@ public object sagemaker {
      * .build())
      * .inferenceSpecificationName("inferenceSpecificationName")
      * .mode("mode")
+     * .modelDataSource(ModelDataSourceProperty.builder()
+     * .s3DataSource(S3DataSourceProperty.builder()
+     * .compressionType("compressionType")
+     * .s3DataType("s3DataType")
+     * .s3Uri("s3Uri")
+     * // the properties below are optional
+     * .modelAccessConfig(ModelAccessConfigProperty.builder()
+     * .acceptEula(false)
+     * .build())
+     * .build())
+     * .build())
      * .modelDataUrl("modelDataUrl")
      * .modelPackageName("modelPackageName")
      * .multiModelConfig(MultiModelConfigProperty.builder()
@@ -6305,7 +7421,7 @@ public object sagemaker {
     }
 
     /**
-     * The batch transform input for a monitoring job.
+     * Input object for the batch transform job.
      *
      * Example:
      * ```
@@ -6910,13 +8026,12 @@ public object sagemaker {
     }
 
     /**
-     * Specifies a VPC that your training jobs and hosted models have access to.
+     * Specifies an Amazon Virtual Private Cloud (VPC) that your SageMaker jobs, hosted models, and
+     * compute resources have access to.
      *
-     * Control access to and from your training and model containers by configuring the VPC. For
-     * more information, see
-     * [Protect Endpoints by Using an Amazon Virtual Private Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/host-vpc.html)
-     * and
-     * [Protect Training Jobs by Using an Amazon Virtual Private Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html)
+     * You can control access to and from your resources by configuring a VPC. For more information,
+     * see
+     * [Give SageMaker Access to Resources in your Amazon VPC](https://docs.aws.amazon.com/sagemaker/latest/dg/infrastructure-give-access.html)
      * .
      *
      * Example:
@@ -6988,6 +8103,72 @@ public object sagemaker {
         block: CfnModelInferenceExecutionConfigPropertyDsl.() -> Unit = {}
     ): CfnModel.InferenceExecutionConfigProperty {
         val builder = CfnModelInferenceExecutionConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The access configuration file to control access to the ML model.
+     *
+     * You can explicitly accept the model end-user license agreement (EULA) within the
+     * `ModelAccessConfig` .
+     * * If you are a Jumpstart user, see the
+     *   [End-user license agreements](https://docs.aws.amazon.com/sagemaker/latest/dg/jumpstart-foundation-models-choose.html#jumpstart-foundation-models-choose-eula)
+     *   section for more details on accepting the EULA.
+     * * If you are an AutoML user, see the *Optional Parameters* section of *Create an AutoML job
+     *   to fine-tune text generation models using the API* for details on
+     *   [How to set the EULA acceptance when fine-tuning a model using the AutoML API](https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-create-experiment-finetune-llms.html#autopilot-llms-finetuning-api-optional-params)
+     *   .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * ModelAccessConfigProperty modelAccessConfigProperty = ModelAccessConfigProperty.builder()
+     * .acceptEula(false)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-modelaccessconfig.html)
+     */
+    public inline fun cfnModelModelAccessConfigProperty(
+        block: CfnModelModelAccessConfigPropertyDsl.() -> Unit = {}
+    ): CfnModel.ModelAccessConfigProperty {
+        val builder = CfnModelModelAccessConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies the location of ML model data to deploy.
+     *
+     * If specified, you must specify one and only one of the available data sources.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * ModelDataSourceProperty modelDataSourceProperty = ModelDataSourceProperty.builder()
+     * .s3DataSource(S3DataSourceProperty.builder()
+     * .compressionType("compressionType")
+     * .s3DataType("s3DataType")
+     * .s3Uri("s3Uri")
+     * // the properties below are optional
+     * .modelAccessConfig(ModelAccessConfigProperty.builder()
+     * .acceptEula(false)
+     * .build())
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-modeldatasource.html)
+     */
+    public inline fun cfnModelModelDataSourceProperty(
+        block: CfnModelModelDataSourcePropertyDsl.() -> Unit = {}
+    ): CfnModel.ModelDataSourceProperty {
+        val builder = CfnModelModelDataSourcePropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -7238,6 +8419,7 @@ public object sagemaker {
      * .build())
      * .modelPackageVersion(123)
      * .samplePayloadUrl("samplePayloadUrl")
+     * .skipModelValidation("skipModelValidation")
      * .sourceAlgorithmSpecification(SourceAlgorithmSpecificationProperty.builder()
      * .sourceAlgorithms(List.of(SourceAlgorithmProperty.builder()
      * .algorithmName("algorithmName")
@@ -8348,6 +9530,7 @@ public object sagemaker {
      * .build())
      * .modelPackageVersion(123)
      * .samplePayloadUrl("samplePayloadUrl")
+     * .skipModelValidation("skipModelValidation")
      * .sourceAlgorithmSpecification(SourceAlgorithmSpecificationProperty.builder()
      * .sourceAlgorithms(List.of(SourceAlgorithmProperty.builder()
      * .algorithmName("algorithmName")
@@ -8765,8 +9948,6 @@ public object sagemaker {
      * import software.amazon.awscdk.services.sagemaker.*;
      * Object environment;
      * CfnModelProps cfnModelProps = CfnModelProps.builder()
-     * .executionRoleArn("executionRoleArn")
-     * // the properties below are optional
      * .containers(List.of(ContainerDefinitionProperty.builder()
      * .containerHostname("containerHostname")
      * .environment(environment)
@@ -8780,6 +9961,17 @@ public object sagemaker {
      * .build())
      * .inferenceSpecificationName("inferenceSpecificationName")
      * .mode("mode")
+     * .modelDataSource(ModelDataSourceProperty.builder()
+     * .s3DataSource(S3DataSourceProperty.builder()
+     * .compressionType("compressionType")
+     * .s3DataType("s3DataType")
+     * .s3Uri("s3Uri")
+     * // the properties below are optional
+     * .modelAccessConfig(ModelAccessConfigProperty.builder()
+     * .acceptEula(false)
+     * .build())
+     * .build())
+     * .build())
      * .modelDataUrl("modelDataUrl")
      * .modelPackageName("modelPackageName")
      * .multiModelConfig(MultiModelConfigProperty.builder()
@@ -8787,6 +9979,7 @@ public object sagemaker {
      * .build())
      * .build()))
      * .enableNetworkIsolation(false)
+     * .executionRoleArn("executionRoleArn")
      * .inferenceExecutionConfig(InferenceExecutionConfigProperty.builder()
      * .mode("mode")
      * .build())
@@ -8804,6 +9997,17 @@ public object sagemaker {
      * .build())
      * .inferenceSpecificationName("inferenceSpecificationName")
      * .mode("mode")
+     * .modelDataSource(ModelDataSourceProperty.builder()
+     * .s3DataSource(S3DataSourceProperty.builder()
+     * .compressionType("compressionType")
+     * .s3DataType("s3DataType")
+     * .s3Uri("s3Uri")
+     * // the properties below are optional
+     * .modelAccessConfig(ModelAccessConfigProperty.builder()
+     * .acceptEula(false)
+     * .build())
+     * .build())
+     * .build())
      * .modelDataUrl("modelDataUrl")
      * .modelPackageName("modelPackageName")
      * .multiModelConfig(MultiModelConfigProperty.builder()
@@ -8955,7 +10159,7 @@ public object sagemaker {
     }
 
     /**
-     * The batch transform input for a monitoring job.
+     * Input object for the batch transform job.
      *
      * Example:
      * ```
@@ -9217,7 +10421,7 @@ public object sagemaker {
     /**
      * The input for the model quality monitoring job.
      *
-     * Currently endponts are supported for input for model quality monitoring jobs.
+     * Currently endpoints are supported for input for model quality monitoring jobs.
      *
      * Example:
      * ```
@@ -9607,13 +10811,12 @@ public object sagemaker {
     }
 
     /**
-     * Specifies a VPC that your training jobs and hosted models have access to.
+     * Specifies an Amazon Virtual Private Cloud (VPC) that your SageMaker jobs, hosted models, and
+     * compute resources have access to.
      *
-     * Control access to and from your training and model containers by configuring the VPC. For
-     * more information, see
-     * [Protect Endpoints by Using an Amazon Virtual Private Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/host-vpc.html)
-     * and
-     * [Protect Training Jobs by Using an Amazon Virtual Private Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html)
+     * You can control access to and from your resources by configuring a VPC. For more information,
+     * see
+     * [Give SageMaker Access to Resources in your Amazon VPC](https://docs.aws.amazon.com/sagemaker/latest/dg/infrastructure-give-access.html)
      * .
      *
      * Example:
@@ -9668,13 +10871,43 @@ public object sagemaker {
     }
 
     /**
-     * Specifies a VPC that your training jobs and hosted models have access to.
+     * Describes the S3 data source.
      *
-     * Control access to and from your training and model containers by configuring the VPC. For
-     * more information, see
-     * [Protect Endpoints by Using an Amazon Virtual Private Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/host-vpc.html)
-     * and
-     * [Protect Training Jobs by Using an Amazon Virtual Private Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html)
+     * Your input bucket must be in the same AWS region as your training job.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * S3DataSourceProperty s3DataSourceProperty = S3DataSourceProperty.builder()
+     * .compressionType("compressionType")
+     * .s3DataType("s3DataType")
+     * .s3Uri("s3Uri")
+     * // the properties below are optional
+     * .modelAccessConfig(ModelAccessConfigProperty.builder()
+     * .acceptEula(false)
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html)
+     */
+    public inline fun cfnModelS3DataSourceProperty(
+        block: CfnModelS3DataSourcePropertyDsl.() -> Unit = {}
+    ): CfnModel.S3DataSourceProperty {
+        val builder = CfnModelS3DataSourcePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies an Amazon Virtual Private Cloud (VPC) that your SageMaker jobs, hosted models, and
+     * compute resources have access to.
+     *
+     * You can control access to and from your resources by configuring a VPC. For more information,
+     * see
+     * [Give SageMaker Access to Resources in your Amazon VPC](https://docs.aws.amazon.com/sagemaker/latest/dg/infrastructure-give-access.html)
      * .
      *
      * Example:
@@ -9734,6 +10967,7 @@ public object sagemaker {
      * .build())
      * .localPath("localPath")
      * // the properties below are optional
+     * .excludeFeaturesAttribute("excludeFeaturesAttribute")
      * .s3DataDistributionType("s3DataDistributionType")
      * .s3InputMode("s3InputMode")
      * .build())
@@ -9741,6 +10975,7 @@ public object sagemaker {
      * .endpointName("endpointName")
      * .localPath("localPath")
      * // the properties below are optional
+     * .excludeFeaturesAttribute("excludeFeaturesAttribute")
      * .s3DataDistributionType("s3DataDistributionType")
      * .s3InputMode("s3InputMode")
      * .build())
@@ -9794,6 +11029,9 @@ public object sagemaker {
      * .monitoringType("monitoringType")
      * .scheduleConfig(ScheduleConfigProperty.builder()
      * .scheduleExpression("scheduleExpression")
+     * // the properties below are optional
+     * .dataAnalysisEndTime("dataAnalysisEndTime")
+     * .dataAnalysisStartTime("dataAnalysisStartTime")
      * .build())
      * .build())
      * .monitoringScheduleName("monitoringScheduleName")
@@ -9861,7 +11099,7 @@ public object sagemaker {
     }
 
     /**
-     * The batch transform input for a monitoring job.
+     * Input object for the batch transform job.
      *
      * Example:
      * ```
@@ -9881,6 +11119,7 @@ public object sagemaker {
      * .build())
      * .localPath("localPath")
      * // the properties below are optional
+     * .excludeFeaturesAttribute("excludeFeaturesAttribute")
      * .s3DataDistributionType("s3DataDistributionType")
      * .s3InputMode("s3InputMode")
      * .build();
@@ -10010,6 +11249,7 @@ public object sagemaker {
      * .endpointName("endpointName")
      * .localPath("localPath")
      * // the properties below are optional
+     * .excludeFeaturesAttribute("excludeFeaturesAttribute")
      * .s3DataDistributionType("s3DataDistributionType")
      * .s3InputMode("s3InputMode")
      * .build();
@@ -10131,6 +11371,7 @@ public object sagemaker {
      * .build())
      * .localPath("localPath")
      * // the properties below are optional
+     * .excludeFeaturesAttribute("excludeFeaturesAttribute")
      * .s3DataDistributionType("s3DataDistributionType")
      * .s3InputMode("s3InputMode")
      * .build())
@@ -10138,6 +11379,7 @@ public object sagemaker {
      * .endpointName("endpointName")
      * .localPath("localPath")
      * // the properties below are optional
+     * .excludeFeaturesAttribute("excludeFeaturesAttribute")
      * .s3DataDistributionType("s3DataDistributionType")
      * .s3InputMode("s3InputMode")
      * .build())
@@ -10186,6 +11428,7 @@ public object sagemaker {
      * .build())
      * .localPath("localPath")
      * // the properties below are optional
+     * .excludeFeaturesAttribute("excludeFeaturesAttribute")
      * .s3DataDistributionType("s3DataDistributionType")
      * .s3InputMode("s3InputMode")
      * .build())
@@ -10193,6 +11436,7 @@ public object sagemaker {
      * .endpointName("endpointName")
      * .localPath("localPath")
      * // the properties below are optional
+     * .excludeFeaturesAttribute("excludeFeaturesAttribute")
      * .s3DataDistributionType("s3DataDistributionType")
      * .s3InputMode("s3InputMode")
      * .build())
@@ -10377,6 +11621,7 @@ public object sagemaker {
      * .build())
      * .localPath("localPath")
      * // the properties below are optional
+     * .excludeFeaturesAttribute("excludeFeaturesAttribute")
      * .s3DataDistributionType("s3DataDistributionType")
      * .s3InputMode("s3InputMode")
      * .build())
@@ -10384,6 +11629,7 @@ public object sagemaker {
      * .endpointName("endpointName")
      * .localPath("localPath")
      * // the properties below are optional
+     * .excludeFeaturesAttribute("excludeFeaturesAttribute")
      * .s3DataDistributionType("s3DataDistributionType")
      * .s3InputMode("s3InputMode")
      * .build())
@@ -10437,6 +11683,9 @@ public object sagemaker {
      * .monitoringType("monitoringType")
      * .scheduleConfig(ScheduleConfigProperty.builder()
      * .scheduleExpression("scheduleExpression")
+     * // the properties below are optional
+     * .dataAnalysisEndTime("dataAnalysisEndTime")
+     * .dataAnalysisStartTime("dataAnalysisStartTime")
      * .build())
      * .build();
      * ```
@@ -10514,6 +11763,7 @@ public object sagemaker {
      * .build())
      * .localPath("localPath")
      * // the properties below are optional
+     * .excludeFeaturesAttribute("excludeFeaturesAttribute")
      * .s3DataDistributionType("s3DataDistributionType")
      * .s3InputMode("s3InputMode")
      * .build())
@@ -10521,6 +11771,7 @@ public object sagemaker {
      * .endpointName("endpointName")
      * .localPath("localPath")
      * // the properties below are optional
+     * .excludeFeaturesAttribute("excludeFeaturesAttribute")
      * .s3DataDistributionType("s3DataDistributionType")
      * .s3InputMode("s3InputMode")
      * .build())
@@ -10574,6 +11825,9 @@ public object sagemaker {
      * .monitoringType("monitoringType")
      * .scheduleConfig(ScheduleConfigProperty.builder()
      * .scheduleExpression("scheduleExpression")
+     * // the properties below are optional
+     * .dataAnalysisEndTime("dataAnalysisEndTime")
+     * .dataAnalysisStartTime("dataAnalysisStartTime")
      * .build())
      * .build())
      * .monitoringScheduleName("monitoringScheduleName")
@@ -10645,6 +11899,9 @@ public object sagemaker {
      * import software.amazon.awscdk.services.sagemaker.*;
      * ScheduleConfigProperty scheduleConfigProperty = ScheduleConfigProperty.builder()
      * .scheduleExpression("scheduleExpression")
+     * // the properties below are optional
+     * .dataAnalysisEndTime("dataAnalysisEndTime")
+     * .dataAnalysisStartTime("dataAnalysisStartTime")
      * .build();
      * ```
      *
@@ -10724,13 +11981,12 @@ public object sagemaker {
     }
 
     /**
-     * Specifies a VPC that your training jobs and hosted models have access to.
+     * Specifies an Amazon Virtual Private Cloud (VPC) that your SageMaker jobs, hosted models, and
+     * compute resources have access to.
      *
-     * Control access to and from your training and model containers by configuring the VPC. For
-     * more information, see
-     * [Protect Endpoints by Using an Amazon Virtual Private Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/host-vpc.html)
-     * and
-     * [Protect Training Jobs by Using an Amazon Virtual Private Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html)
+     * You can control access to and from your resources by configuring a VPC. For more information,
+     * see
+     * [Give SageMaker Access to Resources in your Amazon VPC](https://docs.aws.amazon.com/sagemaker/latest/dg/infrastructure-give-access.html)
      * .
      *
      * Example:
@@ -11039,6 +12295,10 @@ public object sagemaker {
     }
 
     /**
+     * The definition of the pipeline.
+     *
+     * This can be either a JSON string or an Amazon S3 location.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -11046,6 +12306,14 @@ public object sagemaker {
      * import software.amazon.awscdk.services.sagemaker.*;
      * PipelineDefinitionProperty pipelineDefinitionProperty = PipelineDefinitionProperty.builder()
      * .pipelineDefinitionBody("pipelineDefinitionBody")
+     * // the properties below are optional
+     * .pipelineDefinitionS3Location(S3LocationProperty.builder()
+     * .bucket("bucket")
+     * .key("key")
+     * // the properties below are optional
+     * .eTag("eTag")
+     * .version("version")
+     * .build())
      * .build();
      * ```
      *
@@ -11095,6 +12363,10 @@ public object sagemaker {
     }
 
     /**
+     * The location of the pipeline definition stored in Amazon S3.
+     *
+     * If specified, SageMaker will retrieve the pipeline definition from this location.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -11284,7 +12556,7 @@ public object sagemaker {
     }
 
     /**
-     * Creates a space used for real time collaboration in a Domain.
+     * Creates a space used for real time collaboration in a domain.
      *
      * Example:
      * ```
@@ -11295,7 +12567,34 @@ public object sagemaker {
      * .domainId("domainId")
      * .spaceName("spaceName")
      * // the properties below are optional
+     * .ownershipSettings(OwnershipSettingsProperty.builder()
+     * .ownerUserProfileName("ownerUserProfileName")
+     * .build())
+     * .spaceDisplayName("spaceDisplayName")
      * .spaceSettings(SpaceSettingsProperty.builder()
+     * .appType("appType")
+     * .codeEditorAppSettings(SpaceCodeEditorAppSettingsProperty.builder()
+     * .defaultResourceSpec(ResourceSpecProperty.builder()
+     * .instanceType("instanceType")
+     * .sageMakerImageArn("sageMakerImageArn")
+     * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+     * .build())
+     * .build())
+     * .customFileSystems(List.of(CustomFileSystemProperty.builder()
+     * .efsFileSystem(EFSFileSystemProperty.builder()
+     * .fileSystemId("fileSystemId")
+     * .build())
+     * .build()))
+     * .jupyterLabAppSettings(SpaceJupyterLabAppSettingsProperty.builder()
+     * .codeRepositories(List.of(CodeRepositoryProperty.builder()
+     * .repositoryUrl("repositoryUrl")
+     * .build()))
+     * .defaultResourceSpec(ResourceSpecProperty.builder()
+     * .instanceType("instanceType")
+     * .sageMakerImageArn("sageMakerImageArn")
+     * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+     * .build())
+     * .build())
      * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
      * .defaultResourceSpec(ResourceSpecProperty.builder()
      * .instanceType("instanceType")
@@ -11316,6 +12615,14 @@ public object sagemaker {
      * .sageMakerImageVersionArn("sageMakerImageVersionArn")
      * .build())
      * .build())
+     * .spaceStorageSettings(SpaceStorageSettingsProperty.builder()
+     * .ebsStorageSettings(EbsStorageSettingsProperty.builder()
+     * .ebsVolumeSizeInGb(123)
+     * .build())
+     * .build())
+     * .build())
+     * .spaceSharingSettings(SpaceSharingSettingsProperty.builder()
+     * .sharingType("sharingType")
      * .build())
      * .tags(List.of(CfnTag.builder()
      * .key("key")
@@ -11332,6 +12639,58 @@ public object sagemaker {
         block: CfnSpaceDsl.() -> Unit = {},
     ): CfnSpace {
         val builder = CfnSpaceDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A Git repository that SageMaker automatically displays to users for cloning in the
+     * JupyterServer application.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * CodeRepositoryProperty codeRepositoryProperty = CodeRepositoryProperty.builder()
+     * .repositoryUrl("repositoryUrl")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-coderepository.html)
+     */
+    public inline fun cfnSpaceCodeRepositoryProperty(
+        block: CfnSpaceCodeRepositoryPropertyDsl.() -> Unit = {}
+    ): CfnSpace.CodeRepositoryProperty {
+        val builder = CfnSpaceCodeRepositoryPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A file system, created by you, that you assign to a user profile or space for an Amazon
+     * SageMaker Domain.
+     *
+     * Permitted users can access this file system in Amazon SageMaker Studio.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * CustomFileSystemProperty customFileSystemProperty = CustomFileSystemProperty.builder()
+     * .efsFileSystem(EFSFileSystemProperty.builder()
+     * .fileSystemId("fileSystemId")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-customfilesystem.html)
+     */
+    public inline fun cfnSpaceCustomFileSystemProperty(
+        block: CfnSpaceCustomFileSystemPropertyDsl.() -> Unit = {}
+    ): CfnSpace.CustomFileSystemProperty {
+        val builder = CfnSpaceCustomFileSystemPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -11362,6 +12721,55 @@ public object sagemaker {
         block: CfnSpaceCustomImagePropertyDsl.() -> Unit = {}
     ): CfnSpace.CustomImageProperty {
         val builder = CfnSpaceCustomImagePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A file system, created by you in Amazon EFS, that you assign to a user profile or space for
+     * an Amazon SageMaker Domain.
+     *
+     * Permitted users can access this file system in Amazon SageMaker Studio.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * EFSFileSystemProperty eFSFileSystemProperty = EFSFileSystemProperty.builder()
+     * .fileSystemId("fileSystemId")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-efsfilesystem.html)
+     */
+    public inline fun cfnSpaceEFSFileSystemProperty(
+        block: CfnSpaceEFSFileSystemPropertyDsl.() -> Unit = {}
+    ): CfnSpace.EFSFileSystemProperty {
+        val builder = CfnSpaceEFSFileSystemPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A collection of EBS storage settings that applies to private spaces.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * EbsStorageSettingsProperty ebsStorageSettingsProperty = EbsStorageSettingsProperty.builder()
+     * .ebsVolumeSizeInGb(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-ebsstoragesettings.html)
+     */
+    public inline fun cfnSpaceEbsStorageSettingsProperty(
+        block: CfnSpaceEbsStorageSettingsPropertyDsl.() -> Unit = {}
+    ): CfnSpace.EbsStorageSettingsProperty {
+        val builder = CfnSpaceEbsStorageSettingsPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -11429,6 +12837,29 @@ public object sagemaker {
     }
 
     /**
+     * The collection of ownership settings for a space.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * OwnershipSettingsProperty ownershipSettingsProperty = OwnershipSettingsProperty.builder()
+     * .ownerUserProfileName("ownerUserProfileName")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-ownershipsettings.html)
+     */
+    public inline fun cfnSpaceOwnershipSettingsProperty(
+        block: CfnSpaceOwnershipSettingsPropertyDsl.() -> Unit = {}
+    ): CfnSpace.OwnershipSettingsProperty {
+        val builder = CfnSpaceOwnershipSettingsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Properties for defining a `CfnSpace`.
      *
      * Example:
@@ -11440,7 +12871,34 @@ public object sagemaker {
      * .domainId("domainId")
      * .spaceName("spaceName")
      * // the properties below are optional
+     * .ownershipSettings(OwnershipSettingsProperty.builder()
+     * .ownerUserProfileName("ownerUserProfileName")
+     * .build())
+     * .spaceDisplayName("spaceDisplayName")
      * .spaceSettings(SpaceSettingsProperty.builder()
+     * .appType("appType")
+     * .codeEditorAppSettings(SpaceCodeEditorAppSettingsProperty.builder()
+     * .defaultResourceSpec(ResourceSpecProperty.builder()
+     * .instanceType("instanceType")
+     * .sageMakerImageArn("sageMakerImageArn")
+     * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+     * .build())
+     * .build())
+     * .customFileSystems(List.of(CustomFileSystemProperty.builder()
+     * .efsFileSystem(EFSFileSystemProperty.builder()
+     * .fileSystemId("fileSystemId")
+     * .build())
+     * .build()))
+     * .jupyterLabAppSettings(SpaceJupyterLabAppSettingsProperty.builder()
+     * .codeRepositories(List.of(CodeRepositoryProperty.builder()
+     * .repositoryUrl("repositoryUrl")
+     * .build()))
+     * .defaultResourceSpec(ResourceSpecProperty.builder()
+     * .instanceType("instanceType")
+     * .sageMakerImageArn("sageMakerImageArn")
+     * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+     * .build())
+     * .build())
      * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
      * .defaultResourceSpec(ResourceSpecProperty.builder()
      * .instanceType("instanceType")
@@ -11461,6 +12919,14 @@ public object sagemaker {
      * .sageMakerImageVersionArn("sageMakerImageVersionArn")
      * .build())
      * .build())
+     * .spaceStorageSettings(SpaceStorageSettingsProperty.builder()
+     * .ebsStorageSettings(EbsStorageSettingsProperty.builder()
+     * .ebsVolumeSizeInGb(123)
+     * .build())
+     * .build())
+     * .build())
+     * .spaceSharingSettings(SpaceSharingSettingsProperty.builder()
+     * .sharingType("sharingType")
      * .build())
      * .tags(List.of(CfnTag.builder()
      * .key("key")
@@ -11504,6 +12970,65 @@ public object sagemaker {
     }
 
     /**
+     * The application settings for a Code Editor space.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * SpaceCodeEditorAppSettingsProperty spaceCodeEditorAppSettingsProperty =
+     * SpaceCodeEditorAppSettingsProperty.builder()
+     * .defaultResourceSpec(ResourceSpecProperty.builder()
+     * .instanceType("instanceType")
+     * .sageMakerImageArn("sageMakerImageArn")
+     * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spacecodeeditorappsettings.html)
+     */
+    public inline fun cfnSpaceSpaceCodeEditorAppSettingsProperty(
+        block: CfnSpaceSpaceCodeEditorAppSettingsPropertyDsl.() -> Unit = {}
+    ): CfnSpace.SpaceCodeEditorAppSettingsProperty {
+        val builder = CfnSpaceSpaceCodeEditorAppSettingsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The settings for the JupyterLab application within a space.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * SpaceJupyterLabAppSettingsProperty spaceJupyterLabAppSettingsProperty =
+     * SpaceJupyterLabAppSettingsProperty.builder()
+     * .codeRepositories(List.of(CodeRepositoryProperty.builder()
+     * .repositoryUrl("repositoryUrl")
+     * .build()))
+     * .defaultResourceSpec(ResourceSpecProperty.builder()
+     * .instanceType("instanceType")
+     * .sageMakerImageArn("sageMakerImageArn")
+     * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spacejupyterlabappsettings.html)
+     */
+    public inline fun cfnSpaceSpaceJupyterLabAppSettingsProperty(
+        block: CfnSpaceSpaceJupyterLabAppSettingsPropertyDsl.() -> Unit = {}
+    ): CfnSpace.SpaceJupyterLabAppSettingsProperty {
+        val builder = CfnSpaceSpaceJupyterLabAppSettingsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * A collection of space settings.
      *
      * Example:
@@ -11512,6 +13037,29 @@ public object sagemaker {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.sagemaker.*;
      * SpaceSettingsProperty spaceSettingsProperty = SpaceSettingsProperty.builder()
+     * .appType("appType")
+     * .codeEditorAppSettings(SpaceCodeEditorAppSettingsProperty.builder()
+     * .defaultResourceSpec(ResourceSpecProperty.builder()
+     * .instanceType("instanceType")
+     * .sageMakerImageArn("sageMakerImageArn")
+     * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+     * .build())
+     * .build())
+     * .customFileSystems(List.of(CustomFileSystemProperty.builder()
+     * .efsFileSystem(EFSFileSystemProperty.builder()
+     * .fileSystemId("fileSystemId")
+     * .build())
+     * .build()))
+     * .jupyterLabAppSettings(SpaceJupyterLabAppSettingsProperty.builder()
+     * .codeRepositories(List.of(CodeRepositoryProperty.builder()
+     * .repositoryUrl("repositoryUrl")
+     * .build()))
+     * .defaultResourceSpec(ResourceSpecProperty.builder()
+     * .instanceType("instanceType")
+     * .sageMakerImageArn("sageMakerImageArn")
+     * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+     * .build())
+     * .build())
      * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
      * .defaultResourceSpec(ResourceSpecProperty.builder()
      * .instanceType("instanceType")
@@ -11532,6 +13080,11 @@ public object sagemaker {
      * .sageMakerImageVersionArn("sageMakerImageVersionArn")
      * .build())
      * .build())
+     * .spaceStorageSettings(SpaceStorageSettingsProperty.builder()
+     * .ebsStorageSettings(EbsStorageSettingsProperty.builder()
+     * .ebsVolumeSizeInGb(123)
+     * .build())
+     * .build())
      * .build();
      * ```
      *
@@ -11541,6 +13094,56 @@ public object sagemaker {
         block: CfnSpaceSpaceSettingsPropertyDsl.() -> Unit = {}
     ): CfnSpace.SpaceSettingsProperty {
         val builder = CfnSpaceSpaceSettingsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A collection of space sharing settings.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * SpaceSharingSettingsProperty spaceSharingSettingsProperty =
+     * SpaceSharingSettingsProperty.builder()
+     * .sharingType("sharingType")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spacesharingsettings.html)
+     */
+    public inline fun cfnSpaceSpaceSharingSettingsProperty(
+        block: CfnSpaceSpaceSharingSettingsPropertyDsl.() -> Unit = {}
+    ): CfnSpace.SpaceSharingSettingsProperty {
+        val builder = CfnSpaceSpaceSharingSettingsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The storage settings for a private space.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * SpaceStorageSettingsProperty spaceStorageSettingsProperty =
+     * SpaceStorageSettingsProperty.builder()
+     * .ebsStorageSettings(EbsStorageSettingsProperty.builder()
+     * .ebsVolumeSizeInGb(123)
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spacestoragesettings.html)
+     */
+    public inline fun cfnSpaceSpaceStorageSettingsProperty(
+        block: CfnSpaceSpaceStorageSettingsPropertyDsl.() -> Unit = {}
+    ): CfnSpace.SpaceStorageSettingsProperty {
+        val builder = CfnSpaceSpaceStorageSettingsPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -11580,7 +13183,44 @@ public object sagemaker {
      * .value("value")
      * .build()))
      * .userSettings(UserSettingsProperty.builder()
+     * .codeEditorAppSettings(CodeEditorAppSettingsProperty.builder()
+     * .defaultResourceSpec(ResourceSpecProperty.builder()
+     * .instanceType("instanceType")
+     * .sageMakerImageArn("sageMakerImageArn")
+     * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+     * .build())
+     * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
+     * .build())
+     * .customFileSystemConfigs(List.of(CustomFileSystemConfigProperty.builder()
+     * .efsFileSystemConfig(EFSFileSystemConfigProperty.builder()
+     * .fileSystemId("fileSystemId")
+     * // the properties below are optional
+     * .fileSystemPath("fileSystemPath")
+     * .build())
+     * .build()))
+     * .customPosixUserConfig(CustomPosixUserConfigProperty.builder()
+     * .gid(123)
+     * .uid(123)
+     * .build())
+     * .defaultLandingUri("defaultLandingUri")
      * .executionRole("executionRole")
+     * .jupyterLabAppSettings(JupyterLabAppSettingsProperty.builder()
+     * .codeRepositories(List.of(CodeRepositoryProperty.builder()
+     * .repositoryUrl("repositoryUrl")
+     * .build()))
+     * .customImages(List.of(CustomImageProperty.builder()
+     * .appImageConfigName("appImageConfigName")
+     * .imageName("imageName")
+     * // the properties below are optional
+     * .imageVersionNumber(123)
+     * .build()))
+     * .defaultResourceSpec(ResourceSpecProperty.builder()
+     * .instanceType("instanceType")
+     * .sageMakerImageArn("sageMakerImageArn")
+     * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+     * .build())
+     * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
+     * .build())
      * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
      * .defaultResourceSpec(ResourceSpecProperty.builder()
      * .instanceType("instanceType")
@@ -11611,6 +13251,13 @@ public object sagemaker {
      * .s3KmsKeyId("s3KmsKeyId")
      * .s3OutputPath("s3OutputPath")
      * .build())
+     * .spaceStorageSettings(DefaultSpaceStorageSettingsProperty.builder()
+     * .defaultEbsStorageSettings(DefaultEbsStorageSettingsProperty.builder()
+     * .defaultEbsVolumeSizeInGb(123)
+     * .maximumEbsVolumeSizeInGb(123)
+     * .build())
+     * .build())
+     * .studioWebPortal("studioWebPortal")
      * .build())
      * .build();
      * ```
@@ -11623,6 +13270,94 @@ public object sagemaker {
         block: CfnUserProfileDsl.() -> Unit = {},
     ): CfnUserProfile {
         val builder = CfnUserProfileDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The Code Editor application settings.
+     *
+     * For more information about Code Editor, see
+     * [Get started with Code Editor in Amazon SageMaker](https://docs.aws.amazon.com/sagemaker/latest/dg/code-editor.html)
+     * .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * CodeEditorAppSettingsProperty codeEditorAppSettingsProperty =
+     * CodeEditorAppSettingsProperty.builder()
+     * .defaultResourceSpec(ResourceSpecProperty.builder()
+     * .instanceType("instanceType")
+     * .sageMakerImageArn("sageMakerImageArn")
+     * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+     * .build())
+     * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-codeeditorappsettings.html)
+     */
+    public inline fun cfnUserProfileCodeEditorAppSettingsProperty(
+        block: CfnUserProfileCodeEditorAppSettingsPropertyDsl.() -> Unit = {}
+    ): CfnUserProfile.CodeEditorAppSettingsProperty {
+        val builder = CfnUserProfileCodeEditorAppSettingsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A Git repository that SageMaker automatically displays to users for cloning in the
+     * JupyterServer application.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * CodeRepositoryProperty codeRepositoryProperty = CodeRepositoryProperty.builder()
+     * .repositoryUrl("repositoryUrl")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-coderepository.html)
+     */
+    public inline fun cfnUserProfileCodeRepositoryProperty(
+        block: CfnUserProfileCodeRepositoryPropertyDsl.() -> Unit = {}
+    ): CfnUserProfile.CodeRepositoryProperty {
+        val builder = CfnUserProfileCodeRepositoryPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The settings for assigning a custom file system to a user profile or space for an Amazon
+     * SageMaker Domain.
+     *
+     * Permitted users can access this file system in Amazon SageMaker Studio.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * CustomFileSystemConfigProperty customFileSystemConfigProperty =
+     * CustomFileSystemConfigProperty.builder()
+     * .efsFileSystemConfig(EFSFileSystemConfigProperty.builder()
+     * .fileSystemId("fileSystemId")
+     * // the properties below are optional
+     * .fileSystemPath("fileSystemPath")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-customfilesystemconfig.html)
+     */
+    public inline fun cfnUserProfileCustomFileSystemConfigProperty(
+        block: CfnUserProfileCustomFileSystemConfigPropertyDsl.() -> Unit = {}
+    ): CfnUserProfile.CustomFileSystemConfigProperty {
+        val builder = CfnUserProfileCustomFileSystemConfigPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -11653,6 +13388,148 @@ public object sagemaker {
         block: CfnUserProfileCustomImagePropertyDsl.() -> Unit = {}
     ): CfnUserProfile.CustomImageProperty {
         val builder = CfnUserProfileCustomImagePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Details about the POSIX identity that is used for file system operations.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * CustomPosixUserConfigProperty customPosixUserConfigProperty =
+     * CustomPosixUserConfigProperty.builder()
+     * .gid(123)
+     * .uid(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-customposixuserconfig.html)
+     */
+    public inline fun cfnUserProfileCustomPosixUserConfigProperty(
+        block: CfnUserProfileCustomPosixUserConfigPropertyDsl.() -> Unit = {}
+    ): CfnUserProfile.CustomPosixUserConfigProperty {
+        val builder = CfnUserProfileCustomPosixUserConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A collection of default EBS storage settings that applies to private spaces created within a
+     * domain or user profile.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * DefaultEbsStorageSettingsProperty defaultEbsStorageSettingsProperty =
+     * DefaultEbsStorageSettingsProperty.builder()
+     * .defaultEbsVolumeSizeInGb(123)
+     * .maximumEbsVolumeSizeInGb(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-defaultebsstoragesettings.html)
+     */
+    public inline fun cfnUserProfileDefaultEbsStorageSettingsProperty(
+        block: CfnUserProfileDefaultEbsStorageSettingsPropertyDsl.() -> Unit = {}
+    ): CfnUserProfile.DefaultEbsStorageSettingsProperty {
+        val builder = CfnUserProfileDefaultEbsStorageSettingsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The default storage settings for a private space.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * DefaultSpaceStorageSettingsProperty defaultSpaceStorageSettingsProperty =
+     * DefaultSpaceStorageSettingsProperty.builder()
+     * .defaultEbsStorageSettings(DefaultEbsStorageSettingsProperty.builder()
+     * .defaultEbsVolumeSizeInGb(123)
+     * .maximumEbsVolumeSizeInGb(123)
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-defaultspacestoragesettings.html)
+     */
+    public inline fun cfnUserProfileDefaultSpaceStorageSettingsProperty(
+        block: CfnUserProfileDefaultSpaceStorageSettingsPropertyDsl.() -> Unit = {}
+    ): CfnUserProfile.DefaultSpaceStorageSettingsProperty {
+        val builder = CfnUserProfileDefaultSpaceStorageSettingsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The settings for assigning a custom Amazon EFS file system to a user profile or space for an
+     * Amazon SageMaker Domain.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * EFSFileSystemConfigProperty eFSFileSystemConfigProperty = EFSFileSystemConfigProperty.builder()
+     * .fileSystemId("fileSystemId")
+     * // the properties below are optional
+     * .fileSystemPath("fileSystemPath")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-efsfilesystemconfig.html)
+     */
+    public inline fun cfnUserProfileEFSFileSystemConfigProperty(
+        block: CfnUserProfileEFSFileSystemConfigPropertyDsl.() -> Unit = {}
+    ): CfnUserProfile.EFSFileSystemConfigProperty {
+        val builder = CfnUserProfileEFSFileSystemConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The settings for the JupyterLab application.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * JupyterLabAppSettingsProperty jupyterLabAppSettingsProperty =
+     * JupyterLabAppSettingsProperty.builder()
+     * .codeRepositories(List.of(CodeRepositoryProperty.builder()
+     * .repositoryUrl("repositoryUrl")
+     * .build()))
+     * .customImages(List.of(CustomImageProperty.builder()
+     * .appImageConfigName("appImageConfigName")
+     * .imageName("imageName")
+     * // the properties below are optional
+     * .imageVersionNumber(123)
+     * .build()))
+     * .defaultResourceSpec(ResourceSpecProperty.builder()
+     * .instanceType("instanceType")
+     * .sageMakerImageArn("sageMakerImageArn")
+     * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+     * .build())
+     * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-jupyterlabappsettings.html)
+     */
+    public inline fun cfnUserProfileJupyterLabAppSettingsProperty(
+        block: CfnUserProfileJupyterLabAppSettingsPropertyDsl.() -> Unit = {}
+    ): CfnUserProfile.JupyterLabAppSettingsProperty {
+        val builder = CfnUserProfileJupyterLabAppSettingsPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -11738,7 +13615,44 @@ public object sagemaker {
      * .value("value")
      * .build()))
      * .userSettings(UserSettingsProperty.builder()
+     * .codeEditorAppSettings(CodeEditorAppSettingsProperty.builder()
+     * .defaultResourceSpec(ResourceSpecProperty.builder()
+     * .instanceType("instanceType")
+     * .sageMakerImageArn("sageMakerImageArn")
+     * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+     * .build())
+     * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
+     * .build())
+     * .customFileSystemConfigs(List.of(CustomFileSystemConfigProperty.builder()
+     * .efsFileSystemConfig(EFSFileSystemConfigProperty.builder()
+     * .fileSystemId("fileSystemId")
+     * // the properties below are optional
+     * .fileSystemPath("fileSystemPath")
+     * .build())
+     * .build()))
+     * .customPosixUserConfig(CustomPosixUserConfigProperty.builder()
+     * .gid(123)
+     * .uid(123)
+     * .build())
+     * .defaultLandingUri("defaultLandingUri")
      * .executionRole("executionRole")
+     * .jupyterLabAppSettings(JupyterLabAppSettingsProperty.builder()
+     * .codeRepositories(List.of(CodeRepositoryProperty.builder()
+     * .repositoryUrl("repositoryUrl")
+     * .build()))
+     * .customImages(List.of(CustomImageProperty.builder()
+     * .appImageConfigName("appImageConfigName")
+     * .imageName("imageName")
+     * // the properties below are optional
+     * .imageVersionNumber(123)
+     * .build()))
+     * .defaultResourceSpec(ResourceSpecProperty.builder()
+     * .instanceType("instanceType")
+     * .sageMakerImageArn("sageMakerImageArn")
+     * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+     * .build())
+     * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
+     * .build())
      * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
      * .defaultResourceSpec(ResourceSpecProperty.builder()
      * .instanceType("instanceType")
@@ -11769,6 +13683,13 @@ public object sagemaker {
      * .s3KmsKeyId("s3KmsKeyId")
      * .s3OutputPath("s3OutputPath")
      * .build())
+     * .spaceStorageSettings(DefaultSpaceStorageSettingsProperty.builder()
+     * .defaultEbsStorageSettings(DefaultEbsStorageSettingsProperty.builder()
+     * .defaultEbsVolumeSizeInGb(123)
+     * .maximumEbsVolumeSizeInGb(123)
+     * .build())
+     * .build())
+     * .studioWebPortal("studioWebPortal")
      * .build())
      * .build();
      * ```
@@ -11884,7 +13805,44 @@ public object sagemaker {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.sagemaker.*;
      * UserSettingsProperty userSettingsProperty = UserSettingsProperty.builder()
+     * .codeEditorAppSettings(CodeEditorAppSettingsProperty.builder()
+     * .defaultResourceSpec(ResourceSpecProperty.builder()
+     * .instanceType("instanceType")
+     * .sageMakerImageArn("sageMakerImageArn")
+     * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+     * .build())
+     * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
+     * .build())
+     * .customFileSystemConfigs(List.of(CustomFileSystemConfigProperty.builder()
+     * .efsFileSystemConfig(EFSFileSystemConfigProperty.builder()
+     * .fileSystemId("fileSystemId")
+     * // the properties below are optional
+     * .fileSystemPath("fileSystemPath")
+     * .build())
+     * .build()))
+     * .customPosixUserConfig(CustomPosixUserConfigProperty.builder()
+     * .gid(123)
+     * .uid(123)
+     * .build())
+     * .defaultLandingUri("defaultLandingUri")
      * .executionRole("executionRole")
+     * .jupyterLabAppSettings(JupyterLabAppSettingsProperty.builder()
+     * .codeRepositories(List.of(CodeRepositoryProperty.builder()
+     * .repositoryUrl("repositoryUrl")
+     * .build()))
+     * .customImages(List.of(CustomImageProperty.builder()
+     * .appImageConfigName("appImageConfigName")
+     * .imageName("imageName")
+     * // the properties below are optional
+     * .imageVersionNumber(123)
+     * .build()))
+     * .defaultResourceSpec(ResourceSpecProperty.builder()
+     * .instanceType("instanceType")
+     * .sageMakerImageArn("sageMakerImageArn")
+     * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+     * .build())
+     * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
+     * .build())
      * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
      * .defaultResourceSpec(ResourceSpecProperty.builder()
      * .instanceType("instanceType")
@@ -11915,6 +13873,13 @@ public object sagemaker {
      * .s3KmsKeyId("s3KmsKeyId")
      * .s3OutputPath("s3OutputPath")
      * .build())
+     * .spaceStorageSettings(DefaultSpaceStorageSettingsProperty.builder()
+     * .defaultEbsStorageSettings(DefaultEbsStorageSettingsProperty.builder()
+     * .defaultEbsVolumeSizeInGb(123)
+     * .maximumEbsVolumeSizeInGb(123)
+     * .build())
+     * .build())
+     * .studioWebPortal("studioWebPortal")
      * .build();
      * ```
      *

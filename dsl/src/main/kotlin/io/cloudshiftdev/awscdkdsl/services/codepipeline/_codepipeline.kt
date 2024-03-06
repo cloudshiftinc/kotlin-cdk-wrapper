@@ -29,12 +29,18 @@ import software.amazon.awscdk.services.codepipeline.CrossRegionSupport
 import software.amazon.awscdk.services.codepipeline.CustomActionProperty
 import software.amazon.awscdk.services.codepipeline.CustomActionRegistration
 import software.amazon.awscdk.services.codepipeline.CustomActionRegistrationProps
+import software.amazon.awscdk.services.codepipeline.GitConfiguration
+import software.amazon.awscdk.services.codepipeline.GitPushFilter
 import software.amazon.awscdk.services.codepipeline.Pipeline
 import software.amazon.awscdk.services.codepipeline.PipelineNotifyOnOptions
 import software.amazon.awscdk.services.codepipeline.PipelineProps
 import software.amazon.awscdk.services.codepipeline.StageOptions
 import software.amazon.awscdk.services.codepipeline.StagePlacement
 import software.amazon.awscdk.services.codepipeline.StageProps
+import software.amazon.awscdk.services.codepipeline.Trigger
+import software.amazon.awscdk.services.codepipeline.TriggerProps
+import software.amazon.awscdk.services.codepipeline.Variable
+import software.amazon.awscdk.services.codepipeline.VariableProps
 import software.constructs.Construct
 
 public object codepipeline {
@@ -363,7 +369,11 @@ public object codepipeline {
      *
      * For more information, see
      * [What Is CodePipeline?](https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html)
-     * in the *AWS CodePipeline User Guide* .
+     * in the *CodePipeline User Guide* .
+     *
+     * For an example in YAML and JSON that contains the parameters in this reference, see
+     * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#aws-resource-codepipeline-pipeline--examples)
+     * .
      *
      * Example:
      * ```
@@ -428,11 +438,52 @@ public object codepipeline {
      * .reason("reason")
      * .stageName("stageName")
      * .build()))
+     * .executionMode("executionMode")
      * .name("name")
+     * .pipelineType("pipelineType")
      * .restartExecutionOnUpdate(false)
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
+     * .build()))
+     * .triggers(List.of(PipelineTriggerDeclarationProperty.builder()
+     * .providerType("providerType")
+     * // the properties below are optional
+     * .gitConfiguration(GitConfigurationProperty.builder()
+     * .sourceActionName("sourceActionName")
+     * // the properties below are optional
+     * .pullRequest(List.of(GitPullRequestFilterProperty.builder()
+     * .branches(GitBranchFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build())
+     * .events(List.of("events"))
+     * .filePaths(GitFilePathFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build())
+     * .build()))
+     * .push(List.of(GitPushFilterProperty.builder()
+     * .branches(GitBranchFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build())
+     * .filePaths(GitFilePathFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build())
+     * .tags(GitTagFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build())
+     * .build()))
+     * .build())
+     * .build()))
+     * .variables(List.of(VariableDeclarationProperty.builder()
+     * .name("name")
+     * // the properties below are optional
+     * .defaultValue("defaultValue")
+     * .description("description")
      * .build()))
      * .build();
      * ```
@@ -451,6 +502,12 @@ public object codepipeline {
 
     /**
      * Represents information about an action declaration.
+     *
+     * Documentation for the `timeoutInMinutes` parameter in the `ActionDeclaration` is not yet
+     * available for CloudFormation and CDK resources in CodePipeline. For more information about
+     * the configurable timeout for manual approval actions, see the
+     * [ActionDeclaration](https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_ActionDeclaration.html)
+     * in the CodePipeline API Reference.
      *
      * Example:
      * ```
@@ -643,6 +700,202 @@ public object codepipeline {
     }
 
     /**
+     * The Git repository branches specified as filter criteria to start the pipeline.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.codepipeline.*;
+     * GitBranchFilterCriteriaProperty gitBranchFilterCriteriaProperty =
+     * GitBranchFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitbranchfiltercriteria.html)
+     */
+    public inline fun cfnPipelineGitBranchFilterCriteriaProperty(
+        block: CfnPipelineGitBranchFilterCriteriaPropertyDsl.() -> Unit = {}
+    ): CfnPipeline.GitBranchFilterCriteriaProperty {
+        val builder = CfnPipelineGitBranchFilterCriteriaPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A type of trigger configuration for Git-based source actions.
+     *
+     * You can specify the Git configuration trigger type for all third-party Git-based source
+     * actions that are supported by the `CodeStarSourceConnection` action type.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.codepipeline.*;
+     * GitConfigurationProperty gitConfigurationProperty = GitConfigurationProperty.builder()
+     * .sourceActionName("sourceActionName")
+     * // the properties below are optional
+     * .pullRequest(List.of(GitPullRequestFilterProperty.builder()
+     * .branches(GitBranchFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build())
+     * .events(List.of("events"))
+     * .filePaths(GitFilePathFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build())
+     * .build()))
+     * .push(List.of(GitPushFilterProperty.builder()
+     * .branches(GitBranchFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build())
+     * .filePaths(GitFilePathFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build())
+     * .tags(GitTagFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build())
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitconfiguration.html)
+     */
+    public inline fun cfnPipelineGitConfigurationProperty(
+        block: CfnPipelineGitConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnPipeline.GitConfigurationProperty {
+        val builder = CfnPipelineGitConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The Git repository file paths specified as filter criteria to start the pipeline.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.codepipeline.*;
+     * GitFilePathFilterCriteriaProperty gitFilePathFilterCriteriaProperty =
+     * GitFilePathFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitfilepathfiltercriteria.html)
+     */
+    public inline fun cfnPipelineGitFilePathFilterCriteriaProperty(
+        block: CfnPipelineGitFilePathFilterCriteriaPropertyDsl.() -> Unit = {}
+    ): CfnPipeline.GitFilePathFilterCriteriaProperty {
+        val builder = CfnPipelineGitFilePathFilterCriteriaPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The event criteria for the pull request trigger configuration, such as the lists of branches
+     * or file paths to include and exclude.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.codepipeline.*;
+     * GitPullRequestFilterProperty gitPullRequestFilterProperty =
+     * GitPullRequestFilterProperty.builder()
+     * .branches(GitBranchFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build())
+     * .events(List.of("events"))
+     * .filePaths(GitFilePathFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitpullrequestfilter.html)
+     */
+    public inline fun cfnPipelineGitPullRequestFilterProperty(
+        block: CfnPipelineGitPullRequestFilterPropertyDsl.() -> Unit = {}
+    ): CfnPipeline.GitPullRequestFilterProperty {
+        val builder = CfnPipelineGitPullRequestFilterPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The event criteria that specify when a specified repository event will start the pipeline for
+     * the specified trigger configuration, such as the lists of Git tags to include and exclude.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.codepipeline.*;
+     * GitPushFilterProperty gitPushFilterProperty = GitPushFilterProperty.builder()
+     * .branches(GitBranchFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build())
+     * .filePaths(GitFilePathFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build())
+     * .tags(GitTagFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitpushfilter.html)
+     */
+    public inline fun cfnPipelineGitPushFilterProperty(
+        block: CfnPipelineGitPushFilterPropertyDsl.() -> Unit = {}
+    ): CfnPipeline.GitPushFilterProperty {
+        val builder = CfnPipelineGitPushFilterPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The Git tags specified as filter criteria for whether a Git tag repository event will start
+     * the pipeline.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.codepipeline.*;
+     * GitTagFilterCriteriaProperty gitTagFilterCriteriaProperty =
+     * GitTagFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gittagfiltercriteria.html)
+     */
+    public inline fun cfnPipelineGitTagFilterCriteriaProperty(
+        block: CfnPipelineGitTagFilterCriteriaPropertyDsl.() -> Unit = {}
+    ): CfnPipeline.GitTagFilterCriteriaProperty {
+        val builder = CfnPipelineGitTagFilterCriteriaPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Represents information about an artifact to be worked on, such as a test or build artifact.
      *
      * Example:
@@ -684,6 +937,65 @@ public object codepipeline {
         block: CfnPipelineOutputArtifactPropertyDsl.() -> Unit = {}
     ): CfnPipeline.OutputArtifactProperty {
         val builder = CfnPipelineOutputArtifactPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Represents information about the specified trigger configuration, such as the filter criteria
+     * and the source stage for the action that contains the trigger.
+     *
+     * This is only supported for the `CodeStarSourceConnection` action type. &gt; When a trigger
+     * configuration is specified, default change detection for repository and branch commits is
+     * disabled.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.codepipeline.*;
+     * PipelineTriggerDeclarationProperty pipelineTriggerDeclarationProperty =
+     * PipelineTriggerDeclarationProperty.builder()
+     * .providerType("providerType")
+     * // the properties below are optional
+     * .gitConfiguration(GitConfigurationProperty.builder()
+     * .sourceActionName("sourceActionName")
+     * // the properties below are optional
+     * .pullRequest(List.of(GitPullRequestFilterProperty.builder()
+     * .branches(GitBranchFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build())
+     * .events(List.of("events"))
+     * .filePaths(GitFilePathFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build())
+     * .build()))
+     * .push(List.of(GitPushFilterProperty.builder()
+     * .branches(GitBranchFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build())
+     * .filePaths(GitFilePathFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build())
+     * .tags(GitTagFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build())
+     * .build()))
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-pipelinetriggerdeclaration.html)
+     */
+    public inline fun cfnPipelinePipelineTriggerDeclarationProperty(
+        block: CfnPipelinePipelineTriggerDeclarationPropertyDsl.() -> Unit = {}
+    ): CfnPipeline.PipelineTriggerDeclarationProperty {
+        val builder = CfnPipelinePipelineTriggerDeclarationPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -754,11 +1066,52 @@ public object codepipeline {
      * .reason("reason")
      * .stageName("stageName")
      * .build()))
+     * .executionMode("executionMode")
      * .name("name")
+     * .pipelineType("pipelineType")
      * .restartExecutionOnUpdate(false)
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
+     * .build()))
+     * .triggers(List.of(PipelineTriggerDeclarationProperty.builder()
+     * .providerType("providerType")
+     * // the properties below are optional
+     * .gitConfiguration(GitConfigurationProperty.builder()
+     * .sourceActionName("sourceActionName")
+     * // the properties below are optional
+     * .pullRequest(List.of(GitPullRequestFilterProperty.builder()
+     * .branches(GitBranchFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build())
+     * .events(List.of("events"))
+     * .filePaths(GitFilePathFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build())
+     * .build()))
+     * .push(List.of(GitPushFilterProperty.builder()
+     * .branches(GitBranchFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build())
+     * .filePaths(GitFilePathFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build())
+     * .tags(GitTagFilterCriteriaProperty.builder()
+     * .excludes(List.of("excludes"))
+     * .includes(List.of("includes"))
+     * .build())
+     * .build()))
+     * .build())
+     * .build()))
+     * .variables(List.of(VariableDeclarationProperty.builder()
+     * .name("name")
+     * // the properties below are optional
+     * .defaultValue("defaultValue")
+     * .description("description")
      * .build()))
      * .build();
      * ```
@@ -844,6 +1197,32 @@ public object codepipeline {
         block: CfnPipelineStageTransitionPropertyDsl.() -> Unit = {}
     ): CfnPipeline.StageTransitionProperty {
         val builder = CfnPipelineStageTransitionPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A variable declared at the pipeline level.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.codepipeline.*;
+     * VariableDeclarationProperty variableDeclarationProperty = VariableDeclarationProperty.builder()
+     * .name("name")
+     * // the properties below are optional
+     * .defaultValue("defaultValue")
+     * .description("description")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-variabledeclaration.html)
+     */
+    public inline fun cfnPipelineVariableDeclarationProperty(
+        block: CfnPipelineVariableDeclarationPropertyDsl.() -> Unit = {}
+    ): CfnPipeline.VariableDeclarationProperty {
+        val builder = CfnPipelineVariableDeclarationPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -1190,6 +1569,63 @@ public object codepipeline {
     }
 
     /**
+     * Git configuration for trigger.
+     *
+     * Example:
+     * ```
+     * CodeStarConnectionsSourceAction sourceAction;
+     * CodeBuildAction buildAction;
+     * Pipeline.Builder.create(this, "Pipeline")
+     * .pipelineType(PipelineType.V2)
+     * .stages(List.of(StageProps.builder()
+     * .stageName("Source")
+     * .actions(List.of(sourceAction))
+     * .build(), StageProps.builder()
+     * .stageName("Build")
+     * .actions(List.of(buildAction))
+     * .build()))
+     * .triggers(List.of(TriggerProps.builder()
+     * .providerType(ProviderType.CODE_STAR_SOURCE_CONNECTION)
+     * .gitConfiguration(GitConfiguration.builder()
+     * .sourceAction(sourceAction)
+     * .pushFilter(List.of(GitPushFilter.builder()
+     * .tagsExcludes(List.of("exclude1", "exclude2"))
+     * .tagsIncludes(List.of("include*"))
+     * .build()))
+     * .build())
+     * .build()))
+     * .build();
+     * ```
+     */
+    public inline fun gitConfiguration(
+        block: GitConfigurationDsl.() -> Unit = {}
+    ): GitConfiguration {
+        val builder = GitConfigurationDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Git push filter for trigger.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.codepipeline.*;
+     * GitPushFilter gitPushFilter = GitPushFilter.builder()
+     * .tagsExcludes(List.of("tagsExcludes"))
+     * .tagsIncludes(List.of("tagsIncludes"))
+     * .build();
+     * ```
+     */
+    public inline fun gitPushFilter(block: GitPushFilterDsl.() -> Unit = {}): GitPushFilter {
+        val builder = GitPushFilterDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * An AWS CodePipeline pipeline with its associated IAM role and S3 bucket.
      *
      * Example:
@@ -1360,6 +1796,140 @@ public object codepipeline {
      */
     public inline fun stageProps(block: StagePropsDsl.() -> Unit = {}): StageProps {
         val builder = StagePropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Trigger.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.codepipeline.*;
+     * Action action;
+     * Trigger trigger = Trigger.Builder.create()
+     * .providerType(ProviderType.CODE_STAR_SOURCE_CONNECTION)
+     * // the properties below are optional
+     * .gitConfiguration(GitConfiguration.builder()
+     * .sourceAction(action)
+     * // the properties below are optional
+     * .pushFilter(List.of(GitPushFilter.builder()
+     * .tagsExcludes(List.of("tagsExcludes"))
+     * .tagsIncludes(List.of("tagsIncludes"))
+     * .build()))
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun trigger(block: TriggerDsl.() -> Unit = {}): Trigger {
+        val builder = TriggerDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties of trigger.
+     *
+     * Example:
+     * ```
+     * Pipeline pipeline;
+     * CodeStarConnectionsSourceAction sourceAction;
+     * pipeline.addTrigger(TriggerProps.builder()
+     * .providerType(ProviderType.CODE_STAR_SOURCE_CONNECTION)
+     * .gitConfiguration(GitConfiguration.builder()
+     * .sourceAction(sourceAction)
+     * .pushFilter(List.of(GitPushFilter.builder()
+     * .tagsExcludes(List.of("exclude1", "exclude2"))
+     * .tagsIncludes(List.of("include*"))
+     * .build()))
+     * .build())
+     * .build());
+     * ```
+     */
+    public inline fun triggerProps(block: TriggerPropsDsl.() -> Unit = {}): TriggerProps {
+        val builder = TriggerPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Pipeline-Level variable.
+     *
+     * Example:
+     * ```
+     * S3SourceAction sourceAction;
+     * Artifact sourceOutput;
+     * Bucket deployBucket;
+     * // Pipeline-level variable
+     * Variable variable = Variable.Builder.create()
+     * .variableName("bucket-var")
+     * .description("description")
+     * .defaultValue("sample")
+     * .build();
+     * Pipeline.Builder.create(this, "Pipeline")
+     * .pipelineType(PipelineType.V2)
+     * .variables(List.of(variable))
+     * .stages(List.of(StageProps.builder()
+     * .stageName("Source")
+     * .actions(List.of(sourceAction))
+     * .build(), StageProps.builder()
+     * .stageName("Deploy")
+     * .actions(List.of(
+     * S3DeployAction.Builder.create()
+     * .actionName("DeployAction")
+     * // can reference the variables
+     * .objectKey(String.format("%s.txt", variable.reference()))
+     * .input(sourceOutput)
+     * .bucket(deployBucket)
+     * .build()))
+     * .build()))
+     * .build();
+     * ```
+     */
+    public inline fun variable(block: VariableDsl.() -> Unit = {}): Variable {
+        val builder = VariableDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties of pipeline-level variable.
+     *
+     * Example:
+     * ```
+     * S3SourceAction sourceAction;
+     * Artifact sourceOutput;
+     * Bucket deployBucket;
+     * // Pipeline-level variable
+     * Variable variable = Variable.Builder.create()
+     * .variableName("bucket-var")
+     * .description("description")
+     * .defaultValue("sample")
+     * .build();
+     * Pipeline.Builder.create(this, "Pipeline")
+     * .pipelineType(PipelineType.V2)
+     * .variables(List.of(variable))
+     * .stages(List.of(StageProps.builder()
+     * .stageName("Source")
+     * .actions(List.of(sourceAction))
+     * .build(), StageProps.builder()
+     * .stageName("Deploy")
+     * .actions(List.of(
+     * S3DeployAction.Builder.create()
+     * .actionName("DeployAction")
+     * // can reference the variables
+     * .objectKey(String.format("%s.txt", variable.reference()))
+     * .input(sourceOutput)
+     * .bucket(deployBucket)
+     * .build()))
+     * .build()))
+     * .build();
+     * ```
+     */
+    public inline fun variableProps(block: VariablePropsDsl.() -> Unit = {}): VariableProps {
+        val builder = VariablePropsDsl()
         builder.apply(block)
         return builder.build()
     }

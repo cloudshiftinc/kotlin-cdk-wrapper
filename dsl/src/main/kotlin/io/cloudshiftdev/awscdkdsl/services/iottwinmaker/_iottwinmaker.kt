@@ -41,6 +41,10 @@ public object iottwinmaker {
      * .componentTypeId("componentTypeId")
      * .workspaceId("workspaceId")
      * // the properties below are optional
+     * .compositeComponentTypes(Map.of(
+     * "compositeComponentTypesKey", CompositeComponentTypeProperty.builder()
+     * .componentTypeId("componentTypeId")
+     * .build()))
      * .description("description")
      * .extendsFrom(List.of("extendsFrom"))
      * .functions(Map.of(
@@ -116,6 +120,30 @@ public object iottwinmaker {
         block: CfnComponentTypeDsl.() -> Unit = {},
     ): CfnComponentType {
         val builder = CfnComponentTypeDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies the ID of the composite component type.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.iottwinmaker.*;
+     * CompositeComponentTypeProperty compositeComponentTypeProperty =
+     * CompositeComponentTypeProperty.builder()
+     * .componentTypeId("componentTypeId")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-compositecomponenttype.html)
+     */
+    public inline fun cfnComponentTypeCompositeComponentTypeProperty(
+        block: CfnComponentTypeCompositeComponentTypePropertyDsl.() -> Unit = {}
+    ): CfnComponentType.CompositeComponentTypeProperty {
+        val builder = CfnComponentTypeCompositeComponentTypePropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -407,6 +435,10 @@ public object iottwinmaker {
      * .componentTypeId("componentTypeId")
      * .workspaceId("workspaceId")
      * // the properties below are optional
+     * .compositeComponentTypes(Map.of(
+     * "compositeComponentTypesKey", CompositeComponentTypeProperty.builder()
+     * .componentTypeId("componentTypeId")
+     * .build()))
      * .description("description")
      * .extendsFrom(List.of("extendsFrom"))
      * .functions(Map.of(
@@ -607,6 +639,38 @@ public object iottwinmaker {
      * .state("state")
      * .build())
      * .build()))
+     * .compositeComponents(Map.of(
+     * "compositeComponentsKey", CompositeComponentProperty.builder()
+     * .componentName("componentName")
+     * .componentPath("componentPath")
+     * .componentTypeId("componentTypeId")
+     * .description("description")
+     * .properties(Map.of(
+     * "propertiesKey", PropertyProperty.builder()
+     * .definition(definition)
+     * .value(DataValueProperty.builder()
+     * .booleanValue(false)
+     * .doubleValue(123)
+     * .expression("expression")
+     * .integerValue(123)
+     * .listValue(List.of(dataValueProperty_))
+     * .longValue(123)
+     * .mapValue(Map.of(
+     * "mapValueKey", dataValueProperty_))
+     * .relationshipValue(relationshipValue)
+     * .stringValue("stringValue")
+     * .build())
+     * .build()))
+     * .propertyGroups(Map.of(
+     * "propertyGroupsKey", PropertyGroupProperty.builder()
+     * .groupType("groupType")
+     * .propertyNames(List.of("propertyNames"))
+     * .build()))
+     * .status(StatusProperty.builder()
+     * .error(error)
+     * .state("state")
+     * .build())
+     * .build()))
      * .description("description")
      * .entityId("entityId")
      * .parentEntityId("parentEntityId")
@@ -678,6 +742,61 @@ public object iottwinmaker {
         block: CfnEntityComponentPropertyDsl.() -> Unit = {}
     ): CfnEntity.ComponentProperty {
         val builder = CfnEntityComponentPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Information about a composite component.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.iottwinmaker.*;
+     * DataValueProperty dataValueProperty_;
+     * Object definition;
+     * Object error;
+     * Object relationshipValue;
+     * CompositeComponentProperty compositeComponentProperty = CompositeComponentProperty.builder()
+     * .componentName("componentName")
+     * .componentPath("componentPath")
+     * .componentTypeId("componentTypeId")
+     * .description("description")
+     * .properties(Map.of(
+     * "propertiesKey", PropertyProperty.builder()
+     * .definition(definition)
+     * .value(DataValueProperty.builder()
+     * .booleanValue(false)
+     * .doubleValue(123)
+     * .expression("expression")
+     * .integerValue(123)
+     * .listValue(List.of(dataValueProperty_))
+     * .longValue(123)
+     * .mapValue(Map.of(
+     * "mapValueKey", dataValueProperty_))
+     * .relationshipValue(relationshipValue)
+     * .stringValue("stringValue")
+     * .build())
+     * .build()))
+     * .propertyGroups(Map.of(
+     * "propertyGroupsKey", PropertyGroupProperty.builder()
+     * .groupType("groupType")
+     * .propertyNames(List.of("propertyNames"))
+     * .build()))
+     * .status(StatusProperty.builder()
+     * .error(error)
+     * .state("state")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-entity-compositecomponent.html)
+     */
+    public inline fun cfnEntityCompositeComponentProperty(
+        block: CfnEntityCompositeComponentPropertyDsl.() -> Unit = {}
+    ): CfnEntity.CompositeComponentProperty {
+        val builder = CfnEntityCompositeComponentPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -934,6 +1053,38 @@ public object iottwinmaker {
      * .componentName("componentName")
      * .componentTypeId("componentTypeId")
      * .definedIn("definedIn")
+     * .description("description")
+     * .properties(Map.of(
+     * "propertiesKey", PropertyProperty.builder()
+     * .definition(definition)
+     * .value(DataValueProperty.builder()
+     * .booleanValue(false)
+     * .doubleValue(123)
+     * .expression("expression")
+     * .integerValue(123)
+     * .listValue(List.of(dataValueProperty_))
+     * .longValue(123)
+     * .mapValue(Map.of(
+     * "mapValueKey", dataValueProperty_))
+     * .relationshipValue(relationshipValue)
+     * .stringValue("stringValue")
+     * .build())
+     * .build()))
+     * .propertyGroups(Map.of(
+     * "propertyGroupsKey", PropertyGroupProperty.builder()
+     * .groupType("groupType")
+     * .propertyNames(List.of("propertyNames"))
+     * .build()))
+     * .status(StatusProperty.builder()
+     * .error(error)
+     * .state("state")
+     * .build())
+     * .build()))
+     * .compositeComponents(Map.of(
+     * "compositeComponentsKey", CompositeComponentProperty.builder()
+     * .componentName("componentName")
+     * .componentPath("componentPath")
+     * .componentTypeId("componentTypeId")
      * .description("description")
      * .properties(Map.of(
      * "propertiesKey", PropertyProperty.builder()

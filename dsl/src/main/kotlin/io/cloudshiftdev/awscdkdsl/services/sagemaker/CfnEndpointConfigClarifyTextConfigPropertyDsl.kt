@@ -16,6 +16,11 @@ import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnEndpointConfig
 
 /**
+ * A parameter used to configure the SageMaker Clarify explainer to treat text features as text so
+ * that explanations are provided for individual units of text.
+ *
+ * Required only for natural language processing (NLP) explainability.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -34,12 +39,24 @@ public class CfnEndpointConfigClarifyTextConfigPropertyDsl {
     private val cdkBuilder: CfnEndpointConfig.ClarifyTextConfigProperty.Builder =
         CfnEndpointConfig.ClarifyTextConfigProperty.builder()
 
-    /** @param granularity the value to be set. */
+    /**
+     * @param granularity The unit of granularity for the analysis of text features. For example, if
+     *   the unit is `'token'` , then each token (like a word in English) of the text is treated as
+     *   a feature. SHAP values are computed for each unit/feature.
+     */
     public fun granularity(granularity: String) {
         cdkBuilder.granularity(granularity)
     }
 
-    /** @param language the value to be set. */
+    /**
+     * @param language Specifies the language of the text features in
+     *   [ISO 639-1](https://docs.aws.amazon.com/
+     *   https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) or
+     *   [ISO 639-3](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_639-3) code of a
+     *   supported language.
+     *
+     * For a mix of multiple languages, use code `'xx'` .
+     */
     public fun language(language: String) {
         cdkBuilder.language(language)
     }

@@ -72,7 +72,7 @@ public class StateMachinePropsDsl {
         cdkBuilder.definitionBody(definitionBody)
     }
 
-    /** @param definitionSubstitutions substitutions for the definition body aas a key-value map. */
+    /** @param definitionSubstitutions substitutions for the definition body as a key-value map. */
     public fun definitionSubstitutions(definitionSubstitutions: Map<String, String>) {
         cdkBuilder.definitionSubstitutions(definitionSubstitutions)
     }

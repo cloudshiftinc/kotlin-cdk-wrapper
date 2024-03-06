@@ -167,6 +167,25 @@ public class DatabaseClusterFromSnapshotPropsDsl {
         cdkBuilder.deletionProtection(deletionProtection)
     }
 
+    /**
+     * @param domain Directory ID for associating the DB cluster with a specific Active Directory.
+     *   Necessary for enabling Kerberos authentication. If specified, the DB cluster joins the
+     *   given Active Directory, enabling Kerberos authentication. If not specified, the DB cluster
+     *   will not be associated with any Active Directory, and Kerberos authentication will not be
+     *   enabled.
+     */
+    public fun domain(domain: String) {
+        cdkBuilder.domain(domain)
+    }
+
+    /**
+     * @param domainRole The IAM role to be used when making API calls to the Directory Service. The
+     *   role needs the AWS-managed policy `AmazonRDSDirectoryServiceAccess` or equivalent.
+     */
+    public fun domainRole(domainRole: IRole) {
+        cdkBuilder.domainRole(domainRole)
+    }
+
     /** @param engine What kind of database to start. */
     public fun engine(engine: IClusterEngine) {
         cdkBuilder.engine(engine)

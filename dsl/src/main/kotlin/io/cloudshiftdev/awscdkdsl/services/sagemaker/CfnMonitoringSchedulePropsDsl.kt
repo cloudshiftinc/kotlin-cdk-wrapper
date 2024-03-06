@@ -55,6 +55,7 @@ import software.amazon.awscdk.services.sagemaker.CfnMonitoringScheduleProps
  * .build())
  * .localPath("localPath")
  * // the properties below are optional
+ * .excludeFeaturesAttribute("excludeFeaturesAttribute")
  * .s3DataDistributionType("s3DataDistributionType")
  * .s3InputMode("s3InputMode")
  * .build())
@@ -62,6 +63,7 @@ import software.amazon.awscdk.services.sagemaker.CfnMonitoringScheduleProps
  * .endpointName("endpointName")
  * .localPath("localPath")
  * // the properties below are optional
+ * .excludeFeaturesAttribute("excludeFeaturesAttribute")
  * .s3DataDistributionType("s3DataDistributionType")
  * .s3InputMode("s3InputMode")
  * .build())
@@ -115,6 +117,9 @@ import software.amazon.awscdk.services.sagemaker.CfnMonitoringScheduleProps
  * .monitoringType("monitoringType")
  * .scheduleConfig(ScheduleConfigProperty.builder()
  * .scheduleExpression("scheduleExpression")
+ * // the properties below are optional
+ * .dataAnalysisEndTime("dataAnalysisEndTime")
+ * .dataAnalysisStartTime("dataAnalysisStartTime")
  * .build())
  * .build())
  * .monitoringScheduleName("monitoringScheduleName")

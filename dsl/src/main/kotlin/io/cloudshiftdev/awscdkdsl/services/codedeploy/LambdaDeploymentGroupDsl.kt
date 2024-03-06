@@ -166,6 +166,18 @@ public class LambdaDeploymentGroupDsl(
     }
 
     /**
+     * Whether to skip the step of checking CloudWatch alarms during the deployment process.
+     *
+     * Default: - false
+     *
+     * @param ignoreAlarmConfiguration Whether to skip the step of checking CloudWatch alarms during
+     *   the deployment process.
+     */
+    public fun ignoreAlarmConfiguration(ignoreAlarmConfiguration: Boolean) {
+        cdkBuilder.ignoreAlarmConfiguration(ignoreAlarmConfiguration)
+    }
+
+    /**
      * Whether to continue a deployment even if fetching the alarm status from CloudWatch failed.
      *
      * Default: false

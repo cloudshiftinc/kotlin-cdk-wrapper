@@ -17,6 +17,8 @@ import software.amazon.awscdk.services.opensearchserverless.CfnAccessPolicy
 import software.amazon.awscdk.services.opensearchserverless.CfnAccessPolicyProps
 import software.amazon.awscdk.services.opensearchserverless.CfnCollection
 import software.amazon.awscdk.services.opensearchserverless.CfnCollectionProps
+import software.amazon.awscdk.services.opensearchserverless.CfnLifecyclePolicy
+import software.amazon.awscdk.services.opensearchserverless.CfnLifecyclePolicyProps
 import software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig
 import software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfigProps
 import software.amazon.awscdk.services.opensearchserverless.CfnSecurityPolicy
@@ -114,6 +116,7 @@ public object opensearchserverless {
      * .name("name")
      * // the properties below are optional
      * .description("description")
+     * .standbyReplicas("standbyReplicas")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -146,6 +149,7 @@ public object opensearchserverless {
      * .name("name")
      * // the properties below are optional
      * .description("description")
+     * .standbyReplicas("standbyReplicas")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -160,6 +164,68 @@ public object opensearchserverless {
         block: CfnCollectionPropsDsl.() -> Unit = {}
     ): CfnCollectionProps {
         val builder = CfnCollectionPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Creates a lifecyle policy to be applied to OpenSearch Serverless indexes.
+     *
+     * Lifecycle policies define the number of days or hours to retain the data on an OpenSearch
+     * Serverless index. For more information, see
+     * [Creating data lifecycle policies](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-lifecycle.html#serverless-lifecycle-create)
+     * .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.opensearchserverless.*;
+     * CfnLifecyclePolicy cfnLifecyclePolicy = CfnLifecyclePolicy.Builder.create(this,
+     * "MyCfnLifecyclePolicy")
+     * .name("name")
+     * .policy("policy")
+     * .type("type")
+     * // the properties below are optional
+     * .description("description")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-lifecyclepolicy.html)
+     */
+    public inline fun cfnLifecyclePolicy(
+        scope: Construct,
+        id: String,
+        block: CfnLifecyclePolicyDsl.() -> Unit = {},
+    ): CfnLifecyclePolicy {
+        val builder = CfnLifecyclePolicyDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnLifecyclePolicy`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.opensearchserverless.*;
+     * CfnLifecyclePolicyProps cfnLifecyclePolicyProps = CfnLifecyclePolicyProps.builder()
+     * .name("name")
+     * .policy("policy")
+     * .type("type")
+     * // the properties below are optional
+     * .description("description")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-lifecyclepolicy.html)
+     */
+    public inline fun cfnLifecyclePolicyProps(
+        block: CfnLifecyclePolicyPropsDsl.() -> Unit = {}
+    ): CfnLifecyclePolicyProps {
+        val builder = CfnLifecyclePolicyPropsDsl()
         builder.apply(block)
         return builder.build()
     }

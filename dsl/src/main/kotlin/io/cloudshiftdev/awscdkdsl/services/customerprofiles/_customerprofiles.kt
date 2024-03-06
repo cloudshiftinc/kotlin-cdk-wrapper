@@ -265,11 +265,68 @@ public object customerprofiles {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.customerprofiles.*;
      * CfnDomain cfnDomain = CfnDomain.Builder.create(this, "MyCfnDomain")
+     * .defaultExpirationDays(123)
      * .domainName("domainName")
      * // the properties below are optional
      * .deadLetterQueueUrl("deadLetterQueueUrl")
      * .defaultEncryptionKey("defaultEncryptionKey")
-     * .defaultExpirationDays(123)
+     * .matching(MatchingProperty.builder()
+     * .enabled(false)
+     * // the properties below are optional
+     * .autoMerging(AutoMergingProperty.builder()
+     * .enabled(false)
+     * // the properties below are optional
+     * .conflictResolution(ConflictResolutionProperty.builder()
+     * .conflictResolvingModel("conflictResolvingModel")
+     * // the properties below are optional
+     * .sourceName("sourceName")
+     * .build())
+     * .consolidation(ConsolidationProperty.builder()
+     * .matchingAttributesList(List.of(List.of("matchingAttributesList")))
+     * .build())
+     * .minAllowedConfidenceScoreForMerging(123)
+     * .build())
+     * .exportingConfig(ExportingConfigProperty.builder()
+     * .s3Exporting(S3ExportingConfigProperty.builder()
+     * .s3BucketName("s3BucketName")
+     * // the properties below are optional
+     * .s3KeyName("s3KeyName")
+     * .build())
+     * .build())
+     * .jobSchedule(JobScheduleProperty.builder()
+     * .dayOfTheWeek("dayOfTheWeek")
+     * .time("time")
+     * .build())
+     * .build())
+     * .ruleBasedMatching(RuleBasedMatchingProperty.builder()
+     * .enabled(false)
+     * // the properties below are optional
+     * .attributeTypesSelector(AttributeTypesSelectorProperty.builder()
+     * .attributeMatchingModel("attributeMatchingModel")
+     * // the properties below are optional
+     * .address(List.of("address"))
+     * .emailAddress(List.of("emailAddress"))
+     * .phoneNumber(List.of("phoneNumber"))
+     * .build())
+     * .conflictResolution(ConflictResolutionProperty.builder()
+     * .conflictResolvingModel("conflictResolvingModel")
+     * // the properties below are optional
+     * .sourceName("sourceName")
+     * .build())
+     * .exportingConfig(ExportingConfigProperty.builder()
+     * .s3Exporting(S3ExportingConfigProperty.builder()
+     * .s3BucketName("s3BucketName")
+     * // the properties below are optional
+     * .s3KeyName("s3KeyName")
+     * .build())
+     * .build())
+     * .matchingRules(List.of(MatchingRuleProperty.builder()
+     * .rule(List.of("rule"))
+     * .build()))
+     * .maxAllowedRuleLevelForMatching(123)
+     * .maxAllowedRuleLevelForMerging(123)
+     * .status("status")
+     * .build())
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -290,6 +347,278 @@ public object customerprofiles {
     }
 
     /**
+     * Configures information about the `AttributeTypesSelector` which rule-based identity
+     * resolution uses to match profiles.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.customerprofiles.*;
+     * AttributeTypesSelectorProperty attributeTypesSelectorProperty =
+     * AttributeTypesSelectorProperty.builder()
+     * .attributeMatchingModel("attributeMatchingModel")
+     * // the properties below are optional
+     * .address(List.of("address"))
+     * .emailAddress(List.of("emailAddress"))
+     * .phoneNumber(List.of("phoneNumber"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-attributetypesselector.html)
+     */
+    public inline fun cfnDomainAttributeTypesSelectorProperty(
+        block: CfnDomainAttributeTypesSelectorPropertyDsl.() -> Unit = {}
+    ): CfnDomain.AttributeTypesSelectorProperty {
+        val builder = CfnDomainAttributeTypesSelectorPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Configuration information about the auto-merging process.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.customerprofiles.*;
+     * AutoMergingProperty autoMergingProperty = AutoMergingProperty.builder()
+     * .enabled(false)
+     * // the properties below are optional
+     * .conflictResolution(ConflictResolutionProperty.builder()
+     * .conflictResolvingModel("conflictResolvingModel")
+     * // the properties below are optional
+     * .sourceName("sourceName")
+     * .build())
+     * .consolidation(ConsolidationProperty.builder()
+     * .matchingAttributesList(List.of(List.of("matchingAttributesList")))
+     * .build())
+     * .minAllowedConfidenceScoreForMerging(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-automerging.html)
+     */
+    public inline fun cfnDomainAutoMergingProperty(
+        block: CfnDomainAutoMergingPropertyDsl.() -> Unit = {}
+    ): CfnDomain.AutoMergingProperty {
+        val builder = CfnDomainAutoMergingPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Determines how the auto-merging process should resolve conflicts between different profiles.
+     *
+     * For example, if Profile A and Profile B have the same `FirstName` and `LastName` ,
+     * `ConflictResolution` specifies which `EmailAddress` should be used.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.customerprofiles.*;
+     * ConflictResolutionProperty conflictResolutionProperty = ConflictResolutionProperty.builder()
+     * .conflictResolvingModel("conflictResolvingModel")
+     * // the properties below are optional
+     * .sourceName("sourceName")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-conflictresolution.html)
+     */
+    public inline fun cfnDomainConflictResolutionProperty(
+        block: CfnDomainConflictResolutionPropertyDsl.() -> Unit = {}
+    ): CfnDomain.ConflictResolutionProperty {
+        val builder = CfnDomainConflictResolutionPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A list of matching attributes that represent matching criteria.
+     *
+     * If two profiles meet at least one of the requirements in the matching attributes list, they
+     * will be merged.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.customerprofiles.*;
+     * ConsolidationProperty consolidationProperty = ConsolidationProperty.builder()
+     * .matchingAttributesList(List.of(List.of("matchingAttributesList")))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-consolidation.html)
+     */
+    public inline fun cfnDomainConsolidationProperty(
+        block: CfnDomainConsolidationPropertyDsl.() -> Unit = {}
+    ): CfnDomain.ConsolidationProperty {
+        val builder = CfnDomainConsolidationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Usage-specific statistics about the domain.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.customerprofiles.*;
+     * DomainStatsProperty domainStatsProperty = DomainStatsProperty.builder()
+     * .meteringProfileCount(123)
+     * .objectCount(123)
+     * .profileCount(123)
+     * .totalSize(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-domainstats.html)
+     */
+    public inline fun cfnDomainDomainStatsProperty(
+        block: CfnDomainDomainStatsPropertyDsl.() -> Unit = {}
+    ): CfnDomain.DomainStatsProperty {
+        val builder = CfnDomainDomainStatsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Configuration information for exporting Identity Resolution results, for example, to an S3
+     * bucket.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.customerprofiles.*;
+     * ExportingConfigProperty exportingConfigProperty = ExportingConfigProperty.builder()
+     * .s3Exporting(S3ExportingConfigProperty.builder()
+     * .s3BucketName("s3BucketName")
+     * // the properties below are optional
+     * .s3KeyName("s3KeyName")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-exportingconfig.html)
+     */
+    public inline fun cfnDomainExportingConfigProperty(
+        block: CfnDomainExportingConfigPropertyDsl.() -> Unit = {}
+    ): CfnDomain.ExportingConfigProperty {
+        val builder = CfnDomainExportingConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The day and time when do you want to start the Identity Resolution Job every week.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.customerprofiles.*;
+     * JobScheduleProperty jobScheduleProperty = JobScheduleProperty.builder()
+     * .dayOfTheWeek("dayOfTheWeek")
+     * .time("time")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-jobschedule.html)
+     */
+    public inline fun cfnDomainJobScheduleProperty(
+        block: CfnDomainJobSchedulePropertyDsl.() -> Unit = {}
+    ): CfnDomain.JobScheduleProperty {
+        val builder = CfnDomainJobSchedulePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The process of matching duplicate profiles.
+     *
+     * If `Matching = true` , Amazon Connect Customer Profiles starts a weekly batch process called
+     * *Identity Resolution Job* . If you do not specify a date and time for the *Identity
+     * Resolution Job* to run, by default it runs every Saturday at 12AM UTC to detect duplicate
+     * profiles in your domains. After the *Identity Resolution Job* completes, use the `GetMatches`
+     * API to return and review the results. Or, if you have configured `ExportingConfig` in the
+     * `MatchingRequest` , you can download the results from S3.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.customerprofiles.*;
+     * MatchingProperty matchingProperty = MatchingProperty.builder()
+     * .enabled(false)
+     * // the properties below are optional
+     * .autoMerging(AutoMergingProperty.builder()
+     * .enabled(false)
+     * // the properties below are optional
+     * .conflictResolution(ConflictResolutionProperty.builder()
+     * .conflictResolvingModel("conflictResolvingModel")
+     * // the properties below are optional
+     * .sourceName("sourceName")
+     * .build())
+     * .consolidation(ConsolidationProperty.builder()
+     * .matchingAttributesList(List.of(List.of("matchingAttributesList")))
+     * .build())
+     * .minAllowedConfidenceScoreForMerging(123)
+     * .build())
+     * .exportingConfig(ExportingConfigProperty.builder()
+     * .s3Exporting(S3ExportingConfigProperty.builder()
+     * .s3BucketName("s3BucketName")
+     * // the properties below are optional
+     * .s3KeyName("s3KeyName")
+     * .build())
+     * .build())
+     * .jobSchedule(JobScheduleProperty.builder()
+     * .dayOfTheWeek("dayOfTheWeek")
+     * .time("time")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-matching.html)
+     */
+    public inline fun cfnDomainMatchingProperty(
+        block: CfnDomainMatchingPropertyDsl.() -> Unit = {}
+    ): CfnDomain.MatchingProperty {
+        val builder = CfnDomainMatchingPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies how the rule-based matching process should match profiles.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.customerprofiles.*;
+     * MatchingRuleProperty matchingRuleProperty = MatchingRuleProperty.builder()
+     * .rule(List.of("rule"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-matchingrule.html)
+     */
+    public inline fun cfnDomainMatchingRuleProperty(
+        block: CfnDomainMatchingRulePropertyDsl.() -> Unit = {}
+    ): CfnDomain.MatchingRuleProperty {
+        val builder = CfnDomainMatchingRulePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Properties for defining a `CfnDomain`.
      *
      * Example:
@@ -298,11 +627,68 @@ public object customerprofiles {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.customerprofiles.*;
      * CfnDomainProps cfnDomainProps = CfnDomainProps.builder()
+     * .defaultExpirationDays(123)
      * .domainName("domainName")
      * // the properties below are optional
      * .deadLetterQueueUrl("deadLetterQueueUrl")
      * .defaultEncryptionKey("defaultEncryptionKey")
-     * .defaultExpirationDays(123)
+     * .matching(MatchingProperty.builder()
+     * .enabled(false)
+     * // the properties below are optional
+     * .autoMerging(AutoMergingProperty.builder()
+     * .enabled(false)
+     * // the properties below are optional
+     * .conflictResolution(ConflictResolutionProperty.builder()
+     * .conflictResolvingModel("conflictResolvingModel")
+     * // the properties below are optional
+     * .sourceName("sourceName")
+     * .build())
+     * .consolidation(ConsolidationProperty.builder()
+     * .matchingAttributesList(List.of(List.of("matchingAttributesList")))
+     * .build())
+     * .minAllowedConfidenceScoreForMerging(123)
+     * .build())
+     * .exportingConfig(ExportingConfigProperty.builder()
+     * .s3Exporting(S3ExportingConfigProperty.builder()
+     * .s3BucketName("s3BucketName")
+     * // the properties below are optional
+     * .s3KeyName("s3KeyName")
+     * .build())
+     * .build())
+     * .jobSchedule(JobScheduleProperty.builder()
+     * .dayOfTheWeek("dayOfTheWeek")
+     * .time("time")
+     * .build())
+     * .build())
+     * .ruleBasedMatching(RuleBasedMatchingProperty.builder()
+     * .enabled(false)
+     * // the properties below are optional
+     * .attributeTypesSelector(AttributeTypesSelectorProperty.builder()
+     * .attributeMatchingModel("attributeMatchingModel")
+     * // the properties below are optional
+     * .address(List.of("address"))
+     * .emailAddress(List.of("emailAddress"))
+     * .phoneNumber(List.of("phoneNumber"))
+     * .build())
+     * .conflictResolution(ConflictResolutionProperty.builder()
+     * .conflictResolvingModel("conflictResolvingModel")
+     * // the properties below are optional
+     * .sourceName("sourceName")
+     * .build())
+     * .exportingConfig(ExportingConfigProperty.builder()
+     * .s3Exporting(S3ExportingConfigProperty.builder()
+     * .s3BucketName("s3BucketName")
+     * // the properties below are optional
+     * .s3KeyName("s3KeyName")
+     * .build())
+     * .build())
+     * .matchingRules(List.of(MatchingRuleProperty.builder()
+     * .rule(List.of("rule"))
+     * .build()))
+     * .maxAllowedRuleLevelForMatching(123)
+     * .maxAllowedRuleLevelForMerging(123)
+     * .status("status")
+     * .build())
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -314,6 +700,86 @@ public object customerprofiles {
      */
     public inline fun cfnDomainProps(block: CfnDomainPropsDsl.() -> Unit = {}): CfnDomainProps {
         val builder = CfnDomainPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The process of matching duplicate profiles using Rule-Based matching.
+     *
+     * If `RuleBasedMatching = true` , Amazon Connect Customer Profiles will start to match and
+     * merge your profiles according to your configuration in the `RuleBasedMatchingRequest` . You
+     * can use the `ListRuleBasedMatches` and `GetSimilarProfiles` API to return and review the
+     * results. Also, if you have configured `ExportingConfig` in the `RuleBasedMatchingRequest` ,
+     * you can download the results from S3.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.customerprofiles.*;
+     * RuleBasedMatchingProperty ruleBasedMatchingProperty = RuleBasedMatchingProperty.builder()
+     * .enabled(false)
+     * // the properties below are optional
+     * .attributeTypesSelector(AttributeTypesSelectorProperty.builder()
+     * .attributeMatchingModel("attributeMatchingModel")
+     * // the properties below are optional
+     * .address(List.of("address"))
+     * .emailAddress(List.of("emailAddress"))
+     * .phoneNumber(List.of("phoneNumber"))
+     * .build())
+     * .conflictResolution(ConflictResolutionProperty.builder()
+     * .conflictResolvingModel("conflictResolvingModel")
+     * // the properties below are optional
+     * .sourceName("sourceName")
+     * .build())
+     * .exportingConfig(ExportingConfigProperty.builder()
+     * .s3Exporting(S3ExportingConfigProperty.builder()
+     * .s3BucketName("s3BucketName")
+     * // the properties below are optional
+     * .s3KeyName("s3KeyName")
+     * .build())
+     * .build())
+     * .matchingRules(List.of(MatchingRuleProperty.builder()
+     * .rule(List.of("rule"))
+     * .build()))
+     * .maxAllowedRuleLevelForMatching(123)
+     * .maxAllowedRuleLevelForMerging(123)
+     * .status("status")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html)
+     */
+    public inline fun cfnDomainRuleBasedMatchingProperty(
+        block: CfnDomainRuleBasedMatchingPropertyDsl.() -> Unit = {}
+    ): CfnDomain.RuleBasedMatchingProperty {
+        val builder = CfnDomainRuleBasedMatchingPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The S3 location where Identity Resolution Jobs write result files.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.customerprofiles.*;
+     * S3ExportingConfigProperty s3ExportingConfigProperty = S3ExportingConfigProperty.builder()
+     * .s3BucketName("s3BucketName")
+     * // the properties below are optional
+     * .s3KeyName("s3KeyName")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-s3exportingconfig.html)
+     */
+    public inline fun cfnDomainS3ExportingConfigProperty(
+        block: CfnDomainS3ExportingConfigPropertyDsl.() -> Unit = {}
+    ): CfnDomain.S3ExportingConfigProperty {
+        val builder = CfnDomainS3ExportingConfigPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -1176,10 +1642,11 @@ public object customerprofiles {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.customerprofiles.*;
      * CfnObjectType cfnObjectType = CfnObjectType.Builder.create(this, "MyCfnObjectType")
+     * .description("description")
      * .domainName("domainName")
+     * .objectTypeName("objectTypeName")
      * // the properties below are optional
      * .allowProfileCreation(false)
-     * .description("description")
      * .encryptionKey("encryptionKey")
      * .expirationDays(123)
      * .fields(List.of(FieldMapProperty.builder()
@@ -1197,7 +1664,7 @@ public object customerprofiles {
      * .standardIdentifiers(List.of("standardIdentifiers"))
      * .build()))
      * .build()))
-     * .objectTypeName("objectTypeName")
+     * .sourceLastUpdatedTimestampFormat("sourceLastUpdatedTimestampFormat")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -1333,10 +1800,11 @@ public object customerprofiles {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.customerprofiles.*;
      * CfnObjectTypeProps cfnObjectTypeProps = CfnObjectTypeProps.builder()
+     * .description("description")
      * .domainName("domainName")
+     * .objectTypeName("objectTypeName")
      * // the properties below are optional
      * .allowProfileCreation(false)
-     * .description("description")
      * .encryptionKey("encryptionKey")
      * .expirationDays(123)
      * .fields(List.of(FieldMapProperty.builder()
@@ -1354,7 +1822,7 @@ public object customerprofiles {
      * .standardIdentifiers(List.of("standardIdentifiers"))
      * .build()))
      * .build()))
-     * .objectTypeName("objectTypeName")
+     * .sourceLastUpdatedTimestampFormat("sourceLastUpdatedTimestampFormat")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")

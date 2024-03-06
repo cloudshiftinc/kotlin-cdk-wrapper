@@ -44,7 +44,7 @@ public inline fun CfnFaq.setS3Path(block: CfnFaqS3PathPropertyDsl.() -> Unit = {
     return setS3Path(builder.build())
 }
 
-/**  */
+/** Specifies additional capacity units configured for your Enterprise Edition index. */
 public inline fun CfnIndex.setCapacityUnits(
     block: CfnIndexCapacityUnitsConfigurationPropertyDsl.() -> Unit = {}
 ) {

@@ -26,18 +26,22 @@ import software.amazon.awscdk.services.dynamodb.OperationsMetricOptions
  *
  * Example:
  * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
  * import software.amazon.awscdk.services.cloudwatch.*;
- * Table table = Table.Builder.create(this, "Table")
- * .partitionKey(Attribute.builder().name("id").type(AttributeType.STRING).build())
- * .build();
- * IMetric metric = table.metricThrottledRequestsForOperations(OperationsMetricOptions.builder()
- * .operations(List.of(Operation.PUT_ITEM))
- * .period(Duration.minutes(1))
- * .build());
- * Alarm.Builder.create(this, "Alarm")
- * .metric(metric)
- * .evaluationPeriods(1)
- * .threshold(1)
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * OperationsMetricOptions operationsMetricOptions = OperationsMetricOptions.builder()
+ * .account("account")
+ * .color("color")
+ * .dimensionsMap(Map.of(
+ * "dimensionsMapKey", "dimensionsMap"))
+ * .label("label")
+ * .operations(List.of(Operation.GET_ITEM))
+ * .period(Duration.minutes(30))
+ * .region("region")
+ * .statistic("statistic")
+ * .unit(Unit.SECONDS)
  * .build();
  * ```
  */

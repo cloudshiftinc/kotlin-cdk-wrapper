@@ -23,12 +23,7 @@ import software.constructs.Construct
 
 public object rolesanywhere {
     /**
-     * Imports the certificate revocation list (CRL).
-     *
-     * A CRL is a list of certificates that have been revoked by the issuing certificate Authority
-     * (CA). IAM Roles Anywhere validates against the CRL before issuing credentials.
-     *
-     * *Required permissions:* `rolesanywhere:ImportCrl` .
+     * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-crl.html.
      *
      * Example:
      * ```
@@ -90,11 +85,7 @@ public object rolesanywhere {
     }
 
     /**
-     * Creates a *profile* , a list of the roles that Roles Anywhere service is trusted to assume.
-     *
-     * You use profiles to intersect permissions with IAM managed policies.
-     *
-     * *Required permissions:* `rolesanywhere:CreateProfile` .
+     * Creates a Profile.
      *
      * Example:
      * ```
@@ -162,14 +153,7 @@ public object rolesanywhere {
     }
 
     /**
-     * Creates a trust anchor to establish trust between IAM Roles Anywhere and your certificate
-     * authority (CA).
-     *
-     * You can define a trust anchor as a reference to an AWS Private Certificate Authority ( AWS
-     * Private CA ) or by uploading a CA certificate. Your AWS workloads can authenticate with the
-     * trust anchor using certificates issued by the CA in exchange for temporary AWS credentials.
-     *
-     * *Required permissions:* `rolesanywhere:CreateTrustAnchor` .
+     * Creates a TrustAnchor.
      *
      * Example:
      * ```
@@ -187,6 +171,13 @@ public object rolesanywhere {
      * .build())
      * // the properties below are optional
      * .enabled(false)
+     * .notificationSettings(List.of(NotificationSettingProperty.builder()
+     * .enabled(false)
+     * .event("event")
+     * // the properties below are optional
+     * .channel("channel")
+     * .threshold(123)
+     * .build()))
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -202,6 +193,36 @@ public object rolesanywhere {
         block: CfnTrustAnchorDsl.() -> Unit = {},
     ): CfnTrustAnchor {
         val builder = CfnTrustAnchorDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Customizable notification settings that will be applied to notification events.
+     *
+     * IAM Roles Anywhere consumes these settings while notifying across multiple channels -
+     * CloudWatch metrics, EventBridge , and AWS Health Dashboard .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.rolesanywhere.*;
+     * NotificationSettingProperty notificationSettingProperty = NotificationSettingProperty.builder()
+     * .enabled(false)
+     * .event("event")
+     * // the properties below are optional
+     * .channel("channel")
+     * .threshold(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rolesanywhere-trustanchor-notificationsetting.html)
+     */
+    public inline fun cfnTrustAnchorNotificationSettingProperty(
+        block: CfnTrustAnchorNotificationSettingPropertyDsl.() -> Unit = {}
+    ): CfnTrustAnchor.NotificationSettingProperty {
+        val builder = CfnTrustAnchorNotificationSettingPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -225,6 +246,13 @@ public object rolesanywhere {
      * .build())
      * // the properties below are optional
      * .enabled(false)
+     * .notificationSettings(List.of(NotificationSettingProperty.builder()
+     * .enabled(false)
+     * .event("event")
+     * // the properties below are optional
+     * .channel("channel")
+     * .threshold(123)
+     * .build()))
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -243,7 +271,7 @@ public object rolesanywhere {
     }
 
     /**
-     * The data field of the trust anchor depending on its type.
+     * A union object representing the data field of the TrustAnchor depending on its type.
      *
      * Example:
      * ```
@@ -267,7 +295,7 @@ public object rolesanywhere {
     }
 
     /**
-     * The trust anchor type and its related certificate data.
+     * Object representing the TrustAnchor type and its related certificate data.
      *
      * Example:
      * ```

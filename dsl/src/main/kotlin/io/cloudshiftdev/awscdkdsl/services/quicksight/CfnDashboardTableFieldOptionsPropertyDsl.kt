@@ -20,7 +20,7 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
 /**
- * The field options for a table visual.
+ * The field options of a table visual.
  *
  * Example:
  * ```
@@ -29,6 +29,9 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * import software.amazon.awscdk.services.quicksight.*;
  * TableFieldOptionsProperty tableFieldOptionsProperty = TableFieldOptionsProperty.builder()
  * .order(List.of("order"))
+ * .pinnedFieldOptions(TablePinnedFieldOptionsProperty.builder()
+ * .pinnedLeftFields(List.of("pinnedLeftFields"))
+ * .build())
  * .selectedFieldOptions(List.of(TableFieldOptionProperty.builder()
  * .fieldId("fieldId")
  * // the properties below are optional
@@ -80,27 +83,45 @@ public class CfnDashboardTableFieldOptionsPropertyDsl {
 
     private val _selectedFieldOptions: MutableList<Any> = mutableListOf()
 
-    /** @param order The order of field IDs of the field options for a table visual. */
+    /**
+     * @param order The order of the field IDs that are configured as field options for a table
+     *   visual.
+     */
     public fun order(vararg order: String) {
         _order.addAll(listOf(*order))
     }
 
-    /** @param order The order of field IDs of the field options for a table visual. */
+    /**
+     * @param order The order of the field IDs that are configured as field options for a table
+     *   visual.
+     */
     public fun order(order: Collection<String>) {
         _order.addAll(order)
     }
 
-    /** @param selectedFieldOptions The selected field options for the table field options. */
+    /** @param pinnedFieldOptions The settings for the pinned columns of a table visual. */
+    public fun pinnedFieldOptions(pinnedFieldOptions: IResolvable) {
+        cdkBuilder.pinnedFieldOptions(pinnedFieldOptions)
+    }
+
+    /** @param pinnedFieldOptions The settings for the pinned columns of a table visual. */
+    public fun pinnedFieldOptions(
+        pinnedFieldOptions: CfnDashboard.TablePinnedFieldOptionsProperty
+    ) {
+        cdkBuilder.pinnedFieldOptions(pinnedFieldOptions)
+    }
+
+    /** @param selectedFieldOptions The field options to be configured to a table. */
     public fun selectedFieldOptions(vararg selectedFieldOptions: Any) {
         _selectedFieldOptions.addAll(listOf(*selectedFieldOptions))
     }
 
-    /** @param selectedFieldOptions The selected field options for the table field options. */
+    /** @param selectedFieldOptions The field options to be configured to a table. */
     public fun selectedFieldOptions(selectedFieldOptions: Collection<Any>) {
         _selectedFieldOptions.addAll(selectedFieldOptions)
     }
 
-    /** @param selectedFieldOptions The selected field options for the table field options. */
+    /** @param selectedFieldOptions The field options to be configured to a table. */
     public fun selectedFieldOptions(selectedFieldOptions: IResolvable) {
         cdkBuilder.selectedFieldOptions(selectedFieldOptions)
     }

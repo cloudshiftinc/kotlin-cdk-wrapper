@@ -25,13 +25,21 @@ import software.amazon.awscdk.services.ecs.DeploymentCircuitBreaker
  * FargateService service = FargateService.Builder.create(this, "Service")
  * .cluster(cluster)
  * .taskDefinition(taskDefinition)
- * .circuitBreaker(DeploymentCircuitBreaker.builder().rollback(true).build())
+ * .circuitBreaker(DeploymentCircuitBreaker.builder()
+ * .enable(true)
+ * .rollback(true)
+ * .build())
  * .build();
  * ```
  */
 @CdkDslMarker
 public class DeploymentCircuitBreakerDsl {
     private val cdkBuilder: DeploymentCircuitBreaker.Builder = DeploymentCircuitBreaker.builder()
+
+    /** @param enable Whether to enable the deployment circuit breaker logic. */
+    public fun enable(enable: Boolean) {
+        cdkBuilder.enable(enable)
+    }
 
     /** @param rollback Whether to enable rollback on deployment failure. */
     public fun rollback(rollback: Boolean) {

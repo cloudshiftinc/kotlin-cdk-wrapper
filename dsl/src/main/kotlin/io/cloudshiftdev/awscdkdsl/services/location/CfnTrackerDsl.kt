@@ -11,9 +11,16 @@
 
 package io.cloudshiftdev.awscdkdsl.services.location
 
+import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Boolean
 import kotlin.Deprecated
 import kotlin.String
+import kotlin.Unit
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.location.CfnTracker
 import software.constructs.Construct
 
@@ -30,10 +37,16 @@ import software.constructs.Construct
  * .trackerName("trackerName")
  * // the properties below are optional
  * .description("description")
+ * .eventBridgeEnabled(false)
+ * .kmsKeyEnableGeospatialQueries(false)
  * .kmsKeyId("kmsKeyId")
  * .positionFiltering("positionFiltering")
  * .pricingPlan("pricingPlan")
  * .pricingPlanDataSource("pricingPlanDataSource")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -46,6 +59,8 @@ public class CfnTrackerDsl(
 ) {
     private val cdkBuilder: CfnTracker.Builder = CfnTracker.Builder.create(scope, id)
 
+    private val _tags: MutableList<CfnTag> = mutableListOf()
+
     /**
      * An optional description for the tracker resource.
      *
@@ -55,6 +70,42 @@ public class CfnTrackerDsl(
      */
     public fun description(description: String) {
         cdkBuilder.description(description)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-tracker.html#cfn-location-tracker-eventbridgeenabled)
+     *
+     * @param eventBridgeEnabled
+     */
+    public fun eventBridgeEnabled(eventBridgeEnabled: Boolean) {
+        cdkBuilder.eventBridgeEnabled(eventBridgeEnabled)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-tracker.html#cfn-location-tracker-eventbridgeenabled)
+     *
+     * @param eventBridgeEnabled
+     */
+    public fun eventBridgeEnabled(eventBridgeEnabled: IResolvable) {
+        cdkBuilder.eventBridgeEnabled(eventBridgeEnabled)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-tracker.html#cfn-location-tracker-kmskeyenablegeospatialqueries)
+     *
+     * @param kmsKeyEnableGeospatialQueries
+     */
+    public fun kmsKeyEnableGeospatialQueries(kmsKeyEnableGeospatialQueries: Boolean) {
+        cdkBuilder.kmsKeyEnableGeospatialQueries(kmsKeyEnableGeospatialQueries)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-tracker.html#cfn-location-tracker-kmskeyenablegeospatialqueries)
+     *
+     * @param kmsKeyEnableGeospatialQueries
+     */
+    public fun kmsKeyEnableGeospatialQueries(kmsKeyEnableGeospatialQueries: IResolvable) {
+        cdkBuilder.kmsKeyEnableGeospatialQueries(kmsKeyEnableGeospatialQueries)
     }
 
     /**
@@ -124,6 +175,28 @@ public class CfnTrackerDsl(
     }
 
     /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-tracker.html#cfn-location-tracker-tags)
+     *
+     * @param tags An array of key-value pairs to apply to this resource.
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
+
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-tracker.html#cfn-location-tracker-tags)
+     *
+     * @param tags An array of key-value pairs to apply to this resource.
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
+
+    /**
      * The name for the tracker resource.
      *
      * Requirements:
@@ -140,5 +213,8 @@ public class CfnTrackerDsl(
         cdkBuilder.trackerName(trackerName)
     }
 
-    public fun build(): CfnTracker = cdkBuilder.build()
+    public fun build(): CfnTracker {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

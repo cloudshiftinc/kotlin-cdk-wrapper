@@ -173,7 +173,14 @@ public object cloudtrail {
      * // the properties below are optional
      * .name("name")
      * .build()))
+     * .billingMode("billingMode")
+     * .federationEnabled(false)
+     * .federationRoleArn("federationRoleArn")
      * .ingestionEnabled(false)
+     * .insightsDestination("insightsDestination")
+     * .insightSelectors(List.of(InsightSelectorProperty.builder()
+     * .insightType("insightType")
+     * .build()))
      * .kmsKeyId("kmsKeyId")
      * .multiRegionEnabled(false)
      * .name("name")
@@ -200,21 +207,32 @@ public object cloudtrail {
     }
 
     /**
-     * Advanced event selectors let you create fine-grained selectors for the following AWS
-     * CloudTrail event record ﬁelds.
+     * Advanced event selectors let you create fine-grained selectors for CloudTrail management and
+     * data events.
      *
      * They help you control costs by logging only those events that are important to you. For more
      * information about advanced event selectors, see
+     * [Logging management events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html)
+     * and
      * [Logging data events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
      * in the *AWS CloudTrail User Guide* .
-     * * `readOnly`
-     * * `eventSource`
-     * * `eventName`
-     * * `eventCategory`
-     * * `resources.type`
-     * * `resources.ARN`
      *
      * You cannot apply both event selectors and advanced event selectors to a trail.
+     *
+     * *Supported CloudTrail event record fields for management events*
+     * * `eventCategory` (required)
+     * * `eventSource`
+     * * `readOnly`
+     *
+     * *Supported CloudTrail event record fields for data events*
+     * * `eventCategory` (required)
+     * * `resources.type` (required)
+     * * `readOnly`
+     * * `eventName`
+     * * `resources.ARN`
+     *
+     * For event data stores for CloudTrail Insights events, AWS Config configuration items, Audit
+     * Manager evidence, or events outside of AWS , the only supported field is `eventCategory` .
      *
      * Example:
      * ```
@@ -280,6 +298,29 @@ public object cloudtrail {
     }
 
     /**
+     * A JSON string that contains a list of Insights types that are logged on an event data store.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.cloudtrail.*;
+     * InsightSelectorProperty insightSelectorProperty = InsightSelectorProperty.builder()
+     * .insightType("insightType")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-insightselector.html)
+     */
+    public inline fun cfnEventDataStoreInsightSelectorProperty(
+        block: CfnEventDataStoreInsightSelectorPropertyDsl.() -> Unit = {}
+    ): CfnEventDataStore.InsightSelectorProperty {
+        val builder = CfnEventDataStoreInsightSelectorPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Properties for defining a `CfnEventDataStore`.
      *
      * Example:
@@ -302,7 +343,14 @@ public object cloudtrail {
      * // the properties below are optional
      * .name("name")
      * .build()))
+     * .billingMode("billingMode")
+     * .federationEnabled(false)
+     * .federationRoleArn("federationRoleArn")
      * .ingestionEnabled(false)
+     * .insightsDestination("insightsDestination")
+     * .insightSelectors(List.of(InsightSelectorProperty.builder()
+     * .insightType("insightType")
+     * .build()))
      * .kmsKeyId("kmsKeyId")
      * .multiRegionEnabled(false)
      * .name("name")
@@ -453,21 +501,32 @@ public object cloudtrail {
     }
 
     /**
-     * Advanced event selectors let you create fine-grained selectors for the following AWS
-     * CloudTrail event record ﬁelds.
+     * Advanced event selectors let you create fine-grained selectors for CloudTrail management and
+     * data events.
      *
      * They help you control costs by logging only those events that are important to you. For more
      * information about advanced event selectors, see
+     * [Logging management events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html)
+     * and
      * [Logging data events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
      * in the *AWS CloudTrail User Guide* .
-     * * `readOnly`
-     * * `eventSource`
-     * * `eventName`
-     * * `eventCategory`
-     * * `resources.type`
-     * * `resources.ARN`
      *
      * You cannot apply both event selectors and advanced event selectors to a trail.
+     *
+     * *Supported CloudTrail event record fields for management events*
+     * * `eventCategory` (required)
+     * * `eventSource`
+     * * `readOnly`
+     *
+     * *Supported CloudTrail event record fields for data events*
+     * * `eventCategory` (required)
+     * * `resources.type` (required)
+     * * `readOnly`
+     * * `eventName`
+     * * `resources.ARN`
+     *
+     * For event data stores for CloudTrail Insights events, AWS Config configuration items, Audit
+     * Manager evidence, or events outside of AWS , the only supported field is `eventCategory` .
      *
      * Example:
      * ```
@@ -757,7 +816,7 @@ public object cloudtrail {
      * IAlias myKeyAlias = Alias.fromAliasName(this, "myKey", "alias/aws/s3");
      * Trail trail = Trail.Builder.create(this, "myCloudTrail")
      * .sendToCloudWatchLogs(true)
-     * .kmsKey(myKeyAlias)
+     * .encryptionKey(myKeyAlias)
      * .build();
      * ```
      */

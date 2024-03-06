@@ -16,7 +16,7 @@ import kotlin.String
 import software.amazon.awscdk.services.mediatailor.CfnSourceLocation
 
 /**
- * The HTTP configuration for the source location.</p>.
+ * The HTTP configuration for the source location.
  *
  * Example:
  * ```
@@ -37,7 +37,7 @@ public class CfnSourceLocationHttpConfigurationPropertyDsl {
 
     /**
      * @param baseUrl The base URL for the source location host server. This string must include the
-     *   protocol, such as <b>https://</b>.</p>
+     *   protocol, such as *https:// * .
      */
     public fun baseUrl(baseUrl: String) {
         cdkBuilder.baseUrl(baseUrl)

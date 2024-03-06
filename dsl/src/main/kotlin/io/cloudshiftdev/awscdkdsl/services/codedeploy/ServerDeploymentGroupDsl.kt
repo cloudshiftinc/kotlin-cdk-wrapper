@@ -13,6 +13,7 @@ package io.cloudshiftdev.awscdkdsl.services.codedeploy
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -33,14 +34,14 @@ import software.constructs.Construct
  *
  * Example:
  * ```
- * import software.amazon.awscdk.services.elasticloadbalancing.*;
- * LoadBalancer lb;
- * lb.addListener(LoadBalancerListener.builder()
- * .externalPort(80)
- * .build());
+ * ApplicationLoadBalancer alb;
+ * ApplicationListener listener = alb.addListener("Listener",
+ * BaseApplicationListenerProps.builder().port(80).build());
+ * ApplicationTargetGroup targetGroup = listener.addTargets("Fleet",
+ * AddApplicationTargetsProps.builder().port(80).build());
  * ServerDeploymentGroup deploymentGroup = ServerDeploymentGroup.Builder.create(this,
  * "DeploymentGroup")
- * .loadBalancer(LoadBalancer.classic(lb))
+ * .loadBalancer(LoadBalancer.application(targetGroup))
  * .build();
  * ```
  */
@@ -55,6 +56,8 @@ public class ServerDeploymentGroupDsl(
     private val _alarms: MutableList<IAlarm> = mutableListOf()
 
     private val _autoScalingGroups: MutableList<IAutoScalingGroup> = mutableListOf()
+
+    private val _loadBalancers: MutableList<LoadBalancer> = mutableListOf()
 
     /**
      * The CloudWatch alarms associated with this Deployment Group.
@@ -200,6 +203,18 @@ public class ServerDeploymentGroupDsl(
     }
 
     /**
+     * Whether to skip the step of checking CloudWatch alarms during the deployment process.
+     *
+     * Default: - false
+     *
+     * @param ignoreAlarmConfiguration Whether to skip the step of checking CloudWatch alarms during
+     *   the deployment process.
+     */
+    public fun ignoreAlarmConfiguration(ignoreAlarmConfiguration: Boolean) {
+        cdkBuilder.ignoreAlarmConfiguration(ignoreAlarmConfiguration)
+    }
+
+    /**
      * Whether to continue a deployment even if fetching the alarm status from CloudWatch failed.
      *
      * Default: false
@@ -228,17 +243,47 @@ public class ServerDeploymentGroupDsl(
     }
 
     /**
-     * The load balancer to place in front of this Deployment Group.
+     * (deprecated) The load balancer to place in front of this Deployment Group.
      *
      * Can be created from either a classic Elastic Load Balancer, or an Application Load Balancer /
      * Network Load Balancer Target Group.
      *
      * Default: - Deployment Group will not have a load balancer defined.
+     * * Use `loadBalancers` instead.
      *
      * @param loadBalancer The load balancer to place in front of this Deployment Group.
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun loadBalancer(loadBalancer: LoadBalancer) {
         cdkBuilder.loadBalancer(loadBalancer)
+    }
+
+    /**
+     * CodeDeploy supports the deployment to multiple load balancers.
+     *
+     * Specify either multiple Classic Load Balancers, or Application Load Balancers / Network Load
+     * Balancers Target Groups.
+     *
+     * Default: - Deployment Group will not have load balancers defined.
+     *
+     * @param loadBalancers CodeDeploy supports the deployment to multiple load balancers.
+     */
+    public fun loadBalancers(vararg loadBalancers: LoadBalancer) {
+        _loadBalancers.addAll(listOf(*loadBalancers))
+    }
+
+    /**
+     * CodeDeploy supports the deployment to multiple load balancers.
+     *
+     * Specify either multiple Classic Load Balancers, or Application Load Balancers / Network Load
+     * Balancers Target Groups.
+     *
+     * Default: - Deployment Group will not have load balancers defined.
+     *
+     * @param loadBalancers CodeDeploy supports the deployment to multiple load balancers.
+     */
+    public fun loadBalancers(loadBalancers: Collection<LoadBalancer>) {
+        _loadBalancers.addAll(loadBalancers)
     }
 
     /**
@@ -268,6 +313,7 @@ public class ServerDeploymentGroupDsl(
     public fun build(): ServerDeploymentGroup {
         if (_alarms.isNotEmpty()) cdkBuilder.alarms(_alarms)
         if (_autoScalingGroups.isNotEmpty()) cdkBuilder.autoScalingGroups(_autoScalingGroups)
+        if (_loadBalancers.isNotEmpty()) cdkBuilder.loadBalancers(_loadBalancers)
         return cdkBuilder.build()
     }
 }

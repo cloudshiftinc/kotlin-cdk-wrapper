@@ -13,6 +13,7 @@ package io.cloudshiftdev.awscdkdsl.services.sns
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import io.cloudshiftdev.awscdkdsl.services.iam.PolicyDocumentDsl
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -38,14 +39,19 @@ import software.constructs.Construct
  * Example:
  * ```
  * Topic topic = new Topic(this, "Topic");
- * TopicPolicy topicPolicy = TopicPolicy.Builder.create(this, "TopicPolicy")
- * .topics(List.of(topic))
- * .build();
- * topicPolicy.document.addStatements(PolicyStatement.Builder.create()
+ * PolicyDocument policyDocument = PolicyDocument.Builder.create()
+ * .assignSids(true)
+ * .statements(List.of(
+ * PolicyStatement.Builder.create()
  * .actions(List.of("sns:Subscribe"))
  * .principals(List.of(new AnyPrincipal()))
  * .resources(List.of(topic.getTopicArn()))
- * .build());
+ * .build()))
+ * .build();
+ * TopicPolicy topicPolicy = TopicPolicy.Builder.create(this, "Policy")
+ * .topics(List.of(topic))
+ * .policyDocument(policyDocument)
+ * .build();
  * ```
  */
 @CdkDslMarker
@@ -56,6 +62,21 @@ public class TopicPolicyDsl(
     private val cdkBuilder: TopicPolicy.Builder = TopicPolicy.Builder.create(scope, id)
 
     private val _topics: MutableList<ITopic> = mutableListOf()
+
+    /**
+     * Adds a statement to enforce encryption of data in transit when publishing to the topic.
+     *
+     * For more information, see
+     * https://docs.aws.amazon.com/sns/latest/dg/sns-security-best-practices.html#enforce-encryption-data-in-transit.
+     *
+     * Default: false
+     *
+     * @param enforceSsl Adds a statement to enforce encryption of data in transit when publishing
+     *   to the topic.
+     */
+    public fun enforceSsl(enforceSsl: Boolean) {
+        cdkBuilder.enforceSsl(enforceSsl)
+    }
 
     /**
      * IAM policy document to apply to topic(s).

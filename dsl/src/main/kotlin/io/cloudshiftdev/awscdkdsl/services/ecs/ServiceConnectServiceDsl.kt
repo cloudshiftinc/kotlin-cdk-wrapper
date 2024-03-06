@@ -14,6 +14,7 @@ package io.cloudshiftdev.awscdkdsl.services.ecs
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Number
 import kotlin.String
+import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.ecs.ServiceConnectService
 
 /**
@@ -23,13 +24,16 @@ import software.amazon.awscdk.services.ecs.ServiceConnectService
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
  * import software.amazon.awscdk.services.ecs.*;
  * ServiceConnectService serviceConnectService = ServiceConnectService.builder()
  * .portMappingName("portMappingName")
  * // the properties below are optional
  * .discoveryName("discoveryName")
  * .dnsName("dnsName")
+ * .idleTimeout(Duration.minutes(30))
  * .ingressPortOverride(123)
+ * .perRequestTimeout(Duration.minutes(30))
  * .port(123)
  * .build();
  * ```
@@ -56,11 +60,35 @@ public class ServiceConnectServiceDsl {
     }
 
     /**
+     * @param idleTimeout The amount of time in seconds a connection for Service Connect will stay
+     *   active while idle. A value of 0 can be set to disable `idleTimeout`.
+     *
+     * If `idleTimeout` is set to a time that is less than `perRequestTimeout`, the connection will
+     * close when the `idleTimeout` is reached and not the `perRequestTimeout`.
+     */
+    public fun idleTimeout(idleTimeout: Duration) {
+        cdkBuilder.idleTimeout(idleTimeout)
+    }
+
+    /**
      * @param ingressPortOverride Optional. The port on the Service Connect agent container to use
      *   for traffic ingress to this service.
      */
     public fun ingressPortOverride(ingressPortOverride: Number) {
         cdkBuilder.ingressPortOverride(ingressPortOverride)
+    }
+
+    /**
+     * @param perRequestTimeout The amount of time waiting for the upstream to respond with a
+     *   complete response per request for Service Connect. A value of 0 can be set to disable
+     *   `perRequestTimeout`. Can only be set when the `appProtocol` for the application container
+     *   is HTTP/HTTP2/GRPC.
+     *
+     * If `idleTimeout` is set to a time that is less than `perRequestTimeout`, the connection will
+     * close when the `idleTimeout` is reached and not the `perRequestTimeout`.
+     */
+    public fun perRequestTimeout(perRequestTimeout: Duration) {
+        cdkBuilder.perRequestTimeout(perRequestTimeout)
     }
 
     /**

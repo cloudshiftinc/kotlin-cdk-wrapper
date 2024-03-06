@@ -99,11 +99,11 @@ public class CfnSceneDsl(
     }
 
     /**
-     * The scene ID.
+     * The ID of the scene.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-scene.html#cfn-iottwinmaker-scene-sceneid)
      *
-     * @param sceneId The scene ID.
+     * @param sceneId The ID of the scene.
      */
     public fun sceneId(sceneId: String) {
         cdkBuilder.sceneId(sceneId)
@@ -143,11 +143,11 @@ public class CfnSceneDsl(
     }
 
     /**
-     * The ID of the workspace.
+     * The ID of the scene.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-scene.html#cfn-iottwinmaker-scene-workspaceid)
      *
-     * @param workspaceId The ID of the workspace.
+     * @param workspaceId The ID of the scene.
      */
     public fun workspaceId(workspaceId: String) {
         cdkBuilder.workspaceId(workspaceId)

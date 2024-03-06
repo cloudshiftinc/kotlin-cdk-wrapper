@@ -23,6 +23,8 @@ import software.amazon.awscdk.services.iot.CfnCACertificate
 import software.amazon.awscdk.services.iot.CfnCACertificateProps
 import software.amazon.awscdk.services.iot.CfnCertificate
 import software.amazon.awscdk.services.iot.CfnCertificateProps
+import software.amazon.awscdk.services.iot.CfnCertificateProvider
+import software.amazon.awscdk.services.iot.CfnCertificateProviderProps
 import software.amazon.awscdk.services.iot.CfnCustomMetric
 import software.amazon.awscdk.services.iot.CfnCustomMetricProps
 import software.amazon.awscdk.services.iot.CfnDimension
@@ -51,6 +53,10 @@ import software.amazon.awscdk.services.iot.CfnScheduledAudit
 import software.amazon.awscdk.services.iot.CfnScheduledAuditProps
 import software.amazon.awscdk.services.iot.CfnSecurityProfile
 import software.amazon.awscdk.services.iot.CfnSecurityProfileProps
+import software.amazon.awscdk.services.iot.CfnSoftwarePackage
+import software.amazon.awscdk.services.iot.CfnSoftwarePackageProps
+import software.amazon.awscdk.services.iot.CfnSoftwarePackageVersion
+import software.amazon.awscdk.services.iot.CfnSoftwarePackageVersionProps
 import software.amazon.awscdk.services.iot.CfnThing
 import software.amazon.awscdk.services.iot.CfnThingGroup
 import software.amazon.awscdk.services.iot.CfnThingGroupProps
@@ -721,6 +727,74 @@ public object iot {
     }
 
     /**
+     * Creates a certificate provider.
+     *
+     * AWS IoT Core certificate provider lets you customize how to sign a certificate signing
+     * request (CSR) in fleet provisioning. For more information, see
+     * [Self-managed certificate signing using AWS IoT Core certificate provider](https://docs.aws.amazon.com/iot/latest/developerguide/provisioning-cert-provider.html)
+     * from the *AWS IoT Core Developer Guide* .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.iot.*;
+     * CfnCertificateProvider cfnCertificateProvider = CfnCertificateProvider.Builder.create(this,
+     * "MyCfnCertificateProvider")
+     * .accountDefaultForOperations(List.of("accountDefaultForOperations"))
+     * .lambdaFunctionArn("lambdaFunctionArn")
+     * // the properties below are optional
+     * .certificateProviderName("certificateProviderName")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-certificateprovider.html)
+     */
+    public inline fun cfnCertificateProvider(
+        scope: Construct,
+        id: String,
+        block: CfnCertificateProviderDsl.() -> Unit = {},
+    ): CfnCertificateProvider {
+        val builder = CfnCertificateProviderDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnCertificateProvider`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.iot.*;
+     * CfnCertificateProviderProps cfnCertificateProviderProps = CfnCertificateProviderProps.builder()
+     * .accountDefaultForOperations(List.of("accountDefaultForOperations"))
+     * .lambdaFunctionArn("lambdaFunctionArn")
+     * // the properties below are optional
+     * .certificateProviderName("certificateProviderName")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-certificateprovider.html)
+     */
+    public inline fun cfnCertificateProviderProps(
+        block: CfnCertificateProviderPropsDsl.() -> Unit = {}
+    ): CfnCertificateProviderProps {
+        val builder = CfnCertificateProviderPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Use the `AWS::IoT::CustomMetric` resource to define a custom metric published by your devices
      * to Device Defender.
      *
@@ -878,6 +952,9 @@ public object iot {
      * .domainConfigurationStatus("domainConfigurationStatus")
      * .domainName("domainName")
      * .serverCertificateArns(List.of("serverCertificateArns"))
+     * .serverCertificateConfig(ServerCertificateConfigProperty.builder()
+     * .enableOcspCheck(false)
+     * .build())
      * .serviceType("serviceType")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
@@ -943,6 +1020,9 @@ public object iot {
      * .domainConfigurationStatus("domainConfigurationStatus")
      * .domainName("domainName")
      * .serverCertificateArns(List.of("serverCertificateArns"))
+     * .serverCertificateConfig(ServerCertificateConfigProperty.builder()
+     * .enableOcspCheck(false)
+     * .build())
      * .serviceType("serviceType")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
@@ -961,6 +1041,34 @@ public object iot {
         block: CfnDomainConfigurationPropsDsl.() -> Unit = {}
     ): CfnDomainConfigurationProps {
         val builder = CfnDomainConfigurationPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The server certificate configuration.
+     *
+     * For more information, see
+     * [Configurable endpoints](https://docs.aws.amazon.com//iot/latest/developerguide/iot-custom-endpoints-configurable.html)
+     * from the AWS IoT Core Developer Guide.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.iot.*;
+     * ServerCertificateConfigProperty serverCertificateConfigProperty =
+     * ServerCertificateConfigProperty.builder()
+     * .enableOcspCheck(false)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-servercertificateconfig.html)
+     */
+    public inline fun cfnDomainConfigurationServerCertificateConfigProperty(
+        block: CfnDomainConfigurationServerCertificateConfigPropertyDsl.() -> Unit = {}
+    ): CfnDomainConfiguration.ServerCertificateConfigProperty {
+        val builder = CfnDomainConfigurationServerCertificateConfigPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -1135,6 +1243,7 @@ public object iot {
      * .jobTemplateId("jobTemplateId")
      * // the properties below are optional
      * .abortConfig(abortConfig)
+     * .destinationPackageVersions(List.of("destinationPackageVersions"))
      * .document("document")
      * .documentSource("documentSource")
      * .jobArn("jobArn")
@@ -1381,6 +1490,7 @@ public object iot {
      * .jobTemplateId("jobTemplateId")
      * // the properties below are optional
      * .abortConfig(abortConfig)
+     * .destinationPackageVersions(List.of("destinationPackageVersions"))
      * .document("document")
      * .documentSource("documentSource")
      * .jobArn("jobArn")
@@ -1865,6 +1975,10 @@ public object iot {
      * .policyDocument(policyDocument)
      * // the properties below are optional
      * .policyName("policyName")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .build();
      * ```
      *
@@ -1950,6 +2064,10 @@ public object iot {
      * .policyDocument(policyDocument)
      * // the properties below are optional
      * .policyName("policyName")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .build();
      * ```
      *
@@ -2277,6 +2395,7 @@ public object iot {
      * .additionalMetricsToRetainV2(List.of(MetricToRetainProperty.builder()
      * .metric("metric")
      * // the properties below are optional
+     * .exportMetric(false)
      * .metricDimension(MetricDimensionProperty.builder()
      * .dimensionName("dimensionName")
      * // the properties below are optional
@@ -2311,6 +2430,7 @@ public object iot {
      * .strings(List.of("strings"))
      * .build())
      * .build())
+     * .exportMetric(false)
      * .metric("metric")
      * .metricDimension(MetricDimensionProperty.builder()
      * .dimensionName("dimensionName")
@@ -2319,6 +2439,10 @@ public object iot {
      * .build())
      * .suppressAlerts(false)
      * .build()))
+     * .metricsExportConfig(MetricsExportConfigProperty.builder()
+     * .mqttTopic("mqttTopic")
+     * .roleArn("roleArn")
+     * .build())
      * .securityProfileDescription("securityProfileDescription")
      * .securityProfileName("securityProfileName")
      * .tags(List.of(CfnTag.builder()
@@ -2436,6 +2560,7 @@ public object iot {
      * .strings(List.of("strings"))
      * .build())
      * .build())
+     * .exportMetric(false)
      * .metric("metric")
      * .metricDimension(MetricDimensionProperty.builder()
      * .dimensionName("dimensionName")
@@ -2519,6 +2644,7 @@ public object iot {
      * MetricToRetainProperty metricToRetainProperty = MetricToRetainProperty.builder()
      * .metric("metric")
      * // the properties below are optional
+     * .exportMetric(false)
      * .metricDimension(MetricDimensionProperty.builder()
      * .dimensionName("dimensionName")
      * // the properties below are optional
@@ -2566,6 +2692,30 @@ public object iot {
     }
 
     /**
+     * Specifies the MQTT topic and role ARN required for metric export.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.iot.*;
+     * MetricsExportConfigProperty metricsExportConfigProperty = MetricsExportConfigProperty.builder()
+     * .mqttTopic("mqttTopic")
+     * .roleArn("roleArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricsexportconfig.html)
+     */
+    public inline fun cfnSecurityProfileMetricsExportConfigProperty(
+        block: CfnSecurityProfileMetricsExportConfigPropertyDsl.() -> Unit = {}
+    ): CfnSecurityProfile.MetricsExportConfigProperty {
+        val builder = CfnSecurityProfileMetricsExportConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Properties for defining a `CfnSecurityProfile`.
      *
      * Example:
@@ -2577,6 +2727,7 @@ public object iot {
      * .additionalMetricsToRetainV2(List.of(MetricToRetainProperty.builder()
      * .metric("metric")
      * // the properties below are optional
+     * .exportMetric(false)
      * .metricDimension(MetricDimensionProperty.builder()
      * .dimensionName("dimensionName")
      * // the properties below are optional
@@ -2611,6 +2762,7 @@ public object iot {
      * .strings(List.of("strings"))
      * .build())
      * .build())
+     * .exportMetric(false)
      * .metric("metric")
      * .metricDimension(MetricDimensionProperty.builder()
      * .dimensionName("dimensionName")
@@ -2619,6 +2771,10 @@ public object iot {
      * .build())
      * .suppressAlerts(false)
      * .build()))
+     * .metricsExportConfig(MetricsExportConfigProperty.builder()
+     * .mqttTopic("mqttTopic")
+     * .roleArn("roleArn")
+     * .build())
      * .securityProfileDescription("securityProfileDescription")
      * .securityProfileName("securityProfileName")
      * .tags(List.of(CfnTag.builder()
@@ -2660,6 +2816,161 @@ public object iot {
         block: CfnSecurityProfileStatisticalThresholdPropertyDsl.() -> Unit = {}
     ): CfnSecurityProfile.StatisticalThresholdProperty {
         val builder = CfnSecurityProfileStatisticalThresholdPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Use the `AWS::IoT::SoftwarePackage` resource to create a software package.
+     *
+     * For information about working with software packages, see
+     * [AWS IoT Device Management Software Package Catalog](https://docs.aws.amazon.com/iot/latest/developerguide/software-package-catalog.html)
+     * and
+     * [Creating a software package and package version](https://docs.aws.amazon.com/iot/latest/developerguide/creating-package-and-version.html)
+     * in the *AWS IoT Developer Guide* . See also,
+     * [CreatePackage](https://docs.aws.amazon.com/iot/latest/apireference/API_CreatePackage.html)
+     * in the *API Guide* .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.iot.*;
+     * CfnSoftwarePackage cfnSoftwarePackage = CfnSoftwarePackage.Builder.create(this,
+     * "MyCfnSoftwarePackage")
+     * .description("description")
+     * .packageName("packageName")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackage.html)
+     */
+    public inline fun cfnSoftwarePackage(
+        scope: Construct,
+        id: String,
+        block: CfnSoftwarePackageDsl.() -> Unit = {},
+    ): CfnSoftwarePackage {
+        val builder = CfnSoftwarePackageDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnSoftwarePackage`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.iot.*;
+     * CfnSoftwarePackageProps cfnSoftwarePackageProps = CfnSoftwarePackageProps.builder()
+     * .description("description")
+     * .packageName("packageName")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackage.html)
+     */
+    public inline fun cfnSoftwarePackageProps(
+        block: CfnSoftwarePackagePropsDsl.() -> Unit = {}
+    ): CfnSoftwarePackageProps {
+        val builder = CfnSoftwarePackagePropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Use the `AWS::IoT::SoftwarePackageVersion` resource to create a software package version.
+     *
+     * For information about working with software package versions, see
+     * [AWS IoT Device Management Software Package Catalog](https://docs.aws.amazon.com/iot/latest/developerguide/software-package-catalog.html)
+     * and
+     * [Creating a software package and package version](https://docs.aws.amazon.com/iot/latest/developerguide/creating-package-and-version.html)
+     * in the *AWS IoT Developer Guide* . See also,
+     * [CreatePackageVersion](https://docs.aws.amazon.com/iot/latest/apireference/API_CreatePackageVersion.html)
+     * in the *API Guide* .
+     *
+     * The associated software package must exist before the package version is created. If you
+     * create a software package and package version in the same CloudFormation template, set the
+     * software package as a
+     * [dependency](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html)
+     * of the package version. If they are created out of sequence, you will receive an error.
+     *
+     * Package versions and created in a `draft` state, for more information, see
+     * [Package version lifecycle](https://docs.aws.amazon.com/iot/latest/developerguide/preparing-to-use-software-package-catalog.html#package-version-lifecycle)
+     * . To change the package version state after it’s created, use the
+     * [UpdatePackageVersionAPI](https://docs.aws.amazon.com/iot/latest/apireference/API_UpdatePackageVersion.html)
+     * command.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.iot.*;
+     * CfnSoftwarePackageVersion cfnSoftwarePackageVersion =
+     * CfnSoftwarePackageVersion.Builder.create(this, "MyCfnSoftwarePackageVersion")
+     * .packageName("packageName")
+     * // the properties below are optional
+     * .attributes(Map.of(
+     * "attributesKey", "attributes"))
+     * .description("description")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .versionName("versionName")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackageversion.html)
+     */
+    public inline fun cfnSoftwarePackageVersion(
+        scope: Construct,
+        id: String,
+        block: CfnSoftwarePackageVersionDsl.() -> Unit = {},
+    ): CfnSoftwarePackageVersion {
+        val builder = CfnSoftwarePackageVersionDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnSoftwarePackageVersion`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.iot.*;
+     * CfnSoftwarePackageVersionProps cfnSoftwarePackageVersionProps =
+     * CfnSoftwarePackageVersionProps.builder()
+     * .packageName("packageName")
+     * // the properties below are optional
+     * .attributes(Map.of(
+     * "attributesKey", "attributes"))
+     * .description("description")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .versionName("versionName")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackageversion.html)
+     */
+    public inline fun cfnSoftwarePackageVersionProps(
+        block: CfnSoftwarePackageVersionPropsDsl.() -> Unit = {}
+    ): CfnSoftwarePackageVersionProps {
+        val builder = CfnSoftwarePackageVersionPropsDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -3168,6 +3479,10 @@ public object iot {
      * .destinationArn("destinationArn")
      * .topic("topic")
      * // the properties below are optional
+     * .headers(List.of(KafkaActionHeaderProperty.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .key("key")
      * .partition("partition")
      * .build())
@@ -3375,6 +3690,10 @@ public object iot {
      * .destinationArn("destinationArn")
      * .topic("topic")
      * // the properties below are optional
+     * .headers(List.of(KafkaActionHeaderProperty.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .key("key")
      * .partition("partition")
      * .build())
@@ -3609,6 +3928,10 @@ public object iot {
      * .destinationArn("destinationArn")
      * .topic("topic")
      * // the properties below are optional
+     * .headers(List.of(KafkaActionHeaderProperty.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .key("key")
      * .partition("partition")
      * .build())
@@ -4329,6 +4652,33 @@ public object iot {
     }
 
     /**
+     * Specifies a Kafka header using key-value pairs when you create a Rule’s Kafka Action.
+     *
+     * You can use these headers to route data from IoT clients to downstream Kafka clusters without
+     * modifying your message payload.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.iot.*;
+     * KafkaActionHeaderProperty kafkaActionHeaderProperty = KafkaActionHeaderProperty.builder()
+     * .key("key")
+     * .value("value")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-kafkaactionheader.html)
+     */
+    public inline fun cfnTopicRuleKafkaActionHeaderProperty(
+        block: CfnTopicRuleKafkaActionHeaderPropertyDsl.() -> Unit = {}
+    ): CfnTopicRule.KafkaActionHeaderProperty {
+        val builder = CfnTopicRuleKafkaActionHeaderPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Send messages to an Amazon Managed Streaming for Apache Kafka (Amazon MSK) or self-managed
      * Apache Kafka cluster.
      *
@@ -4343,6 +4693,10 @@ public object iot {
      * .destinationArn("destinationArn")
      * .topic("topic")
      * // the properties below are optional
+     * .headers(List.of(KafkaActionHeaderProperty.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .key("key")
      * .partition("partition")
      * .build();
@@ -4592,6 +4946,10 @@ public object iot {
      * .destinationArn("destinationArn")
      * .topic("topic")
      * // the properties below are optional
+     * .headers(List.of(KafkaActionHeaderProperty.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .key("key")
      * .partition("partition")
      * .build())
@@ -4799,6 +5157,10 @@ public object iot {
      * .destinationArn("destinationArn")
      * .topic("topic")
      * // the properties below are optional
+     * .headers(List.of(KafkaActionHeaderProperty.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .key("key")
      * .partition("partition")
      * .build())
@@ -5412,6 +5774,10 @@ public object iot {
      * .destinationArn("destinationArn")
      * .topic("topic")
      * // the properties below are optional
+     * .headers(List.of(KafkaActionHeaderProperty.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .key("key")
      * .partition("partition")
      * .build())
@@ -5619,6 +5985,10 @@ public object iot {
      * .destinationArn("destinationArn")
      * .topic("topic")
      * // the properties below are optional
+     * .headers(List.of(KafkaActionHeaderProperty.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .key("key")
      * .partition("partition")
      * .build())

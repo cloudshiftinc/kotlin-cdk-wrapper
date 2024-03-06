@@ -55,8 +55,7 @@ public class CfnNetworkAclEntryPropsDsl {
 
     /**
      * @param cidrBlock The IPv4 CIDR range to allow or deny, in CIDR notation (for example,
-     *   172.16.0.0/24). Requirement is conditional: You must specify the `CidrBlock` or
-     *   `Ipv6CidrBlock` property.
+     *   172.16.0.0/24). You must specify an IPv4 CIDR block or an IPv6 CIDR block.
      */
     public fun cidrBlock(cidrBlock: String) {
         cdkBuilder.cidrBlock(cidrBlock)
@@ -81,24 +80,24 @@ public class CfnNetworkAclEntryPropsDsl {
     }
 
     /**
-     * @param icmp The Internet Control Message Protocol (ICMP) code and type. Requirement is
-     *   conditional: Required if specifying 1 (ICMP) for the protocol parameter.
+     * @param icmp The Internet Control Message Protocol (ICMP) code and type. Required if
+     *   specifying 1 (ICMP) for the protocol parameter.
      */
     public fun icmp(icmp: IResolvable) {
         cdkBuilder.icmp(icmp)
     }
 
     /**
-     * @param icmp The Internet Control Message Protocol (ICMP) code and type. Requirement is
-     *   conditional: Required if specifying 1 (ICMP) for the protocol parameter.
+     * @param icmp The Internet Control Message Protocol (ICMP) code and type. Required if
+     *   specifying 1 (ICMP) for the protocol parameter.
      */
     public fun icmp(icmp: CfnNetworkAclEntry.IcmpProperty) {
         cdkBuilder.icmp(icmp)
     }
 
     /**
-     * @param ipv6CidrBlock The IPv6 network range to allow or deny, in CIDR notation. Requirement
-     *   is conditional: You must specify the `CidrBlock` or `Ipv6CidrBlock` property.
+     * @param ipv6CidrBlock The IPv6 network range to allow or deny, in CIDR notation. You must
+     *   specify an IPv4 CIDR block or an IPv6 CIDR block.
      */
     public fun ipv6CidrBlock(ipv6CidrBlock: String) {
         cdkBuilder.ipv6CidrBlock(ipv6CidrBlock)
@@ -110,16 +109,16 @@ public class CfnNetworkAclEntryPropsDsl {
     }
 
     /**
-     * @param portRange The range of port numbers for the UDP/TCP protocol. Conditional required if
-     *   specifying 6 (TCP) or 17 (UDP) for the protocol parameter.
+     * @param portRange The range of port numbers for the UDP/TCP protocol. Required if specifying 6
+     *   (TCP) or 17 (UDP) for the protocol parameter.
      */
     public fun portRange(portRange: IResolvable) {
         cdkBuilder.portRange(portRange)
     }
 
     /**
-     * @param portRange The range of port numbers for the UDP/TCP protocol. Conditional required if
-     *   specifying 6 (TCP) or 17 (UDP) for the protocol parameter.
+     * @param portRange The range of port numbers for the UDP/TCP protocol. Required if specifying 6
+     *   (TCP) or 17 (UDP) for the protocol parameter.
      */
     public fun portRange(portRange: CfnNetworkAclEntry.PortRangeProperty) {
         cdkBuilder.portRange(portRange)

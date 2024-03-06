@@ -26,6 +26,8 @@ import software.amazon.awscdk.services.codebuild.BuildEnvironmentCertificate
 import software.amazon.awscdk.services.codebuild.BuildEnvironmentVariable
 import software.amazon.awscdk.services.codebuild.BuildImageBindOptions
 import software.amazon.awscdk.services.codebuild.BuildImageConfig
+import software.amazon.awscdk.services.codebuild.CfnFleet
+import software.amazon.awscdk.services.codebuild.CfnFleetProps
 import software.amazon.awscdk.services.codebuild.CfnProject
 import software.amazon.awscdk.services.codebuild.CfnProjectProps
 import software.amazon.awscdk.services.codebuild.CfnReportGroup
@@ -245,42 +247,29 @@ public object codebuild {
     /**
      * Example:
      * ```
-     * Vpc vpc;
-     * SecurityGroup mySecurityGroup;
-     * CodeBuildStep.Builder.create("Synth")
-     * // ...standard ShellStep props...
-     * .commands(List.of())
-     * .env(Map.of())
-     * // If you are using a CodeBuildStep explicitly, set the 'cdk.out' directory
-     * // to be the synth step's output.
-     * .primaryOutputDirectory("cdk.out")
-     * // Control the name of the project
-     * .projectName("MyProject")
-     * // Control parts of the BuildSpec other than the regular 'build' and 'install' commands
-     * .partialBuildSpec(BuildSpec.fromObject(Map.of(
-     * "version", "0.2")))
-     * // Control the build environment
-     * .buildEnvironment(BuildEnvironment.builder()
-     * .computeType(ComputeType.LARGE)
-     * .privileged(true)
+     * CodePipeline pipeline = CodePipeline.Builder.create(this, "Pipeline")
+     * .synth(ShellStep.Builder.create("Synth")
+     * .input(CodePipelineSource.connection("my-org/my-app", "main", ConnectionSourceOptions.builder()
+     * .connectionArn("arn:aws:codestar-connections:us-east-1:222222222222:connection/7d2469ff-514a-4e4f-9003-5ca4a43cdc41")
+     * .build()))
+     * .commands(List.of("npm ci", "npm run build", "npx cdk synth"))
      * .build())
-     * .timeout(Duration.minutes(90))
-     * .fileSystemLocations(List.of(FileSystemLocation.efs(EfsFileSystemLocationProps.builder()
-     * .identifier("myidentifier2")
-     * .location("myclodation.mydnsroot.com:/loc")
-     * .mountPoint("/media")
-     * .mountOptions("opts")
-     * .build())))
-     * // Control Elastic Network Interface creation
-     * .vpc(vpc)
-     * .subnetSelection(SubnetSelection.builder().subnetType(SubnetType.PRIVATE_WITH_EGRESS).build())
-     * .securityGroups(List.of(mySecurityGroup))
-     * // Control caching
-     * .cache(Cache.bucket(new Bucket(this, "Cache")))
-     * // Additional policy statements for the execution role
-     * .rolePolicyStatements(List.of(
-     * PolicyStatement.Builder.create().build()))
+     * // Turn this on because the pipeline uses Docker image assets
+     * .dockerEnabledForSelfMutation(true)
      * .build();
+     * pipeline.addWave("MyWave", WaveOptions.builder()
+     * .post(List.of(
+     * CodeBuildStep.Builder.create("RunApproval")
+     * .commands(List.of("command-from-image"))
+     * .buildEnvironment(BuildEnvironment.builder()
+     * // The user of a Docker image asset in the pipeline requires turning on
+     * // 'dockerEnabledForSelfMutation'.
+     * .buildImage(LinuxBuildImage.fromAsset(this, "Image", DockerImageAssetProps.builder()
+     * .directory("./docker-image")
+     * .build()))
+     * .build())
+     * .build()))
+     * .build());
      * ```
      */
     public inline fun buildEnvironment(
@@ -396,6 +385,67 @@ public object codebuild {
     }
 
     /**
+     * The `AWS::CodeBuild::Fleet` resource configures a compute fleet, a set of dedicated instances
+     * for your build environment.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.codebuild.*;
+     * CfnFleet cfnFleet = CfnFleet.Builder.create(this, "MyCfnFleet")
+     * .baseCapacity(123)
+     * .computeType("computeType")
+     * .environmentType("environmentType")
+     * .name("name")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html)
+     */
+    public inline fun cfnFleet(
+        scope: Construct,
+        id: String,
+        block: CfnFleetDsl.() -> Unit = {},
+    ): CfnFleet {
+        val builder = CfnFleetDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnFleet`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.codebuild.*;
+     * CfnFleetProps cfnFleetProps = CfnFleetProps.builder()
+     * .baseCapacity(123)
+     * .computeType("computeType")
+     * .environmentType("environmentType")
+     * .name("name")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html)
+     */
+    public inline fun cfnFleetProps(block: CfnFleetPropsDsl.() -> Unit = {}): CfnFleetProps {
+        val builder = CfnFleetPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The `AWS::CodeBuild::Project` resource configures how AWS CodeBuild builds your source code.
      *
      * For example, it tells CodeBuild where to get the source code and which build environment to
@@ -434,6 +484,9 @@ public object codebuild {
      * // the properties below are optional
      * .type("type")
      * .build()))
+     * .fleet(ProjectFleetProperty.builder()
+     * .fleetArn("fleetArn")
+     * .build())
      * .imagePullCredentialsType("imagePullCredentialsType")
      * .privilegedMode(false)
      * .registryCredential(RegistryCredentialProperty.builder()
@@ -721,6 +774,9 @@ public object codebuild {
      * // the properties below are optional
      * .type("type")
      * .build()))
+     * .fleet(ProjectFleetProperty.builder()
+     * .fleetArn("fleetArn")
+     * .build())
      * .imagePullCredentialsType("imagePullCredentialsType")
      * .privilegedMode(false)
      * .registryCredential(RegistryCredentialProperty.builder()
@@ -927,6 +983,33 @@ public object codebuild {
     }
 
     /**
+     * Information about the compute fleet of the build project.
+     *
+     * For more information, see
+     * [Working with reserved capacity in AWS CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/fleets.html)
+     * .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.codebuild.*;
+     * ProjectFleetProperty projectFleetProperty = ProjectFleetProperty.builder()
+     * .fleetArn("fleetArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectfleet.html)
+     */
+    public inline fun cfnProjectProjectFleetProperty(
+        block: CfnProjectProjectFleetPropertyDsl.() -> Unit = {}
+    ): CfnProject.ProjectFleetProperty {
+        val builder = CfnProjectProjectFleetPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * A source identifier and its corresponding version.
      *
      * Example:
@@ -1020,6 +1103,9 @@ public object codebuild {
      * // the properties below are optional
      * .type("type")
      * .build()))
+     * .fleet(ProjectFleetProperty.builder()
+     * .fleetArn("fleetArn")
+     * .build())
      * .imagePullCredentialsType("imagePullCredentialsType")
      * .privilegedMode(false)
      * .registryCredential(RegistryCredentialProperty.builder()

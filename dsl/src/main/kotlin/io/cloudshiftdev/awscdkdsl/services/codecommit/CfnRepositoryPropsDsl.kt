@@ -44,6 +44,7 @@ import software.amazon.awscdk.services.codecommit.CfnRepositoryProps
  * // the properties below are optional
  * .branchName("branchName")
  * .build())
+ * .kmsKeyId("kmsKeyId")
  * .repositoryDescription("repositoryDescription")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -96,6 +97,18 @@ public class CfnRepositoryPropsDsl {
      */
     public fun code(code: CfnRepository.CodeProperty) {
         cdkBuilder.code(code)
+    }
+
+    /**
+     * @param kmsKeyId The ID of the AWS Key Management Service encryption key used to encrypt and
+     *   decrypt the repository.
+     *
+     * The input can be the full ARN, the key ID, or the key alias. For more information, see
+     * [Finding the key ID and key ARN](https://docs.aws.amazon.com/kms/latest/developerguide/find-cmk-id-arn.html)
+     * .
+     */
+    public fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
     /**

@@ -16,8 +16,6 @@ import kotlin.String
 import software.amazon.awscdk.services.opsworks.CfnStack
 
 /**
- * Describes an Elastic IP address.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.

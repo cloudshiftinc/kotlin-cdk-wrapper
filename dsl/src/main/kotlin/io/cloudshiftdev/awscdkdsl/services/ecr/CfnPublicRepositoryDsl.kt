@@ -64,14 +64,16 @@ public class CfnPublicRepositoryDsl(
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
-     * The CatalogData property type specifies Catalog data for ECR Public Repository.
+     * The details about the repository that are publicly visible in the Amazon ECR Public Gallery.
      *
-     * For information about Catalog Data, see <link>
+     * For more information, see
+     * [Amazon ECR Public repository catalog data](https://docs.aws.amazon.com/AmazonECR/latest/public/public-repository-catalog-data.html)
+     * in the *Amazon ECR Public User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-publicrepository.html#cfn-ecr-publicrepository-repositorycatalogdata)
      *
-     * @param repositoryCatalogData The CatalogData property type specifies Catalog data for ECR
-     *   Public Repository.
+     * @param repositoryCatalogData The details about the repository that are publicly visible in
+     *   the Amazon ECR Public Gallery.
      */
     public fun repositoryCatalogData(repositoryCatalogData: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
@@ -80,14 +82,16 @@ public class CfnPublicRepositoryDsl(
     }
 
     /**
-     * The CatalogData property type specifies Catalog data for ECR Public Repository.
+     * The details about the repository that are publicly visible in the Amazon ECR Public Gallery.
      *
-     * For information about Catalog Data, see <link>
+     * For more information, see
+     * [Amazon ECR Public repository catalog data](https://docs.aws.amazon.com/AmazonECR/latest/public/public-repository-catalog-data.html)
+     * in the *Amazon ECR Public User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-publicrepository.html#cfn-ecr-publicrepository-repositorycatalogdata)
      *
-     * @param repositoryCatalogData The CatalogData property type specifies Catalog data for ECR
-     *   Public Repository.
+     * @param repositoryCatalogData The details about the repository that are publicly visible in
+     *   the Amazon ECR Public Gallery.
      */
     public fun repositoryCatalogData(repositoryCatalogData: Any) {
         cdkBuilder.repositoryCatalogData(repositoryCatalogData)

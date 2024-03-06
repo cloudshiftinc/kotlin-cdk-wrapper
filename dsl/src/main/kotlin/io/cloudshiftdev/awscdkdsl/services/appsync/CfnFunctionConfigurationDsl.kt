@@ -228,30 +228,28 @@ public class CfnFunctionConfigurationDsl(
     }
 
     /**
-     * Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync function.
+     * Describes a runtime used by an AWS AppSync resolver or AWS AppSync function.
      *
      * Specifies the name and version of the runtime to use. Note that if a runtime is specified,
      * code must also be specified.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-functionconfiguration.html#cfn-appsync-functionconfiguration-runtime)
      *
-     * @param runtime Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync
-     *   function.
+     * @param runtime Describes a runtime used by an AWS AppSync resolver or AWS AppSync function.
      */
     public fun runtime(runtime: IResolvable) {
         cdkBuilder.runtime(runtime)
     }
 
     /**
-     * Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync function.
+     * Describes a runtime used by an AWS AppSync resolver or AWS AppSync function.
      *
      * Specifies the name and version of the runtime to use. Note that if a runtime is specified,
      * code must also be specified.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-functionconfiguration.html#cfn-appsync-functionconfiguration-runtime)
      *
-     * @param runtime Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync
-     *   function.
+     * @param runtime Describes a runtime used by an AWS AppSync resolver or AWS AppSync function.
      */
     public fun runtime(runtime: CfnFunctionConfiguration.AppSyncRuntimeProperty) {
         cdkBuilder.runtime(runtime)

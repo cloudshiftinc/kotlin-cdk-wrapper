@@ -18,7 +18,9 @@ import kotlin.Any
 import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.Collection
 import kotlin.collections.Map
+import kotlin.collections.MutableList
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.stepfunctions.Credentials
 import software.amazon.awscdk.services.stepfunctions.IntegrationPattern
@@ -48,6 +50,7 @@ import software.constructs.Construct
  * .objectKey("folder")
  * .build())
  * .build())
+ * .executionParameters(List.of("param1", "param2"))
  * .build();
  * ```
  *
@@ -60,6 +63,8 @@ public class AthenaStartQueryExecutionDsl(
 ) {
     private val cdkBuilder: AthenaStartQueryExecution.Builder =
         AthenaStartQueryExecution.Builder.create(scope, id)
+
+    private val _executionParameters: MutableList<String> = mutableListOf()
 
     /**
      * Unique string string to ensure idempotence.
@@ -118,6 +123,34 @@ public class AthenaStartQueryExecutionDsl(
     }
 
     /**
+     * A list of values for the parameters in a query.
+     *
+     * The values are applied sequentially to the parameters in the query in the order in which the
+     * parameters occur.
+     *
+     * Default: - No parameters
+     *
+     * @param executionParameters A list of values for the parameters in a query.
+     */
+    public fun executionParameters(vararg executionParameters: String) {
+        _executionParameters.addAll(listOf(*executionParameters))
+    }
+
+    /**
+     * A list of values for the parameters in a query.
+     *
+     * The values are applied sequentially to the parameters in the query in the order in which the
+     * parameters occur.
+     *
+     * Default: - No parameters
+     *
+     * @param executionParameters A list of values for the parameters in a query.
+     */
+    public fun executionParameters(executionParameters: Collection<String>) {
+        _executionParameters.addAll(executionParameters)
+    }
+
+    /**
      * (deprecated) Timeout for the heartbeat.
      *
      * Default: - None
@@ -162,13 +195,15 @@ public class AthenaStartQueryExecutionDsl(
     /**
      * AWS Step Functions integrates with services directly in the Amazon States Language.
      *
-     * You can control these AWS services using service integration patterns
+     * You can control these AWS services using service integration patterns.
+     *
+     * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      *
      * Default: - `IntegrationPattern.REQUEST_RESPONSE` for most tasks. `IntegrationPattern.RUN_JOB`
      * for the following exceptions: `BatchSubmitJob`, `EmrAddStep`, `EmrCreateCluster`,
      * `EmrTerminationCluster`, and `EmrContainersStartJobRun`.
      *
-     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html#connect-wait-token)
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-supported-services.html)
      *
      * @param integrationPattern AWS Step Functions integrates with services directly in the Amazon
      *   States Language.
@@ -305,6 +340,17 @@ public class AthenaStartQueryExecutionDsl(
     }
 
     /**
+     * Optional name for this state.
+     *
+     * Default: - The construct ID will be used as state name
+     *
+     * @param stateName Optional name for this state.
+     */
+    public fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
+    }
+
+    /**
      * Timeout for the task.
      *
      * [disable-awslint:duration-prop-type] is needed because all props interface in
@@ -342,5 +388,8 @@ public class AthenaStartQueryExecutionDsl(
         cdkBuilder.workGroup(workGroup)
     }
 
-    public fun build(): AthenaStartQueryExecution = cdkBuilder.build()
+    public fun build(): AthenaStartQueryExecution {
+        if (_executionParameters.isNotEmpty()) cdkBuilder.executionParameters(_executionParameters)
+        return cdkBuilder.build()
+    }
 }

@@ -28,9 +28,11 @@ public object redshiftserverless {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.redshiftserverless.*;
+     * Object namespaceResourcePolicy;
      * CfnNamespace cfnNamespace = CfnNamespace.Builder.create(this, "MyCfnNamespace")
      * .namespaceName("namespaceName")
      * // the properties below are optional
+     * .adminPasswordSecretKmsKeyId("adminPasswordSecretKmsKeyId")
      * .adminUsername("adminUsername")
      * .adminUserPassword("adminUserPassword")
      * .dbName("dbName")
@@ -40,6 +42,9 @@ public object redshiftserverless {
      * .iamRoles(List.of("iamRoles"))
      * .kmsKeyId("kmsKeyId")
      * .logExports(List.of("logExports"))
+     * .manageAdminPassword(false)
+     * .namespaceResourcePolicy(namespaceResourcePolicy)
+     * .redshiftIdcApplicationArn("redshiftIdcApplicationArn")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -68,6 +73,8 @@ public object redshiftserverless {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.redshiftserverless.*;
      * NamespaceProperty namespaceProperty = NamespaceProperty.builder()
+     * .adminPasswordSecretArn("adminPasswordSecretArn")
+     * .adminPasswordSecretKmsKeyId("adminPasswordSecretKmsKeyId")
      * .adminUsername("adminUsername")
      * .creationDate("creationDate")
      * .dbName("dbName")
@@ -100,9 +107,11 @@ public object redshiftserverless {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.redshiftserverless.*;
+     * Object namespaceResourcePolicy;
      * CfnNamespaceProps cfnNamespaceProps = CfnNamespaceProps.builder()
      * .namespaceName("namespaceName")
      * // the properties below are optional
+     * .adminPasswordSecretKmsKeyId("adminPasswordSecretKmsKeyId")
      * .adminUsername("adminUsername")
      * .adminUserPassword("adminUserPassword")
      * .dbName("dbName")
@@ -112,6 +121,9 @@ public object redshiftserverless {
      * .iamRoles(List.of("iamRoles"))
      * .kmsKeyId("kmsKeyId")
      * .logExports(List.of("logExports"))
+     * .manageAdminPassword(false)
+     * .namespaceResourcePolicy(namespaceResourcePolicy)
+     * .redshiftIdcApplicationArn("redshiftIdcApplicationArn")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -146,6 +158,7 @@ public object redshiftserverless {
      * .parameterValue("parameterValue")
      * .build()))
      * .enhancedVpcRouting(false)
+     * .maxCapacity(123)
      * .namespaceName("namespaceName")
      * .port(123)
      * .publiclyAccessible(false)
@@ -272,6 +285,7 @@ public object redshiftserverless {
      * .parameterValue("parameterValue")
      * .build()))
      * .enhancedVpcRouting(false)
+     * .maxCapacity(123)
      * .namespaceName("namespaceName")
      * .port(123)
      * .publiclyAccessible(false)
@@ -354,6 +368,7 @@ public object redshiftserverless {
      * .build()))
      * .build())
      * .enhancedVpcRouting(false)
+     * .maxCapacity(123)
      * .namespaceName("namespaceName")
      * .publiclyAccessible(false)
      * .securityGroupIds(List.of("securityGroupIds"))

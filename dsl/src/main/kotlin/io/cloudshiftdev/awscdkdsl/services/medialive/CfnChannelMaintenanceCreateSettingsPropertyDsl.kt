@@ -35,12 +35,18 @@ public class CfnChannelMaintenanceCreateSettingsPropertyDsl {
     private val cdkBuilder: CfnChannel.MaintenanceCreateSettingsProperty.Builder =
         CfnChannel.MaintenanceCreateSettingsProperty.builder()
 
-    /** @param maintenanceDay the value to be set. */
+    /**
+     * @param maintenanceDay Choose one day of the week for maintenance. The chosen day is used for
+     *   all future maintenance windows.
+     */
     public fun maintenanceDay(maintenanceDay: String) {
         cdkBuilder.maintenanceDay(maintenanceDay)
     }
 
-    /** @param maintenanceStartTime the value to be set. */
+    /**
+     * @param maintenanceStartTime Choose the hour that maintenance will start. The chosen time is
+     *   used for all future maintenance windows.
+     */
     public fun maintenanceStartTime(maintenanceStartTime: String) {
         cdkBuilder.maintenanceStartTime(maintenanceStartTime)
     }

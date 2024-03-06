@@ -144,12 +144,18 @@ public class CfnDeliveryStreamAmazonopensearchserviceDestinationConfigurationPro
         cdkBuilder.clusterEndpoint(clusterEndpoint)
     }
 
-    /** @param documentIdOptions the value to be set. */
+    /**
+     * @param documentIdOptions Indicates the method for setting up document ID. The supported
+     *   methods are Firehose generated document ID and OpenSearch Service generated document ID.
+     */
     public fun documentIdOptions(documentIdOptions: IResolvable) {
         cdkBuilder.documentIdOptions(documentIdOptions)
     }
 
-    /** @param documentIdOptions the value to be set. */
+    /**
+     * @param documentIdOptions Indicates the method for setting up document ID. The supported
+     *   methods are Firehose generated document ID and OpenSearch Service generated document ID.
+     */
     public fun documentIdOptions(documentIdOptions: CfnDeliveryStream.DocumentIdOptionsProperty) {
         cdkBuilder.documentIdOptions(documentIdOptions)
     }

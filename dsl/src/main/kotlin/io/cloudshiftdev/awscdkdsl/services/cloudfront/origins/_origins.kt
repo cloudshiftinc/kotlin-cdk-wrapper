@@ -13,7 +13,9 @@ package io.cloudshiftdev.awscdkdsl.services.cloudfront.origins
 
 import kotlin.String
 import kotlin.Unit
-import software.amazon.awscdk.services.apigateway.RestApi
+import software.amazon.awscdk.services.apigateway.RestApiBase
+import software.amazon.awscdk.services.cloudfront.origins.FunctionUrlOrigin
+import software.amazon.awscdk.services.cloudfront.origins.FunctionUrlOriginProps
 import software.amazon.awscdk.services.cloudfront.origins.HttpOrigin
 import software.amazon.awscdk.services.cloudfront.origins.HttpOriginProps
 import software.amazon.awscdk.services.cloudfront.origins.LoadBalancerV2Origin
@@ -25,9 +27,64 @@ import software.amazon.awscdk.services.cloudfront.origins.RestApiOriginProps
 import software.amazon.awscdk.services.cloudfront.origins.S3Origin
 import software.amazon.awscdk.services.cloudfront.origins.S3OriginProps
 import software.amazon.awscdk.services.elasticloadbalancingv2.ILoadBalancerV2
+import software.amazon.awscdk.services.lambda.IFunctionUrl
 import software.amazon.awscdk.services.s3.IBucket
 
 public object origins {
+    /**
+     * An Origin for a Lambda Function URL.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.services.lambda.*;
+     * Function fn;
+     * FunctionUrl fnUrl =
+     * fn.addFunctionUrl(FunctionUrlOptions.builder().authType(FunctionUrlAuthType.NONE).build());
+     * Distribution.Builder.create(this, "Distribution")
+     * .defaultBehavior(BehaviorOptions.builder().origin(new FunctionUrlOrigin(fnUrl)).build())
+     * .build();
+     * ```
+     */
+    public inline fun functionUrlOrigin(
+        lambdaFunctionUrl: IFunctionUrl,
+        block: FunctionUrlOriginDsl.() -> Unit = {}
+    ): FunctionUrlOrigin {
+        val builder = FunctionUrlOriginDsl(lambdaFunctionUrl)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for a Lambda Function URL Origin.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.*;
+     * import software.amazon.awscdk.services.cloudfront.origins.*;
+     * FunctionUrlOriginProps functionUrlOriginProps = FunctionUrlOriginProps.builder()
+     * .connectionAttempts(123)
+     * .connectionTimeout(Duration.minutes(30))
+     * .customHeaders(Map.of(
+     * "customHeadersKey", "customHeaders"))
+     * .keepaliveTimeout(Duration.minutes(30))
+     * .originId("originId")
+     * .originPath("originPath")
+     * .originShieldEnabled(false)
+     * .originShieldRegion("originShieldRegion")
+     * .readTimeout(Duration.minutes(30))
+     * .build();
+     * ```
+     */
+    public inline fun functionUrlOriginProps(
+        block: FunctionUrlOriginPropsDsl.() -> Unit = {}
+    ): FunctionUrlOriginProps {
+        val builder = FunctionUrlOriginPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
     /**
      * An Origin for an HTTP server or S3 bucket configured for website hosting.
      *
@@ -211,7 +268,7 @@ public object origins {
      * ```
      */
     public inline fun restApiOrigin(
-        restApi: RestApi,
+        restApi: RestApiBase,
         block: RestApiOriginDsl.() -> Unit = {}
     ): RestApiOrigin {
         val builder = RestApiOriginDsl(restApi)

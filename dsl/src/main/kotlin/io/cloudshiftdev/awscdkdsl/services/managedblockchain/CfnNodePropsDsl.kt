@@ -55,7 +55,6 @@ public class CfnNodePropsDsl {
      *   have the following `NetworkId` s:
      * * `n-ethereum-mainnet`
      * * `n-ethereum-goerli`
-     * * `n-ethereum-rinkeby`
      */
     public fun networkId(networkId: String) {
         cdkBuilder.networkId(networkId)

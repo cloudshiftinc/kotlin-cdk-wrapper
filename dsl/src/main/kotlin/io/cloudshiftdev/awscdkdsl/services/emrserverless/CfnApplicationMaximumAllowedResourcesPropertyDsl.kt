@@ -41,35 +41,17 @@ public class CfnApplicationMaximumAllowedResourcesPropertyDsl {
     private val cdkBuilder: CfnApplication.MaximumAllowedResourcesProperty.Builder =
         CfnApplication.MaximumAllowedResourcesProperty.builder()
 
-    /**
-     * @param cpu The maximum allowed CPU for an application. *Minimum* : 1
-     *
-     * *Maximum* : 15
-     *
-     * *Pattern* : `^[1-9][0-9]*(\\s)?(vCPU|vcpu|VCPU)?$`
-     */
+    /** @param cpu The maximum allowed CPU for an application. */
     public fun cpu(cpu: String) {
         cdkBuilder.cpu(cpu)
     }
 
-    /**
-     * @param disk The maximum allowed disk for an application. *Minimum* : 1
-     *
-     * *Maximum* : 15
-     *
-     * *Pattern* : `^[1-9][0-9]*(\\s)?(GB|gb|gB|Gb)$"`
-     */
+    /** @param disk The maximum allowed disk for an application. */
     public fun disk(disk: String) {
         cdkBuilder.disk(disk)
     }
 
-    /**
-     * @param memory The maximum allowed resources for an application. *Minimum* : 1
-     *
-     * *Maximum* : 15
-     *
-     * *Pattern* : `^[1-9][0-9]*(\\s)?(GB|gb|gB|Gb)?$`
-     */
+    /** @param memory The maximum allowed resources for an application. */
     public fun memory(memory: String) {
         cdkBuilder.memory(memory)
     }

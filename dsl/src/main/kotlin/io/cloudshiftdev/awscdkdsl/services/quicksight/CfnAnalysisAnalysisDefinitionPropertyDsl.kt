@@ -150,6 +150,16 @@ public class CfnAnalysisAnalysisDefinitionPropertyDsl {
         cdkBuilder.filterGroups(filterGroups)
     }
 
+    /** @param options An array of option definitions for an analysis. */
+    public fun options(options: IResolvable) {
+        cdkBuilder.options(options)
+    }
+
+    /** @param options An array of option definitions for an analysis. */
+    public fun options(options: CfnAnalysis.AssetOptionsProperty) {
+        cdkBuilder.options(options)
+    }
+
     /**
      * @param parameterDeclarations An array of parameter declarations for an analysis. Parameters
      *   are named variables that can transfer a value for use by an action or an object.

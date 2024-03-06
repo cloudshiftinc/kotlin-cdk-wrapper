@@ -34,6 +34,7 @@ import software.amazon.awscdk.services.ecs.CfnCapacityProviderProps
  * .autoScalingGroupProvider(AutoScalingGroupProviderProperty.builder()
  * .autoScalingGroupArn("autoScalingGroupArn")
  * // the properties below are optional
+ * .managedDraining("managedDraining")
  * .managedScaling(ManagedScalingProperty.builder()
  * .instanceWarmupPeriod(123)
  * .maximumScalingStepSize(123)

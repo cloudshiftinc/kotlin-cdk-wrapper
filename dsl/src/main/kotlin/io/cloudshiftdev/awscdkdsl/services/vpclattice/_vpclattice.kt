@@ -107,9 +107,12 @@ public object vpclattice {
     }
 
     /**
-     * Creates or updates the auth policy.
+     * Creates or updates the auth policy. The policy string in JSON must not contain newlines or
+     * blank lines.
      *
-     * The policy string in JSON must not contain newlines or blank lines.
+     * For more information, see
+     * [Auth policies](https://docs.aws.amazon.com/vpc-lattice/latest/ug/auth-policies.html) in the
+     * *Amazon VPC Lattice User Guide* .
      *
      * Example:
      * ```
@@ -214,10 +217,7 @@ public object vpclattice {
     /**
      * The action for the default rule.
      *
-     * Each listener has a default rule. Each rule consists of a priority, one or more actions, and
-     * one or more conditions. The default rule is the rule that's used if no other rules match.
-     * Each rule must include exactly one of the following types of actions: `forward` or
-     * `fixed-response` , and it must be the last action to be performed.
+     * Each listener has a default rule. The default rule is used if no other rules match.
      *
      * Example:
      * ```
@@ -249,7 +249,7 @@ public object vpclattice {
     }
 
     /**
-     * Information about an action that returns a custom HTTP response.
+     * Describes an action that returns a custom HTTP response.
      *
      * Example:
      * ```
@@ -501,9 +501,6 @@ public object vpclattice {
     /**
      * Describes the action for a rule.
      *
-     * Each rule must include exactly one of the following types of actions: `forward` or
-     * `fixed-response` , and it must be the last action to be performed.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -534,7 +531,7 @@ public object vpclattice {
     }
 
     /**
-     * Information about an action that returns a custom HTTP response.
+     * Describes an action that returns a custom HTTP response.
      *
      * Example:
      * ```
@@ -620,8 +617,6 @@ public object vpclattice {
 
     /**
      * Describes a header match type.
-     *
-     * Only one can be provided.
      *
      * Example:
      * ```
@@ -1008,6 +1003,10 @@ public object vpclattice {
     /**
      * Associates a service with a service network.
      *
+     * For more information, see
+     * [Manage service associations](https://docs.aws.amazon.com/vpc-lattice/latest/ug/service-network-associations.html#service-network-service-associations)
+     * in the *Amazon VPC Lattice User Guide* .
+     *
      * You can't use this operation if the service and service network are already associated or if
      * there is a disassociation or deletion in progress. If the association fails, you can retry
      * the operation by deleting the association and recreating it.
@@ -1051,7 +1050,7 @@ public object vpclattice {
     }
 
     /**
-     * DNS information about the service.
+     * The DNS information.
      *
      * Example:
      * ```
@@ -1237,10 +1236,6 @@ public object vpclattice {
      * .type("type")
      * // the properties below are optional
      * .config(TargetGroupConfigProperty.builder()
-     * .port(123)
-     * .protocol("protocol")
-     * .vpcIdentifier("vpcIdentifier")
-     * // the properties below are optional
      * .healthCheck(HealthCheckConfigProperty.builder()
      * .enabled(false)
      * .healthCheckIntervalSeconds(123)
@@ -1256,7 +1251,11 @@ public object vpclattice {
      * .unhealthyThresholdCount(123)
      * .build())
      * .ipAddressType("ipAddressType")
+     * .lambdaEventStructureVersion("lambdaEventStructureVersion")
+     * .port(123)
+     * .protocol("protocol")
      * .protocolVersion("protocolVersion")
+     * .vpcIdentifier("vpcIdentifier")
      * .build())
      * .name("name")
      * .tags(List.of(CfnTag.builder()
@@ -1284,7 +1283,7 @@ public object vpclattice {
     }
 
     /**
-     * The health check configuration of a target group.
+     * Describes the health check configuration of a target group.
      *
      * Health check configurations aren't used for target groups of type `LAMBDA` or `ALB` .
      *
@@ -1320,7 +1319,8 @@ public object vpclattice {
     }
 
     /**
-     * The codes to use when checking for a successful response from a target for health checks.
+     * Describes the codes to use when checking for a successful response from a target for health
+     * checks.
      *
      * Example:
      * ```
@@ -1354,10 +1354,6 @@ public object vpclattice {
      * .type("type")
      * // the properties below are optional
      * .config(TargetGroupConfigProperty.builder()
-     * .port(123)
-     * .protocol("protocol")
-     * .vpcIdentifier("vpcIdentifier")
-     * // the properties below are optional
      * .healthCheck(HealthCheckConfigProperty.builder()
      * .enabled(false)
      * .healthCheckIntervalSeconds(123)
@@ -1373,7 +1369,11 @@ public object vpclattice {
      * .unhealthyThresholdCount(123)
      * .build())
      * .ipAddressType("ipAddressType")
+     * .lambdaEventStructureVersion("lambdaEventStructureVersion")
+     * .port(123)
+     * .protocol("protocol")
      * .protocolVersion("protocolVersion")
+     * .vpcIdentifier("vpcIdentifier")
      * .build())
      * .name("name")
      * .tags(List.of(CfnTag.builder()
@@ -1401,7 +1401,9 @@ public object vpclattice {
     /**
      * Describes the configuration of a target group.
      *
-     * Lambda functions don't support target group configuration.
+     * For more information, see
+     * [Target groups](https://docs.aws.amazon.com/vpc-lattice/latest/ug/target-groups.html) in the
+     * *Amazon VPC Lattice User Guide* .
      *
      * Example:
      * ```
@@ -1409,10 +1411,6 @@ public object vpclattice {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.vpclattice.*;
      * TargetGroupConfigProperty targetGroupConfigProperty = TargetGroupConfigProperty.builder()
-     * .port(123)
-     * .protocol("protocol")
-     * .vpcIdentifier("vpcIdentifier")
-     * // the properties below are optional
      * .healthCheck(HealthCheckConfigProperty.builder()
      * .enabled(false)
      * .healthCheckIntervalSeconds(123)
@@ -1428,7 +1426,11 @@ public object vpclattice {
      * .unhealthyThresholdCount(123)
      * .build())
      * .ipAddressType("ipAddressType")
+     * .lambdaEventStructureVersion("lambdaEventStructureVersion")
+     * .port(123)
+     * .protocol("protocol")
      * .protocolVersion("protocolVersion")
+     * .vpcIdentifier("vpcIdentifier")
      * .build();
      * ```
      *

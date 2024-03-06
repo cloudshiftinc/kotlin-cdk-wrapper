@@ -47,6 +47,7 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * .matchOperator("matchOperator")
  * // the properties below are optional
  * .categoryValues(List.of("categoryValues"))
+ * .nullOption("nullOption")
  * .selectAllOptions("selectAllOptions")
  * .build())
  * .build();

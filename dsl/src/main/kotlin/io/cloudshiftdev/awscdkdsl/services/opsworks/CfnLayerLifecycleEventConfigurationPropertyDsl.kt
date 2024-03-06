@@ -16,8 +16,6 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opsworks.CfnLayer
 
 /**
- * Specifies the lifecycle event configuration.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.

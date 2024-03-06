@@ -15,6 +15,7 @@ import kotlin.Unit
 import software.amazon.awscdk.services.connect.CfnEvaluationForm
 import software.amazon.awscdk.services.connect.CfnInstance
 import software.amazon.awscdk.services.connect.CfnInstanceStorageConfig
+import software.amazon.awscdk.services.connect.CfnPredefinedAttribute
 import software.amazon.awscdk.services.connect.CfnQueue
 import software.amazon.awscdk.services.connect.CfnQuickConnect
 import software.amazon.awscdk.services.connect.CfnRule
@@ -72,6 +73,15 @@ public inline fun CfnInstanceStorageConfig.setS3Config(
     val builder = CfnInstanceStorageConfigS3ConfigPropertyDsl()
     builder.apply(block)
     return setS3Config(builder.build())
+}
+
+/** The values of a predefined attribute. */
+public inline fun CfnPredefinedAttribute.setValues(
+    block: CfnPredefinedAttributeValuesPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnPredefinedAttributeValuesPropertyDsl()
+    builder.apply(block)
+    return setValues(builder.build())
 }
 
 /** The outbound caller ID name, number, and outbound whisper flow. */

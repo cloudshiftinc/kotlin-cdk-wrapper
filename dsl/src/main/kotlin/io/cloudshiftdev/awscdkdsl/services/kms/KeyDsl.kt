@@ -32,14 +32,20 @@ import software.constructs.Construct
  *
  * Example:
  * ```
- * import software.amazon.awscdk.services.kms.*;
- * Key encryptionKey = Key.Builder.create(this, "Key")
- * .enableKeyRotation(true)
- * .build();
- * Table table = Table.Builder.create(this, "MyTable")
- * .partitionKey(Attribute.builder().name("id").type(AttributeType.STRING).build())
- * .encryption(TableEncryption.CUSTOMER_MANAGED)
- * .encryptionKey(encryptionKey)
+ * Vpc vpc;
+ * IInstanceEngine engine =
+ * DatabaseInstanceEngine.postgres(PostgresInstanceEngineProps.builder().version(PostgresEngineVersion.VER_15_2).build());
+ * Key myKey = new Key(this, "MyKey");
+ * DatabaseInstance.Builder.create(this, "InstanceWithCustomizedSecret")
+ * .engine(engine)
+ * .vpc(vpc)
+ * .credentials(Credentials.fromGeneratedSecret("postgres", CredentialsBaseOptions.builder()
+ * .secretName("my-cool-name")
+ * .encryptionKey(myKey)
+ * .excludeCharacters("!&amp;*^#&#64;()")
+ * .replicaRegions(List.of(ReplicaRegion.builder().region("eu-west-1").build(),
+ * ReplicaRegion.builder().region("eu-west-2").build()))
+ * .build()))
  * .build();
  * ```
  */

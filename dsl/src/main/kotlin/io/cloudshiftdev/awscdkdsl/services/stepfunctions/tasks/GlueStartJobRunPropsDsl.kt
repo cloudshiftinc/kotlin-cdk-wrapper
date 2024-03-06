@@ -31,12 +31,11 @@ import software.amazon.awscdk.services.stepfunctions.tasks.GlueStartJobRunProps
  *
  * Example:
  * ```
- * GlueStartJobRun.Builder.create(this, "Task")
- * .glueJobName("my-glue-job")
- * .arguments(TaskInput.fromObject(Map.of(
- * "key", "value")))
- * .taskTimeout(Timeout.duration(Duration.minutes(30)))
- * .notifyDelayAfter(Duration.minutes(5))
+ * import software.amazon.awscdk.services.glue.alpha.*;
+ * Job submitGlue;
+ * GlueStartJobRun submitJob = GlueStartJobRun.Builder.create(this, "Submit Job")
+ * .glueJobName(submitGlue.getJobName())
+ * .integrationPattern(IntegrationPattern.RUN_JOB)
  * .build();
  * ```
  */
@@ -108,7 +107,9 @@ public class GlueStartJobRunPropsDsl {
 
     /**
      * @param integrationPattern AWS Step Functions integrates with services directly in the Amazon
-     *   States Language. You can control these AWS services using service integration patterns
+     *   States Language. You can control these AWS services using service integration patterns.
+     *
+     * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      */
     public fun integrationPattern(integrationPattern: IntegrationPattern) {
         cdkBuilder.integrationPattern(integrationPattern)
@@ -166,6 +167,11 @@ public class GlueStartJobRunPropsDsl {
      */
     public fun securityConfiguration(securityConfiguration: String) {
         cdkBuilder.securityConfiguration(securityConfiguration)
+    }
+
+    /** @param stateName Optional name for this state. */
+    public fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
     }
 
     /**

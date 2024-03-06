@@ -40,6 +40,7 @@ import software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroupProps
  * .blockOverrideDomain("blockOverrideDomain")
  * .blockOverrideTtl(123)
  * .blockResponse("blockResponse")
+ * .qtype("qtype")
  * .build()))
  * .name("name")
  * .tags(List.of(CfnTag.builder()

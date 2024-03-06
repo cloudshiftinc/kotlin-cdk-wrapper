@@ -32,8 +32,7 @@ public object autoscalingplans {
      * * Amazon Aurora Replicas
      *
      * For more information, see the
-     * [AWS Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/plans/userguide/what-is-aws-auto-scaling.html)
-     * .
+     * [Scaling Plans User Guide](https://docs.aws.amazon.com/autoscaling/plans/userguide/what-is-a-scaling-plan.html)
      *
      * Example:
      * ```
@@ -121,8 +120,8 @@ public object autoscalingplans {
     /**
      * `ApplicationSource` is a property of
      * [ScalingPlan](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscalingplans-scalingplan.html)
-     * that specifies the application source to use with AWS Auto Scaling ( Auto Scaling Plans ).
-     * You can create one scaling plan per application source.
+     * that specifies the application source to use with a scaling plan. You can create one scaling
+     * plan per application source.
      *
      * Example:
      * ```
@@ -152,8 +151,7 @@ public object autoscalingplans {
     /**
      * `CustomizedLoadMetricSpecification` is a subproperty of
      * [ScalingInstruction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html)
-     * that specifies a customized load metric for predictive scaling to use with AWS Auto Scaling (
-     * Auto Scaling Plans ).
+     * that specifies a customized load metric for predictive scaling to use with a scaling plan.
      *
      * For predictive scaling to work with a customized load metric specification, AWS Auto Scaling
      * needs access to the `Sum` and `Average` statistics that CloudWatch computes from metric data.
@@ -178,8 +176,8 @@ public object autoscalingplans {
      *
      * After creating your scaling plan, you can use the AWS Auto Scaling console to visualize
      * forecasts for the specified metric. For more information, see
-     * [View Scaling Information for a Resource](https://docs.aws.amazon.com/autoscaling/plans/userguide/gs-create-scaling-plan.html#gs-view-resource)
-     * in the *AWS Auto Scaling User Guide* .
+     * [View scaling information for a resource](https://docs.aws.amazon.com/autoscaling/plans/userguide/gs-create-scaling-plan.html#gs-view-resource)
+     * in the *Scaling Plans User Guide* .
      *
      * Example:
      * ```
@@ -213,8 +211,8 @@ public object autoscalingplans {
     /**
      * `CustomizedScalingMetricSpecification` is a subproperty of
      * [TargetTrackingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html)
-     * that specifies a customized scaling metric for a target tracking configuration to use with
-     * AWS Auto Scaling ( Auto Scaling Plans ).
+     * that specifies a customized scaling metric for a target tracking configuration to use with a
+     * scaling plan.
      *
      * To create your customized scaling metric specification:
      * * Add values for each required property from CloudWatch. You can use an existing metric, or a
@@ -262,9 +260,9 @@ public object autoscalingplans {
     /**
      * `MetricDimension` is a subproperty of
      * [CustomizedScalingMetricSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-customizedscalingmetricspecification.html)
-     * that specifies a dimension for a customized metric to use with AWS Auto Scaling ( Auto
-     * Scaling Plans ). Dimensions are arbitrary name/value pairs that can be associated with a
-     * CloudWatch metric. Duplicate dimensions are not allowed.
+     * that specifies a dimension for a customized metric to use with a scaling plan. Dimensions are
+     * arbitrary name/value pairs that can be associated with a CloudWatch metric. Duplicate
+     * dimensions are not allowed.
      *
      * Example:
      * ```
@@ -290,13 +288,12 @@ public object autoscalingplans {
     /**
      * `PredefinedLoadMetricSpecification` is a subproperty of
      * [ScalingInstruction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html)
-     * that specifies a predefined load metric for predictive scaling to use with AWS Auto Scaling (
-     * Auto Scaling Plans ).
+     * that specifies a predefined load metric for predictive scaling to use with a scaling plan.
      *
      * After creating your scaling plan, you can use the AWS Auto Scaling console to visualize
      * forecasts for the specified metric. For more information, see
-     * [View Scaling Information for a Resource](https://docs.aws.amazon.com/autoscaling/plans/userguide/gs-create-scaling-plan.html#gs-view-resource)
-     * in the *AWS Auto Scaling User Guide* .
+     * [View scaling information for a resource](https://docs.aws.amazon.com/autoscaling/plans/userguide/gs-create-scaling-plan.html#gs-view-resource)
+     * in the *Scaling Plans User Guide* .
      *
      * Example:
      * ```
@@ -324,8 +321,8 @@ public object autoscalingplans {
     /**
      * `PredefinedScalingMetricSpecification` is a subproperty of
      * [TargetTrackingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html)
-     * that specifies a customized scaling metric for a target tracking configuration to use with
-     * AWS Auto Scaling ( Auto Scaling Plans ).
+     * that specifies a customized scaling metric for a target tracking configuration to use with a
+     * scaling plan.
      *
      * Example:
      * ```
@@ -455,8 +452,8 @@ public object autoscalingplans {
      * We recommend waiting a minimum of 24 hours after creating an Auto Scaling group to configure
      * predictive scaling. At minimum, there must be 24 hours of historical data to generate a
      * forecast. For more information, see
-     * [Best Practices for AWS Auto Scaling](https://docs.aws.amazon.com/autoscaling/plans/userguide/gs-best-practices.html)
-     * in the *AWS Auto Scaling User Guide* .
+     * [Best practices for scaling plans](https://docs.aws.amazon.com/autoscaling/plans/userguide/gs-best-practices.html)
+     * in the *Scaling Plans User Guide* .
      *
      * Example:
      * ```
@@ -532,8 +529,7 @@ public object autoscalingplans {
     /**
      * `TagFilter` is a subproperty of
      * [ApplicationSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-applicationsource.html)
-     * that specifies a tag for an application source to use with AWS Auto Scaling ( Auto Scaling
-     * Plans ).
+     * that specifies a tag for an application source to use with a scaling plan.
      *
      * Example:
      * ```
@@ -560,8 +556,7 @@ public object autoscalingplans {
     /**
      * `TargetTrackingConfiguration` is a subproperty of
      * [ScalingInstruction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html)
-     * that specifies a target tracking configuration to use with AWS Auto Scaling ( Auto Scaling
-     * Plans ).
+     * that specifies a target tracking configuration for a scalable resource.
      *
      * Example:
      * ```

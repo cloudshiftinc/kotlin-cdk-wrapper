@@ -38,12 +38,6 @@ import software.constructs.Construct
  * "MyCfnDataIntegration")
  * .kmsKey("kmsKey")
  * .name("name")
- * .scheduleConfig(ScheduleConfigProperty.builder()
- * .scheduleExpression("scheduleExpression")
- * // the properties below are optional
- * .firstExecutionFrom("firstExecutionFrom")
- * .object("object")
- * .build())
  * .sourceUri("sourceUri")
  * // the properties below are optional
  * .description("description")
@@ -53,6 +47,12 @@ import software.constructs.Construct
  * .filters(filters)
  * .build())
  * .objectConfiguration(objectConfiguration)
+ * .scheduleConfig(ScheduleConfigProperty.builder()
+ * .scheduleExpression("scheduleExpression")
+ * // the properties below are optional
+ * .firstExecutionFrom("firstExecutionFrom")
+ * .object("object")
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")

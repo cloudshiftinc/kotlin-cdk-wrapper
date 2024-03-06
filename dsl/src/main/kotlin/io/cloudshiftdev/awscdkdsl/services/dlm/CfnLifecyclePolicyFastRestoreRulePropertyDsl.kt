@@ -19,8 +19,8 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.dlm.CfnLifecyclePolicy
 
 /**
- * *[Snapshot policies only]* Specifies a rule for enabling fast snapshot restore for snapshots
- * created by snapshot policies.
+ * *[Custom snapshot policies only]* Specifies a rule for enabling fast snapshot restore for
+ * snapshots created by snapshot policies.
  *
  * You can enable fast snapshot restore based on either a count or a time interval.
  *

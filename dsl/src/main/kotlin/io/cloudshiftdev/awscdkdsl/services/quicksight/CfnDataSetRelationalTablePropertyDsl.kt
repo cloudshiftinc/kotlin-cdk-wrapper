@@ -32,6 +32,8 @@ import software.amazon.awscdk.services.quicksight.CfnDataSet
  * .inputColumns(List.of(InputColumnProperty.builder()
  * .name("name")
  * .type("type")
+ * // the properties below are optional
+ * .subType("subType")
  * .build()))
  * .name("name")
  * // the properties below are optional
@@ -49,7 +51,7 @@ public class CfnDataSetRelationalTablePropertyDsl {
 
     private val _inputColumns: MutableList<Any> = mutableListOf()
 
-    /** @param catalog The catalog associated with a table.</p>. */
+    /** @param catalog The catalog associated with a table. */
     public fun catalog(catalog: String) {
         cdkBuilder.catalog(catalog)
     }

@@ -12,9 +12,12 @@
 package io.cloudshiftdev.awscdkdsl.services.imagebuilder
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
+import kotlin.collections.Collection
 import kotlin.collections.Map
+import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.imagebuilder.CfnImagePipeline
 import software.constructs.Construct
@@ -25,7 +28,7 @@ import software.constructs.Construct
  * The Image Builder image pipeline is associated with an image recipe that defines the build,
  * validation, and test phases for an image build lifecycle. An image pipeline can be associated
  * with an infrastructure configuration that defines where your image is built. You can define
- * attributes, such as instance type, subnets, security groups, logging, and other
+ * attributes, such as instance types, a subnet for your VPC, security groups, logging, and other
  * infrastructure-related configurations. You can also associate your image pipeline with a
  * distribution configuration to define how you would like to deploy your image.
  *
@@ -42,6 +45,7 @@ import software.constructs.Construct
  * .description("description")
  * .distributionConfigurationArn("distributionConfigurationArn")
  * .enhancedImageMetadataEnabled(false)
+ * .executionRole("executionRole")
  * .imageRecipeArn("imageRecipeArn")
  * .imageScanningConfiguration(ImageScanningConfigurationProperty.builder()
  * .ecrConfiguration(EcrConfigurationProperty.builder()
@@ -61,6 +65,15 @@ import software.constructs.Construct
  * .status("status")
  * .tags(Map.of(
  * "tagsKey", "tags"))
+ * .workflows(List.of(WorkflowConfigurationProperty.builder()
+ * .onFailure("onFailure")
+ * .parallelGroup("parallelGroup")
+ * .parameters(List.of(WorkflowParameterProperty.builder()
+ * .name("name")
+ * .value(List.of("value"))
+ * .build()))
+ * .workflowArn("workflowArn")
+ * .build()))
  * .build();
  * ```
  *
@@ -72,6 +85,8 @@ public class CfnImagePipelineDsl(
     id: String,
 ) {
     private val cdkBuilder: CfnImagePipeline.Builder = CfnImagePipeline.Builder.create(scope, id)
+
+    private val _workflows: MutableList<Any> = mutableListOf()
 
     /**
      * The Amazon Resource Name (ARN) of the container recipe that is used for this pipeline.
@@ -142,6 +157,19 @@ public class CfnImagePipelineDsl(
     }
 
     /**
+     * The name or Amazon Resource Name (ARN) for the IAM role you create that grants Image Builder
+     * access to perform workflow actions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-executionrole)
+     *
+     * @param executionRole The name or Amazon Resource Name (ARN) for the IAM role you create that
+     *   grants Image Builder access to perform workflow actions.
+     */
+    public fun executionRole(executionRole: String) {
+        cdkBuilder.executionRole(executionRole)
+    }
+
+    /**
      * The Amazon Resource Name (ARN) of the image recipe associated with this image pipeline.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-imagerecipearn)
@@ -154,28 +182,22 @@ public class CfnImagePipelineDsl(
     }
 
     /**
-     * Determines if tests should run after building the image.
-     *
-     * Image Builder defaults to enable tests to run following the image build, before image
-     * distribution.
+     * Contains settings for vulnerability scans.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-imagescanningconfiguration)
      *
-     * @param imageScanningConfiguration Determines if tests should run after building the image.
+     * @param imageScanningConfiguration Contains settings for vulnerability scans.
      */
     public fun imageScanningConfiguration(imageScanningConfiguration: IResolvable) {
         cdkBuilder.imageScanningConfiguration(imageScanningConfiguration)
     }
 
     /**
-     * Determines if tests should run after building the image.
-     *
-     * Image Builder defaults to enable tests to run following the image build, before image
-     * distribution.
+     * Contains settings for vulnerability scans.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-imagescanningconfiguration)
      *
-     * @param imageScanningConfiguration Determines if tests should run after building the image.
+     * @param imageScanningConfiguration Contains settings for vulnerability scans.
      */
     public fun imageScanningConfiguration(
         imageScanningConfiguration: CfnImagePipeline.ImageScanningConfigurationProperty
@@ -283,5 +305,41 @@ public class CfnImagePipelineDsl(
         cdkBuilder.tags(tags)
     }
 
-    public fun build(): CfnImagePipeline = cdkBuilder.build()
+    /**
+     * Contains the workflows that run for the image pipeline.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-workflows)
+     *
+     * @param workflows Contains the workflows that run for the image pipeline.
+     */
+    public fun workflows(vararg workflows: Any) {
+        _workflows.addAll(listOf(*workflows))
+    }
+
+    /**
+     * Contains the workflows that run for the image pipeline.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-workflows)
+     *
+     * @param workflows Contains the workflows that run for the image pipeline.
+     */
+    public fun workflows(workflows: Collection<Any>) {
+        _workflows.addAll(workflows)
+    }
+
+    /**
+     * Contains the workflows that run for the image pipeline.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-workflows)
+     *
+     * @param workflows Contains the workflows that run for the image pipeline.
+     */
+    public fun workflows(workflows: IResolvable) {
+        cdkBuilder.workflows(workflows)
+    }
+
+    public fun build(): CfnImagePipeline {
+        if (_workflows.isNotEmpty()) cdkBuilder.workflows(_workflows)
+        return cdkBuilder.build()
+    }
 }

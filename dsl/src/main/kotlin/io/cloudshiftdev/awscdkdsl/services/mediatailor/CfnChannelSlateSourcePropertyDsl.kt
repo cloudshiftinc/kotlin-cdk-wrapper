@@ -16,7 +16,7 @@ import kotlin.String
 import software.amazon.awscdk.services.mediatailor.CfnChannel
 
 /**
- * Slate VOD source configuration.</p>.
+ * Slate VOD source configuration.
  *
  * Example:
  * ```
@@ -38,7 +38,7 @@ public class CfnChannelSlateSourcePropertyDsl {
 
     /**
      * @param sourceLocationName The name of the source location where the slate VOD source is
-     *   stored.</p>.
+     *   stored.
      */
     public fun sourceLocationName(sourceLocationName: String) {
         cdkBuilder.sourceLocationName(sourceLocationName)
@@ -46,7 +46,7 @@ public class CfnChannelSlateSourcePropertyDsl {
 
     /**
      * @param vodSourceName The slate VOD source name. The VOD source must already exist in a source
-     *   location before it can be used for slate.</p>
+     *   location before it can be used for slate.
      */
     public fun vodSourceName(vodSourceName: String) {
         cdkBuilder.vodSourceName(vodSourceName)

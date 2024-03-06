@@ -35,6 +35,45 @@ import software.amazon.awscdk.services.sagemaker.CfnDomainProps
  * .defaultUserSettings(UserSettingsProperty.builder()
  * .executionRole("executionRole")
  * // the properties below are optional
+ * .codeEditorAppSettings(CodeEditorAppSettingsProperty.builder()
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
+ * .build())
+ * .customFileSystemConfigs(List.of(CustomFileSystemConfigProperty.builder()
+ * .efsFileSystemConfig(EFSFileSystemConfigProperty.builder()
+ * .fileSystemId("fileSystemId")
+ * // the properties below are optional
+ * .fileSystemPath("fileSystemPath")
+ * .build())
+ * .build()))
+ * .customPosixUserConfig(CustomPosixUserConfigProperty.builder()
+ * .gid(123)
+ * .uid(123)
+ * .build())
+ * .defaultLandingUri("defaultLandingUri")
+ * .jupyterLabAppSettings(JupyterLabAppSettingsProperty.builder()
+ * .codeRepositories(List.of(CodeRepositoryProperty.builder()
+ * .repositoryUrl("repositoryUrl")
+ * .build()))
+ * .customImages(List.of(CustomImageProperty.builder()
+ * .appImageConfigName("appImageConfigName")
+ * .imageName("imageName")
+ * // the properties below are optional
+ * .imageVersionNumber(123)
+ * .build()))
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
+ * .build())
  * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
  * .defaultResourceSpec(ResourceSpecProperty.builder()
  * .instanceType("instanceType")
@@ -81,6 +120,13 @@ import software.amazon.awscdk.services.sagemaker.CfnDomainProps
  * .s3KmsKeyId("s3KmsKeyId")
  * .s3OutputPath("s3OutputPath")
  * .build())
+ * .spaceStorageSettings(DefaultSpaceStorageSettingsProperty.builder()
+ * .defaultEbsStorageSettings(DefaultEbsStorageSettingsProperty.builder()
+ * .defaultEbsVolumeSizeInGb(123)
+ * .maximumEbsVolumeSizeInGb(123)
+ * .build())
+ * .build())
+ * .studioWebPortal("studioWebPortal")
  * .build())
  * .domainName("domainName")
  * .subnetIds(List.of("subnetIds"))
@@ -116,6 +162,10 @@ import software.amazon.awscdk.services.sagemaker.CfnDomainProps
  * .securityGroups(List.of("securityGroups"))
  * .build())
  * .domainSettings(DomainSettingsProperty.builder()
+ * .dockerSettings(DockerSettingsProperty.builder()
+ * .enableDockerAccess("enableDockerAccess")
+ * .vpcOnlyTrustedAccounts(List.of("vpcOnlyTrustedAccounts"))
+ * .build())
  * .rStudioServerProDomainSettings(RStudioServerProDomainSettingsProperty.builder()
  * .domainExecutionRoleArn("domainExecutionRoleArn")
  * // the properties below are optional
@@ -183,16 +233,16 @@ public class CfnDomainPropsDsl {
     }
 
     /**
-     * @param defaultSpaceSettings A collection of settings that apply to spaces of Amazon SageMaker
-     *   Studio. These settings are specified when the Create/Update Domain API is called.
+     * @param defaultSpaceSettings A collection of settings that apply to spaces created in the
+     *   domain.
      */
     public fun defaultSpaceSettings(defaultSpaceSettings: IResolvable) {
         cdkBuilder.defaultSpaceSettings(defaultSpaceSettings)
     }
 
     /**
-     * @param defaultSpaceSettings A collection of settings that apply to spaces of Amazon SageMaker
-     *   Studio. These settings are specified when the Create/Update Domain API is called.
+     * @param defaultSpaceSettings A collection of settings that apply to spaces created in the
+     *   domain.
      */
     public fun defaultSpaceSettings(defaultSpaceSettings: CfnDomain.DefaultSpaceSettingsProperty) {
         cdkBuilder.defaultSpaceSettings(defaultSpaceSettings)

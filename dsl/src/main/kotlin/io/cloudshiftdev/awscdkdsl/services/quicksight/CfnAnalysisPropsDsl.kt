@@ -36,7 +36,11 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysisProps
 public class CfnAnalysisPropsDsl {
     private val cdkBuilder: CfnAnalysisProps.Builder = CfnAnalysisProps.builder()
 
+    private val _errors: MutableList<Any> = mutableListOf()
+
     private val _permissions: MutableList<Any> = mutableListOf()
+
+    private val _sheets: MutableList<Any> = mutableListOf()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
@@ -61,6 +65,21 @@ public class CfnAnalysisPropsDsl {
     /** @param definition the value to be set. */
     public fun definition(definition: CfnAnalysis.AnalysisDefinitionProperty) {
         cdkBuilder.definition(definition)
+    }
+
+    /** @param errors Errors associated with the analysis. */
+    public fun errors(vararg errors: Any) {
+        _errors.addAll(listOf(*errors))
+    }
+
+    /** @param errors Errors associated with the analysis. */
+    public fun errors(errors: Collection<Any>) {
+        _errors.addAll(errors)
+    }
+
+    /** @param errors Errors associated with the analysis. */
+    public fun errors(errors: IResolvable) {
+        cdkBuilder.errors(errors)
     }
 
     /**
@@ -124,6 +143,30 @@ public class CfnAnalysisPropsDsl {
     }
 
     /**
+     * @param sheets A list of the associated sheets with the unique identifier and name of each
+     *   sheet.
+     */
+    public fun sheets(vararg sheets: Any) {
+        _sheets.addAll(listOf(*sheets))
+    }
+
+    /**
+     * @param sheets A list of the associated sheets with the unique identifier and name of each
+     *   sheet.
+     */
+    public fun sheets(sheets: Collection<Any>) {
+        _sheets.addAll(sheets)
+    }
+
+    /**
+     * @param sheets A list of the associated sheets with the unique identifier and name of each
+     *   sheet.
+     */
+    public fun sheets(sheets: IResolvable) {
+        cdkBuilder.sheets(sheets)
+    }
+
+    /**
      * @param sourceEntity A source entity to use for the analysis that you're creating. This
      *   metadata structure contains details that describe a source template and one or more
      *   datasets.
@@ -176,8 +219,28 @@ public class CfnAnalysisPropsDsl {
         cdkBuilder.themeArn(themeArn)
     }
 
+    /**
+     * @param validationStrategy The option to relax the validation that is required to create and
+     *   update analyses, dashboards, and templates with definition objects. When you set this value
+     *   to `LENIENT` , validation is skipped for specific errors.
+     */
+    public fun validationStrategy(validationStrategy: IResolvable) {
+        cdkBuilder.validationStrategy(validationStrategy)
+    }
+
+    /**
+     * @param validationStrategy The option to relax the validation that is required to create and
+     *   update analyses, dashboards, and templates with definition objects. When you set this value
+     *   to `LENIENT` , validation is skipped for specific errors.
+     */
+    public fun validationStrategy(validationStrategy: CfnAnalysis.ValidationStrategyProperty) {
+        cdkBuilder.validationStrategy(validationStrategy)
+    }
+
     public fun build(): CfnAnalysisProps {
+        if (_errors.isNotEmpty()) cdkBuilder.errors(_errors)
         if (_permissions.isNotEmpty()) cdkBuilder.permissions(_permissions)
+        if (_sheets.isNotEmpty()) cdkBuilder.sheets(_sheets)
         if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
         return cdkBuilder.build()
     }

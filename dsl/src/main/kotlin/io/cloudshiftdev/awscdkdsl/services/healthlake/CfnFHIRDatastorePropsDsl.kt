@@ -80,14 +80,16 @@ public class CfnFHIRDatastorePropsDsl {
     }
 
     /**
-     * @param identityProviderConfiguration The identity provider configuration for the datastore.
+     * @param identityProviderConfiguration The identity provider configuration that you gave when
+     *   the data store was created.
      */
     public fun identityProviderConfiguration(identityProviderConfiguration: IResolvable) {
         cdkBuilder.identityProviderConfiguration(identityProviderConfiguration)
     }
 
     /**
-     * @param identityProviderConfiguration The identity provider configuration for the datastore.
+     * @param identityProviderConfiguration The identity provider configuration that you gave when
+     *   the data store was created.
      */
     public fun identityProviderConfiguration(
         identityProviderConfiguration: CfnFHIRDatastore.IdentityProviderConfigurationProperty

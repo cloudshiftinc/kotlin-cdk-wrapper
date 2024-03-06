@@ -27,6 +27,10 @@ import software.amazon.awscdk.services.stepfunctions.tasks.BatchContainerOverrid
 import software.amazon.awscdk.services.stepfunctions.tasks.BatchJobDependency
 import software.amazon.awscdk.services.stepfunctions.tasks.BatchSubmitJob
 import software.amazon.awscdk.services.stepfunctions.tasks.BatchSubmitJobProps
+import software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModel
+import software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelInputProps
+import software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelOutputProps
+import software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelProps
 import software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayEndpointBaseProps
 import software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayHttpApiEndpoint
 import software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayHttpApiEndpointProps
@@ -323,6 +327,7 @@ public object tasks {
      * .objectKey("folder")
      * .build())
      * .build())
+     * .executionParameters(List.of("param1", "param2"))
      * .build();
      * ```
      *
@@ -358,6 +363,7 @@ public object tasks {
      * .objectKey("folder")
      * .build())
      * .build())
+     * .executionParameters(List.of("param1", "param2"))
      * .build();
      * ```
      */
@@ -469,7 +475,7 @@ public object tasks {
      *
      * Example:
      * ```
-     * import software.amazon.awscdk.services.batch.alpha.*;
+     * import software.amazon.awscdk.services.batch.*;
      * EcsJobDefinition batchJobDefinition;
      * JobQueue batchQueue;
      * BatchSubmitJob task = BatchSubmitJob.Builder.create(this, "Submit Job")
@@ -496,7 +502,7 @@ public object tasks {
      *
      * Example:
      * ```
-     * import software.amazon.awscdk.services.batch.alpha.*;
+     * import software.amazon.awscdk.services.batch.*;
      * EcsJobDefinition batchJobDefinition;
      * JobQueue batchQueue;
      * BatchSubmitJob task = BatchSubmitJob.Builder.create(this, "Submit Job")
@@ -510,6 +516,122 @@ public object tasks {
         block: BatchSubmitJobPropsDsl.() -> Unit = {}
     ): BatchSubmitJobProps {
         val builder = BatchSubmitJobPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A Step Functions Task to invoke a model in Bedrock.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.services.bedrock.*;
+     * FoundationModel model = FoundationModel.fromFoundationModelId(this, "Model",
+     * FoundationModelIdentifier.AMAZON_TITAN_TEXT_G1_EXPRESS_V1);
+     * BedrockInvokeModel task = BedrockInvokeModel.Builder.create(this, "Prompt Model")
+     * .model(model)
+     * .body(TaskInput.fromObject(Map.of(
+     * "inputText", "Generate a list of five first names.",
+     * "textGenerationConfig", Map.of(
+     * "maxTokenCount", 100,
+     * "temperature", 1))))
+     * .resultSelector(Map.of(
+     * "names", JsonPath.stringAt("$.Body.results[0].outputText")))
+     * .build();
+     * ```
+     */
+    public inline fun bedrockInvokeModel(
+        scope: Construct,
+        id: String,
+        block: BedrockInvokeModelDsl.() -> Unit = {},
+    ): BedrockInvokeModel {
+        val builder = BedrockInvokeModelDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Location to retrieve the input data, prior to calling Bedrock InvokeModel.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+     * BedrockInvokeModelInputProps bedrockInvokeModelInputProps =
+     * BedrockInvokeModelInputProps.builder()
+     * .s3Location(Location.builder()
+     * .bucketName("bucketName")
+     * .objectKey("objectKey")
+     * // the properties below are optional
+     * .objectVersion("objectVersion")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-bedrock.html)
+     */
+    public inline fun bedrockInvokeModelInputProps(
+        block: BedrockInvokeModelInputPropsDsl.() -> Unit = {}
+    ): BedrockInvokeModelInputProps {
+        val builder = BedrockInvokeModelInputPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Location where the Bedrock InvokeModel API response is written.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+     * BedrockInvokeModelOutputProps bedrockInvokeModelOutputProps =
+     * BedrockInvokeModelOutputProps.builder()
+     * .s3Location(Location.builder()
+     * .bucketName("bucketName")
+     * .objectKey("objectKey")
+     * // the properties below are optional
+     * .objectVersion("objectVersion")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-bedrock.html)
+     */
+    public inline fun bedrockInvokeModelOutputProps(
+        block: BedrockInvokeModelOutputPropsDsl.() -> Unit = {}
+    ): BedrockInvokeModelOutputProps {
+        val builder = BedrockInvokeModelOutputPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for invoking a Bedrock Model.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.services.bedrock.*;
+     * FoundationModel model = FoundationModel.fromFoundationModelId(this, "Model",
+     * FoundationModelIdentifier.AMAZON_TITAN_TEXT_G1_EXPRESS_V1);
+     * BedrockInvokeModel task = BedrockInvokeModel.Builder.create(this, "Prompt Model")
+     * .model(model)
+     * .body(TaskInput.fromObject(Map.of(
+     * "inputText", "Generate a list of five first names.",
+     * "textGenerationConfig", Map.of(
+     * "maxTokenCount", 100,
+     * "temperature", 1))))
+     * .resultSelector(Map.of(
+     * "names", JsonPath.stringAt("$.Body.results[0].outputText")))
+     * .build();
+     * ```
+     */
+    public inline fun bedrockInvokeModelProps(
+        block: BedrockInvokeModelPropsDsl.() -> Unit = {}
+    ): BedrockInvokeModelProps {
+        val builder = BedrockInvokeModelPropsDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -549,6 +671,7 @@ public object tasks {
      * .resultPath("resultPath")
      * .resultSelector(Map.of(
      * "resultSelectorKey", resultSelector))
+     * .stateName("stateName")
      * .taskTimeout(timeout)
      * .timeout(Duration.minutes(30))
      * .build();
@@ -567,7 +690,7 @@ public object tasks {
      *
      * Example:
      * ```
-     * import software.amazon.awscdk.services.apigatewayv2.alpha.*;
+     * import software.amazon.awscdk.services.apigatewayv2.*;
      * HttpApi httpApi = new HttpApi(this, "MyHttpApi");
      * CallApiGatewayHttpApiEndpoint invokeTask = CallApiGatewayHttpApiEndpoint.Builder.create(this,
      * "Call HTTP API")
@@ -594,7 +717,7 @@ public object tasks {
      *
      * Example:
      * ```
-     * import software.amazon.awscdk.services.apigatewayv2.alpha.*;
+     * import software.amazon.awscdk.services.apigatewayv2.*;
      * HttpApi httpApi = new HttpApi(this, "MyHttpApi");
      * CallApiGatewayHttpApiEndpoint invokeTask = CallApiGatewayHttpApiEndpoint.Builder.create(this,
      * "Call HTTP API")
@@ -687,15 +810,14 @@ public object tasks {
      *
      * Example:
      * ```
-     * CallAwsService detectLabels = CallAwsService.Builder.create(this, "DetectLabels")
-     * .service("rekognition")
-     * .action("detectLabels")
-     * .iamResources(List.of("*"))
-     * .additionalIamStatements(List.of(
-     * PolicyStatement.Builder.create()
-     * .actions(List.of("s3:getObject"))
-     * .resources(List.of("arn:aws:s3:::my-bucket/ *"))
-     * .build()))
+     * Bucket myBucket;
+     * CallAwsService getObject = CallAwsService.Builder.create(this, "GetObject")
+     * .service("s3")
+     * .action("getObject")
+     * .parameters(Map.of(
+     * "Bucket", myBucket.getBucketName(),
+     * "Key", JsonPath.stringAt("$.key")))
+     * .iamResources(List.of(myBucket.arnForObjects("*")))
      * .build();
      * ```
      */
@@ -714,15 +836,14 @@ public object tasks {
      *
      * Example:
      * ```
-     * CallAwsService detectLabels = CallAwsService.Builder.create(this, "DetectLabels")
-     * .service("rekognition")
-     * .action("detectLabels")
-     * .iamResources(List.of("*"))
-     * .additionalIamStatements(List.of(
-     * PolicyStatement.Builder.create()
-     * .actions(List.of("s3:getObject"))
-     * .resources(List.of("arn:aws:s3:::my-bucket/ *"))
-     * .build()))
+     * Bucket myBucket;
+     * CallAwsService getObject = CallAwsService.Builder.create(this, "GetObject")
+     * .service("s3")
+     * .action("getObject")
+     * .parameters(Map.of(
+     * "Bucket", myBucket.getBucketName(),
+     * "Key", JsonPath.stringAt("$.key")))
+     * .iamResources(List.of(myBucket.arnForObjects("*")))
      * .build();
      * ```
      *
@@ -2066,7 +2187,7 @@ public object tasks {
      * EbsBlockDeviceConfigProperty.builder()
      * .volumeSpecification(VolumeSpecificationProperty.builder()
      * .volumeSize(size)
-     * .volumeType(EmrCreateCluster.getEbsBlockDeviceVolumeType().GP2)
+     * .volumeType(EmrCreateCluster.getEbsBlockDeviceVolumeType().GP3)
      * // the properties below are optional
      * .iops(123)
      * .build())
@@ -2099,7 +2220,7 @@ public object tasks {
      * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
      * .volumeSpecification(VolumeSpecificationProperty.builder()
      * .volumeSize(size)
-     * .volumeType(EmrCreateCluster.getEbsBlockDeviceVolumeType().GP2)
+     * .volumeType(EmrCreateCluster.getEbsBlockDeviceVolumeType().GP3)
      * // the properties below are optional
      * .iops(123)
      * .build())
@@ -2149,7 +2270,7 @@ public object tasks {
      * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
      * .volumeSpecification(VolumeSpecificationProperty.builder()
      * .volumeSize(size)
-     * .volumeType(EmrCreateCluster.getEbsBlockDeviceVolumeType().GP2)
+     * .volumeType(EmrCreateCluster.getEbsBlockDeviceVolumeType().GP3)
      * // the properties below are optional
      * .iops(123)
      * .build())
@@ -2161,12 +2282,16 @@ public object tasks {
      * .weightedCapacity(123)
      * .build()))
      * .launchSpecifications(InstanceFleetProvisioningSpecificationsProperty.builder()
+     * .onDemandSpecification(OnDemandProvisioningSpecificationProperty.builder()
+     * .allocationStrategy(EmrCreateCluster.getOnDemandAllocationStrategy().LOWEST_PRICE)
+     * .build())
      * .spotSpecification(SpotProvisioningSpecificationProperty.builder()
      * .timeoutAction(EmrCreateCluster.getSpotTimeoutAction().SWITCH_TO_ON_DEMAND)
-     * .timeoutDurationMinutes(123)
      * // the properties below are optional
      * .allocationStrategy(EmrCreateCluster.getSpotAllocationStrategy().CAPACITY_OPTIMIZED)
      * .blockDurationMinutes(123)
+     * .timeout(Duration.minutes(30))
+     * .timeoutDurationMinutes(123)
      * .build())
      * .build())
      * .name("name")
@@ -2186,23 +2311,44 @@ public object tasks {
     }
 
     /**
-     * The launch specification for Spot instances in the fleet, which determines the defined
-     * duration and provisioning timeout behavior.
+     * The launch specification for On-Demand and Spot instances in the fleet, which determines the
+     * defined duration and provisioning timeout behavior, and allocation strategy.
+     *
+     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
+     * excluding 5.0.x versions. On-Demand and Spot instance allocation strategies are available in
+     * Amazon EMR releases 5.12.1 and later.
      *
      * Example:
      * ```
-     * // The code below shows an example of how to instantiate this type.
-     * // The values are placeholders you should change.
-     * import software.amazon.awscdk.services.stepfunctions.tasks.*;
-     * InstanceFleetProvisioningSpecificationsProperty instanceFleetProvisioningSpecificationsProperty
-     * = InstanceFleetProvisioningSpecificationsProperty.builder()
-     * .spotSpecification(SpotProvisioningSpecificationProperty.builder()
-     * .timeoutAction(EmrCreateCluster.getSpotTimeoutAction().SWITCH_TO_ON_DEMAND)
-     * .timeoutDurationMinutes(123)
-     * // the properties below are optional
-     * .allocationStrategy(EmrCreateCluster.getSpotAllocationStrategy().CAPACITY_OPTIMIZED)
-     * .blockDurationMinutes(123)
+     * EmrCreateCluster.Builder.create(this, "OnDemandSpecification")
+     * .instances(InstancesConfigProperty.builder()
+     * .instanceFleets(List.of(InstanceFleetConfigProperty.builder()
+     * .instanceFleetType(EmrCreateCluster.getInstanceRoleType().MASTER)
+     * .launchSpecifications(InstanceFleetProvisioningSpecificationsProperty.builder()
+     * .onDemandSpecification(OnDemandProvisioningSpecificationProperty.builder()
+     * .allocationStrategy(EmrCreateCluster.getOnDemandAllocationStrategy().LOWEST_PRICE)
      * .build())
+     * .build())
+     * .build()))
+     * .build())
+     * .name("OnDemandCluster")
+     * .integrationPattern(IntegrationPattern.RUN_JOB)
+     * .build();
+     * EmrCreateCluster.Builder.create(this, "SpotSpecification")
+     * .instances(InstancesConfigProperty.builder()
+     * .instanceFleets(List.of(InstanceFleetConfigProperty.builder()
+     * .instanceFleetType(EmrCreateCluster.getInstanceRoleType().MASTER)
+     * .launchSpecifications(InstanceFleetProvisioningSpecificationsProperty.builder()
+     * .spotSpecification(SpotProvisioningSpecificationProperty.builder()
+     * .allocationStrategy(EmrCreateCluster.getSpotAllocationStrategy().CAPACITY_OPTIMIZED)
+     * .timeoutAction(EmrCreateCluster.getSpotTimeoutAction().TERMINATE_CLUSTER)
+     * .timeout(Duration.minutes(5))
+     * .build())
+     * .build())
+     * .build()))
+     * .build())
+     * .name("SpotCluster")
+     * .integrationPattern(IntegrationPattern.RUN_JOB)
      * .build();
      * ```
      *
@@ -2281,7 +2427,7 @@ public object tasks {
      * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
      * .volumeSpecification(VolumeSpecificationProperty.builder()
      * .volumeSize(size)
-     * .volumeType(EmrCreateCluster.getEbsBlockDeviceVolumeType().GP2)
+     * .volumeType(EmrCreateCluster.getEbsBlockDeviceVolumeType().GP3)
      * // the properties below are optional
      * .iops(123)
      * .build())
@@ -2333,7 +2479,7 @@ public object tasks {
      * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
      * .volumeSpecification(VolumeSpecificationProperty.builder()
      * .volumeSize(size)
-     * .volumeType(EmrCreateCluster.getEbsBlockDeviceVolumeType().GP2)
+     * .volumeType(EmrCreateCluster.getEbsBlockDeviceVolumeType().GP3)
      * // the properties below are optional
      * .iops(123)
      * .build())
@@ -2454,6 +2600,54 @@ public object tasks {
         block: EmrCreateClusterMetricDimensionPropertyDsl.() -> Unit = {}
     ): EmrCreateCluster.MetricDimensionProperty {
         val builder = EmrCreateClusterMetricDimensionPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The launch specification for On-Demand Instances in the instance fleet, which determines the
+     * allocation strategy.
+     *
+     * Example:
+     * ```
+     * EmrCreateCluster.Builder.create(this, "OnDemandSpecification")
+     * .instances(InstancesConfigProperty.builder()
+     * .instanceFleets(List.of(InstanceFleetConfigProperty.builder()
+     * .instanceFleetType(EmrCreateCluster.getInstanceRoleType().MASTER)
+     * .launchSpecifications(InstanceFleetProvisioningSpecificationsProperty.builder()
+     * .onDemandSpecification(OnDemandProvisioningSpecificationProperty.builder()
+     * .allocationStrategy(EmrCreateCluster.getOnDemandAllocationStrategy().LOWEST_PRICE)
+     * .build())
+     * .build())
+     * .build()))
+     * .build())
+     * .name("OnDemandCluster")
+     * .integrationPattern(IntegrationPattern.RUN_JOB)
+     * .build();
+     * EmrCreateCluster.Builder.create(this, "SpotSpecification")
+     * .instances(InstancesConfigProperty.builder()
+     * .instanceFleets(List.of(InstanceFleetConfigProperty.builder()
+     * .instanceFleetType(EmrCreateCluster.getInstanceRoleType().MASTER)
+     * .launchSpecifications(InstanceFleetProvisioningSpecificationsProperty.builder()
+     * .spotSpecification(SpotProvisioningSpecificationProperty.builder()
+     * .allocationStrategy(EmrCreateCluster.getSpotAllocationStrategy().CAPACITY_OPTIMIZED)
+     * .timeoutAction(EmrCreateCluster.getSpotTimeoutAction().TERMINATE_CLUSTER)
+     * .timeout(Duration.minutes(5))
+     * .build())
+     * .build())
+     * .build()))
+     * .build())
+     * .name("SpotCluster")
+     * .integrationPattern(IntegrationPattern.RUN_JOB)
+     * .build();
+     * ```
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-ondemandprovisioningspecification.html)
+     */
+    public inline fun emrCreateClusterOnDemandProvisioningSpecificationProperty(
+        block: EmrCreateClusterOnDemandProvisioningSpecificationPropertyDsl.() -> Unit = {}
+    ): EmrCreateCluster.OnDemandProvisioningSpecificationProperty {
+        val builder = EmrCreateClusterOnDemandProvisioningSpecificationPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -2744,16 +2938,35 @@ public object tasks {
      *
      * Example:
      * ```
-     * // The code below shows an example of how to instantiate this type.
-     * // The values are placeholders you should change.
-     * import software.amazon.awscdk.services.stepfunctions.tasks.*;
-     * SpotProvisioningSpecificationProperty spotProvisioningSpecificationProperty =
-     * SpotProvisioningSpecificationProperty.builder()
-     * .timeoutAction(EmrCreateCluster.getSpotTimeoutAction().SWITCH_TO_ON_DEMAND)
-     * .timeoutDurationMinutes(123)
-     * // the properties below are optional
+     * EmrCreateCluster.Builder.create(this, "OnDemandSpecification")
+     * .instances(InstancesConfigProperty.builder()
+     * .instanceFleets(List.of(InstanceFleetConfigProperty.builder()
+     * .instanceFleetType(EmrCreateCluster.getInstanceRoleType().MASTER)
+     * .launchSpecifications(InstanceFleetProvisioningSpecificationsProperty.builder()
+     * .onDemandSpecification(OnDemandProvisioningSpecificationProperty.builder()
+     * .allocationStrategy(EmrCreateCluster.getOnDemandAllocationStrategy().LOWEST_PRICE)
+     * .build())
+     * .build())
+     * .build()))
+     * .build())
+     * .name("OnDemandCluster")
+     * .integrationPattern(IntegrationPattern.RUN_JOB)
+     * .build();
+     * EmrCreateCluster.Builder.create(this, "SpotSpecification")
+     * .instances(InstancesConfigProperty.builder()
+     * .instanceFleets(List.of(InstanceFleetConfigProperty.builder()
+     * .instanceFleetType(EmrCreateCluster.getInstanceRoleType().MASTER)
+     * .launchSpecifications(InstanceFleetProvisioningSpecificationsProperty.builder()
+     * .spotSpecification(SpotProvisioningSpecificationProperty.builder()
      * .allocationStrategy(EmrCreateCluster.getSpotAllocationStrategy().CAPACITY_OPTIMIZED)
-     * .blockDurationMinutes(123)
+     * .timeoutAction(EmrCreateCluster.getSpotTimeoutAction().TERMINATE_CLUSTER)
+     * .timeout(Duration.minutes(5))
+     * .build())
+     * .build())
+     * .build()))
+     * .build())
+     * .name("SpotCluster")
+     * .integrationPattern(IntegrationPattern.RUN_JOB)
      * .build();
      * ```
      *
@@ -2780,7 +2993,7 @@ public object tasks {
      * Size size;
      * VolumeSpecificationProperty volumeSpecificationProperty = VolumeSpecificationProperty.builder()
      * .volumeSize(size)
-     * .volumeType(EmrCreateCluster.getEbsBlockDeviceVolumeType().GP2)
+     * .volumeType(EmrCreateCluster.getEbsBlockDeviceVolumeType().GP3)
      * // the properties below are optional
      * .iops(123)
      * .build();
@@ -3067,6 +3280,7 @@ public object tasks {
      * .objectKey("folder")
      * .build())
      * .build())
+     * .executionParameters(List.of("param1", "param2"))
      * .build();
      * ```
      *
@@ -3095,7 +3309,7 @@ public object tasks {
      * EvaluateExpression createMessage = EvaluateExpression.Builder.create(this, "Create message")
      * // Note: this is a string inside a string.
      * .expression("`Now waiting ${$.waitSeconds} seconds...`")
-     * .runtime(Runtime.NODEJS_16_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .resultPath("$.message")
      * .build();
      * SnsPublish publishMessage = SnsPublish.Builder.create(this, "Publish message")
@@ -3134,7 +3348,7 @@ public object tasks {
      * EvaluateExpression createMessage = EvaluateExpression.Builder.create(this, "Create message")
      * // Note: this is a string inside a string.
      * .expression("`Now waiting ${$.waitSeconds} seconds...`")
-     * .runtime(Runtime.NODEJS_16_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .resultPath("$.message")
      * .build();
      * SnsPublish publishMessage = SnsPublish.Builder.create(this, "Publish message")
@@ -3295,12 +3509,11 @@ public object tasks {
      *
      * Example:
      * ```
-     * GlueStartJobRun.Builder.create(this, "Task")
-     * .glueJobName("my-glue-job")
-     * .arguments(TaskInput.fromObject(Map.of(
-     * "key", "value")))
-     * .taskTimeout(Timeout.duration(Duration.minutes(30)))
-     * .notifyDelayAfter(Duration.minutes(5))
+     * import software.amazon.awscdk.services.glue.alpha.*;
+     * Job submitGlue;
+     * GlueStartJobRun submitJob = GlueStartJobRun.Builder.create(this, "Submit Job")
+     * .glueJobName(submitGlue.getJobName())
+     * .integrationPattern(IntegrationPattern.RUN_JOB)
      * .build();
      * ```
      *
@@ -3321,12 +3534,11 @@ public object tasks {
      *
      * Example:
      * ```
-     * GlueStartJobRun.Builder.create(this, "Task")
-     * .glueJobName("my-glue-job")
-     * .arguments(TaskInput.fromObject(Map.of(
-     * "key", "value")))
-     * .taskTimeout(Timeout.duration(Duration.minutes(30)))
-     * .notifyDelayAfter(Duration.minutes(5))
+     * import software.amazon.awscdk.services.glue.alpha.*;
+     * Job submitGlue;
+     * GlueStartJobRun submitJob = GlueStartJobRun.Builder.create(this, "Submit Job")
+     * .glueJobName(submitGlue.getJobName())
+     * .integrationPattern(IntegrationPattern.RUN_JOB)
      * .build();
      * ```
      */
@@ -3701,6 +3913,7 @@ public object tasks {
      * .objectKey("folder")
      * .build())
      * .build())
+     * .executionParameters(List.of("param1", "param2"))
      * .build();
      * ```
      *
@@ -3776,6 +3989,7 @@ public object tasks {
      * .objectKey("folder")
      * .build())
      * .build())
+     * .executionParameters(List.of("param1", "param2"))
      * .build();
      * ```
      *
@@ -4267,7 +4481,7 @@ public object tasks {
      * EvaluateExpression createMessage = EvaluateExpression.Builder.create(this, "Create message")
      * // Note: this is a string inside a string.
      * .expression("`Now waiting ${$.waitSeconds} seconds...`")
-     * .runtime(Runtime.NODEJS_16_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .resultPath("$.message")
      * .build();
      * SnsPublish publishMessage = SnsPublish.Builder.create(this, "Publish message")
@@ -4306,7 +4520,7 @@ public object tasks {
      * EvaluateExpression createMessage = EvaluateExpression.Builder.create(this, "Create message")
      * // Note: this is a string inside a string.
      * .expression("`Now waiting ${$.waitSeconds} seconds...`")
-     * .runtime(Runtime.NODEJS_16_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .resultPath("$.message")
      * .build();
      * SnsPublish publishMessage = SnsPublish.Builder.create(this, "Publish message")

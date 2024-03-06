@@ -44,6 +44,10 @@ import software.amazon.awscdk.services.fsx.CfnFileSystem
  * .copyTagsToBackups(false)
  * .dailyAutomaticBackupStartTime("dailyAutomaticBackupStartTime")
  * .deploymentType("deploymentType")
+ * .diskIopsConfiguration(DiskIopsConfigurationProperty.builder()
+ * .iops(123)
+ * .mode("mode")
+ * .build())
  * .preferredSubnetId("preferredSubnetId")
  * .selfManagedActiveDirectoryConfiguration(SelfManagedActiveDirectoryConfigurationProperty.builder()
  * .dnsIps(List.of("dnsIps"))
@@ -211,6 +215,28 @@ public class CfnFileSystemWindowsConfigurationPropertyDsl {
      */
     public fun deploymentType(deploymentType: String) {
         cdkBuilder.deploymentType(deploymentType)
+    }
+
+    /**
+     * @param diskIopsConfiguration The SSD IOPS (input/output operations per second) configuration
+     *   for an Amazon FSx for Windows file system. By default, Amazon FSx automatically provisions
+     *   3 IOPS per GiB of storage capacity. You can provision additional IOPS per GiB of storage,
+     *   up to the maximum limit associated with your chosen throughput capacity.
+     */
+    public fun diskIopsConfiguration(diskIopsConfiguration: IResolvable) {
+        cdkBuilder.diskIopsConfiguration(diskIopsConfiguration)
+    }
+
+    /**
+     * @param diskIopsConfiguration The SSD IOPS (input/output operations per second) configuration
+     *   for an Amazon FSx for Windows file system. By default, Amazon FSx automatically provisions
+     *   3 IOPS per GiB of storage capacity. You can provision additional IOPS per GiB of storage,
+     *   up to the maximum limit associated with your chosen throughput capacity.
+     */
+    public fun diskIopsConfiguration(
+        diskIopsConfiguration: CfnFileSystem.DiskIopsConfigurationProperty
+    ) {
+        cdkBuilder.diskIopsConfiguration(diskIopsConfiguration)
     }
 
     /**

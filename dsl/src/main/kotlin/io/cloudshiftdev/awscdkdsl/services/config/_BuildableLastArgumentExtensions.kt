@@ -26,7 +26,10 @@ import software.amazon.awscdk.services.config.IRule
 import software.amazon.awscdk.services.config.ManagedRule
 import software.amazon.awscdk.services.events.Rule
 
-/** Compliance details of the Config rule. */
+/**
+ * Indicates whether an AWS resource or AWS Config rule is compliant and provides the number of
+ * contributors that affect the compliance.
+ */
 public inline fun CfnConfigRule.setCompliance(
     block: CfnConfigRuleCompliancePropertyDsl.() -> Unit = {}
 ) {
@@ -72,6 +75,17 @@ public inline fun CfnConfigurationRecorder.setRecordingGroup(
 }
 
 /**
+ * Specifies the default recording frequency that AWS Config uses to record configuration changes.
+ */
+public inline fun CfnConfigurationRecorder.setRecordingMode(
+    block: CfnConfigurationRecorderRecordingModePropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnConfigurationRecorderRecordingModePropertyDsl()
+    builder.apply(block)
+    return setRecordingMode(builder.build())
+}
+
+/**
  * The options for how often AWS Config delivers configuration snapshots to the Amazon S3 bucket.
  */
 public inline fun CfnDeliveryChannel.setConfigSnapshotDeliveryProperties(
@@ -82,7 +96,7 @@ public inline fun CfnDeliveryChannel.setConfigSnapshotDeliveryProperties(
     return setConfigSnapshotDeliveryProperties(builder.build())
 }
 
-/**  */
+/** An object that specifies metadata for your organization's AWS Config Custom Policy rule. */
 public inline fun CfnOrganizationConfigRule.setOrganizationCustomPolicyRuleMetadata(
     block: CfnOrganizationConfigRuleOrganizationCustomPolicyRuleMetadataPropertyDsl.() -> Unit = {}
 ) {

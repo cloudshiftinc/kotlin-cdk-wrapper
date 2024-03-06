@@ -42,7 +42,7 @@ import software.amazon.awscdk.services.stepfunctions.tasks.SnsPublishProps
  * EvaluateExpression createMessage = EvaluateExpression.Builder.create(this, "Create message")
  * // Note: this is a string inside a string.
  * .expression("`Now waiting ${$.waitSeconds} seconds...`")
- * .runtime(Runtime.NODEJS_16_X)
+ * .runtime(Runtime.NODEJS_LATEST)
  * .resultPath("$.message")
  * .build();
  * SnsPublish publishMessage = SnsPublish.Builder.create(this, "Publish message")
@@ -113,7 +113,9 @@ public class SnsPublishPropsDsl {
 
     /**
      * @param integrationPattern AWS Step Functions integrates with services directly in the Amazon
-     *   States Language. You can control these AWS services using service integration patterns
+     *   States Language. You can control these AWS services using service integration patterns.
+     *
+     * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      */
     public fun integrationPattern(integrationPattern: IntegrationPattern) {
         cdkBuilder.integrationPattern(integrationPattern)
@@ -134,6 +136,32 @@ public class SnsPublishPropsDsl {
      */
     public fun messageAttributes(messageAttributes: Map<String, MessageAttribute>) {
         cdkBuilder.messageAttributes(messageAttributes)
+    }
+
+    /**
+     * @param messageDeduplicationId This parameter applies only to FIFO topics. Every message must
+     *   have a unique MessageDeduplicationId, which is a token used for deduplication of sent
+     *   messages. If a message with a particular MessageDeduplicationId is sent successfully, any
+     *   message sent with the same MessageDeduplicationId during the 5-minute deduplication
+     *   interval is treated as a duplicate.
+     *
+     * If the topic has ContentBasedDeduplication set, the system generates a MessageDeduplicationId
+     * based on the contents of the message. Your MessageDeduplicationId overrides the generated
+     * one.
+     */
+    public fun messageDeduplicationId(messageDeduplicationId: String) {
+        cdkBuilder.messageDeduplicationId(messageDeduplicationId)
+    }
+
+    /**
+     * @param messageGroupId This parameter applies only to FIFO topics. The MessageGroupId is a tag
+     *   that specifies that a message belongs to a specific message group. Messages that belong to
+     *   the same message group are processed in a FIFO manner (however, messages in different
+     *   message groups might be processed out of order). Every message must include a
+     *   MessageGroupId.
+     */
+    public fun messageGroupId(messageGroupId: String) {
+        cdkBuilder.messageGroupId(messageGroupId)
     }
 
     /**
@@ -185,6 +213,11 @@ public class SnsPublishPropsDsl {
      */
     public fun resultSelector(resultSelector: Map<String, Any>) {
         cdkBuilder.resultSelector(resultSelector)
+    }
+
+    /** @param stateName Optional name for this state. */
+    public fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
     }
 
     /**

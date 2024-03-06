@@ -33,7 +33,7 @@ import software.constructs.Construct
  * Function func = Function.Builder.create(this, "Lambda")
  * .code(lambdaCode)
  * .handler("index.handler")
- * .runtime(Runtime.NODEJS_14_X)
+ * .runtime(Runtime.NODEJS_LATEST)
  * .build();
  * // used to make sure each CDK synthesis produces a different Version
  * Version version = func.getCurrentVersion();

@@ -16,7 +16,7 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.AllocatedSubnet
 
 /**
- * Cidr Allocated Subnet.
+ * CIDR Allocated Subnet.
  *
  * Example:
  * ```
@@ -25,6 +25,8 @@ import software.amazon.awscdk.services.ec2.AllocatedSubnet
  * import software.amazon.awscdk.services.ec2.*;
  * AllocatedSubnet allocatedSubnet = AllocatedSubnet.builder()
  * .cidr("cidr")
+ * // the properties below are optional
+ * .ipv6Cidr("ipv6Cidr")
  * .build();
  * ```
  */
@@ -32,9 +34,16 @@ import software.amazon.awscdk.services.ec2.AllocatedSubnet
 public class AllocatedSubnetDsl {
     private val cdkBuilder: AllocatedSubnet.Builder = AllocatedSubnet.builder()
 
-    /** @param cidr Cidr Allocations for a Subnet. */
+    /** @param cidr IPv4 CIDR Allocations for a Subnet. Note this is specific to the IPv4 CIDR. */
     public fun cidr(cidr: String) {
         cdkBuilder.cidr(cidr)
+    }
+
+    /**
+     * @param ipv6Cidr IPv6 CIDR Allocations for a Subnet. Note this is specific to the IPv6 CIDR.
+     */
+    public fun ipv6Cidr(ipv6Cidr: String) {
+        cdkBuilder.ipv6Cidr(ipv6Cidr)
     }
 
     public fun build(): AllocatedSubnet = cdkBuilder.build()

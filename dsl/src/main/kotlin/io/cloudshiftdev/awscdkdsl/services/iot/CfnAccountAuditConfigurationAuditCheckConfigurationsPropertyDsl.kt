@@ -226,8 +226,8 @@ public class CfnAccountAuditConfigurationAuditCheckConfigurationsPropertyDsl {
     }
 
     /**
-     * @param intermediateCaRevokedForActiveDeviceCertificatesCheck The configuration for a specific
-     *   audit check.
+     * @param intermediateCaRevokedForActiveDeviceCertificatesCheck Checks if device certificates
+     *   are still active despite being revoked by an intermediate CA.
      */
     public fun intermediateCaRevokedForActiveDeviceCertificatesCheck(
         intermediateCaRevokedForActiveDeviceCertificatesCheck: IResolvable
@@ -238,8 +238,8 @@ public class CfnAccountAuditConfigurationAuditCheckConfigurationsPropertyDsl {
     }
 
     /**
-     * @param intermediateCaRevokedForActiveDeviceCertificatesCheck The configuration for a specific
-     *   audit check.
+     * @param intermediateCaRevokedForActiveDeviceCertificatesCheck Checks if device certificates
+     *   are still active despite being revoked by an intermediate CA.
      */
     public fun intermediateCaRevokedForActiveDeviceCertificatesCheck(
         intermediateCaRevokedForActiveDeviceCertificatesCheck:
@@ -251,7 +251,11 @@ public class CfnAccountAuditConfigurationAuditCheckConfigurationsPropertyDsl {
     }
 
     /**
-     * @param ioTPolicyPotentialMisConfigurationCheck The configuration for a specific audit check.
+     * @param ioTPolicyPotentialMisConfigurationCheck Checks if an AWS IoT policy is potentially
+     *   misconfigured. Misconfigured policies, including overly permissive policies, can cause
+     *   security incidents like allowing devices access to unintended resources. This check is a
+     *   warning for you to make sure that only intended actions are allowed before updating the
+     *   policy.
      */
     public fun ioTPolicyPotentialMisConfigurationCheck(
         ioTPolicyPotentialMisConfigurationCheck: IResolvable
@@ -260,7 +264,11 @@ public class CfnAccountAuditConfigurationAuditCheckConfigurationsPropertyDsl {
     }
 
     /**
-     * @param ioTPolicyPotentialMisConfigurationCheck The configuration for a specific audit check.
+     * @param ioTPolicyPotentialMisConfigurationCheck Checks if an AWS IoT policy is potentially
+     *   misconfigured. Misconfigured policies, including overly permissive policies, can cause
+     *   security incidents like allowing devices access to unintended resources. This check is a
+     *   warning for you to make sure that only intended actions are allowed before updating the
+     *   policy.
      */
     public fun ioTPolicyPotentialMisConfigurationCheck(
         ioTPolicyPotentialMisConfigurationCheck:

@@ -155,20 +155,12 @@ public class CfnDataRepositoryAssociationPropsDsl {
         cdkBuilder.s3(s3)
     }
 
-    /**
-     * @param tags An array of key-value pairs to apply to this resource. For more information, see
-     *   [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     *   .
-     */
+    /** @param tags A list of `Tag` values, with a maximum of 50 elements. */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
-    /**
-     * @param tags An array of key-value pairs to apply to this resource. For more information, see
-     *   [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     *   .
-     */
+    /** @param tags A list of `Tag` values, with a maximum of 50 elements. */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
     }

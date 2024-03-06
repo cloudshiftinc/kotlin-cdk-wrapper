@@ -399,6 +399,7 @@ import software.constructs.Construct
  * .name("name")
  * .build()))
  * .terminationProtected(false)
+ * .unhealthyNodeReplacement(false)
  * .build())
  * .jobFlowRole("jobFlowRole")
  * .name("name")
@@ -431,7 +432,9 @@ import software.constructs.Construct
  * .configurations(List.of(configurationProperty_))
  * .build()))
  * .customAmiId("customAmiId")
+ * .ebsRootVolumeIops(123)
  * .ebsRootVolumeSize(123)
+ * .ebsRootVolumeThroughput(123)
  * .kerberosAttributes(KerberosAttributesProperty.builder()
  * .kdcAdminPassword("kdcAdminPassword")
  * .realm("realm")
@@ -453,6 +456,11 @@ import software.constructs.Construct
  * .build())
  * .build())
  * .osReleaseLabel("osReleaseLabel")
+ * .placementGroupConfigs(List.of(PlacementGroupConfigProperty.builder()
+ * .instanceRole("instanceRole")
+ * // the properties below are optional
+ * .placementStrategy("placementStrategy")
+ * .build()))
  * .releaseLabel("releaseLabel")
  * .scaleDownBehavior("scaleDownBehavior")
  * .securityConfiguration("securityConfiguration")
@@ -494,6 +502,8 @@ public class CfnClusterDsl(
     private val _bootstrapActions: MutableList<Any> = mutableListOf()
 
     private val _configurations: MutableList<Any> = mutableListOf()
+
+    private val _placementGroupConfigs: MutableList<Any> = mutableListOf()
 
     private val _steps: MutableList<Any> = mutableListOf()
 
@@ -578,18 +588,32 @@ public class CfnClusterDsl(
     }
 
     /**
+     * An auto-termination policy defines the amount of idle time in seconds after which a cluster
+     * automatically terminates.
+     *
+     * For alternative cluster termination options, see
+     * [Control cluster termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html)
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-autoterminationpolicy)
      *
-     * @param autoTerminationPolicy
+     * @param autoTerminationPolicy An auto-termination policy defines the amount of idle time in
+     *   seconds after which a cluster automatically terminates.
      */
     public fun autoTerminationPolicy(autoTerminationPolicy: IResolvable) {
         cdkBuilder.autoTerminationPolicy(autoTerminationPolicy)
     }
 
     /**
+     * An auto-termination policy defines the amount of idle time in seconds after which a cluster
+     * automatically terminates.
+     *
+     * For alternative cluster termination options, see
+     * [Control cluster termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html)
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-autoterminationpolicy)
      *
-     * @param autoTerminationPolicy
+     * @param autoTerminationPolicy An auto-termination policy defines the amount of idle time in
+     *   seconds after which a cluster automatically terminates.
      */
     public fun autoTerminationPolicy(
         autoTerminationPolicy: CfnCluster.AutoTerminationPolicyProperty
@@ -686,6 +710,21 @@ public class CfnClusterDsl(
     }
 
     /**
+     * The IOPS, of the Amazon EBS root device volume of the Linux AMI that is used for each Amazon
+     * EC2 instance.
+     *
+     * Available in Amazon EMR releases 6.15.0 and later.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-ebsrootvolumeiops)
+     *
+     * @param ebsRootVolumeIops The IOPS, of the Amazon EBS root device volume of the Linux AMI that
+     *   is used for each Amazon EC2 instance.
+     */
+    public fun ebsRootVolumeIops(ebsRootVolumeIops: Number) {
+        cdkBuilder.ebsRootVolumeIops(ebsRootVolumeIops)
+    }
+
+    /**
      * The size, in GiB, of the Amazon EBS root device volume of the Linux AMI that is used for each
      * Amazon EC2 instance.
      *
@@ -698,6 +737,21 @@ public class CfnClusterDsl(
      */
     public fun ebsRootVolumeSize(ebsRootVolumeSize: Number) {
         cdkBuilder.ebsRootVolumeSize(ebsRootVolumeSize)
+    }
+
+    /**
+     * The throughput, in MiB/s, of the Amazon EBS root device volume of the Linux AMI that is used
+     * for each Amazon EC2 instance.
+     *
+     * Available in Amazon EMR releases 6.15.0 and later.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-ebsrootvolumethroughput)
+     *
+     * @param ebsRootVolumeThroughput The throughput, in MiB/s, of the Amazon EBS root device volume
+     *   of the Linux AMI that is used for each Amazon EC2 instance.
+     */
+    public fun ebsRootVolumeThroughput(ebsRootVolumeThroughput: Number) {
+        cdkBuilder.ebsRootVolumeThroughput(ebsRootVolumeThroughput)
     }
 
     /**
@@ -840,12 +894,45 @@ public class CfnClusterDsl(
     }
 
     /**
+     * The Amazon Linux release specified in a cluster launch RunJobFlow request.
+     *
+     * If no Amazon Linux release was specified, the default Amazon Linux release is shown in the
+     * response.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-osreleaselabel)
      *
-     * @param osReleaseLabel
+     * @param osReleaseLabel The Amazon Linux release specified in a cluster launch RunJobFlow
+     *   request.
      */
     public fun osReleaseLabel(osReleaseLabel: String) {
         cdkBuilder.osReleaseLabel(osReleaseLabel)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-placementgroupconfigs)
+     *
+     * @param placementGroupConfigs
+     */
+    public fun placementGroupConfigs(vararg placementGroupConfigs: Any) {
+        _placementGroupConfigs.addAll(listOf(*placementGroupConfigs))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-placementgroupconfigs)
+     *
+     * @param placementGroupConfigs
+     */
+    public fun placementGroupConfigs(placementGroupConfigs: Collection<Any>) {
+        _placementGroupConfigs.addAll(placementGroupConfigs)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-placementgroupconfigs)
+     *
+     * @param placementGroupConfigs
+     */
+    public fun placementGroupConfigs(placementGroupConfigs: IResolvable) {
+        cdkBuilder.placementGroupConfigs(placementGroupConfigs)
     }
 
     /**
@@ -1029,6 +1116,8 @@ public class CfnClusterDsl(
         if (_applications.isNotEmpty()) cdkBuilder.applications(_applications)
         if (_bootstrapActions.isNotEmpty()) cdkBuilder.bootstrapActions(_bootstrapActions)
         if (_configurations.isNotEmpty()) cdkBuilder.configurations(_configurations)
+        if (_placementGroupConfigs.isNotEmpty())
+            cdkBuilder.placementGroupConfigs(_placementGroupConfigs)
         if (_steps.isNotEmpty()) cdkBuilder.steps(_steps)
         if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
         return cdkBuilder.build()

@@ -97,5 +97,10 @@ public class PassPropsDsl {
         cdkBuilder.resultPath(resultPath)
     }
 
+    /** @param stateName Optional name for this state. */
+    public fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
+    }
+
     public fun build(): PassProps = cdkBuilder.build()
 }

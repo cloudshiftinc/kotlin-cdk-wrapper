@@ -198,6 +198,8 @@ public class CfnRoleDsl(
      * `\u0021` ) through the DEL character ( `\u007F` ), including most punctuation characters,
      * digits, and upper and lowercased letters.
      *
+     * Default: - "/"
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-path)
      *
      * @param path The path to the role. For more information about paths, see

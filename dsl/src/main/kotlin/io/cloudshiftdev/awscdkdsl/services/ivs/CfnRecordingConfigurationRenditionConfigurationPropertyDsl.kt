@@ -57,7 +57,7 @@ public class CfnRecordingConfigurationRenditionConfigurationPropertyDsl {
      *   renditions are recorded if they are available during the stream. If a selected rendition is
      *   unavailable, the best available rendition is recorded. For details on the resolution
      *   dimensions of each rendition, see
-     *   [Auto-Record to Amazon S3](https://docs.aws.amazon.com//ivs/latest/userguide/record-to-s3.html)
+     *   [Auto-Record to Amazon S3](https://docs.aws.amazon.com//ivs/latest/LowLatencyUserGuide/record-to-s3.html)
      *   .
      */
     public fun renditions(vararg renditions: String) {
@@ -70,7 +70,7 @@ public class CfnRecordingConfigurationRenditionConfigurationPropertyDsl {
      *   renditions are recorded if they are available during the stream. If a selected rendition is
      *   unavailable, the best available rendition is recorded. For details on the resolution
      *   dimensions of each rendition, see
-     *   [Auto-Record to Amazon S3](https://docs.aws.amazon.com//ivs/latest/userguide/record-to-s3.html)
+     *   [Auto-Record to Amazon S3](https://docs.aws.amazon.com//ivs/latest/LowLatencyUserGuide/record-to-s3.html)
      *   .
      */
     public fun renditions(renditions: Collection<String>) {

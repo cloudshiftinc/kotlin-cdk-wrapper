@@ -22,7 +22,7 @@ import software.amazon.awscdk.services.gamelift.CfnLocation
 import software.constructs.Construct
 
 /**
- * Creates a custom location for use in an Anywhere fleet.
+ * The AWS::GameLift::Location resource creates a custom location for use in an Anywhere fleet.
  *
  * Example:
  * ```
@@ -51,33 +51,43 @@ public class CfnLocationDsl(
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
-     * The location's name.
+     * A descriptive name for the custom location.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-location.html#cfn-gamelift-location-locationname)
      *
-     * @param locationName The location's name.
+     * @param locationName A descriptive name for the custom location.
      */
     public fun locationName(locationName: String) {
         cdkBuilder.locationName(locationName)
     }
 
     /**
-     * An array of key-value pairs to apply to this resource.
+     * A list of labels to assign to the new matchmaking configuration resource.
+     *
+     * Tags are developer-defined key-value pairs. Tagging AWS resources are useful for resource
+     * management, access management and cost allocation. For more information, see
+     * [Tagging AWS Resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) in
+     * the *AWS General Rareference* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-location.html#cfn-gamelift-location-tags)
      *
-     * @param tags An array of key-value pairs to apply to this resource.
+     * @param tags A list of labels to assign to the new matchmaking configuration resource.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
     /**
-     * An array of key-value pairs to apply to this resource.
+     * A list of labels to assign to the new matchmaking configuration resource.
+     *
+     * Tags are developer-defined key-value pairs. Tagging AWS resources are useful for resource
+     * management, access management and cost allocation. For more information, see
+     * [Tagging AWS Resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) in
+     * the *AWS General Rareference* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-location.html#cfn-gamelift-location-tags)
      *
-     * @param tags An array of key-value pairs to apply to this resource.
+     * @param tags A list of labels to assign to the new matchmaking configuration resource.
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)

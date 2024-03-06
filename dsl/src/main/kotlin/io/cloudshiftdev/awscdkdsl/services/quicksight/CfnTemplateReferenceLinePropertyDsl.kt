@@ -40,6 +40,10 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * .build())
  * // the properties below are optional
  * .measureAggregationFunction(AggregationFunctionProperty.builder()
+ * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+ * .simpleAttributeAggregation("simpleAttributeAggregation")
+ * .valueForMultipleValues("valueForMultipleValues")
+ * .build())
  * .categoricalAggregationFunction("categoricalAggregationFunction")
  * .dateAggregationFunction("dateAggregationFunction")
  * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -50,6 +54,7 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * .build())
  * .build())
  * .build())
+ * .seriesType("seriesType")
  * .staticConfiguration(ReferenceLineStaticDataConfigurationProperty.builder()
  * .value(123)
  * .build())

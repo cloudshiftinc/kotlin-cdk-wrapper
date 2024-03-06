@@ -13,8 +13,13 @@ package io.cloudshiftdev.awscdkdsl.services.sns
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Boolean
+import kotlin.Number
 import kotlin.String
+import kotlin.Unit
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
 import software.amazon.awscdk.services.kms.IKey
+import software.amazon.awscdk.services.sns.LoggingConfig
 import software.amazon.awscdk.services.sns.Topic
 import software.constructs.Construct
 
@@ -42,6 +47,8 @@ public class TopicDsl(
 ) {
     private val cdkBuilder: Topic.Builder = Topic.Builder.create(scope, id)
 
+    private val _loggingConfigs: MutableList<LoggingConfig> = mutableListOf()
+
     /**
      * Enables content-based deduplication for FIFO topics.
      *
@@ -65,6 +72,21 @@ public class TopicDsl(
     }
 
     /**
+     * Adds a statement to enforce encryption of data in transit when publishing to the topic.
+     *
+     * For more information, see
+     * https://docs.aws.amazon.com/sns/latest/dg/sns-security-best-practices.html#enforce-encryption-data-in-transit.
+     *
+     * Default: false
+     *
+     * @param enforceSsl Adds a statement to enforce encryption of data in transit when publishing
+     *   to the topic.
+     */
+    public fun enforceSsl(enforceSsl: Boolean) {
+        cdkBuilder.enforceSsl(enforceSsl)
+    }
+
+    /**
      * Set to true to create a FIFO topic.
      *
      * Default: None
@@ -76,6 +98,34 @@ public class TopicDsl(
     }
 
     /**
+     * The list of delivery status logging configurations for the topic.
+     *
+     * For more information, see
+     * https://docs.aws.amazon.com/sns/latest/dg/sns-topic-attributes.html.
+     *
+     * Default: None
+     *
+     * @param loggingConfigs The list of delivery status logging configurations for the topic.
+     */
+    public fun loggingConfigs(loggingConfigs: LoggingConfigDsl.() -> Unit) {
+        _loggingConfigs.add(LoggingConfigDsl().apply(loggingConfigs).build())
+    }
+
+    /**
+     * The list of delivery status logging configurations for the topic.
+     *
+     * For more information, see
+     * https://docs.aws.amazon.com/sns/latest/dg/sns-topic-attributes.html.
+     *
+     * Default: None
+     *
+     * @param loggingConfigs The list of delivery status logging configurations for the topic.
+     */
+    public fun loggingConfigs(loggingConfigs: Collection<LoggingConfig>) {
+        _loggingConfigs.addAll(loggingConfigs)
+    }
+
+    /**
      * A KMS Key, either managed by this CDK app, or imported.
      *
      * Default: None
@@ -84,6 +134,21 @@ public class TopicDsl(
      */
     public fun masterKey(masterKey: IKey) {
         cdkBuilder.masterKey(masterKey)
+    }
+
+    /**
+     * The number of days Amazon SNS retains messages.
+     *
+     * It can only be set for FIFO topics.
+     *
+     * Default: - do not archive messages
+     *
+     * [Documentation](https://docs.aws.amazon.com/sns/latest/dg/fifo-message-archiving-replay.html)
+     *
+     * @param messageRetentionPeriodInDays The number of days Amazon SNS retains messages.
+     */
+    public fun messageRetentionPeriodInDays(messageRetentionPeriodInDays: Number) {
+        cdkBuilder.messageRetentionPeriodInDays(messageRetentionPeriodInDays)
     }
 
     /**
@@ -100,5 +165,8 @@ public class TopicDsl(
         cdkBuilder.topicName(topicName)
     }
 
-    public fun build(): Topic = cdkBuilder.build()
+    public fun build(): Topic {
+        if (_loggingConfigs.isNotEmpty()) cdkBuilder.loggingConfigs(_loggingConfigs)
+        return cdkBuilder.build()
+    }
 }

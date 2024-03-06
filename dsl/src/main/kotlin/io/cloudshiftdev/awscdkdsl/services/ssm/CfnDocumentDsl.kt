@@ -30,7 +30,7 @@ import software.constructs.Construct
  *
  * This document defines the actions that Systems Manager performs on your AWS resources.
  *
- * This resource does not support CloudFormation drift detection.
+ * This resource does not support AWS CloudFormation drift detection.
  *
  * Example:
  * ```
@@ -146,10 +146,6 @@ public class CfnDocumentDsl(
 
     /**
      * The type of document to create.
-     *
-     * *Allowed Values* : `ApplicationConfigurationSchema` | `Automation` |
-     * `Automation.ChangeTemplate` | `Command` | `DeploymentStrategy` | `Package` | `Policy` |
-     * `Session`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html#cfn-ssm-document-documenttype)
      *

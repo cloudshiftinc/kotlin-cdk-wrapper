@@ -40,7 +40,9 @@ import software.amazon.awscdk.services.fsx.CfnFileSystem
  * .iops(123)
  * .mode("mode")
  * .build())
+ * .endpointIpAddressRange("endpointIpAddressRange")
  * .options(List.of("options"))
+ * .preferredSubnetId("preferredSubnetId")
  * .rootVolumeConfiguration(RootVolumeConfigurationProperty.builder()
  * .copyTagsToSnapshots(false)
  * .dataCompressionType("dataCompressionType")
@@ -58,6 +60,7 @@ import software.amazon.awscdk.services.fsx.CfnFileSystem
  * .type("type")
  * .build()))
  * .build())
+ * .routeTableIds(List.of("routeTableIds"))
  * .throughputCapacity(123)
  * .weeklyMaintenanceStartTime("weeklyMaintenanceStartTime")
  * .build();
@@ -71,6 +74,8 @@ public class CfnFileSystemOpenZFSConfigurationPropertyDsl {
         CfnFileSystem.OpenZFSConfigurationProperty.builder()
 
     private val _options: MutableList<String> = mutableListOf()
+
+    private val _routeTableIds: MutableList<String> = mutableListOf()
 
     /**
      * @param automaticBackupRetentionDays The number of days to retain automatic backups. Setting
@@ -144,15 +149,16 @@ public class CfnFileSystemOpenZFSConfigurationPropertyDsl {
      *   values are the following:
      * * `MULTI_AZ_1` - Creates file systems with high availability that are configured for Multi-AZ
      *   redundancy to tolerate temporary unavailability in Availability Zones (AZs). `Multi_AZ_1`
-     *   is available in the following AWS Regions :
-     * * `SINGLE_AZ_1` - (Default) Creates file systems with throughput capacities of 64 - 4,096
-     *   MB/s. `Single_AZ_1` is available in all AWS Regions where Amazon FSx for OpenZFS is
-     *   available.
+     *   is available only in the US East (N. Virginia), US East (Ohio), US West (Oregon), Asia
+     *   Pacific (Singapore), Asia Pacific (Tokyo), and Europe (Ireland) AWS Regions .
+     * * `SINGLE_AZ_1` - Creates file systems with throughput capacities of 64 - 4,096 MB/s.
+     *   `Single_AZ_1` is available in all AWS Regions where Amazon FSx for OpenZFS is available.
      * * `SINGLE_AZ_2` - Creates file systems with throughput capacities of 160 - 10,240 MB/s using
      *   an NVMe L2ARC cache. `Single_AZ_2` is available only in the US East (N. Virginia), US East
-     *   (Ohio), US West (Oregon), and Europe (Ireland) AWS Regions .
+     *   (Ohio), US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Tokyo), and Europe
+     *   (Ireland) AWS Regions .
      *
-     * For more information, see:
+     * For more information, see
      * [Deployment type availability](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/availability-durability.html#available-aws-regions)
      * and
      * [File system performance](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#zfs-fs-performance)
@@ -189,6 +195,17 @@ public class CfnFileSystemOpenZFSConfigurationPropertyDsl {
     }
 
     /**
+     * @param endpointIpAddressRange (Multi-AZ only) Specifies the IP address range in which the
+     *   endpoints to access your file system will be created. By default in the Amazon FSx API and
+     *   Amazon FSx console, Amazon FSx selects an available /28 IP address range for you from one
+     *   of the VPC's CIDR ranges. You can have overlapping endpoint IP addresses for file systems
+     *   deployed in the same VPC/route tables.
+     */
+    public fun endpointIpAddressRange(endpointIpAddressRange: String) {
+        cdkBuilder.endpointIpAddressRange(endpointIpAddressRange)
+    }
+
+    /**
      * @param options To delete a file system if there are child volumes present below the root
      *   volume, use the string `DELETE_CHILD_VOLUMES_AND_SNAPSHOTS` . If your file system has child
      *   volumes and you don't use this option, the delete request will fail.
@@ -204,6 +221,14 @@ public class CfnFileSystemOpenZFSConfigurationPropertyDsl {
      */
     public fun options(options: Collection<String>) {
         _options.addAll(options)
+    }
+
+    /**
+     * @param preferredSubnetId Required when `DeploymentType` is set to `MULTI_AZ_1` . This
+     *   specifies the subnet in which you want the preferred file server to be located.
+     */
+    public fun preferredSubnetId(preferredSubnetId: String) {
+        cdkBuilder.preferredSubnetId(preferredSubnetId)
     }
 
     /**
@@ -225,12 +250,32 @@ public class CfnFileSystemOpenZFSConfigurationPropertyDsl {
     }
 
     /**
+     * @param routeTableIds (Multi-AZ only) Specifies the route tables in which Amazon FSx creates
+     *   the rules for routing traffic to the correct file server. You should specify all virtual
+     *   private cloud (VPC) route tables associated with the subnets in which your clients are
+     *   located. By default, Amazon FSx selects your VPC's default route table.
+     */
+    public fun routeTableIds(vararg routeTableIds: String) {
+        _routeTableIds.addAll(listOf(*routeTableIds))
+    }
+
+    /**
+     * @param routeTableIds (Multi-AZ only) Specifies the route tables in which Amazon FSx creates
+     *   the rules for routing traffic to the correct file server. You should specify all virtual
+     *   private cloud (VPC) route tables associated with the subnets in which your clients are
+     *   located. By default, Amazon FSx selects your VPC's default route table.
+     */
+    public fun routeTableIds(routeTableIds: Collection<String>) {
+        _routeTableIds.addAll(routeTableIds)
+    }
+
+    /**
      * @param throughputCapacity Specifies the throughput of an Amazon FSx for OpenZFS file system,
      *   measured in megabytes per second (MBps). Valid values depend on the DeploymentType you
      *   choose, as follows:
+     * * For `MULTI_AZ_1` and `SINGLE_AZ_2` , valid values are 160, 320, 640, 1280, 2560, 3840,
+     *   5120, 7680, or 10240 MBps.
      * * For `SINGLE_AZ_1` , valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MBps.
-     * * For `SINGLE_AZ_2` , valid values are 160, 320, 640, 1280, 2560, 3840, 5120, 7680, or 10240
-     *   MBps.
      *
      * You pay for additional throughput capacity that you provision.
      */
@@ -256,6 +301,7 @@ public class CfnFileSystemOpenZFSConfigurationPropertyDsl {
 
     public fun build(): CfnFileSystem.OpenZFSConfigurationProperty {
         if (_options.isNotEmpty()) cdkBuilder.options(_options)
+        if (_routeTableIds.isNotEmpty()) cdkBuilder.routeTableIds(_routeTableIds)
         return cdkBuilder.build()
     }
 }

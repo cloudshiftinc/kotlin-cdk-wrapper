@@ -26,6 +26,8 @@ import software.amazon.awscdk.services.codepipeline.IAction
 import software.amazon.awscdk.services.codepipeline.IPipeline
 import software.amazon.awscdk.services.codepipeline.IStage
 import software.amazon.awscdk.services.codepipeline.Pipeline
+import software.amazon.awscdk.services.codepipeline.Trigger
+import software.amazon.awscdk.services.codepipeline.Variable
 import software.amazon.awscdk.services.codestarnotifications.INotificationRule
 import software.amazon.awscdk.services.codestarnotifications.INotificationRuleTarget
 import software.amazon.awscdk.services.events.IRuleTarget
@@ -313,6 +315,30 @@ public inline fun Pipeline.addToRolePolicy(block: PolicyStatementDsl.() -> Unit 
     val builder = PolicyStatementDsl()
     builder.apply(block)
     return addToRolePolicy(builder.build())
+}
+
+/**
+ * Adds a new Trigger to this Pipeline.
+ *
+ * @param props Trigger property to add to this Pipeline.
+ * @return the newly created trigger
+ */
+public inline fun Pipeline.addTrigger(block: TriggerPropsDsl.() -> Unit = {}): Trigger {
+    val builder = TriggerPropsDsl()
+    builder.apply(block)
+    return addTrigger(builder.build())
+}
+
+/**
+ * Adds a new Variable to this Pipeline.
+ *
+ * @param variable Variable instance to add to this Pipeline.
+ * @return the newly created variable
+ */
+public inline fun Pipeline.addVariable(block: VariableDsl.() -> Unit = {}): Variable {
+    val builder = VariableDsl()
+    builder.apply(block)
+    return addVariable(builder.build())
 }
 
 /**

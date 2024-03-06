@@ -13,10 +13,13 @@ package io.cloudshiftdev.awscdkdsl.services.mediatailor
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Number
+import kotlin.String
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
 import software.amazon.awscdk.services.mediatailor.CfnChannel
 
 /**
- * HLS playlist configuration parameters.</p>.
+ * HLS playlist configuration parameters.
  *
  * Example:
  * ```
@@ -24,6 +27,7 @@ import software.amazon.awscdk.services.mediatailor.CfnChannel
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.mediatailor.*;
  * HlsPlaylistSettingsProperty hlsPlaylistSettingsProperty = HlsPlaylistSettingsProperty.builder()
+ * .adMarkupType(List.of("adMarkupType"))
  * .manifestWindowSeconds(123)
  * .build();
  * ```
@@ -35,13 +39,36 @@ public class CfnChannelHlsPlaylistSettingsPropertyDsl {
     private val cdkBuilder: CfnChannel.HlsPlaylistSettingsProperty.Builder =
         CfnChannel.HlsPlaylistSettingsProperty.builder()
 
+    private val _adMarkupType: MutableList<String> = mutableListOf()
+
+    /**
+     * @param adMarkupType Determines the type of SCTE 35 tags to use in ad markup. Specify
+     *   `DATERANGE` to use `DATERANGE` tags (for live or VOD content). Specify `SCTE35_ENHANCED` to
+     *   use `EXT-X-CUE-OUT` and `EXT-X-CUE-IN` tags (for VOD content only).
+     */
+    public fun adMarkupType(vararg adMarkupType: String) {
+        _adMarkupType.addAll(listOf(*adMarkupType))
+    }
+
+    /**
+     * @param adMarkupType Determines the type of SCTE 35 tags to use in ad markup. Specify
+     *   `DATERANGE` to use `DATERANGE` tags (for live or VOD content). Specify `SCTE35_ENHANCED` to
+     *   use `EXT-X-CUE-OUT` and `EXT-X-CUE-IN` tags (for VOD content only).
+     */
+    public fun adMarkupType(adMarkupType: Collection<String>) {
+        _adMarkupType.addAll(adMarkupType)
+    }
+
     /**
      * @param manifestWindowSeconds The total duration (in seconds) of each manifest. Minimum value:
-     *   `30` seconds. Maximum value: `3600` seconds.</p>
+     *   `30` seconds. Maximum value: `3600` seconds.
      */
     public fun manifestWindowSeconds(manifestWindowSeconds: Number) {
         cdkBuilder.manifestWindowSeconds(manifestWindowSeconds)
     }
 
-    public fun build(): CfnChannel.HlsPlaylistSettingsProperty = cdkBuilder.build()
+    public fun build(): CfnChannel.HlsPlaylistSettingsProperty {
+        if (_adMarkupType.isNotEmpty()) cdkBuilder.adMarkupType(_adMarkupType)
+        return cdkBuilder.build()
+    }
 }

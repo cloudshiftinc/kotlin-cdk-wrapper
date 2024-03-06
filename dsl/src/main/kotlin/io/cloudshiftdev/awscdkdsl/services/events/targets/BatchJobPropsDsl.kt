@@ -26,7 +26,7 @@ import software.amazon.awscdk.services.sqs.IQueue
  * ```
  * import software.amazon.awscdk.services.ec2.*;
  * import software.amazon.awscdk.services.ecs.*;
- * import software.amazon.awscdk.services.batch.alpha.*;
+ * import software.amazon.awscdk.services.batch.*;
  * import software.amazon.awscdk.services.ecs.ContainerImage;
  * Vpc vpc;
  * FargateComputeEnvironment computeEnvironment = FargateComputeEnvironment.Builder.create(this,

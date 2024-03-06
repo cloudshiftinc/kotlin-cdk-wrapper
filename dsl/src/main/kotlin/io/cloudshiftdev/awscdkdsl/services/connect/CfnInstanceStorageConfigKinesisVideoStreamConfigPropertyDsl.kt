@@ -27,13 +27,12 @@ import software.amazon.awscdk.services.connect.CfnInstanceStorageConfig
  * import software.amazon.awscdk.services.connect.*;
  * KinesisVideoStreamConfigProperty kinesisVideoStreamConfigProperty =
  * KinesisVideoStreamConfigProperty.builder()
- * .prefix("prefix")
- * .retentionPeriodHours(123)
- * // the properties below are optional
  * .encryptionConfig(EncryptionConfigProperty.builder()
  * .encryptionType("encryptionType")
  * .keyId("keyId")
  * .build())
+ * .prefix("prefix")
+ * .retentionPeriodHours(123)
  * .build();
  * ```
  *

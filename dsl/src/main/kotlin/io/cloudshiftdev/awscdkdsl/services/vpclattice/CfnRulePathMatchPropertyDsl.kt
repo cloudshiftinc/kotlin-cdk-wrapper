@@ -40,12 +40,12 @@ import software.amazon.awscdk.services.vpclattice.CfnRule
 public class CfnRulePathMatchPropertyDsl {
     private val cdkBuilder: CfnRule.PathMatchProperty.Builder = CfnRule.PathMatchProperty.builder()
 
-    /** @param caseSensitive Indicates whether the match is case sensitive. Defaults to false. */
+    /** @param caseSensitive Indicates whether the match is case sensitive. */
     public fun caseSensitive(caseSensitive: Boolean) {
         cdkBuilder.caseSensitive(caseSensitive)
     }
 
-    /** @param caseSensitive Indicates whether the match is case sensitive. Defaults to false. */
+    /** @param caseSensitive Indicates whether the match is case sensitive. */
     public fun caseSensitive(caseSensitive: IResolvable) {
         cdkBuilder.caseSensitive(caseSensitive)
     }

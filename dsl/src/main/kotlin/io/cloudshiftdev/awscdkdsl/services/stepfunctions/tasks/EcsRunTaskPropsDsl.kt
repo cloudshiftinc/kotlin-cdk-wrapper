@@ -155,7 +155,9 @@ public class EcsRunTaskPropsDsl {
 
     /**
      * @param integrationPattern AWS Step Functions integrates with services directly in the Amazon
-     *   States Language. You can control these AWS services using service integration patterns
+     *   States Language. You can control these AWS services using service integration patterns.
+     *
+     * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      */
     public fun integrationPattern(integrationPattern: IntegrationPattern) {
         cdkBuilder.integrationPattern(integrationPattern)
@@ -229,6 +231,11 @@ public class EcsRunTaskPropsDsl {
     /** @param securityGroups Existing security groups to use for the tasks. */
     public fun securityGroups(securityGroups: Collection<ISecurityGroup>) {
         _securityGroups.addAll(securityGroups)
+    }
+
+    /** @param stateName Optional name for this state. */
+    public fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
     }
 
     /** @param subnets Subnets to place the task's ENIs. */

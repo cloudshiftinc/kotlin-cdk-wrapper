@@ -59,6 +59,7 @@ import software.constructs.Construct
  * .snapshotIdentifier("snapshotIdentifier")
  * .sourceDbClusterIdentifier("sourceDbClusterIdentifier")
  * .storageEncrypted(false)
+ * .storageType("storageType")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -381,18 +382,41 @@ public class CfnDBClusterDsl(
     }
 
     /**
+     * The date and time to restore the cluster to.
+     *
+     * Valid values: A time in Universal Coordinated Time (UTC) format.
+     *
+     * Constraints:
+     * * Must be before the latest restorable time for the instance.
+     * * Must be specified if the `UseLatestRestorableTime` parameter is not provided.
+     * * Cannot be specified if the `UseLatestRestorableTime` parameter is `true` .
+     * * Cannot be specified if the `RestoreType` parameter is `copy-on-write` .
+     *
+     * Example: `2015-03-07T23:45:00Z`
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-restoretotime)
      *
-     * @param restoreToTime
+     * @param restoreToTime The date and time to restore the cluster to.
      */
     public fun restoreToTime(restoreToTime: String) {
         cdkBuilder.restoreToTime(restoreToTime)
     }
 
     /**
+     * The type of restore to be performed. You can specify one of the following values:.
+     * * `full-copy` - The new DB cluster is restored as a full copy of the source DB cluster.
+     * * `copy-on-write` - The new DB cluster is restored as a clone of the source DB cluster.
+     *
+     * Constraints: You can't specify `copy-on-write` if the engine version of the source DB cluster
+     * is earlier than 1.11.
+     *
+     * If you don't specify a `RestoreType` value, then the new DB cluster is restored as a full
+     * copy of the source DB cluster.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-restoretype)
      *
-     * @param restoreType
+     * @param restoreType The type of restore to be performed. You can specify one of the following
+     *   values:.
      */
     public fun restoreType(restoreType: String) {
         cdkBuilder.restoreType(restoreType)
@@ -417,9 +441,14 @@ public class CfnDBClusterDsl(
     }
 
     /**
+     * The identifier of the source cluster from which to restore.
+     *
+     * Constraints:
+     * * Must match the identifier of an existing `DBCluster` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-sourcedbclusteridentifier)
      *
-     * @param sourceDbClusterIdentifier
+     * @param sourceDbClusterIdentifier The identifier of the source cluster from which to restore.
      */
     public fun sourceDbClusterIdentifier(sourceDbClusterIdentifier: String) {
         cdkBuilder.sourceDbClusterIdentifier(sourceDbClusterIdentifier)
@@ -448,6 +477,28 @@ public class CfnDBClusterDsl(
     }
 
     /**
+     * The storage type to associate with the DB cluster.
+     *
+     * For information on storage types for Amazon DocumentDB clusters, see Cluster storage
+     * configurations in the *Amazon DocumentDB Developer Guide* .
+     *
+     * Valid values for storage type - `standard | iopt1`
+     *
+     * Default value is `standard`
+     *
+     * When you create a DocumentDB DB cluster with the storage type set to `iopt1` , the storage
+     * type is returned in the response. The storage type isn't returned when you set it to
+     * `standard` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-storagetype)
+     *
+     * @param storageType The storage type to associate with the DB cluster.
+     */
+    public fun storageType(storageType: String) {
+        cdkBuilder.storageType(storageType)
+    }
+
+    /**
      * The tags to be assigned to the cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-tags)
@@ -470,18 +521,34 @@ public class CfnDBClusterDsl(
     }
 
     /**
+     * A value that is set to `true` to restore the cluster to the latest restorable backup time,
+     * and `false` otherwise.
+     *
+     * Default: `false`
+     *
+     * Constraints: Cannot be specified if the `RestoreToTime` parameter is provided.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-uselatestrestorabletime)
      *
-     * @param useLatestRestorableTime
+     * @param useLatestRestorableTime A value that is set to `true` to restore the cluster to the
+     *   latest restorable backup time, and `false` otherwise.
      */
     public fun useLatestRestorableTime(useLatestRestorableTime: Boolean) {
         cdkBuilder.useLatestRestorableTime(useLatestRestorableTime)
     }
 
     /**
+     * A value that is set to `true` to restore the cluster to the latest restorable backup time,
+     * and `false` otherwise.
+     *
+     * Default: `false`
+     *
+     * Constraints: Cannot be specified if the `RestoreToTime` parameter is provided.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-uselatestrestorabletime)
      *
-     * @param useLatestRestorableTime
+     * @param useLatestRestorableTime A value that is set to `true` to restore the cluster to the
+     *   latest restorable backup time, and `false` otherwise.
      */
     public fun useLatestRestorableTime(useLatestRestorableTime: IResolvable) {
         cdkBuilder.useLatestRestorableTime(useLatestRestorableTime)

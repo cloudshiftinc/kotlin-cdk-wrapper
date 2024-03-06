@@ -41,6 +41,7 @@ import software.constructs.Construct
  * .includedProperties(List.of(IncludedPropertyProperty.builder()
  * .name("name")
  * .build()))
+ * .scope("scope")
  * .tags(Map.of(
  * "tagsKey", "tags"))
  * .build();
@@ -151,6 +152,20 @@ public class CfnViewDsl(
      */
     public fun includedProperties(includedProperties: IResolvable) {
         cdkBuilder.includedProperties(includedProperties)
+    }
+
+    /**
+     * The root ARN of the account, an organizational unit (OU), or an organization ARN.
+     *
+     * If left empty, the default is account.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-view.html#cfn-resourceexplorer2-view-scope)
+     *
+     * @param scope The root ARN of the account, an organizational unit (OU), or an organization
+     *   ARN.
+     */
+    public fun scope(scope: String) {
+        cdkBuilder.scope(scope)
     }
 
     /**

@@ -24,12 +24,7 @@ import software.amazon.awscdk.services.rolesanywhere.CfnCRL
 import software.constructs.Construct
 
 /**
- * Imports the certificate revocation list (CRL).
- *
- * A CRL is a list of certificates that have been revoked by the issuing certificate Authority (CA).
- * IAM Roles Anywhere validates against the CRL before issuing credentials.
- *
- * *Required permissions:* `rolesanywhere:ImportCrl` .
+ * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-crl.html.
  *
  * Example:
  * ```
@@ -61,66 +56,54 @@ public class CfnCRLDsl(
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
-     * The x509 v3 specified certificate revocation list (CRL).
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-crl.html#cfn-rolesanywhere-crl-crldata)
      *
-     * @param crlData The x509 v3 specified certificate revocation list (CRL).
+     * @param crlData
      */
     public fun crlData(crlData: String) {
         cdkBuilder.crlData(crlData)
     }
 
     /**
-     * Specifies whether the certificate revocation list (CRL) is enabled.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-crl.html#cfn-rolesanywhere-crl-enabled)
      *
-     * @param enabled Specifies whether the certificate revocation list (CRL) is enabled.
+     * @param enabled
      */
     public fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
     }
 
     /**
-     * Specifies whether the certificate revocation list (CRL) is enabled.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-crl.html#cfn-rolesanywhere-crl-enabled)
      *
-     * @param enabled Specifies whether the certificate revocation list (CRL) is enabled.
+     * @param enabled
      */
     public fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled)
     }
 
     /**
-     * The name of the certificate revocation list (CRL).
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-crl.html#cfn-rolesanywhere-crl-name)
      *
-     * @param name The name of the certificate revocation list (CRL).
+     * @param name
      */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }
 
     /**
-     * A list of tags to attach to the certificate revocation list (CRL).
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-crl.html#cfn-rolesanywhere-crl-tags)
      *
-     * @param tags A list of tags to attach to the certificate revocation list (CRL).
+     * @param tags
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
     /**
-     * A list of tags to attach to the certificate revocation list (CRL).
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-crl.html#cfn-rolesanywhere-crl-tags)
      *
-     * @param tags A list of tags to attach to the certificate revocation list (CRL).
+     * @param tags
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)

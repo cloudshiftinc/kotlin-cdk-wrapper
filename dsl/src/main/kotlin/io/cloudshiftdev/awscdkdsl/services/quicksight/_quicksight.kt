@@ -65,6 +65,10 @@ public object quicksight {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.quicksight.*;
      * AggregationFunctionProperty aggregationFunctionProperty = AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -103,6 +107,10 @@ public object quicksight {
      * .sortDirection("sortDirection")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -406,6 +414,55 @@ public object quicksight {
         block: CfnAnalysisArcOptionsPropertyDsl.() -> Unit = {}
     ): CfnAnalysis.ArcOptionsProperty {
         val builder = CfnAnalysisArcOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * An array of analysis level configurations.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * AssetOptionsProperty assetOptionsProperty = AssetOptionsProperty.builder()
+     * .timezone("timezone")
+     * .weekStart("weekStart")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-assetoptions.html)
+     */
+    public inline fun cfnAnalysisAssetOptionsProperty(
+        block: CfnAnalysisAssetOptionsPropertyDsl.() -> Unit = {}
+    ): CfnAnalysis.AssetOptionsProperty {
+        val builder = CfnAnalysisAssetOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Aggregation for attributes.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * AttributeAggregationFunctionProperty attributeAggregationFunctionProperty =
+     * AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-attributeaggregationfunction.html)
+     */
+    public inline fun cfnAnalysisAttributeAggregationFunctionProperty(
+        block: CfnAnalysisAttributeAggregationFunctionPropertyDsl.() -> Unit = {}
+    ): CfnAnalysis.AttributeAggregationFunctionProperty {
+        val builder = CfnAnalysisAttributeAggregationFunctionPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -859,6 +916,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -887,6 +948,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -915,6 +980,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -2234,6 +2303,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -2679,6 +2752,7 @@ public object quicksight {
      * .matchOperator("matchOperator")
      * // the properties below are optional
      * .categoryValues(List.of("categoryValues"))
+     * .nullOption("nullOption")
      * .selectAllOptions("selectAllOptions")
      * .build())
      * .build();
@@ -2731,6 +2805,7 @@ public object quicksight {
      * .matchOperator("matchOperator")
      * // the properties below are optional
      * .categoryValues(List.of("categoryValues"))
+     * .nullOption("nullOption")
      * .selectAllOptions("selectAllOptions")
      * .build())
      * .build())
@@ -2880,6 +2955,34 @@ public object quicksight {
     }
 
     /**
+     * The color configurations for a column.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * ColorsConfigurationProperty colorsConfigurationProperty = ColorsConfigurationProperty.builder()
+     * .customColors(List.of(CustomColorProperty.builder()
+     * .color("color")
+     * // the properties below are optional
+     * .fieldValue("fieldValue")
+     * .specialValue("specialValue")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-colorsconfiguration.html)
+     */
+    public inline fun cfnAnalysisColorsConfigurationProperty(
+        block: CfnAnalysisColorsConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnAnalysis.ColorsConfigurationProperty {
+        val builder = CfnAnalysisColorsConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The general configuration of a column.
      *
      * Example:
@@ -2893,6 +2996,14 @@ public object quicksight {
      * .dataSetIdentifier("dataSetIdentifier")
      * .build())
      * // the properties below are optional
+     * .colorsConfiguration(ColorsConfigurationProperty.builder()
+     * .customColors(List.of(CustomColorProperty.builder()
+     * .color("color")
+     * // the properties below are optional
+     * .fieldValue("fieldValue")
+     * .specialValue("specialValue")
+     * .build()))
+     * .build())
      * .formatConfiguration(FormatConfigurationProperty.builder()
      * .dateTimeFormatConfiguration(DateTimeFormatConfigurationProperty.builder()
      * .dateTimeFormat("dateTimeFormat")
@@ -3274,6 +3385,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -3311,6 +3426,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregation(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -3412,6 +3531,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -3440,6 +3563,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -4100,6 +4227,32 @@ public object quicksight {
     }
 
     /**
+     * Determines the color that's applied to a particular data value in a column.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * CustomColorProperty customColorProperty = CustomColorProperty.builder()
+     * .color("color")
+     * // the properties below are optional
+     * .fieldValue("fieldValue")
+     * .specialValue("specialValue")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-customcolor.html)
+     */
+    public inline fun cfnAnalysisCustomColorProperty(
+        block: CfnAnalysisCustomColorPropertyDsl.() -> Unit = {}
+    ): CfnAnalysis.CustomColorProperty {
+        val builder = CfnAnalysisCustomColorPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The configuration of a `CustomContentVisual` .
      *
      * Example:
@@ -4581,6 +4734,9 @@ public object quicksight {
      * DataPathColorProperty dataPathColorProperty = DataPathColorProperty.builder()
      * .color("color")
      * .element(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build())
@@ -4635,6 +4791,9 @@ public object quicksight {
      * DataPathSortProperty dataPathSortProperty = DataPathSortProperty.builder()
      * .direction("direction")
      * .sortPaths(List.of(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build()))
@@ -4652,6 +4811,29 @@ public object quicksight {
     }
 
     /**
+     * The type of the data path value.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * DataPathTypeProperty dataPathTypeProperty = DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-datapathtype.html)
+     */
+    public inline fun cfnAnalysisDataPathTypeProperty(
+        block: CfnAnalysisDataPathTypePropertyDsl.() -> Unit = {}
+    ): CfnAnalysis.DataPathTypeProperty {
+        val builder = CfnAnalysisDataPathTypePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The data path that needs to be sorted.
      *
      * Example:
@@ -4660,6 +4842,9 @@ public object quicksight {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.quicksight.*;
      * DataPathValueProperty dataPathValueProperty = DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build();
@@ -5225,6 +5410,10 @@ public object quicksight {
      * DateTimePickerControlDisplayOptionsProperty dateTimePickerControlDisplayOptionsProperty =
      * DateTimePickerControlDisplayOptionsProperty.builder()
      * .dateTimeFormat("dateTimeFormat")
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -6083,6 +6272,10 @@ public object quicksight {
      * import software.amazon.awscdk.services.quicksight.*;
      * DropDownControlDisplayOptionsProperty dropDownControlDisplayOptionsProperty =
      * DropDownControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .selectAllOptions(ListControlSelectAllOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -6360,6 +6553,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregation(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -6473,6 +6670,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -7745,6 +7946,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -7813,6 +8018,10 @@ public object quicksight {
      * // the properties below are optional
      * .displayOptions(DateTimePickerControlDisplayOptionsProperty.builder()
      * .dateTimeFormat("dateTimeFormat")
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -7846,6 +8055,10 @@ public object quicksight {
      * .build()))
      * .build())
      * .displayOptions(DropDownControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .selectAllOptions(ListControlSelectAllOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -7885,6 +8098,10 @@ public object quicksight {
      * .build()))
      * .build())
      * .displayOptions(ListControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .searchOptions(ListControlSearchOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -7919,6 +8136,10 @@ public object quicksight {
      * // the properties below are optional
      * .displayOptions(RelativeDateTimeControlDisplayOptionsProperty.builder()
      * .dateTimeFormat("dateTimeFormat")
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -7945,6 +8166,10 @@ public object quicksight {
      * .title("title")
      * // the properties below are optional
      * .displayOptions(SliderControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -7970,6 +8195,10 @@ public object quicksight {
      * // the properties below are optional
      * .delimiter("delimiter")
      * .displayOptions(TextAreaControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -7996,6 +8225,10 @@ public object quicksight {
      * .title("title")
      * // the properties below are optional
      * .displayOptions(TextFieldControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -8045,6 +8278,10 @@ public object quicksight {
      * // the properties below are optional
      * .displayOptions(DateTimePickerControlDisplayOptionsProperty.builder()
      * .dateTimeFormat("dateTimeFormat")
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -8099,6 +8336,10 @@ public object quicksight {
      * .build()))
      * .build())
      * .displayOptions(DropDownControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .selectAllOptions(ListControlSelectAllOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -8147,6 +8388,7 @@ public object quicksight {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.quicksight.*;
+     * Object allSheets;
      * FilterGroupProperty filterGroupProperty = FilterGroupProperty.builder()
      * .crossDataset("crossDataset")
      * .filterGroupId("filterGroupId")
@@ -8176,6 +8418,7 @@ public object quicksight {
      * .matchOperator("matchOperator")
      * // the properties below are optional
      * .categoryValues(List.of("categoryValues"))
+     * .nullOption("nullOption")
      * .selectAllOptions("selectAllOptions")
      * .build())
      * .build())
@@ -8191,6 +8434,10 @@ public object quicksight {
      * .nullOption("nullOption")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -8213,6 +8460,10 @@ public object quicksight {
      * .nullOption("nullOption")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -8266,6 +8517,11 @@ public object quicksight {
      * .filterId("filterId")
      * // the properties below are optional
      * .parameterName("parameterName")
+     * .rollingDate(RollingDateConfigurationProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .dataSetIdentifier("dataSetIdentifier")
+     * .build())
      * .timeGranularity("timeGranularity")
      * .value("value")
      * .build())
@@ -8314,6 +8570,10 @@ public object quicksight {
      * .sortDirection("sortDirection")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -8336,6 +8596,7 @@ public object quicksight {
      * .build())
      * .build()))
      * .scopeConfiguration(FilterScopeConfigurationProperty.builder()
+     * .allSheets(allSheets)
      * .selectedSheets(SelectedSheetsFilterScopeConfigurationProperty.builder()
      * .sheetVisualScopingConfigurations(List.of(SheetVisualScopingConfigurationProperty.builder()
      * .scope("scope")
@@ -8373,6 +8634,7 @@ public object quicksight {
      * .matchOperator("matchOperator")
      * // the properties below are optional
      * .categoryValues(List.of("categoryValues"))
+     * .nullOption("nullOption")
      * .selectAllOptions("selectAllOptions")
      * .build();
      * ```
@@ -8412,6 +8674,10 @@ public object quicksight {
      * .build()))
      * .build())
      * .displayOptions(ListControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .searchOptions(ListControlSearchOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -8552,6 +8818,7 @@ public object quicksight {
      * .matchOperator("matchOperator")
      * // the properties below are optional
      * .categoryValues(List.of("categoryValues"))
+     * .nullOption("nullOption")
      * .selectAllOptions("selectAllOptions")
      * .build())
      * .build())
@@ -8567,6 +8834,10 @@ public object quicksight {
      * .nullOption("nullOption")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -8589,6 +8860,10 @@ public object quicksight {
      * .nullOption("nullOption")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -8642,6 +8917,11 @@ public object quicksight {
      * .filterId("filterId")
      * // the properties below are optional
      * .parameterName("parameterName")
+     * .rollingDate(RollingDateConfigurationProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .dataSetIdentifier("dataSetIdentifier")
+     * .build())
      * .timeGranularity("timeGranularity")
      * .value("value")
      * .build())
@@ -8690,6 +8970,10 @@ public object quicksight {
      * .sortDirection("sortDirection")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -8739,6 +9023,10 @@ public object quicksight {
      * // the properties below are optional
      * .displayOptions(RelativeDateTimeControlDisplayOptionsProperty.builder()
      * .dateTimeFormat("dateTimeFormat")
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -8779,8 +9067,10 @@ public object quicksight {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.quicksight.*;
+     * Object allSheets;
      * FilterScopeConfigurationProperty filterScopeConfigurationProperty =
      * FilterScopeConfigurationProperty.builder()
+     * .allSheets(allSheets)
      * .selectedSheets(SelectedSheetsFilterScopeConfigurationProperty.builder()
      * .sheetVisualScopingConfigurations(List.of(SheetVisualScopingConfigurationProperty.builder()
      * .scope("scope")
@@ -8845,6 +9135,10 @@ public object quicksight {
      * .title("title")
      * // the properties below are optional
      * .displayOptions(SliderControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -8891,6 +9185,10 @@ public object quicksight {
      * // the properties below are optional
      * .delimiter("delimiter")
      * .displayOptions(TextAreaControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -8938,6 +9236,10 @@ public object quicksight {
      * .title("title")
      * // the properties below are optional
      * .displayOptions(TextFieldControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -10732,6 +11034,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -11718,6 +12024,9 @@ public object quicksight {
      * GrowthRateComputationProperty growthRateComputationProperty =
      * GrowthRateComputationProperty.builder()
      * .computationId("computationId")
+     * // the properties below are optional
+     * .name("name")
+     * .periodSize(123)
      * .time(DimensionFieldProperty.builder()
      * .categoricalDimensionField(CategoricalDimensionFieldProperty.builder()
      * .column(ColumnIdentifierProperty.builder()
@@ -11956,9 +12265,6 @@ public object quicksight {
      * .hierarchyId("hierarchyId")
      * .build())
      * .build())
-     * // the properties below are optional
-     * .name("name")
-     * .periodSize(123)
      * .value(MeasureFieldProperty.builder()
      * .calculatedMeasureField(CalculatedMeasureFieldProperty.builder()
      * .expression("expression")
@@ -12364,6 +12670,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -12392,6 +12702,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -12746,497 +13060,6 @@ public object quicksight {
      *
      * Example:
      * ```
-     * // The code below shows an example of how to instantiate this type.
-     * // The values are placeholders you should change.
-     * import software.amazon.awscdk.services.quicksight.*;
-     * Object dataDriven;
-     * HistogramConfigurationProperty histogramConfigurationProperty =
-     * HistogramConfigurationProperty.builder()
-     * .binOptions(HistogramBinOptionsProperty.builder()
-     * .binCount(BinCountOptionsProperty.builder()
-     * .value(123)
-     * .build())
-     * .binWidth(BinWidthOptionsProperty.builder()
-     * .binCountLimit(123)
-     * .value(123)
-     * .build())
-     * .selectedBinType("selectedBinType")
-     * .startValue(123)
-     * .build())
-     * .dataLabels(DataLabelOptionsProperty.builder()
-     * .categoryLabelVisibility("categoryLabelVisibility")
-     * .dataLabelTypes(List.of(DataLabelTypeProperty.builder()
-     * .dataPathLabelType(DataPathLabelTypeProperty.builder()
-     * .fieldId("fieldId")
-     * .fieldValue("fieldValue")
-     * .visibility("visibility")
-     * .build())
-     * .fieldLabelType(FieldLabelTypeProperty.builder()
-     * .fieldId("fieldId")
-     * .visibility("visibility")
-     * .build())
-     * .maximumLabelType(MaximumLabelTypeProperty.builder()
-     * .visibility("visibility")
-     * .build())
-     * .minimumLabelType(MinimumLabelTypeProperty.builder()
-     * .visibility("visibility")
-     * .build())
-     * .rangeEndsLabelType(RangeEndsLabelTypeProperty.builder()
-     * .visibility("visibility")
-     * .build())
-     * .build()))
-     * .labelColor("labelColor")
-     * .labelContent("labelContent")
-     * .labelFontConfiguration(FontConfigurationProperty.builder()
-     * .fontColor("fontColor")
-     * .fontDecoration("fontDecoration")
-     * .fontSize(FontSizeProperty.builder()
-     * .relative("relative")
-     * .build())
-     * .fontStyle("fontStyle")
-     * .fontWeight(FontWeightProperty.builder()
-     * .name("name")
-     * .build())
-     * .build())
-     * .measureLabelVisibility("measureLabelVisibility")
-     * .overlap("overlap")
-     * .position("position")
-     * .totalsVisibility("totalsVisibility")
-     * .visibility("visibility")
-     * .build())
-     * .fieldWells(HistogramFieldWellsProperty.builder()
-     * .histogramAggregatedFieldWells(HistogramAggregatedFieldWellsProperty.builder()
-     * .values(List.of(MeasureFieldProperty.builder()
-     * .calculatedMeasureField(CalculatedMeasureFieldProperty.builder()
-     * .expression("expression")
-     * .fieldId("fieldId")
-     * .build())
-     * .categoricalMeasureField(CategoricalMeasureFieldProperty.builder()
-     * .column(ColumnIdentifierProperty.builder()
-     * .columnName("columnName")
-     * .dataSetIdentifier("dataSetIdentifier")
-     * .build())
-     * .fieldId("fieldId")
-     * // the properties below are optional
-     * .aggregationFunction("aggregationFunction")
-     * .formatConfiguration(StringFormatConfigurationProperty.builder()
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .numericFormatConfiguration(NumericFormatConfigurationProperty.builder()
-     * .currencyDisplayFormatConfiguration(CurrencyDisplayFormatConfigurationProperty.builder()
-     * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
-     * .decimalPlaces(123)
-     * .build())
-     * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
-     * .displayMode("displayMode")
-     * .build())
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .numberScale("numberScale")
-     * .prefix("prefix")
-     * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
-     * .decimalSeparator("decimalSeparator")
-     * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
-     * .symbol("symbol")
-     * .visibility("visibility")
-     * .build())
-     * .build())
-     * .suffix("suffix")
-     * .symbol("symbol")
-     * .build())
-     * .numberDisplayFormatConfiguration(NumberDisplayFormatConfigurationProperty.builder()
-     * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
-     * .decimalPlaces(123)
-     * .build())
-     * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
-     * .displayMode("displayMode")
-     * .build())
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .numberScale("numberScale")
-     * .prefix("prefix")
-     * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
-     * .decimalSeparator("decimalSeparator")
-     * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
-     * .symbol("symbol")
-     * .visibility("visibility")
-     * .build())
-     * .build())
-     * .suffix("suffix")
-     * .build())
-     * .percentageDisplayFormatConfiguration(PercentageDisplayFormatConfigurationProperty.builder()
-     * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
-     * .decimalPlaces(123)
-     * .build())
-     * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
-     * .displayMode("displayMode")
-     * .build())
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .prefix("prefix")
-     * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
-     * .decimalSeparator("decimalSeparator")
-     * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
-     * .symbol("symbol")
-     * .visibility("visibility")
-     * .build())
-     * .build())
-     * .suffix("suffix")
-     * .build())
-     * .build())
-     * .build())
-     * .build())
-     * .dateMeasureField(DateMeasureFieldProperty.builder()
-     * .column(ColumnIdentifierProperty.builder()
-     * .columnName("columnName")
-     * .dataSetIdentifier("dataSetIdentifier")
-     * .build())
-     * .fieldId("fieldId")
-     * // the properties below are optional
-     * .aggregationFunction("aggregationFunction")
-     * .formatConfiguration(DateTimeFormatConfigurationProperty.builder()
-     * .dateTimeFormat("dateTimeFormat")
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .numericFormatConfiguration(NumericFormatConfigurationProperty.builder()
-     * .currencyDisplayFormatConfiguration(CurrencyDisplayFormatConfigurationProperty.builder()
-     * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
-     * .decimalPlaces(123)
-     * .build())
-     * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
-     * .displayMode("displayMode")
-     * .build())
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .numberScale("numberScale")
-     * .prefix("prefix")
-     * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
-     * .decimalSeparator("decimalSeparator")
-     * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
-     * .symbol("symbol")
-     * .visibility("visibility")
-     * .build())
-     * .build())
-     * .suffix("suffix")
-     * .symbol("symbol")
-     * .build())
-     * .numberDisplayFormatConfiguration(NumberDisplayFormatConfigurationProperty.builder()
-     * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
-     * .decimalPlaces(123)
-     * .build())
-     * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
-     * .displayMode("displayMode")
-     * .build())
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .numberScale("numberScale")
-     * .prefix("prefix")
-     * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
-     * .decimalSeparator("decimalSeparator")
-     * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
-     * .symbol("symbol")
-     * .visibility("visibility")
-     * .build())
-     * .build())
-     * .suffix("suffix")
-     * .build())
-     * .percentageDisplayFormatConfiguration(PercentageDisplayFormatConfigurationProperty.builder()
-     * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
-     * .decimalPlaces(123)
-     * .build())
-     * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
-     * .displayMode("displayMode")
-     * .build())
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .prefix("prefix")
-     * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
-     * .decimalSeparator("decimalSeparator")
-     * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
-     * .symbol("symbol")
-     * .visibility("visibility")
-     * .build())
-     * .build())
-     * .suffix("suffix")
-     * .build())
-     * .build())
-     * .build())
-     * .build())
-     * .numericalMeasureField(NumericalMeasureFieldProperty.builder()
-     * .column(ColumnIdentifierProperty.builder()
-     * .columnName("columnName")
-     * .dataSetIdentifier("dataSetIdentifier")
-     * .build())
-     * .fieldId("fieldId")
-     * // the properties below are optional
-     * .aggregationFunction(NumericalAggregationFunctionProperty.builder()
-     * .percentileAggregation(PercentileAggregationProperty.builder()
-     * .percentileValue(123)
-     * .build())
-     * .simpleNumericalAggregation("simpleNumericalAggregation")
-     * .build())
-     * .formatConfiguration(NumberFormatConfigurationProperty.builder()
-     * .formatConfiguration(NumericFormatConfigurationProperty.builder()
-     * .currencyDisplayFormatConfiguration(CurrencyDisplayFormatConfigurationProperty.builder()
-     * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
-     * .decimalPlaces(123)
-     * .build())
-     * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
-     * .displayMode("displayMode")
-     * .build())
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .numberScale("numberScale")
-     * .prefix("prefix")
-     * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
-     * .decimalSeparator("decimalSeparator")
-     * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
-     * .symbol("symbol")
-     * .visibility("visibility")
-     * .build())
-     * .build())
-     * .suffix("suffix")
-     * .symbol("symbol")
-     * .build())
-     * .numberDisplayFormatConfiguration(NumberDisplayFormatConfigurationProperty.builder()
-     * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
-     * .decimalPlaces(123)
-     * .build())
-     * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
-     * .displayMode("displayMode")
-     * .build())
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .numberScale("numberScale")
-     * .prefix("prefix")
-     * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
-     * .decimalSeparator("decimalSeparator")
-     * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
-     * .symbol("symbol")
-     * .visibility("visibility")
-     * .build())
-     * .build())
-     * .suffix("suffix")
-     * .build())
-     * .percentageDisplayFormatConfiguration(PercentageDisplayFormatConfigurationProperty.builder()
-     * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
-     * .decimalPlaces(123)
-     * .build())
-     * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
-     * .displayMode("displayMode")
-     * .build())
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .prefix("prefix")
-     * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
-     * .decimalSeparator("decimalSeparator")
-     * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
-     * .symbol("symbol")
-     * .visibility("visibility")
-     * .build())
-     * .build())
-     * .suffix("suffix")
-     * .build())
-     * .build())
-     * .build())
-     * .build())
-     * .build()))
-     * .build())
-     * .build())
-     * .tooltip(TooltipOptionsProperty.builder()
-     * .fieldBasedTooltip(FieldBasedTooltipProperty.builder()
-     * .aggregationVisibility("aggregationVisibility")
-     * .tooltipFields(List.of(TooltipItemProperty.builder()
-     * .columnTooltipItem(ColumnTooltipItemProperty.builder()
-     * .column(ColumnIdentifierProperty.builder()
-     * .columnName("columnName")
-     * .dataSetIdentifier("dataSetIdentifier")
-     * .build())
-     * // the properties below are optional
-     * .aggregation(AggregationFunctionProperty.builder()
-     * .categoricalAggregationFunction("categoricalAggregationFunction")
-     * .dateAggregationFunction("dateAggregationFunction")
-     * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
-     * .percentileAggregation(PercentileAggregationProperty.builder()
-     * .percentileValue(123)
-     * .build())
-     * .simpleNumericalAggregation("simpleNumericalAggregation")
-     * .build())
-     * .build())
-     * .label("label")
-     * .visibility("visibility")
-     * .build())
-     * .fieldTooltipItem(FieldTooltipItemProperty.builder()
-     * .fieldId("fieldId")
-     * // the properties below are optional
-     * .label("label")
-     * .visibility("visibility")
-     * .build())
-     * .build()))
-     * .tooltipTitleType("tooltipTitleType")
-     * .build())
-     * .selectedTooltipType("selectedTooltipType")
-     * .tooltipVisibility("tooltipVisibility")
-     * .build())
-     * .visualPalette(VisualPaletteProperty.builder()
-     * .chartColor("chartColor")
-     * .colorMap(List.of(DataPathColorProperty.builder()
-     * .color("color")
-     * .element(DataPathValueProperty.builder()
-     * .fieldId("fieldId")
-     * .fieldValue("fieldValue")
-     * .build())
-     * // the properties below are optional
-     * .timeGranularity("timeGranularity")
-     * .build()))
-     * .build())
-     * .xAxisDisplayOptions(AxisDisplayOptionsProperty.builder()
-     * .axisLineVisibility("axisLineVisibility")
-     * .axisOffset("axisOffset")
-     * .dataOptions(AxisDataOptionsProperty.builder()
-     * .dateAxisOptions(DateAxisOptionsProperty.builder()
-     * .missingDateVisibility("missingDateVisibility")
-     * .build())
-     * .numericAxisOptions(NumericAxisOptionsProperty.builder()
-     * .range(AxisDisplayRangeProperty.builder()
-     * .dataDriven(dataDriven)
-     * .minMax(AxisDisplayMinMaxRangeProperty.builder()
-     * .maximum(123)
-     * .minimum(123)
-     * .build())
-     * .build())
-     * .scale(AxisScaleProperty.builder()
-     * .linear(AxisLinearScaleProperty.builder()
-     * .stepCount(123)
-     * .stepSize(123)
-     * .build())
-     * .logarithmic(AxisLogarithmicScaleProperty.builder()
-     * .base(123)
-     * .build())
-     * .build())
-     * .build())
-     * .build())
-     * .gridLineVisibility("gridLineVisibility")
-     * .scrollbarOptions(ScrollBarOptionsProperty.builder()
-     * .visibility("visibility")
-     * .visibleRange(VisibleRangeOptionsProperty.builder()
-     * .percentRange(PercentVisibleRangeProperty.builder()
-     * .from(123)
-     * .to(123)
-     * .build())
-     * .build())
-     * .build())
-     * .tickLabelOptions(AxisTickLabelOptionsProperty.builder()
-     * .labelOptions(LabelOptionsProperty.builder()
-     * .customLabel("customLabel")
-     * .fontConfiguration(FontConfigurationProperty.builder()
-     * .fontColor("fontColor")
-     * .fontDecoration("fontDecoration")
-     * .fontSize(FontSizeProperty.builder()
-     * .relative("relative")
-     * .build())
-     * .fontStyle("fontStyle")
-     * .fontWeight(FontWeightProperty.builder()
-     * .name("name")
-     * .build())
-     * .build())
-     * .visibility("visibility")
-     * .build())
-     * .rotationAngle(123)
-     * .build())
-     * .build())
-     * .xAxisLabelOptions(ChartAxisLabelOptionsProperty.builder()
-     * .axisLabelOptions(List.of(AxisLabelOptionsProperty.builder()
-     * .applyTo(AxisLabelReferenceOptionsProperty.builder()
-     * .column(ColumnIdentifierProperty.builder()
-     * .columnName("columnName")
-     * .dataSetIdentifier("dataSetIdentifier")
-     * .build())
-     * .fieldId("fieldId")
-     * .build())
-     * .customLabel("customLabel")
-     * .fontConfiguration(FontConfigurationProperty.builder()
-     * .fontColor("fontColor")
-     * .fontDecoration("fontDecoration")
-     * .fontSize(FontSizeProperty.builder()
-     * .relative("relative")
-     * .build())
-     * .fontStyle("fontStyle")
-     * .fontWeight(FontWeightProperty.builder()
-     * .name("name")
-     * .build())
-     * .build())
-     * .build()))
-     * .sortIconVisibility("sortIconVisibility")
-     * .visibility("visibility")
-     * .build())
-     * .yAxisDisplayOptions(AxisDisplayOptionsProperty.builder()
-     * .axisLineVisibility("axisLineVisibility")
-     * .axisOffset("axisOffset")
-     * .dataOptions(AxisDataOptionsProperty.builder()
-     * .dateAxisOptions(DateAxisOptionsProperty.builder()
-     * .missingDateVisibility("missingDateVisibility")
-     * .build())
-     * .numericAxisOptions(NumericAxisOptionsProperty.builder()
-     * .range(AxisDisplayRangeProperty.builder()
-     * .dataDriven(dataDriven)
-     * .minMax(AxisDisplayMinMaxRangeProperty.builder()
-     * .maximum(123)
-     * .minimum(123)
-     * .build())
-     * .build())
-     * .scale(AxisScaleProperty.builder()
-     * .linear(AxisLinearScaleProperty.builder()
-     * .stepCount(123)
-     * .stepSize(123)
-     * .build())
-     * .logarithmic(AxisLogarithmicScaleProperty.builder()
-     * .base(123)
-     * .build())
-     * .build())
-     * .build())
-     * .build())
-     * .gridLineVisibility("gridLineVisibility")
-     * .scrollbarOptions(ScrollBarOptionsProperty.builder()
-     * .visibility("visibility")
-     * .visibleRange(VisibleRangeOptionsProperty.builder()
-     * .percentRange(PercentVisibleRangeProperty.builder()
-     * .from(123)
-     * .to(123)
-     * .build())
-     * .build())
-     * .build())
-     * .tickLabelOptions(AxisTickLabelOptionsProperty.builder()
-     * .labelOptions(LabelOptionsProperty.builder()
-     * .customLabel("customLabel")
-     * .fontConfiguration(FontConfigurationProperty.builder()
-     * .fontColor("fontColor")
-     * .fontDecoration("fontDecoration")
-     * .fontSize(FontSizeProperty.builder()
-     * .relative("relative")
-     * .build())
-     * .fontStyle("fontStyle")
-     * .fontWeight(FontWeightProperty.builder()
-     * .name("name")
-     * .build())
-     * .build())
-     * .visibility("visibility")
-     * .build())
-     * .rotationAngle(123)
-     * .build())
-     * .build())
-     * .build();
      * ```
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-histogramconfiguration.html)
@@ -13747,6 +13570,126 @@ public object quicksight {
     }
 
     /**
+     * The conditional formatting for the actual value of a KPI visual.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * KPIActualValueConditionalFormattingProperty kPIActualValueConditionalFormattingProperty =
+     * KPIActualValueConditionalFormattingProperty.builder()
+     * .icon(ConditionalFormattingIconProperty.builder()
+     * .customCondition(ConditionalFormattingCustomIconConditionProperty.builder()
+     * .expression("expression")
+     * .iconOptions(ConditionalFormattingCustomIconOptionsProperty.builder()
+     * .icon("icon")
+     * .unicodeIcon("unicodeIcon")
+     * .build())
+     * // the properties below are optional
+     * .color("color")
+     * .displayConfiguration(ConditionalFormattingIconDisplayConfigurationProperty.builder()
+     * .iconDisplayOption("iconDisplayOption")
+     * .build())
+     * .build())
+     * .iconSet(ConditionalFormattingIconSetProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .iconSetType("iconSetType")
+     * .build())
+     * .build())
+     * .textColor(ConditionalFormattingColorProperty.builder()
+     * .gradient(ConditionalFormattingGradientColorProperty.builder()
+     * .color(GradientColorProperty.builder()
+     * .stops(List.of(GradientStopProperty.builder()
+     * .gradientOffset(123)
+     * // the properties below are optional
+     * .color("color")
+     * .dataValue(123)
+     * .build()))
+     * .build())
+     * .expression("expression")
+     * .build())
+     * .solid(ConditionalFormattingSolidColorProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .color("color")
+     * .build())
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-kpiactualvalueconditionalformatting.html)
+     */
+    public inline fun cfnAnalysisKPIActualValueConditionalFormattingProperty(
+        block: CfnAnalysisKPIActualValueConditionalFormattingPropertyDsl.() -> Unit = {}
+    ): CfnAnalysis.KPIActualValueConditionalFormattingProperty {
+        val builder = CfnAnalysisKPIActualValueConditionalFormattingPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The conditional formatting for the comparison value of a KPI visual.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * KPIComparisonValueConditionalFormattingProperty kPIComparisonValueConditionalFormattingProperty
+     * = KPIComparisonValueConditionalFormattingProperty.builder()
+     * .icon(ConditionalFormattingIconProperty.builder()
+     * .customCondition(ConditionalFormattingCustomIconConditionProperty.builder()
+     * .expression("expression")
+     * .iconOptions(ConditionalFormattingCustomIconOptionsProperty.builder()
+     * .icon("icon")
+     * .unicodeIcon("unicodeIcon")
+     * .build())
+     * // the properties below are optional
+     * .color("color")
+     * .displayConfiguration(ConditionalFormattingIconDisplayConfigurationProperty.builder()
+     * .iconDisplayOption("iconDisplayOption")
+     * .build())
+     * .build())
+     * .iconSet(ConditionalFormattingIconSetProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .iconSetType("iconSetType")
+     * .build())
+     * .build())
+     * .textColor(ConditionalFormattingColorProperty.builder()
+     * .gradient(ConditionalFormattingGradientColorProperty.builder()
+     * .color(GradientColorProperty.builder()
+     * .stops(List.of(GradientStopProperty.builder()
+     * .gradientOffset(123)
+     * // the properties below are optional
+     * .color("color")
+     * .dataValue(123)
+     * .build()))
+     * .build())
+     * .expression("expression")
+     * .build())
+     * .solid(ConditionalFormattingSolidColorProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .color("color")
+     * .build())
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-kpicomparisonvalueconditionalformatting.html)
+     */
+    public inline fun cfnAnalysisKPIComparisonValueConditionalFormattingProperty(
+        block: CfnAnalysisKPIComparisonValueConditionalFormattingPropertyDsl.() -> Unit = {}
+    ): CfnAnalysis.KPIComparisonValueConditionalFormattingProperty {
+        val builder = CfnAnalysisKPIComparisonValueConditionalFormattingPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The conditional formatting options of a KPI visual.
      *
      * Example:
@@ -13756,6 +13699,84 @@ public object quicksight {
      * import software.amazon.awscdk.services.quicksight.*;
      * KPIConditionalFormattingOptionProperty kPIConditionalFormattingOptionProperty =
      * KPIConditionalFormattingOptionProperty.builder()
+     * .actualValue(KPIActualValueConditionalFormattingProperty.builder()
+     * .icon(ConditionalFormattingIconProperty.builder()
+     * .customCondition(ConditionalFormattingCustomIconConditionProperty.builder()
+     * .expression("expression")
+     * .iconOptions(ConditionalFormattingCustomIconOptionsProperty.builder()
+     * .icon("icon")
+     * .unicodeIcon("unicodeIcon")
+     * .build())
+     * // the properties below are optional
+     * .color("color")
+     * .displayConfiguration(ConditionalFormattingIconDisplayConfigurationProperty.builder()
+     * .iconDisplayOption("iconDisplayOption")
+     * .build())
+     * .build())
+     * .iconSet(ConditionalFormattingIconSetProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .iconSetType("iconSetType")
+     * .build())
+     * .build())
+     * .textColor(ConditionalFormattingColorProperty.builder()
+     * .gradient(ConditionalFormattingGradientColorProperty.builder()
+     * .color(GradientColorProperty.builder()
+     * .stops(List.of(GradientStopProperty.builder()
+     * .gradientOffset(123)
+     * // the properties below are optional
+     * .color("color")
+     * .dataValue(123)
+     * .build()))
+     * .build())
+     * .expression("expression")
+     * .build())
+     * .solid(ConditionalFormattingSolidColorProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .color("color")
+     * .build())
+     * .build())
+     * .build())
+     * .comparisonValue(KPIComparisonValueConditionalFormattingProperty.builder()
+     * .icon(ConditionalFormattingIconProperty.builder()
+     * .customCondition(ConditionalFormattingCustomIconConditionProperty.builder()
+     * .expression("expression")
+     * .iconOptions(ConditionalFormattingCustomIconOptionsProperty.builder()
+     * .icon("icon")
+     * .unicodeIcon("unicodeIcon")
+     * .build())
+     * // the properties below are optional
+     * .color("color")
+     * .displayConfiguration(ConditionalFormattingIconDisplayConfigurationProperty.builder()
+     * .iconDisplayOption("iconDisplayOption")
+     * .build())
+     * .build())
+     * .iconSet(ConditionalFormattingIconSetProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .iconSetType("iconSetType")
+     * .build())
+     * .build())
+     * .textColor(ConditionalFormattingColorProperty.builder()
+     * .gradient(ConditionalFormattingGradientColorProperty.builder()
+     * .color(GradientColorProperty.builder()
+     * .stops(List.of(GradientStopProperty.builder()
+     * .gradientOffset(123)
+     * // the properties below are optional
+     * .color("color")
+     * .dataValue(123)
+     * .build()))
+     * .build())
+     * .expression("expression")
+     * .build())
+     * .solid(ConditionalFormattingSolidColorProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .color("color")
+     * .build())
+     * .build())
+     * .build())
      * .primaryValue(KPIPrimaryValueConditionalFormattingProperty.builder()
      * .icon(ConditionalFormattingIconProperty.builder()
      * .customCondition(ConditionalFormattingCustomIconConditionProperty.builder()
@@ -13839,6 +13860,84 @@ public object quicksight {
      * KPIConditionalFormattingProperty kPIConditionalFormattingProperty =
      * KPIConditionalFormattingProperty.builder()
      * .conditionalFormattingOptions(List.of(KPIConditionalFormattingOptionProperty.builder()
+     * .actualValue(KPIActualValueConditionalFormattingProperty.builder()
+     * .icon(ConditionalFormattingIconProperty.builder()
+     * .customCondition(ConditionalFormattingCustomIconConditionProperty.builder()
+     * .expression("expression")
+     * .iconOptions(ConditionalFormattingCustomIconOptionsProperty.builder()
+     * .icon("icon")
+     * .unicodeIcon("unicodeIcon")
+     * .build())
+     * // the properties below are optional
+     * .color("color")
+     * .displayConfiguration(ConditionalFormattingIconDisplayConfigurationProperty.builder()
+     * .iconDisplayOption("iconDisplayOption")
+     * .build())
+     * .build())
+     * .iconSet(ConditionalFormattingIconSetProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .iconSetType("iconSetType")
+     * .build())
+     * .build())
+     * .textColor(ConditionalFormattingColorProperty.builder()
+     * .gradient(ConditionalFormattingGradientColorProperty.builder()
+     * .color(GradientColorProperty.builder()
+     * .stops(List.of(GradientStopProperty.builder()
+     * .gradientOffset(123)
+     * // the properties below are optional
+     * .color("color")
+     * .dataValue(123)
+     * .build()))
+     * .build())
+     * .expression("expression")
+     * .build())
+     * .solid(ConditionalFormattingSolidColorProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .color("color")
+     * .build())
+     * .build())
+     * .build())
+     * .comparisonValue(KPIComparisonValueConditionalFormattingProperty.builder()
+     * .icon(ConditionalFormattingIconProperty.builder()
+     * .customCondition(ConditionalFormattingCustomIconConditionProperty.builder()
+     * .expression("expression")
+     * .iconOptions(ConditionalFormattingCustomIconOptionsProperty.builder()
+     * .icon("icon")
+     * .unicodeIcon("unicodeIcon")
+     * .build())
+     * // the properties below are optional
+     * .color("color")
+     * .displayConfiguration(ConditionalFormattingIconDisplayConfigurationProperty.builder()
+     * .iconDisplayOption("iconDisplayOption")
+     * .build())
+     * .build())
+     * .iconSet(ConditionalFormattingIconSetProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .iconSetType("iconSetType")
+     * .build())
+     * .build())
+     * .textColor(ConditionalFormattingColorProperty.builder()
+     * .gradient(ConditionalFormattingGradientColorProperty.builder()
+     * .color(GradientColorProperty.builder()
+     * .stops(List.of(GradientStopProperty.builder()
+     * .gradientOffset(123)
+     * // the properties below are optional
+     * .color("color")
+     * .dataValue(123)
+     * .build()))
+     * .build())
+     * .expression("expression")
+     * .build())
+     * .solid(ConditionalFormattingSolidColorProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .color("color")
+     * .build())
+     * .build())
+     * .build())
      * .primaryValue(KPIPrimaryValueConditionalFormattingProperty.builder()
      * .icon(ConditionalFormattingIconProperty.builder()
      * .customCondition(ConditionalFormattingCustomIconConditionProperty.builder()
@@ -14030,8 +14129,20 @@ public object quicksight {
      * .name("name")
      * .build())
      * .build())
+     * .sparkline(KPISparklineOptionsProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .color("color")
+     * .tooltipVisibility("tooltipVisibility")
+     * .visibility("visibility")
+     * .build())
      * .trendArrows(TrendArrowOptionsProperty.builder()
      * .visibility("visibility")
+     * .build())
+     * .visualLayoutOptions(KPIVisualLayoutOptionsProperty.builder()
+     * .standardLayout(KPIVisualStandardLayoutProperty.builder()
+     * .type("type")
+     * .build())
      * .build())
      * .build();
      * ```
@@ -14166,6 +14277,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -14195,6 +14310,60 @@ public object quicksight {
     }
 
     /**
+     * The options that determine the visibility, color, type, and tooltip visibility of the
+     * sparkline of a KPI visual.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * KPISparklineOptionsProperty kPISparklineOptionsProperty = KPISparklineOptionsProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .color("color")
+     * .tooltipVisibility("tooltipVisibility")
+     * .visibility("visibility")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-kpisparklineoptions.html)
+     */
+    public inline fun cfnAnalysisKPISparklineOptionsProperty(
+        block: CfnAnalysisKPISparklineOptionsPropertyDsl.() -> Unit = {}
+    ): CfnAnalysis.KPISparklineOptionsProperty {
+        val builder = CfnAnalysisKPISparklineOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The options that determine the layout a KPI visual.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * KPIVisualLayoutOptionsProperty kPIVisualLayoutOptionsProperty =
+     * KPIVisualLayoutOptionsProperty.builder()
+     * .standardLayout(KPIVisualStandardLayoutProperty.builder()
+     * .type("type")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-kpivisuallayoutoptions.html)
+     */
+    public inline fun cfnAnalysisKPIVisualLayoutOptionsProperty(
+        block: CfnAnalysisKPIVisualLayoutOptionsPropertyDsl.() -> Unit = {}
+    ): CfnAnalysis.KPIVisualLayoutOptionsProperty {
+        val builder = CfnAnalysisKPIVisualLayoutOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * A key performance indicator (KPI).
      *
      * For more information, see
@@ -14211,6 +14380,30 @@ public object quicksight {
         block: CfnAnalysisKPIVisualPropertyDsl.() -> Unit = {}
     ): CfnAnalysis.KPIVisualProperty {
         val builder = CfnAnalysisKPIVisualPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The standard layout of the KPI visual.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * KPIVisualStandardLayoutProperty kPIVisualStandardLayoutProperty =
+     * KPIVisualStandardLayoutProperty.builder()
+     * .type("type")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-kpivisualstandardlayout.html)
+     */
+    public inline fun cfnAnalysisKPIVisualStandardLayoutProperty(
+        block: CfnAnalysisKPIVisualStandardLayoutPropertyDsl.() -> Unit = {}
+    ): CfnAnalysis.KPIVisualStandardLayoutProperty {
+        val builder = CfnAnalysisKPIVisualStandardLayoutPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -14992,6 +15185,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -15024,6 +15221,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -15165,6 +15366,10 @@ public object quicksight {
      * import software.amazon.awscdk.services.quicksight.*;
      * ListControlDisplayOptionsProperty listControlDisplayOptionsProperty =
      * ListControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .searchOptions(ListControlSearchOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -15380,6 +15585,9 @@ public object quicksight {
      * MaximumMinimumComputationProperty maximumMinimumComputationProperty =
      * MaximumMinimumComputationProperty.builder()
      * .computationId("computationId")
+     * .type("type")
+     * // the properties below are optional
+     * .name("name")
      * .time(DimensionFieldProperty.builder()
      * .categoricalDimensionField(CategoricalDimensionFieldProperty.builder()
      * .column(ColumnIdentifierProperty.builder()
@@ -15618,9 +15826,6 @@ public object quicksight {
      * .hierarchyId("hierarchyId")
      * .build())
      * .build())
-     * .type("type")
-     * // the properties below are optional
-     * .name("name")
      * .value(MeasureFieldProperty.builder()
      * .calculatedMeasureField(CalculatedMeasureFieldProperty.builder()
      * .expression("expression")
@@ -16475,6 +16680,10 @@ public object quicksight {
      * .nullOption("nullOption")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -16606,6 +16815,10 @@ public object quicksight {
      * .nullOption("nullOption")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -17042,6 +17255,10 @@ public object quicksight {
      * // the properties below are optional
      * .displayOptions(DateTimePickerControlDisplayOptionsProperty.builder()
      * .dateTimeFormat("dateTimeFormat")
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -17074,6 +17291,10 @@ public object quicksight {
      * .build()))
      * .build())
      * .displayOptions(DropDownControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .selectAllOptions(ListControlSelectAllOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -17117,6 +17338,10 @@ public object quicksight {
      * .build()))
      * .build())
      * .displayOptions(ListControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .searchOptions(ListControlSearchOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -17157,6 +17382,10 @@ public object quicksight {
      * .title("title")
      * // the properties below are optional
      * .displayOptions(SliderControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -17181,6 +17410,10 @@ public object quicksight {
      * // the properties below are optional
      * .delimiter("delimiter")
      * .displayOptions(TextAreaControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -17207,6 +17440,10 @@ public object quicksight {
      * .title("title")
      * // the properties below are optional
      * .displayOptions(TextFieldControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -17256,6 +17493,10 @@ public object quicksight {
      * // the properties below are optional
      * .displayOptions(DateTimePickerControlDisplayOptionsProperty.builder()
      * .dateTimeFormat("dateTimeFormat")
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -17468,6 +17709,10 @@ public object quicksight {
      * .build()))
      * .build())
      * .displayOptions(DropDownControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .selectAllOptions(ListControlSelectAllOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -17533,6 +17778,10 @@ public object quicksight {
      * .build()))
      * .build())
      * .displayOptions(ListControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .searchOptions(ListControlSearchOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -17624,6 +17873,10 @@ public object quicksight {
      * .title("title")
      * // the properties below are optional
      * .displayOptions(SliderControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -17669,6 +17922,10 @@ public object quicksight {
      * // the properties below are optional
      * .delimiter("delimiter")
      * .displayOptions(TextAreaControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -17716,6 +17973,10 @@ public object quicksight {
      * .title("title")
      * // the properties below are optional
      * .displayOptions(TextFieldControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -17886,6 +18147,8 @@ public object quicksight {
      * PeriodOverPeriodComputationProperty periodOverPeriodComputationProperty =
      * PeriodOverPeriodComputationProperty.builder()
      * .computationId("computationId")
+     * // the properties below are optional
+     * .name("name")
      * .time(DimensionFieldProperty.builder()
      * .categoricalDimensionField(CategoricalDimensionFieldProperty.builder()
      * .column(ColumnIdentifierProperty.builder()
@@ -18124,8 +18387,6 @@ public object quicksight {
      * .hierarchyId("hierarchyId")
      * .build())
      * .build())
-     * // the properties below are optional
-     * .name("name")
      * .value(MeasureFieldProperty.builder()
      * .calculatedMeasureField(CalculatedMeasureFieldProperty.builder()
      * .expression("expression")
@@ -18396,6 +18657,9 @@ public object quicksight {
      * PeriodToDateComputationProperty periodToDateComputationProperty =
      * PeriodToDateComputationProperty.builder()
      * .computationId("computationId")
+     * // the properties below are optional
+     * .name("name")
+     * .periodTimeGranularity("periodTimeGranularity")
      * .time(DimensionFieldProperty.builder()
      * .categoricalDimensionField(CategoricalDimensionFieldProperty.builder()
      * .column(ColumnIdentifierProperty.builder()
@@ -18634,9 +18898,6 @@ public object quicksight {
      * .hierarchyId("hierarchyId")
      * .build())
      * .build())
-     * // the properties below are optional
-     * .name("name")
-     * .periodTimeGranularity("periodTimeGranularity")
      * .value(MeasureFieldProperty.builder()
      * .calculatedMeasureField(CalculatedMeasureFieldProperty.builder()
      * .expression("expression")
@@ -18973,6 +19234,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -19001,6 +19266,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -19080,6 +19349,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -19093,6 +19366,9 @@ public object quicksight {
      * .dataPath(DataPathSortProperty.builder()
      * .direction("direction")
      * .sortPaths(List.of(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build()))
@@ -19454,6 +19730,9 @@ public object quicksight {
      * PivotTableDataPathOptionProperty pivotTableDataPathOptionProperty =
      * PivotTableDataPathOptionProperty.builder()
      * .dataPathList(List.of(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build()))
@@ -19484,6 +19763,9 @@ public object quicksight {
      * PivotTableFieldCollapseStateOptionProperty.builder()
      * .target(PivotTableFieldCollapseStateTargetProperty.builder()
      * .fieldDataPathValues(List.of(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build()))
@@ -19515,6 +19797,9 @@ public object quicksight {
      * PivotTableFieldCollapseStateTargetProperty pivotTableFieldCollapseStateTargetProperty =
      * PivotTableFieldCollapseStateTargetProperty.builder()
      * .fieldDataPathValues(List.of(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build()))
@@ -19572,6 +19857,9 @@ public object quicksight {
      * .collapseStateOptions(List.of(PivotTableFieldCollapseStateOptionProperty.builder()
      * .target(PivotTableFieldCollapseStateTargetProperty.builder()
      * .fieldDataPathValues(List.of(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build()))
@@ -19582,6 +19870,9 @@ public object quicksight {
      * .build()))
      * .dataPathOptions(List.of(PivotTableDataPathOptionProperty.builder()
      * .dataPathList(List.of(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build()))
@@ -19778,10 +20069,12 @@ public object quicksight {
      * .visibility("visibility")
      * .build())
      * .columnNamesVisibility("columnNamesVisibility")
+     * .defaultCellWidth("defaultCellWidth")
      * .metricPlacement("metricPlacement")
      * .rowAlternateColorOptions(RowAlternateColorOptionsProperty.builder()
      * .rowAlternateColors(List.of("rowAlternateColors"))
      * .status("status")
+     * .usePrimaryBackgroundColor("usePrimaryBackgroundColor")
      * .build())
      * .rowFieldNamesStyle(TableCellStyleProperty.builder()
      * .backgroundColor("backgroundColor")
@@ -19899,6 +20192,11 @@ public object quicksight {
      * .verticalTextAlignment("verticalTextAlignment")
      * .visibility("visibility")
      * .build())
+     * .rowsLabelOptions(PivotTableRowsLabelOptionsProperty.builder()
+     * .customLabel("customLabel")
+     * .visibility("visibility")
+     * .build())
+     * .rowsLayout("rowsLayout")
      * .singleMetricVisibility("singleMetricVisibility")
      * .toggleButtonsVisibility("toggleButtonsVisibility")
      * .build();
@@ -19940,6 +20238,33 @@ public object quicksight {
     }
 
     /**
+     * The options for the label thta is located above the row headers.
+     *
+     * This option is only applicable when `RowsLayout` is set to `HIERARCHY` .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * PivotTableRowsLabelOptionsProperty pivotTableRowsLabelOptionsProperty =
+     * PivotTableRowsLabelOptionsProperty.builder()
+     * .customLabel("customLabel")
+     * .visibility("visibility")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-pivottablerowslabeloptions.html)
+     */
+    public inline fun cfnAnalysisPivotTableRowsLabelOptionsProperty(
+        block: CfnAnalysisPivotTableRowsLabelOptionsPropertyDsl.() -> Unit = {}
+    ): CfnAnalysis.PivotTableRowsLabelOptionsProperty {
+        val builder = CfnAnalysisPivotTableRowsLabelOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The sort by field for the field sort options.
      *
      * Example:
@@ -19956,6 +20281,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -19969,6 +20298,9 @@ public object quicksight {
      * .dataPath(DataPathSortProperty.builder()
      * .direction("direction")
      * .sortPaths(List.of(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build()))
@@ -20011,6 +20343,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -20024,6 +20360,9 @@ public object quicksight {
      * .dataPath(DataPathSortProperty.builder()
      * .direction("direction")
      * .sortPaths(List.of(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build()))
@@ -20155,6 +20494,12 @@ public object quicksight {
      * .build())
      * .placement("placement")
      * .scrollStatus("scrollStatus")
+     * .totalAggregationOptions(List.of(TotalAggregationOptionProperty.builder()
+     * .fieldId("fieldId")
+     * .totalAggregationFunction(TotalAggregationFunctionProperty.builder()
+     * .simpleTotalAggregationFunction("simpleTotalAggregationFunction")
+     * .build())
+     * .build()))
      * .totalCellStyle(TableCellStyleProperty.builder()
      * .backgroundColor("backgroundColor")
      * .border(GlobalTableBorderOptionsProperty.builder()
@@ -20505,6 +20850,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -20533,6 +20882,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -20649,6 +21002,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .measureAggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -20659,6 +21016,7 @@ public object quicksight {
      * .build())
      * .build())
      * .build())
+     * .seriesType("seriesType")
      * .staticConfiguration(ReferenceLineStaticDataConfigurationProperty.builder()
      * .value(123)
      * .build())
@@ -20697,6 +21055,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .measureAggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -20851,6 +21213,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .measureAggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -20861,6 +21227,7 @@ public object quicksight {
      * .build())
      * .build())
      * .build())
+     * .seriesType("seriesType")
      * .staticConfiguration(ReferenceLineStaticDataConfigurationProperty.builder()
      * .value(123)
      * .build())
@@ -21120,6 +21487,10 @@ public object quicksight {
      * RelativeDateTimeControlDisplayOptionsProperty relativeDateTimeControlDisplayOptionsProperty =
      * RelativeDateTimeControlDisplayOptionsProperty.builder()
      * .dateTimeFormat("dateTimeFormat")
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -21256,6 +21627,7 @@ public object quicksight {
      * RowAlternateColorOptionsProperty.builder()
      * .rowAlternateColors(List.of("rowAlternateColors"))
      * .status("status")
+     * .usePrimaryBackgroundColor("usePrimaryBackgroundColor")
      * .build();
      * ```
      *
@@ -21375,6 +21747,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -22139,6 +22515,31 @@ public object quicksight {
     }
 
     /**
+     * A control to display info icons for filters and parameters.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * SheetControlInfoIconLabelOptionsProperty sheetControlInfoIconLabelOptionsProperty =
+     * SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-sheetcontrolinfoiconlabeloptions.html)
+     */
+    public inline fun cfnAnalysisSheetControlInfoIconLabelOptionsProperty(
+        block: CfnAnalysisSheetControlInfoIconLabelOptionsPropertyDsl.() -> Unit = {}
+    ): CfnAnalysis.SheetControlInfoIconLabelOptionsProperty {
+        val builder = CfnAnalysisSheetControlInfoIconLabelOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The configuration that determines the elements and canvas size options of sheet control.
      *
      * Example:
@@ -22435,6 +22836,10 @@ public object quicksight {
      * import software.amazon.awscdk.services.quicksight.*;
      * SliderControlDisplayOptionsProperty sliderControlDisplayOptionsProperty =
      * SliderControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -22459,6 +22864,31 @@ public object quicksight {
         block: CfnAnalysisSliderControlDisplayOptionsPropertyDsl.() -> Unit = {}
     ): CfnAnalysis.SliderControlDisplayOptionsProperty {
         val builder = CfnAnalysisSliderControlDisplayOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Configures the properties of a chart's axes that are used by small multiples panels.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * SmallMultiplesAxisPropertiesProperty smallMultiplesAxisPropertiesProperty =
+     * SmallMultiplesAxisPropertiesProperty.builder()
+     * .placement("placement")
+     * .scale("scale")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-smallmultiplesaxisproperties.html)
+     */
+    public inline fun cfnAnalysisSmallMultiplesAxisPropertiesProperty(
+        block: CfnAnalysisSmallMultiplesAxisPropertiesPropertyDsl.() -> Unit = {}
+    ): CfnAnalysis.SmallMultiplesAxisPropertiesProperty {
+        val builder = CfnAnalysisSmallMultiplesAxisPropertiesPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -22499,6 +22929,14 @@ public object quicksight {
      * .horizontalTextAlignment("horizontalTextAlignment")
      * .visibility("visibility")
      * .build())
+     * .build())
+     * .xAxis(SmallMultiplesAxisPropertiesProperty.builder()
+     * .placement("placement")
+     * .scale("scale")
+     * .build())
+     * .yAxis(SmallMultiplesAxisPropertiesProperty.builder()
+     * .placement("placement")
+     * .scale("scale")
      * .build())
      * .build();
      * ```
@@ -22842,6 +23280,9 @@ public object quicksight {
      * .verticalTextAlignment("verticalTextAlignment")
      * .visibility("visibility")
      * .build())
+     * .styleTargets(List.of(TableStyleTargetProperty.builder()
+     * .cellType("cellType")
+     * .build()))
      * .totalCellStyle(TableCellStyleProperty.builder()
      * .backgroundColor("backgroundColor")
      * .border(GlobalTableBorderOptionsProperty.builder()
@@ -24180,7 +24621,7 @@ public object quicksight {
     }
 
     /**
-     * The field options for a table visual.
+     * The field options of a table visual.
      *
      * Example:
      * ```
@@ -24189,6 +24630,9 @@ public object quicksight {
      * import software.amazon.awscdk.services.quicksight.*;
      * TableFieldOptionsProperty tableFieldOptionsProperty = TableFieldOptionsProperty.builder()
      * .order(List.of("order"))
+     * .pinnedFieldOptions(TablePinnedFieldOptionsProperty.builder()
+     * .pinnedLeftFields(List.of("pinnedLeftFields"))
+     * .build())
      * .selectedFieldOptions(List.of(TableFieldOptionProperty.builder()
      * .fieldId("fieldId")
      * // the properties below are optional
@@ -24468,6 +24912,7 @@ public object quicksight {
      * .rowAlternateColorOptions(RowAlternateColorOptionsProperty.builder()
      * .rowAlternateColors(List.of("rowAlternateColors"))
      * .status("status")
+     * .usePrimaryBackgroundColor("usePrimaryBackgroundColor")
      * .build())
      * .build();
      * ```
@@ -24503,6 +24948,30 @@ public object quicksight {
         block: CfnAnalysisTablePaginatedReportOptionsPropertyDsl.() -> Unit = {}
     ): CfnAnalysis.TablePaginatedReportOptionsProperty {
         val builder = CfnAnalysisTablePaginatedReportOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The settings for the pinned columns of a table visual.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * TablePinnedFieldOptionsProperty tablePinnedFieldOptionsProperty =
+     * TablePinnedFieldOptionsProperty.builder()
+     * .pinnedLeftFields(List.of("pinnedLeftFields"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-tablepinnedfieldoptions.html)
+     */
+    public inline fun cfnAnalysisTablePinnedFieldOptionsProperty(
+        block: CfnAnalysisTablePinnedFieldOptionsPropertyDsl.() -> Unit = {}
+    ): CfnAnalysis.TablePinnedFieldOptionsProperty {
+        val builder = CfnAnalysisTablePinnedFieldOptionsPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -24642,6 +25111,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -24666,6 +25139,29 @@ public object quicksight {
         block: CfnAnalysisTableSortConfigurationPropertyDsl.() -> Unit = {}
     ): CfnAnalysis.TableSortConfigurationProperty {
         val builder = CfnAnalysisTableSortConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The table style target.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * TableStyleTargetProperty tableStyleTargetProperty = TableStyleTargetProperty.builder()
+     * .cellType("cellType")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-tablestyletarget.html)
+     */
+    public inline fun cfnAnalysisTableStyleTargetProperty(
+        block: CfnAnalysisTableStyleTargetPropertyDsl.() -> Unit = {}
+    ): CfnAnalysis.TableStyleTargetProperty {
+        val builder = CfnAnalysisTableStyleTargetPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -24942,6 +25438,10 @@ public object quicksight {
      * import software.amazon.awscdk.services.quicksight.*;
      * TextAreaControlDisplayOptionsProperty textAreaControlDisplayOptionsProperty =
      * TextAreaControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -25085,6 +25585,10 @@ public object quicksight {
      * import software.amazon.awscdk.services.quicksight.*;
      * TextFieldControlDisplayOptionsProperty textFieldControlDisplayOptionsProperty =
      * TextFieldControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -25186,6 +25690,11 @@ public object quicksight {
      * .filterId("filterId")
      * // the properties below are optional
      * .parameterName("parameterName")
+     * .rollingDate(RollingDateConfigurationProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .dataSetIdentifier("dataSetIdentifier")
+     * .build())
      * .timeGranularity("timeGranularity")
      * .value("value")
      * .build();
@@ -25339,6 +25848,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregation(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -25389,6 +25902,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregation(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -25442,6 +25959,10 @@ public object quicksight {
      * .sortDirection("sortDirection")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -25519,6 +26040,8 @@ public object quicksight {
      * TotalAggregationComputationProperty totalAggregationComputationProperty =
      * TotalAggregationComputationProperty.builder()
      * .computationId("computationId")
+     * // the properties below are optional
+     * .name("name")
      * .value(MeasureFieldProperty.builder()
      * .calculatedMeasureField(CalculatedMeasureFieldProperty.builder()
      * .expression("expression")
@@ -25765,8 +26288,6 @@ public object quicksight {
      * .build())
      * .build())
      * .build())
-     * // the properties below are optional
-     * .name("name")
      * .build();
      * ```
      *
@@ -25776,6 +26297,57 @@ public object quicksight {
         block: CfnAnalysisTotalAggregationComputationPropertyDsl.() -> Unit = {}
     ): CfnAnalysis.TotalAggregationComputationProperty {
         val builder = CfnAnalysisTotalAggregationComputationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * An aggregation function that aggregates the total values of a measure.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * TotalAggregationFunctionProperty totalAggregationFunctionProperty =
+     * TotalAggregationFunctionProperty.builder()
+     * .simpleTotalAggregationFunction("simpleTotalAggregationFunction")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-totalaggregationfunction.html)
+     */
+    public inline fun cfnAnalysisTotalAggregationFunctionProperty(
+        block: CfnAnalysisTotalAggregationFunctionPropertyDsl.() -> Unit = {}
+    ): CfnAnalysis.TotalAggregationFunctionProperty {
+        val builder = CfnAnalysisTotalAggregationFunctionPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The total aggregation settings map of a field id.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * TotalAggregationOptionProperty totalAggregationOptionProperty =
+     * TotalAggregationOptionProperty.builder()
+     * .fieldId("fieldId")
+     * .totalAggregationFunction(TotalAggregationFunctionProperty.builder()
+     * .simpleTotalAggregationFunction("simpleTotalAggregationFunction")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-totalaggregationoption.html)
+     */
+    public inline fun cfnAnalysisTotalAggregationOptionProperty(
+        block: CfnAnalysisTotalAggregationOptionPropertyDsl.() -> Unit = {}
+    ): CfnAnalysis.TotalAggregationOptionProperty {
+        val builder = CfnAnalysisTotalAggregationOptionPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -25792,6 +26364,12 @@ public object quicksight {
      * .customLabel("customLabel")
      * .placement("placement")
      * .scrollStatus("scrollStatus")
+     * .totalAggregationOptions(List.of(TotalAggregationOptionProperty.builder()
+     * .fieldId("fieldId")
+     * .totalAggregationFunction(TotalAggregationFunctionProperty.builder()
+     * .simpleTotalAggregationFunction("simpleTotalAggregationFunction")
+     * .build())
+     * .build()))
      * .totalCellStyle(TableCellStyleProperty.builder()
      * .backgroundColor("backgroundColor")
      * .border(GlobalTableBorderOptionsProperty.builder()
@@ -25941,6 +26519,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -26261,6 +26843,8 @@ public object quicksight {
      * import software.amazon.awscdk.services.quicksight.*;
      * UniqueValuesComputationProperty uniqueValuesComputationProperty =
      * UniqueValuesComputationProperty.builder()
+     * .computationId("computationId")
+     * // the properties below are optional
      * .category(DimensionFieldProperty.builder()
      * .categoricalDimensionField(CategoricalDimensionFieldProperty.builder()
      * .column(ColumnIdentifierProperty.builder()
@@ -26499,8 +27083,6 @@ public object quicksight {
      * .hierarchyId("hierarchyId")
      * .build())
      * .build())
-     * .computationId("computationId")
-     * // the properties below are optional
      * .name("name")
      * .build();
      * ```
@@ -26511,6 +27093,32 @@ public object quicksight {
         block: CfnAnalysisUniqueValuesComputationPropertyDsl.() -> Unit = {}
     ): CfnAnalysis.UniqueValuesComputationProperty {
         val builder = CfnAnalysisUniqueValuesComputationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The option to relax the validation that is required to create and update analyses,
+     * dashboards, and templates with definition objects.
+     *
+     * When you set this value to `LENIENT` , validation is skipped for specific errors.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * ValidationStrategyProperty validationStrategyProperty = ValidationStrategyProperty.builder()
+     * .mode("mode")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-validationstrategy.html)
+     */
+    public inline fun cfnAnalysisValidationStrategyProperty(
+        block: CfnAnalysisValidationStrategyPropertyDsl.() -> Unit = {}
+    ): CfnAnalysis.ValidationStrategyProperty {
+        val builder = CfnAnalysisValidationStrategyPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -26707,6 +27315,9 @@ public object quicksight {
      * .colorMap(List.of(DataPathColorProperty.builder()
      * .color("color")
      * .element(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build())
@@ -26900,6 +27511,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -28084,6 +28699,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -28195,6 +28814,10 @@ public object quicksight {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.quicksight.*;
      * AggregationFunctionProperty aggregationFunctionProperty = AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -28233,6 +28856,10 @@ public object quicksight {
      * .sortDirection("sortDirection")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -28434,6 +29061,55 @@ public object quicksight {
         block: CfnDashboardArcOptionsPropertyDsl.() -> Unit = {}
     ): CfnDashboard.ArcOptionsProperty {
         val builder = CfnDashboardArcOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * An array of analysis level configurations.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * AssetOptionsProperty assetOptionsProperty = AssetOptionsProperty.builder()
+     * .timezone("timezone")
+     * .weekStart("weekStart")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-assetoptions.html)
+     */
+    public inline fun cfnDashboardAssetOptionsProperty(
+        block: CfnDashboardAssetOptionsPropertyDsl.() -> Unit = {}
+    ): CfnDashboard.AssetOptionsProperty {
+        val builder = CfnDashboardAssetOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Aggregation for attributes.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * AttributeAggregationFunctionProperty attributeAggregationFunctionProperty =
+     * AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-attributeaggregationfunction.html)
+     */
+    public inline fun cfnDashboardAttributeAggregationFunctionProperty(
+        block: CfnDashboardAttributeAggregationFunctionPropertyDsl.() -> Unit = {}
+    ): CfnDashboard.AttributeAggregationFunctionProperty {
+        val builder = CfnDashboardAttributeAggregationFunctionPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -28887,6 +29563,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -28915,6 +29595,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -28943,6 +29627,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -30262,6 +30950,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -30707,6 +31399,7 @@ public object quicksight {
      * .matchOperator("matchOperator")
      * // the properties below are optional
      * .categoryValues(List.of("categoryValues"))
+     * .nullOption("nullOption")
      * .selectAllOptions("selectAllOptions")
      * .build())
      * .build();
@@ -30759,6 +31452,7 @@ public object quicksight {
      * .matchOperator("matchOperator")
      * // the properties below are optional
      * .categoryValues(List.of("categoryValues"))
+     * .nullOption("nullOption")
      * .selectAllOptions("selectAllOptions")
      * .build())
      * .build())
@@ -30908,6 +31602,34 @@ public object quicksight {
     }
 
     /**
+     * The color configurations for a column.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * ColorsConfigurationProperty colorsConfigurationProperty = ColorsConfigurationProperty.builder()
+     * .customColors(List.of(CustomColorProperty.builder()
+     * .color("color")
+     * // the properties below are optional
+     * .fieldValue("fieldValue")
+     * .specialValue("specialValue")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-colorsconfiguration.html)
+     */
+    public inline fun cfnDashboardColorsConfigurationProperty(
+        block: CfnDashboardColorsConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnDashboard.ColorsConfigurationProperty {
+        val builder = CfnDashboardColorsConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The general configuration of a column.
      *
      * Example:
@@ -30921,6 +31643,14 @@ public object quicksight {
      * .dataSetIdentifier("dataSetIdentifier")
      * .build())
      * // the properties below are optional
+     * .colorsConfiguration(ColorsConfigurationProperty.builder()
+     * .customColors(List.of(CustomColorProperty.builder()
+     * .color("color")
+     * // the properties below are optional
+     * .fieldValue("fieldValue")
+     * .specialValue("specialValue")
+     * .build()))
+     * .build())
      * .formatConfiguration(FormatConfigurationProperty.builder()
      * .dateTimeFormatConfiguration(DateTimeFormatConfigurationProperty.builder()
      * .dateTimeFormat("dateTimeFormat")
@@ -31302,6 +32032,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -31339,6 +32073,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregation(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -31440,6 +32178,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -31468,6 +32210,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -32123,6 +32869,32 @@ public object quicksight {
         block: CfnDashboardCustomActionURLOperationPropertyDsl.() -> Unit = {}
     ): CfnDashboard.CustomActionURLOperationProperty {
         val builder = CfnDashboardCustomActionURLOperationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Determines the color that's applied to a particular data value in a column.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * CustomColorProperty customColorProperty = CustomColorProperty.builder()
+     * .color("color")
+     * // the properties below are optional
+     * .fieldValue("fieldValue")
+     * .specialValue("specialValue")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-customcolor.html)
+     */
+    public inline fun cfnDashboardCustomColorProperty(
+        block: CfnDashboardCustomColorPropertyDsl.() -> Unit = {}
+    ): CfnDashboard.CustomColorProperty {
+        val builder = CfnDashboardCustomColorPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -32836,6 +33608,9 @@ public object quicksight {
      * DataPathColorProperty dataPathColorProperty = DataPathColorProperty.builder()
      * .color("color")
      * .element(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build())
@@ -32890,6 +33665,9 @@ public object quicksight {
      * DataPathSortProperty dataPathSortProperty = DataPathSortProperty.builder()
      * .direction("direction")
      * .sortPaths(List.of(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build()))
@@ -32907,6 +33685,29 @@ public object quicksight {
     }
 
     /**
+     * The type of the data path value.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * DataPathTypeProperty dataPathTypeProperty = DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-datapathtype.html)
+     */
+    public inline fun cfnDashboardDataPathTypeProperty(
+        block: CfnDashboardDataPathTypePropertyDsl.() -> Unit = {}
+    ): CfnDashboard.DataPathTypeProperty {
+        val builder = CfnDashboardDataPathTypePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The data path that needs to be sorted.
      *
      * Example:
@@ -32915,6 +33716,9 @@ public object quicksight {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.quicksight.*;
      * DataPathValueProperty dataPathValueProperty = DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build();
@@ -33552,6 +34356,10 @@ public object quicksight {
      * DateTimePickerControlDisplayOptionsProperty dateTimePickerControlDisplayOptionsProperty =
      * DateTimePickerControlDisplayOptionsProperty.builder()
      * .dateTimeFormat("dateTimeFormat")
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -34410,6 +35218,10 @@ public object quicksight {
      * import software.amazon.awscdk.services.quicksight.*;
      * DropDownControlDisplayOptionsProperty dropDownControlDisplayOptionsProperty =
      * DropDownControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .selectAllOptions(ListControlSelectAllOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -34758,6 +35570,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregation(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -34871,6 +35687,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -36143,6 +36963,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -36211,6 +37035,10 @@ public object quicksight {
      * // the properties below are optional
      * .displayOptions(DateTimePickerControlDisplayOptionsProperty.builder()
      * .dateTimeFormat("dateTimeFormat")
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -36244,6 +37072,10 @@ public object quicksight {
      * .build()))
      * .build())
      * .displayOptions(DropDownControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .selectAllOptions(ListControlSelectAllOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -36283,6 +37115,10 @@ public object quicksight {
      * .build()))
      * .build())
      * .displayOptions(ListControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .searchOptions(ListControlSearchOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -36317,6 +37153,10 @@ public object quicksight {
      * // the properties below are optional
      * .displayOptions(RelativeDateTimeControlDisplayOptionsProperty.builder()
      * .dateTimeFormat("dateTimeFormat")
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -36343,6 +37183,10 @@ public object quicksight {
      * .title("title")
      * // the properties below are optional
      * .displayOptions(SliderControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -36368,6 +37212,10 @@ public object quicksight {
      * // the properties below are optional
      * .delimiter("delimiter")
      * .displayOptions(TextAreaControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -36394,6 +37242,10 @@ public object quicksight {
      * .title("title")
      * // the properties below are optional
      * .displayOptions(TextFieldControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -36443,6 +37295,10 @@ public object quicksight {
      * // the properties below are optional
      * .displayOptions(DateTimePickerControlDisplayOptionsProperty.builder()
      * .dateTimeFormat("dateTimeFormat")
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -36497,6 +37353,10 @@ public object quicksight {
      * .build()))
      * .build())
      * .displayOptions(DropDownControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .selectAllOptions(ListControlSelectAllOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -36545,6 +37405,7 @@ public object quicksight {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.quicksight.*;
+     * Object allSheets;
      * FilterGroupProperty filterGroupProperty = FilterGroupProperty.builder()
      * .crossDataset("crossDataset")
      * .filterGroupId("filterGroupId")
@@ -36574,6 +37435,7 @@ public object quicksight {
      * .matchOperator("matchOperator")
      * // the properties below are optional
      * .categoryValues(List.of("categoryValues"))
+     * .nullOption("nullOption")
      * .selectAllOptions("selectAllOptions")
      * .build())
      * .build())
@@ -36589,6 +37451,10 @@ public object quicksight {
      * .nullOption("nullOption")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -36611,6 +37477,10 @@ public object quicksight {
      * .nullOption("nullOption")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -36664,6 +37534,11 @@ public object quicksight {
      * .filterId("filterId")
      * // the properties below are optional
      * .parameterName("parameterName")
+     * .rollingDate(RollingDateConfigurationProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .dataSetIdentifier("dataSetIdentifier")
+     * .build())
      * .timeGranularity("timeGranularity")
      * .value("value")
      * .build())
@@ -36712,6 +37587,10 @@ public object quicksight {
      * .sortDirection("sortDirection")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -36734,6 +37613,7 @@ public object quicksight {
      * .build())
      * .build()))
      * .scopeConfiguration(FilterScopeConfigurationProperty.builder()
+     * .allSheets(allSheets)
      * .selectedSheets(SelectedSheetsFilterScopeConfigurationProperty.builder()
      * .sheetVisualScopingConfigurations(List.of(SheetVisualScopingConfigurationProperty.builder()
      * .scope("scope")
@@ -36771,6 +37651,7 @@ public object quicksight {
      * .matchOperator("matchOperator")
      * // the properties below are optional
      * .categoryValues(List.of("categoryValues"))
+     * .nullOption("nullOption")
      * .selectAllOptions("selectAllOptions")
      * .build();
      * ```
@@ -36810,6 +37691,10 @@ public object quicksight {
      * .build()))
      * .build())
      * .displayOptions(ListControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .searchOptions(ListControlSearchOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -36950,6 +37835,7 @@ public object quicksight {
      * .matchOperator("matchOperator")
      * // the properties below are optional
      * .categoryValues(List.of("categoryValues"))
+     * .nullOption("nullOption")
      * .selectAllOptions("selectAllOptions")
      * .build())
      * .build())
@@ -36965,6 +37851,10 @@ public object quicksight {
      * .nullOption("nullOption")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -36987,6 +37877,10 @@ public object quicksight {
      * .nullOption("nullOption")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -37040,6 +37934,11 @@ public object quicksight {
      * .filterId("filterId")
      * // the properties below are optional
      * .parameterName("parameterName")
+     * .rollingDate(RollingDateConfigurationProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .dataSetIdentifier("dataSetIdentifier")
+     * .build())
      * .timeGranularity("timeGranularity")
      * .value("value")
      * .build())
@@ -37088,6 +37987,10 @@ public object quicksight {
      * .sortDirection("sortDirection")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -37137,6 +38040,10 @@ public object quicksight {
      * // the properties below are optional
      * .displayOptions(RelativeDateTimeControlDisplayOptionsProperty.builder()
      * .dateTimeFormat("dateTimeFormat")
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -37177,8 +38084,10 @@ public object quicksight {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.quicksight.*;
+     * Object allSheets;
      * FilterScopeConfigurationProperty filterScopeConfigurationProperty =
      * FilterScopeConfigurationProperty.builder()
+     * .allSheets(allSheets)
      * .selectedSheets(SelectedSheetsFilterScopeConfigurationProperty.builder()
      * .sheetVisualScopingConfigurations(List.of(SheetVisualScopingConfigurationProperty.builder()
      * .scope("scope")
@@ -37243,6 +38152,10 @@ public object quicksight {
      * .title("title")
      * // the properties below are optional
      * .displayOptions(SliderControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -37289,6 +38202,10 @@ public object quicksight {
      * // the properties below are optional
      * .delimiter("delimiter")
      * .displayOptions(TextAreaControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -37336,6 +38253,10 @@ public object quicksight {
      * .title("title")
      * // the properties below are optional
      * .displayOptions(TextFieldControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -39130,6 +40051,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -40116,6 +41041,9 @@ public object quicksight {
      * GrowthRateComputationProperty growthRateComputationProperty =
      * GrowthRateComputationProperty.builder()
      * .computationId("computationId")
+     * // the properties below are optional
+     * .name("name")
+     * .periodSize(123)
      * .time(DimensionFieldProperty.builder()
      * .categoricalDimensionField(CategoricalDimensionFieldProperty.builder()
      * .column(ColumnIdentifierProperty.builder()
@@ -40354,9 +41282,6 @@ public object quicksight {
      * .hierarchyId("hierarchyId")
      * .build())
      * .build())
-     * // the properties below are optional
-     * .name("name")
-     * .periodSize(123)
      * .value(MeasureFieldProperty.builder()
      * .calculatedMeasureField(CalculatedMeasureFieldProperty.builder()
      * .expression("expression")
@@ -40762,6 +41687,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -40790,6 +41719,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -41144,497 +42077,6 @@ public object quicksight {
      *
      * Example:
      * ```
-     * // The code below shows an example of how to instantiate this type.
-     * // The values are placeholders you should change.
-     * import software.amazon.awscdk.services.quicksight.*;
-     * Object dataDriven;
-     * HistogramConfigurationProperty histogramConfigurationProperty =
-     * HistogramConfigurationProperty.builder()
-     * .binOptions(HistogramBinOptionsProperty.builder()
-     * .binCount(BinCountOptionsProperty.builder()
-     * .value(123)
-     * .build())
-     * .binWidth(BinWidthOptionsProperty.builder()
-     * .binCountLimit(123)
-     * .value(123)
-     * .build())
-     * .selectedBinType("selectedBinType")
-     * .startValue(123)
-     * .build())
-     * .dataLabels(DataLabelOptionsProperty.builder()
-     * .categoryLabelVisibility("categoryLabelVisibility")
-     * .dataLabelTypes(List.of(DataLabelTypeProperty.builder()
-     * .dataPathLabelType(DataPathLabelTypeProperty.builder()
-     * .fieldId("fieldId")
-     * .fieldValue("fieldValue")
-     * .visibility("visibility")
-     * .build())
-     * .fieldLabelType(FieldLabelTypeProperty.builder()
-     * .fieldId("fieldId")
-     * .visibility("visibility")
-     * .build())
-     * .maximumLabelType(MaximumLabelTypeProperty.builder()
-     * .visibility("visibility")
-     * .build())
-     * .minimumLabelType(MinimumLabelTypeProperty.builder()
-     * .visibility("visibility")
-     * .build())
-     * .rangeEndsLabelType(RangeEndsLabelTypeProperty.builder()
-     * .visibility("visibility")
-     * .build())
-     * .build()))
-     * .labelColor("labelColor")
-     * .labelContent("labelContent")
-     * .labelFontConfiguration(FontConfigurationProperty.builder()
-     * .fontColor("fontColor")
-     * .fontDecoration("fontDecoration")
-     * .fontSize(FontSizeProperty.builder()
-     * .relative("relative")
-     * .build())
-     * .fontStyle("fontStyle")
-     * .fontWeight(FontWeightProperty.builder()
-     * .name("name")
-     * .build())
-     * .build())
-     * .measureLabelVisibility("measureLabelVisibility")
-     * .overlap("overlap")
-     * .position("position")
-     * .totalsVisibility("totalsVisibility")
-     * .visibility("visibility")
-     * .build())
-     * .fieldWells(HistogramFieldWellsProperty.builder()
-     * .histogramAggregatedFieldWells(HistogramAggregatedFieldWellsProperty.builder()
-     * .values(List.of(MeasureFieldProperty.builder()
-     * .calculatedMeasureField(CalculatedMeasureFieldProperty.builder()
-     * .expression("expression")
-     * .fieldId("fieldId")
-     * .build())
-     * .categoricalMeasureField(CategoricalMeasureFieldProperty.builder()
-     * .column(ColumnIdentifierProperty.builder()
-     * .columnName("columnName")
-     * .dataSetIdentifier("dataSetIdentifier")
-     * .build())
-     * .fieldId("fieldId")
-     * // the properties below are optional
-     * .aggregationFunction("aggregationFunction")
-     * .formatConfiguration(StringFormatConfigurationProperty.builder()
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .numericFormatConfiguration(NumericFormatConfigurationProperty.builder()
-     * .currencyDisplayFormatConfiguration(CurrencyDisplayFormatConfigurationProperty.builder()
-     * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
-     * .decimalPlaces(123)
-     * .build())
-     * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
-     * .displayMode("displayMode")
-     * .build())
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .numberScale("numberScale")
-     * .prefix("prefix")
-     * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
-     * .decimalSeparator("decimalSeparator")
-     * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
-     * .symbol("symbol")
-     * .visibility("visibility")
-     * .build())
-     * .build())
-     * .suffix("suffix")
-     * .symbol("symbol")
-     * .build())
-     * .numberDisplayFormatConfiguration(NumberDisplayFormatConfigurationProperty.builder()
-     * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
-     * .decimalPlaces(123)
-     * .build())
-     * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
-     * .displayMode("displayMode")
-     * .build())
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .numberScale("numberScale")
-     * .prefix("prefix")
-     * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
-     * .decimalSeparator("decimalSeparator")
-     * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
-     * .symbol("symbol")
-     * .visibility("visibility")
-     * .build())
-     * .build())
-     * .suffix("suffix")
-     * .build())
-     * .percentageDisplayFormatConfiguration(PercentageDisplayFormatConfigurationProperty.builder()
-     * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
-     * .decimalPlaces(123)
-     * .build())
-     * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
-     * .displayMode("displayMode")
-     * .build())
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .prefix("prefix")
-     * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
-     * .decimalSeparator("decimalSeparator")
-     * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
-     * .symbol("symbol")
-     * .visibility("visibility")
-     * .build())
-     * .build())
-     * .suffix("suffix")
-     * .build())
-     * .build())
-     * .build())
-     * .build())
-     * .dateMeasureField(DateMeasureFieldProperty.builder()
-     * .column(ColumnIdentifierProperty.builder()
-     * .columnName("columnName")
-     * .dataSetIdentifier("dataSetIdentifier")
-     * .build())
-     * .fieldId("fieldId")
-     * // the properties below are optional
-     * .aggregationFunction("aggregationFunction")
-     * .formatConfiguration(DateTimeFormatConfigurationProperty.builder()
-     * .dateTimeFormat("dateTimeFormat")
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .numericFormatConfiguration(NumericFormatConfigurationProperty.builder()
-     * .currencyDisplayFormatConfiguration(CurrencyDisplayFormatConfigurationProperty.builder()
-     * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
-     * .decimalPlaces(123)
-     * .build())
-     * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
-     * .displayMode("displayMode")
-     * .build())
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .numberScale("numberScale")
-     * .prefix("prefix")
-     * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
-     * .decimalSeparator("decimalSeparator")
-     * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
-     * .symbol("symbol")
-     * .visibility("visibility")
-     * .build())
-     * .build())
-     * .suffix("suffix")
-     * .symbol("symbol")
-     * .build())
-     * .numberDisplayFormatConfiguration(NumberDisplayFormatConfigurationProperty.builder()
-     * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
-     * .decimalPlaces(123)
-     * .build())
-     * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
-     * .displayMode("displayMode")
-     * .build())
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .numberScale("numberScale")
-     * .prefix("prefix")
-     * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
-     * .decimalSeparator("decimalSeparator")
-     * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
-     * .symbol("symbol")
-     * .visibility("visibility")
-     * .build())
-     * .build())
-     * .suffix("suffix")
-     * .build())
-     * .percentageDisplayFormatConfiguration(PercentageDisplayFormatConfigurationProperty.builder()
-     * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
-     * .decimalPlaces(123)
-     * .build())
-     * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
-     * .displayMode("displayMode")
-     * .build())
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .prefix("prefix")
-     * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
-     * .decimalSeparator("decimalSeparator")
-     * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
-     * .symbol("symbol")
-     * .visibility("visibility")
-     * .build())
-     * .build())
-     * .suffix("suffix")
-     * .build())
-     * .build())
-     * .build())
-     * .build())
-     * .numericalMeasureField(NumericalMeasureFieldProperty.builder()
-     * .column(ColumnIdentifierProperty.builder()
-     * .columnName("columnName")
-     * .dataSetIdentifier("dataSetIdentifier")
-     * .build())
-     * .fieldId("fieldId")
-     * // the properties below are optional
-     * .aggregationFunction(NumericalAggregationFunctionProperty.builder()
-     * .percentileAggregation(PercentileAggregationProperty.builder()
-     * .percentileValue(123)
-     * .build())
-     * .simpleNumericalAggregation("simpleNumericalAggregation")
-     * .build())
-     * .formatConfiguration(NumberFormatConfigurationProperty.builder()
-     * .formatConfiguration(NumericFormatConfigurationProperty.builder()
-     * .currencyDisplayFormatConfiguration(CurrencyDisplayFormatConfigurationProperty.builder()
-     * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
-     * .decimalPlaces(123)
-     * .build())
-     * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
-     * .displayMode("displayMode")
-     * .build())
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .numberScale("numberScale")
-     * .prefix("prefix")
-     * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
-     * .decimalSeparator("decimalSeparator")
-     * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
-     * .symbol("symbol")
-     * .visibility("visibility")
-     * .build())
-     * .build())
-     * .suffix("suffix")
-     * .symbol("symbol")
-     * .build())
-     * .numberDisplayFormatConfiguration(NumberDisplayFormatConfigurationProperty.builder()
-     * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
-     * .decimalPlaces(123)
-     * .build())
-     * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
-     * .displayMode("displayMode")
-     * .build())
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .numberScale("numberScale")
-     * .prefix("prefix")
-     * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
-     * .decimalSeparator("decimalSeparator")
-     * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
-     * .symbol("symbol")
-     * .visibility("visibility")
-     * .build())
-     * .build())
-     * .suffix("suffix")
-     * .build())
-     * .percentageDisplayFormatConfiguration(PercentageDisplayFormatConfigurationProperty.builder()
-     * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
-     * .decimalPlaces(123)
-     * .build())
-     * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
-     * .displayMode("displayMode")
-     * .build())
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .prefix("prefix")
-     * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
-     * .decimalSeparator("decimalSeparator")
-     * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
-     * .symbol("symbol")
-     * .visibility("visibility")
-     * .build())
-     * .build())
-     * .suffix("suffix")
-     * .build())
-     * .build())
-     * .build())
-     * .build())
-     * .build()))
-     * .build())
-     * .build())
-     * .tooltip(TooltipOptionsProperty.builder()
-     * .fieldBasedTooltip(FieldBasedTooltipProperty.builder()
-     * .aggregationVisibility("aggregationVisibility")
-     * .tooltipFields(List.of(TooltipItemProperty.builder()
-     * .columnTooltipItem(ColumnTooltipItemProperty.builder()
-     * .column(ColumnIdentifierProperty.builder()
-     * .columnName("columnName")
-     * .dataSetIdentifier("dataSetIdentifier")
-     * .build())
-     * // the properties below are optional
-     * .aggregation(AggregationFunctionProperty.builder()
-     * .categoricalAggregationFunction("categoricalAggregationFunction")
-     * .dateAggregationFunction("dateAggregationFunction")
-     * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
-     * .percentileAggregation(PercentileAggregationProperty.builder()
-     * .percentileValue(123)
-     * .build())
-     * .simpleNumericalAggregation("simpleNumericalAggregation")
-     * .build())
-     * .build())
-     * .label("label")
-     * .visibility("visibility")
-     * .build())
-     * .fieldTooltipItem(FieldTooltipItemProperty.builder()
-     * .fieldId("fieldId")
-     * // the properties below are optional
-     * .label("label")
-     * .visibility("visibility")
-     * .build())
-     * .build()))
-     * .tooltipTitleType("tooltipTitleType")
-     * .build())
-     * .selectedTooltipType("selectedTooltipType")
-     * .tooltipVisibility("tooltipVisibility")
-     * .build())
-     * .visualPalette(VisualPaletteProperty.builder()
-     * .chartColor("chartColor")
-     * .colorMap(List.of(DataPathColorProperty.builder()
-     * .color("color")
-     * .element(DataPathValueProperty.builder()
-     * .fieldId("fieldId")
-     * .fieldValue("fieldValue")
-     * .build())
-     * // the properties below are optional
-     * .timeGranularity("timeGranularity")
-     * .build()))
-     * .build())
-     * .xAxisDisplayOptions(AxisDisplayOptionsProperty.builder()
-     * .axisLineVisibility("axisLineVisibility")
-     * .axisOffset("axisOffset")
-     * .dataOptions(AxisDataOptionsProperty.builder()
-     * .dateAxisOptions(DateAxisOptionsProperty.builder()
-     * .missingDateVisibility("missingDateVisibility")
-     * .build())
-     * .numericAxisOptions(NumericAxisOptionsProperty.builder()
-     * .range(AxisDisplayRangeProperty.builder()
-     * .dataDriven(dataDriven)
-     * .minMax(AxisDisplayMinMaxRangeProperty.builder()
-     * .maximum(123)
-     * .minimum(123)
-     * .build())
-     * .build())
-     * .scale(AxisScaleProperty.builder()
-     * .linear(AxisLinearScaleProperty.builder()
-     * .stepCount(123)
-     * .stepSize(123)
-     * .build())
-     * .logarithmic(AxisLogarithmicScaleProperty.builder()
-     * .base(123)
-     * .build())
-     * .build())
-     * .build())
-     * .build())
-     * .gridLineVisibility("gridLineVisibility")
-     * .scrollbarOptions(ScrollBarOptionsProperty.builder()
-     * .visibility("visibility")
-     * .visibleRange(VisibleRangeOptionsProperty.builder()
-     * .percentRange(PercentVisibleRangeProperty.builder()
-     * .from(123)
-     * .to(123)
-     * .build())
-     * .build())
-     * .build())
-     * .tickLabelOptions(AxisTickLabelOptionsProperty.builder()
-     * .labelOptions(LabelOptionsProperty.builder()
-     * .customLabel("customLabel")
-     * .fontConfiguration(FontConfigurationProperty.builder()
-     * .fontColor("fontColor")
-     * .fontDecoration("fontDecoration")
-     * .fontSize(FontSizeProperty.builder()
-     * .relative("relative")
-     * .build())
-     * .fontStyle("fontStyle")
-     * .fontWeight(FontWeightProperty.builder()
-     * .name("name")
-     * .build())
-     * .build())
-     * .visibility("visibility")
-     * .build())
-     * .rotationAngle(123)
-     * .build())
-     * .build())
-     * .xAxisLabelOptions(ChartAxisLabelOptionsProperty.builder()
-     * .axisLabelOptions(List.of(AxisLabelOptionsProperty.builder()
-     * .applyTo(AxisLabelReferenceOptionsProperty.builder()
-     * .column(ColumnIdentifierProperty.builder()
-     * .columnName("columnName")
-     * .dataSetIdentifier("dataSetIdentifier")
-     * .build())
-     * .fieldId("fieldId")
-     * .build())
-     * .customLabel("customLabel")
-     * .fontConfiguration(FontConfigurationProperty.builder()
-     * .fontColor("fontColor")
-     * .fontDecoration("fontDecoration")
-     * .fontSize(FontSizeProperty.builder()
-     * .relative("relative")
-     * .build())
-     * .fontStyle("fontStyle")
-     * .fontWeight(FontWeightProperty.builder()
-     * .name("name")
-     * .build())
-     * .build())
-     * .build()))
-     * .sortIconVisibility("sortIconVisibility")
-     * .visibility("visibility")
-     * .build())
-     * .yAxisDisplayOptions(AxisDisplayOptionsProperty.builder()
-     * .axisLineVisibility("axisLineVisibility")
-     * .axisOffset("axisOffset")
-     * .dataOptions(AxisDataOptionsProperty.builder()
-     * .dateAxisOptions(DateAxisOptionsProperty.builder()
-     * .missingDateVisibility("missingDateVisibility")
-     * .build())
-     * .numericAxisOptions(NumericAxisOptionsProperty.builder()
-     * .range(AxisDisplayRangeProperty.builder()
-     * .dataDriven(dataDriven)
-     * .minMax(AxisDisplayMinMaxRangeProperty.builder()
-     * .maximum(123)
-     * .minimum(123)
-     * .build())
-     * .build())
-     * .scale(AxisScaleProperty.builder()
-     * .linear(AxisLinearScaleProperty.builder()
-     * .stepCount(123)
-     * .stepSize(123)
-     * .build())
-     * .logarithmic(AxisLogarithmicScaleProperty.builder()
-     * .base(123)
-     * .build())
-     * .build())
-     * .build())
-     * .build())
-     * .gridLineVisibility("gridLineVisibility")
-     * .scrollbarOptions(ScrollBarOptionsProperty.builder()
-     * .visibility("visibility")
-     * .visibleRange(VisibleRangeOptionsProperty.builder()
-     * .percentRange(PercentVisibleRangeProperty.builder()
-     * .from(123)
-     * .to(123)
-     * .build())
-     * .build())
-     * .build())
-     * .tickLabelOptions(AxisTickLabelOptionsProperty.builder()
-     * .labelOptions(LabelOptionsProperty.builder()
-     * .customLabel("customLabel")
-     * .fontConfiguration(FontConfigurationProperty.builder()
-     * .fontColor("fontColor")
-     * .fontDecoration("fontDecoration")
-     * .fontSize(FontSizeProperty.builder()
-     * .relative("relative")
-     * .build())
-     * .fontStyle("fontStyle")
-     * .fontWeight(FontWeightProperty.builder()
-     * .name("name")
-     * .build())
-     * .build())
-     * .visibility("visibility")
-     * .build())
-     * .rotationAngle(123)
-     * .build())
-     * .build())
-     * .build();
      * ```
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-histogramconfiguration.html)
@@ -42145,6 +42587,126 @@ public object quicksight {
     }
 
     /**
+     * The conditional formatting for the actual value of a KPI visual.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * KPIActualValueConditionalFormattingProperty kPIActualValueConditionalFormattingProperty =
+     * KPIActualValueConditionalFormattingProperty.builder()
+     * .icon(ConditionalFormattingIconProperty.builder()
+     * .customCondition(ConditionalFormattingCustomIconConditionProperty.builder()
+     * .expression("expression")
+     * .iconOptions(ConditionalFormattingCustomIconOptionsProperty.builder()
+     * .icon("icon")
+     * .unicodeIcon("unicodeIcon")
+     * .build())
+     * // the properties below are optional
+     * .color("color")
+     * .displayConfiguration(ConditionalFormattingIconDisplayConfigurationProperty.builder()
+     * .iconDisplayOption("iconDisplayOption")
+     * .build())
+     * .build())
+     * .iconSet(ConditionalFormattingIconSetProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .iconSetType("iconSetType")
+     * .build())
+     * .build())
+     * .textColor(ConditionalFormattingColorProperty.builder()
+     * .gradient(ConditionalFormattingGradientColorProperty.builder()
+     * .color(GradientColorProperty.builder()
+     * .stops(List.of(GradientStopProperty.builder()
+     * .gradientOffset(123)
+     * // the properties below are optional
+     * .color("color")
+     * .dataValue(123)
+     * .build()))
+     * .build())
+     * .expression("expression")
+     * .build())
+     * .solid(ConditionalFormattingSolidColorProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .color("color")
+     * .build())
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-kpiactualvalueconditionalformatting.html)
+     */
+    public inline fun cfnDashboardKPIActualValueConditionalFormattingProperty(
+        block: CfnDashboardKPIActualValueConditionalFormattingPropertyDsl.() -> Unit = {}
+    ): CfnDashboard.KPIActualValueConditionalFormattingProperty {
+        val builder = CfnDashboardKPIActualValueConditionalFormattingPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The conditional formatting for the comparison value of a KPI visual.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * KPIComparisonValueConditionalFormattingProperty kPIComparisonValueConditionalFormattingProperty
+     * = KPIComparisonValueConditionalFormattingProperty.builder()
+     * .icon(ConditionalFormattingIconProperty.builder()
+     * .customCondition(ConditionalFormattingCustomIconConditionProperty.builder()
+     * .expression("expression")
+     * .iconOptions(ConditionalFormattingCustomIconOptionsProperty.builder()
+     * .icon("icon")
+     * .unicodeIcon("unicodeIcon")
+     * .build())
+     * // the properties below are optional
+     * .color("color")
+     * .displayConfiguration(ConditionalFormattingIconDisplayConfigurationProperty.builder()
+     * .iconDisplayOption("iconDisplayOption")
+     * .build())
+     * .build())
+     * .iconSet(ConditionalFormattingIconSetProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .iconSetType("iconSetType")
+     * .build())
+     * .build())
+     * .textColor(ConditionalFormattingColorProperty.builder()
+     * .gradient(ConditionalFormattingGradientColorProperty.builder()
+     * .color(GradientColorProperty.builder()
+     * .stops(List.of(GradientStopProperty.builder()
+     * .gradientOffset(123)
+     * // the properties below are optional
+     * .color("color")
+     * .dataValue(123)
+     * .build()))
+     * .build())
+     * .expression("expression")
+     * .build())
+     * .solid(ConditionalFormattingSolidColorProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .color("color")
+     * .build())
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-kpicomparisonvalueconditionalformatting.html)
+     */
+    public inline fun cfnDashboardKPIComparisonValueConditionalFormattingProperty(
+        block: CfnDashboardKPIComparisonValueConditionalFormattingPropertyDsl.() -> Unit = {}
+    ): CfnDashboard.KPIComparisonValueConditionalFormattingProperty {
+        val builder = CfnDashboardKPIComparisonValueConditionalFormattingPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The conditional formatting options of a KPI visual.
      *
      * Example:
@@ -42154,6 +42716,84 @@ public object quicksight {
      * import software.amazon.awscdk.services.quicksight.*;
      * KPIConditionalFormattingOptionProperty kPIConditionalFormattingOptionProperty =
      * KPIConditionalFormattingOptionProperty.builder()
+     * .actualValue(KPIActualValueConditionalFormattingProperty.builder()
+     * .icon(ConditionalFormattingIconProperty.builder()
+     * .customCondition(ConditionalFormattingCustomIconConditionProperty.builder()
+     * .expression("expression")
+     * .iconOptions(ConditionalFormattingCustomIconOptionsProperty.builder()
+     * .icon("icon")
+     * .unicodeIcon("unicodeIcon")
+     * .build())
+     * // the properties below are optional
+     * .color("color")
+     * .displayConfiguration(ConditionalFormattingIconDisplayConfigurationProperty.builder()
+     * .iconDisplayOption("iconDisplayOption")
+     * .build())
+     * .build())
+     * .iconSet(ConditionalFormattingIconSetProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .iconSetType("iconSetType")
+     * .build())
+     * .build())
+     * .textColor(ConditionalFormattingColorProperty.builder()
+     * .gradient(ConditionalFormattingGradientColorProperty.builder()
+     * .color(GradientColorProperty.builder()
+     * .stops(List.of(GradientStopProperty.builder()
+     * .gradientOffset(123)
+     * // the properties below are optional
+     * .color("color")
+     * .dataValue(123)
+     * .build()))
+     * .build())
+     * .expression("expression")
+     * .build())
+     * .solid(ConditionalFormattingSolidColorProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .color("color")
+     * .build())
+     * .build())
+     * .build())
+     * .comparisonValue(KPIComparisonValueConditionalFormattingProperty.builder()
+     * .icon(ConditionalFormattingIconProperty.builder()
+     * .customCondition(ConditionalFormattingCustomIconConditionProperty.builder()
+     * .expression("expression")
+     * .iconOptions(ConditionalFormattingCustomIconOptionsProperty.builder()
+     * .icon("icon")
+     * .unicodeIcon("unicodeIcon")
+     * .build())
+     * // the properties below are optional
+     * .color("color")
+     * .displayConfiguration(ConditionalFormattingIconDisplayConfigurationProperty.builder()
+     * .iconDisplayOption("iconDisplayOption")
+     * .build())
+     * .build())
+     * .iconSet(ConditionalFormattingIconSetProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .iconSetType("iconSetType")
+     * .build())
+     * .build())
+     * .textColor(ConditionalFormattingColorProperty.builder()
+     * .gradient(ConditionalFormattingGradientColorProperty.builder()
+     * .color(GradientColorProperty.builder()
+     * .stops(List.of(GradientStopProperty.builder()
+     * .gradientOffset(123)
+     * // the properties below are optional
+     * .color("color")
+     * .dataValue(123)
+     * .build()))
+     * .build())
+     * .expression("expression")
+     * .build())
+     * .solid(ConditionalFormattingSolidColorProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .color("color")
+     * .build())
+     * .build())
+     * .build())
      * .primaryValue(KPIPrimaryValueConditionalFormattingProperty.builder()
      * .icon(ConditionalFormattingIconProperty.builder()
      * .customCondition(ConditionalFormattingCustomIconConditionProperty.builder()
@@ -42237,6 +42877,84 @@ public object quicksight {
      * KPIConditionalFormattingProperty kPIConditionalFormattingProperty =
      * KPIConditionalFormattingProperty.builder()
      * .conditionalFormattingOptions(List.of(KPIConditionalFormattingOptionProperty.builder()
+     * .actualValue(KPIActualValueConditionalFormattingProperty.builder()
+     * .icon(ConditionalFormattingIconProperty.builder()
+     * .customCondition(ConditionalFormattingCustomIconConditionProperty.builder()
+     * .expression("expression")
+     * .iconOptions(ConditionalFormattingCustomIconOptionsProperty.builder()
+     * .icon("icon")
+     * .unicodeIcon("unicodeIcon")
+     * .build())
+     * // the properties below are optional
+     * .color("color")
+     * .displayConfiguration(ConditionalFormattingIconDisplayConfigurationProperty.builder()
+     * .iconDisplayOption("iconDisplayOption")
+     * .build())
+     * .build())
+     * .iconSet(ConditionalFormattingIconSetProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .iconSetType("iconSetType")
+     * .build())
+     * .build())
+     * .textColor(ConditionalFormattingColorProperty.builder()
+     * .gradient(ConditionalFormattingGradientColorProperty.builder()
+     * .color(GradientColorProperty.builder()
+     * .stops(List.of(GradientStopProperty.builder()
+     * .gradientOffset(123)
+     * // the properties below are optional
+     * .color("color")
+     * .dataValue(123)
+     * .build()))
+     * .build())
+     * .expression("expression")
+     * .build())
+     * .solid(ConditionalFormattingSolidColorProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .color("color")
+     * .build())
+     * .build())
+     * .build())
+     * .comparisonValue(KPIComparisonValueConditionalFormattingProperty.builder()
+     * .icon(ConditionalFormattingIconProperty.builder()
+     * .customCondition(ConditionalFormattingCustomIconConditionProperty.builder()
+     * .expression("expression")
+     * .iconOptions(ConditionalFormattingCustomIconOptionsProperty.builder()
+     * .icon("icon")
+     * .unicodeIcon("unicodeIcon")
+     * .build())
+     * // the properties below are optional
+     * .color("color")
+     * .displayConfiguration(ConditionalFormattingIconDisplayConfigurationProperty.builder()
+     * .iconDisplayOption("iconDisplayOption")
+     * .build())
+     * .build())
+     * .iconSet(ConditionalFormattingIconSetProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .iconSetType("iconSetType")
+     * .build())
+     * .build())
+     * .textColor(ConditionalFormattingColorProperty.builder()
+     * .gradient(ConditionalFormattingGradientColorProperty.builder()
+     * .color(GradientColorProperty.builder()
+     * .stops(List.of(GradientStopProperty.builder()
+     * .gradientOffset(123)
+     * // the properties below are optional
+     * .color("color")
+     * .dataValue(123)
+     * .build()))
+     * .build())
+     * .expression("expression")
+     * .build())
+     * .solid(ConditionalFormattingSolidColorProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .color("color")
+     * .build())
+     * .build())
+     * .build())
      * .primaryValue(KPIPrimaryValueConditionalFormattingProperty.builder()
      * .icon(ConditionalFormattingIconProperty.builder()
      * .customCondition(ConditionalFormattingCustomIconConditionProperty.builder()
@@ -42428,8 +43146,20 @@ public object quicksight {
      * .name("name")
      * .build())
      * .build())
+     * .sparkline(KPISparklineOptionsProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .color("color")
+     * .tooltipVisibility("tooltipVisibility")
+     * .visibility("visibility")
+     * .build())
      * .trendArrows(TrendArrowOptionsProperty.builder()
      * .visibility("visibility")
+     * .build())
+     * .visualLayoutOptions(KPIVisualLayoutOptionsProperty.builder()
+     * .standardLayout(KPIVisualStandardLayoutProperty.builder()
+     * .type("type")
+     * .build())
      * .build())
      * .build();
      * ```
@@ -42564,6 +43294,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -42593,6 +43327,60 @@ public object quicksight {
     }
 
     /**
+     * The options that determine the visibility, color, type, and tooltip visibility of the
+     * sparkline of a KPI visual.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * KPISparklineOptionsProperty kPISparklineOptionsProperty = KPISparklineOptionsProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .color("color")
+     * .tooltipVisibility("tooltipVisibility")
+     * .visibility("visibility")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-kpisparklineoptions.html)
+     */
+    public inline fun cfnDashboardKPISparklineOptionsProperty(
+        block: CfnDashboardKPISparklineOptionsPropertyDsl.() -> Unit = {}
+    ): CfnDashboard.KPISparklineOptionsProperty {
+        val builder = CfnDashboardKPISparklineOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The options that determine the layout a KPI visual.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * KPIVisualLayoutOptionsProperty kPIVisualLayoutOptionsProperty =
+     * KPIVisualLayoutOptionsProperty.builder()
+     * .standardLayout(KPIVisualStandardLayoutProperty.builder()
+     * .type("type")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-kpivisuallayoutoptions.html)
+     */
+    public inline fun cfnDashboardKPIVisualLayoutOptionsProperty(
+        block: CfnDashboardKPIVisualLayoutOptionsPropertyDsl.() -> Unit = {}
+    ): CfnDashboard.KPIVisualLayoutOptionsProperty {
+        val builder = CfnDashboardKPIVisualLayoutOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * A key performance indicator (KPI).
      *
      * For more information, see
@@ -42609,6 +43397,30 @@ public object quicksight {
         block: CfnDashboardKPIVisualPropertyDsl.() -> Unit = {}
     ): CfnDashboard.KPIVisualProperty {
         val builder = CfnDashboardKPIVisualPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The standard layout of the KPI visual.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * KPIVisualStandardLayoutProperty kPIVisualStandardLayoutProperty =
+     * KPIVisualStandardLayoutProperty.builder()
+     * .type("type")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-kpivisualstandardlayout.html)
+     */
+    public inline fun cfnDashboardKPIVisualStandardLayoutProperty(
+        block: CfnDashboardKPIVisualStandardLayoutPropertyDsl.() -> Unit = {}
+    ): CfnDashboard.KPIVisualStandardLayoutProperty {
+        val builder = CfnDashboardKPIVisualStandardLayoutPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -43390,6 +44202,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -43422,6 +44238,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -43554,6 +44374,35 @@ public object quicksight {
     }
 
     /**
+     * A structure that contains the configuration of a shareable link to the dashboard.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * LinkSharingConfigurationProperty linkSharingConfigurationProperty =
+     * LinkSharingConfigurationProperty.builder()
+     * .permissions(List.of(ResourcePermissionProperty.builder()
+     * .actions(List.of("actions"))
+     * .principal("principal")
+     * // the properties below are optional
+     * .resource("resource")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-linksharingconfiguration.html)
+     */
+    public inline fun cfnDashboardLinkSharingConfigurationProperty(
+        block: CfnDashboardLinkSharingConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnDashboard.LinkSharingConfigurationProperty {
+        val builder = CfnDashboardLinkSharingConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The display options of a control.
      *
      * Example:
@@ -43563,6 +44412,10 @@ public object quicksight {
      * import software.amazon.awscdk.services.quicksight.*;
      * ListControlDisplayOptionsProperty listControlDisplayOptionsProperty =
      * ListControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .searchOptions(ListControlSearchOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -43778,6 +44631,9 @@ public object quicksight {
      * MaximumMinimumComputationProperty maximumMinimumComputationProperty =
      * MaximumMinimumComputationProperty.builder()
      * .computationId("computationId")
+     * .type("type")
+     * // the properties below are optional
+     * .name("name")
      * .time(DimensionFieldProperty.builder()
      * .categoricalDimensionField(CategoricalDimensionFieldProperty.builder()
      * .column(ColumnIdentifierProperty.builder()
@@ -44016,9 +44872,6 @@ public object quicksight {
      * .hierarchyId("hierarchyId")
      * .build())
      * .build())
-     * .type("type")
-     * // the properties below are optional
-     * .name("name")
      * .value(MeasureFieldProperty.builder()
      * .calculatedMeasureField(CalculatedMeasureFieldProperty.builder()
      * .expression("expression")
@@ -44873,6 +45726,10 @@ public object quicksight {
      * .nullOption("nullOption")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -45004,6 +45861,10 @@ public object quicksight {
      * .nullOption("nullOption")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -45440,6 +46301,10 @@ public object quicksight {
      * // the properties below are optional
      * .displayOptions(DateTimePickerControlDisplayOptionsProperty.builder()
      * .dateTimeFormat("dateTimeFormat")
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -45472,6 +46337,10 @@ public object quicksight {
      * .build()))
      * .build())
      * .displayOptions(DropDownControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .selectAllOptions(ListControlSelectAllOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -45515,6 +46384,10 @@ public object quicksight {
      * .build()))
      * .build())
      * .displayOptions(ListControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .searchOptions(ListControlSearchOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -45555,6 +46428,10 @@ public object quicksight {
      * .title("title")
      * // the properties below are optional
      * .displayOptions(SliderControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -45579,6 +46456,10 @@ public object quicksight {
      * // the properties below are optional
      * .delimiter("delimiter")
      * .displayOptions(TextAreaControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -45605,6 +46486,10 @@ public object quicksight {
      * .title("title")
      * // the properties below are optional
      * .displayOptions(TextFieldControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -45654,6 +46539,10 @@ public object quicksight {
      * // the properties below are optional
      * .displayOptions(DateTimePickerControlDisplayOptionsProperty.builder()
      * .dateTimeFormat("dateTimeFormat")
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -45866,6 +46755,10 @@ public object quicksight {
      * .build()))
      * .build())
      * .displayOptions(DropDownControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .selectAllOptions(ListControlSelectAllOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -45931,6 +46824,10 @@ public object quicksight {
      * .build()))
      * .build())
      * .displayOptions(ListControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .searchOptions(ListControlSearchOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -46022,6 +46919,10 @@ public object quicksight {
      * .title("title")
      * // the properties below are optional
      * .displayOptions(SliderControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -46067,6 +46968,10 @@ public object quicksight {
      * // the properties below are optional
      * .delimiter("delimiter")
      * .displayOptions(TextAreaControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -46114,6 +47019,10 @@ public object quicksight {
      * .title("title")
      * // the properties below are optional
      * .displayOptions(TextFieldControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -46284,6 +47193,8 @@ public object quicksight {
      * PeriodOverPeriodComputationProperty periodOverPeriodComputationProperty =
      * PeriodOverPeriodComputationProperty.builder()
      * .computationId("computationId")
+     * // the properties below are optional
+     * .name("name")
      * .time(DimensionFieldProperty.builder()
      * .categoricalDimensionField(CategoricalDimensionFieldProperty.builder()
      * .column(ColumnIdentifierProperty.builder()
@@ -46522,8 +47433,6 @@ public object quicksight {
      * .hierarchyId("hierarchyId")
      * .build())
      * .build())
-     * // the properties below are optional
-     * .name("name")
      * .value(MeasureFieldProperty.builder()
      * .calculatedMeasureField(CalculatedMeasureFieldProperty.builder()
      * .expression("expression")
@@ -46794,6 +47703,9 @@ public object quicksight {
      * PeriodToDateComputationProperty periodToDateComputationProperty =
      * PeriodToDateComputationProperty.builder()
      * .computationId("computationId")
+     * // the properties below are optional
+     * .name("name")
+     * .periodTimeGranularity("periodTimeGranularity")
      * .time(DimensionFieldProperty.builder()
      * .categoricalDimensionField(CategoricalDimensionFieldProperty.builder()
      * .column(ColumnIdentifierProperty.builder()
@@ -47032,9 +47944,6 @@ public object quicksight {
      * .hierarchyId("hierarchyId")
      * .build())
      * .build())
-     * // the properties below are optional
-     * .name("name")
-     * .periodTimeGranularity("periodTimeGranularity")
      * .value(MeasureFieldProperty.builder()
      * .calculatedMeasureField(CalculatedMeasureFieldProperty.builder()
      * .expression("expression")
@@ -47371,6 +48280,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -47399,6 +48312,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -47478,6 +48395,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -47491,6 +48412,9 @@ public object quicksight {
      * .dataPath(DataPathSortProperty.builder()
      * .direction("direction")
      * .sortPaths(List.of(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build()))
@@ -47852,6 +48776,9 @@ public object quicksight {
      * PivotTableDataPathOptionProperty pivotTableDataPathOptionProperty =
      * PivotTableDataPathOptionProperty.builder()
      * .dataPathList(List.of(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build()))
@@ -47882,6 +48809,9 @@ public object quicksight {
      * PivotTableFieldCollapseStateOptionProperty.builder()
      * .target(PivotTableFieldCollapseStateTargetProperty.builder()
      * .fieldDataPathValues(List.of(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build()))
@@ -47913,6 +48843,9 @@ public object quicksight {
      * PivotTableFieldCollapseStateTargetProperty pivotTableFieldCollapseStateTargetProperty =
      * PivotTableFieldCollapseStateTargetProperty.builder()
      * .fieldDataPathValues(List.of(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build()))
@@ -47970,6 +48903,9 @@ public object quicksight {
      * .collapseStateOptions(List.of(PivotTableFieldCollapseStateOptionProperty.builder()
      * .target(PivotTableFieldCollapseStateTargetProperty.builder()
      * .fieldDataPathValues(List.of(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build()))
@@ -47980,6 +48916,9 @@ public object quicksight {
      * .build()))
      * .dataPathOptions(List.of(PivotTableDataPathOptionProperty.builder()
      * .dataPathList(List.of(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build()))
@@ -48176,10 +49115,12 @@ public object quicksight {
      * .visibility("visibility")
      * .build())
      * .columnNamesVisibility("columnNamesVisibility")
+     * .defaultCellWidth("defaultCellWidth")
      * .metricPlacement("metricPlacement")
      * .rowAlternateColorOptions(RowAlternateColorOptionsProperty.builder()
      * .rowAlternateColors(List.of("rowAlternateColors"))
      * .status("status")
+     * .usePrimaryBackgroundColor("usePrimaryBackgroundColor")
      * .build())
      * .rowFieldNamesStyle(TableCellStyleProperty.builder()
      * .backgroundColor("backgroundColor")
@@ -48297,6 +49238,11 @@ public object quicksight {
      * .verticalTextAlignment("verticalTextAlignment")
      * .visibility("visibility")
      * .build())
+     * .rowsLabelOptions(PivotTableRowsLabelOptionsProperty.builder()
+     * .customLabel("customLabel")
+     * .visibility("visibility")
+     * .build())
+     * .rowsLayout("rowsLayout")
      * .singleMetricVisibility("singleMetricVisibility")
      * .toggleButtonsVisibility("toggleButtonsVisibility")
      * .build();
@@ -48338,6 +49284,33 @@ public object quicksight {
     }
 
     /**
+     * The options for the label thta is located above the row headers.
+     *
+     * This option is only applicable when `RowsLayout` is set to `HIERARCHY` .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * PivotTableRowsLabelOptionsProperty pivotTableRowsLabelOptionsProperty =
+     * PivotTableRowsLabelOptionsProperty.builder()
+     * .customLabel("customLabel")
+     * .visibility("visibility")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-pivottablerowslabeloptions.html)
+     */
+    public inline fun cfnDashboardPivotTableRowsLabelOptionsProperty(
+        block: CfnDashboardPivotTableRowsLabelOptionsPropertyDsl.() -> Unit = {}
+    ): CfnDashboard.PivotTableRowsLabelOptionsProperty {
+        val builder = CfnDashboardPivotTableRowsLabelOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The sort by field for the field sort options.
      *
      * Example:
@@ -48354,6 +49327,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -48367,6 +49344,9 @@ public object quicksight {
      * .dataPath(DataPathSortProperty.builder()
      * .direction("direction")
      * .sortPaths(List.of(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build()))
@@ -48409,6 +49389,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -48422,6 +49406,9 @@ public object quicksight {
      * .dataPath(DataPathSortProperty.builder()
      * .direction("direction")
      * .sortPaths(List.of(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build()))
@@ -48553,6 +49540,12 @@ public object quicksight {
      * .build())
      * .placement("placement")
      * .scrollStatus("scrollStatus")
+     * .totalAggregationOptions(List.of(TotalAggregationOptionProperty.builder()
+     * .fieldId("fieldId")
+     * .totalAggregationFunction(TotalAggregationFunctionProperty.builder()
+     * .simpleTotalAggregationFunction("simpleTotalAggregationFunction")
+     * .build())
+     * .build()))
      * .totalCellStyle(TableCellStyleProperty.builder()
      * .backgroundColor("backgroundColor")
      * .border(GlobalTableBorderOptionsProperty.builder()
@@ -48903,6 +49896,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -48931,6 +49928,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -49047,6 +50048,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .measureAggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -49057,6 +50062,7 @@ public object quicksight {
      * .build())
      * .build())
      * .build())
+     * .seriesType("seriesType")
      * .staticConfiguration(ReferenceLineStaticDataConfigurationProperty.builder()
      * .value(123)
      * .build())
@@ -49095,6 +50101,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .measureAggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -49249,6 +50259,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .measureAggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -49259,6 +50273,7 @@ public object quicksight {
      * .build())
      * .build())
      * .build())
+     * .seriesType("seriesType")
      * .staticConfiguration(ReferenceLineStaticDataConfigurationProperty.builder()
      * .value(123)
      * .build())
@@ -49518,6 +50533,10 @@ public object quicksight {
      * RelativeDateTimeControlDisplayOptionsProperty relativeDateTimeControlDisplayOptionsProperty =
      * RelativeDateTimeControlDisplayOptionsProperty.builder()
      * .dateTimeFormat("dateTimeFormat")
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -49654,6 +50673,7 @@ public object quicksight {
      * RowAlternateColorOptionsProperty.builder()
      * .rowAlternateColors(List.of("rowAlternateColors"))
      * .status("status")
+     * .usePrimaryBackgroundColor("usePrimaryBackgroundColor")
      * .build();
      * ```
      *
@@ -49773,6 +50793,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -50537,6 +51561,31 @@ public object quicksight {
     }
 
     /**
+     * A control to display info icons for filters and parameters.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * SheetControlInfoIconLabelOptionsProperty sheetControlInfoIconLabelOptionsProperty =
+     * SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-sheetcontrolinfoiconlabeloptions.html)
+     */
+    public inline fun cfnDashboardSheetControlInfoIconLabelOptionsProperty(
+        block: CfnDashboardSheetControlInfoIconLabelOptionsPropertyDsl.() -> Unit = {}
+    ): CfnDashboard.SheetControlInfoIconLabelOptionsProperty {
+        val builder = CfnDashboardSheetControlInfoIconLabelOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The configuration that determines the elements and canvas size options of sheet control.
      *
      * Example:
@@ -50880,6 +51929,10 @@ public object quicksight {
      * import software.amazon.awscdk.services.quicksight.*;
      * SliderControlDisplayOptionsProperty sliderControlDisplayOptionsProperty =
      * SliderControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -50904,6 +51957,31 @@ public object quicksight {
         block: CfnDashboardSliderControlDisplayOptionsPropertyDsl.() -> Unit = {}
     ): CfnDashboard.SliderControlDisplayOptionsProperty {
         val builder = CfnDashboardSliderControlDisplayOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Configures the properties of a chart's axes that are used by small multiples panels.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * SmallMultiplesAxisPropertiesProperty smallMultiplesAxisPropertiesProperty =
+     * SmallMultiplesAxisPropertiesProperty.builder()
+     * .placement("placement")
+     * .scale("scale")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-smallmultiplesaxisproperties.html)
+     */
+    public inline fun cfnDashboardSmallMultiplesAxisPropertiesProperty(
+        block: CfnDashboardSmallMultiplesAxisPropertiesPropertyDsl.() -> Unit = {}
+    ): CfnDashboard.SmallMultiplesAxisPropertiesProperty {
+        val builder = CfnDashboardSmallMultiplesAxisPropertiesPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -50944,6 +52022,14 @@ public object quicksight {
      * .horizontalTextAlignment("horizontalTextAlignment")
      * .visibility("visibility")
      * .build())
+     * .build())
+     * .xAxis(SmallMultiplesAxisPropertiesProperty.builder()
+     * .placement("placement")
+     * .scale("scale")
+     * .build())
+     * .yAxis(SmallMultiplesAxisPropertiesProperty.builder()
+     * .placement("placement")
+     * .scale("scale")
      * .build())
      * .build();
      * ```
@@ -51287,6 +52373,9 @@ public object quicksight {
      * .verticalTextAlignment("verticalTextAlignment")
      * .visibility("visibility")
      * .build())
+     * .styleTargets(List.of(TableStyleTargetProperty.builder()
+     * .cellType("cellType")
+     * .build()))
      * .totalCellStyle(TableCellStyleProperty.builder()
      * .backgroundColor("backgroundColor")
      * .border(GlobalTableBorderOptionsProperty.builder()
@@ -52625,7 +53714,7 @@ public object quicksight {
     }
 
     /**
-     * The field options for a table visual.
+     * The field options of a table visual.
      *
      * Example:
      * ```
@@ -52634,6 +53723,9 @@ public object quicksight {
      * import software.amazon.awscdk.services.quicksight.*;
      * TableFieldOptionsProperty tableFieldOptionsProperty = TableFieldOptionsProperty.builder()
      * .order(List.of("order"))
+     * .pinnedFieldOptions(TablePinnedFieldOptionsProperty.builder()
+     * .pinnedLeftFields(List.of("pinnedLeftFields"))
+     * .build())
      * .selectedFieldOptions(List.of(TableFieldOptionProperty.builder()
      * .fieldId("fieldId")
      * // the properties below are optional
@@ -52913,6 +54005,7 @@ public object quicksight {
      * .rowAlternateColorOptions(RowAlternateColorOptionsProperty.builder()
      * .rowAlternateColors(List.of("rowAlternateColors"))
      * .status("status")
+     * .usePrimaryBackgroundColor("usePrimaryBackgroundColor")
      * .build())
      * .build();
      * ```
@@ -52948,6 +54041,30 @@ public object quicksight {
         block: CfnDashboardTablePaginatedReportOptionsPropertyDsl.() -> Unit = {}
     ): CfnDashboard.TablePaginatedReportOptionsProperty {
         val builder = CfnDashboardTablePaginatedReportOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The settings for the pinned columns of a table visual.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * TablePinnedFieldOptionsProperty tablePinnedFieldOptionsProperty =
+     * TablePinnedFieldOptionsProperty.builder()
+     * .pinnedLeftFields(List.of("pinnedLeftFields"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-tablepinnedfieldoptions.html)
+     */
+    public inline fun cfnDashboardTablePinnedFieldOptionsProperty(
+        block: CfnDashboardTablePinnedFieldOptionsPropertyDsl.() -> Unit = {}
+    ): CfnDashboard.TablePinnedFieldOptionsProperty {
+        val builder = CfnDashboardTablePinnedFieldOptionsPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -53087,6 +54204,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -53111,6 +54232,29 @@ public object quicksight {
         block: CfnDashboardTableSortConfigurationPropertyDsl.() -> Unit = {}
     ): CfnDashboard.TableSortConfigurationProperty {
         val builder = CfnDashboardTableSortConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The table style target.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * TableStyleTargetProperty tableStyleTargetProperty = TableStyleTargetProperty.builder()
+     * .cellType("cellType")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-tablestyletarget.html)
+     */
+    public inline fun cfnDashboardTableStyleTargetProperty(
+        block: CfnDashboardTableStyleTargetPropertyDsl.() -> Unit = {}
+    ): CfnDashboard.TableStyleTargetProperty {
+        val builder = CfnDashboardTableStyleTargetPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -53387,6 +54531,10 @@ public object quicksight {
      * import software.amazon.awscdk.services.quicksight.*;
      * TextAreaControlDisplayOptionsProperty textAreaControlDisplayOptionsProperty =
      * TextAreaControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -53530,6 +54678,10 @@ public object quicksight {
      * import software.amazon.awscdk.services.quicksight.*;
      * TextFieldControlDisplayOptionsProperty textFieldControlDisplayOptionsProperty =
      * TextFieldControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -53631,6 +54783,11 @@ public object quicksight {
      * .filterId("filterId")
      * // the properties below are optional
      * .parameterName("parameterName")
+     * .rollingDate(RollingDateConfigurationProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .dataSetIdentifier("dataSetIdentifier")
+     * .build())
      * .timeGranularity("timeGranularity")
      * .value("value")
      * .build();
@@ -53784,6 +54941,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregation(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -53834,6 +54995,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregation(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -53887,6 +55052,10 @@ public object quicksight {
      * .sortDirection("sortDirection")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -53964,6 +55133,8 @@ public object quicksight {
      * TotalAggregationComputationProperty totalAggregationComputationProperty =
      * TotalAggregationComputationProperty.builder()
      * .computationId("computationId")
+     * // the properties below are optional
+     * .name("name")
      * .value(MeasureFieldProperty.builder()
      * .calculatedMeasureField(CalculatedMeasureFieldProperty.builder()
      * .expression("expression")
@@ -54210,8 +55381,6 @@ public object quicksight {
      * .build())
      * .build())
      * .build())
-     * // the properties below are optional
-     * .name("name")
      * .build();
      * ```
      *
@@ -54221,6 +55390,57 @@ public object quicksight {
         block: CfnDashboardTotalAggregationComputationPropertyDsl.() -> Unit = {}
     ): CfnDashboard.TotalAggregationComputationProperty {
         val builder = CfnDashboardTotalAggregationComputationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * An aggregation function that aggregates the total values of a measure.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * TotalAggregationFunctionProperty totalAggregationFunctionProperty =
+     * TotalAggregationFunctionProperty.builder()
+     * .simpleTotalAggregationFunction("simpleTotalAggregationFunction")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-totalaggregationfunction.html)
+     */
+    public inline fun cfnDashboardTotalAggregationFunctionProperty(
+        block: CfnDashboardTotalAggregationFunctionPropertyDsl.() -> Unit = {}
+    ): CfnDashboard.TotalAggregationFunctionProperty {
+        val builder = CfnDashboardTotalAggregationFunctionPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The total aggregation settings map of a field id.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * TotalAggregationOptionProperty totalAggregationOptionProperty =
+     * TotalAggregationOptionProperty.builder()
+     * .fieldId("fieldId")
+     * .totalAggregationFunction(TotalAggregationFunctionProperty.builder()
+     * .simpleTotalAggregationFunction("simpleTotalAggregationFunction")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-totalaggregationoption.html)
+     */
+    public inline fun cfnDashboardTotalAggregationOptionProperty(
+        block: CfnDashboardTotalAggregationOptionPropertyDsl.() -> Unit = {}
+    ): CfnDashboard.TotalAggregationOptionProperty {
+        val builder = CfnDashboardTotalAggregationOptionPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -54237,6 +55457,12 @@ public object quicksight {
      * .customLabel("customLabel")
      * .placement("placement")
      * .scrollStatus("scrollStatus")
+     * .totalAggregationOptions(List.of(TotalAggregationOptionProperty.builder()
+     * .fieldId("fieldId")
+     * .totalAggregationFunction(TotalAggregationFunctionProperty.builder()
+     * .simpleTotalAggregationFunction("simpleTotalAggregationFunction")
+     * .build())
+     * .build()))
      * .totalCellStyle(TableCellStyleProperty.builder()
      * .backgroundColor("backgroundColor")
      * .border(GlobalTableBorderOptionsProperty.builder()
@@ -54386,6 +55612,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -54706,6 +55936,8 @@ public object quicksight {
      * import software.amazon.awscdk.services.quicksight.*;
      * UniqueValuesComputationProperty uniqueValuesComputationProperty =
      * UniqueValuesComputationProperty.builder()
+     * .computationId("computationId")
+     * // the properties below are optional
      * .category(DimensionFieldProperty.builder()
      * .categoricalDimensionField(CategoricalDimensionFieldProperty.builder()
      * .column(ColumnIdentifierProperty.builder()
@@ -54944,8 +56176,6 @@ public object quicksight {
      * .hierarchyId("hierarchyId")
      * .build())
      * .build())
-     * .computationId("computationId")
-     * // the properties below are optional
      * .name("name")
      * .build();
      * ```
@@ -54956,6 +56186,32 @@ public object quicksight {
         block: CfnDashboardUniqueValuesComputationPropertyDsl.() -> Unit = {}
     ): CfnDashboard.UniqueValuesComputationProperty {
         val builder = CfnDashboardUniqueValuesComputationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The option to relax the validation that is required to create and update analyses,
+     * dashboards, and templates with definition objects.
+     *
+     * When you set this value to `LENIENT` , validation is skipped for specific errors.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * ValidationStrategyProperty validationStrategyProperty = ValidationStrategyProperty.builder()
+     * .mode("mode")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-validationstrategy.html)
+     */
+    public inline fun cfnDashboardValidationStrategyProperty(
+        block: CfnDashboardValidationStrategyPropertyDsl.() -> Unit = {}
+    ): CfnDashboard.ValidationStrategyProperty {
+        val builder = CfnDashboardValidationStrategyPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -55199,6 +56455,9 @@ public object quicksight {
      * .colorMap(List.of(DataPathColorProperty.builder()
      * .color("color")
      * .element(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build())
@@ -55392,6 +56651,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -56576,6 +57839,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -56742,6 +58009,7 @@ public object quicksight {
      * .newColumnType("newColumnType")
      * // the properties below are optional
      * .format("format")
+     * .subType("subType")
      * .build())
      * .createColumnsOperation(CreateColumnsOperationProperty.builder()
      * .columns(List.of(CalculatedColumnProperty.builder()
@@ -56793,6 +58061,8 @@ public object quicksight {
      * .columns(List.of(InputColumnProperty.builder()
      * .name("name")
      * .type("type")
+     * // the properties below are optional
+     * .subType("subType")
      * .build()))
      * .dataSourceArn("dataSourceArn")
      * .name("name")
@@ -56803,6 +58073,8 @@ public object quicksight {
      * .inputColumns(List.of(InputColumnProperty.builder()
      * .name("name")
      * .type("type")
+     * // the properties below are optional
+     * .subType("subType")
      * .build()))
      * .name("name")
      * // the properties below are optional
@@ -56814,6 +58086,8 @@ public object quicksight {
      * .inputColumns(List.of(InputColumnProperty.builder()
      * .name("name")
      * .type("type")
+     * // the properties below are optional
+     * .subType("subType")
      * .build()))
      * // the properties below are optional
      * .uploadSettings(UploadSettingsProperty.builder()
@@ -56903,6 +58177,7 @@ public object quicksight {
      * .newColumnType("newColumnType")
      * // the properties below are optional
      * .format("format")
+     * .subType("subType")
      * .build();
      * ```
      *
@@ -57070,6 +58345,8 @@ public object quicksight {
      * .columns(List.of(InputColumnProperty.builder()
      * .name("name")
      * .type("type")
+     * // the properties below are optional
+     * .subType("subType")
      * .build()))
      * .dataSourceArn("dataSourceArn")
      * .name("name")
@@ -57088,7 +58365,7 @@ public object quicksight {
     }
 
     /**
-     * The dataset refresh properties for the dataset.</p>.
+     * The refresh properties of a dataset.
      *
      * Example:
      * ```
@@ -57145,8 +58422,7 @@ public object quicksight {
     }
 
     /**
-     * A parameter created in the dataset that could be of any one data type such as string,
-     * integer, decimal or datetime.</p>.
+     * The parameter declarations of the dataset.
      *
      * Example:
      * ```
@@ -57231,7 +58507,7 @@ public object quicksight {
     }
 
     /**
-     * A parameter created in the dataset of date time data type.</p>.
+     * A date time parameter that is created in the dataset.
      *
      * Example:
      * ```
@@ -57262,9 +58538,9 @@ public object quicksight {
     }
 
     /**
-     * List of default values defined for a given decimal dataset parameter type.
+     * A list of default values for a given decimal parameter.
      *
-     * Currently only static values are supported.</p>
+     * This structure only accepts static values.
      *
      * Example:
      * ```
@@ -57288,7 +58564,7 @@ public object quicksight {
     }
 
     /**
-     * A parameter created in the dataset of decimal data type.</p>.
+     * A decimal parameter that is created in the dataset.
      *
      * Example:
      * ```
@@ -57392,7 +58668,7 @@ public object quicksight {
     }
 
     /**
-     * Incremental Refresh</p>.
+     * The incremental refresh configuration for a dataset.
      *
      * Example:
      * ```
@@ -57455,6 +58731,8 @@ public object quicksight {
      * InputColumnProperty inputColumnProperty = InputColumnProperty.builder()
      * .name("name")
      * .type("type")
+     * // the properties below are optional
+     * .subType("subType")
      * .build();
      * ```
      *
@@ -57469,9 +58747,9 @@ public object quicksight {
     }
 
     /**
-     * List of default values defined for a given integer dataset parameter type.
+     * A list of default values for a given integer parameter.
      *
-     * Currently only static values are supported.</p>
+     * This structure only accepts static values.
      *
      * Example:
      * ```
@@ -57495,7 +58773,7 @@ public object quicksight {
     }
 
     /**
-     * A parameter created in the dataset of integer data type.</p>.
+     * An integer parameter that is created in the dataset.
      *
      * Example:
      * ```
@@ -57618,6 +58896,7 @@ public object quicksight {
      * .newColumnType("newColumnType")
      * // the properties below are optional
      * .format("format")
+     * .subType("subType")
      * .build())
      * .createColumnsOperation(CreateColumnsOperationProperty.builder()
      * .columns(List.of(CalculatedColumnProperty.builder()
@@ -57711,6 +58990,8 @@ public object quicksight {
     }
 
     /**
+     * The lookback window setup of an incremental refresh configuration.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -57734,6 +59015,8 @@ public object quicksight {
     }
 
     /**
+     * The new default values for the parameter.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -57768,6 +59051,7 @@ public object quicksight {
      * OutputColumnProperty outputColumnProperty = OutputColumnProperty.builder()
      * .description("description")
      * .name("name")
+     * .subType("subType")
      * .type("type")
      * .build();
      * ```
@@ -57783,8 +59067,8 @@ public object quicksight {
     }
 
     /**
-     * A transform operation that overrides the dataset parameter values defined in another
-     * dataset.</p>.
+     * A transform operation that overrides the dataset parameter values that are defined in another
+     * dataset.
      *
      * Example:
      * ```
@@ -57832,6 +59116,8 @@ public object quicksight {
      * .columns(List.of(InputColumnProperty.builder()
      * .name("name")
      * .type("type")
+     * // the properties below are optional
+     * .subType("subType")
      * .build()))
      * .dataSourceArn("dataSourceArn")
      * .name("name")
@@ -57842,6 +59128,8 @@ public object quicksight {
      * .inputColumns(List.of(InputColumnProperty.builder()
      * .name("name")
      * .type("type")
+     * // the properties below are optional
+     * .subType("subType")
      * .build()))
      * .name("name")
      * // the properties below are optional
@@ -57853,6 +59141,8 @@ public object quicksight {
      * .inputColumns(List.of(InputColumnProperty.builder()
      * .name("name")
      * .type("type")
+     * // the properties below are optional
+     * .subType("subType")
      * .build()))
      * // the properties below are optional
      * .uploadSettings(UploadSettingsProperty.builder()
@@ -58016,6 +59306,7 @@ public object quicksight {
      * .newColumnType("newColumnType")
      * // the properties below are optional
      * .format("format")
+     * .subType("subType")
      * .build())
      * .createColumnsOperation(CreateColumnsOperationProperty.builder()
      * .columns(List.of(CalculatedColumnProperty.builder()
@@ -58067,6 +59358,8 @@ public object quicksight {
      * .columns(List.of(InputColumnProperty.builder()
      * .name("name")
      * .type("type")
+     * // the properties below are optional
+     * .subType("subType")
      * .build()))
      * .dataSourceArn("dataSourceArn")
      * .name("name")
@@ -58077,6 +59370,8 @@ public object quicksight {
      * .inputColumns(List.of(InputColumnProperty.builder()
      * .name("name")
      * .type("type")
+     * // the properties below are optional
+     * .subType("subType")
      * .build()))
      * .name("name")
      * // the properties below are optional
@@ -58088,6 +59383,8 @@ public object quicksight {
      * .inputColumns(List.of(InputColumnProperty.builder()
      * .name("name")
      * .type("type")
+     * // the properties below are optional
+     * .subType("subType")
      * .build()))
      * // the properties below are optional
      * .uploadSettings(UploadSettingsProperty.builder()
@@ -58135,7 +59432,7 @@ public object quicksight {
     }
 
     /**
-     * Refresh Configuration.</p>.
+     * The refresh configuration of a dataset.
      *
      * Example:
      * ```
@@ -58177,6 +59474,8 @@ public object quicksight {
      * .inputColumns(List.of(InputColumnProperty.builder()
      * .name("name")
      * .type("type")
+     * // the properties below are optional
+     * .subType("subType")
      * .build()))
      * .name("name")
      * // the properties below are optional
@@ -58281,7 +59580,7 @@ public object quicksight {
     }
 
     /**
-     * The configuration of tags on a dataset to set row-level security.</p>.
+     * The element you can use to define tags for row-level security.
      *
      * Example:
      * ```
@@ -58315,7 +59614,7 @@ public object quicksight {
     }
 
     /**
-     * Permission for the resource.</p>.
+     * A set of rules associated with a tag.
      *
      * Example:
      * ```
@@ -58355,6 +59654,8 @@ public object quicksight {
      * .inputColumns(List.of(InputColumnProperty.builder()
      * .name("name")
      * .type("type")
+     * // the properties below are optional
+     * .subType("subType")
      * .build()))
      * // the properties below are optional
      * .uploadSettings(UploadSettingsProperty.builder()
@@ -58378,9 +59679,9 @@ public object quicksight {
     }
 
     /**
-     * List of default values defined for a given string dataset parameter type.
+     * A list of default values for a given string dataset parameter type.
      *
-     * Currently only static values are supported.</p>
+     * This structure only accepts static values.
      *
      * Example:
      * ```
@@ -58404,7 +59705,7 @@ public object quicksight {
     }
 
     /**
-     * A parameter created in the dataset of string data type.</p>.
+     * A string parameter that is created in the dataset.
      *
      * Example:
      * ```
@@ -58479,6 +59780,7 @@ public object quicksight {
      * .newColumnType("newColumnType")
      * // the properties below are optional
      * .format("format")
+     * .subType("subType")
      * .build())
      * .createColumnsOperation(CreateColumnsOperationProperty.builder()
      * .columns(List.of(CalculatedColumnProperty.builder()
@@ -58650,8 +59952,20 @@ public object quicksight {
      * .host("host")
      * .port(123)
      * .build())
+     * .starburstParameters(StarburstParametersProperty.builder()
+     * .catalog("catalog")
+     * .host("host")
+     * .port(123)
+     * // the properties below are optional
+     * .productType("productType")
+     * .build())
      * .teradataParameters(TeradataParametersProperty.builder()
      * .database("database")
+     * .host("host")
+     * .port(123)
+     * .build())
+     * .trinoParameters(TrinoParametersProperty.builder()
+     * .catalog("catalog")
      * .host("host")
      * .port(123)
      * .build())
@@ -58747,8 +60061,20 @@ public object quicksight {
      * .host("host")
      * .port(123)
      * .build())
+     * .starburstParameters(StarburstParametersProperty.builder()
+     * .catalog("catalog")
+     * .host("host")
+     * .port(123)
+     * // the properties below are optional
+     * .productType("productType")
+     * .build())
      * .teradataParameters(TeradataParametersProperty.builder()
      * .database("database")
+     * .host("host")
+     * .port(123)
+     * .build())
+     * .trinoParameters(TrinoParametersProperty.builder()
+     * .catalog("catalog")
      * .host("host")
      * .port(123)
      * .build())
@@ -58841,8 +60167,20 @@ public object quicksight {
      * .host("host")
      * .port(123)
      * .build())
+     * .starburstParameters(StarburstParametersProperty.builder()
+     * .catalog("catalog")
+     * .host("host")
+     * .port(123)
+     * // the properties below are optional
+     * .productType("productType")
+     * .build())
      * .teradataParameters(TeradataParametersProperty.builder()
      * .database("database")
+     * .host("host")
+     * .port(123)
+     * .build())
+     * .trinoParameters(TrinoParametersProperty.builder()
+     * .catalog("catalog")
      * .host("host")
      * .port(123)
      * .build())
@@ -59101,8 +60439,20 @@ public object quicksight {
      * .host("host")
      * .port(123)
      * .build())
+     * .starburstParameters(StarburstParametersProperty.builder()
+     * .catalog("catalog")
+     * .host("host")
+     * .port(123)
+     * // the properties below are optional
+     * .productType("productType")
+     * .build())
      * .teradataParameters(TeradataParametersProperty.builder()
      * .database("database")
+     * .host("host")
+     * .port(123)
+     * .build())
+     * .trinoParameters(TrinoParametersProperty.builder()
+     * .catalog("catalog")
      * .host("host")
      * .port(123)
      * .build())
@@ -59222,8 +60572,20 @@ public object quicksight {
      * .host("host")
      * .port(123)
      * .build())
+     * .starburstParameters(StarburstParametersProperty.builder()
+     * .catalog("catalog")
+     * .host("host")
+     * .port(123)
+     * // the properties below are optional
+     * .productType("productType")
+     * .build())
      * .teradataParameters(TeradataParametersProperty.builder()
      * .database("database")
+     * .host("host")
+     * .port(123)
+     * .build())
+     * .trinoParameters(TrinoParametersProperty.builder()
+     * .catalog("catalog")
      * .host("host")
      * .port(123)
      * .build())
@@ -59363,8 +60725,20 @@ public object quicksight {
      * .host("host")
      * .port(123)
      * .build())
+     * .starburstParameters(StarburstParametersProperty.builder()
+     * .catalog("catalog")
+     * .host("host")
+     * .port(123)
+     * // the properties below are optional
+     * .productType("productType")
+     * .build())
      * .teradataParameters(TeradataParametersProperty.builder()
      * .database("database")
+     * .host("host")
+     * .port(123)
+     * .build())
+     * .trinoParameters(TrinoParametersProperty.builder()
+     * .catalog("catalog")
      * .host("host")
      * .port(123)
      * .build())
@@ -59651,8 +61025,20 @@ public object quicksight {
      * .host("host")
      * .port(123)
      * .build())
+     * .starburstParameters(StarburstParametersProperty.builder()
+     * .catalog("catalog")
+     * .host("host")
+     * .port(123)
+     * // the properties below are optional
+     * .productType("productType")
+     * .build())
      * .teradataParameters(TeradataParametersProperty.builder()
      * .database("database")
+     * .host("host")
+     * .port(123)
+     * .build())
+     * .trinoParameters(TrinoParametersProperty.builder()
+     * .catalog("catalog")
      * .host("host")
      * .port(123)
      * .build())
@@ -59748,8 +61134,20 @@ public object quicksight {
      * .host("host")
      * .port(123)
      * .build())
+     * .starburstParameters(StarburstParametersProperty.builder()
+     * .catalog("catalog")
+     * .host("host")
+     * .port(123)
+     * // the properties below are optional
+     * .productType("productType")
+     * .build())
      * .teradataParameters(TeradataParametersProperty.builder()
      * .database("database")
+     * .host("host")
+     * .port(123)
+     * .build())
+     * .trinoParameters(TrinoParametersProperty.builder()
+     * .catalog("catalog")
      * .host("host")
      * .port(123)
      * .build())
@@ -59842,8 +61240,20 @@ public object quicksight {
      * .host("host")
      * .port(123)
      * .build())
+     * .starburstParameters(StarburstParametersProperty.builder()
+     * .catalog("catalog")
+     * .host("host")
+     * .port(123)
+     * // the properties below are optional
+     * .productType("productType")
+     * .build())
      * .teradataParameters(TeradataParametersProperty.builder()
      * .database("database")
+     * .host("host")
+     * .port(123)
+     * .build())
+     * .trinoParameters(TrinoParametersProperty.builder()
+     * .catalog("catalog")
      * .host("host")
      * .port(123)
      * .build())
@@ -60086,6 +61496,33 @@ public object quicksight {
     }
 
     /**
+     * The parameters that are required to connect to a Starburst data source.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * StarburstParametersProperty starburstParametersProperty = StarburstParametersProperty.builder()
+     * .catalog("catalog")
+     * .host("host")
+     * .port(123)
+     * // the properties below are optional
+     * .productType("productType")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-starburstparameters.html)
+     */
+    public inline fun cfnDataSourceStarburstParametersProperty(
+        block: CfnDataSourceStarburstParametersPropertyDsl.() -> Unit = {}
+    ): CfnDataSource.StarburstParametersProperty {
+        val builder = CfnDataSourceStarburstParametersPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The parameters for Teradata.
      *
      * Example:
@@ -60106,6 +61543,31 @@ public object quicksight {
         block: CfnDataSourceTeradataParametersPropertyDsl.() -> Unit = {}
     ): CfnDataSource.TeradataParametersProperty {
         val builder = CfnDataSourceTeradataParametersPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The parameters that are required to connect to a Trino data source.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * TrinoParametersProperty trinoParametersProperty = TrinoParametersProperty.builder()
+     * .catalog("catalog")
+     * .host("host")
+     * .port(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-trinoparameters.html)
+     */
+    public inline fun cfnDataSourceTrinoParametersProperty(
+        block: CfnDataSourceTrinoParametersPropertyDsl.() -> Unit = {}
+    ): CfnDataSource.TrinoParametersProperty {
+        val builder = CfnDataSourceTrinoParametersPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -60339,6 +61801,10 @@ public object quicksight {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.quicksight.*;
      * AggregationFunctionProperty aggregationFunctionProperty = AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -60377,6 +61843,10 @@ public object quicksight {
      * .sortDirection("sortDirection")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -60578,6 +62048,55 @@ public object quicksight {
         block: CfnTemplateArcOptionsPropertyDsl.() -> Unit = {}
     ): CfnTemplate.ArcOptionsProperty {
         val builder = CfnTemplateArcOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * An array of analysis level configurations.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * AssetOptionsProperty assetOptionsProperty = AssetOptionsProperty.builder()
+     * .timezone("timezone")
+     * .weekStart("weekStart")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-assetoptions.html)
+     */
+    public inline fun cfnTemplateAssetOptionsProperty(
+        block: CfnTemplateAssetOptionsPropertyDsl.() -> Unit = {}
+    ): CfnTemplate.AssetOptionsProperty {
+        val builder = CfnTemplateAssetOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Aggregation for attributes.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * AttributeAggregationFunctionProperty attributeAggregationFunctionProperty =
+     * AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-attributeaggregationfunction.html)
+     */
+    public inline fun cfnTemplateAttributeAggregationFunctionProperty(
+        block: CfnTemplateAttributeAggregationFunctionPropertyDsl.() -> Unit = {}
+    ): CfnTemplate.AttributeAggregationFunctionProperty {
+        val builder = CfnTemplateAttributeAggregationFunctionPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -61031,6 +62550,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -61059,6 +62582,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -61087,6 +62614,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -62406,6 +63937,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -62851,6 +64386,7 @@ public object quicksight {
      * .matchOperator("matchOperator")
      * // the properties below are optional
      * .categoryValues(List.of("categoryValues"))
+     * .nullOption("nullOption")
      * .selectAllOptions("selectAllOptions")
      * .build())
      * .build();
@@ -62903,6 +64439,7 @@ public object quicksight {
      * .matchOperator("matchOperator")
      * // the properties below are optional
      * .categoryValues(List.of("categoryValues"))
+     * .nullOption("nullOption")
      * .selectAllOptions("selectAllOptions")
      * .build())
      * .build())
@@ -63052,6 +64589,34 @@ public object quicksight {
     }
 
     /**
+     * The color configurations for a column.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * ColorsConfigurationProperty colorsConfigurationProperty = ColorsConfigurationProperty.builder()
+     * .customColors(List.of(CustomColorProperty.builder()
+     * .color("color")
+     * // the properties below are optional
+     * .fieldValue("fieldValue")
+     * .specialValue("specialValue")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-colorsconfiguration.html)
+     */
+    public inline fun cfnTemplateColorsConfigurationProperty(
+        block: CfnTemplateColorsConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnTemplate.ColorsConfigurationProperty {
+        val builder = CfnTemplateColorsConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The general configuration of a column.
      *
      * Example:
@@ -63065,6 +64630,14 @@ public object quicksight {
      * .dataSetIdentifier("dataSetIdentifier")
      * .build())
      * // the properties below are optional
+     * .colorsConfiguration(ColorsConfigurationProperty.builder()
+     * .customColors(List.of(CustomColorProperty.builder()
+     * .color("color")
+     * // the properties below are optional
+     * .fieldValue("fieldValue")
+     * .specialValue("specialValue")
+     * .build()))
+     * .build())
      * .formatConfiguration(FormatConfigurationProperty.builder()
      * .dateTimeFormatConfiguration(DateTimeFormatConfigurationProperty.builder()
      * .dateTimeFormat("dateTimeFormat")
@@ -63521,6 +65094,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -63558,6 +65135,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregation(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -63659,6 +65240,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -63687,6 +65272,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -64347,6 +65936,32 @@ public object quicksight {
     }
 
     /**
+     * Determines the color that's applied to a particular data value in a column.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * CustomColorProperty customColorProperty = CustomColorProperty.builder()
+     * .color("color")
+     * // the properties below are optional
+     * .fieldValue("fieldValue")
+     * .specialValue("specialValue")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-customcolor.html)
+     */
+    public inline fun cfnTemplateCustomColorProperty(
+        block: CfnTemplateCustomColorPropertyDsl.() -> Unit = {}
+    ): CfnTemplate.CustomColorProperty {
+        val builder = CfnTemplateCustomColorPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The configuration of a `CustomContentVisual` .
      *
      * Example:
@@ -64828,6 +66443,9 @@ public object quicksight {
      * DataPathColorProperty dataPathColorProperty = DataPathColorProperty.builder()
      * .color("color")
      * .element(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build())
@@ -64882,6 +66500,9 @@ public object quicksight {
      * DataPathSortProperty dataPathSortProperty = DataPathSortProperty.builder()
      * .direction("direction")
      * .sortPaths(List.of(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build()))
@@ -64899,6 +66520,29 @@ public object quicksight {
     }
 
     /**
+     * The type of the data path value.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * DataPathTypeProperty dataPathTypeProperty = DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-datapathtype.html)
+     */
+    public inline fun cfnTemplateDataPathTypeProperty(
+        block: CfnTemplateDataPathTypePropertyDsl.() -> Unit = {}
+    ): CfnTemplate.DataPathTypeProperty {
+        val builder = CfnTemplateDataPathTypePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The data path that needs to be sorted.
      *
      * Example:
@@ -64907,6 +66551,9 @@ public object quicksight {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.quicksight.*;
      * DataPathValueProperty dataPathValueProperty = DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build();
@@ -65487,6 +67134,10 @@ public object quicksight {
      * DateTimePickerControlDisplayOptionsProperty dateTimePickerControlDisplayOptionsProperty =
      * DateTimePickerControlDisplayOptionsProperty.builder()
      * .dateTimeFormat("dateTimeFormat")
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -66321,6 +67972,10 @@ public object quicksight {
      * import software.amazon.awscdk.services.quicksight.*;
      * DropDownControlDisplayOptionsProperty dropDownControlDisplayOptionsProperty =
      * DropDownControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .selectAllOptions(ListControlSelectAllOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -66598,6 +68253,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregation(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -66711,6 +68370,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -67983,6 +69646,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -68051,6 +69718,10 @@ public object quicksight {
      * // the properties below are optional
      * .displayOptions(DateTimePickerControlDisplayOptionsProperty.builder()
      * .dateTimeFormat("dateTimeFormat")
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -68084,6 +69755,10 @@ public object quicksight {
      * .build()))
      * .build())
      * .displayOptions(DropDownControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .selectAllOptions(ListControlSelectAllOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -68123,6 +69798,10 @@ public object quicksight {
      * .build()))
      * .build())
      * .displayOptions(ListControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .searchOptions(ListControlSearchOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -68157,6 +69836,10 @@ public object quicksight {
      * // the properties below are optional
      * .displayOptions(RelativeDateTimeControlDisplayOptionsProperty.builder()
      * .dateTimeFormat("dateTimeFormat")
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -68183,6 +69866,10 @@ public object quicksight {
      * .title("title")
      * // the properties below are optional
      * .displayOptions(SliderControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -68208,6 +69895,10 @@ public object quicksight {
      * // the properties below are optional
      * .delimiter("delimiter")
      * .displayOptions(TextAreaControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -68234,6 +69925,10 @@ public object quicksight {
      * .title("title")
      * // the properties below are optional
      * .displayOptions(TextFieldControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -68283,6 +69978,10 @@ public object quicksight {
      * // the properties below are optional
      * .displayOptions(DateTimePickerControlDisplayOptionsProperty.builder()
      * .dateTimeFormat("dateTimeFormat")
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -68337,6 +70036,10 @@ public object quicksight {
      * .build()))
      * .build())
      * .displayOptions(DropDownControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .selectAllOptions(ListControlSelectAllOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -68385,6 +70088,7 @@ public object quicksight {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.quicksight.*;
+     * Object allSheets;
      * FilterGroupProperty filterGroupProperty = FilterGroupProperty.builder()
      * .crossDataset("crossDataset")
      * .filterGroupId("filterGroupId")
@@ -68414,6 +70118,7 @@ public object quicksight {
      * .matchOperator("matchOperator")
      * // the properties below are optional
      * .categoryValues(List.of("categoryValues"))
+     * .nullOption("nullOption")
      * .selectAllOptions("selectAllOptions")
      * .build())
      * .build())
@@ -68429,6 +70134,10 @@ public object quicksight {
      * .nullOption("nullOption")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -68451,6 +70160,10 @@ public object quicksight {
      * .nullOption("nullOption")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -68504,6 +70217,11 @@ public object quicksight {
      * .filterId("filterId")
      * // the properties below are optional
      * .parameterName("parameterName")
+     * .rollingDate(RollingDateConfigurationProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .dataSetIdentifier("dataSetIdentifier")
+     * .build())
      * .timeGranularity("timeGranularity")
      * .value("value")
      * .build())
@@ -68552,6 +70270,10 @@ public object quicksight {
      * .sortDirection("sortDirection")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -68574,6 +70296,7 @@ public object quicksight {
      * .build())
      * .build()))
      * .scopeConfiguration(FilterScopeConfigurationProperty.builder()
+     * .allSheets(allSheets)
      * .selectedSheets(SelectedSheetsFilterScopeConfigurationProperty.builder()
      * .sheetVisualScopingConfigurations(List.of(SheetVisualScopingConfigurationProperty.builder()
      * .scope("scope")
@@ -68611,6 +70334,7 @@ public object quicksight {
      * .matchOperator("matchOperator")
      * // the properties below are optional
      * .categoryValues(List.of("categoryValues"))
+     * .nullOption("nullOption")
      * .selectAllOptions("selectAllOptions")
      * .build();
      * ```
@@ -68650,6 +70374,10 @@ public object quicksight {
      * .build()))
      * .build())
      * .displayOptions(ListControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .searchOptions(ListControlSearchOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -68790,6 +70518,7 @@ public object quicksight {
      * .matchOperator("matchOperator")
      * // the properties below are optional
      * .categoryValues(List.of("categoryValues"))
+     * .nullOption("nullOption")
      * .selectAllOptions("selectAllOptions")
      * .build())
      * .build())
@@ -68805,6 +70534,10 @@ public object quicksight {
      * .nullOption("nullOption")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -68827,6 +70560,10 @@ public object quicksight {
      * .nullOption("nullOption")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -68880,6 +70617,11 @@ public object quicksight {
      * .filterId("filterId")
      * // the properties below are optional
      * .parameterName("parameterName")
+     * .rollingDate(RollingDateConfigurationProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .dataSetIdentifier("dataSetIdentifier")
+     * .build())
      * .timeGranularity("timeGranularity")
      * .value("value")
      * .build())
@@ -68928,6 +70670,10 @@ public object quicksight {
      * .sortDirection("sortDirection")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -68977,6 +70723,10 @@ public object quicksight {
      * // the properties below are optional
      * .displayOptions(RelativeDateTimeControlDisplayOptionsProperty.builder()
      * .dateTimeFormat("dateTimeFormat")
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -69017,8 +70767,10 @@ public object quicksight {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.quicksight.*;
+     * Object allSheets;
      * FilterScopeConfigurationProperty filterScopeConfigurationProperty =
      * FilterScopeConfigurationProperty.builder()
+     * .allSheets(allSheets)
      * .selectedSheets(SelectedSheetsFilterScopeConfigurationProperty.builder()
      * .sheetVisualScopingConfigurations(List.of(SheetVisualScopingConfigurationProperty.builder()
      * .scope("scope")
@@ -69083,6 +70835,10 @@ public object quicksight {
      * .title("title")
      * // the properties below are optional
      * .displayOptions(SliderControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -69129,6 +70885,10 @@ public object quicksight {
      * // the properties below are optional
      * .delimiter("delimiter")
      * .displayOptions(TextAreaControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -69176,6 +70936,10 @@ public object quicksight {
      * .title("title")
      * // the properties below are optional
      * .displayOptions(TextFieldControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -70970,6 +72734,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -71956,6 +73724,9 @@ public object quicksight {
      * GrowthRateComputationProperty growthRateComputationProperty =
      * GrowthRateComputationProperty.builder()
      * .computationId("computationId")
+     * // the properties below are optional
+     * .name("name")
+     * .periodSize(123)
      * .time(DimensionFieldProperty.builder()
      * .categoricalDimensionField(CategoricalDimensionFieldProperty.builder()
      * .column(ColumnIdentifierProperty.builder()
@@ -72194,9 +73965,6 @@ public object quicksight {
      * .hierarchyId("hierarchyId")
      * .build())
      * .build())
-     * // the properties below are optional
-     * .name("name")
-     * .periodSize(123)
      * .value(MeasureFieldProperty.builder()
      * .calculatedMeasureField(CalculatedMeasureFieldProperty.builder()
      * .expression("expression")
@@ -72602,6 +74370,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -72630,6 +74402,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -72984,497 +74760,6 @@ public object quicksight {
      *
      * Example:
      * ```
-     * // The code below shows an example of how to instantiate this type.
-     * // The values are placeholders you should change.
-     * import software.amazon.awscdk.services.quicksight.*;
-     * Object dataDriven;
-     * HistogramConfigurationProperty histogramConfigurationProperty =
-     * HistogramConfigurationProperty.builder()
-     * .binOptions(HistogramBinOptionsProperty.builder()
-     * .binCount(BinCountOptionsProperty.builder()
-     * .value(123)
-     * .build())
-     * .binWidth(BinWidthOptionsProperty.builder()
-     * .binCountLimit(123)
-     * .value(123)
-     * .build())
-     * .selectedBinType("selectedBinType")
-     * .startValue(123)
-     * .build())
-     * .dataLabels(DataLabelOptionsProperty.builder()
-     * .categoryLabelVisibility("categoryLabelVisibility")
-     * .dataLabelTypes(List.of(DataLabelTypeProperty.builder()
-     * .dataPathLabelType(DataPathLabelTypeProperty.builder()
-     * .fieldId("fieldId")
-     * .fieldValue("fieldValue")
-     * .visibility("visibility")
-     * .build())
-     * .fieldLabelType(FieldLabelTypeProperty.builder()
-     * .fieldId("fieldId")
-     * .visibility("visibility")
-     * .build())
-     * .maximumLabelType(MaximumLabelTypeProperty.builder()
-     * .visibility("visibility")
-     * .build())
-     * .minimumLabelType(MinimumLabelTypeProperty.builder()
-     * .visibility("visibility")
-     * .build())
-     * .rangeEndsLabelType(RangeEndsLabelTypeProperty.builder()
-     * .visibility("visibility")
-     * .build())
-     * .build()))
-     * .labelColor("labelColor")
-     * .labelContent("labelContent")
-     * .labelFontConfiguration(FontConfigurationProperty.builder()
-     * .fontColor("fontColor")
-     * .fontDecoration("fontDecoration")
-     * .fontSize(FontSizeProperty.builder()
-     * .relative("relative")
-     * .build())
-     * .fontStyle("fontStyle")
-     * .fontWeight(FontWeightProperty.builder()
-     * .name("name")
-     * .build())
-     * .build())
-     * .measureLabelVisibility("measureLabelVisibility")
-     * .overlap("overlap")
-     * .position("position")
-     * .totalsVisibility("totalsVisibility")
-     * .visibility("visibility")
-     * .build())
-     * .fieldWells(HistogramFieldWellsProperty.builder()
-     * .histogramAggregatedFieldWells(HistogramAggregatedFieldWellsProperty.builder()
-     * .values(List.of(MeasureFieldProperty.builder()
-     * .calculatedMeasureField(CalculatedMeasureFieldProperty.builder()
-     * .expression("expression")
-     * .fieldId("fieldId")
-     * .build())
-     * .categoricalMeasureField(CategoricalMeasureFieldProperty.builder()
-     * .column(ColumnIdentifierProperty.builder()
-     * .columnName("columnName")
-     * .dataSetIdentifier("dataSetIdentifier")
-     * .build())
-     * .fieldId("fieldId")
-     * // the properties below are optional
-     * .aggregationFunction("aggregationFunction")
-     * .formatConfiguration(StringFormatConfigurationProperty.builder()
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .numericFormatConfiguration(NumericFormatConfigurationProperty.builder()
-     * .currencyDisplayFormatConfiguration(CurrencyDisplayFormatConfigurationProperty.builder()
-     * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
-     * .decimalPlaces(123)
-     * .build())
-     * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
-     * .displayMode("displayMode")
-     * .build())
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .numberScale("numberScale")
-     * .prefix("prefix")
-     * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
-     * .decimalSeparator("decimalSeparator")
-     * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
-     * .symbol("symbol")
-     * .visibility("visibility")
-     * .build())
-     * .build())
-     * .suffix("suffix")
-     * .symbol("symbol")
-     * .build())
-     * .numberDisplayFormatConfiguration(NumberDisplayFormatConfigurationProperty.builder()
-     * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
-     * .decimalPlaces(123)
-     * .build())
-     * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
-     * .displayMode("displayMode")
-     * .build())
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .numberScale("numberScale")
-     * .prefix("prefix")
-     * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
-     * .decimalSeparator("decimalSeparator")
-     * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
-     * .symbol("symbol")
-     * .visibility("visibility")
-     * .build())
-     * .build())
-     * .suffix("suffix")
-     * .build())
-     * .percentageDisplayFormatConfiguration(PercentageDisplayFormatConfigurationProperty.builder()
-     * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
-     * .decimalPlaces(123)
-     * .build())
-     * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
-     * .displayMode("displayMode")
-     * .build())
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .prefix("prefix")
-     * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
-     * .decimalSeparator("decimalSeparator")
-     * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
-     * .symbol("symbol")
-     * .visibility("visibility")
-     * .build())
-     * .build())
-     * .suffix("suffix")
-     * .build())
-     * .build())
-     * .build())
-     * .build())
-     * .dateMeasureField(DateMeasureFieldProperty.builder()
-     * .column(ColumnIdentifierProperty.builder()
-     * .columnName("columnName")
-     * .dataSetIdentifier("dataSetIdentifier")
-     * .build())
-     * .fieldId("fieldId")
-     * // the properties below are optional
-     * .aggregationFunction("aggregationFunction")
-     * .formatConfiguration(DateTimeFormatConfigurationProperty.builder()
-     * .dateTimeFormat("dateTimeFormat")
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .numericFormatConfiguration(NumericFormatConfigurationProperty.builder()
-     * .currencyDisplayFormatConfiguration(CurrencyDisplayFormatConfigurationProperty.builder()
-     * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
-     * .decimalPlaces(123)
-     * .build())
-     * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
-     * .displayMode("displayMode")
-     * .build())
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .numberScale("numberScale")
-     * .prefix("prefix")
-     * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
-     * .decimalSeparator("decimalSeparator")
-     * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
-     * .symbol("symbol")
-     * .visibility("visibility")
-     * .build())
-     * .build())
-     * .suffix("suffix")
-     * .symbol("symbol")
-     * .build())
-     * .numberDisplayFormatConfiguration(NumberDisplayFormatConfigurationProperty.builder()
-     * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
-     * .decimalPlaces(123)
-     * .build())
-     * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
-     * .displayMode("displayMode")
-     * .build())
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .numberScale("numberScale")
-     * .prefix("prefix")
-     * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
-     * .decimalSeparator("decimalSeparator")
-     * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
-     * .symbol("symbol")
-     * .visibility("visibility")
-     * .build())
-     * .build())
-     * .suffix("suffix")
-     * .build())
-     * .percentageDisplayFormatConfiguration(PercentageDisplayFormatConfigurationProperty.builder()
-     * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
-     * .decimalPlaces(123)
-     * .build())
-     * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
-     * .displayMode("displayMode")
-     * .build())
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .prefix("prefix")
-     * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
-     * .decimalSeparator("decimalSeparator")
-     * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
-     * .symbol("symbol")
-     * .visibility("visibility")
-     * .build())
-     * .build())
-     * .suffix("suffix")
-     * .build())
-     * .build())
-     * .build())
-     * .build())
-     * .numericalMeasureField(NumericalMeasureFieldProperty.builder()
-     * .column(ColumnIdentifierProperty.builder()
-     * .columnName("columnName")
-     * .dataSetIdentifier("dataSetIdentifier")
-     * .build())
-     * .fieldId("fieldId")
-     * // the properties below are optional
-     * .aggregationFunction(NumericalAggregationFunctionProperty.builder()
-     * .percentileAggregation(PercentileAggregationProperty.builder()
-     * .percentileValue(123)
-     * .build())
-     * .simpleNumericalAggregation("simpleNumericalAggregation")
-     * .build())
-     * .formatConfiguration(NumberFormatConfigurationProperty.builder()
-     * .formatConfiguration(NumericFormatConfigurationProperty.builder()
-     * .currencyDisplayFormatConfiguration(CurrencyDisplayFormatConfigurationProperty.builder()
-     * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
-     * .decimalPlaces(123)
-     * .build())
-     * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
-     * .displayMode("displayMode")
-     * .build())
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .numberScale("numberScale")
-     * .prefix("prefix")
-     * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
-     * .decimalSeparator("decimalSeparator")
-     * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
-     * .symbol("symbol")
-     * .visibility("visibility")
-     * .build())
-     * .build())
-     * .suffix("suffix")
-     * .symbol("symbol")
-     * .build())
-     * .numberDisplayFormatConfiguration(NumberDisplayFormatConfigurationProperty.builder()
-     * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
-     * .decimalPlaces(123)
-     * .build())
-     * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
-     * .displayMode("displayMode")
-     * .build())
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .numberScale("numberScale")
-     * .prefix("prefix")
-     * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
-     * .decimalSeparator("decimalSeparator")
-     * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
-     * .symbol("symbol")
-     * .visibility("visibility")
-     * .build())
-     * .build())
-     * .suffix("suffix")
-     * .build())
-     * .percentageDisplayFormatConfiguration(PercentageDisplayFormatConfigurationProperty.builder()
-     * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
-     * .decimalPlaces(123)
-     * .build())
-     * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
-     * .displayMode("displayMode")
-     * .build())
-     * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
-     * .nullString("nullString")
-     * .build())
-     * .prefix("prefix")
-     * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
-     * .decimalSeparator("decimalSeparator")
-     * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
-     * .symbol("symbol")
-     * .visibility("visibility")
-     * .build())
-     * .build())
-     * .suffix("suffix")
-     * .build())
-     * .build())
-     * .build())
-     * .build())
-     * .build()))
-     * .build())
-     * .build())
-     * .tooltip(TooltipOptionsProperty.builder()
-     * .fieldBasedTooltip(FieldBasedTooltipProperty.builder()
-     * .aggregationVisibility("aggregationVisibility")
-     * .tooltipFields(List.of(TooltipItemProperty.builder()
-     * .columnTooltipItem(ColumnTooltipItemProperty.builder()
-     * .column(ColumnIdentifierProperty.builder()
-     * .columnName("columnName")
-     * .dataSetIdentifier("dataSetIdentifier")
-     * .build())
-     * // the properties below are optional
-     * .aggregation(AggregationFunctionProperty.builder()
-     * .categoricalAggregationFunction("categoricalAggregationFunction")
-     * .dateAggregationFunction("dateAggregationFunction")
-     * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
-     * .percentileAggregation(PercentileAggregationProperty.builder()
-     * .percentileValue(123)
-     * .build())
-     * .simpleNumericalAggregation("simpleNumericalAggregation")
-     * .build())
-     * .build())
-     * .label("label")
-     * .visibility("visibility")
-     * .build())
-     * .fieldTooltipItem(FieldTooltipItemProperty.builder()
-     * .fieldId("fieldId")
-     * // the properties below are optional
-     * .label("label")
-     * .visibility("visibility")
-     * .build())
-     * .build()))
-     * .tooltipTitleType("tooltipTitleType")
-     * .build())
-     * .selectedTooltipType("selectedTooltipType")
-     * .tooltipVisibility("tooltipVisibility")
-     * .build())
-     * .visualPalette(VisualPaletteProperty.builder()
-     * .chartColor("chartColor")
-     * .colorMap(List.of(DataPathColorProperty.builder()
-     * .color("color")
-     * .element(DataPathValueProperty.builder()
-     * .fieldId("fieldId")
-     * .fieldValue("fieldValue")
-     * .build())
-     * // the properties below are optional
-     * .timeGranularity("timeGranularity")
-     * .build()))
-     * .build())
-     * .xAxisDisplayOptions(AxisDisplayOptionsProperty.builder()
-     * .axisLineVisibility("axisLineVisibility")
-     * .axisOffset("axisOffset")
-     * .dataOptions(AxisDataOptionsProperty.builder()
-     * .dateAxisOptions(DateAxisOptionsProperty.builder()
-     * .missingDateVisibility("missingDateVisibility")
-     * .build())
-     * .numericAxisOptions(NumericAxisOptionsProperty.builder()
-     * .range(AxisDisplayRangeProperty.builder()
-     * .dataDriven(dataDriven)
-     * .minMax(AxisDisplayMinMaxRangeProperty.builder()
-     * .maximum(123)
-     * .minimum(123)
-     * .build())
-     * .build())
-     * .scale(AxisScaleProperty.builder()
-     * .linear(AxisLinearScaleProperty.builder()
-     * .stepCount(123)
-     * .stepSize(123)
-     * .build())
-     * .logarithmic(AxisLogarithmicScaleProperty.builder()
-     * .base(123)
-     * .build())
-     * .build())
-     * .build())
-     * .build())
-     * .gridLineVisibility("gridLineVisibility")
-     * .scrollbarOptions(ScrollBarOptionsProperty.builder()
-     * .visibility("visibility")
-     * .visibleRange(VisibleRangeOptionsProperty.builder()
-     * .percentRange(PercentVisibleRangeProperty.builder()
-     * .from(123)
-     * .to(123)
-     * .build())
-     * .build())
-     * .build())
-     * .tickLabelOptions(AxisTickLabelOptionsProperty.builder()
-     * .labelOptions(LabelOptionsProperty.builder()
-     * .customLabel("customLabel")
-     * .fontConfiguration(FontConfigurationProperty.builder()
-     * .fontColor("fontColor")
-     * .fontDecoration("fontDecoration")
-     * .fontSize(FontSizeProperty.builder()
-     * .relative("relative")
-     * .build())
-     * .fontStyle("fontStyle")
-     * .fontWeight(FontWeightProperty.builder()
-     * .name("name")
-     * .build())
-     * .build())
-     * .visibility("visibility")
-     * .build())
-     * .rotationAngle(123)
-     * .build())
-     * .build())
-     * .xAxisLabelOptions(ChartAxisLabelOptionsProperty.builder()
-     * .axisLabelOptions(List.of(AxisLabelOptionsProperty.builder()
-     * .applyTo(AxisLabelReferenceOptionsProperty.builder()
-     * .column(ColumnIdentifierProperty.builder()
-     * .columnName("columnName")
-     * .dataSetIdentifier("dataSetIdentifier")
-     * .build())
-     * .fieldId("fieldId")
-     * .build())
-     * .customLabel("customLabel")
-     * .fontConfiguration(FontConfigurationProperty.builder()
-     * .fontColor("fontColor")
-     * .fontDecoration("fontDecoration")
-     * .fontSize(FontSizeProperty.builder()
-     * .relative("relative")
-     * .build())
-     * .fontStyle("fontStyle")
-     * .fontWeight(FontWeightProperty.builder()
-     * .name("name")
-     * .build())
-     * .build())
-     * .build()))
-     * .sortIconVisibility("sortIconVisibility")
-     * .visibility("visibility")
-     * .build())
-     * .yAxisDisplayOptions(AxisDisplayOptionsProperty.builder()
-     * .axisLineVisibility("axisLineVisibility")
-     * .axisOffset("axisOffset")
-     * .dataOptions(AxisDataOptionsProperty.builder()
-     * .dateAxisOptions(DateAxisOptionsProperty.builder()
-     * .missingDateVisibility("missingDateVisibility")
-     * .build())
-     * .numericAxisOptions(NumericAxisOptionsProperty.builder()
-     * .range(AxisDisplayRangeProperty.builder()
-     * .dataDriven(dataDriven)
-     * .minMax(AxisDisplayMinMaxRangeProperty.builder()
-     * .maximum(123)
-     * .minimum(123)
-     * .build())
-     * .build())
-     * .scale(AxisScaleProperty.builder()
-     * .linear(AxisLinearScaleProperty.builder()
-     * .stepCount(123)
-     * .stepSize(123)
-     * .build())
-     * .logarithmic(AxisLogarithmicScaleProperty.builder()
-     * .base(123)
-     * .build())
-     * .build())
-     * .build())
-     * .build())
-     * .gridLineVisibility("gridLineVisibility")
-     * .scrollbarOptions(ScrollBarOptionsProperty.builder()
-     * .visibility("visibility")
-     * .visibleRange(VisibleRangeOptionsProperty.builder()
-     * .percentRange(PercentVisibleRangeProperty.builder()
-     * .from(123)
-     * .to(123)
-     * .build())
-     * .build())
-     * .build())
-     * .tickLabelOptions(AxisTickLabelOptionsProperty.builder()
-     * .labelOptions(LabelOptionsProperty.builder()
-     * .customLabel("customLabel")
-     * .fontConfiguration(FontConfigurationProperty.builder()
-     * .fontColor("fontColor")
-     * .fontDecoration("fontDecoration")
-     * .fontSize(FontSizeProperty.builder()
-     * .relative("relative")
-     * .build())
-     * .fontStyle("fontStyle")
-     * .fontWeight(FontWeightProperty.builder()
-     * .name("name")
-     * .build())
-     * .build())
-     * .visibility("visibility")
-     * .build())
-     * .rotationAngle(123)
-     * .build())
-     * .build())
-     * .build();
      * ```
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-histogramconfiguration.html)
@@ -73961,6 +75246,126 @@ public object quicksight {
     }
 
     /**
+     * The conditional formatting for the actual value of a KPI visual.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * KPIActualValueConditionalFormattingProperty kPIActualValueConditionalFormattingProperty =
+     * KPIActualValueConditionalFormattingProperty.builder()
+     * .icon(ConditionalFormattingIconProperty.builder()
+     * .customCondition(ConditionalFormattingCustomIconConditionProperty.builder()
+     * .expression("expression")
+     * .iconOptions(ConditionalFormattingCustomIconOptionsProperty.builder()
+     * .icon("icon")
+     * .unicodeIcon("unicodeIcon")
+     * .build())
+     * // the properties below are optional
+     * .color("color")
+     * .displayConfiguration(ConditionalFormattingIconDisplayConfigurationProperty.builder()
+     * .iconDisplayOption("iconDisplayOption")
+     * .build())
+     * .build())
+     * .iconSet(ConditionalFormattingIconSetProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .iconSetType("iconSetType")
+     * .build())
+     * .build())
+     * .textColor(ConditionalFormattingColorProperty.builder()
+     * .gradient(ConditionalFormattingGradientColorProperty.builder()
+     * .color(GradientColorProperty.builder()
+     * .stops(List.of(GradientStopProperty.builder()
+     * .gradientOffset(123)
+     * // the properties below are optional
+     * .color("color")
+     * .dataValue(123)
+     * .build()))
+     * .build())
+     * .expression("expression")
+     * .build())
+     * .solid(ConditionalFormattingSolidColorProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .color("color")
+     * .build())
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-kpiactualvalueconditionalformatting.html)
+     */
+    public inline fun cfnTemplateKPIActualValueConditionalFormattingProperty(
+        block: CfnTemplateKPIActualValueConditionalFormattingPropertyDsl.() -> Unit = {}
+    ): CfnTemplate.KPIActualValueConditionalFormattingProperty {
+        val builder = CfnTemplateKPIActualValueConditionalFormattingPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The conditional formatting for the comparison value of a KPI visual.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * KPIComparisonValueConditionalFormattingProperty kPIComparisonValueConditionalFormattingProperty
+     * = KPIComparisonValueConditionalFormattingProperty.builder()
+     * .icon(ConditionalFormattingIconProperty.builder()
+     * .customCondition(ConditionalFormattingCustomIconConditionProperty.builder()
+     * .expression("expression")
+     * .iconOptions(ConditionalFormattingCustomIconOptionsProperty.builder()
+     * .icon("icon")
+     * .unicodeIcon("unicodeIcon")
+     * .build())
+     * // the properties below are optional
+     * .color("color")
+     * .displayConfiguration(ConditionalFormattingIconDisplayConfigurationProperty.builder()
+     * .iconDisplayOption("iconDisplayOption")
+     * .build())
+     * .build())
+     * .iconSet(ConditionalFormattingIconSetProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .iconSetType("iconSetType")
+     * .build())
+     * .build())
+     * .textColor(ConditionalFormattingColorProperty.builder()
+     * .gradient(ConditionalFormattingGradientColorProperty.builder()
+     * .color(GradientColorProperty.builder()
+     * .stops(List.of(GradientStopProperty.builder()
+     * .gradientOffset(123)
+     * // the properties below are optional
+     * .color("color")
+     * .dataValue(123)
+     * .build()))
+     * .build())
+     * .expression("expression")
+     * .build())
+     * .solid(ConditionalFormattingSolidColorProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .color("color")
+     * .build())
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-kpicomparisonvalueconditionalformatting.html)
+     */
+    public inline fun cfnTemplateKPIComparisonValueConditionalFormattingProperty(
+        block: CfnTemplateKPIComparisonValueConditionalFormattingPropertyDsl.() -> Unit = {}
+    ): CfnTemplate.KPIComparisonValueConditionalFormattingProperty {
+        val builder = CfnTemplateKPIComparisonValueConditionalFormattingPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The conditional formatting options of a KPI visual.
      *
      * Example:
@@ -73970,6 +75375,84 @@ public object quicksight {
      * import software.amazon.awscdk.services.quicksight.*;
      * KPIConditionalFormattingOptionProperty kPIConditionalFormattingOptionProperty =
      * KPIConditionalFormattingOptionProperty.builder()
+     * .actualValue(KPIActualValueConditionalFormattingProperty.builder()
+     * .icon(ConditionalFormattingIconProperty.builder()
+     * .customCondition(ConditionalFormattingCustomIconConditionProperty.builder()
+     * .expression("expression")
+     * .iconOptions(ConditionalFormattingCustomIconOptionsProperty.builder()
+     * .icon("icon")
+     * .unicodeIcon("unicodeIcon")
+     * .build())
+     * // the properties below are optional
+     * .color("color")
+     * .displayConfiguration(ConditionalFormattingIconDisplayConfigurationProperty.builder()
+     * .iconDisplayOption("iconDisplayOption")
+     * .build())
+     * .build())
+     * .iconSet(ConditionalFormattingIconSetProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .iconSetType("iconSetType")
+     * .build())
+     * .build())
+     * .textColor(ConditionalFormattingColorProperty.builder()
+     * .gradient(ConditionalFormattingGradientColorProperty.builder()
+     * .color(GradientColorProperty.builder()
+     * .stops(List.of(GradientStopProperty.builder()
+     * .gradientOffset(123)
+     * // the properties below are optional
+     * .color("color")
+     * .dataValue(123)
+     * .build()))
+     * .build())
+     * .expression("expression")
+     * .build())
+     * .solid(ConditionalFormattingSolidColorProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .color("color")
+     * .build())
+     * .build())
+     * .build())
+     * .comparisonValue(KPIComparisonValueConditionalFormattingProperty.builder()
+     * .icon(ConditionalFormattingIconProperty.builder()
+     * .customCondition(ConditionalFormattingCustomIconConditionProperty.builder()
+     * .expression("expression")
+     * .iconOptions(ConditionalFormattingCustomIconOptionsProperty.builder()
+     * .icon("icon")
+     * .unicodeIcon("unicodeIcon")
+     * .build())
+     * // the properties below are optional
+     * .color("color")
+     * .displayConfiguration(ConditionalFormattingIconDisplayConfigurationProperty.builder()
+     * .iconDisplayOption("iconDisplayOption")
+     * .build())
+     * .build())
+     * .iconSet(ConditionalFormattingIconSetProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .iconSetType("iconSetType")
+     * .build())
+     * .build())
+     * .textColor(ConditionalFormattingColorProperty.builder()
+     * .gradient(ConditionalFormattingGradientColorProperty.builder()
+     * .color(GradientColorProperty.builder()
+     * .stops(List.of(GradientStopProperty.builder()
+     * .gradientOffset(123)
+     * // the properties below are optional
+     * .color("color")
+     * .dataValue(123)
+     * .build()))
+     * .build())
+     * .expression("expression")
+     * .build())
+     * .solid(ConditionalFormattingSolidColorProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .color("color")
+     * .build())
+     * .build())
+     * .build())
      * .primaryValue(KPIPrimaryValueConditionalFormattingProperty.builder()
      * .icon(ConditionalFormattingIconProperty.builder()
      * .customCondition(ConditionalFormattingCustomIconConditionProperty.builder()
@@ -74053,6 +75536,84 @@ public object quicksight {
      * KPIConditionalFormattingProperty kPIConditionalFormattingProperty =
      * KPIConditionalFormattingProperty.builder()
      * .conditionalFormattingOptions(List.of(KPIConditionalFormattingOptionProperty.builder()
+     * .actualValue(KPIActualValueConditionalFormattingProperty.builder()
+     * .icon(ConditionalFormattingIconProperty.builder()
+     * .customCondition(ConditionalFormattingCustomIconConditionProperty.builder()
+     * .expression("expression")
+     * .iconOptions(ConditionalFormattingCustomIconOptionsProperty.builder()
+     * .icon("icon")
+     * .unicodeIcon("unicodeIcon")
+     * .build())
+     * // the properties below are optional
+     * .color("color")
+     * .displayConfiguration(ConditionalFormattingIconDisplayConfigurationProperty.builder()
+     * .iconDisplayOption("iconDisplayOption")
+     * .build())
+     * .build())
+     * .iconSet(ConditionalFormattingIconSetProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .iconSetType("iconSetType")
+     * .build())
+     * .build())
+     * .textColor(ConditionalFormattingColorProperty.builder()
+     * .gradient(ConditionalFormattingGradientColorProperty.builder()
+     * .color(GradientColorProperty.builder()
+     * .stops(List.of(GradientStopProperty.builder()
+     * .gradientOffset(123)
+     * // the properties below are optional
+     * .color("color")
+     * .dataValue(123)
+     * .build()))
+     * .build())
+     * .expression("expression")
+     * .build())
+     * .solid(ConditionalFormattingSolidColorProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .color("color")
+     * .build())
+     * .build())
+     * .build())
+     * .comparisonValue(KPIComparisonValueConditionalFormattingProperty.builder()
+     * .icon(ConditionalFormattingIconProperty.builder()
+     * .customCondition(ConditionalFormattingCustomIconConditionProperty.builder()
+     * .expression("expression")
+     * .iconOptions(ConditionalFormattingCustomIconOptionsProperty.builder()
+     * .icon("icon")
+     * .unicodeIcon("unicodeIcon")
+     * .build())
+     * // the properties below are optional
+     * .color("color")
+     * .displayConfiguration(ConditionalFormattingIconDisplayConfigurationProperty.builder()
+     * .iconDisplayOption("iconDisplayOption")
+     * .build())
+     * .build())
+     * .iconSet(ConditionalFormattingIconSetProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .iconSetType("iconSetType")
+     * .build())
+     * .build())
+     * .textColor(ConditionalFormattingColorProperty.builder()
+     * .gradient(ConditionalFormattingGradientColorProperty.builder()
+     * .color(GradientColorProperty.builder()
+     * .stops(List.of(GradientStopProperty.builder()
+     * .gradientOffset(123)
+     * // the properties below are optional
+     * .color("color")
+     * .dataValue(123)
+     * .build()))
+     * .build())
+     * .expression("expression")
+     * .build())
+     * .solid(ConditionalFormattingSolidColorProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .color("color")
+     * .build())
+     * .build())
+     * .build())
      * .primaryValue(KPIPrimaryValueConditionalFormattingProperty.builder()
      * .icon(ConditionalFormattingIconProperty.builder()
      * .customCondition(ConditionalFormattingCustomIconConditionProperty.builder()
@@ -74244,8 +75805,20 @@ public object quicksight {
      * .name("name")
      * .build())
      * .build())
+     * .sparkline(KPISparklineOptionsProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .color("color")
+     * .tooltipVisibility("tooltipVisibility")
+     * .visibility("visibility")
+     * .build())
      * .trendArrows(TrendArrowOptionsProperty.builder()
      * .visibility("visibility")
+     * .build())
+     * .visualLayoutOptions(KPIVisualLayoutOptionsProperty.builder()
+     * .standardLayout(KPIVisualStandardLayoutProperty.builder()
+     * .type("type")
+     * .build())
      * .build())
      * .build();
      * ```
@@ -74380,6 +75953,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -74409,6 +75986,60 @@ public object quicksight {
     }
 
     /**
+     * The options that determine the visibility, color, type, and tooltip visibility of the
+     * sparkline of a KPI visual.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * KPISparklineOptionsProperty kPISparklineOptionsProperty = KPISparklineOptionsProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .color("color")
+     * .tooltipVisibility("tooltipVisibility")
+     * .visibility("visibility")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-kpisparklineoptions.html)
+     */
+    public inline fun cfnTemplateKPISparklineOptionsProperty(
+        block: CfnTemplateKPISparklineOptionsPropertyDsl.() -> Unit = {}
+    ): CfnTemplate.KPISparklineOptionsProperty {
+        val builder = CfnTemplateKPISparklineOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The options that determine the layout a KPI visual.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * KPIVisualLayoutOptionsProperty kPIVisualLayoutOptionsProperty =
+     * KPIVisualLayoutOptionsProperty.builder()
+     * .standardLayout(KPIVisualStandardLayoutProperty.builder()
+     * .type("type")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-kpivisuallayoutoptions.html)
+     */
+    public inline fun cfnTemplateKPIVisualLayoutOptionsProperty(
+        block: CfnTemplateKPIVisualLayoutOptionsPropertyDsl.() -> Unit = {}
+    ): CfnTemplate.KPIVisualLayoutOptionsProperty {
+        val builder = CfnTemplateKPIVisualLayoutOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * A key performance indicator (KPI).
      *
      * For more information, see
@@ -74425,6 +76056,30 @@ public object quicksight {
         block: CfnTemplateKPIVisualPropertyDsl.() -> Unit = {}
     ): CfnTemplate.KPIVisualProperty {
         val builder = CfnTemplateKPIVisualPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The standard layout of the KPI visual.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * KPIVisualStandardLayoutProperty kPIVisualStandardLayoutProperty =
+     * KPIVisualStandardLayoutProperty.builder()
+     * .type("type")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-kpivisualstandardlayout.html)
+     */
+    public inline fun cfnTemplateKPIVisualStandardLayoutProperty(
+        block: CfnTemplateKPIVisualStandardLayoutPropertyDsl.() -> Unit = {}
+    ): CfnTemplate.KPIVisualStandardLayoutProperty {
+        val builder = CfnTemplateKPIVisualStandardLayoutPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -75206,6 +76861,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -75238,6 +76897,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -75379,6 +77042,10 @@ public object quicksight {
      * import software.amazon.awscdk.services.quicksight.*;
      * ListControlDisplayOptionsProperty listControlDisplayOptionsProperty =
      * ListControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .searchOptions(ListControlSearchOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -75594,6 +77261,9 @@ public object quicksight {
      * MaximumMinimumComputationProperty maximumMinimumComputationProperty =
      * MaximumMinimumComputationProperty.builder()
      * .computationId("computationId")
+     * .type("type")
+     * // the properties below are optional
+     * .name("name")
      * .time(DimensionFieldProperty.builder()
      * .categoricalDimensionField(CategoricalDimensionFieldProperty.builder()
      * .column(ColumnIdentifierProperty.builder()
@@ -75832,9 +77502,6 @@ public object quicksight {
      * .hierarchyId("hierarchyId")
      * .build())
      * .build())
-     * .type("type")
-     * // the properties below are optional
-     * .name("name")
      * .value(MeasureFieldProperty.builder()
      * .calculatedMeasureField(CalculatedMeasureFieldProperty.builder()
      * .expression("expression")
@@ -76689,6 +78356,10 @@ public object quicksight {
      * .nullOption("nullOption")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -76820,6 +78491,10 @@ public object quicksight {
      * .nullOption("nullOption")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -77256,6 +78931,10 @@ public object quicksight {
      * // the properties below are optional
      * .displayOptions(DateTimePickerControlDisplayOptionsProperty.builder()
      * .dateTimeFormat("dateTimeFormat")
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -77288,6 +78967,10 @@ public object quicksight {
      * .build()))
      * .build())
      * .displayOptions(DropDownControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .selectAllOptions(ListControlSelectAllOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -77331,6 +79014,10 @@ public object quicksight {
      * .build()))
      * .build())
      * .displayOptions(ListControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .searchOptions(ListControlSearchOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -77371,6 +79058,10 @@ public object quicksight {
      * .title("title")
      * // the properties below are optional
      * .displayOptions(SliderControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -77395,6 +79086,10 @@ public object quicksight {
      * // the properties below are optional
      * .delimiter("delimiter")
      * .displayOptions(TextAreaControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -77421,6 +79116,10 @@ public object quicksight {
      * .title("title")
      * // the properties below are optional
      * .displayOptions(TextFieldControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -77470,6 +79169,10 @@ public object quicksight {
      * // the properties below are optional
      * .displayOptions(DateTimePickerControlDisplayOptionsProperty.builder()
      * .dateTimeFormat("dateTimeFormat")
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -77682,6 +79385,10 @@ public object quicksight {
      * .build()))
      * .build())
      * .displayOptions(DropDownControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .selectAllOptions(ListControlSelectAllOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -77747,6 +79454,10 @@ public object quicksight {
      * .build()))
      * .build())
      * .displayOptions(ListControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .searchOptions(ListControlSearchOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -77838,6 +79549,10 @@ public object quicksight {
      * .title("title")
      * // the properties below are optional
      * .displayOptions(SliderControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -77883,6 +79598,10 @@ public object quicksight {
      * // the properties below are optional
      * .delimiter("delimiter")
      * .displayOptions(TextAreaControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -77930,6 +79649,10 @@ public object quicksight {
      * .title("title")
      * // the properties below are optional
      * .displayOptions(TextFieldControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -78062,6 +79785,8 @@ public object quicksight {
      * PeriodOverPeriodComputationProperty periodOverPeriodComputationProperty =
      * PeriodOverPeriodComputationProperty.builder()
      * .computationId("computationId")
+     * // the properties below are optional
+     * .name("name")
      * .time(DimensionFieldProperty.builder()
      * .categoricalDimensionField(CategoricalDimensionFieldProperty.builder()
      * .column(ColumnIdentifierProperty.builder()
@@ -78300,8 +80025,6 @@ public object quicksight {
      * .hierarchyId("hierarchyId")
      * .build())
      * .build())
-     * // the properties below are optional
-     * .name("name")
      * .value(MeasureFieldProperty.builder()
      * .calculatedMeasureField(CalculatedMeasureFieldProperty.builder()
      * .expression("expression")
@@ -78572,6 +80295,9 @@ public object quicksight {
      * PeriodToDateComputationProperty periodToDateComputationProperty =
      * PeriodToDateComputationProperty.builder()
      * .computationId("computationId")
+     * // the properties below are optional
+     * .name("name")
+     * .periodTimeGranularity("periodTimeGranularity")
      * .time(DimensionFieldProperty.builder()
      * .categoricalDimensionField(CategoricalDimensionFieldProperty.builder()
      * .column(ColumnIdentifierProperty.builder()
@@ -78810,9 +80536,6 @@ public object quicksight {
      * .hierarchyId("hierarchyId")
      * .build())
      * .build())
-     * // the properties below are optional
-     * .name("name")
-     * .periodTimeGranularity("periodTimeGranularity")
      * .value(MeasureFieldProperty.builder()
      * .calculatedMeasureField(CalculatedMeasureFieldProperty.builder()
      * .expression("expression")
@@ -79149,6 +80872,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -79177,6 +80904,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -79256,6 +80987,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -79269,6 +81004,9 @@ public object quicksight {
      * .dataPath(DataPathSortProperty.builder()
      * .direction("direction")
      * .sortPaths(List.of(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build()))
@@ -79630,6 +81368,9 @@ public object quicksight {
      * PivotTableDataPathOptionProperty pivotTableDataPathOptionProperty =
      * PivotTableDataPathOptionProperty.builder()
      * .dataPathList(List.of(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build()))
@@ -79660,6 +81401,9 @@ public object quicksight {
      * PivotTableFieldCollapseStateOptionProperty.builder()
      * .target(PivotTableFieldCollapseStateTargetProperty.builder()
      * .fieldDataPathValues(List.of(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build()))
@@ -79691,6 +81435,9 @@ public object quicksight {
      * PivotTableFieldCollapseStateTargetProperty pivotTableFieldCollapseStateTargetProperty =
      * PivotTableFieldCollapseStateTargetProperty.builder()
      * .fieldDataPathValues(List.of(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build()))
@@ -79748,6 +81495,9 @@ public object quicksight {
      * .collapseStateOptions(List.of(PivotTableFieldCollapseStateOptionProperty.builder()
      * .target(PivotTableFieldCollapseStateTargetProperty.builder()
      * .fieldDataPathValues(List.of(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build()))
@@ -79758,6 +81508,9 @@ public object quicksight {
      * .build()))
      * .dataPathOptions(List.of(PivotTableDataPathOptionProperty.builder()
      * .dataPathList(List.of(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build()))
@@ -79954,10 +81707,12 @@ public object quicksight {
      * .visibility("visibility")
      * .build())
      * .columnNamesVisibility("columnNamesVisibility")
+     * .defaultCellWidth("defaultCellWidth")
      * .metricPlacement("metricPlacement")
      * .rowAlternateColorOptions(RowAlternateColorOptionsProperty.builder()
      * .rowAlternateColors(List.of("rowAlternateColors"))
      * .status("status")
+     * .usePrimaryBackgroundColor("usePrimaryBackgroundColor")
      * .build())
      * .rowFieldNamesStyle(TableCellStyleProperty.builder()
      * .backgroundColor("backgroundColor")
@@ -80075,6 +81830,11 @@ public object quicksight {
      * .verticalTextAlignment("verticalTextAlignment")
      * .visibility("visibility")
      * .build())
+     * .rowsLabelOptions(PivotTableRowsLabelOptionsProperty.builder()
+     * .customLabel("customLabel")
+     * .visibility("visibility")
+     * .build())
+     * .rowsLayout("rowsLayout")
      * .singleMetricVisibility("singleMetricVisibility")
      * .toggleButtonsVisibility("toggleButtonsVisibility")
      * .build();
@@ -80116,6 +81876,33 @@ public object quicksight {
     }
 
     /**
+     * The options for the label thta is located above the row headers.
+     *
+     * This option is only applicable when `RowsLayout` is set to `HIERARCHY` .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * PivotTableRowsLabelOptionsProperty pivotTableRowsLabelOptionsProperty =
+     * PivotTableRowsLabelOptionsProperty.builder()
+     * .customLabel("customLabel")
+     * .visibility("visibility")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-pivottablerowslabeloptions.html)
+     */
+    public inline fun cfnTemplatePivotTableRowsLabelOptionsProperty(
+        block: CfnTemplatePivotTableRowsLabelOptionsPropertyDsl.() -> Unit = {}
+    ): CfnTemplate.PivotTableRowsLabelOptionsProperty {
+        val builder = CfnTemplatePivotTableRowsLabelOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The sort by field for the field sort options.
      *
      * Example:
@@ -80132,6 +81919,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -80145,6 +81936,9 @@ public object quicksight {
      * .dataPath(DataPathSortProperty.builder()
      * .direction("direction")
      * .sortPaths(List.of(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build()))
@@ -80187,6 +81981,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -80200,6 +81998,9 @@ public object quicksight {
      * .dataPath(DataPathSortProperty.builder()
      * .direction("direction")
      * .sortPaths(List.of(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build()))
@@ -80331,6 +82132,12 @@ public object quicksight {
      * .build())
      * .placement("placement")
      * .scrollStatus("scrollStatus")
+     * .totalAggregationOptions(List.of(TotalAggregationOptionProperty.builder()
+     * .fieldId("fieldId")
+     * .totalAggregationFunction(TotalAggregationFunctionProperty.builder()
+     * .simpleTotalAggregationFunction("simpleTotalAggregationFunction")
+     * .build())
+     * .build()))
      * .totalCellStyle(TableCellStyleProperty.builder()
      * .backgroundColor("backgroundColor")
      * .border(GlobalTableBorderOptionsProperty.builder()
@@ -80681,6 +82488,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -80709,6 +82520,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -80825,6 +82640,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .measureAggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -80835,6 +82654,7 @@ public object quicksight {
      * .build())
      * .build())
      * .build())
+     * .seriesType("seriesType")
      * .staticConfiguration(ReferenceLineStaticDataConfigurationProperty.builder()
      * .value(123)
      * .build())
@@ -80873,6 +82693,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .measureAggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -81027,6 +82851,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .measureAggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -81037,6 +82865,7 @@ public object quicksight {
      * .build())
      * .build())
      * .build())
+     * .seriesType("seriesType")
      * .staticConfiguration(ReferenceLineStaticDataConfigurationProperty.builder()
      * .value(123)
      * .build())
@@ -81296,6 +83125,10 @@ public object quicksight {
      * RelativeDateTimeControlDisplayOptionsProperty relativeDateTimeControlDisplayOptionsProperty =
      * RelativeDateTimeControlDisplayOptionsProperty.builder()
      * .dateTimeFormat("dateTimeFormat")
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -81432,6 +83265,7 @@ public object quicksight {
      * RowAlternateColorOptionsProperty.builder()
      * .rowAlternateColors(List.of("rowAlternateColors"))
      * .status("status")
+     * .usePrimaryBackgroundColor("usePrimaryBackgroundColor")
      * .build();
      * ```
      *
@@ -81551,6 +83385,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -82315,6 +84153,31 @@ public object quicksight {
     }
 
     /**
+     * A control to display info icons for filters and parameters.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * SheetControlInfoIconLabelOptionsProperty sheetControlInfoIconLabelOptionsProperty =
+     * SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-sheetcontrolinfoiconlabeloptions.html)
+     */
+    public inline fun cfnTemplateSheetControlInfoIconLabelOptionsProperty(
+        block: CfnTemplateSheetControlInfoIconLabelOptionsPropertyDsl.() -> Unit = {}
+    ): CfnTemplate.SheetControlInfoIconLabelOptionsProperty {
+        val builder = CfnTemplateSheetControlInfoIconLabelOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The configuration that determines the elements and canvas size options of sheet control.
      *
      * Example:
@@ -82611,6 +84474,10 @@ public object quicksight {
      * import software.amazon.awscdk.services.quicksight.*;
      * SliderControlDisplayOptionsProperty sliderControlDisplayOptionsProperty =
      * SliderControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .titleOptions(LabelOptionsProperty.builder()
      * .customLabel("customLabel")
      * .fontConfiguration(FontConfigurationProperty.builder()
@@ -82635,6 +84502,31 @@ public object quicksight {
         block: CfnTemplateSliderControlDisplayOptionsPropertyDsl.() -> Unit = {}
     ): CfnTemplate.SliderControlDisplayOptionsProperty {
         val builder = CfnTemplateSliderControlDisplayOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Configures the properties of a chart's axes that are used by small multiples panels.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * SmallMultiplesAxisPropertiesProperty smallMultiplesAxisPropertiesProperty =
+     * SmallMultiplesAxisPropertiesProperty.builder()
+     * .placement("placement")
+     * .scale("scale")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-smallmultiplesaxisproperties.html)
+     */
+    public inline fun cfnTemplateSmallMultiplesAxisPropertiesProperty(
+        block: CfnTemplateSmallMultiplesAxisPropertiesPropertyDsl.() -> Unit = {}
+    ): CfnTemplate.SmallMultiplesAxisPropertiesProperty {
+        val builder = CfnTemplateSmallMultiplesAxisPropertiesPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -82675,6 +84567,14 @@ public object quicksight {
      * .horizontalTextAlignment("horizontalTextAlignment")
      * .visibility("visibility")
      * .build())
+     * .build())
+     * .xAxis(SmallMultiplesAxisPropertiesProperty.builder()
+     * .placement("placement")
+     * .scale("scale")
+     * .build())
+     * .yAxis(SmallMultiplesAxisPropertiesProperty.builder()
+     * .placement("placement")
+     * .scale("scale")
      * .build())
      * .build();
      * ```
@@ -82994,6 +84894,9 @@ public object quicksight {
      * .verticalTextAlignment("verticalTextAlignment")
      * .visibility("visibility")
      * .build())
+     * .styleTargets(List.of(TableStyleTargetProperty.builder()
+     * .cellType("cellType")
+     * .build()))
      * .totalCellStyle(TableCellStyleProperty.builder()
      * .backgroundColor("backgroundColor")
      * .border(GlobalTableBorderOptionsProperty.builder()
@@ -84332,7 +86235,7 @@ public object quicksight {
     }
 
     /**
-     * The field options for a table visual.
+     * The field options of a table visual.
      *
      * Example:
      * ```
@@ -84341,6 +86244,9 @@ public object quicksight {
      * import software.amazon.awscdk.services.quicksight.*;
      * TableFieldOptionsProperty tableFieldOptionsProperty = TableFieldOptionsProperty.builder()
      * .order(List.of("order"))
+     * .pinnedFieldOptions(TablePinnedFieldOptionsProperty.builder()
+     * .pinnedLeftFields(List.of("pinnedLeftFields"))
+     * .build())
      * .selectedFieldOptions(List.of(TableFieldOptionProperty.builder()
      * .fieldId("fieldId")
      * // the properties below are optional
@@ -84620,6 +86526,7 @@ public object quicksight {
      * .rowAlternateColorOptions(RowAlternateColorOptionsProperty.builder()
      * .rowAlternateColors(List.of("rowAlternateColors"))
      * .status("status")
+     * .usePrimaryBackgroundColor("usePrimaryBackgroundColor")
      * .build())
      * .build();
      * ```
@@ -84655,6 +86562,30 @@ public object quicksight {
         block: CfnTemplateTablePaginatedReportOptionsPropertyDsl.() -> Unit = {}
     ): CfnTemplate.TablePaginatedReportOptionsProperty {
         val builder = CfnTemplateTablePaginatedReportOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The settings for the pinned columns of a table visual.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * TablePinnedFieldOptionsProperty tablePinnedFieldOptionsProperty =
+     * TablePinnedFieldOptionsProperty.builder()
+     * .pinnedLeftFields(List.of("pinnedLeftFields"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-tablepinnedfieldoptions.html)
+     */
+    public inline fun cfnTemplateTablePinnedFieldOptionsProperty(
+        block: CfnTemplateTablePinnedFieldOptionsPropertyDsl.() -> Unit = {}
+    ): CfnTemplate.TablePinnedFieldOptionsProperty {
+        val builder = CfnTemplateTablePinnedFieldOptionsPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -84794,6 +86725,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -84818,6 +86753,29 @@ public object quicksight {
         block: CfnTemplateTableSortConfigurationPropertyDsl.() -> Unit = {}
     ): CfnTemplate.TableSortConfigurationProperty {
         val builder = CfnTemplateTableSortConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The table style target.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * TableStyleTargetProperty tableStyleTargetProperty = TableStyleTargetProperty.builder()
+     * .cellType("cellType")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-tablestyletarget.html)
+     */
+    public inline fun cfnTemplateTableStyleTargetProperty(
+        block: CfnTemplateTableStyleTargetPropertyDsl.() -> Unit = {}
+    ): CfnTemplate.TableStyleTargetProperty {
+        val builder = CfnTemplateTableStyleTargetPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -85278,6 +87236,10 @@ public object quicksight {
      * import software.amazon.awscdk.services.quicksight.*;
      * TextAreaControlDisplayOptionsProperty textAreaControlDisplayOptionsProperty =
      * TextAreaControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -85421,6 +87383,10 @@ public object quicksight {
      * import software.amazon.awscdk.services.quicksight.*;
      * TextFieldControlDisplayOptionsProperty textFieldControlDisplayOptionsProperty =
      * TextFieldControlDisplayOptionsProperty.builder()
+     * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+     * .infoIconText("infoIconText")
+     * .visibility("visibility")
+     * .build())
      * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
      * .visibility("visibility")
      * .build())
@@ -85522,6 +87488,11 @@ public object quicksight {
      * .filterId("filterId")
      * // the properties below are optional
      * .parameterName("parameterName")
+     * .rollingDate(RollingDateConfigurationProperty.builder()
+     * .expression("expression")
+     * // the properties below are optional
+     * .dataSetIdentifier("dataSetIdentifier")
+     * .build())
      * .timeGranularity("timeGranularity")
      * .value("value")
      * .build();
@@ -85675,6 +87646,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregation(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -85725,6 +87700,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregation(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -85778,6 +87757,10 @@ public object quicksight {
      * .sortDirection("sortDirection")
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -85855,6 +87838,8 @@ public object quicksight {
      * TotalAggregationComputationProperty totalAggregationComputationProperty =
      * TotalAggregationComputationProperty.builder()
      * .computationId("computationId")
+     * // the properties below are optional
+     * .name("name")
      * .value(MeasureFieldProperty.builder()
      * .calculatedMeasureField(CalculatedMeasureFieldProperty.builder()
      * .expression("expression")
@@ -86101,8 +88086,6 @@ public object quicksight {
      * .build())
      * .build())
      * .build())
-     * // the properties below are optional
-     * .name("name")
      * .build();
      * ```
      *
@@ -86112,6 +88095,57 @@ public object quicksight {
         block: CfnTemplateTotalAggregationComputationPropertyDsl.() -> Unit = {}
     ): CfnTemplate.TotalAggregationComputationProperty {
         val builder = CfnTemplateTotalAggregationComputationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * An aggregation function that aggregates the total values of a measure.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * TotalAggregationFunctionProperty totalAggregationFunctionProperty =
+     * TotalAggregationFunctionProperty.builder()
+     * .simpleTotalAggregationFunction("simpleTotalAggregationFunction")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-totalaggregationfunction.html)
+     */
+    public inline fun cfnTemplateTotalAggregationFunctionProperty(
+        block: CfnTemplateTotalAggregationFunctionPropertyDsl.() -> Unit = {}
+    ): CfnTemplate.TotalAggregationFunctionProperty {
+        val builder = CfnTemplateTotalAggregationFunctionPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The total aggregation settings map of a field id.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * TotalAggregationOptionProperty totalAggregationOptionProperty =
+     * TotalAggregationOptionProperty.builder()
+     * .fieldId("fieldId")
+     * .totalAggregationFunction(TotalAggregationFunctionProperty.builder()
+     * .simpleTotalAggregationFunction("simpleTotalAggregationFunction")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-totalaggregationoption.html)
+     */
+    public inline fun cfnTemplateTotalAggregationOptionProperty(
+        block: CfnTemplateTotalAggregationOptionPropertyDsl.() -> Unit = {}
+    ): CfnTemplate.TotalAggregationOptionProperty {
+        val builder = CfnTemplateTotalAggregationOptionPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -86128,6 +88162,12 @@ public object quicksight {
      * .customLabel("customLabel")
      * .placement("placement")
      * .scrollStatus("scrollStatus")
+     * .totalAggregationOptions(List.of(TotalAggregationOptionProperty.builder()
+     * .fieldId("fieldId")
+     * .totalAggregationFunction(TotalAggregationFunctionProperty.builder()
+     * .simpleTotalAggregationFunction("simpleTotalAggregationFunction")
+     * .build())
+     * .build()))
      * .totalCellStyle(TableCellStyleProperty.builder()
      * .backgroundColor("backgroundColor")
      * .border(GlobalTableBorderOptionsProperty.builder()
@@ -86277,6 +88317,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -86597,6 +88641,8 @@ public object quicksight {
      * import software.amazon.awscdk.services.quicksight.*;
      * UniqueValuesComputationProperty uniqueValuesComputationProperty =
      * UniqueValuesComputationProperty.builder()
+     * .computationId("computationId")
+     * // the properties below are optional
      * .category(DimensionFieldProperty.builder()
      * .categoricalDimensionField(CategoricalDimensionFieldProperty.builder()
      * .column(ColumnIdentifierProperty.builder()
@@ -86835,8 +88881,6 @@ public object quicksight {
      * .hierarchyId("hierarchyId")
      * .build())
      * .build())
-     * .computationId("computationId")
-     * // the properties below are optional
      * .name("name")
      * .build();
      * ```
@@ -86847,6 +88891,32 @@ public object quicksight {
         block: CfnTemplateUniqueValuesComputationPropertyDsl.() -> Unit = {}
     ): CfnTemplate.UniqueValuesComputationProperty {
         val builder = CfnTemplateUniqueValuesComputationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The option to relax the validation that is required to create and update analyses,
+     * dashboards, and templates with definition objects.
+     *
+     * When you set this value to `LENIENT` , validation is skipped for specific errors.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.quicksight.*;
+     * ValidationStrategyProperty validationStrategyProperty = ValidationStrategyProperty.builder()
+     * .mode("mode")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-validationstrategy.html)
+     */
+    public inline fun cfnTemplateValidationStrategyProperty(
+        block: CfnTemplateValidationStrategyPropertyDsl.() -> Unit = {}
+    ): CfnTemplate.ValidationStrategyProperty {
+        val builder = CfnTemplateValidationStrategyPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -87043,6 +89113,9 @@ public object quicksight {
      * .colorMap(List.of(DataPathColorProperty.builder()
      * .color("color")
      * .element(DataPathValueProperty.builder()
+     * .dataPathType(DataPathTypeProperty.builder()
+     * .pivotTableDataPathType("pivotTableDataPathType")
+     * .build())
      * .fieldId("fieldId")
      * .fieldValue("fieldValue")
      * .build())
@@ -87236,6 +89309,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -88420,6 +90497,10 @@ public object quicksight {
      * .build())
      * // the properties below are optional
      * .aggregationFunction(AggregationFunctionProperty.builder()
+     * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+     * .simpleAttributeAggregation("simpleAttributeAggregation")
+     * .valueForMultipleValues("valueForMultipleValues")
+     * .build())
      * .categoricalAggregationFunction("categoricalAggregationFunction")
      * .dateAggregationFunction("dateAggregationFunction")
      * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -88611,6 +90692,8 @@ public object quicksight {
     }
 
     /**
+     * Determines the font settings.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -89041,6 +91124,8 @@ public object quicksight {
     }
 
     /**
+     * Determines the typography options.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -89159,6 +91244,7 @@ public object quicksight {
      * .build())
      * .isIncludedInTopic(false)
      * .neverAggregateInFilter(false)
+     * .nonAdditive(false)
      * .notAllowedAggregations(List.of("notAllowedAggregations"))
      * .semanticType(SemanticTypeProperty.builder()
      * .falseyCellValue("falseyCellValue")
@@ -89212,6 +91298,7 @@ public object quicksight {
      * .build())
      * .isIncludedInTopic(false)
      * .neverAggregateInFilter(false)
+     * .nonAdditive(false)
      * .notAllowedAggregations(List.of("notAllowedAggregations"))
      * .semanticType(SemanticTypeProperty.builder()
      * .falseyCellValue("falseyCellValue")
@@ -89315,6 +91402,7 @@ public object quicksight {
      * .description("description")
      * .name("name")
      * .topicId("topicId")
+     * .userExperienceVersion("userExperienceVersion")
      * .build();
      * ```
      *
@@ -89477,6 +91565,7 @@ public object quicksight {
      * .build())
      * .isIncludedInTopic(false)
      * .neverAggregateInFilter(false)
+     * .nonAdditive(false)
      * .notAllowedAggregations(List.of("notAllowedAggregations"))
      * .semanticType(SemanticTypeProperty.builder()
      * .falseyCellValue("falseyCellValue")
@@ -89530,6 +91619,7 @@ public object quicksight {
      * .build())
      * .isIncludedInTopic(false)
      * .neverAggregateInFilter(false)
+     * .nonAdditive(false)
      * .notAllowedAggregations(List.of("notAllowedAggregations"))
      * .semanticType(SemanticTypeProperty.builder()
      * .falseyCellValue("falseyCellValue")
@@ -89855,6 +91945,7 @@ public object quicksight {
      * .build())
      * .isIncludedInTopic(false)
      * .neverAggregateInFilter(false)
+     * .nonAdditive(false)
      * .notAllowedAggregations(List.of("notAllowedAggregations"))
      * .semanticType(SemanticTypeProperty.builder()
      * .falseyCellValue("falseyCellValue")
@@ -89908,6 +91999,7 @@ public object quicksight {
      * .build())
      * .isIncludedInTopic(false)
      * .neverAggregateInFilter(false)
+     * .nonAdditive(false)
      * .notAllowedAggregations(List.of("notAllowedAggregations"))
      * .semanticType(SemanticTypeProperty.builder()
      * .falseyCellValue("falseyCellValue")
@@ -90011,6 +92103,7 @@ public object quicksight {
      * .description("description")
      * .name("name")
      * .topicId("topicId")
+     * .userExperienceVersion("userExperienceVersion")
      * .build();
      * ```
      *
@@ -90151,6 +92244,7 @@ public object quicksight {
      * .build())
      * .isIncludedInTopic(false)
      * .neverAggregateInFilter(false)
+     * .nonAdditive(false)
      * .notAllowedAggregations(List.of("notAllowedAggregations"))
      * .semanticType(SemanticTypeProperty.builder()
      * .falseyCellValue("falseyCellValue")
@@ -90284,6 +92378,7 @@ public object quicksight {
      * .build())
      * .isIncludedInTopic(false)
      * .neverAggregateInFilter(false)
+     * .nonAdditive(false)
      * .notAllowedAggregations(List.of("notAllowedAggregations"))
      * .semanticType(SemanticTypeProperty.builder()
      * .falseyCellValue("falseyCellValue")

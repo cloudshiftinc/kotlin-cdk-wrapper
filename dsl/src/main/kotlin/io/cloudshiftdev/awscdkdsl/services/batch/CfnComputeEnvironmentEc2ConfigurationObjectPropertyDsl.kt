@@ -84,6 +84,10 @@ public class CfnComputeEnvironmentEc2ConfigurationObjectPropertyDsl {
      * * **ECS_AL2_NVIDIA** - [Amazon Linux 2 (GPU)](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#gpuami)
      *   : Default for all GPU instance families (for example `P4` and `G4` ) and can be used for
      *   all non AWS Graviton-based instance types.
+     * * **ECS_AL2023** - [Amazon Linux 2023](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html)
+     *   : AWS Batch supports Amazon Linux 2023.
+     *
+     * Amazon Linux 2023 does not support `A1` instances.
      * * **ECS_AL1** - [Amazon Linux](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#alami)
      *   . Amazon Linux has reached the end-of-life of standard support. For more information, see
      *   [Amazon Linux AMI](https://docs.aws.amazon.com/amazon-linux-ami/) .

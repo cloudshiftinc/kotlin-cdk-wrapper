@@ -16,8 +16,8 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2
 
 /**
- * Describes configuration parameters for a Flink-based Kinesis Data Analytics application or a
- * Studio notebook.
+ * Describes configuration parameters for a Managed Service for Apache Flink application or a Studio
+ * notebook.
  *
  * Example:
  * ```

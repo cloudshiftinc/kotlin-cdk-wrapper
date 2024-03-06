@@ -102,6 +102,18 @@ public class CfnChannelEncoderSettingsPropertyDsl {
         cdkBuilder.captionDescriptions(captionDescriptions)
     }
 
+    /** @param colorCorrectionSettings the value to be set. */
+    public fun colorCorrectionSettings(colorCorrectionSettings: IResolvable) {
+        cdkBuilder.colorCorrectionSettings(colorCorrectionSettings)
+    }
+
+    /** @param colorCorrectionSettings the value to be set. */
+    public fun colorCorrectionSettings(
+        colorCorrectionSettings: CfnChannel.ColorCorrectionSettingsProperty
+    ) {
+        cdkBuilder.colorCorrectionSettings(colorCorrectionSettings)
+    }
+
     /** @param featureActivations Settings to enable specific features. */
     public fun featureActivations(featureActivations: IResolvable) {
         cdkBuilder.featureActivations(featureActivations)
@@ -163,6 +175,18 @@ public class CfnChannelEncoderSettingsPropertyDsl {
     /** @param outputGroups The settings for the output groups in the channel. */
     public fun outputGroups(outputGroups: IResolvable) {
         cdkBuilder.outputGroups(outputGroups)
+    }
+
+    /** @param thumbnailConfiguration the value to be set. */
+    public fun thumbnailConfiguration(thumbnailConfiguration: IResolvable) {
+        cdkBuilder.thumbnailConfiguration(thumbnailConfiguration)
+    }
+
+    /** @param thumbnailConfiguration the value to be set. */
+    public fun thumbnailConfiguration(
+        thumbnailConfiguration: CfnChannel.ThumbnailConfigurationProperty
+    ) {
+        cdkBuilder.thumbnailConfiguration(thumbnailConfiguration)
     }
 
     /**

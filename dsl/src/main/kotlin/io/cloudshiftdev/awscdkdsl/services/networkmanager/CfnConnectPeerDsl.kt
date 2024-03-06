@@ -42,6 +42,7 @@ import software.constructs.Construct
  * .build())
  * .coreNetworkAddress("coreNetworkAddress")
  * .insideCidrBlocks(List.of("insideCidrBlocks"))
+ * .subnetArn("subnetArn")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -63,22 +64,22 @@ public class CfnConnectPeerDsl(
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
-     * Bgp options.
+     * Describes the BGP options.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectpeer.html#cfn-networkmanager-connectpeer-bgpoptions)
      *
-     * @param bgpOptions Bgp options.
+     * @param bgpOptions Describes the BGP options.
      */
     public fun bgpOptions(bgpOptions: IResolvable) {
         cdkBuilder.bgpOptions(bgpOptions)
     }
 
     /**
-     * Bgp options.
+     * Describes the BGP options.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectpeer.html#cfn-networkmanager-connectpeer-bgpoptions)
      *
-     * @param bgpOptions Bgp options.
+     * @param bgpOptions Describes the BGP options.
      */
     public fun bgpOptions(bgpOptions: CfnConnectPeer.BgpOptionsProperty) {
         cdkBuilder.bgpOptions(bgpOptions)
@@ -137,6 +138,17 @@ public class CfnConnectPeerDsl(
      */
     public fun peerAddress(peerAddress: String) {
         cdkBuilder.peerAddress(peerAddress)
+    }
+
+    /**
+     * The subnet ARN of the Connect peer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectpeer.html#cfn-networkmanager-connectpeer-subnetarn)
+     *
+     * @param subnetArn The subnet ARN of the Connect peer.
+     */
+    public fun subnetArn(subnetArn: String) {
+        cdkBuilder.subnetArn(subnetArn)
     }
 
     /**

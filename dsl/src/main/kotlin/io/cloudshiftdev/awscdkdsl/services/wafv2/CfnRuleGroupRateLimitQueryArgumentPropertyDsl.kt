@@ -62,7 +62,8 @@ public class CfnRuleGroupRateLimitQueryArgumentPropertyDsl {
      *   inspecting it, and they're used in rate-based rule statements, to transform request
      *   components before using them as custom aggregation keys. If you specify one or more
      *   transformations to apply, AWS WAF performs all transformations on the specified content,
-     *   starting from the lowest priority setting, and then uses the component contents.
+     *   starting from the lowest priority setting, and then uses the transformed component
+     *   contents.
      */
     public fun textTransformations(vararg textTransformations: Any) {
         _textTransformations.addAll(listOf(*textTransformations))
@@ -75,7 +76,8 @@ public class CfnRuleGroupRateLimitQueryArgumentPropertyDsl {
      *   inspecting it, and they're used in rate-based rule statements, to transform request
      *   components before using them as custom aggregation keys. If you specify one or more
      *   transformations to apply, AWS WAF performs all transformations on the specified content,
-     *   starting from the lowest priority setting, and then uses the component contents.
+     *   starting from the lowest priority setting, and then uses the transformed component
+     *   contents.
      */
     public fun textTransformations(textTransformations: Collection<Any>) {
         _textTransformations.addAll(textTransformations)
@@ -88,7 +90,8 @@ public class CfnRuleGroupRateLimitQueryArgumentPropertyDsl {
      *   inspecting it, and they're used in rate-based rule statements, to transform request
      *   components before using them as custom aggregation keys. If you specify one or more
      *   transformations to apply, AWS WAF performs all transformations on the specified content,
-     *   starting from the lowest priority setting, and then uses the component contents.
+     *   starting from the lowest priority setting, and then uses the transformed component
+     *   contents.
      */
     public fun textTransformations(textTransformations: IResolvable) {
         cdkBuilder.textTransformations(textTransformations)

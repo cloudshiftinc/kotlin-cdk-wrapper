@@ -36,6 +36,19 @@ public inline fun CfnDeploymentConfig.setTrafficRoutingConfig(
     return setTrafficRoutingConfig(builder.build())
 }
 
+/**
+ * Configure the `ZonalConfig` object if you want AWS CodeDeploy to deploy your application to one
+ * [Availability Zone](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-availability-zones)
+ * at a time, within an AWS Region.
+ */
+public inline fun CfnDeploymentConfig.setZonalConfig(
+    block: CfnDeploymentConfigZonalConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnDeploymentConfigZonalConfigPropertyDsl()
+    builder.apply(block)
+    return setZonalConfig(builder.build())
+}
+
 /** Information about the Amazon CloudWatch alarms that are associated with the deployment group. */
 public inline fun CfnDeploymentGroup.setAlarmConfiguration(
     block: CfnDeploymentGroupAlarmConfigurationPropertyDsl.() -> Unit = {}

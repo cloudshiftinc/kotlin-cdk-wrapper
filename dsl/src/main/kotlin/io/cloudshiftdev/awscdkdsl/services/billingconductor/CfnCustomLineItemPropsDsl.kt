@@ -34,6 +34,7 @@ import software.amazon.awscdk.services.billingconductor.CfnCustomLineItemProps
  * .billingGroupArn("billingGroupArn")
  * .name("name")
  * // the properties below are optional
+ * .accountId("accountId")
  * .billingPeriodRange(BillingPeriodRangeProperty.builder()
  * .exclusiveEndBillingPeriod("exclusiveEndBillingPeriod")
  * .inclusiveStartBillingPeriod("inclusiveStartBillingPeriod")
@@ -44,6 +45,11 @@ import software.amazon.awscdk.services.billingconductor.CfnCustomLineItemProps
  * .flat(CustomLineItemFlatChargeDetailsProperty.builder()
  * .chargeValue(123)
  * .build())
+ * .lineItemFilters(List.of(LineItemFilterProperty.builder()
+ * .attribute("attribute")
+ * .matchOption("matchOption")
+ * .values(List.of("values"))
+ * .build()))
  * .percentage(CustomLineItemPercentageChargeDetailsProperty.builder()
  * .percentageValue(123)
  * // the properties below are optional
@@ -65,6 +71,11 @@ public class CfnCustomLineItemPropsDsl {
     private val cdkBuilder: CfnCustomLineItemProps.Builder = CfnCustomLineItemProps.builder()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
+
+    /** @param accountId The AWS account in which this custom line item will be applied to. */
+    public fun accountId(accountId: String) {
+        cdkBuilder.accountId(accountId)
+    }
 
     /**
      * @param billingGroupArn The Amazon Resource Name (ARN) that references the billing group where

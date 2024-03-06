@@ -56,14 +56,14 @@ public class CfnLoggingConfigurationFieldToMatchPropertyDsl {
     private val cdkBuilder: CfnLoggingConfiguration.FieldToMatchProperty.Builder =
         CfnLoggingConfiguration.FieldToMatchProperty.builder()
 
-    /** @param jsonBody Redact the request body JSON. */
+    /** @param jsonBody the value to be set. */
     public fun jsonBody(jsonBody: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
         builder.apply(jsonBody)
         cdkBuilder.jsonBody(builder.map)
     }
 
-    /** @param jsonBody Redact the request body JSON. */
+    /** @param jsonBody the value to be set. */
     public fun jsonBody(jsonBody: Any) {
         cdkBuilder.jsonBody(jsonBody)
     }

@@ -24,6 +24,8 @@ import software.amazon.awscdk.services.cognito.CfnIdentityPoolPrincipalTagProps
 import software.amazon.awscdk.services.cognito.CfnIdentityPoolProps
 import software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment
 import software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachmentProps
+import software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration
+import software.amazon.awscdk.services.cognito.CfnLogDeliveryConfigurationProps
 import software.amazon.awscdk.services.cognito.CfnUserPool
 import software.amazon.awscdk.services.cognito.CfnUserPoolClient
 import software.amazon.awscdk.services.cognito.CfnUserPoolClientProps
@@ -271,6 +273,7 @@ public object cognito {
      * CognitoIdentityProviderProperty.builder()
      * .clientId("clientId")
      * .providerName("providerName")
+     * // the properties below are optional
      * .serverSideTokenCheck(false)
      * .build();
      * ```
@@ -537,7 +540,7 @@ public object cognito {
     }
 
     /**
-     * `RoleMapping` is a property of the
+     * One of a set of `RoleMappings` , a property of the
      * [AWS::Cognito::IdentityPoolRoleAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolroleattachment.html)
      * resource that defines the role-mapping attributes of an Amazon Cognito identity pool.
      *
@@ -599,6 +602,123 @@ public object cognito {
         block: CfnIdentityPoolRoleAttachmentRulesConfigurationTypePropertyDsl.() -> Unit = {}
     ): CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty {
         val builder = CfnIdentityPoolRoleAttachmentRulesConfigurationTypePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The logging parameters of a user pool.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.cognito.*;
+     * CfnLogDeliveryConfiguration cfnLogDeliveryConfiguration =
+     * CfnLogDeliveryConfiguration.Builder.create(this, "MyCfnLogDeliveryConfiguration")
+     * .userPoolId("userPoolId")
+     * // the properties below are optional
+     * .logConfigurations(List.of(LogConfigurationProperty.builder()
+     * .cloudWatchLogsConfiguration(CloudWatchLogsConfigurationProperty.builder()
+     * .logGroupArn("logGroupArn")
+     * .build())
+     * .eventSource("eventSource")
+     * .logLevel("logLevel")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-logdeliveryconfiguration.html)
+     */
+    public inline fun cfnLogDeliveryConfiguration(
+        scope: Construct,
+        id: String,
+        block: CfnLogDeliveryConfigurationDsl.() -> Unit = {},
+    ): CfnLogDeliveryConfiguration {
+        val builder = CfnLogDeliveryConfigurationDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The CloudWatch logging destination of a user pool detailed activity logging configuration.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.cognito.*;
+     * CloudWatchLogsConfigurationProperty cloudWatchLogsConfigurationProperty =
+     * CloudWatchLogsConfigurationProperty.builder()
+     * .logGroupArn("logGroupArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-logdeliveryconfiguration-cloudwatchlogsconfiguration.html)
+     */
+    public inline fun cfnLogDeliveryConfigurationCloudWatchLogsConfigurationProperty(
+        block: CfnLogDeliveryConfigurationCloudWatchLogsConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnLogDeliveryConfiguration.CloudWatchLogsConfigurationProperty {
+        val builder = CfnLogDeliveryConfigurationCloudWatchLogsConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The logging parameters of a user pool.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.cognito.*;
+     * LogConfigurationProperty logConfigurationProperty = LogConfigurationProperty.builder()
+     * .cloudWatchLogsConfiguration(CloudWatchLogsConfigurationProperty.builder()
+     * .logGroupArn("logGroupArn")
+     * .build())
+     * .eventSource("eventSource")
+     * .logLevel("logLevel")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-logdeliveryconfiguration-logconfiguration.html)
+     */
+    public inline fun cfnLogDeliveryConfigurationLogConfigurationProperty(
+        block: CfnLogDeliveryConfigurationLogConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnLogDeliveryConfiguration.LogConfigurationProperty {
+        val builder = CfnLogDeliveryConfigurationLogConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnLogDeliveryConfiguration`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.cognito.*;
+     * CfnLogDeliveryConfigurationProps cfnLogDeliveryConfigurationProps =
+     * CfnLogDeliveryConfigurationProps.builder()
+     * .userPoolId("userPoolId")
+     * // the properties below are optional
+     * .logConfigurations(List.of(LogConfigurationProperty.builder()
+     * .cloudWatchLogsConfiguration(CloudWatchLogsConfigurationProperty.builder()
+     * .logGroupArn("logGroupArn")
+     * .build())
+     * .eventSource("eventSource")
+     * .logLevel("logLevel")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-logdeliveryconfiguration.html)
+     */
+    public inline fun cfnLogDeliveryConfigurationProps(
+        block: CfnLogDeliveryConfigurationPropsDsl.() -> Unit = {}
+    ): CfnLogDeliveryConfigurationProps {
+        val builder = CfnLogDeliveryConfigurationPropsDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -671,6 +791,10 @@ public object cognito {
      * .preAuthentication("preAuthentication")
      * .preSignUp("preSignUp")
      * .preTokenGeneration("preTokenGeneration")
+     * .preTokenGenerationConfig(PreTokenGenerationConfigProperty.builder()
+     * .lambdaArn("lambdaArn")
+     * .lambdaVersion("lambdaVersion")
+     * .build())
      * .userMigration("userMigration")
      * .verifyAuthChallengeResponse("verifyAuthChallengeResponse")
      * .build())
@@ -1197,11 +1321,7 @@ public object cognito {
     }
 
     /**
-     * Specifies a new group in the identified user pool.
-     *
-     * Calling this action requires developer credentials.
-     *
-     * If you don't specify a value for a parameter, Amazon Cognito sets it to a default value.
+     * A user pool group that you can add a user to.
      *
      * Example:
      * ```
@@ -1381,6 +1501,10 @@ public object cognito {
      * .preAuthentication("preAuthentication")
      * .preSignUp("preSignUp")
      * .preTokenGeneration("preTokenGeneration")
+     * .preTokenGenerationConfig(PreTokenGenerationConfigProperty.builder()
+     * .lambdaArn("lambdaArn")
+     * .lambdaVersion("lambdaVersion")
+     * .build())
      * .userMigration("userMigration")
      * .verifyAuthChallengeResponse("verifyAuthChallengeResponse")
      * .build();
@@ -1480,6 +1604,31 @@ public object cognito {
     }
 
     /**
+     * The properties of a pre token generation Lambda trigger.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.cognito.*;
+     * PreTokenGenerationConfigProperty preTokenGenerationConfigProperty =
+     * PreTokenGenerationConfigProperty.builder()
+     * .lambdaArn("lambdaArn")
+     * .lambdaVersion("lambdaVersion")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-pretokengenerationconfig.html)
+     */
+    public inline fun cfnUserPoolPreTokenGenerationConfigProperty(
+        block: CfnUserPoolPreTokenGenerationConfigPropertyDsl.() -> Unit = {}
+    ): CfnUserPool.PreTokenGenerationConfigProperty {
+        val builder = CfnUserPoolPreTokenGenerationConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Properties for defining a `CfnUserPool`.
      *
      * Example:
@@ -1539,6 +1688,10 @@ public object cognito {
      * .preAuthentication("preAuthentication")
      * .preSignUp("preSignUp")
      * .preTokenGeneration("preTokenGeneration")
+     * .preTokenGenerationConfig(PreTokenGenerationConfigProperty.builder()
+     * .lambdaArn("lambdaArn")
+     * .lambdaVersion("lambdaVersion")
+     * .build())
      * .userMigration("userMigration")
      * .verifyAuthChallengeResponse("verifyAuthChallengeResponse")
      * .build())
@@ -2365,11 +2518,11 @@ public object cognito {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.cognito.*;
-     * Object clientMetadata;
      * CfnUserPoolUser cfnUserPoolUser = CfnUserPoolUser.Builder.create(this, "MyCfnUserPoolUser")
      * .userPoolId("userPoolId")
      * // the properties below are optional
-     * .clientMetadata(clientMetadata)
+     * .clientMetadata(Map.of(
+     * "clientMetadataKey", "clientMetadata"))
      * .desiredDeliveryMediums(List.of("desiredDeliveryMediums"))
      * .forceAliasCreation(false)
      * .messageAction("messageAction")
@@ -2490,11 +2643,11 @@ public object cognito {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.cognito.*;
-     * Object clientMetadata;
      * CfnUserPoolUserProps cfnUserPoolUserProps = CfnUserPoolUserProps.builder()
      * .userPoolId("userPoolId")
      * // the properties below are optional
-     * .clientMetadata(clientMetadata)
+     * .clientMetadata(Map.of(
+     * "clientMetadataKey", "clientMetadata"))
      * .desiredDeliveryMediums(List.of("desiredDeliveryMediums"))
      * .forceAliasCreation(false)
      * .messageAction("messageAction")
@@ -2522,15 +2675,6 @@ public object cognito {
 
     /**
      * Adds the specified user to the specified group.
-     *
-     * Amazon Cognito evaluates AWS Identity and Access Management (IAM) policies in requests for
-     * this API operation. For this operation, you must use IAM credentials to authorize requests,
-     * and you must grant yourself the corresponding IAM permission in a policy.
-     *
-     * **Learn
-     * more** - [Signing AWS API Requests](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-signing.html)
-     * * [Using the Amazon Cognito user pools API and user pool
-     *   endpoints](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pools-API-operations.html)
      *
      * Example:
      * ```
@@ -3660,7 +3804,7 @@ public object cognito {
     }
 
     /**
-     * Represents a identity provider that integrates with 'Login with Amazon'.
+     * Represents an identity provider that integrates with Login with Amazon.
      *
      * Example:
      * ```
@@ -3716,7 +3860,7 @@ public object cognito {
     }
 
     /**
-     * Represents a identity provider that integrates with 'Apple'.
+     * Represents an identity provider that integrates with Apple.
      *
      * Example:
      * ```
@@ -3820,7 +3964,7 @@ public object cognito {
     }
 
     /**
-     * Represents a identity provider that integrates with 'Facebook Login'.
+     * Represents an identity provider that integrates with Facebook Login.
      *
      * Example:
      * ```
@@ -3922,7 +4066,7 @@ public object cognito {
     }
 
     /**
-     * Represents a identity provider that integrates with 'Google'.
+     * Represents an identity provider that integrates with Google.
      *
      * Example:
      * ```
@@ -3976,7 +4120,7 @@ public object cognito {
     }
 
     /**
-     * Represents a identity provider that integrates with OpenID Connect.
+     * Represents an identity provider that integrates with OpenID Connect.
      *
      * Example:
      * ```
@@ -4142,7 +4286,7 @@ public object cognito {
     }
 
     /**
-     * Represents a identity provider that integrates with SAML.
+     * Represents an identity provider that integrates with SAML.
      *
      * Example:
      * ```
@@ -4409,7 +4553,7 @@ public object cognito {
      * Example:
      * ```
      * Function authChallengeFn = Function.Builder.create(this, "authChallengeFn")
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .handler("index.handler")
      * .code(Code.fromAsset(join(__dirname, "path/to/asset")))
      * .build();
@@ -4421,7 +4565,7 @@ public object cognito {
      * .build();
      * userpool.addTrigger(UserPoolOperation.USER_MIGRATION, Function.Builder.create(this,
      * "userMigrationFn")
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .handler("index.handler")
      * .code(Code.fromAsset(join(__dirname, "path/to/asset")))
      * .build());

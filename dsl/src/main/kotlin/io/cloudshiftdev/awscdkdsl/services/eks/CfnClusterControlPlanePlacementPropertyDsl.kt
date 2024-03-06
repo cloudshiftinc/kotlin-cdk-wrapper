@@ -43,6 +43,7 @@ public class CfnClusterControlPlanePlacementPropertyDsl {
 
     /**
      * @param groupName The name of the placement group for the Kubernetes control plane instances.
+     *   This property is only used for a local cluster on an AWS Outpost.
      */
     public fun groupName(groupName: String) {
         cdkBuilder.groupName(groupName)

@@ -12,12 +12,11 @@
 package io.cloudshiftdev.awscdkdsl.services.cognito
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
-import io.cloudshiftdev.awscdkdsl.common.MapBuilder
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
-import kotlin.Unit
 import kotlin.collections.Collection
+import kotlin.collections.Map
 import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnUserPoolUserProps
@@ -30,11 +29,11 @@ import software.amazon.awscdk.services.cognito.CfnUserPoolUserProps
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.cognito.*;
- * Object clientMetadata;
  * CfnUserPoolUserProps cfnUserPoolUserProps = CfnUserPoolUserProps.builder()
  * .userPoolId("userPoolId")
  * // the properties below are optional
- * .clientMetadata(clientMetadata)
+ * .clientMetadata(Map.of(
+ * "clientMetadataKey", "clientMetadata"))
  * .desiredDeliveryMediums(List.of("desiredDeliveryMediums"))
  * .forceAliasCreation(false)
  * .messageAction("messageAction")
@@ -63,60 +62,58 @@ public class CfnUserPoolUserPropsDsl {
     private val _validationData: MutableList<Any> = mutableListOf()
 
     /**
-     * @param clientMetadata A map of custom key-value pairs that you can provide as input for the
-     *   custom workflow that is invoked by the *pre sign-up* trigger. You create custom workflows
-     *   by assigning AWS Lambda functions to user pool triggers. When you create a `UserPoolUser`
-     *   resource and include the `ClientMetadata` property, Amazon Cognito invokes the function
-     *   that is assigned to the *pre sign-up* trigger. When Amazon Cognito invokes this function,
-     *   it passes a JSON payload, which the function receives as input. This payload contains a
-     *   `clientMetadata` attribute, which provides the data that you assigned to the ClientMetadata
-     *   property. In your function code in AWS Lambda , you can process the `clientMetadata` value
-     *   to enhance your workflow for your specific needs.
+     * @param clientMetadata A map of custom key-value pairs that you can provide as input for any
+     *   custom workflows that this action triggers. You create custom workflows by assigning AWS
+     *   Lambda functions to user pool triggers. When you use the AdminCreateUser API action, Amazon
+     *   Cognito invokes the function that is assigned to the *pre sign-up* trigger. When Amazon
+     *   Cognito invokes this function, it passes a JSON payload, which the function receives as
+     *   input. This payload contains a `clientMetadata` attribute, which provides the data that you
+     *   assigned to the ClientMetadata parameter in your AdminCreateUser request. In your function
+     *   code in AWS Lambda , you can process the `clientMetadata` value to enhance your workflow
+     *   for your specific needs.
      *
      * For more information, see
-     * [Customizing User Pool Workflows with Lambda Triggers](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html)
+     * [Customizing user pool Workflows with Lambda Triggers](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html)
      * in the *Amazon Cognito Developer Guide* .
      *
-     * Take the following limitations into consideration when you use the ClientMetadata parameter:
-     * * Amazon Cognito does not store the ClientMetadata value. This data is available only to AWS
-     *   Lambda triggers that are assigned to a user pool to support custom workflows. If your user
-     *   pool configuration does not include triggers, the ClientMetadata parameter serves no
-     *   purpose.
-     * * Amazon Cognito does not validate the ClientMetadata value.
-     * * Amazon Cognito does not encrypt the the ClientMetadata value, so don't use it to provide
-     *   sensitive information.
+     * When you use the ClientMetadata parameter, remember that Amazon Cognito won't do the
+     * following:
+     * * Store the ClientMetadata value. This data is available only to AWS Lambda triggers that are
+     *   assigned to a user pool to support custom workflows. If your user pool configuration
+     *   doesn't include triggers, the ClientMetadata parameter serves no purpose.
+     * * Validate the ClientMetadata value.
+     * * Encrypt the ClientMetadata value. Don't use Amazon Cognito to provide sensitive
+     *   information.
      */
-    public fun clientMetadata(clientMetadata: MapBuilder.() -> Unit = {}) {
-        val builder = MapBuilder()
-        builder.apply(clientMetadata)
-        cdkBuilder.clientMetadata(builder.map)
+    public fun clientMetadata(clientMetadata: Map<String, String>) {
+        cdkBuilder.clientMetadata(clientMetadata)
     }
 
     /**
-     * @param clientMetadata A map of custom key-value pairs that you can provide as input for the
-     *   custom workflow that is invoked by the *pre sign-up* trigger. You create custom workflows
-     *   by assigning AWS Lambda functions to user pool triggers. When you create a `UserPoolUser`
-     *   resource and include the `ClientMetadata` property, Amazon Cognito invokes the function
-     *   that is assigned to the *pre sign-up* trigger. When Amazon Cognito invokes this function,
-     *   it passes a JSON payload, which the function receives as input. This payload contains a
-     *   `clientMetadata` attribute, which provides the data that you assigned to the ClientMetadata
-     *   property. In your function code in AWS Lambda , you can process the `clientMetadata` value
-     *   to enhance your workflow for your specific needs.
+     * @param clientMetadata A map of custom key-value pairs that you can provide as input for any
+     *   custom workflows that this action triggers. You create custom workflows by assigning AWS
+     *   Lambda functions to user pool triggers. When you use the AdminCreateUser API action, Amazon
+     *   Cognito invokes the function that is assigned to the *pre sign-up* trigger. When Amazon
+     *   Cognito invokes this function, it passes a JSON payload, which the function receives as
+     *   input. This payload contains a `clientMetadata` attribute, which provides the data that you
+     *   assigned to the ClientMetadata parameter in your AdminCreateUser request. In your function
+     *   code in AWS Lambda , you can process the `clientMetadata` value to enhance your workflow
+     *   for your specific needs.
      *
      * For more information, see
-     * [Customizing User Pool Workflows with Lambda Triggers](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html)
+     * [Customizing user pool Workflows with Lambda Triggers](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html)
      * in the *Amazon Cognito Developer Guide* .
      *
-     * Take the following limitations into consideration when you use the ClientMetadata parameter:
-     * * Amazon Cognito does not store the ClientMetadata value. This data is available only to AWS
-     *   Lambda triggers that are assigned to a user pool to support custom workflows. If your user
-     *   pool configuration does not include triggers, the ClientMetadata parameter serves no
-     *   purpose.
-     * * Amazon Cognito does not validate the ClientMetadata value.
-     * * Amazon Cognito does not encrypt the the ClientMetadata value, so don't use it to provide
-     *   sensitive information.
+     * When you use the ClientMetadata parameter, remember that Amazon Cognito won't do the
+     * following:
+     * * Store the ClientMetadata value. This data is available only to AWS Lambda triggers that are
+     *   assigned to a user pool to support custom workflows. If your user pool configuration
+     *   doesn't include triggers, the ClientMetadata parameter serves no purpose.
+     * * Validate the ClientMetadata value.
+     * * Encrypt the ClientMetadata value. Don't use Amazon Cognito to provide sensitive
+     *   information.
      */
-    public fun clientMetadata(clientMetadata: Any) {
+    public fun clientMetadata(clientMetadata: IResolvable) {
         cdkBuilder.clientMetadata(clientMetadata)
     }
 
@@ -180,90 +177,24 @@ public class CfnUserPoolUserPropsDsl {
     }
 
     /**
-     * @param userAttributes The user attributes and attribute values to be set for the user to be
-     *   created. These are name-value pairs You can create a user without specifying any attributes
-     *   other than `Username` . However, any attributes that you specify as required (in
-     *   [](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-     *   or in the *Attributes* tab of the console) must be supplied either by you (in your call to
-     *   `AdminCreateUser` ) or by the user (when they sign up in response to your welcome message).
-     *
-     * For custom attributes, you must prepend the `custom:` prefix to the attribute name.
-     *
-     * To send a message inviting the user to sign up, you must specify the user's email address or
-     * phone number. This can be done in your call to AdminCreateUser or in the *Users* tab of the
-     * Amazon Cognito console for managing your user pools.
-     *
-     * In your call to `AdminCreateUser` , you can set the `email_verified` attribute to `True` ,
-     * and you can set the `phone_number_verified` attribute to `True` . (You can also do this by
-     * calling
-     * [](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminUpdateUserAttributes.html)
-     * .)
-     * * *email* : The email address of the user to whom the message that contains the code and user
-     *   name will be sent. Required if the `email_verified` attribute is set to `True` , or if
-     *   `"EMAIL"` is specified in the `DesiredDeliveryMediums` parameter.
-     * * *phone_number* : The phone number of the user to whom the message that contains the code
-     *   and user name will be sent. Required if the `phone_number_verified` attribute is set to
-     *   `True` , or if `"SMS"` is specified in the `DesiredDeliveryMediums` parameter.
+     * @param userAttributes An array of name-value pairs that contain user attributes and attribute
+     *   values.
      */
     public fun userAttributes(vararg userAttributes: Any) {
         _userAttributes.addAll(listOf(*userAttributes))
     }
 
     /**
-     * @param userAttributes The user attributes and attribute values to be set for the user to be
-     *   created. These are name-value pairs You can create a user without specifying any attributes
-     *   other than `Username` . However, any attributes that you specify as required (in
-     *   [](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-     *   or in the *Attributes* tab of the console) must be supplied either by you (in your call to
-     *   `AdminCreateUser` ) or by the user (when they sign up in response to your welcome message).
-     *
-     * For custom attributes, you must prepend the `custom:` prefix to the attribute name.
-     *
-     * To send a message inviting the user to sign up, you must specify the user's email address or
-     * phone number. This can be done in your call to AdminCreateUser or in the *Users* tab of the
-     * Amazon Cognito console for managing your user pools.
-     *
-     * In your call to `AdminCreateUser` , you can set the `email_verified` attribute to `True` ,
-     * and you can set the `phone_number_verified` attribute to `True` . (You can also do this by
-     * calling
-     * [](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminUpdateUserAttributes.html)
-     * .)
-     * * *email* : The email address of the user to whom the message that contains the code and user
-     *   name will be sent. Required if the `email_verified` attribute is set to `True` , or if
-     *   `"EMAIL"` is specified in the `DesiredDeliveryMediums` parameter.
-     * * *phone_number* : The phone number of the user to whom the message that contains the code
-     *   and user name will be sent. Required if the `phone_number_verified` attribute is set to
-     *   `True` , or if `"SMS"` is specified in the `DesiredDeliveryMediums` parameter.
+     * @param userAttributes An array of name-value pairs that contain user attributes and attribute
+     *   values.
      */
     public fun userAttributes(userAttributes: Collection<Any>) {
         _userAttributes.addAll(userAttributes)
     }
 
     /**
-     * @param userAttributes The user attributes and attribute values to be set for the user to be
-     *   created. These are name-value pairs You can create a user without specifying any attributes
-     *   other than `Username` . However, any attributes that you specify as required (in
-     *   [](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-     *   or in the *Attributes* tab of the console) must be supplied either by you (in your call to
-     *   `AdminCreateUser` ) or by the user (when they sign up in response to your welcome message).
-     *
-     * For custom attributes, you must prepend the `custom:` prefix to the attribute name.
-     *
-     * To send a message inviting the user to sign up, you must specify the user's email address or
-     * phone number. This can be done in your call to AdminCreateUser or in the *Users* tab of the
-     * Amazon Cognito console for managing your user pools.
-     *
-     * In your call to `AdminCreateUser` , you can set the `email_verified` attribute to `True` ,
-     * and you can set the `phone_number_verified` attribute to `True` . (You can also do this by
-     * calling
-     * [](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminUpdateUserAttributes.html)
-     * .)
-     * * *email* : The email address of the user to whom the message that contains the code and user
-     *   name will be sent. Required if the `email_verified` attribute is set to `True` , or if
-     *   `"EMAIL"` is specified in the `DesiredDeliveryMediums` parameter.
-     * * *phone_number* : The phone number of the user to whom the message that contains the code
-     *   and user name will be sent. Required if the `phone_number_verified` attribute is set to
-     *   `True` , or if `"SMS"` is specified in the `DesiredDeliveryMediums` parameter.
+     * @param userAttributes An array of name-value pairs that contain user attributes and attribute
+     *   values.
      */
     public fun userAttributes(userAttributes: IResolvable) {
         cdkBuilder.userAttributes(userAttributes)
@@ -275,57 +206,72 @@ public class CfnUserPoolUserPropsDsl {
     }
 
     /**
-     * @param username The username for the user. Must be unique within the user pool. Must be a
-     *   UTF-8 string between 1 and 128 characters. After the user is created, the username can't be
-     *   changed.
+     * @param username The value that you want to set as the username sign-in attribute. The
+     *   following conditions apply to the username parameter.
+     * * The username can't be a duplicate of another username in the same user pool.
+     * * You can't change the value of a username after you create it.
+     * * You can only provide a value if usernames are a valid sign-in attribute for your user pool.
+     *   If your user pool only supports phone numbers or email addresses as sign-in attributes,
+     *   Amazon Cognito automatically generates a username value. For more information, see
+     *   [Customizing sign-in attributes](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#user-pool-settings-aliases)
+     *   .
      */
     public fun username(username: String) {
         cdkBuilder.username(username)
     }
 
     /**
-     * @param validationData The user's validation data. This is an array of name-value pairs that
-     *   contain user attributes and attribute values that you can use for custom validation, such
-     *   as restricting the types of user accounts that can be registered. For example, you might
-     *   choose to allow or disallow user sign-up based on the user's domain.
+     * @param validationData Temporary user attributes that contribute to the outcomes of your pre
+     *   sign-up Lambda trigger. This set of key-value pairs are for custom validation of
+     *   information that you collect from your users but don't need to retain.
      *
-     * To configure custom validation, you must create a Pre Sign-up AWS Lambda trigger for the user
-     * pool as described in the Amazon Cognito Developer Guide. The Lambda trigger receives the
-     * validation data and uses it in the validation process.
+     * Your Lambda function can analyze this additional data and act on it. Your function might
+     * perform external API operations like logging user attributes and validation data to Amazon
+     * CloudWatch Logs. Validation data might also affect the response that your function returns to
+     * Amazon Cognito, like automatically confirming the user if they sign up from within your
+     * network.
      *
-     * The user's validation data isn't persisted.
+     * For more information about the pre sign-up Lambda trigger, see
+     * [Pre sign-up Lambda trigger](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-lambda-pre-sign-up.html)
+     * .
      */
     public fun validationData(vararg validationData: Any) {
         _validationData.addAll(listOf(*validationData))
     }
 
     /**
-     * @param validationData The user's validation data. This is an array of name-value pairs that
-     *   contain user attributes and attribute values that you can use for custom validation, such
-     *   as restricting the types of user accounts that can be registered. For example, you might
-     *   choose to allow or disallow user sign-up based on the user's domain.
+     * @param validationData Temporary user attributes that contribute to the outcomes of your pre
+     *   sign-up Lambda trigger. This set of key-value pairs are for custom validation of
+     *   information that you collect from your users but don't need to retain.
      *
-     * To configure custom validation, you must create a Pre Sign-up AWS Lambda trigger for the user
-     * pool as described in the Amazon Cognito Developer Guide. The Lambda trigger receives the
-     * validation data and uses it in the validation process.
+     * Your Lambda function can analyze this additional data and act on it. Your function might
+     * perform external API operations like logging user attributes and validation data to Amazon
+     * CloudWatch Logs. Validation data might also affect the response that your function returns to
+     * Amazon Cognito, like automatically confirming the user if they sign up from within your
+     * network.
      *
-     * The user's validation data isn't persisted.
+     * For more information about the pre sign-up Lambda trigger, see
+     * [Pre sign-up Lambda trigger](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-lambda-pre-sign-up.html)
+     * .
      */
     public fun validationData(validationData: Collection<Any>) {
         _validationData.addAll(validationData)
     }
 
     /**
-     * @param validationData The user's validation data. This is an array of name-value pairs that
-     *   contain user attributes and attribute values that you can use for custom validation, such
-     *   as restricting the types of user accounts that can be registered. For example, you might
-     *   choose to allow or disallow user sign-up based on the user's domain.
+     * @param validationData Temporary user attributes that contribute to the outcomes of your pre
+     *   sign-up Lambda trigger. This set of key-value pairs are for custom validation of
+     *   information that you collect from your users but don't need to retain.
      *
-     * To configure custom validation, you must create a Pre Sign-up AWS Lambda trigger for the user
-     * pool as described in the Amazon Cognito Developer Guide. The Lambda trigger receives the
-     * validation data and uses it in the validation process.
+     * Your Lambda function can analyze this additional data and act on it. Your function might
+     * perform external API operations like logging user attributes and validation data to Amazon
+     * CloudWatch Logs. Validation data might also affect the response that your function returns to
+     * Amazon Cognito, like automatically confirming the user if they sign up from within your
+     * network.
      *
-     * The user's validation data isn't persisted.
+     * For more information about the pre sign-up Lambda trigger, see
+     * [Pre sign-up Lambda trigger](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-lambda-pre-sign-up.html)
+     * .
      */
     public fun validationData(validationData: IResolvable) {
         cdkBuilder.validationData(validationData)

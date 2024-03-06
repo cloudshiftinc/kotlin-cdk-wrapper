@@ -27,10 +27,10 @@ import software.constructs.Construct
  * With AWS IoT Greengrass , connected devices can run AWS Lambda functions, execute predictions
  * based on machine learning models, keep device data in sync, and communicate with other devices
  * securely – even when not connected to the internet. For more information, see the
- * [Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/what-is-gg.html) .
+ * [Developer Guide](https://docs.aws.amazon.com/greengrass/v1/developerguide/what-is-gg.html) .
  *
  * For AWS Region support, see
- * [AWS CloudFormation Support for AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/latest/developerguide/cloudformation-support.html)
+ * [AWS CloudFormation Support for AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/v1/developerguide/cloudformation-support.html)
  * in the *Developer Guide* .
  *
  * The `AWS::Greengrass::Group` resource represents a group in AWS IoT Greengrass . In the AWS IoT
@@ -58,11 +58,11 @@ import software.constructs.Construct
  *
  * After you create the group version in your AWS CloudFormation template, you can deploy it using
  * the
- * [`aws greengrass create-deployment`](https://docs.aws.amazon.com/greengrass/latest/apireference/createdeployment-post.html)
+ * [`aws greengrass create-deployment`](https://docs.aws.amazon.com/greengrass/v1/apireference/createdeployment-post.html)
  * command in the AWS CLI or from the *Greengrass* node in the AWS IoT console. To deploy a group
  * version, you must have a Greengrass service role associated with your AWS account . For more
  * information, see
- * [AWS CloudFormation Support for AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/latest/developerguide/cloudformation-support.html)
+ * [AWS CloudFormation Support for AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/v1/developerguide/cloudformation-support.html)
  * in the *Developer Guide* .
  *
  * Example:
@@ -167,7 +167,7 @@ public class CfnGroupDsl(
      *
      * You can use tags in IAM policies to control access to AWS IoT Greengrass resources. You can
      * also use tags to categorize your resources. For more information, see
-     * [Tagging Your AWS IoT Greengrass Resources](https://docs.aws.amazon.com/greengrass/latest/developerguide/tagging.html)
+     * [Tagging Your AWS IoT Greengrass Resources](https://docs.aws.amazon.com/greengrass/v1/developerguide/tagging.html)
      * in the *Developer Guide* .
      *
      * This `Json` property type is processed as a map of key-value pairs. It uses the following
@@ -193,7 +193,7 @@ public class CfnGroupDsl(
      *
      * You can use tags in IAM policies to control access to AWS IoT Greengrass resources. You can
      * also use tags to categorize your resources. For more information, see
-     * [Tagging Your AWS IoT Greengrass Resources](https://docs.aws.amazon.com/greengrass/latest/developerguide/tagging.html)
+     * [Tagging Your AWS IoT Greengrass Resources](https://docs.aws.amazon.com/greengrass/v1/developerguide/tagging.html)
      * in the *Developer Guide* .
      *
      * This `Json` property type is processed as a map of key-value pairs. It uses the following

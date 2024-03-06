@@ -103,15 +103,11 @@ public class CfnDistributionViewerCertificatePropertyDsl {
     /**
      * @param cloudFrontDefaultCertificate If the distribution uses the CloudFront domain name such
      *   as `d111111abcdef8.cloudfront.net` , set this field to `true` . If the distribution uses
-     *   `Aliases` (alternate domain names or CNAMEs), set this field to `false` and specify values
-     *   for the following fields:
-     * * `ACMCertificateArn` or `IAMCertificateId` (specify a value for one, not both)
-     *
-     * In CloudFormation, these field names are `AcmCertificateArn` and `IamCertificateId` . Note
-     * the different capitalization.
+     *   `Aliases` (alternate domain names or CNAMEs), omit this field and specify values for the
+     *   following fields:
+     * * `AcmCertificateArn` or `IamCertificateId` (specify a value for one, not both)
      * * `MinimumProtocolVersion`
-     * * `SSLSupportMethod` (In CloudFormation, this field name is `SslSupportMethod` . Note the
-     *   different capitalization.)
+     * * `SslSupportMethod`
      */
     public fun cloudFrontDefaultCertificate(cloudFrontDefaultCertificate: Boolean) {
         cdkBuilder.cloudFrontDefaultCertificate(cloudFrontDefaultCertificate)
@@ -120,15 +116,11 @@ public class CfnDistributionViewerCertificatePropertyDsl {
     /**
      * @param cloudFrontDefaultCertificate If the distribution uses the CloudFront domain name such
      *   as `d111111abcdef8.cloudfront.net` , set this field to `true` . If the distribution uses
-     *   `Aliases` (alternate domain names or CNAMEs), set this field to `false` and specify values
-     *   for the following fields:
-     * * `ACMCertificateArn` or `IAMCertificateId` (specify a value for one, not both)
-     *
-     * In CloudFormation, these field names are `AcmCertificateArn` and `IamCertificateId` . Note
-     * the different capitalization.
+     *   `Aliases` (alternate domain names or CNAMEs), omit this field and specify values for the
+     *   following fields:
+     * * `AcmCertificateArn` or `IamCertificateId` (specify a value for one, not both)
      * * `MinimumProtocolVersion`
-     * * `SSLSupportMethod` (In CloudFormation, this field name is `SslSupportMethod` . Note the
-     *   different capitalization.)
+     * * `SslSupportMethod`
      */
     public fun cloudFrontDefaultCertificate(cloudFrontDefaultCertificate: IResolvable) {
         cdkBuilder.cloudFrontDefaultCertificate(cloudFrontDefaultCertificate)

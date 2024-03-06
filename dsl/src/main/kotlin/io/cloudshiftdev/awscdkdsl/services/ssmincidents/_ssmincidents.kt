@@ -22,7 +22,8 @@ import software.constructs.Construct
 public object ssmincidents {
     /**
      * The `AWS::SSMIncidents::ReplicationSet` resource specifies a set of Regions that Incident
-     * Manager data is replicated to and the KMS key used to encrypt the data.
+     * Manager data is replicated to and the AWS Key Management Service ( AWS KMS key used to
+     * encrypt the data.
      *
      * Example:
      * ```

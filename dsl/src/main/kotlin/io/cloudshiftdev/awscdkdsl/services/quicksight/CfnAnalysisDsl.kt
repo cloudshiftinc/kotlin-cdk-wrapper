@@ -39,7 +39,11 @@ public class CfnAnalysisDsl(
 ) {
     private val cdkBuilder: CfnAnalysis.Builder = CfnAnalysis.Builder.create(scope, id)
 
+    private val _errors: MutableList<Any> = mutableListOf()
+
     private val _permissions: MutableList<Any> = mutableListOf()
+
+    private val _sheets: MutableList<Any> = mutableListOf()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
@@ -83,6 +87,39 @@ public class CfnAnalysisDsl(
      */
     public fun definition(definition: CfnAnalysis.AnalysisDefinitionProperty) {
         cdkBuilder.definition(definition)
+    }
+
+    /**
+     * Errors associated with the analysis.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-analysis.html#cfn-quicksight-analysis-errors)
+     *
+     * @param errors Errors associated with the analysis.
+     */
+    public fun errors(vararg errors: Any) {
+        _errors.addAll(listOf(*errors))
+    }
+
+    /**
+     * Errors associated with the analysis.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-analysis.html#cfn-quicksight-analysis-errors)
+     *
+     * @param errors Errors associated with the analysis.
+     */
+    public fun errors(errors: Collection<Any>) {
+        _errors.addAll(errors)
+    }
+
+    /**
+     * Errors associated with the analysis.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-analysis.html#cfn-quicksight-analysis-errors)
+     *
+     * @param errors Errors associated with the analysis.
+     */
+    public fun errors(errors: IResolvable) {
+        cdkBuilder.errors(errors)
     }
 
     /**
@@ -179,6 +216,42 @@ public class CfnAnalysisDsl(
     }
 
     /**
+     * A list of the associated sheets with the unique identifier and name of each sheet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-analysis.html#cfn-quicksight-analysis-sheets)
+     *
+     * @param sheets A list of the associated sheets with the unique identifier and name of each
+     *   sheet.
+     */
+    public fun sheets(vararg sheets: Any) {
+        _sheets.addAll(listOf(*sheets))
+    }
+
+    /**
+     * A list of the associated sheets with the unique identifier and name of each sheet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-analysis.html#cfn-quicksight-analysis-sheets)
+     *
+     * @param sheets A list of the associated sheets with the unique identifier and name of each
+     *   sheet.
+     */
+    public fun sheets(sheets: Collection<Any>) {
+        _sheets.addAll(sheets)
+    }
+
+    /**
+     * A list of the associated sheets with the unique identifier and name of each sheet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-analysis.html#cfn-quicksight-analysis-sheets)
+     *
+     * @param sheets A list of the associated sheets with the unique identifier and name of each
+     *   sheet.
+     */
+    public fun sheets(sheets: IResolvable) {
+        cdkBuilder.sheets(sheets)
+    }
+
+    /**
      * A source entity to use for the analysis that you're creating.
      *
      * This metadata structure contains details that describe a source template and one or more
@@ -260,8 +333,40 @@ public class CfnAnalysisDsl(
         cdkBuilder.themeArn(themeArn)
     }
 
+    /**
+     * The option to relax the validation that is required to create and update analyses,
+     * dashboards, and templates with definition objects.
+     *
+     * When you set this value to `LENIENT` , validation is skipped for specific errors.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-analysis.html#cfn-quicksight-analysis-validationstrategy)
+     *
+     * @param validationStrategy The option to relax the validation that is required to create and
+     *   update analyses, dashboards, and templates with definition objects.
+     */
+    public fun validationStrategy(validationStrategy: IResolvable) {
+        cdkBuilder.validationStrategy(validationStrategy)
+    }
+
+    /**
+     * The option to relax the validation that is required to create and update analyses,
+     * dashboards, and templates with definition objects.
+     *
+     * When you set this value to `LENIENT` , validation is skipped for specific errors.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-analysis.html#cfn-quicksight-analysis-validationstrategy)
+     *
+     * @param validationStrategy The option to relax the validation that is required to create and
+     *   update analyses, dashboards, and templates with definition objects.
+     */
+    public fun validationStrategy(validationStrategy: CfnAnalysis.ValidationStrategyProperty) {
+        cdkBuilder.validationStrategy(validationStrategy)
+    }
+
     public fun build(): CfnAnalysis {
+        if (_errors.isNotEmpty()) cdkBuilder.errors(_errors)
         if (_permissions.isNotEmpty()) cdkBuilder.permissions(_permissions)
+        if (_sheets.isNotEmpty()) cdkBuilder.sheets(_sheets)
         if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
         return cdkBuilder.build()
     }

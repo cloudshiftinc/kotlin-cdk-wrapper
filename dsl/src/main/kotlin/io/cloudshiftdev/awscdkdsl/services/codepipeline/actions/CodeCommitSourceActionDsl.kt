@@ -19,6 +19,7 @@ import software.amazon.awscdk.services.codecommit.IRepository
 import software.amazon.awscdk.services.codepipeline.Artifact
 import software.amazon.awscdk.services.codepipeline.actions.CodeCommitSourceAction
 import software.amazon.awscdk.services.codepipeline.actions.CodeCommitTrigger
+import software.amazon.awscdk.services.codepipeline.actions.ICustomEventRule
 import software.amazon.awscdk.services.iam.IRole
 
 /**
@@ -73,6 +74,7 @@ import software.amazon.awscdk.services.iam.IRole
  * .runOrder(3)
  * .build()));
  * Pipeline.Builder.create(stack, "Pipeline")
+ * .crossAccountKeys(true)
  * .stages(List.of(sourceStage, prodStage))
  * .build();
  * ```
@@ -117,6 +119,23 @@ public class CodeCommitSourceActionDsl {
      */
     public fun codeBuildCloneOutput(codeBuildCloneOutput: Boolean) {
         cdkBuilder.codeBuildCloneOutput(codeBuildCloneOutput)
+    }
+
+    /**
+     * You can pass a `customEventRule` to set up a custom event rule for the CodeCommit source
+     * action.
+     *
+     * You must provide the `eventPattern` and `target` properties in the `customEventRule` object.
+     * Check which `eventPattern` to use:
+     * https://docs.aws.amazon.com/codecommit/latest/userguide/monitoring-events.html
+     *
+     * Default: Event rule which is triggered by CodeCommit repository on commit
+     *
+     * @param customEventRule You can pass a `customEventRule` to set up a custom event rule for the
+     *   CodeCommit source action.
+     */
+    public fun customEventRule(customEventRule: ICustomEventRule) {
+        cdkBuilder.customEventRule(customEventRule)
     }
 
     /**

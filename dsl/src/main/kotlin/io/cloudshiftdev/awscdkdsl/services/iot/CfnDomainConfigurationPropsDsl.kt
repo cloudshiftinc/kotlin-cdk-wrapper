@@ -39,6 +39,9 @@ import software.amazon.awscdk.services.iot.CfnDomainConfigurationProps
  * .domainConfigurationStatus("domainConfigurationStatus")
  * .domainName("domainName")
  * .serverCertificateArns(List.of("serverCertificateArns"))
+ * .serverCertificateConfig(ServerCertificateConfigProperty.builder()
+ * .enableOcspCheck(false)
+ * .build())
  * .serviceType("serviceType")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -109,6 +112,28 @@ public class CfnDomainConfigurationPropsDsl {
      */
     public fun serverCertificateArns(serverCertificateArns: Collection<String>) {
         _serverCertificateArns.addAll(serverCertificateArns)
+    }
+
+    /**
+     * @param serverCertificateConfig The server certificate configuration. For more information,
+     *   see
+     *   [Configurable endpoints](https://docs.aws.amazon.com//iot/latest/developerguide/iot-custom-endpoints-configurable.html)
+     *   from the AWS IoT Core Developer Guide.
+     */
+    public fun serverCertificateConfig(serverCertificateConfig: IResolvable) {
+        cdkBuilder.serverCertificateConfig(serverCertificateConfig)
+    }
+
+    /**
+     * @param serverCertificateConfig The server certificate configuration. For more information,
+     *   see
+     *   [Configurable endpoints](https://docs.aws.amazon.com//iot/latest/developerguide/iot-custom-endpoints-configurable.html)
+     *   from the AWS IoT Core Developer Guide.
+     */
+    public fun serverCertificateConfig(
+        serverCertificateConfig: CfnDomainConfiguration.ServerCertificateConfigProperty
+    ) {
+        cdkBuilder.serverCertificateConfig(serverCertificateConfig)
     }
 
     /**

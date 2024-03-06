@@ -133,6 +133,14 @@ public class EcsDeploymentGroupPropsDsl {
     }
 
     /**
+     * @param ignoreAlarmConfiguration Whether to skip the step of checking CloudWatch alarms during
+     *   the deployment process.
+     */
+    public fun ignoreAlarmConfiguration(ignoreAlarmConfiguration: Boolean) {
+        cdkBuilder.ignoreAlarmConfiguration(ignoreAlarmConfiguration)
+    }
+
+    /**
      * @param ignorePollAlarmsFailure Whether to continue a deployment even if fetching the alarm
      *   status from CloudWatch failed.
      */

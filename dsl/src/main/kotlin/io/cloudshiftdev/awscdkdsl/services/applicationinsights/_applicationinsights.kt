@@ -30,6 +30,7 @@ public object applicationinsights {
      * CfnApplication cfnApplication = CfnApplication.Builder.create(this, "MyCfnApplication")
      * .resourceGroupName("resourceGroupName")
      * // the properties below are optional
+     * .attachMissingPermission(false)
      * .autoConfigurationEnabled(false)
      * .componentMonitoringSettings(List.of(ComponentMonitoringSettingProperty.builder()
      * .componentConfigurationMode("componentConfigurationMode")
@@ -781,6 +782,7 @@ public object applicationinsights {
      * CfnApplicationProps cfnApplicationProps = CfnApplicationProps.builder()
      * .resourceGroupName("resourceGroupName")
      * // the properties below are optional
+     * .attachMissingPermission(false)
      * .autoConfigurationEnabled(false)
      * .componentMonitoringSettings(List.of(ComponentMonitoringSettingProperty.builder()
      * .componentConfigurationMode("componentConfigurationMode")

@@ -171,7 +171,7 @@ public class CfnEndpointGcpMySQLSettingsPropertyDsl {
         cdkBuilder.secretsManagerSecretId(secretsManagerSecretId)
     }
 
-    /** @param serverName Endpoint TCP port. */
+    /** @param serverName The MySQL host name. */
     public fun serverName(serverName: String) {
         cdkBuilder.serverName(serverName)
     }

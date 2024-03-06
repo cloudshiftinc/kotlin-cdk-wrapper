@@ -126,9 +126,9 @@ public class CfnPortalDsl(
 
     /**
      * The service to use to authenticate users to the portal. Choose from the following options:.
-     * * `SSO` – The portal uses AWS IAM Identity Center (successor to AWS Single Sign-On) to
-     *   authenticate users and manage user permissions. Before you can create a portal that uses
-     *   IAM Identity Center , you must enable IAM Identity Center . For more information, see
+     * * `SSO` – The portal uses AWS IAM Identity Center to authenticate users and manage user
+     *   permissions. Before you can create a portal that uses IAM Identity Center , you must enable
+     *   IAM Identity Center . For more information, see
      *   [Enabling IAM Identity Center](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/monitor-get-started.html#mon-gs-sso)
      *   in the *AWS IoT SiteWise User Guide* . This option is only available in AWS Regions other
      *   than the China Regions.

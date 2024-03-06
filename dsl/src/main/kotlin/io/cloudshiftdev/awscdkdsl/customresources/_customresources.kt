@@ -37,7 +37,7 @@ public object customresources {
      * .onCreate(AwsSdkCall.builder()
      * .assumedRoleArn("arn:aws:iam::OTHERACCOUNT:role/CrossAccount/ManageHostedZoneConnections")
      * .service("Route53")
-     * .action("associateVPCWithHostedZone")
+     * .action("AssociateVPCWithHostedZone")
      * .parameters(Map.of(
      * "HostedZoneId", "hz-123",
      * "VPC", Map.of(
@@ -75,7 +75,7 @@ public object customresources {
      * .onCreate(AwsSdkCall.builder()
      * .assumedRoleArn("arn:aws:iam::OTHERACCOUNT:role/CrossAccount/ManageHostedZoneConnections")
      * .service("Route53")
-     * .action("associateVPCWithHostedZone")
+     * .action("AssociateVPCWithHostedZone")
      * .parameters(Map.of(
      * "HostedZoneId", "hz-123",
      * "VPC", Map.of(
@@ -135,7 +135,9 @@ public object customresources {
      * Provider myProvider = Provider.Builder.create(this, "MyProvider")
      * .onEventHandler(onEvent)
      * .isCompleteHandler(isComplete)
-     * .logRetention(RetentionDays.ONE_DAY)
+     * .logGroup(LogGroup.Builder.create(this, "MyProviderLogs")
+     * .retention(RetentionDays.ONE_DAY)
+     * .build())
      * .role(myRole)
      * .providerFunctionName("the-lambda-name")
      * .build();
@@ -162,7 +164,9 @@ public object customresources {
      * Provider myProvider = Provider.Builder.create(this, "MyProvider")
      * .onEventHandler(onEvent)
      * .isCompleteHandler(isComplete)
-     * .logRetention(RetentionDays.ONE_DAY)
+     * .logGroup(LogGroup.Builder.create(this, "MyProviderLogs")
+     * .retention(RetentionDays.ONE_DAY)
+     * .build())
      * .role(myRole)
      * .providerFunctionName("the-lambda-name")
      * .build();
@@ -182,7 +186,7 @@ public object customresources {
      * AwsCustomResource getParameter = AwsCustomResource.Builder.create(this, "GetParameter")
      * .onUpdate(AwsSdkCall.builder() // will also be called for a CREATE event
      * .service("SSM")
-     * .action("getParameter")
+     * .action("GetParameter")
      * .parameters(Map.of(
      * "Name", "my-parameter",
      * "WithDecryption", true))

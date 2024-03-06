@@ -194,7 +194,7 @@ public object nimblestudio {
     }
 
     /**
-     * Configures how streaming sessions are backed up when launched from this launch profile.</p>.
+     * Configures how streaming sessions are backed up when launched from this launch profile.
      *
      * Example:
      * ```
@@ -273,8 +273,9 @@ public object nimblestudio {
     }
 
     /**
-     * Custom volume configuration for the root volumes that are attached to streaming sessions.</p>
-     * This parameter is only allowed when `sessionPersistenceMode` is `ACTIVATED`.</p>.
+     * Custom volume configuration for the root volumes that are attached to streaming sessions.
+     *
+     * This parameter is only allowed when `sessionPersistenceMode` is `ACTIVATED` .
      *
      * Example:
      * ```
@@ -363,7 +364,7 @@ public object nimblestudio {
     }
 
     /**
-     * TODO</p>.
+     * Specifies how a streaming image is encrypted.
      *
      * Example:
      * ```

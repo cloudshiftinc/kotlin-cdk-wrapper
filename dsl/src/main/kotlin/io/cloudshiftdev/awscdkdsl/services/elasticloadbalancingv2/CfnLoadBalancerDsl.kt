@@ -32,6 +32,7 @@ import software.constructs.Construct
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
  * CfnLoadBalancer cfnLoadBalancer = CfnLoadBalancer.Builder.create(this, "MyCfnLoadBalancer")
+ * .enforceSecurityGroupInboundRulesOnPrivateLinkTraffic("enforceSecurityGroupInboundRulesOnPrivateLinkTraffic")
  * .ipAddressType("ipAddressType")
  * .loadBalancerAttributes(List.of(LoadBalancerAttributeProperty.builder()
  * .key("key")
@@ -74,6 +75,24 @@ public class CfnLoadBalancerDsl(
     private val _subnets: MutableList<String> = mutableListOf()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
+
+    /**
+     * Indicates whether to evaluate inbound security group rules for traffic sent to a Network Load
+     * Balancer through AWS PrivateLink .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-enforcesecuritygroupinboundrulesonprivatelinktraffic)
+     *
+     * @param enforceSecurityGroupInboundRulesOnPrivateLinkTraffic Indicates whether to evaluate
+     *   inbound security group rules for traffic sent to a Network Load Balancer through AWS
+     *   PrivateLink .
+     */
+    public fun enforceSecurityGroupInboundRulesOnPrivateLinkTraffic(
+        enforceSecurityGroupInboundRulesOnPrivateLinkTraffic: String
+    ) {
+        cdkBuilder.enforceSecurityGroupInboundRulesOnPrivateLinkTraffic(
+            enforceSecurityGroupInboundRulesOnPrivateLinkTraffic
+        )
+    }
 
     /**
      * The IP address type.
@@ -192,7 +211,7 @@ public class CfnLoadBalancerDsl(
     }
 
     /**
-     * The IDs of the public subnets.
+     * The IDs of the subnets.
      *
      * You can specify only one subnet per Availability Zone. You must specify either subnets or
      * subnet mappings, but not both.
@@ -216,14 +235,14 @@ public class CfnLoadBalancerDsl(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmappings)
      *
-     * @param subnetMappings The IDs of the public subnets.
+     * @param subnetMappings The IDs of the subnets.
      */
     public fun subnetMappings(vararg subnetMappings: Any) {
         _subnetMappings.addAll(listOf(*subnetMappings))
     }
 
     /**
-     * The IDs of the public subnets.
+     * The IDs of the subnets.
      *
      * You can specify only one subnet per Availability Zone. You must specify either subnets or
      * subnet mappings, but not both.
@@ -247,14 +266,14 @@ public class CfnLoadBalancerDsl(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmappings)
      *
-     * @param subnetMappings The IDs of the public subnets.
+     * @param subnetMappings The IDs of the subnets.
      */
     public fun subnetMappings(subnetMappings: Collection<Any>) {
         _subnetMappings.addAll(subnetMappings)
     }
 
     /**
-     * The IDs of the public subnets.
+     * The IDs of the subnets.
      *
      * You can specify only one subnet per Availability Zone. You must specify either subnets or
      * subnet mappings, but not both.
@@ -278,14 +297,14 @@ public class CfnLoadBalancerDsl(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmappings)
      *
-     * @param subnetMappings The IDs of the public subnets.
+     * @param subnetMappings The IDs of the subnets.
      */
     public fun subnetMappings(subnetMappings: IResolvable) {
         cdkBuilder.subnetMappings(subnetMappings)
     }
 
     /**
-     * The IDs of the public subnets.
+     * The IDs of the subnets.
      *
      * You can specify only one subnet per Availability Zone. You must specify either subnets or
      * subnet mappings, but not both. To specify an Elastic IP address, specify subnet mappings
@@ -304,14 +323,14 @@ public class CfnLoadBalancerDsl(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-subnets)
      *
-     * @param subnets The IDs of the public subnets.
+     * @param subnets The IDs of the subnets.
      */
     public fun subnets(vararg subnets: String) {
         _subnets.addAll(listOf(*subnets))
     }
 
     /**
-     * The IDs of the public subnets.
+     * The IDs of the subnets.
      *
      * You can specify only one subnet per Availability Zone. You must specify either subnets or
      * subnet mappings, but not both. To specify an Elastic IP address, specify subnet mappings
@@ -330,7 +349,7 @@ public class CfnLoadBalancerDsl(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-subnets)
      *
-     * @param subnets The IDs of the public subnets.
+     * @param subnets The IDs of the subnets.
      */
     public fun subnets(subnets: Collection<String>) {
         _subnets.addAll(subnets)

@@ -38,12 +38,12 @@ public class CfnApplicationWorkerTypeSpecificationInputPropertyDsl {
     private val cdkBuilder: CfnApplication.WorkerTypeSpecificationInputProperty.Builder =
         CfnApplication.WorkerTypeSpecificationInputProperty.builder()
 
-    /** @param imageConfiguration The image configuration. */
+    /** @param imageConfiguration The image configuration for a worker type. */
     public fun imageConfiguration(imageConfiguration: IResolvable) {
         cdkBuilder.imageConfiguration(imageConfiguration)
     }
 
-    /** @param imageConfiguration The image configuration. */
+    /** @param imageConfiguration The image configuration for a worker type. */
     public fun imageConfiguration(
         imageConfiguration: CfnApplication.ImageConfigurationInputProperty
     ) {

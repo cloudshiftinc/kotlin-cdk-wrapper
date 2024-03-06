@@ -13,6 +13,7 @@ package io.cloudshiftdev.awscdkdsl.services.sagemaker
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Boolean
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnFeatureGroup
 
@@ -34,6 +35,11 @@ import software.amazon.awscdk.services.sagemaker.CfnFeatureGroup
  * .enableOnlineStore(false)
  * .securityConfig(OnlineStoreSecurityConfigProperty.builder()
  * .kmsKeyId("kmsKeyId")
+ * .build())
+ * .storageType("storageType")
+ * .ttlDuration(TtlDurationProperty.builder()
+ * .unit("unit")
+ * .value(123)
  * .build())
  * .build();
  * ```
@@ -81,6 +87,39 @@ public class CfnFeatureGroupOnlineStoreConfigPropertyDsl {
      */
     public fun securityConfig(securityConfig: CfnFeatureGroup.OnlineStoreSecurityConfigProperty) {
         cdkBuilder.securityConfig(securityConfig)
+    }
+
+    /**
+     * @param storageType Option for different tiers of low latency storage for real-time data
+     *   retrieval.
+     * * `Standard` : A managed low latency data store for feature groups.
+     * * `InMemory` : A managed data store for feature groups that supports very low latency
+     *   retrieval.
+     */
+    public fun storageType(storageType: String) {
+        cdkBuilder.storageType(storageType)
+    }
+
+    /**
+     * @param ttlDuration Time to live duration, where the record is hard deleted after the
+     *   expiration time is reached;. `ExpiresAt` = `EventTime` + `TtlDuration` . For information on
+     *   HardDelete, see the
+     *   [DeleteRecord](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_feature_store_DeleteRecord.html)
+     *   API in the Amazon SageMaker API Reference guide.
+     */
+    public fun ttlDuration(ttlDuration: IResolvable) {
+        cdkBuilder.ttlDuration(ttlDuration)
+    }
+
+    /**
+     * @param ttlDuration Time to live duration, where the record is hard deleted after the
+     *   expiration time is reached;. `ExpiresAt` = `EventTime` + `TtlDuration` . For information on
+     *   HardDelete, see the
+     *   [DeleteRecord](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_feature_store_DeleteRecord.html)
+     *   API in the Amazon SageMaker API Reference guide.
+     */
+    public fun ttlDuration(ttlDuration: CfnFeatureGroup.TtlDurationProperty) {
+        cdkBuilder.ttlDuration(ttlDuration)
     }
 
     public fun build(): CfnFeatureGroup.OnlineStoreConfigProperty = cdkBuilder.build()

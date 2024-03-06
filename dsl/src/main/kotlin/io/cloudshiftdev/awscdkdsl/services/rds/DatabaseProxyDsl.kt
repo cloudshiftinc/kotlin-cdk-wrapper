@@ -24,6 +24,7 @@ import software.amazon.awscdk.services.ec2.ISecurityGroup
 import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.iam.IRole
+import software.amazon.awscdk.services.rds.ClientPasswordAuthType
 import software.amazon.awscdk.services.rds.DatabaseProxy
 import software.amazon.awscdk.services.rds.ProxyTarget
 import software.amazon.awscdk.services.rds.SessionPinningFilter
@@ -47,10 +48,8 @@ import software.constructs.Construct
  * .proxyTarget(ProxyTarget.fromCluster(cluster))
  * .secrets(List.of(cluster.getSecret()))
  * .vpc(vpc)
+ * .clientPasswordAuthType(ClientPasswordAuthType.MYSQL_NATIVE_PASSWORD)
  * .build();
- * Role role = Role.Builder.create(this, "DBProxyRole").assumedBy(new
- * AccountPrincipal(this.account)).build();
- * proxy.grantConnect(role, "admin");
  * ```
  */
 @CdkDslMarker
@@ -81,6 +80,19 @@ public class DatabaseProxyDsl(
      */
     public fun borrowTimeout(borrowTimeout: Duration) {
         cdkBuilder.borrowTimeout(borrowTimeout)
+    }
+
+    /**
+     * Specifies the details of authentication used by a proxy to log in as a specific database
+     * user.
+     *
+     * Default: - CloudFormation defaults will apply given the specified database engine.
+     *
+     * @param clientPasswordAuthType Specifies the details of authentication used by a proxy to log
+     *   in as a specific database user.
+     */
+    public fun clientPasswordAuthType(clientPasswordAuthType: ClientPasswordAuthType) {
+        cdkBuilder.clientPasswordAuthType(clientPasswordAuthType)
     }
 
     /**

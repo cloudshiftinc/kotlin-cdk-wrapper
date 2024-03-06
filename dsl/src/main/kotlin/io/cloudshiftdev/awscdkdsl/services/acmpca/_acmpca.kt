@@ -483,8 +483,10 @@ public object acmpca {
      * can enable CRLs for your new or an existing private CA by setting the *Enabled* parameter to
      * `true` . Your private CA writes CRLs to an S3 bucket that you specify in the *S3BucketName*
      * parameter. You can hide the name of your bucket by specifying a value for the *CustomCname*
-     * parameter. Your private CA copies the CNAME or the S3 bucket name to the *CRL Distribution
-     * Points* extension of each certificate it issues. Your S3 bucket policy must give write
+     * parameter. Your private CA by default copies the CNAME or the S3 bucket name to the *CRL
+     * Distribution Points* extension of each certificate it issues. If you want to configure this
+     * default behavior to be something different, you can set the
+     * *CrlDistributionPointExtensionConfiguration* parameter. Your S3 bucket policy must give write
      * permission to AWS Private CA.
      *
      * AWS Private CA assets that are stored in Amazon S3 can be protected with encryption. For more
@@ -535,6 +537,9 @@ public object acmpca {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.acmpca.*;
      * CrlConfigurationProperty crlConfigurationProperty = CrlConfigurationProperty.builder()
+     * .crlDistributionPointExtensionConfiguration(CrlDistributionPointExtensionConfigurationProperty.builder()
+     * .omitExtension(false)
+     * .build())
      * .customCname("customCname")
      * .enabled(false)
      * .expirationInDays(123)
@@ -549,6 +554,39 @@ public object acmpca {
         block: CfnCertificateAuthorityCrlConfigurationPropertyDsl.() -> Unit = {}
     ): CfnCertificateAuthority.CrlConfigurationProperty {
         val builder = CfnCertificateAuthorityCrlConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Contains configuration information for the default behavior of the CRL Distribution Point
+     * (CDP) extension in certificates issued by your CA.
+     *
+     * This extension contains a link to download the CRL, so you can check whether a certificate
+     * has been revoked. To choose whether you want this extension omitted or not in certificates
+     * issued by your CA, you can set the *OmitExtension* parameter.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.acmpca.*;
+     * CrlDistributionPointExtensionConfigurationProperty
+     * crlDistributionPointExtensionConfigurationProperty =
+     * CrlDistributionPointExtensionConfigurationProperty.builder()
+     * .omitExtension(false)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crldistributionpointextensionconfiguration.html)
+     */
+    public inline fun cfnCertificateAuthorityCrlDistributionPointExtensionConfigurationProperty(
+        block:
+            CfnCertificateAuthorityCrlDistributionPointExtensionConfigurationPropertyDsl.(
+            ) -> Unit =
+            {}
+    ): CfnCertificateAuthority.CrlDistributionPointExtensionConfigurationProperty {
+        val builder = CfnCertificateAuthorityCrlDistributionPointExtensionConfigurationPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -894,6 +932,9 @@ public object acmpca {
      * RevocationConfigurationProperty revocationConfigurationProperty =
      * RevocationConfigurationProperty.builder()
      * .crlConfiguration(CrlConfigurationProperty.builder()
+     * .crlDistributionPointExtensionConfiguration(CrlDistributionPointExtensionConfigurationProperty.builder()
+     * .omitExtension(false)
+     * .build())
      * .customCname("customCname")
      * .enabled(false)
      * .expirationInDays(123)

@@ -11,9 +11,16 @@
 
 package io.cloudshiftdev.awscdkdsl.services.location
 
+import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Boolean
 import kotlin.Deprecated
 import kotlin.String
+import kotlin.Unit
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.location.CfnTrackerProps
 
 /**
@@ -28,10 +35,16 @@ import software.amazon.awscdk.services.location.CfnTrackerProps
  * .trackerName("trackerName")
  * // the properties below are optional
  * .description("description")
+ * .eventBridgeEnabled(false)
+ * .kmsKeyEnableGeospatialQueries(false)
  * .kmsKeyId("kmsKeyId")
  * .positionFiltering("positionFiltering")
  * .pricingPlan("pricingPlan")
  * .pricingPlanDataSource("pricingPlanDataSource")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -41,9 +54,31 @@ import software.amazon.awscdk.services.location.CfnTrackerProps
 public class CfnTrackerPropsDsl {
     private val cdkBuilder: CfnTrackerProps.Builder = CfnTrackerProps.builder()
 
+    private val _tags: MutableList<CfnTag> = mutableListOf()
+
     /** @param description An optional description for the tracker resource. */
     public fun description(description: String) {
         cdkBuilder.description(description)
+    }
+
+    /** @param eventBridgeEnabled the value to be set. */
+    public fun eventBridgeEnabled(eventBridgeEnabled: Boolean) {
+        cdkBuilder.eventBridgeEnabled(eventBridgeEnabled)
+    }
+
+    /** @param eventBridgeEnabled the value to be set. */
+    public fun eventBridgeEnabled(eventBridgeEnabled: IResolvable) {
+        cdkBuilder.eventBridgeEnabled(eventBridgeEnabled)
+    }
+
+    /** @param kmsKeyEnableGeospatialQueries the value to be set. */
+    public fun kmsKeyEnableGeospatialQueries(kmsKeyEnableGeospatialQueries: Boolean) {
+        cdkBuilder.kmsKeyEnableGeospatialQueries(kmsKeyEnableGeospatialQueries)
+    }
+
+    /** @param kmsKeyEnableGeospatialQueries the value to be set. */
+    public fun kmsKeyEnableGeospatialQueries(kmsKeyEnableGeospatialQueries: IResolvable) {
+        cdkBuilder.kmsKeyEnableGeospatialQueries(kmsKeyEnableGeospatialQueries)
     }
 
     /**
@@ -97,6 +132,16 @@ public class CfnTrackerPropsDsl {
         cdkBuilder.pricingPlanDataSource(pricingPlanDataSource)
     }
 
+    /** @param tags An array of key-value pairs to apply to this resource. */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
+
+    /** @param tags An array of key-value pairs to apply to this resource. */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
+
     /**
      * @param trackerName The name for the tracker resource. Requirements:
      * * Contain only alphanumeric characters (A-Z, a-z, 0-9) , hyphens (-), periods (.), and
@@ -108,5 +153,8 @@ public class CfnTrackerPropsDsl {
         cdkBuilder.trackerName(trackerName)
     }
 
-    public fun build(): CfnTrackerProps = cdkBuilder.build()
+    public fun build(): CfnTrackerProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

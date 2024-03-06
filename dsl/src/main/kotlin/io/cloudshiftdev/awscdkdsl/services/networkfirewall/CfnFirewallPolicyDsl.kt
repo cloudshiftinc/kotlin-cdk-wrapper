@@ -71,6 +71,7 @@ import software.constructs.Construct
  * .priority(123)
  * .resourceArn("resourceArn")
  * .build()))
+ * .tlsInspectionConfigurationArn("tlsInspectionConfigurationArn")
  * .build())
  * .firewallPolicyName("firewallPolicyName")
  * // the properties below are optional

@@ -45,7 +45,7 @@ public class CfnSecretReplicaRegionPropertyDsl {
         cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    /** @param region (Optional) A string that represents a `Region` , for example "us-east-1". */
+    /** @param region A string that represents a `Region` , for example "us-east-1". */
     public fun region(region: String) {
         cdkBuilder.region(region)
     }

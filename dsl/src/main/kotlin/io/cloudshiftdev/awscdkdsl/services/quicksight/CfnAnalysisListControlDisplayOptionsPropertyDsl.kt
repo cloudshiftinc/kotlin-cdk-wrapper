@@ -25,6 +25,10 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * import software.amazon.awscdk.services.quicksight.*;
  * ListControlDisplayOptionsProperty listControlDisplayOptionsProperty =
  * ListControlDisplayOptionsProperty.builder()
+ * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+ * .infoIconText("infoIconText")
+ * .visibility("visibility")
+ * .build())
  * .searchOptions(ListControlSearchOptionsProperty.builder()
  * .visibility("visibility")
  * .build())
@@ -55,6 +59,18 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
 public class CfnAnalysisListControlDisplayOptionsPropertyDsl {
     private val cdkBuilder: CfnAnalysis.ListControlDisplayOptionsProperty.Builder =
         CfnAnalysis.ListControlDisplayOptionsProperty.builder()
+
+    /** @param infoIconLabelOptions The configuration of info icon label options. */
+    public fun infoIconLabelOptions(infoIconLabelOptions: IResolvable) {
+        cdkBuilder.infoIconLabelOptions(infoIconLabelOptions)
+    }
+
+    /** @param infoIconLabelOptions The configuration of info icon label options. */
+    public fun infoIconLabelOptions(
+        infoIconLabelOptions: CfnAnalysis.SheetControlInfoIconLabelOptionsProperty
+    ) {
+        cdkBuilder.infoIconLabelOptions(infoIconLabelOptions)
+    }
 
     /** @param searchOptions The configuration of the search options in a list control. */
     public fun searchOptions(searchOptions: IResolvable) {

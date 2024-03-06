@@ -35,6 +35,7 @@ import software.amazon.awscdk.services.logs.CfnLogGroupProps
  * CfnLogGroupProps cfnLogGroupProps = CfnLogGroupProps.builder()
  * .dataProtectionPolicy(dataProtectionPolicy)
  * .kmsKeyId("kmsKeyId")
+ * .logGroupClass("logGroupClass")
  * .logGroupName("logGroupName")
  * .retentionInDays(123)
  * .tags(List.of(CfnTag.builder()
@@ -100,6 +101,20 @@ public class CfnLogGroupPropsDsl {
      */
     public fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
+    }
+
+    /**
+     * @param logGroupClass Specifies the log group class for this log group. There are two
+     *   classes:.
+     * * The `Standard` log class supports all CloudWatch Logs features.
+     * * The `Infrequent Access` log class supports a subset of CloudWatch Logs features and incurs
+     *   lower costs.
+     *
+     * For details about the features supported by each class, see
+     * [Log classes](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html)
+     */
+    public fun logGroupClass(logGroupClass: String) {
+        cdkBuilder.logGroupClass(logGroupClass)
     }
 
     /**

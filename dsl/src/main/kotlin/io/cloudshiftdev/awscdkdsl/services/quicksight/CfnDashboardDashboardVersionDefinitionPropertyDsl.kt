@@ -150,6 +150,16 @@ public class CfnDashboardDashboardVersionDefinitionPropertyDsl {
         cdkBuilder.filterGroups(filterGroups)
     }
 
+    /** @param options An array of option definitions for a dashboard. */
+    public fun options(options: IResolvable) {
+        cdkBuilder.options(options)
+    }
+
+    /** @param options An array of option definitions for a dashboard. */
+    public fun options(options: CfnDashboard.AssetOptionsProperty) {
+        cdkBuilder.options(options)
+    }
+
     /**
      * @param parameterDeclarations The parameter declarations for a dashboard. Parameters are named
      *   variables that can transfer a value for use by an action or an object.

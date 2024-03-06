@@ -34,6 +34,7 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * .cacheFullBehavior("cacheFullBehavior")
  * .cacheLength(123)
  * .captionData("captionData")
+ * .includeFillerNalUnits("includeFillerNalUnits")
  * .inputLossAction("inputLossAction")
  * .restartDelay(123)
  * .build();
@@ -97,6 +98,11 @@ public class CfnChannelRtmpGroupSettingsPropertyDsl {
      */
     public fun captionData(captionData: String) {
         cdkBuilder.captionData(captionData)
+    }
+
+    /** @param includeFillerNalUnits the value to be set. */
+    public fun includeFillerNalUnits(includeFillerNalUnits: String) {
+        cdkBuilder.includeFillerNalUnits(includeFillerNalUnits)
     }
 
     /**

@@ -136,22 +136,22 @@ public class CfnDiskDsl(
     }
 
     /**
-     * Location of a resource.
+     * The AWS Region and Availability Zone where the disk is located.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-location)
      *
-     * @param location Location of a resource.
+     * @param location The AWS Region and Availability Zone where the disk is located.
      */
     public fun location(location: IResolvable) {
         cdkBuilder.location(location)
     }
 
     /**
-     * Location of a resource.
+     * The AWS Region and Availability Zone where the disk is located.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-location)
      *
-     * @param location Location of a resource.
+     * @param location The AWS Region and Availability Zone where the disk is located.
      */
     public fun location(location: CfnDisk.LocationProperty) {
         cdkBuilder.location(location)

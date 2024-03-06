@@ -16,6 +16,8 @@ import kotlin.String
 import software.amazon.awscdk.services.panorama.CfnPackage
 
 /**
+ * A storage location.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -37,27 +39,27 @@ public class CfnPackageStorageLocationPropertyDsl {
     private val cdkBuilder: CfnPackage.StorageLocationProperty.Builder =
         CfnPackage.StorageLocationProperty.builder()
 
-    /** @param binaryPrefixLocation the value to be set. */
+    /** @param binaryPrefixLocation The location's binary prefix. */
     public fun binaryPrefixLocation(binaryPrefixLocation: String) {
         cdkBuilder.binaryPrefixLocation(binaryPrefixLocation)
     }
 
-    /** @param bucket the value to be set. */
+    /** @param bucket The location's bucket. */
     public fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
     }
 
-    /** @param generatedPrefixLocation the value to be set. */
+    /** @param generatedPrefixLocation The location's generated prefix. */
     public fun generatedPrefixLocation(generatedPrefixLocation: String) {
         cdkBuilder.generatedPrefixLocation(generatedPrefixLocation)
     }
 
-    /** @param manifestPrefixLocation the value to be set. */
+    /** @param manifestPrefixLocation The location's manifest prefix. */
     public fun manifestPrefixLocation(manifestPrefixLocation: String) {
         cdkBuilder.manifestPrefixLocation(manifestPrefixLocation)
     }
 
-    /** @param repoPrefixLocation the value to be set. */
+    /** @param repoPrefixLocation The location's repo prefix. */
     public fun repoPrefixLocation(repoPrefixLocation: String) {
         cdkBuilder.repoPrefixLocation(repoPrefixLocation)
     }

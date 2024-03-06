@@ -19,15 +19,6 @@ import software.constructs.Construct
 /**
  * Adds the specified user to the specified group.
  *
- * Amazon Cognito evaluates AWS Identity and Access Management (IAM) policies in requests for this
- * API operation. For this operation, you must use IAM credentials to authorize requests, and you
- * must grant yourself the corresponding IAM permission in a policy.
- *
- * **Learn
- * more** - [Signing AWS API Requests](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-signing.html)
- * * [Using the Amazon Cognito user pools API and user pool
- *   endpoints](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pools-API-operations.html)
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -52,11 +43,11 @@ public class CfnUserPoolUserToGroupAttachmentDsl(
         CfnUserPoolUserToGroupAttachment.Builder.create(scope, id)
 
     /**
-     * The group name.
+     * The name of the group that you want to add your user to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-groupname)
      *
-     * @param groupName The group name.
+     * @param groupName The name of the group that you want to add your user to.
      */
     public fun groupName(groupName: String) {
         cdkBuilder.groupName(groupName)
@@ -74,11 +65,9 @@ public class CfnUserPoolUserToGroupAttachmentDsl(
     }
 
     /**
-     * The username for the user.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-username)
      *
-     * @param username The username for the user.
+     * @param username
      */
     public fun username(username: String) {
         cdkBuilder.username(username)

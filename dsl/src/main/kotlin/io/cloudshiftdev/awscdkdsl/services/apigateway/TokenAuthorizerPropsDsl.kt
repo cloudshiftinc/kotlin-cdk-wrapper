@@ -68,7 +68,7 @@ public class TokenAuthorizerPropsDsl {
     /**
      * @param identitySource The request header mapping expression for the bearer token. This is
      *   typically passed as part of the header, in which case this should be
-     *   `method.request.header.Authorizer` where Authorizer is the header containing the bearer
+     *   `method.request.header.Authorizer` where `Authorizer` is the header containing the bearer
      *   token.
      */
     public fun identitySource(identitySource: String) {

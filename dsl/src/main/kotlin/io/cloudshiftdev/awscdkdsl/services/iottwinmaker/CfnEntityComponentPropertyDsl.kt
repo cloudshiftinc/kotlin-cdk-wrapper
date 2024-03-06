@@ -77,7 +77,7 @@ public class CfnEntityComponentPropertyDsl {
         cdkBuilder.componentName(componentName)
     }
 
-    /** @param componentTypeId The ID of the ComponentType. */
+    /** @param componentTypeId The ID of the component type. */
     public fun componentTypeId(componentTypeId: String) {
         cdkBuilder.componentTypeId(componentTypeId)
     }

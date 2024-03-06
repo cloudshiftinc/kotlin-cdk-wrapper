@@ -33,6 +33,13 @@ public inline fun CfnApp.setBasicAuthConfig(
     return setBasicAuthConfig(builder.build())
 }
 
+/** The backend environment for an Amplify app. */
+public inline fun CfnBranch.setBackend(block: CfnBranchBackendPropertyDsl.() -> Unit = {}) {
+    val builder = CfnBranchBackendPropertyDsl()
+    builder.apply(block)
+    return setBackend(builder.build())
+}
+
 /** The basic authorization credentials for a branch of an Amplify app. */
 public inline fun CfnBranch.setBasicAuthConfig(
     block: CfnBranchBasicAuthConfigPropertyDsl.() -> Unit = {}

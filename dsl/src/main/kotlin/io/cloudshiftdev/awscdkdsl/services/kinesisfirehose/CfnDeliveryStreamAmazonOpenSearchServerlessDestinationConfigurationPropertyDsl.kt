@@ -17,6 +17,9 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
 /**
+ * Describes the configuration of a destination in the Serverless offering for Amazon OpenSearch
+ * Service.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -92,12 +95,18 @@ public class CfnDeliveryStreamAmazonOpenSearchServerlessDestinationConfiguration
         CfnDeliveryStream.AmazonOpenSearchServerlessDestinationConfigurationProperty.Builder =
         CfnDeliveryStream.AmazonOpenSearchServerlessDestinationConfigurationProperty.builder()
 
-    /** @param bufferingHints the value to be set. */
+    /**
+     * @param bufferingHints The buffering options. If no value is specified, the default values for
+     *   AmazonopensearchserviceBufferingHints are used.
+     */
     public fun bufferingHints(bufferingHints: IResolvable) {
         cdkBuilder.bufferingHints(bufferingHints)
     }
 
-    /** @param bufferingHints the value to be set. */
+    /**
+     * @param bufferingHints The buffering options. If no value is specified, the default values for
+     *   AmazonopensearchserviceBufferingHints are used.
+     */
     public fun bufferingHints(
         bufferingHints: CfnDeliveryStream.AmazonOpenSearchServerlessBufferingHintsProperty
     ) {
@@ -116,12 +125,15 @@ public class CfnDeliveryStreamAmazonOpenSearchServerlessDestinationConfiguration
         cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions)
     }
 
-    /** @param collectionEndpoint the value to be set. */
+    /**
+     * @param collectionEndpoint The endpoint to use when communicating with the collection in the
+     *   Serverless offering for Amazon OpenSearch Service.
+     */
     public fun collectionEndpoint(collectionEndpoint: String) {
         cdkBuilder.collectionEndpoint(collectionEndpoint)
     }
 
-    /** @param indexName the value to be set. */
+    /** @param indexName The Serverless offering for Amazon OpenSearch Service index name. */
     public fun indexName(indexName: String) {
         cdkBuilder.indexName(indexName)
     }
@@ -138,24 +150,40 @@ public class CfnDeliveryStreamAmazonOpenSearchServerlessDestinationConfiguration
         cdkBuilder.processingConfiguration(processingConfiguration)
     }
 
-    /** @param retryOptions the value to be set. */
+    /**
+     * @param retryOptions The retry behavior in case Firehose is unable to deliver documents to the
+     *   Serverless offering for Amazon OpenSearch Service. The default value is 300 (5 minutes).
+     */
     public fun retryOptions(retryOptions: IResolvable) {
         cdkBuilder.retryOptions(retryOptions)
     }
 
-    /** @param retryOptions the value to be set. */
+    /**
+     * @param retryOptions The retry behavior in case Firehose is unable to deliver documents to the
+     *   Serverless offering for Amazon OpenSearch Service. The default value is 300 (5 minutes).
+     */
     public fun retryOptions(
         retryOptions: CfnDeliveryStream.AmazonOpenSearchServerlessRetryOptionsProperty
     ) {
         cdkBuilder.retryOptions(retryOptions)
     }
 
-    /** @param roleArn the value to be set. */
+    /**
+     * @param roleArn The Amazon Resource Name (ARN) of the IAM role to be assumed by Firehose for
+     *   calling the Serverless offering for Amazon OpenSearch Service Configuration API and for
+     *   indexing documents.
+     */
     public fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
     }
 
-    /** @param s3BackupMode the value to be set. */
+    /**
+     * @param s3BackupMode Defines how documents should be delivered to Amazon S3. When it is set to
+     *   FailedDocumentsOnly, Firehose writes any documents that could not be indexed to the
+     *   configured Amazon S3 destination, with AmazonOpenSearchService-failed/ appended to the key
+     *   prefix. When set to AllDocuments, Firehose delivers all incoming records to Amazon S3, and
+     *   also writes failed documents with AmazonOpenSearchService-failed/ appended to the prefix.
+     */
     public fun s3BackupMode(s3BackupMode: String) {
         cdkBuilder.s3BackupMode(s3BackupMode)
     }

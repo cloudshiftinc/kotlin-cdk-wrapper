@@ -75,10 +75,9 @@ public class CfnLocationSMBPropsDsl {
     }
 
     /**
-     * @param domain Specifies the Windows domain name that your SMB file server belongs to. For
-     *   more information, see
-     *   [required permissions](https://docs.aws.amazon.com/datasync/latest/userguide/create-smb-location.html#configuring-smb-permissions)
-     *   for SMB locations.
+     * @param domain Specifies the name of the Active Directory domain that your SMB file server
+     *   belongs to. If you have multiple Active Directory domains in your environment, configuring
+     *   this parameter makes sure that DataSync connects to the right file server.
      */
     public fun domain(domain: String) {
         cdkBuilder.domain(domain)

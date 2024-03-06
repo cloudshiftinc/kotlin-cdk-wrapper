@@ -16,6 +16,8 @@ import kotlin.String
 import software.amazon.awscdk.services.appflow.CfnFlow
 
 /**
+ * The API of the connector application that Amazon AppFlow uses to transfer your data.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -34,12 +36,20 @@ public class CfnFlowDataTransferApiPropertyDsl {
     private val cdkBuilder: CfnFlow.DataTransferApiProperty.Builder =
         CfnFlow.DataTransferApiProperty.builder()
 
-    /** @param name the value to be set. */
+    /** @param name The name of the connector application API. */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }
 
-    /** @param type the value to be set. */
+    /**
+     * @param type You can specify one of the following types:.
+     * * **AUTOMATIC** - The default. Optimizes a flow for datasets that fluctuate in size from
+     *   small to large. For each flow run, Amazon AppFlow chooses to use the SYNC or ASYNC API type
+     *   based on the amount of data that the run transfers.
+     * * **SYNC** - A synchronous API. This type of API optimizes a flow for small to medium-sized
+     *   datasets.
+     * * **ASYNC** - An asynchronous API. This type of API optimizes a flow for large datasets.
+     */
     public fun type(type: String) {
         cdkBuilder.type(type)
     }

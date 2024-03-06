@@ -28,7 +28,7 @@ import software.amazon.awscdk.services.rds.CfnDBCluster
  * [Clusters that use Aurora Serverless v2 must have a capacity range specified](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.requirements.html#aurora-serverless-v2.requirements.capacity-range)
  * in the *Amazon Aurora User Guide* .
  *
- * This property is only supported for Aurora Serverless v2. For Aurora Serverless v1, use
+ * This property is only supported for Aurora Serverless v2. For Aurora Serverless v1, Use the
  * `ScalingConfiguration` property.
  *
  * Example:

@@ -121,16 +121,16 @@ public class CfnAccessPointPropsDsl {
     }
 
     /**
-     * @param rootDirectory The directory on the Amazon EFS file system that the access point
-     *   exposes as the root directory to NFS clients using the access point.
+     * @param rootDirectory The directory on the EFS file system that the access point exposes as
+     *   the root directory to NFS clients using the access point.
      */
     public fun rootDirectory(rootDirectory: IResolvable) {
         cdkBuilder.rootDirectory(rootDirectory)
     }
 
     /**
-     * @param rootDirectory The directory on the Amazon EFS file system that the access point
-     *   exposes as the root directory to NFS clients using the access point.
+     * @param rootDirectory The directory on the EFS file system that the access point exposes as
+     *   the root directory to NFS clients using the access point.
      */
     public fun rootDirectory(rootDirectory: CfnAccessPoint.RootDirectoryProperty) {
         cdkBuilder.rootDirectory(rootDirectory)

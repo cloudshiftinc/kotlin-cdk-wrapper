@@ -71,8 +71,6 @@ public class BottleRocketImageDsl {
     /**
      * The Amazon ECS variant to use.
      *
-     * Only `aws-ecs-1` is currently available
-     *
      * Default: - BottlerocketEcsVariant.AWS_ECS_1
      *
      * @param variant The Amazon ECS variant to use.

@@ -50,7 +50,7 @@ public class CfnFunctionDefinitionVersionExecutionPropertyDsl {
      * @param isolationMode The containerization that the Lambda function runs in. Valid values are
      *   `GreengrassContainer` or `NoContainer` . Typically, this is `GreengrassContainer` . For
      *   more information, see
-     *   [Containerization](https://docs.aws.amazon.com/greengrass/latest/developerguide/lambda-group-config.html#lambda-function-containerization)
+     *   [Containerization](https://docs.aws.amazon.com/greengrass/v1/developerguide/lambda-group-config.html#lambda-function-containerization)
      *   in the *Developer Guide* .
      * * When set on the
      *   [`DefaultConfig`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-defaultconfig.html)
@@ -71,7 +71,7 @@ public class CfnFunctionDefinitionVersionExecutionPropertyDsl {
     /**
      * @param runAs The user and group permissions used to run the Lambda function. Typically, this
      *   is the ggc_user and ggc_group. For more information, see
-     *   [Run as](https://docs.aws.amazon.com/greengrass/latest/developerguide/lambda-group-config.html#lambda-access-identity.html)
+     *   [Run as](https://docs.aws.amazon.com/greengrass/v1/developerguide/lambda-group-config.html#lambda-access-identity.html)
      *   in the *Developer Guide* .
      * * When set on the
      *   [`DefaultConfig`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-defaultconfig.html)
@@ -85,7 +85,7 @@ public class CfnFunctionDefinitionVersionExecutionPropertyDsl {
      *
      * Running as the root user increases risks to your data and device. Do not run as root
      * (UID/GID=0) unless your business case requires it. For more information and requirements, see
-     * [Running a Lambda Function as Root](https://docs.aws.amazon.com/greengrass/latest/developerguide/lambda-group-config.html#lambda-running-as-root)
+     * [Running a Lambda Function as Root](https://docs.aws.amazon.com/greengrass/v1/developerguide/lambda-group-config.html#lambda-running-as-root)
      * .
      */
     public fun runAs(runAs: IResolvable) {
@@ -95,7 +95,7 @@ public class CfnFunctionDefinitionVersionExecutionPropertyDsl {
     /**
      * @param runAs The user and group permissions used to run the Lambda function. Typically, this
      *   is the ggc_user and ggc_group. For more information, see
-     *   [Run as](https://docs.aws.amazon.com/greengrass/latest/developerguide/lambda-group-config.html#lambda-access-identity.html)
+     *   [Run as](https://docs.aws.amazon.com/greengrass/v1/developerguide/lambda-group-config.html#lambda-access-identity.html)
      *   in the *Developer Guide* .
      * * When set on the
      *   [`DefaultConfig`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-defaultconfig.html)
@@ -109,7 +109,7 @@ public class CfnFunctionDefinitionVersionExecutionPropertyDsl {
      *
      * Running as the root user increases risks to your data and device. Do not run as root
      * (UID/GID=0) unless your business case requires it. For more information and requirements, see
-     * [Running a Lambda Function as Root](https://docs.aws.amazon.com/greengrass/latest/developerguide/lambda-group-config.html#lambda-running-as-root)
+     * [Running a Lambda Function as Root](https://docs.aws.amazon.com/greengrass/v1/developerguide/lambda-group-config.html#lambda-running-as-root)
      * .
      */
     public fun runAs(runAs: CfnFunctionDefinitionVersion.RunAsProperty) {

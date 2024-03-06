@@ -17,7 +17,7 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediatailor.CfnChannel
 
 /**
- * The output configuration for this channel.</p>.
+ * The output configuration for this channel.
  *
  * Example:
  * ```
@@ -35,6 +35,7 @@ import software.amazon.awscdk.services.mediatailor.CfnChannel
  * .suggestedPresentationDelaySeconds(123)
  * .build())
  * .hlsPlaylistSettings(HlsPlaylistSettingsProperty.builder()
+ * .adMarkupType(List.of("adMarkupType"))
  * .manifestWindowSeconds(123)
  * .build())
  * .build();
@@ -47,29 +48,29 @@ public class CfnChannelRequestOutputItemPropertyDsl {
     private val cdkBuilder: CfnChannel.RequestOutputItemProperty.Builder =
         CfnChannel.RequestOutputItemProperty.builder()
 
-    /** @param dashPlaylistSettings Dash manifest configuration parameters.</p>. */
+    /** @param dashPlaylistSettings DASH manifest configuration parameters. */
     public fun dashPlaylistSettings(dashPlaylistSettings: IResolvable) {
         cdkBuilder.dashPlaylistSettings(dashPlaylistSettings)
     }
 
-    /** @param dashPlaylistSettings Dash manifest configuration parameters.</p>. */
+    /** @param dashPlaylistSettings DASH manifest configuration parameters. */
     public fun dashPlaylistSettings(dashPlaylistSettings: CfnChannel.DashPlaylistSettingsProperty) {
         cdkBuilder.dashPlaylistSettings(dashPlaylistSettings)
     }
 
-    /** @param hlsPlaylistSettings HLS playlist configuration parameters.</p>. */
+    /** @param hlsPlaylistSettings HLS playlist configuration parameters. */
     public fun hlsPlaylistSettings(hlsPlaylistSettings: IResolvable) {
         cdkBuilder.hlsPlaylistSettings(hlsPlaylistSettings)
     }
 
-    /** @param hlsPlaylistSettings HLS playlist configuration parameters.</p>. */
+    /** @param hlsPlaylistSettings HLS playlist configuration parameters. */
     public fun hlsPlaylistSettings(hlsPlaylistSettings: CfnChannel.HlsPlaylistSettingsProperty) {
         cdkBuilder.hlsPlaylistSettings(hlsPlaylistSettings)
     }
 
     /**
      * @param manifestName The name of the manifest for the channel. The name appears in the
-     *   `PlaybackUrl`.</p>
+     *   `PlaybackUrl` .
      */
     public fun manifestName(manifestName: String) {
         cdkBuilder.manifestName(manifestName)
@@ -77,7 +78,7 @@ public class CfnChannelRequestOutputItemPropertyDsl {
 
     /**
      * @param sourceGroup A string used to match which `HttpPackageConfiguration` is used for each
-     *   `VodSource`.</p>.
+     *   `VodSource` .
      */
     public fun sourceGroup(sourceGroup: String) {
         cdkBuilder.sourceGroup(sourceGroup)

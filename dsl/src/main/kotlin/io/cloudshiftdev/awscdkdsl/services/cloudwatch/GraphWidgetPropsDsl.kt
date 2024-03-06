@@ -24,6 +24,7 @@ import software.amazon.awscdk.services.cloudwatch.GraphWidgetView
 import software.amazon.awscdk.services.cloudwatch.HorizontalAnnotation
 import software.amazon.awscdk.services.cloudwatch.IMetric
 import software.amazon.awscdk.services.cloudwatch.LegendPosition
+import software.amazon.awscdk.services.cloudwatch.VerticalAnnotation
 import software.amazon.awscdk.services.cloudwatch.YAxisProps
 
 /**
@@ -49,6 +50,17 @@ public class GraphWidgetPropsDsl {
     private val _right: MutableList<IMetric> = mutableListOf()
 
     private val _rightAnnotations: MutableList<HorizontalAnnotation> = mutableListOf()
+
+    private val _verticalAnnotations: MutableList<VerticalAnnotation> = mutableListOf()
+
+    /**
+     * @param end The end of the time range to use for each widget independently from those of the
+     *   dashboard. If you specify a value for end, you must also specify a value for start. Specify
+     *   an absolute time in the ISO 8601 format. For example, 2018-12-17T06:00:00.000Z.
+     */
+    public fun end(end: String) {
+        cdkBuilder.end(end)
+    }
 
     /** @param height Height of the widget. */
     public fun height(height: Number) {
@@ -158,6 +170,20 @@ public class GraphWidgetPropsDsl {
     }
 
     /**
+     * @param start The start of the time range to use for each widget independently from those of
+     *   the dashboard. You can specify start without specifying end to specify a relative time
+     *   range that ends with the current time. In this case, the value of start must begin with -P,
+     *   and you can use M, H, D, W and M as abbreviations for minutes, hours, days, weeks and
+     *   months. For example, -PT8H shows the last 8 hours and -P3M shows the last three months. You
+     *   can also use start along with an end field, to specify an absolute time range. When
+     *   specifying an absolute time range, use the ISO 8601 format. For example,
+     *   2018-12-17T06:00:00.000Z.
+     */
+    public fun start(start: String) {
+        cdkBuilder.start(start)
+    }
+
+    /**
      * @param statistic The default statistic to be displayed for each metric. This default can be
      *   overridden within the definition of each individual metric
      */
@@ -168,6 +194,16 @@ public class GraphWidgetPropsDsl {
     /** @param title Title for the graph. */
     public fun title(title: String) {
         cdkBuilder.title(title)
+    }
+
+    /** @param verticalAnnotations Annotations for the X axis. */
+    public fun verticalAnnotations(verticalAnnotations: VerticalAnnotationDsl.() -> Unit) {
+        _verticalAnnotations.add(VerticalAnnotationDsl().apply(verticalAnnotations).build())
+    }
+
+    /** @param verticalAnnotations Annotations for the X axis. */
+    public fun verticalAnnotations(verticalAnnotations: Collection<VerticalAnnotation>) {
+        _verticalAnnotations.addAll(verticalAnnotations)
     }
 
     /** @param view Display this metric. */
@@ -185,6 +221,7 @@ public class GraphWidgetPropsDsl {
         if (_leftAnnotations.isNotEmpty()) cdkBuilder.leftAnnotations(_leftAnnotations)
         if (_right.isNotEmpty()) cdkBuilder.right(_right)
         if (_rightAnnotations.isNotEmpty()) cdkBuilder.rightAnnotations(_rightAnnotations)
+        if (_verticalAnnotations.isNotEmpty()) cdkBuilder.verticalAnnotations(_verticalAnnotations)
         return cdkBuilder.build()
     }
 }

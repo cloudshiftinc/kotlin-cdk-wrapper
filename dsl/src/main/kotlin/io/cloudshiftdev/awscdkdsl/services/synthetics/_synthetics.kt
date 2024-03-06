@@ -13,13 +13,150 @@ package io.cloudshiftdev.awscdkdsl.services.synthetics
 
 import kotlin.String
 import kotlin.Unit
+import software.amazon.awscdk.services.synthetics.ArtifactsBucketLocation
+import software.amazon.awscdk.services.synthetics.AssetCode
+import software.amazon.awscdk.services.synthetics.Canary
+import software.amazon.awscdk.services.synthetics.CanaryProps
 import software.amazon.awscdk.services.synthetics.CfnCanary
 import software.amazon.awscdk.services.synthetics.CfnCanaryProps
 import software.amazon.awscdk.services.synthetics.CfnGroup
 import software.amazon.awscdk.services.synthetics.CfnGroupProps
+import software.amazon.awscdk.services.synthetics.CodeConfig
+import software.amazon.awscdk.services.synthetics.CronOptions
+import software.amazon.awscdk.services.synthetics.CustomTestOptions
 import software.constructs.Construct
 
 public object synthetics {
+    /**
+     * Options for specifying the s3 location that stores the data of each canary run.
+     *
+     * The artifacts bucket location **cannot** be updated once the canary is created.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.s3.*;
+     * import software.amazon.awscdk.services.synthetics.*;
+     * Bucket bucket;
+     * ArtifactsBucketLocation artifactsBucketLocation = ArtifactsBucketLocation.builder()
+     * .bucket(bucket)
+     * // the properties below are optional
+     * .prefix("prefix")
+     * .build();
+     * ```
+     */
+    public inline fun artifactsBucketLocation(
+        block: ArtifactsBucketLocationDsl.() -> Unit = {}
+    ): ArtifactsBucketLocation {
+        val builder = ArtifactsBucketLocationDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Canary code from an Asset.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.*;
+     * import software.amazon.awscdk.services.iam.*;
+     * import software.amazon.awscdk.services.synthetics.*;
+     * DockerImage dockerImage;
+     * IGrantable grantable;
+     * ILocalBundling localBundling;
+     * AssetCode assetCode = AssetCode.Builder.create("assetPath")
+     * .assetHash("assetHash")
+     * .assetHashType(AssetHashType.SOURCE)
+     * .bundling(BundlingOptions.builder()
+     * .image(dockerImage)
+     * // the properties below are optional
+     * .bundlingFileAccess(BundlingFileAccess.VOLUME_COPY)
+     * .command(List.of("command"))
+     * .entrypoint(List.of("entrypoint"))
+     * .environment(Map.of(
+     * "environmentKey", "environment"))
+     * .local(localBundling)
+     * .network("network")
+     * .outputType(BundlingOutput.ARCHIVED)
+     * .platform("platform")
+     * .securityOpt("securityOpt")
+     * .user("user")
+     * .volumes(List.of(DockerVolume.builder()
+     * .containerPath("containerPath")
+     * .hostPath("hostPath")
+     * // the properties below are optional
+     * .consistency(DockerVolumeConsistency.CONSISTENT)
+     * .build()))
+     * .volumesFrom(List.of("volumesFrom"))
+     * .workingDirectory("workingDirectory")
+     * .build())
+     * .deployTime(false)
+     * .exclude(List.of("exclude"))
+     * .followSymlinks(SymlinkFollowMode.NEVER)
+     * .ignoreMode(IgnoreMode.GLOB)
+     * .readers(List.of(grantable))
+     * .build();
+     * ```
+     */
+    public inline fun assetCode(assetPath: String, block: AssetCodeDsl.() -> Unit = {}): AssetCode {
+        val builder = AssetCodeDsl(assetPath)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Define a new Canary.
+     *
+     * Example:
+     * ```
+     * Canary canary = Canary.Builder.create(this, "MyCanary")
+     * .schedule(Schedule.rate(Duration.minutes(5)))
+     * .test(Test.custom(CustomTestOptions.builder()
+     * .code(Code.fromAsset(join(__dirname, "canary")))
+     * .handler("index.handler")
+     * .build()))
+     * .runtime(Runtime.SYNTHETICS_NODEJS_PUPPETEER_6_2)
+     * .environmentVariables(Map.of(
+     * "stage", "prod"))
+     * .build();
+     * ```
+     */
+    public inline fun canary(
+        scope: Construct,
+        id: String,
+        block: CanaryDsl.() -> Unit = {},
+    ): Canary {
+        val builder = CanaryDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for a canary.
+     *
+     * Example:
+     * ```
+     * Canary canary = Canary.Builder.create(this, "MyCanary")
+     * .schedule(Schedule.rate(Duration.minutes(5)))
+     * .test(Test.custom(CustomTestOptions.builder()
+     * .code(Code.fromAsset(join(__dirname, "canary")))
+     * .handler("index.handler")
+     * .build()))
+     * .runtime(Runtime.SYNTHETICS_NODEJS_PUPPETEER_6_2)
+     * .environmentVariables(Map.of(
+     * "stage", "prod"))
+     * .build();
+     * ```
+     */
+    public inline fun canaryProps(block: CanaryPropsDsl.() -> Unit = {}): CanaryProps {
+        val builder = CanaryPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
     /**
      * Creates or updates a canary.
      *
@@ -501,6 +638,77 @@ public object synthetics {
      */
     public inline fun cfnGroupProps(block: CfnGroupPropsDsl.() -> Unit = {}): CfnGroupProps {
         val builder = CfnGroupPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Configuration of the code class.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.synthetics.*;
+     * CodeConfig codeConfig = CodeConfig.builder()
+     * .inlineCode("inlineCode")
+     * .s3Location(Location.builder()
+     * .bucketName("bucketName")
+     * .objectKey("objectKey")
+     * // the properties below are optional
+     * .objectVersion("objectVersion")
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun codeConfig(block: CodeConfigDsl.() -> Unit = {}): CodeConfig {
+        val builder = CodeConfigDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Options to configure a cron expression.
+     *
+     * All fields are strings so you can use complex expressions. Absence of a field implies '*' or
+     * '?', whichever one is appropriate.
+     *
+     * Example:
+     * ```
+     * Schedule schedule = Schedule.cron(CronOptions.builder()
+     * .hour("0,8,16")
+     * .build());
+     * ```
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_cron.html)
+     */
+    public inline fun cronOptions(block: CronOptionsDsl.() -> Unit = {}): CronOptions {
+        val builder = CronOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for specifying a test.
+     *
+     * Example:
+     * ```
+     * Canary canary = Canary.Builder.create(this, "MyCanary")
+     * .schedule(Schedule.rate(Duration.minutes(5)))
+     * .test(Test.custom(CustomTestOptions.builder()
+     * .code(Code.fromAsset(join(__dirname, "canary")))
+     * .handler("index.handler")
+     * .build()))
+     * .runtime(Runtime.SYNTHETICS_NODEJS_PUPPETEER_6_2)
+     * .environmentVariables(Map.of(
+     * "stage", "prod"))
+     * .build();
+     * ```
+     */
+    public inline fun customTestOptions(
+        block: CustomTestOptionsDsl.() -> Unit = {}
+    ): CustomTestOptions {
+        val builder = CustomTestOptionsDsl()
         builder.apply(block)
         return builder.build()
     }

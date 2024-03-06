@@ -56,7 +56,7 @@ public inline fun CfnPartnerAccount.setSidewalk(
     return setSidewalk(builder.build())
 }
 
-/**  */
+/** Information about a Sidewalk account. */
 public inline fun CfnPartnerAccount.setSidewalkResponse(
     block: CfnPartnerAccountSidewalkAccountInfoWithFingerprintPropertyDsl.() -> Unit = {}
 ) {
@@ -65,7 +65,7 @@ public inline fun CfnPartnerAccount.setSidewalkResponse(
     return setSidewalkResponse(builder.build())
 }
 
-/**  */
+/** Sidewalk update. */
 public inline fun CfnPartnerAccount.setSidewalkUpdate(
     block: CfnPartnerAccountSidewalkUpdateAccountPropertyDsl.() -> Unit = {}
 ) {
@@ -83,7 +83,7 @@ public inline fun CfnServiceProfile.setLoRaWan(
     return setLoRaWan(builder.build())
 }
 
-/**  */
+/** LoRaWANUpdateGatewayTaskEntry object. */
 public inline fun CfnTaskDefinition.setLoRaWanUpdateGatewayTaskEntry(
     block: CfnTaskDefinitionLoRaWANUpdateGatewayTaskEntryPropertyDsl.() -> Unit = {}
 ) {

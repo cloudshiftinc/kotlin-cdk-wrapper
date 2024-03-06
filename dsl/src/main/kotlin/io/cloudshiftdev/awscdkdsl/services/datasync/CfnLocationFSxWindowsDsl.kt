@@ -61,12 +61,16 @@ public class CfnLocationFSxWindowsDsl(
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
-     * Specifies the name of the Windows domain that the FSx for Windows File Server belongs to.
+     * Specifies the name of the Microsoft Active Directory domain that the FSx for Windows File
+     * Server file system belongs to.
+     *
+     * If you have multiple Active Directory domains in your environment, configuring this parameter
+     * makes sure that DataSync connects to the right file system.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxwindows.html#cfn-datasync-locationfsxwindows-domain)
      *
-     * @param domain Specifies the name of the Windows domain that the FSx for Windows File Server
-     *   belongs to.
+     * @param domain Specifies the name of the Microsoft Active Directory domain that the FSx for
+     *   Windows File Server file system belongs to.
      */
     public fun domain(domain: String) {
         cdkBuilder.domain(domain)
@@ -85,13 +89,13 @@ public class CfnLocationFSxWindowsDsl(
     }
 
     /**
-     * Specifies the password of the user who has the permissions to access files and folders in the
-     * file system.
+     * Specifies the password of the user with the permissions to mount and access the files,
+     * folders, and file metadata in your FSx for Windows File Server file system.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxwindows.html#cfn-datasync-locationfsxwindows-password)
      *
-     * @param password Specifies the password of the user who has the permissions to access files
-     *   and folders in the file system.
+     * @param password Specifies the password of the user with the permissions to mount and access
+     *   the files, folders, and file metadata in your FSx for Windows File Server file system.
      */
     public fun password(password: String) {
         cdkBuilder.password(password)

@@ -136,8 +136,8 @@ public class CfnBudgetBudgetDataPropertyDsl {
     }
 
     /**
-     * @param costFilters The cost filters, such as `Region` , `Service` , `member account` , `Tag`
-     *   , or `Cost Category` , that are applied to a budget. AWS Budgets supports the following
+     * @param costFilters The cost filters, such as `Region` , `Service` , `LinkedAccount` , `Tag` ,
+     *   or `CostCategory` , that are applied to a budget. AWS Budgets supports the following
      *   services as a `Service` filter for RI budgets:
      * * Amazon EC2
      * * Amazon Redshift
@@ -152,8 +152,8 @@ public class CfnBudgetBudgetDataPropertyDsl {
     }
 
     /**
-     * @param costFilters The cost filters, such as `Region` , `Service` , `member account` , `Tag`
-     *   , or `Cost Category` , that are applied to a budget. AWS Budgets supports the following
+     * @param costFilters The cost filters, such as `Region` , `Service` , `LinkedAccount` , `Tag` ,
+     *   or `CostCategory` , that are applied to a budget. AWS Budgets supports the following
      *   services as a `Service` filter for RI budgets:
      * * Amazon EC2
      * * Amazon Redshift

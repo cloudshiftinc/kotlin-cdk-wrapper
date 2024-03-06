@@ -16,6 +16,7 @@ import kotlin.Boolean
 import kotlin.String
 import kotlin.collections.Map
 import software.amazon.awscdk.services.kms.IKey
+import software.amazon.awscdk.services.rds.CaCertificate
 import software.amazon.awscdk.services.rds.IParameterGroup
 import software.amazon.awscdk.services.rds.PerformanceInsightRetention
 import software.amazon.awscdk.services.rds.ServerlessV2ClusterInstanceProps
@@ -27,11 +28,14 @@ import software.amazon.awscdk.services.rds.ServerlessV2ClusterInstanceProps
  * ```
  * Vpc vpc;
  * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
- * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_2_08_1).build()))
- * .writer(ClusterInstance.serverlessV2("writer"))
- * .readers(List.of(ClusterInstance.serverlessV2("reader1",
- * ServerlessV2ClusterInstanceProps.builder().scaleWithWriter(true).build()),
- * ClusterInstance.serverlessV2("reader2")))
+ * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_3_01_0).build()))
+ * .writer(ClusterInstance.provisioned("writer", ProvisionedClusterInstanceProps.builder()
+ * .caCertificate(CaCertificate.RDS_CA_RDS2048_G1)
+ * .build()))
+ * .readers(List.of(ClusterInstance.serverlessV2("reader",
+ * ServerlessV2ClusterInstanceProps.builder()
+ * .caCertificate(CaCertificate.of("custom-ca"))
+ * .build())))
  * .vpc(vpc)
  * .build();
  * ```
@@ -55,6 +59,16 @@ public class ServerlessV2ClusterInstancePropsDsl {
      */
     public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
         cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade)
+    }
+
+    /**
+     * @param caCertificate The identifier of the CA certificate for this DB cluster's instances.
+     *   Specifying or updating this property triggers a reboot.
+     *
+     * For RDS DB engines:
+     */
+    public fun caCertificate(caCertificate: CaCertificate) {
+        cdkBuilder.caCertificate(caCertificate)
     }
 
     /**
@@ -115,6 +129,8 @@ public class ServerlessV2ClusterInstancePropsDsl {
 
     /**
      * @param publiclyAccessible Indicates whether the DB instance is an internet-facing instance.
+     *   If not specified, the cluster's vpcSubnets will be used to determine if the instance is
+     *   internet-facing or not.
      */
     public fun publiclyAccessible(publiclyAccessible: Boolean) {
         cdkBuilder.publiclyAccessible(publiclyAccessible)

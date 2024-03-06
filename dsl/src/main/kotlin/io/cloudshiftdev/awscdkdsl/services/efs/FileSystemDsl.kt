@@ -26,6 +26,7 @@ import software.amazon.awscdk.services.efs.FileSystem
 import software.amazon.awscdk.services.efs.LifecyclePolicy
 import software.amazon.awscdk.services.efs.OutOfInfrequentAccessPolicy
 import software.amazon.awscdk.services.efs.PerformanceMode
+import software.amazon.awscdk.services.efs.ReplicationOverwriteProtection
 import software.amazon.awscdk.services.efs.ThroughputMode
 import software.amazon.awscdk.services.iam.PolicyDocument
 import software.amazon.awscdk.services.kms.IKey
@@ -162,6 +163,20 @@ public class FileSystemDsl(
     }
 
     /**
+     * Whether this is a One Zone file system.
+     *
+     * If enabled, `performanceMode` must be set to `GENERAL_PURPOSE` and `vpcSubnets` cannot be
+     * set.
+     *
+     * Default: false
+     *
+     * @param oneZone Whether this is a One Zone file system.
+     */
+    public fun oneZone(oneZone: Boolean) {
+        cdkBuilder.oneZone(oneZone)
+    }
+
+    /**
      * A policy used by EFS lifecycle management to transition files from Infrequent Access (IA)
      * storage class to primary storage class.
      *
@@ -216,6 +231,24 @@ public class FileSystemDsl(
     }
 
     /**
+     * Whether to enable the filesystem's replication overwrite protection or not.
+     *
+     * Set false if you want to create a read-only filesystem for use as a replication destination.
+     *
+     * Default: ReplicationOverwriteProtection.ENABLED
+     *
+     * [Documentation](https://docs.aws.amazon.com/efs/latest/ug/replication-use-cases.html#replicate-existing-destination)
+     *
+     * @param replicationOverwriteProtection Whether to enable the filesystem's replication
+     *   overwrite protection or not.
+     */
+    public fun replicationOverwriteProtection(
+        replicationOverwriteProtection: ReplicationOverwriteProtection
+    ) {
+        cdkBuilder.replicationOverwriteProtection(replicationOverwriteProtection)
+    }
+
+    /**
      * Security Group to assign to this file system.
      *
      * Default: - creates new security group which allows all outbound traffic
@@ -235,6 +268,22 @@ public class FileSystemDsl(
      */
     public fun throughputMode(throughputMode: ThroughputMode) {
         cdkBuilder.throughputMode(throughputMode)
+    }
+
+    /**
+     * The number of days after files were last accessed in primary storage (the Standard storage
+     * class) at which to move them to Archive storage.
+     *
+     * Metadata operations such as listing the contents of a directory don't count as file access
+     * events.
+     *
+     * Default: - None. EFS will not transition files to Archive storage class.
+     *
+     * @param transitionToArchivePolicy The number of days after files were last accessed in primary
+     *   storage (the Standard storage class) at which to move them to Archive storage.
+     */
+    public fun transitionToArchivePolicy(transitionToArchivePolicy: LifecyclePolicy) {
+        cdkBuilder.transitionToArchivePolicy(transitionToArchivePolicy)
     }
 
     /**

@@ -116,15 +116,7 @@ public class CfnJobDefinitionPodPropertiesPropertyDsl {
      * @param dnsPolicy The DNS policy for the pod. The default value is `ClusterFirst` . If the
      *   `hostNetwork` parameter is not specified, the default is `ClusterFirstWithHostNet` .
      *   `ClusterFirst` indicates that any DNS query that does not match the configured cluster
-     *   domain suffix is forwarded to the upstream nameserver inherited from the node. If no value
-     *   was specified for `dnsPolicy` in the
-     *   [RegisterJobDefinition](https://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
-     *   API operation, then no value will be returned for `dnsPolicy` by either of
-     *   [DescribeJobDefinitions](https://docs.aws.amazon.com/batch/latest/APIReference/API_DescribeJobDefinitions.html)
-     *   or
-     *   [DescribeJobs](https://docs.aws.amazon.com/batch/latest/APIReference/API_DescribeJobs.html)
-     *   API operations. The pod spec setting will contain either `ClusterFirst` or
-     *   `ClusterFirstWithHostNet` , depending on the value of the `hostNetwork` parameter. For more
+     *   domain suffix is forwarded to the upstream nameserver inherited from the node. For more
      *   information, see
      *   [Pod's DNS policy](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#pod-s-dns-policy)
      *   in the *Kubernetes documentation* .
@@ -163,12 +155,20 @@ public class CfnJobDefinitionPodPropertiesPropertyDsl {
         cdkBuilder.hostNetwork(hostNetwork)
     }
 
-    /** @param metadata the value to be set. */
+    /**
+     * @param metadata Metadata about the Kubernetes pod. For more information, see
+     *   [Understanding Kubernetes Objects](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/)
+     *   in the *Kubernetes documentation* .
+     */
     public fun metadata(metadata: IResolvable) {
         cdkBuilder.metadata(metadata)
     }
 
-    /** @param metadata the value to be set. */
+    /**
+     * @param metadata Metadata about the Kubernetes pod. For more information, see
+     *   [Understanding Kubernetes Objects](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/)
+     *   in the *Kubernetes documentation* .
+     */
     public fun metadata(metadata: CfnJobDefinition.MetadataProperty) {
         cdkBuilder.metadata(metadata)
     }

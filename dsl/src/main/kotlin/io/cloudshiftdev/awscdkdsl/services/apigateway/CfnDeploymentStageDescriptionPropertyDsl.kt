@@ -102,12 +102,18 @@ public class CfnDeploymentStageDescriptionPropertyDsl {
         cdkBuilder.accessLogSetting(accessLogSetting)
     }
 
-    /** @param cacheClusterEnabled Specifies whether a cache cluster is enabled for the stage. */
+    /**
+     * @param cacheClusterEnabled Specifies whether a cache cluster is enabled for the stage. To
+     *   activate a method-level cache, set `CachingEnabled` to `true` for a method.
+     */
     public fun cacheClusterEnabled(cacheClusterEnabled: Boolean) {
         cdkBuilder.cacheClusterEnabled(cacheClusterEnabled)
     }
 
-    /** @param cacheClusterEnabled Specifies whether a cache cluster is enabled for the stage. */
+    /**
+     * @param cacheClusterEnabled Specifies whether a cache cluster is enabled for the stage. To
+     *   activate a method-level cache, set `CachingEnabled` to `true` for a method.
+     */
     public fun cacheClusterEnabled(cacheClusterEnabled: IResolvable) {
         cdkBuilder.cacheClusterEnabled(cacheClusterEnabled)
     }

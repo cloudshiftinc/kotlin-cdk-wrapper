@@ -78,18 +78,12 @@ public class CfnApplicationSettingsPropsDsl {
         cdkBuilder.campaignHook(campaignHook)
     }
 
-    /**
-     * @param cloudWatchMetricsEnabled Specifies whether to enable application-related alarms in
-     *   Amazon CloudWatch.
-     */
+    /** @param cloudWatchMetricsEnabled the value to be set. */
     public fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: Boolean) {
         cdkBuilder.cloudWatchMetricsEnabled(cloudWatchMetricsEnabled)
     }
 
-    /**
-     * @param cloudWatchMetricsEnabled Specifies whether to enable application-related alarms in
-     *   Amazon CloudWatch.
-     */
+    /** @param cloudWatchMetricsEnabled the value to be set. */
     public fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: IResolvable) {
         cdkBuilder.cloudWatchMetricsEnabled(cloudWatchMetricsEnabled)
     }

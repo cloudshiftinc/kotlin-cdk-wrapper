@@ -22,7 +22,7 @@ import software.amazon.awscdk.services.sam.CfnApplication
 import software.constructs.Construct
 
 /**
- * Definition of AWS::Serverless::Application.
+ * https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapplication.
  *
  * Example:
  * ```

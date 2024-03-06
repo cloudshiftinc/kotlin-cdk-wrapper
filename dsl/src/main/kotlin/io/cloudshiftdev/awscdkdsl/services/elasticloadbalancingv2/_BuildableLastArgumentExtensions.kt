@@ -20,6 +20,7 @@ import software.amazon.awscdk.services.ec2.IConnectable
 import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListener
 import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancer
 import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationTargetGroup
+import software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup
 import software.amazon.awscdk.services.elasticloadbalancingv2.HttpCodeElb
 import software.amazon.awscdk.services.elasticloadbalancingv2.HttpCodeTarget
@@ -747,6 +748,15 @@ public inline fun ApplicationTargetGroup.registerConnectable(
     val builder = PortDsl()
     builder.apply(block)
     return registerConnectable(connectable, builder.build())
+}
+
+/** The mutual authentication configuration information. */
+public inline fun CfnListener.setMutualAuthentication(
+    block: CfnListenerMutualAuthenticationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnListenerMutualAuthenticationPropertyDsl()
+    builder.apply(block)
+    return setMutualAuthentication(builder.build())
 }
 
 /**

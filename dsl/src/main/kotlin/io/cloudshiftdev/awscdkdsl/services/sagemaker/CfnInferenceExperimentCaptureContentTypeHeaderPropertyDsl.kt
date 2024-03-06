@@ -20,7 +20,8 @@ import software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment
 /**
  * Configuration specifying how to treat different headers.
  *
- * If no headers are specified SageMaker will by default base64 encode when capturing the data.
+ * If no headers are specified Amazon SageMaker will by default base64 encode when capturing the
+ * data.
  *
  * Example:
  * ```
@@ -46,16 +47,16 @@ public class CfnInferenceExperimentCaptureContentTypeHeaderPropertyDsl {
     private val _jsonContentTypes: MutableList<String> = mutableListOf()
 
     /**
-     * @param csvContentTypes The list of all content type headers that SageMaker will treat as CSV
-     *   and capture accordingly.
+     * @param csvContentTypes The list of all content type headers that Amazon SageMaker will treat
+     *   as CSV and capture accordingly.
      */
     public fun csvContentTypes(vararg csvContentTypes: String) {
         _csvContentTypes.addAll(listOf(*csvContentTypes))
     }
 
     /**
-     * @param csvContentTypes The list of all content type headers that SageMaker will treat as CSV
-     *   and capture accordingly.
+     * @param csvContentTypes The list of all content type headers that Amazon SageMaker will treat
+     *   as CSV and capture accordingly.
      */
     public fun csvContentTypes(csvContentTypes: Collection<String>) {
         _csvContentTypes.addAll(csvContentTypes)

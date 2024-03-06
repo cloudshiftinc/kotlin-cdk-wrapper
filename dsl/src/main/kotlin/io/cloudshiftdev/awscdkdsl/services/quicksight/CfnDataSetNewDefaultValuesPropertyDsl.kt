@@ -20,6 +20,8 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
 /**
+ * The new default values for the parameter.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -48,52 +50,58 @@ public class CfnDataSetNewDefaultValuesPropertyDsl {
 
     private val _stringStaticValues: MutableList<String> = mutableListOf()
 
-    /** @param dateTimeStaticValues the value to be set. */
+    /**
+     * @param dateTimeStaticValues A list of static default values for a given date time parameter.
+     *   The valid format for this property is `yyyy-MM-dd’T’HH:mm:ss’Z’` .
+     */
     public fun dateTimeStaticValues(vararg dateTimeStaticValues: String) {
         _dateTimeStaticValues.addAll(listOf(*dateTimeStaticValues))
     }
 
-    /** @param dateTimeStaticValues the value to be set. */
+    /**
+     * @param dateTimeStaticValues A list of static default values for a given date time parameter.
+     *   The valid format for this property is `yyyy-MM-dd’T’HH:mm:ss’Z’` .
+     */
     public fun dateTimeStaticValues(dateTimeStaticValues: Collection<String>) {
         _dateTimeStaticValues.addAll(dateTimeStaticValues)
     }
 
-    /** @param decimalStaticValues the value to be set. */
+    /** @param decimalStaticValues A list of static default values for a given decimal parameter. */
     public fun decimalStaticValues(vararg decimalStaticValues: Number) {
         _decimalStaticValues.addAll(listOf(*decimalStaticValues))
     }
 
-    /** @param decimalStaticValues the value to be set. */
+    /** @param decimalStaticValues A list of static default values for a given decimal parameter. */
     public fun decimalStaticValues(decimalStaticValues: Collection<Number>) {
         _decimalStaticValues.addAll(decimalStaticValues)
     }
 
-    /** @param decimalStaticValues the value to be set. */
+    /** @param decimalStaticValues A list of static default values for a given decimal parameter. */
     public fun decimalStaticValues(decimalStaticValues: IResolvable) {
         cdkBuilder.decimalStaticValues(decimalStaticValues)
     }
 
-    /** @param integerStaticValues the value to be set. */
+    /** @param integerStaticValues A list of static default values for a given integer parameter. */
     public fun integerStaticValues(vararg integerStaticValues: Number) {
         _integerStaticValues.addAll(listOf(*integerStaticValues))
     }
 
-    /** @param integerStaticValues the value to be set. */
+    /** @param integerStaticValues A list of static default values for a given integer parameter. */
     public fun integerStaticValues(integerStaticValues: Collection<Number>) {
         _integerStaticValues.addAll(integerStaticValues)
     }
 
-    /** @param integerStaticValues the value to be set. */
+    /** @param integerStaticValues A list of static default values for a given integer parameter. */
     public fun integerStaticValues(integerStaticValues: IResolvable) {
         cdkBuilder.integerStaticValues(integerStaticValues)
     }
 
-    /** @param stringStaticValues the value to be set. */
+    /** @param stringStaticValues A list of static default values for a given string parameter. */
     public fun stringStaticValues(vararg stringStaticValues: String) {
         _stringStaticValues.addAll(listOf(*stringStaticValues))
     }
 
-    /** @param stringStaticValues the value to be set. */
+    /** @param stringStaticValues A list of static default values for a given string parameter. */
     public fun stringStaticValues(stringStaticValues: Collection<String>) {
         _stringStaticValues.addAll(stringStaticValues)
     }

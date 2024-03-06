@@ -34,6 +34,7 @@ import software.constructs.Construct
  * .type("type")
  * // the properties below are optional
  * .atRestEncryptionEnabled(false)
+ * .healthMetricsConfig("healthMetricsConfig")
  * .transitEncryptionEnabled(false)
  * .build();
  * ```
@@ -95,6 +96,26 @@ public class CfnApiCacheDsl(
      */
     public fun atRestEncryptionEnabled(atRestEncryptionEnabled: IResolvable) {
         cdkBuilder.atRestEncryptionEnabled(atRestEncryptionEnabled)
+    }
+
+    /**
+     * Controls how cache health metrics will be emitted to CloudWatch. Cache health metrics
+     * include:.
+     * * *NetworkBandwidthOutAllowanceExceeded* : The network packets dropped because the throughput
+     *   exceeded the aggregated bandwidth limit. This is useful for diagnosing bottlenecks in a
+     *   cache configuration.
+     * * *EngineCPUUtilization* : The CPU utilization (percentage) allocated to the Redis process.
+     *   This is useful for diagnosing bottlenecks in a cache configuration.
+     *
+     * Metrics will be recorded by API ID. You can set the value to `ENABLED` or `DISABLED` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-healthmetricsconfig)
+     *
+     * @param healthMetricsConfig Controls how cache health metrics will be emitted to CloudWatch.
+     *   Cache health metrics include:.
+     */
+    public fun healthMetricsConfig(healthMetricsConfig: String) {
+        cdkBuilder.healthMetricsConfig(healthMetricsConfig)
     }
 
     /**

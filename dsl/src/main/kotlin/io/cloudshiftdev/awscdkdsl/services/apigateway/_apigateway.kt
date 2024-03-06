@@ -122,6 +122,8 @@ import software.amazon.awscdk.services.apigateway.RestApi
 import software.amazon.awscdk.services.apigateway.RestApiAttributes
 import software.amazon.awscdk.services.apigateway.RestApiBaseProps
 import software.amazon.awscdk.services.apigateway.RestApiProps
+import software.amazon.awscdk.services.apigateway.SagemakerIntegration
+import software.amazon.awscdk.services.apigateway.SagemakerIntegrationOptions
 import software.amazon.awscdk.services.apigateway.SpecRestApi
 import software.amazon.awscdk.services.apigateway.SpecRestApiProps
 import software.amazon.awscdk.services.apigateway.Stage
@@ -141,6 +143,7 @@ import software.amazon.awscdk.services.apigateway.UsagePlanProps
 import software.amazon.awscdk.services.apigateway.VpcLink
 import software.amazon.awscdk.services.apigateway.VpcLinkProps
 import software.amazon.awscdk.services.lambda.IFunction
+import software.amazon.awscdk.services.sagemaker.IEndpoint
 import software.constructs.Construct
 
 public object apigateway {
@@ -2832,10 +2835,10 @@ public object apigateway {
      * Example:
      * ```
      * // production stage
-     * LogGroup prdLogGroup = new LogGroup(this, "PrdLogs");
+     * LogGroup prodLogGroup = new LogGroup(this, "PrdLogs");
      * RestApi api = RestApi.Builder.create(this, "books")
      * .deployOptions(StageOptions.builder()
-     * .accessLogDestination(new LogGroupLogDestination(prdLogGroup))
+     * .accessLogDestination(new LogGroupLogDestination(prodLogGroup))
      * .accessLogFormat(AccessLogFormat.jsonWithStandardFields())
      * .build())
      * .build();
@@ -2873,10 +2876,10 @@ public object apigateway {
      * Example:
      * ```
      * // production stage
-     * LogGroup prdLogGroup = new LogGroup(this, "PrdLogs");
+     * LogGroup prodLogGroup = new LogGroup(this, "PrdLogs");
      * RestApi api = RestApi.Builder.create(this, "books")
      * .deployOptions(StageOptions.builder()
-     * .accessLogDestination(new LogGroupLogDestination(prdLogGroup))
+     * .accessLogDestination(new LogGroupLogDestination(prodLogGroup))
      * .accessLogFormat(AccessLogFormat.jsonWithStandardFields())
      * .build())
      * .build();
@@ -3294,7 +3297,7 @@ public object apigateway {
      * App app = new App();
      * Stack stack = new Stack(app, "RequestAuthorizerInteg");
      * Function authorizerFn = Function.Builder.create(stack, "MyAuthorizerFunction")
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .handler("index.handler")
      * .code(AssetCode.fromAsset(join(__dirname, "integ.request-authorizer.handler")))
      * .build();
@@ -3351,6 +3354,7 @@ public object apigateway {
      * .build();
      * Integration integration = Integration.Builder.create()
      * .type(IntegrationType.HTTP_PROXY)
+     * .integrationHttpMethod("ANY")
      * .options(IntegrationOptions.builder()
      * .connectionType(ConnectionType.VPC_LINK)
      * .vpcLink(link)
@@ -3442,10 +3446,10 @@ public object apigateway {
      * Example:
      * ```
      * // production stage
-     * LogGroup prdLogGroup = new LogGroup(this, "PrdLogs");
+     * LogGroup prodLogGroup = new LogGroup(this, "PrdLogs");
      * RestApi api = RestApi.Builder.create(this, "books")
      * .deployOptions(StageOptions.builder()
-     * .accessLogDestination(new LogGroupLogDestination(prdLogGroup))
+     * .accessLogDestination(new LogGroupLogDestination(prodLogGroup))
      * .accessLogFormat(AccessLogFormat.jsonWithStandardFields())
      * .build())
      * .build();
@@ -3820,7 +3824,7 @@ public object apigateway {
      * App app = new App();
      * Stack stack = new Stack(app, "RequestAuthorizerInteg");
      * Function authorizerFn = Function.Builder.create(stack, "MyAuthorizerFunction")
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .handler("index.handler")
      * .code(AssetCode.fromAsset(join(__dirname, "integ.request-authorizer.handler")))
      * .build();
@@ -4507,14 +4511,23 @@ public object apigateway {
      *
      * Example:
      * ```
-     * StateMachine stateMachine = StateMachine.Builder.create(this, "MyStateMachine")
-     * .stateMachineType(StateMachineType.EXPRESS)
-     * .definition(Chain.start(new Pass(this, "Pass")))
+     * Bucket destinationBucket = new Bucket(this, "Bucket");
+     * Role deliveryStreamRole = Role.Builder.create(this, "Role")
+     * .assumedBy(new ServicePrincipal("firehose.amazonaws.com"))
      * .build();
-     * RestApi api = RestApi.Builder.create(this, "Api")
-     * .restApiName("MyApi")
+     * CfnDeliveryStream stream = CfnDeliveryStream.Builder.create(this, "MyStream")
+     * .deliveryStreamName("amazon-apigateway-delivery-stream")
+     * .s3DestinationConfiguration(S3DestinationConfigurationProperty.builder()
+     * .bucketArn(destinationBucket.getBucketArn())
+     * .roleArn(deliveryStreamRole.getRoleArn())
+     * .build())
      * .build();
-     * api.root.addMethod("GET", StepFunctionsIntegration.startExecution(stateMachine));
+     * RestApi api = RestApi.Builder.create(this, "books")
+     * .deployOptions(StageOptions.builder()
+     * .accessLogDestination(new FirehoseLogDestination(stream))
+     * .accessLogFormat(AccessLogFormat.jsonWithStandardFields())
+     * .build())
+     * .build();
      * ```
      */
     public inline fun restApi(
@@ -4780,18 +4793,93 @@ public object apigateway {
      *
      * Example:
      * ```
-     * StateMachine stateMachine = StateMachine.Builder.create(this, "MyStateMachine")
-     * .stateMachineType(StateMachineType.EXPRESS)
-     * .definition(Chain.start(new Pass(this, "Pass")))
+     * Bucket destinationBucket = new Bucket(this, "Bucket");
+     * Role deliveryStreamRole = Role.Builder.create(this, "Role")
+     * .assumedBy(new ServicePrincipal("firehose.amazonaws.com"))
      * .build();
-     * RestApi api = RestApi.Builder.create(this, "Api")
-     * .restApiName("MyApi")
+     * CfnDeliveryStream stream = CfnDeliveryStream.Builder.create(this, "MyStream")
+     * .deliveryStreamName("amazon-apigateway-delivery-stream")
+     * .s3DestinationConfiguration(S3DestinationConfigurationProperty.builder()
+     * .bucketArn(destinationBucket.getBucketArn())
+     * .roleArn(deliveryStreamRole.getRoleArn())
+     * .build())
      * .build();
-     * api.root.addMethod("GET", StepFunctionsIntegration.startExecution(stateMachine));
+     * RestApi api = RestApi.Builder.create(this, "books")
+     * .deployOptions(StageOptions.builder()
+     * .accessLogDestination(new FirehoseLogDestination(stream))
+     * .accessLogFormat(AccessLogFormat.jsonWithStandardFields())
+     * .build())
+     * .build();
      * ```
      */
     public inline fun restApiProps(block: RestApiPropsDsl.() -> Unit = {}): RestApiProps {
         val builder = RestApiPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Integrates an AWS Sagemaker Endpoint to an API Gateway method.
+     *
+     * Example:
+     * ```
+     * Resource resource;
+     * IEndpoint endpoint;
+     * resource.addMethod("POST", new SagemakerIntegration(endpoint));
+     * ```
+     */
+    public inline fun sagemakerIntegration(
+        endpoint: IEndpoint,
+        block: SagemakerIntegrationDsl.() -> Unit = {}
+    ): SagemakerIntegration {
+        val builder = SagemakerIntegrationDsl(endpoint)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Options for SageMakerIntegration.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.*;
+     * import software.amazon.awscdk.services.apigateway.*;
+     * import software.amazon.awscdk.services.iam.*;
+     * Role role;
+     * VpcLink vpcLink;
+     * SagemakerIntegrationOptions sagemakerIntegrationOptions = SagemakerIntegrationOptions.builder()
+     * .cacheKeyParameters(List.of("cacheKeyParameters"))
+     * .cacheNamespace("cacheNamespace")
+     * .connectionType(ConnectionType.INTERNET)
+     * .contentHandling(ContentHandling.CONVERT_TO_BINARY)
+     * .credentialsPassthrough(false)
+     * .credentialsRole(role)
+     * .integrationResponses(List.of(IntegrationResponse.builder()
+     * .statusCode("statusCode")
+     * // the properties below are optional
+     * .contentHandling(ContentHandling.CONVERT_TO_BINARY)
+     * .responseParameters(Map.of(
+     * "responseParametersKey", "responseParameters"))
+     * .responseTemplates(Map.of(
+     * "responseTemplatesKey", "responseTemplates"))
+     * .selectionPattern("selectionPattern")
+     * .build()))
+     * .passthroughBehavior(PassthroughBehavior.WHEN_NO_MATCH)
+     * .requestParameters(Map.of(
+     * "requestParametersKey", "requestParameters"))
+     * .requestTemplates(Map.of(
+     * "requestTemplatesKey", "requestTemplates"))
+     * .timeout(Duration.minutes(30))
+     * .vpcLink(vpcLink)
+     * .build();
+     * ```
+     */
+    public inline fun sagemakerIntegrationOptions(
+        block: SagemakerIntegrationOptionsDsl.() -> Unit = {}
+    ): SagemakerIntegrationOptions {
+        val builder = SagemakerIntegrationOptionsDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -4854,10 +4942,10 @@ public object apigateway {
      * Example:
      * ```
      * // production stage
-     * LogGroup prdLogGroup = new LogGroup(this, "PrdLogs");
+     * LogGroup prodLogGroup = new LogGroup(this, "PrdLogs");
      * RestApi api = RestApi.Builder.create(this, "books")
      * .deployOptions(StageOptions.builder()
-     * .accessLogDestination(new LogGroupLogDestination(prdLogGroup))
+     * .accessLogDestination(new LogGroupLogDestination(prodLogGroup))
      * .accessLogFormat(AccessLogFormat.jsonWithStandardFields())
      * .build())
      * .build();
@@ -4933,10 +5021,10 @@ public object apigateway {
      * Example:
      * ```
      * // production stage
-     * LogGroup prdLogGroup = new LogGroup(this, "PrdLogs");
+     * LogGroup prodLogGroup = new LogGroup(this, "PrdLogs");
      * RestApi api = RestApi.Builder.create(this, "books")
      * .deployOptions(StageOptions.builder()
-     * .accessLogDestination(new LogGroupLogDestination(prdLogGroup))
+     * .accessLogDestination(new LogGroupLogDestination(prodLogGroup))
      * .accessLogFormat(AccessLogFormat.jsonWithStandardFields())
      * .build())
      * .build();
@@ -5026,6 +5114,7 @@ public object apigateway {
      * .requestTemplates(Map.of(
      * "requestTemplatesKey", "requestTemplates"))
      * .timeout(Duration.minutes(30))
+     * .useDefaultMethodResponses(false)
      * .vpcLink(vpcLink)
      * .build();
      * ```
@@ -5044,14 +5133,10 @@ public object apigateway {
      *
      * Example:
      * ```
-     * Pass stateMachineDefinition = new Pass(this, "PassState");
-     * IStateMachine stateMachine = StateMachine.Builder.create(this, "StateMachine")
-     * .definition(stateMachineDefinition)
-     * .stateMachineType(StateMachineType.EXPRESS)
-     * .build();
+     * IStateMachine machine;
      * StepFunctionsRestApi.Builder.create(this, "StepFunctionsRestApi")
-     * .deploy(true)
-     * .stateMachine(stateMachine)
+     * .stateMachine(machine)
+     * .useDefaultMethodResponses(false)
      * .build();
      * ```
      */
@@ -5070,14 +5155,10 @@ public object apigateway {
      *
      * Example:
      * ```
-     * Pass stateMachineDefinition = new Pass(this, "PassState");
-     * IStateMachine stateMachine = StateMachine.Builder.create(this, "StateMachine")
-     * .definition(stateMachineDefinition)
-     * .stateMachineType(StateMachineType.EXPRESS)
-     * .build();
+     * IStateMachine machine;
      * StepFunctionsRestApi.Builder.create(this, "StepFunctionsRestApi")
-     * .deploy(true)
-     * .stateMachine(stateMachine)
+     * .stateMachine(machine)
+     * .useDefaultMethodResponses(false)
      * .build();
      * ```
      */
@@ -5296,6 +5377,7 @@ public object apigateway {
      * .build();
      * Integration integration = Integration.Builder.create()
      * .type(IntegrationType.HTTP_PROXY)
+     * .integrationHttpMethod("ANY")
      * .options(IntegrationOptions.builder()
      * .connectionType(ConnectionType.VPC_LINK)
      * .vpcLink(link)
@@ -5328,6 +5410,7 @@ public object apigateway {
      * .build();
      * Integration integration = Integration.Builder.create()
      * .type(IntegrationType.HTTP_PROXY)
+     * .integrationHttpMethod("ANY")
      * .options(IntegrationOptions.builder()
      * .connectionType(ConnectionType.VPC_LINK)
      * .vpcLink(link)

@@ -28,6 +28,7 @@ import software.amazon.awscdk.services.amplifyuibuilder.CfnForm
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.amplifyuibuilder.*;
+ * FormInputValuePropertyProperty formInputValuePropertyProperty_;
  * FieldConfigProperty fieldConfigProperty = FieldConfigProperty.builder()
  * .excluded(false)
  * .inputType(FieldInputConfigProperty.builder()
@@ -58,12 +59,32 @@ import software.amazon.awscdk.services.amplifyuibuilder.CfnForm
  * .valueMappings(ValueMappingsProperty.builder()
  * .values(List.of(ValueMappingProperty.builder()
  * .value(FormInputValuePropertyProperty.builder()
+ * .bindingProperties(FormInputValuePropertyBindingPropertiesProperty.builder()
+ * .property("property")
+ * // the properties below are optional
+ * .field("field")
+ * .build())
+ * .concat(List.of(formInputValuePropertyProperty_))
  * .value("value")
  * .build())
  * // the properties below are optional
  * .displayValue(FormInputValuePropertyProperty.builder()
+ * .bindingProperties(FormInputValuePropertyBindingPropertiesProperty.builder()
+ * .property("property")
+ * // the properties below are optional
+ * .field("field")
+ * .build())
+ * .concat(List.of(formInputValuePropertyProperty_))
  * .value("value")
  * .build())
+ * .build()))
+ * // the properties below are optional
+ * .bindingProperties(Map.of(
+ * "bindingPropertiesKey", FormInputBindingPropertiesValueProperty.builder()
+ * .bindingProperties(FormInputBindingPropertiesValuePropertiesProperty.builder()
+ * .model("model")
+ * .build())
+ * .type("type")
  * .build()))
  * .build())
  * .build())

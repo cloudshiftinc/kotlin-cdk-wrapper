@@ -46,6 +46,8 @@ import software.constructs.Construct
  * .homeDirectoryMappings(List.of(HomeDirectoryMapEntryProperty.builder()
  * .entry("entry")
  * .target("target")
+ * // the properties below are optional
+ * .type("type")
  * .build()))
  * .homeDirectoryType("homeDirectoryType")
  * .policy("policy")
@@ -82,6 +84,8 @@ public class CfnUserDsl(
      * The landing directory (folder) for a user when they log in to the server using the client.
      *
      * A `HomeDirectory` example is `/bucket_name/home/mydirectory` .
+     *
+     * The `HomeDirectory` parameter is only used if `HomeDirectoryType` is set to `PATH` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html#cfn-transfer-user-homedirectory)
      *

@@ -28,11 +28,10 @@ import software.constructs.Construct
  * ```
  * // Can be a Function or an Alias
  * Function fn;
- * Role myRole;
- * FunctionUrl fnUrl = fn.addFunctionUrl();
- * fnUrl.grantInvokeUrl(myRole);
+ * FunctionUrl fnUrl = fn.addFunctionUrl(FunctionUrlOptions.builder()
+ * .authType(FunctionUrlAuthType.NONE)
+ * .build());
  * CfnOutput.Builder.create(this, "TheUrl")
- * // The .url attributes will return the unique Function URL
  * .value(fnUrl.getUrl())
  * .build();
  * ```

@@ -55,14 +55,14 @@ public class CfnPipelinePropsDsl {
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
-    /** @param parallelismConfiguration the value to be set. */
+    /** @param parallelismConfiguration The parallelism configuration applied to the pipeline. */
     public fun parallelismConfiguration(parallelismConfiguration: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
         builder.apply(parallelismConfiguration)
         cdkBuilder.parallelismConfiguration(builder.map)
     }
 
-    /** @param parallelismConfiguration the value to be set. */
+    /** @param parallelismConfiguration The parallelism configuration applied to the pipeline. */
     public fun parallelismConfiguration(parallelismConfiguration: Any) {
         cdkBuilder.parallelismConfiguration(parallelismConfiguration)
     }

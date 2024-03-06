@@ -21,18 +21,16 @@ import software.amazon.awscdk.services.dynamodb.AttributeType
  *
  * Example:
  * ```
- * import software.amazon.awscdk.services.cloudwatch.*;
- * Table table = Table.Builder.create(this, "Table")
- * .partitionKey(Attribute.builder().name("id").type(AttributeType.STRING).build())
- * .build();
- * IMetric metric = table.metricThrottledRequestsForOperations(OperationsMetricOptions.builder()
- * .operations(List.of(Operation.PUT_ITEM))
- * .period(Duration.minutes(1))
- * .build());
- * Alarm.Builder.create(this, "Alarm")
- * .metric(metric)
- * .evaluationPeriods(1)
- * .threshold(1)
+ * import software.amazon.awscdk.*;
+ * App app = new App();
+ * Stack stack = Stack.Builder.create(app,
+ * "Stack").env(Environment.builder().region("us-west-2").build()).build();
+ * TableV2 globalTable = TableV2.Builder.create(stack, "GlobalTable")
+ * .partitionKey(Attribute.builder().name("pk").type(AttributeType.STRING).build())
+ * // applys to all replicas, i.e., us-west-2, us-east-1, us-east-2
+ * .removalPolicy(RemovalPolicy.DESTROY)
+ * .replicas(List.of(ReplicaTableProps.builder().region("us-east-1").build(),
+ * ReplicaTableProps.builder().region("us-east-2").build()))
  * .build();
  * ```
  */

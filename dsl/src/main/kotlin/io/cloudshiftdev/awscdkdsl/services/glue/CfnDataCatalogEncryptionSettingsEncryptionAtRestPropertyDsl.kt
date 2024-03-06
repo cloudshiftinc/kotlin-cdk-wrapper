@@ -25,6 +25,7 @@ import software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings
  * import software.amazon.awscdk.services.glue.*;
  * EncryptionAtRestProperty encryptionAtRestProperty = EncryptionAtRestProperty.builder()
  * .catalogEncryptionMode("catalogEncryptionMode")
+ * .catalogEncryptionServiceRole("catalogEncryptionServiceRole")
  * .sseAwsKmsKeyId("sseAwsKmsKeyId")
  * .build();
  * ```
@@ -41,6 +42,14 @@ public class CfnDataCatalogEncryptionSettingsEncryptionAtRestPropertyDsl {
      */
     public fun catalogEncryptionMode(catalogEncryptionMode: String) {
         cdkBuilder.catalogEncryptionMode(catalogEncryptionMode)
+    }
+
+    /**
+     * @param catalogEncryptionServiceRole The role that AWS Glue assumes to encrypt and decrypt the
+     *   Data Catalog objects on the caller's behalf.
+     */
+    public fun catalogEncryptionServiceRole(catalogEncryptionServiceRole: String) {
+        cdkBuilder.catalogEncryptionServiceRole(catalogEncryptionServiceRole)
     }
 
     /** @param sseAwsKmsKeyId The ID of the AWS KMS key to use for encryption at rest. */

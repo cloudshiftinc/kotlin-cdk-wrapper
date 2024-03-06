@@ -62,6 +62,9 @@ import software.amazon.awscdk.services.opensearchservice.CfnDomainProps
  * .build())
  * .build())
  * .clusterConfig(ClusterConfigProperty.builder()
+ * .coldStorageOptions(ColdStorageOptionsProperty.builder()
+ * .enabled(false)
+ * .build())
  * .dedicatedMasterCount(123)
  * .dedicatedMasterEnabled(false)
  * .dedicatedMasterType("dedicatedMasterType")
@@ -103,6 +106,7 @@ import software.amazon.awscdk.services.opensearchservice.CfnDomainProps
  * .kmsKeyId("kmsKeyId")
  * .build())
  * .engineVersion("engineVersion")
+ * .ipAddressType("ipAddressType")
  * .logPublishingOptions(Map.of(
  * "logPublishingOptionsKey", LogPublishingOptionProperty.builder()
  * .cloudWatchLogsLogGroupArn("cloudWatchLogsLogGroupArn")
@@ -315,6 +319,11 @@ public class CfnDomainPropsDsl {
      *   AWS KMS key to use. See
      *   [Encryption of data at rest for Amazon OpenSearch Service](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/encryption-at-rest.html)
      *   .
+     *
+     * If no encryption at rest options were initially specified in the template, updating this
+     * property by adding it causes no interruption. However, if you change this property after it's
+     * already been set within a template, the domain is deleted and recreated in order to modify
+     * the property.
      */
     public fun encryptionAtRestOptions(encryptionAtRestOptions: IResolvable) {
         cdkBuilder.encryptionAtRestOptions(encryptionAtRestOptions)
@@ -325,6 +334,11 @@ public class CfnDomainPropsDsl {
      *   AWS KMS key to use. See
      *   [Encryption of data at rest for Amazon OpenSearch Service](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/encryption-at-rest.html)
      *   .
+     *
+     * If no encryption at rest options were initially specified in the template, updating this
+     * property by adding it causes no interruption. However, if you change this property after it's
+     * already been set within a template, the domain is deleted and recreated in order to modify
+     * the property.
      */
     public fun encryptionAtRestOptions(
         encryptionAtRestOptions: CfnDomain.EncryptionAtRestOptionsProperty
@@ -350,6 +364,16 @@ public class CfnDomainPropsDsl {
      */
     public fun engineVersion(engineVersion: String) {
         cdkBuilder.engineVersion(engineVersion)
+    }
+
+    /**
+     * @param ipAddressType Choose either dual stack or IPv4 as your IP address type. Dual stack
+     *   allows you to share domain resources across IPv4 and IPv6 address types, and is the
+     *   recommended option. If you set your IP address type to dual stack, you can't change your
+     *   address type later.
+     */
+    public fun ipAddressType(ipAddressType: String) {
+        cdkBuilder.ipAddressType(ipAddressType)
     }
 
     /**
@@ -442,16 +466,12 @@ public class CfnDomainPropsDsl {
         cdkBuilder.snapshotOptions(snapshotOptions)
     }
 
-    /**
-     * @param softwareUpdateOptions Options for configuring service software updates for a domain.
-     */
+    /** @param softwareUpdateOptions Service software update options for the domain. */
     public fun softwareUpdateOptions(softwareUpdateOptions: IResolvable) {
         cdkBuilder.softwareUpdateOptions(softwareUpdateOptions)
     }
 
-    /**
-     * @param softwareUpdateOptions Options for configuring service software updates for a domain.
-     */
+    /** @param softwareUpdateOptions Service software update options for the domain. */
     public fun softwareUpdateOptions(
         softwareUpdateOptions: CfnDomain.SoftwareUpdateOptionsProperty
     ) {

@@ -141,6 +141,24 @@ public class CfnTemplatePropsDsl {
     }
 
     /**
+     * @param validationStrategy The option to relax the validation that is required to create and
+     *   update analyses, dashboards, and templates with definition objects. When you set this value
+     *   to `LENIENT` , validation is skipped for specific errors.
+     */
+    public fun validationStrategy(validationStrategy: IResolvable) {
+        cdkBuilder.validationStrategy(validationStrategy)
+    }
+
+    /**
+     * @param validationStrategy The option to relax the validation that is required to create and
+     *   update analyses, dashboards, and templates with definition objects. When you set this value
+     *   to `LENIENT` , validation is skipped for specific errors.
+     */
+    public fun validationStrategy(validationStrategy: CfnTemplate.ValidationStrategyProperty) {
+        cdkBuilder.validationStrategy(validationStrategy)
+    }
+
+    /**
      * @param versionDescription A description of the current template version being created. This
      *   API operation creates the first version of the template. Every time `UpdateTemplate` is
      *   called, a new version is created. Each version of the template maintains a description of

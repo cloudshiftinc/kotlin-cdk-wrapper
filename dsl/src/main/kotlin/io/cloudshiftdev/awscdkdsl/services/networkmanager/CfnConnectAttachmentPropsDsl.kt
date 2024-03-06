@@ -81,12 +81,18 @@ public class CfnConnectAttachmentPropsDsl {
         cdkBuilder.options(options)
     }
 
-    /** @param proposedSegmentChange The attachment to move from one segment to another. */
+    /**
+     * @param proposedSegmentChange Describes a proposed segment change. In some cases, the segment
+     *   change must first be evaluated and accepted.
+     */
     public fun proposedSegmentChange(proposedSegmentChange: IResolvable) {
         cdkBuilder.proposedSegmentChange(proposedSegmentChange)
     }
 
-    /** @param proposedSegmentChange The attachment to move from one segment to another. */
+    /**
+     * @param proposedSegmentChange Describes a proposed segment change. In some cases, the segment
+     *   change must first be evaluated and accepted.
+     */
     public fun proposedSegmentChange(
         proposedSegmentChange: CfnConnectAttachment.ProposedSegmentChangeProperty
     ) {

@@ -16,8 +16,8 @@ import kotlin.String
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2
 
 /**
- * When you configure a SQL-based Kinesis Data Analytics application's output, identifies an Amazon
- * Lambda function as the destination.
+ * When you configure a SQL-based Managed Service for Apache Flink application's output, identifies
+ * an Amazon Lambda function as the destination.
  *
  * You provide the function Amazon Resource Name (ARN) of the Lambda function.
  *

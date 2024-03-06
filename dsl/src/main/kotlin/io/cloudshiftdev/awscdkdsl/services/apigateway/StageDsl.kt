@@ -29,10 +29,10 @@ import software.constructs.Construct
  * Example:
  * ```
  * // production stage
- * LogGroup prdLogGroup = new LogGroup(this, "PrdLogs");
+ * LogGroup prodLogGroup = new LogGroup(this, "PrdLogs");
  * RestApi api = RestApi.Builder.create(this, "books")
  * .deployOptions(StageOptions.builder()
- * .accessLogDestination(new LogGroupLogDestination(prdLogGroup))
+ * .accessLogDestination(new LogGroupLogDestination(prodLogGroup))
  * .accessLogFormat(AccessLogFormat.jsonWithStandardFields())
  * .build())
  * .build();
@@ -64,11 +64,12 @@ public class StageDsl(
     private val cdkBuilder: Stage.Builder = Stage.Builder.create(scope, id)
 
     /**
-     * The CloudWatch Logs log group.
+     * The CloudWatch Logs log group or Firehose delivery stream where to write access logs.
      *
      * Default: - No destination
      *
-     * @param accessLogDestination The CloudWatch Logs log group.
+     * @param accessLogDestination The CloudWatch Logs log group or Firehose delivery stream where
+     *   to write access logs.
      */
     public fun accessLogDestination(accessLogDestination: IAccessLogDestination) {
         cdkBuilder.accessLogDestination(accessLogDestination)

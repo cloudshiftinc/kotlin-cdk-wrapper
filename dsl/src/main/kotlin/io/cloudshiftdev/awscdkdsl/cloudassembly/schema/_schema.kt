@@ -244,6 +244,7 @@ public object schema {
      * .region("region")
      * .build()))
      * .source(DockerImageSource.builder()
+     * .cacheDisabled(false)
      * .cacheFrom(List.of(DockerCacheOption.builder()
      * .type("type")
      * // the properties below are optional
@@ -776,6 +777,7 @@ public object schema {
      * .region("region")
      * .build()))
      * .source(DockerImageSource.builder()
+     * .cacheDisabled(false)
      * .cacheFrom(List.of(DockerCacheOption.builder()
      * .type("type")
      * // the properties below are optional
@@ -847,6 +849,7 @@ public object schema {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.cloudassembly.schema.*;
      * DockerImageSource dockerImageSource = DockerImageSource.builder()
+     * .cacheDisabled(false)
      * .cacheFrom(List.of(DockerCacheOption.builder()
      * .type("type")
      * // the properties below are optional
@@ -1080,6 +1083,7 @@ public object schema {
      * .changeSetName("changeSetName")
      * .ci(false)
      * .color(false)
+     * .concurrency(123)
      * .context(Map.of(
      * "contextKey", "context"))
      * .debug(false)
@@ -1526,6 +1530,7 @@ public object schema {
      * .changeSetName("changeSetName")
      * .ci(false)
      * .color(false)
+     * .concurrency(123)
      * .context(Map.of(
      * "contextKey", "context"))
      * .debug(false)
@@ -1634,6 +1639,7 @@ public object schema {
      * .changeSetName("changeSetName")
      * .ci(false)
      * .color(false)
+     * .concurrency(123)
      * .context(Map.of(
      * "contextKey", "context"))
      * .debug(false)

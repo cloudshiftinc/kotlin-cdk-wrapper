@@ -23,25 +23,40 @@ import software.amazon.awscdk.services.route53.PublicHostedZoneProps
  *
  * Example:
  * ```
- * PublicHostedZone subZone = PublicHostedZone.Builder.create(this, "SubZone")
- * .zoneName("sub.someexample.com")
+ * PublicHostedZone parentZone = PublicHostedZone.Builder.create(this, "HostedZone")
+ * .zoneName("someexample.com")
  * .build();
- * // import the delegation role by constructing the roleArn
- * String delegationRoleArn = Stack.of(this).formatArn(ArnComponents.builder()
- * .region("") // IAM is global in each partition
- * .service("iam")
- * .account("parent-account-id")
- * .resource("role")
- * .resourceName("MyDelegationRole")
- * .build());
- * IRole delegationRole = Role.fromRoleArn(this, "DelegationRole", delegationRoleArn);
- * // create the record
- * // create the record
- * CrossAccountZoneDelegationRecord.Builder.create(this, "delegate")
- * .delegatedZone(subZone)
- * .parentHostedZoneName("someexample.com") // or you can use parentHostedZoneId
- * .delegationRole(delegationRole)
+ * Role crossAccountRole = Role.Builder.create(this, "CrossAccountRole")
+ * // The role name must be predictable
+ * .roleName("MyDelegationRole")
+ * // The other account
+ * .assumedBy(new AccountPrincipal("12345678901"))
+ * // You can scope down this role policy to be least privileged.
+ * // If you want the other account to be able to manage specific records,
+ * // you can scope down by resource and/or normalized record names
+ * .inlinePolicies(Map.of(
+ * "crossAccountPolicy", PolicyDocument.Builder.create()
+ * .statements(List.of(
+ * PolicyStatement.Builder.create()
+ * .sid("ListHostedZonesByName")
+ * .effect(Effect.ALLOW)
+ * .actions(List.of("route53:ListHostedZonesByName"))
+ * .resources(List.of("*"))
+ * .build(),
+ * PolicyStatement.Builder.create()
+ * .sid("GetHostedZoneAndChangeResourceRecordSet")
+ * .effect(Effect.ALLOW)
+ * .actions(List.of("route53:GetHostedZone", "route53:ChangeResourceRecordSet"))
+ * // This example assumes the RecordSet subdomain.somexample.com
+ * // is contained in the HostedZone
+ * .resources(List.of("arn:aws:route53:::hostedzone/HZID00000000000000000"))
+ * .conditions(Map.of(
+ * "ForAllValues:StringLike", Map.of(
+ * "route53:ChangeResourceRecordSetsNormalizedRecordNames", List.of("subdomain.someexample.com"))))
+ * .build()))
+ * .build()))
  * .build();
+ * parentZone.grantDelegation(crossAccountRole);
  * ```
  */
 @CdkDslMarker

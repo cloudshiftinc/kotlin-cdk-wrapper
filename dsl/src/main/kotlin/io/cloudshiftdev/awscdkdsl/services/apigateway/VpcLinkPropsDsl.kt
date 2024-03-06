@@ -33,6 +33,7 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalanc
  * .build();
  * Integration integration = Integration.Builder.create()
  * .type(IntegrationType.HTTP_PROXY)
+ * .integrationHttpMethod("ANY")
  * .options(IntegrationOptions.builder()
  * .connectionType(ConnectionType.VPC_LINK)
  * .vpcLink(link)

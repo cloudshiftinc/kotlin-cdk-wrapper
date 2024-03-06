@@ -60,12 +60,12 @@ public class CfnControlPanelPropsDsl {
         cdkBuilder.name(name)
     }
 
-    /** @param tags The value for a tag. */
+    /** @param tags The tags associated with the control panel. */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
-    /** @param tags The value for a tag. */
+    /** @param tags The tags associated with the control panel. */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
     }

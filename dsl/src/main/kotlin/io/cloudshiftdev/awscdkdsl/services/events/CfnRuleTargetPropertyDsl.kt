@@ -38,6 +38,9 @@ import software.amazon.awscdk.services.events.CfnRule
  * .arn("arn")
  * .id("id")
  * // the properties below are optional
+ * .appSyncParameters(AppSyncParametersProperty.builder()
+ * .graphQlOperation("graphQlOperation")
+ * .build())
  * .batchParameters(BatchParametersProperty.builder()
  * .jobDefinition("jobDefinition")
  * .jobName("jobName")
@@ -114,6 +117,7 @@ import software.amazon.awscdk.services.events.CfnRule
  * .dbUser("dbUser")
  * .secretManagerArn("secretManagerArn")
  * .sql("sql")
+ * .sqls(List.of("sqls"))
  * .statementName("statementName")
  * .withEvent(false)
  * .build())
@@ -145,6 +149,22 @@ import software.amazon.awscdk.services.events.CfnRule
 @CdkDslMarker
 public class CfnRuleTargetPropertyDsl {
     private val cdkBuilder: CfnRule.TargetProperty.Builder = CfnRule.TargetProperty.builder()
+
+    /**
+     * @param appSyncParameters Contains the GraphQL operation to be parsed and executed, if the
+     *   event target is an AWS AppSync API.
+     */
+    public fun appSyncParameters(appSyncParameters: IResolvable) {
+        cdkBuilder.appSyncParameters(appSyncParameters)
+    }
+
+    /**
+     * @param appSyncParameters Contains the GraphQL operation to be parsed and executed, if the
+     *   event target is an AWS AppSync API.
+     */
+    public fun appSyncParameters(appSyncParameters: CfnRule.AppSyncParametersProperty) {
+        cdkBuilder.appSyncParameters(appSyncParameters)
+    }
 
     /** @param arn The Amazon Resource Name (ARN) of the target. */
     public fun arn(arn: String) {

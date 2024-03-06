@@ -16,10 +16,14 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnInstance
 
 /**
- * Specifies the type of Elastic GPU.
+ * Amazon Elastic Graphics reached end of life on January 8, 2024.
  *
- * An Elastic GPU is a GPU resource that you can attach to your Amazon EC2 instance to accelerate
- * the graphics performance of your applications. For more information, see
+ * For workloads that require graphics acceleration, we recommend that you use Amazon EC2 G4ad,
+ * G4dn, or G5 instances.
+ *
+ * Specifies the type of Elastic GPU. An Elastic GPU is a GPU resource that you can attach to your
+ * Amazon EC2 instance to accelerate the graphics performance of your applications. For more
+ * information, see
  * [Amazon EC2 Elastic GPUs](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html)
  * in the *Amazon EC2 User Guide for Windows Instances* .
  *

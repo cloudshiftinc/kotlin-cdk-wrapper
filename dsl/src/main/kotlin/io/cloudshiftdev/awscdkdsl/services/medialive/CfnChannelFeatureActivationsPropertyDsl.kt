@@ -28,6 +28,7 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * import software.amazon.awscdk.services.medialive.*;
  * FeatureActivationsProperty featureActivationsProperty = FeatureActivationsProperty.builder()
  * .inputPrepareScheduleActions("inputPrepareScheduleActions")
+ * .outputStaticImageOverlayScheduleActions("outputStaticImageOverlayScheduleActions")
  * .build();
  * ```
  *
@@ -46,6 +47,13 @@ public class CfnChannelFeatureActivationsPropertyDsl {
      */
     public fun inputPrepareScheduleActions(inputPrepareScheduleActions: String) {
         cdkBuilder.inputPrepareScheduleActions(inputPrepareScheduleActions)
+    }
+
+    /** @param outputStaticImageOverlayScheduleActions the value to be set. */
+    public fun outputStaticImageOverlayScheduleActions(
+        outputStaticImageOverlayScheduleActions: String
+    ) {
+        cdkBuilder.outputStaticImageOverlayScheduleActions(outputStaticImageOverlayScheduleActions)
     }
 
     public fun build(): CfnChannel.FeatureActivationsProperty = cdkBuilder.build()

@@ -103,9 +103,7 @@ public class CfnSecurityGroupEgressPropsDsl {
 
     /**
      * @param fromPort If the protocol is TCP or UDP, this is the start of the port range. If the
-     *   protocol is ICMP or ICMPv6, this is the type number. A value of -1 indicates all
-     *   ICMP/ICMPv6 types. If you specify all ICMP/ICMPv6 types, you must specify all ICMP/ICMPv6
-     *   codes.
+     *   protocol is ICMP or ICMPv6, this is the ICMP type or -1 (all ICMP types).
      */
     public fun fromPort(fromPort: Number) {
         cdkBuilder.fromPort(fromPort)
@@ -135,8 +133,8 @@ public class CfnSecurityGroupEgressPropsDsl {
 
     /**
      * @param toPort If the protocol is TCP or UDP, this is the end of the port range. If the
-     *   protocol is ICMP or ICMPv6, this is the code. A value of -1 indicates all ICMP/ICMPv6
-     *   codes. If you specify all ICMP/ICMPv6 types, you must specify all ICMP/ICMPv6 codes.
+     *   protocol is ICMP or ICMPv6, this is the ICMP code or -1 (all ICMP codes). If the start port
+     *   is -1 (all ICMP types), then the end port must be -1 (all ICMP codes).
      */
     public fun toPort(toPort: Number) {
         cdkBuilder.toPort(toPort)

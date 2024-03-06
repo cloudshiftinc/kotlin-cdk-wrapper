@@ -12,8 +12,19 @@
 package io.cloudshiftdev.awscdkdsl.services.dms
 
 import kotlin.Unit
+import software.amazon.awscdk.services.dms.CfnDataProvider
 import software.amazon.awscdk.services.dms.CfnEndpoint
+import software.amazon.awscdk.services.dms.CfnMigrationProject
 import software.amazon.awscdk.services.dms.CfnReplicationConfig
+
+/** The settings in JSON format for a data provider. */
+public inline fun CfnDataProvider.setSettings(
+    block: CfnDataProviderSettingsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnDataProviderSettingsPropertyDsl()
+    builder.apply(block)
+    return setSettings(builder.build())
+}
 
 /** Settings in JSON format for the source and target DocumentDB endpoint. */
 public inline fun CfnEndpoint.setDocDbSettings(
@@ -166,6 +177,18 @@ public inline fun CfnEndpoint.setSybaseSettings(
     val builder = CfnEndpointSybaseSettingsPropertyDsl()
     builder.apply(block)
     return setSybaseSettings(builder.build())
+}
+
+/**
+ * The schema conversion application attributes, including the Amazon S3 bucket name and Amazon S3
+ * role ARN.
+ */
+public inline fun CfnMigrationProject.setSchemaConversionApplicationAttributes(
+    block: CfnMigrationProjectSchemaConversionApplicationAttributesPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnMigrationProjectSchemaConversionApplicationAttributesPropertyDsl()
+    builder.apply(block)
+    return setSchemaConversionApplicationAttributes(builder.build())
 }
 
 /** Configuration parameters for provisioning an AWS DMS Serverless replication. */

@@ -16,6 +16,8 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnEndpointConfig
 
 /**
+ * A parameter to activate explainers.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -64,12 +66,18 @@ public class CfnEndpointConfigExplainerConfigPropertyDsl {
     private val cdkBuilder: CfnEndpointConfig.ExplainerConfigProperty.Builder =
         CfnEndpointConfig.ExplainerConfigProperty.builder()
 
-    /** @param clarifyExplainerConfig the value to be set. */
+    /**
+     * @param clarifyExplainerConfig A member of `ExplainerConfig` that contains configuration
+     *   parameters for the SageMaker Clarify explainer.
+     */
     public fun clarifyExplainerConfig(clarifyExplainerConfig: IResolvable) {
         cdkBuilder.clarifyExplainerConfig(clarifyExplainerConfig)
     }
 
-    /** @param clarifyExplainerConfig the value to be set. */
+    /**
+     * @param clarifyExplainerConfig A member of `ExplainerConfig` that contains configuration
+     *   parameters for the SageMaker Clarify explainer.
+     */
     public fun clarifyExplainerConfig(
         clarifyExplainerConfig: CfnEndpointConfig.ClarifyExplainerConfigProperty
     ) {

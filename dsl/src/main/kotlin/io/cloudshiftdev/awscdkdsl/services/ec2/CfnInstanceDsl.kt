@@ -457,48 +457,42 @@ public class CfnInstanceDsl(
     }
 
     /**
-     * An elastic GPU to associate with the instance.
+     * Deprecated.
      *
-     * An Elastic GPU is a GPU resource that you can attach to your Windows instance to accelerate
-     * the graphics performance of your applications. For more information, see
-     * [Amazon EC2 Elastic GPUs](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html)
-     * in the *Amazon EC2 User Guide* .
+     * Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require
+     * graphics acceleration, we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-elasticgpuspecifications)
      *
-     * @param elasticGpuSpecifications An elastic GPU to associate with the instance.
+     * @param elasticGpuSpecifications Deprecated.
      */
     public fun elasticGpuSpecifications(vararg elasticGpuSpecifications: Any) {
         _elasticGpuSpecifications.addAll(listOf(*elasticGpuSpecifications))
     }
 
     /**
-     * An elastic GPU to associate with the instance.
+     * Deprecated.
      *
-     * An Elastic GPU is a GPU resource that you can attach to your Windows instance to accelerate
-     * the graphics performance of your applications. For more information, see
-     * [Amazon EC2 Elastic GPUs](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html)
-     * in the *Amazon EC2 User Guide* .
+     * Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require
+     * graphics acceleration, we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-elasticgpuspecifications)
      *
-     * @param elasticGpuSpecifications An elastic GPU to associate with the instance.
+     * @param elasticGpuSpecifications Deprecated.
      */
     public fun elasticGpuSpecifications(elasticGpuSpecifications: Collection<Any>) {
         _elasticGpuSpecifications.addAll(elasticGpuSpecifications)
     }
 
     /**
-     * An elastic GPU to associate with the instance.
+     * Deprecated.
      *
-     * An Elastic GPU is a GPU resource that you can attach to your Windows instance to accelerate
-     * the graphics performance of your applications. For more information, see
-     * [Amazon EC2 Elastic GPUs](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html)
-     * in the *Amazon EC2 User Guide* .
+     * Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require
+     * graphics acceleration, we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-elasticgpuspecifications)
      *
-     * @param elasticGpuSpecifications An elastic GPU to associate with the instance.
+     * @param elasticGpuSpecifications Deprecated.
      */
     public fun elasticGpuSpecifications(elasticGpuSpecifications: IResolvable) {
         cdkBuilder.elasticGpuSpecifications(elasticGpuSpecifications)
@@ -1228,7 +1222,7 @@ public class CfnInstanceDsl(
      * [Create an IAM instance profile for Systems Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-configuring-access-role.html)
      * in the *AWS Systems Manager User Guide* .
      *
-     * You can currently associate only one document with an instance.
+     * You can associate only one document with an instance.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-ssmassociations)
      *
@@ -1253,7 +1247,7 @@ public class CfnInstanceDsl(
      * [Create an IAM instance profile for Systems Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-configuring-access-role.html)
      * in the *AWS Systems Manager User Guide* .
      *
-     * You can currently associate only one document with an instance.
+     * You can associate only one document with an instance.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-ssmassociations)
      *
@@ -1278,7 +1272,7 @@ public class CfnInstanceDsl(
      * [Create an IAM instance profile for Systems Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-configuring-access-role.html)
      * in the *AWS Systems Manager User Guide* .
      *
-     * You can currently associate only one document with an instance.
+     * You can associate only one document with an instance.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-ssmassociations)
      *
@@ -1352,22 +1346,20 @@ public class CfnInstanceDsl(
     }
 
     /**
-     * The user data script to make available to the instance.
+     * The parameters or scripts to store as user data.
      *
-     * User data is limited to 16 KB. You must provide base64-encoded text. For more information,
-     * see
+     * Any scripts in user data are run when you launch the instance. User data is limited to 16 KB.
+     * You must provide base64-encoded text. For more information, see
      * [Fn::Base64](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-base64.html)
      * .
      *
-     * User data runs only at instance launch. For more information, see
-     * [Run commands on your Linux instance at launch](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html)
-     * and
-     * [Run commands on your Windows instance at launch](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-windows-user-data.html)
-     * .
+     * If the root volume is an EBS volume and you update user data, CloudFormation restarts the
+     * instance. If the root volume is an instance store volume and you update user data, the
+     * instance is replaced.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-userdata)
      *
-     * @param userData The user data script to make available to the instance.
+     * @param userData The parameters or scripts to store as user data.
      */
     public fun userData(userData: String) {
         cdkBuilder.userData(userData)

@@ -74,6 +74,7 @@ import software.amazon.awscdk.services.iam.IRole
  * .runOrder(3)
  * .build()));
  * Pipeline.Builder.create(stack, "Pipeline")
+ * .crossAccountKeys(true)
  * .stages(List.of(sourceStage, prodStage))
  * .build();
  * ```

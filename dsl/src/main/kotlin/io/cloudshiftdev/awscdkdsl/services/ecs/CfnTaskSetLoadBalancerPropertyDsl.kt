@@ -52,7 +52,8 @@ public class CfnTaskSetLoadBalancerPropertyDsl {
 
     /**
      * @param containerName The name of the container (as it appears in a container definition) to
-     *   associate with the load balancer.
+     *   associate with the load balancer. You need to specify the container name when configuring
+     *   the target group for an Amazon ECS load balancer.
      */
     public fun containerName(containerName: String) {
         cdkBuilder.containerName(containerName)

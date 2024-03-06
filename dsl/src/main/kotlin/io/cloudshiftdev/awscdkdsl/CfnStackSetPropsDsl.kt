@@ -62,6 +62,7 @@ import software.amazon.awscdk.IResolvable
  * .deploymentTargets(DeploymentTargetsProperty.builder()
  * .accountFilterType("accountFilterType")
  * .accounts(List.of("accounts"))
+ * .accountsUrl("accountsUrl")
  * .organizationalUnitIds(List.of("organizationalUnitIds"))
  * .build())
  * .regions(List.of("regions"))
@@ -316,10 +317,6 @@ public class CfnStackSetPropsDsl {
      * @param stackSetName The name to associate with the stack set. The name must be unique in the
      *   Region where you create your stack set.
      *
-     * *Maximum* : `128`
-     *
-     * *Pattern* : `^[a-zA-Z][a-zA-Z0-9-]{0,127}$`
-     *
      * The `StackSetName` property is required.
      */
     public fun stackSetName(stackSetName: String) {
@@ -327,18 +324,24 @@ public class CfnStackSetPropsDsl {
     }
 
     /**
-     * @param tags The key-value pairs to associate with this stack set and the stacks created from
-     *   it. AWS CloudFormation also propagates these tags to supported resources that are created
-     *   in the stacks. A maximum number of 50 tags can be specified.
+     * @param tags Key-value pairs to associate with this stack. AWS CloudFormation also propagates
+     *   these tags to supported resources in the stack. You can specify a maximum number of 50
+     *   tags.
+     *
+     * If you don't specify this parameter, AWS CloudFormation doesn't modify the stack's tags. If
+     * you specify an empty value, AWS CloudFormation removes all associated tags.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
     /**
-     * @param tags The key-value pairs to associate with this stack set and the stacks created from
-     *   it. AWS CloudFormation also propagates these tags to supported resources that are created
-     *   in the stacks. A maximum number of 50 tags can be specified.
+     * @param tags Key-value pairs to associate with this stack. AWS CloudFormation also propagates
+     *   these tags to supported resources in the stack. You can specify a maximum number of 50
+     *   tags.
+     *
+     * If you don't specify this parameter, AWS CloudFormation doesn't modify the stack's tags. If
+     * you specify an empty value, AWS CloudFormation removes all associated tags.
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
@@ -350,10 +353,6 @@ public class CfnStackSetPropsDsl {
      *   `TemplateBody` in a StackSet, but you can't use both. Dynamic references in the
      *   `TemplateBody` may not work correctly in all cases. It's recommended to pass templates
      *   containing dynamic references through `TemplateUrl` instead.
-     *
-     * *Minimum* : `1`
-     *
-     * *Maximum* : `51200`
      */
     public fun templateBody(templateBody: String) {
         cdkBuilder.templateBody(templateBody)
@@ -361,14 +360,13 @@ public class CfnStackSetPropsDsl {
 
     /**
      * @param templateUrl Location of file containing the template body. The URL must point to a
-     *   template (max size: 460,800 bytes) that's located in an Amazon S3 bucket.
+     *   template that's located in an Amazon S3 bucket or a Systems Manager document. For more
+     *   information, go to
+     *   [Template Anatomy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html)
+     *   in the AWS CloudFormation User Guide.
      *
-     * You must include either `TemplateURL` or `TemplateBody` in a StackSet, but you can't use
-     * both.
-     *
-     * *Minimum* : `1`
-     *
-     * *Maximum* : `1024`
+     * Conditional: You must specify only one of the following parameters: `TemplateBody` ,
+     * `TemplateURL` .
      */
     public fun templateUrl(templateUrl: String) {
         cdkBuilder.templateUrl(templateUrl)

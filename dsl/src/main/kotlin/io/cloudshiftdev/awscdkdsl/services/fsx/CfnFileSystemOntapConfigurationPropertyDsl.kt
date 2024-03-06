@@ -38,9 +38,11 @@ import software.amazon.awscdk.services.fsx.CfnFileSystem
  * .build())
  * .endpointIpAddressRange("endpointIpAddressRange")
  * .fsxAdminPassword("fsxAdminPassword")
+ * .haPairs(123)
  * .preferredSubnetId("preferredSubnetId")
  * .routeTableIds(List.of("routeTableIds"))
  * .throughputCapacity(123)
+ * .throughputCapacityPerHaPair(123)
  * .weeklyMaintenanceStartTime("weeklyMaintenanceStartTime")
  * .build();
  * ```
@@ -78,6 +80,8 @@ public class CfnFileSystemOntapConfigurationPropertyDsl {
      * * `MULTI_AZ_1` - (Default) A high availability file system configured for Multi-AZ redundancy
      *   to tolerate temporary Availability Zone (AZ) unavailability.
      * * `SINGLE_AZ_1` - A file system configured for Single-AZ redundancy.
+     * * `SINGLE_AZ_2` - A file system configured with multiple high-availability (HA) pairs for
+     *   Single-AZ redundancy.
      *
      * For information about the use cases for Multi-AZ and Single-AZ deployments, refer to
      * [Choosing a file system deployment type](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-AZ.html)
@@ -125,6 +129,24 @@ public class CfnFileSystemOntapConfigurationPropertyDsl {
     }
 
     /**
+     * @param haPairs Specifies how many high-availability (HA) pairs of file servers will power
+     *   your file system. Scale-up file systems are powered by 1 HA pair. The default value is 1.
+     *   FSx for ONTAP scale-out file system are powered by up to six HA pairs. The value of this
+     *   property affects the values of `StorageCapacity` , `Iops` , and `ThroughputCapacity` . For
+     *   more information, see
+     *   [High-availability (HA) pairs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html)
+     *   in the FSx for ONTAP user guide.
+     *
+     * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     * * The value of `HAPairs` is less than 1 or greater than 6.
+     * * The value of `HAPairs` is greater than 1 and the value of `DeploymentType` is `SINGLE_AZ_1`
+     *   or `MULTI_AZ_1` .
+     */
+    public fun haPairs(haPairs: Number) {
+        cdkBuilder.haPairs(haPairs)
+    }
+
+    /**
      * @param preferredSubnetId Required when `DeploymentType` is set to `MULTI_AZ_1` . This
      *   specifies the subnet in which you want the preferred file server to be located.
      */
@@ -137,6 +159,12 @@ public class CfnFileSystemOntapConfigurationPropertyDsl {
      *   the rules for routing traffic to the correct file server. You should specify all virtual
      *   private cloud (VPC) route tables associated with the subnets in which your clients are
      *   located. By default, Amazon FSx selects your VPC's default route table.
+     *
+     * Amazon FSx manages these route tables for Multi-AZ file systems using tag-based
+     * authentication. These route tables are tagged with `Key: AmazonFSx; Value:
+     * ManagedByAmazonFSx` . When creating FSx for ONTAP Multi-AZ file systems using AWS
+     * CloudFormation we recommend that you add the `Key: AmazonFSx; Value: ManagedByAmazonFSx` tag
+     * manually.
      */
     public fun routeTableIds(vararg routeTableIds: String) {
         _routeTableIds.addAll(listOf(*routeTableIds))
@@ -147,6 +175,12 @@ public class CfnFileSystemOntapConfigurationPropertyDsl {
      *   the rules for routing traffic to the correct file server. You should specify all virtual
      *   private cloud (VPC) route tables associated with the subnets in which your clients are
      *   located. By default, Amazon FSx selects your VPC's default route table.
+     *
+     * Amazon FSx manages these route tables for Multi-AZ file systems using tag-based
+     * authentication. These route tables are tagged with `Key: AmazonFSx; Value:
+     * ManagedByAmazonFSx` . When creating FSx for ONTAP Multi-AZ file systems using AWS
+     * CloudFormation we recommend that you add the `Key: AmazonFSx; Value: ManagedByAmazonFSx` tag
+     * manually.
      */
     public fun routeTableIds(routeTableIds: Collection<String>) {
         _routeTableIds.addAll(routeTableIds)
@@ -154,10 +188,40 @@ public class CfnFileSystemOntapConfigurationPropertyDsl {
 
     /**
      * @param throughputCapacity Sets the throughput capacity for the file system that you're
-     *   creating. Valid values are 128, 256, 512, 1024, 2048, and 4096 MBps.
+     *   creating in megabytes per second (MBps). For more information, see
+     *   [Managing throughput capacity](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-throughput-capacity.html)
+     *   in the FSx for ONTAP User Guide.
+     *
+     * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     * * The value of `ThroughputCapacity` and `ThroughputCapacityPerHAPair` are not the same value.
+     * * The value of `ThroughputCapacity` when divided by the value of `HAPairs` is outside of the
+     *   valid range for `ThroughputCapacity` .
      */
     public fun throughputCapacity(throughputCapacity: Number) {
         cdkBuilder.throughputCapacity(throughputCapacity)
+    }
+
+    /**
+     * @param throughputCapacityPerHaPair Use to choose the throughput capacity per HA pair, rather
+     *   than the total throughput for the file system. You can define either the
+     *   `ThroughputCapacityPerHAPair` or the `ThroughputCapacity` when creating a file system, but
+     *   not both.
+     *
+     * This field and `ThroughputCapacity` are the same for scale-up file systems powered by one HA
+     * pair.
+     * * For `SINGLE_AZ_1` and `MULTI_AZ_1` file systems, valid values are 128, 256, 512, 1024,
+     *   2048, or 4096 MBps.
+     * * For `SINGLE_AZ_2` file systems, valid values are 3072 or 6144 MBps.
+     *
+     * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     * * The value of `ThroughputCapacity` and `ThroughputCapacityPerHAPair` are not the same value
+     *   for file systems with one HA pair.
+     * * The value of deployment type is `SINGLE_AZ_2` and `ThroughputCapacity` /
+     *   `ThroughputCapacityPerHAPair` is a valid HA pair (a value between 2 and 6).
+     * * The value of `ThroughputCapacityPerHAPair` is not a valid value.
+     */
+    public fun throughputCapacityPerHaPair(throughputCapacityPerHaPair: Number) {
+        cdkBuilder.throughputCapacityPerHaPair(throughputCapacityPerHaPair)
     }
 
     /**

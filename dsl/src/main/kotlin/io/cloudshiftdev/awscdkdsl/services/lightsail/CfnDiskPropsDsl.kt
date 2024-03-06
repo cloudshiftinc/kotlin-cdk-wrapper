@@ -109,12 +109,12 @@ public class CfnDiskPropsDsl {
         cdkBuilder.diskName(diskName)
     }
 
-    /** @param location Location of a resource. */
+    /** @param location The AWS Region and Availability Zone where the disk is located. */
     public fun location(location: IResolvable) {
         cdkBuilder.location(location)
     }
 
-    /** @param location Location of a resource. */
+    /** @param location The AWS Region and Availability Zone where the disk is located. */
     public fun location(location: CfnDisk.LocationProperty) {
         cdkBuilder.location(location)
     }

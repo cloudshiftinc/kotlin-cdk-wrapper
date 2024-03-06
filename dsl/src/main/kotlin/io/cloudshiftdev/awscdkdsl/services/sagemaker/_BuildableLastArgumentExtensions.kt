@@ -21,6 +21,8 @@ import software.amazon.awscdk.services.sagemaker.CfnDeviceFleet
 import software.amazon.awscdk.services.sagemaker.CfnDomain
 import software.amazon.awscdk.services.sagemaker.CfnEndpoint
 import software.amazon.awscdk.services.sagemaker.CfnEndpointConfig
+import software.amazon.awscdk.services.sagemaker.CfnFeatureGroup
+import software.amazon.awscdk.services.sagemaker.CfnInferenceComponent
 import software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment
 import software.amazon.awscdk.services.sagemaker.CfnModel
 import software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition
@@ -43,6 +45,18 @@ public inline fun CfnApp.setResourceSpec(block: CfnAppResourceSpecPropertyDsl.()
     val builder = CfnAppResourceSpecPropertyDsl()
     builder.apply(block)
     return setResourceSpec(builder.build())
+}
+
+/**
+ * The configuration for the file system and the runtime, such as the environment variables and
+ * entry point.
+ */
+public inline fun CfnAppImageConfig.setJupyterLabAppImageConfig(
+    block: CfnAppImageConfigJupyterLabAppImageConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnAppImageConfigJupyterLabAppImageConfigPropertyDsl()
+    builder.apply(block)
+    return setJupyterLabAppImageConfig(builder.build())
 }
 
 /** The configuration for the file system and kernels in the SageMaker image. */
@@ -145,7 +159,7 @@ public inline fun CfnDeviceFleet.setOutputConfig(
     return setOutputConfig(builder.build())
 }
 
-/** A collection of settings that apply to spaces of Amazon SageMaker Studio. */
+/** A collection of settings that apply to spaces created in the domain. */
 public inline fun CfnDomain.setDefaultSpaceSettings(
     block: CfnDomainDefaultSpaceSettingsPropertyDsl.() -> Unit = {}
 ) {
@@ -202,13 +216,49 @@ public inline fun CfnEndpointConfig.setDataCaptureConfig(
     return setDataCaptureConfig(builder.build())
 }
 
-/**  */
+/** A parameter to activate explainers. */
 public inline fun CfnEndpointConfig.setExplainerConfig(
     block: CfnEndpointConfigExplainerConfigPropertyDsl.() -> Unit = {}
 ) {
     val builder = CfnEndpointConfigExplainerConfigPropertyDsl()
     builder.apply(block)
     return setExplainerConfig(builder.build())
+}
+
+/**  */
+public inline fun CfnEndpointConfig.setVpcConfig(
+    block: CfnEndpointConfigVpcConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnEndpointConfigVpcConfigPropertyDsl()
+    builder.apply(block)
+    return setVpcConfig(builder.build())
+}
+
+/** Used to set feature group throughput configuration. */
+public inline fun CfnFeatureGroup.setThroughputConfig(
+    block: CfnFeatureGroupThroughputConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnFeatureGroupThroughputConfigPropertyDsl()
+    builder.apply(block)
+    return setThroughputConfig(builder.build())
+}
+
+/** The runtime config for the inference component. */
+public inline fun CfnInferenceComponent.setRuntimeConfig(
+    block: CfnInferenceComponentInferenceComponentRuntimeConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnInferenceComponentInferenceComponentRuntimeConfigPropertyDsl()
+    builder.apply(block)
+    return setRuntimeConfig(builder.build())
+}
+
+/** The specification for the inference component. */
+public inline fun CfnInferenceComponent.setSpecification(
+    block: CfnInferenceComponentInferenceComponentSpecificationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnInferenceComponentInferenceComponentSpecificationPropertyDsl()
+    builder.apply(block)
+    return setSpecification(builder.build())
 }
 
 /** The Amazon S3 location and configuration for storing inference request and response data. */
@@ -606,13 +656,22 @@ public inline fun CfnNotebookInstance.setInstanceMetadataServiceConfiguration(
     return setInstanceMetadataServiceConfiguration(builder.build())
 }
 
-/** Provisioned ServiceCatalog Details. */
+/** Details of a provisioned service catalog product. */
 public inline fun CfnProject.setServiceCatalogProvisionedProductDetails(
     block: CfnProjectServiceCatalogProvisionedProductDetailsPropertyDsl.() -> Unit = {}
 ) {
     val builder = CfnProjectServiceCatalogProvisionedProductDetailsPropertyDsl()
     builder.apply(block)
     return setServiceCatalogProvisionedProductDetails(builder.build())
+}
+
+/** The collection of ownership settings for a space. */
+public inline fun CfnSpace.setOwnershipSettings(
+    block: CfnSpaceOwnershipSettingsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnSpaceOwnershipSettingsPropertyDsl()
+    builder.apply(block)
+    return setOwnershipSettings(builder.build())
 }
 
 /** A collection of space settings. */
@@ -622,6 +681,15 @@ public inline fun CfnSpace.setSpaceSettings(
     val builder = CfnSpaceSpaceSettingsPropertyDsl()
     builder.apply(block)
     return setSpaceSettings(builder.build())
+}
+
+/** A collection of space sharing settings. */
+public inline fun CfnSpace.setSpaceSharingSettings(
+    block: CfnSpaceSpaceSharingSettingsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnSpaceSpaceSharingSettingsPropertyDsl()
+    builder.apply(block)
+    return setSpaceSharingSettings(builder.build())
 }
 
 /** A collection of settings that apply to users of Amazon SageMaker Studio. */

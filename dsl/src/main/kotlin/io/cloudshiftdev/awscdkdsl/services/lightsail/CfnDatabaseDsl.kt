@@ -91,6 +91,9 @@ public class CfnDatabaseDsl(
     /**
      * A Boolean value indicating whether automated backup retention is enabled for the database.
      *
+     * Data Import Mode is enabled when `BackupRetention` is set to `false` , and is disabled when
+     * `BackupRetention` is set to `true` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-database.html#cfn-lightsail-database-backupretention)
      *
      * @param backupRetention A Boolean value indicating whether automated backup retention is
@@ -102,6 +105,9 @@ public class CfnDatabaseDsl(
 
     /**
      * A Boolean value indicating whether automated backup retention is enabled for the database.
+     *
+     * Data Import Mode is enabled when `BackupRetention` is set to `false` , and is disabled when
+     * `BackupRetention` is set to `true` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-database.html#cfn-lightsail-database-backupretention)
      *

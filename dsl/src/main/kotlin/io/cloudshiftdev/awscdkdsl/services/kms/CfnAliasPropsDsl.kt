@@ -49,12 +49,6 @@ public class CfnAliasPropsDsl {
      * `alias/aws/` . The `alias/aws/` prefix is reserved for
      * [AWS managed keys](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk)
      * .
-     *
-     * *Pattern* : `^alias/[a-zA-Z0-9/_-]+$`
-     *
-     * *Minimum* : `1`
-     *
-     * *Maximum* : `256`
      */
     public fun aliasName(aliasName: String) {
         cdkBuilder.aliasName(aliasName)

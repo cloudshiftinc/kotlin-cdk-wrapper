@@ -124,7 +124,7 @@ public class CfnInferenceSchedulerPropsDsl {
         cdkBuilder.inferenceSchedulerName(inferenceSchedulerName)
     }
 
-    /** @param modelName The name of the ML model used for the inference scheduler. */
+    /** @param modelName The name of the machine learning model used for the inference scheduler. */
     public fun modelName(modelName: String) {
         cdkBuilder.modelName(modelName)
     }

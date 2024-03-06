@@ -29,6 +29,7 @@ import software.amazon.awscdk.CfnStackSet
  * DeploymentTargetsProperty deploymentTargetsProperty = DeploymentTargetsProperty.builder()
  * .accountFilterType("accountFilterType")
  * .accounts(List.of("accounts"))
+ * .accountsUrl("accountsUrl")
  * .organizationalUnitIds(List.of("organizationalUnitIds"))
  * .build();
  * ```
@@ -76,6 +77,11 @@ public class CfnStackSetDeploymentTargetsPropertyDsl {
      */
     public fun accounts(accounts: Collection<String>) {
         _accounts.addAll(accounts)
+    }
+
+    /** @param accountsUrl Returns the value of the `AccountsUrl` property. */
+    public fun accountsUrl(accountsUrl: String) {
+        cdkBuilder.accountsUrl(accountsUrl)
     }
 
     /**

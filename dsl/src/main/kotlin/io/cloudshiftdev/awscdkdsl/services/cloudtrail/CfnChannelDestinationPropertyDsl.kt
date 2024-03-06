@@ -47,8 +47,8 @@ public class CfnChannelDestinationPropertyDsl {
 
     /**
      * @param type The type of destination for events arriving from a channel. For channels used for
-     *   a CloudTrail Lake integration, the value is `EventDataStore` . For service-linked channels,
-     *   the value is `AWS_SERVICE` .
+     *   a CloudTrail Lake integration, the value is `EVENT_DATA_STORE` . For service-linked
+     *   channels, the value is `AWS_SERVICE` .
      */
     public fun type(type: String) {
         cdkBuilder.type(type)

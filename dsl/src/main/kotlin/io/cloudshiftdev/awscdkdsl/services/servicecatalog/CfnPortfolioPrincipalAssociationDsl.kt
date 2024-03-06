@@ -80,13 +80,13 @@ public class CfnPortfolioPrincipalAssociationDsl(
     }
 
     /**
-     * The principal type. The supported value is `IAM` .
+     * The principal type.
      *
-     * *Allowed Values* : `IAM`
+     * The supported values are `IAM` and `IAM_PATTERN` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioprincipalassociation.html#cfn-servicecatalog-portfolioprincipalassociation-principaltype)
      *
-     * @param principalType The principal type. The supported value is `IAM` .
+     * @param principalType The principal type.
      */
     public fun principalType(principalType: String) {
         cdkBuilder.principalType(principalType)

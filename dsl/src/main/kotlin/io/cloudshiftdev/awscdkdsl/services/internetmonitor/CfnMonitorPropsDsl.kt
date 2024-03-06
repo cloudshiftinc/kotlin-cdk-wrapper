@@ -82,12 +82,56 @@ public class CfnMonitorPropsDsl {
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
-    /** @param healthEventsConfig the value to be set. */
+    /**
+     * @param healthEventsConfig A complex type with the configuration information that determines
+     *   the threshold and other conditions for when Internet Monitor creates a health event for an
+     *   overall performance or availability issue, across an application's geographies. Defines the
+     *   percentages, for overall performance scores and availability scores for an application,
+     *   that are the thresholds for when Amazon CloudWatch Internet Monitor creates a health event.
+     *   You can override the defaults to set a custom threshold for overall performance or
+     *   availability scores, or both.
+     *
+     * You can also set thresholds for local health scores,, where Internet Monitor creates a health
+     * event when scores cross a threshold for one or more city-networks, in addition to creating an
+     * event when an overall score crosses a threshold.
+     *
+     * If you don't set a health event threshold, the default value is 95%.
+     *
+     * For local thresholds, you also set a minimum percentage of overall traffic that is impacted
+     * by an issue before Internet Monitor creates an event. In addition, you can disable local
+     * thresholds, for performance scores, availability scores, or both.
+     *
+     * For more information, see
+     * [Change health event thresholds](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-overview.html#IMUpdateThresholdFromOverview)
+     * in the Internet Monitor section of the *CloudWatch User Guide* .
+     */
     public fun healthEventsConfig(healthEventsConfig: IResolvable) {
         cdkBuilder.healthEventsConfig(healthEventsConfig)
     }
 
-    /** @param healthEventsConfig the value to be set. */
+    /**
+     * @param healthEventsConfig A complex type with the configuration information that determines
+     *   the threshold and other conditions for when Internet Monitor creates a health event for an
+     *   overall performance or availability issue, across an application's geographies. Defines the
+     *   percentages, for overall performance scores and availability scores for an application,
+     *   that are the thresholds for when Amazon CloudWatch Internet Monitor creates a health event.
+     *   You can override the defaults to set a custom threshold for overall performance or
+     *   availability scores, or both.
+     *
+     * You can also set thresholds for local health scores,, where Internet Monitor creates a health
+     * event when scores cross a threshold for one or more city-networks, in addition to creating an
+     * event when an overall score crosses a threshold.
+     *
+     * If you don't set a health event threshold, the default value is 95%.
+     *
+     * For local thresholds, you also set a minimum percentage of overall traffic that is impacted
+     * by an issue before Internet Monitor creates an event. In addition, you can disable local
+     * thresholds, for performance scores, availability scores, or both.
+     *
+     * For more information, see
+     * [Change health event thresholds](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-overview.html#IMUpdateThresholdFromOverview)
+     * in the Internet Monitor section of the *CloudWatch User Guide* .
+     */
     public fun healthEventsConfig(healthEventsConfig: CfnMonitor.HealthEventsConfigProperty) {
         cdkBuilder.healthEventsConfig(healthEventsConfig)
     }
@@ -140,7 +184,10 @@ public class CfnMonitorPropsDsl {
 
     /**
      * @param resources The resources that have been added for the monitor, listed by their Amazon
-     *   Resource Names (ARNs).
+     *   Resource Names (ARNs). Use this option to add or remove resources when making an update.
+     *
+     * Be aware that if you include content in the `Resources` field when you update a monitor, the
+     * `ResourcesToAdd` and `ResourcesToRemove` fields must be empty.
      */
     public fun resources(vararg resources: String) {
         _resources.addAll(listOf(*resources))
@@ -148,7 +195,10 @@ public class CfnMonitorPropsDsl {
 
     /**
      * @param resources The resources that have been added for the monitor, listed by their Amazon
-     *   Resource Names (ARNs).
+     *   Resource Names (ARNs). Use this option to add or remove resources when making an update.
+     *
+     * Be aware that if you include content in the `Resources` field when you update a monitor, the
+     * `ResourcesToAdd` and `ResourcesToRemove` fields must be empty.
      */
     public fun resources(resources: Collection<String>) {
         _resources.addAll(resources)
@@ -165,6 +215,8 @@ public class CfnMonitorPropsDsl {
      *
      * If you add only VPC resources, at least one VPC must have an Internet Gateway attached to it,
      * to make sure that it has internet connectivity.
+     *
+     * You can specify this field for a monitor update only if the `Resources` field is empty.
      */
     public fun resourcesToAdd(vararg resourcesToAdd: String) {
         _resourcesToAdd.addAll(listOf(*resourcesToAdd))
@@ -181,6 +233,8 @@ public class CfnMonitorPropsDsl {
      *
      * If you add only VPC resources, at least one VPC must have an Internet Gateway attached to it,
      * to make sure that it has internet connectivity.
+     *
+     * You can specify this field for a monitor update only if the `Resources` field is empty.
      */
     public fun resourcesToAdd(resourcesToAdd: Collection<String>) {
         _resourcesToAdd.addAll(resourcesToAdd)
@@ -189,6 +243,8 @@ public class CfnMonitorPropsDsl {
     /**
      * @param resourcesToRemove The resources to remove from a monitor, which you provide as a set
      *   of Amazon Resource Names (ARNs).
+     *
+     * You can specify this field for a monitor update only if the `Resources` field is empty.
      */
     public fun resourcesToRemove(vararg resourcesToRemove: String) {
         _resourcesToRemove.addAll(listOf(*resourcesToRemove))
@@ -197,6 +253,8 @@ public class CfnMonitorPropsDsl {
     /**
      * @param resourcesToRemove The resources to remove from a monitor, which you provide as a set
      *   of Amazon Resource Names (ARNs).
+     *
+     * You can specify this field for a monitor update only if the `Resources` field is empty.
      */
     public fun resourcesToRemove(resourcesToRemove: Collection<String>) {
         _resourcesToRemove.addAll(resourcesToRemove)

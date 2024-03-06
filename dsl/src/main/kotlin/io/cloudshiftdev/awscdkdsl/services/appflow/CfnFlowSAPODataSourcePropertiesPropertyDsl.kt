@@ -13,6 +13,7 @@ package io.cloudshiftdev.awscdkdsl.services.appflow
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.String
+import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appflow.CfnFlow
 
 /**
@@ -26,6 +27,13 @@ import software.amazon.awscdk.services.appflow.CfnFlow
  * SAPODataSourcePropertiesProperty sAPODataSourcePropertiesProperty =
  * SAPODataSourcePropertiesProperty.builder()
  * .objectPath("objectPath")
+ * // the properties below are optional
+ * .paginationConfig(SAPODataPaginationConfigProperty.builder()
+ * .maxPageSize(123)
+ * .build())
+ * .parallelismConfig(SAPODataParallelismConfigProperty.builder()
+ * .maxParallelism(123)
+ * .build())
  * .build();
  * ```
  *
@@ -39,6 +47,26 @@ public class CfnFlowSAPODataSourcePropertiesPropertyDsl {
     /** @param objectPath The object path specified in the SAPOData flow source. */
     public fun objectPath(objectPath: String) {
         cdkBuilder.objectPath(objectPath)
+    }
+
+    /** @param paginationConfig SAP Source connector page size. */
+    public fun paginationConfig(paginationConfig: IResolvable) {
+        cdkBuilder.paginationConfig(paginationConfig)
+    }
+
+    /** @param paginationConfig SAP Source connector page size. */
+    public fun paginationConfig(paginationConfig: CfnFlow.SAPODataPaginationConfigProperty) {
+        cdkBuilder.paginationConfig(paginationConfig)
+    }
+
+    /** @param parallelismConfig SAP Source connector parallelism factor. */
+    public fun parallelismConfig(parallelismConfig: IResolvable) {
+        cdkBuilder.parallelismConfig(parallelismConfig)
+    }
+
+    /** @param parallelismConfig SAP Source connector parallelism factor. */
+    public fun parallelismConfig(parallelismConfig: CfnFlow.SAPODataParallelismConfigProperty) {
+        cdkBuilder.parallelismConfig(parallelismConfig)
     }
 
     public fun build(): CfnFlow.SAPODataSourcePropertiesProperty = cdkBuilder.build()

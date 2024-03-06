@@ -68,7 +68,7 @@ public class CfnRepositoryPropsDsl {
 
     /**
      * @param emptyOnDelete If true, deleting the repository force deletes the contents of the
-     *   repository. Without a force delete, you can only delete empty repositories.
+     *   repository. If false, the repository must be empty before attempting to delete it.
      */
     public fun emptyOnDelete(emptyOnDelete: Boolean) {
         cdkBuilder.emptyOnDelete(emptyOnDelete)
@@ -76,7 +76,7 @@ public class CfnRepositoryPropsDsl {
 
     /**
      * @param emptyOnDelete If true, deleting the repository force deletes the contents of the
-     *   repository. Without a force delete, you can only delete empty repositories.
+     *   repository. If false, the repository must be empty before attempting to delete it.
      */
     public fun emptyOnDelete(emptyOnDelete: IResolvable) {
         cdkBuilder.emptyOnDelete(emptyOnDelete)

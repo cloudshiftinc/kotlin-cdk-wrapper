@@ -34,6 +34,7 @@ import software.amazon.awscdk.services.applicationinsights.CfnApplicationProps
  * CfnApplicationProps cfnApplicationProps = CfnApplicationProps.builder()
  * .resourceGroupName("resourceGroupName")
  * // the properties below are optional
+ * .attachMissingPermission(false)
  * .autoConfigurationEnabled(false)
  * .componentMonitoringSettings(List.of(ComponentMonitoringSettingProperty.builder()
  * .componentConfigurationMode("componentConfigurationMode")
@@ -210,6 +211,22 @@ public class CfnApplicationPropsDsl {
     private val _logPatternSets: MutableList<Any> = mutableListOf()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
+
+    /**
+     * @param attachMissingPermission If set to true, the managed policies for SSM and CW will be
+     *   attached to the instance roles if they are missing.
+     */
+    public fun attachMissingPermission(attachMissingPermission: Boolean) {
+        cdkBuilder.attachMissingPermission(attachMissingPermission)
+    }
+
+    /**
+     * @param attachMissingPermission If set to true, the managed policies for SSM and CW will be
+     *   attached to the instance roles if they are missing.
+     */
+    public fun attachMissingPermission(attachMissingPermission: IResolvable) {
+        cdkBuilder.attachMissingPermission(attachMissingPermission)
+    }
 
     /**
      * @param autoConfigurationEnabled If set to `true` , the application components will be

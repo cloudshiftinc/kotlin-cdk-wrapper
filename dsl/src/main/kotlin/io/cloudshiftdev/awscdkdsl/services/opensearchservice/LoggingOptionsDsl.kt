@@ -21,19 +21,18 @@ import software.amazon.awscdk.services.opensearchservice.LoggingOptions
  *
  * Example:
  * ```
- * Domain prodDomain = Domain.Builder.create(this, "Domain")
+ * Domain domain = Domain.Builder.create(this, "Domain")
  * .version(EngineVersion.OPENSEARCH_1_0)
- * .capacity(CapacityConfig.builder()
- * .masterNodes(5)
- * .dataNodes(20)
+ * .enforceHttps(true)
+ * .nodeToNodeEncryption(true)
+ * .encryptionAtRest(EncryptionAtRestOptions.builder()
+ * .enabled(true)
  * .build())
- * .ebs(EbsOptions.builder()
- * .volumeSize(20)
- * .build())
- * .zoneAwareness(ZoneAwarenessConfig.builder()
- * .availabilityZoneCount(3)
+ * .fineGrainedAccessControl(AdvancedSecurityOptions.builder()
+ * .masterUserName("master-user")
  * .build())
  * .logging(LoggingOptions.builder()
+ * .auditLogEnabled(true)
  * .slowSearchLogEnabled(true)
  * .appLogEnabled(true)
  * .slowIndexLogEnabled(true)
@@ -47,7 +46,8 @@ public class LoggingOptionsDsl {
 
     /**
      * @param appLogEnabled Specify if Amazon OpenSearch Service application logging should be set
-     *   up. Requires Elasticsearch version 5.1 or later or OpenSearch version 1.0 or later.
+     *   up. Requires Elasticsearch version 5.1 or later or OpenSearch version 1.0 or later. An
+     *   explicit `false` is required when disabling it from `true`.
      */
     public fun appLogEnabled(appLogEnabled: Boolean) {
         cdkBuilder.appLogEnabled(appLogEnabled)
@@ -74,7 +74,8 @@ public class LoggingOptionsDsl {
 
     /**
      * @param slowIndexLogEnabled Specify if slow index logging should be set up. Requires
-     *   Elasticsearch version 5.1 or later or OpenSearch version 1.0 or later.
+     *   Elasticsearch version 5.1 or later or OpenSearch version 1.0 or later. An explicit `false`
+     *   is required when disabling it from `true`.
      */
     public fun slowIndexLogEnabled(slowIndexLogEnabled: Boolean) {
         cdkBuilder.slowIndexLogEnabled(slowIndexLogEnabled)
@@ -87,7 +88,8 @@ public class LoggingOptionsDsl {
 
     /**
      * @param slowSearchLogEnabled Specify if slow search logging should be set up. Requires
-     *   Elasticsearch version 5.1 or later or OpenSearch version 1.0 or later.
+     *   Elasticsearch version 5.1 or later or OpenSearch version 1.0 or later. An explicit `false`
+     *   is required when disabling it from `true`.
      */
     public fun slowSearchLogEnabled(slowSearchLogEnabled: Boolean) {
         cdkBuilder.slowSearchLogEnabled(slowSearchLogEnabled)

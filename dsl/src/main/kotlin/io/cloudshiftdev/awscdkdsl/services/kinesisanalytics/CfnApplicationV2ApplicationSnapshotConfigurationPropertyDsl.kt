@@ -17,7 +17,7 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2
 
 /**
- * Describes whether snapshots are enabled for a Flink-based Kinesis Data Analytics application.
+ * Describes whether snapshots are enabled for a Managed Service for Apache Flink application.
  *
  * Example:
  * ```
@@ -38,16 +38,16 @@ public class CfnApplicationV2ApplicationSnapshotConfigurationPropertyDsl {
         CfnApplicationV2.ApplicationSnapshotConfigurationProperty.builder()
 
     /**
-     * @param snapshotsEnabled Describes whether snapshots are enabled for a Flink-based Kinesis
-     *   Data Analytics application.
+     * @param snapshotsEnabled Describes whether snapshots are enabled for a Managed Service for
+     *   Apache Flink application.
      */
     public fun snapshotsEnabled(snapshotsEnabled: Boolean) {
         cdkBuilder.snapshotsEnabled(snapshotsEnabled)
     }
 
     /**
-     * @param snapshotsEnabled Describes whether snapshots are enabled for a Flink-based Kinesis
-     *   Data Analytics application.
+     * @param snapshotsEnabled Describes whether snapshots are enabled for a Managed Service for
+     *   Apache Flink application.
      */
     public fun snapshotsEnabled(snapshotsEnabled: IResolvable) {
         cdkBuilder.snapshotsEnabled(snapshotsEnabled)

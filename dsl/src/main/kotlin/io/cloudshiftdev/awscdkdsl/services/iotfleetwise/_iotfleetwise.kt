@@ -505,6 +505,15 @@ public object iotfleetwise {
     }
 
     /**
+     * Represents a node and its specifications in an in-vehicle communication network.
+     *
+     * All signal decoders must be associated with a network node.
+     *
+     * To return this information about all the network interfaces specified in a decoder manifest,
+     * use the
+     * [ListDecoderManifestNetworkInterfaces](https://docs.aws.amazon.com/iot-fleetwise/latest/APIReference/API_ListDecoderManifestNetworkInterfaces.html)
+     * in the *AWS IoT FleetWise API Reference* .
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -533,6 +542,8 @@ public object iotfleetwise {
     }
 
     /**
+     * Information about signal decoder using the Controller Area Network (CAN) protocol.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -671,6 +682,8 @@ public object iotfleetwise {
     }
 
     /**
+     * Information about a network interface specified by the On-board diagnostic (OBD) II protocol.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -703,6 +716,8 @@ public object iotfleetwise {
     }
 
     /**
+     * A list of information about signal decoders.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.

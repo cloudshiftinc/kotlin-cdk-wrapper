@@ -37,7 +37,7 @@ public inline fun CfnBuild.setStorageLocation(
     return setStorageLocation(builder.build())
 }
 
-/** Configuration for Anywhere fleet. */
+/** Amazon GameLift Anywhere configuration options. */
 public inline fun CfnFleet.setAnywhereConfiguration(
     block: CfnFleetAnywhereConfigurationPropertyDsl.() -> Unit = {}
 ) {

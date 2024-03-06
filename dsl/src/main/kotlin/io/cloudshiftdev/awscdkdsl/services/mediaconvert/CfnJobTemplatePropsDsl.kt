@@ -126,7 +126,7 @@ public class CfnJobTemplatePropsDsl {
         cdkBuilder.hopDestinations(hopDestinations)
     }
 
-    /** @param name The name of the job template you are creating. */
+    /** @param name Name of the output group. */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }

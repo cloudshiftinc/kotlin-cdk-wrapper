@@ -36,6 +36,7 @@ import software.amazon.awscdk.services.stepfunctions.tasks.EncryptionOption
  * .objectKey("folder")
  * .build())
  * .build())
+ * .executionParameters(List.of("param1", "param2"))
  * .build();
  * ```
  *

@@ -90,6 +90,7 @@ import software.amazon.awscdk.services.ec2.CfnSpotFleet
  * .instanceGenerations(List.of("instanceGenerations"))
  * .localStorage("localStorage")
  * .localStorageTypes(List.of("localStorageTypes"))
+ * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
  * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
  * .max(123)
  * .min(123)
@@ -197,6 +198,7 @@ import software.amazon.awscdk.services.ec2.CfnSpotFleet
  * .instanceGenerations(List.of("instanceGenerations"))
  * .localStorage("localStorage")
  * .localStorageTypes(List.of("localStorageTypes"))
+ * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
  * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
  * .max(123)
  * .min(123)
@@ -467,6 +469,14 @@ public class CfnSpotFleetSpotFleetRequestConfigDataPropertyDsl {
      *   request, Spot Fleet will launch instances until it reaches the maximum amount you're
      *   willing to pay. When the maximum amount you're willing to pay is reached, the fleet stops
      *   launching instances even if it hasn’t met the target capacity.
+     *
+     * If your fleet includes T instances that are configured as `unlimited` , and if their average
+     * CPU usage exceeds the baseline utilization, you will incur a charge for surplus credits. The
+     * `onDemandMaxTotalPrice` does not account for surplus credits, and, if you use surplus
+     * credits, your final cost might be higher than what you specified for `onDemandMaxTotalPrice`
+     * . For more information, see
+     * [Surplus credits can incur charges](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits)
+     * in the *EC2 User Guide* .
      */
     public fun onDemandMaxTotalPrice(onDemandMaxTotalPrice: String) {
         cdkBuilder.onDemandMaxTotalPrice(onDemandMaxTotalPrice)
@@ -518,12 +528,20 @@ public class CfnSpotFleetSpotFleetRequestConfigDataPropertyDsl {
 
     /**
      * @param spotMaxTotalPrice The maximum amount per hour for Spot Instances that you're willing
-     *   to pay. You can use the `spotdMaxTotalPrice` parameter, the `onDemandMaxTotalPrice`
+     *   to pay. You can use the `spotMaxTotalPrice` parameter, the `onDemandMaxTotalPrice`
      *   parameter, or both parameters to ensure that your fleet cost does not exceed your budget.
      *   If you set a maximum price per hour for the On-Demand Instances and Spot Instances in your
      *   request, Spot Fleet will launch instances until it reaches the maximum amount you're
      *   willing to pay. When the maximum amount you're willing to pay is reached, the fleet stops
      *   launching instances even if it hasn’t met the target capacity.
+     *
+     * If your fleet includes T instances that are configured as `unlimited` , and if their average
+     * CPU usage exceeds the baseline utilization, you will incur a charge for surplus credits. The
+     * `spotMaxTotalPrice` does not account for surplus credits, and, if you use surplus credits,
+     * your final cost might be higher than what you specified for `spotMaxTotalPrice` . For more
+     * information, see
+     * [Surplus credits can incur charges](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits)
+     * in the *EC2 User Guide* .
      */
     public fun spotMaxTotalPrice(spotMaxTotalPrice: String) {
         cdkBuilder.spotMaxTotalPrice(spotMaxTotalPrice)
@@ -550,7 +568,7 @@ public class CfnSpotFleetSpotFleetRequestConfigDataPropertyDsl {
      *   `[SpotFleetTagSpecification](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SpotFleetTagSpecification.html)`
      *   (valid only if you use `LaunchSpecifications` ). For information about tagging after
      *   launch, see
-     *   [Tagging Your Resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)
+     *   [Tag your resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)
      *   .
      */
     public fun tagSpecifications(vararg tagSpecifications: Any) {
@@ -566,7 +584,7 @@ public class CfnSpotFleetSpotFleetRequestConfigDataPropertyDsl {
      *   `[SpotFleetTagSpecification](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SpotFleetTagSpecification.html)`
      *   (valid only if you use `LaunchSpecifications` ). For information about tagging after
      *   launch, see
-     *   [Tagging Your Resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)
+     *   [Tag your resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)
      *   .
      */
     public fun tagSpecifications(tagSpecifications: Collection<Any>) {
@@ -582,7 +600,7 @@ public class CfnSpotFleetSpotFleetRequestConfigDataPropertyDsl {
      *   `[SpotFleetTagSpecification](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SpotFleetTagSpecification.html)`
      *   (valid only if you use `LaunchSpecifications` ). For information about tagging after
      *   launch, see
-     *   [Tagging Your Resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)
+     *   [Tag your resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)
      *   .
      */
     public fun tagSpecifications(tagSpecifications: IResolvable) {
@@ -600,8 +618,8 @@ public class CfnSpotFleetSpotFleetRequestConfigDataPropertyDsl {
     }
 
     /**
-     * @param targetCapacityUnitType The unit for the target capacity. `TargetCapacityUnitType` can
-     *   only be specified when `InstanceRequirements` is specified. Default: `units` (translates to
+     * @param targetCapacityUnitType The unit for the target capacity. You can specify this
+     *   parameter only when using attribute-based instance type selection. Default: `units` (the
      *   number of instances)
      */
     public fun targetCapacityUnitType(targetCapacityUnitType: String) {

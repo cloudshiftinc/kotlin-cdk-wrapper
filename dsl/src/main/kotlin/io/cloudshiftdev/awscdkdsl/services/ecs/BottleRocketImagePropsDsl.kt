@@ -22,15 +22,13 @@ import software.amazon.awscdk.services.ecs.BottlerocketEcsVariant
  *
  * Example:
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import software.amazon.awscdk.services.ec2.*;
- * import software.amazon.awscdk.services.ecs.*;
- * BottleRocketImageProps bottleRocketImageProps = BottleRocketImageProps.builder()
- * .architecture(InstanceArchitecture.ARM_64)
- * .cachedInContext(false)
- * .variant(BottlerocketEcsVariant.AWS_ECS_1)
- * .build();
+ * Cluster cluster;
+ * cluster.addCapacity("bottlerocket-asg", AddCapacityOptions.builder()
+ * .instanceType(new InstanceType("p3.2xlarge"))
+ * .machineImage(BottleRocketImage.Builder.create()
+ * .variant(BottlerocketEcsVariant.AWS_ECS_2_NVIDIA)
+ * .build())
+ * .build());
  * ```
  */
 @CdkDslMarker
@@ -60,7 +58,7 @@ public class BottleRocketImagePropsDsl {
         cdkBuilder.cachedInContext(cachedInContext)
     }
 
-    /** @param variant The Amazon ECS variant to use. Only `aws-ecs-1` is currently available */
+    /** @param variant The Amazon ECS variant to use. */
     public fun variant(variant: BottlerocketEcsVariant) {
         cdkBuilder.variant(variant)
     }

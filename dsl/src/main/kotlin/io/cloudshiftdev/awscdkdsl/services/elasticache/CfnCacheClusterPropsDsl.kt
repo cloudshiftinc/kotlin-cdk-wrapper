@@ -237,17 +237,17 @@ public class CfnCacheClusterPropsDsl {
      *
      * If you're going to launch your cluster in an Amazon VPC, you need to create a subnet group
      * before you start creating a cluster. For more information, see
-     * [AWS::ElastiCache::SubnetGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-subnetgroup.html)
-     * .
+     * `[AWS::ElastiCache::SubnetGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-subnetgroup.html)
+     * .`
      */
     public fun cacheSubnetGroupName(cacheSubnetGroupName: String) {
         cdkBuilder.cacheSubnetGroupName(cacheSubnetGroupName)
     }
 
     /**
-     * @param clusterName A name for the cache cluster. If you don't specify a name,
-     *   AWSCloudFormation generates a unique physical ID and uses that ID for the cache cluster.
-     *   For more information, see
+     * @param clusterName A name for the cache cluster. If you don't specify a name, AWS
+     *   CloudFormation generates a unique physical ID and uses that ID for the cache cluster. For
+     *   more information, see
      *   [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)
      *   .
      *
@@ -396,12 +396,7 @@ public class CfnCacheClusterPropsDsl {
     /**
      * @param preferredMaintenanceWindow Specifies the weekly time range during which maintenance on
      *   the cluster is performed. It is specified as a range in the format ddd:hh24:mi-ddd:hh24:mi
-     *   (24H Clock UTC). The minimum maintenance window is a 60 minute period. Valid values for
-     *   `ddd` are:
-     *
-     * Specifies the weekly time range during which maintenance on the cluster is performed. It is
-     * specified as a range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum
-     * maintenance window is a 60 minute period.
+     *   (24H Clock UTC). The minimum maintenance window is a 60 minute period.
      *
      * Valid values for `ddd` are:
      * * `sun`

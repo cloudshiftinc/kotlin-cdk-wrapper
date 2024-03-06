@@ -77,82 +77,97 @@ public class CfnDeploymentGroupLoadBalancerInfoPropertyDsl {
     private val _targetGroupPairInfoList: MutableList<Any> = mutableListOf()
 
     /**
-     * @param elbInfoList An array that contains information about the load balancer to use for load
-     *   balancing in a deployment. In Elastic Load Balancing, load balancers are used with Classic
-     *   Load Balancers.
+     * @param elbInfoList An array that contains information about the load balancers to use for
+     *   load balancing in a deployment. If you're using Classic Load Balancers, specify those load
+     *   balancers in this array.
      *
-     * Adding more than one load balancer to the array is not supported.
+     * You can add up to 10 load balancers to the array. &gt; If you're using Application Load
+     * Balancers or Network Load Balancers, use the `targetGroupInfoList` array instead of this one.
      */
     public fun elbInfoList(vararg elbInfoList: Any) {
         _elbInfoList.addAll(listOf(*elbInfoList))
     }
 
     /**
-     * @param elbInfoList An array that contains information about the load balancer to use for load
-     *   balancing in a deployment. In Elastic Load Balancing, load balancers are used with Classic
-     *   Load Balancers.
+     * @param elbInfoList An array that contains information about the load balancers to use for
+     *   load balancing in a deployment. If you're using Classic Load Balancers, specify those load
+     *   balancers in this array.
      *
-     * Adding more than one load balancer to the array is not supported.
+     * You can add up to 10 load balancers to the array. &gt; If you're using Application Load
+     * Balancers or Network Load Balancers, use the `targetGroupInfoList` array instead of this one.
      */
     public fun elbInfoList(elbInfoList: Collection<Any>) {
         _elbInfoList.addAll(elbInfoList)
     }
 
     /**
-     * @param elbInfoList An array that contains information about the load balancer to use for load
-     *   balancing in a deployment. In Elastic Load Balancing, load balancers are used with Classic
-     *   Load Balancers.
+     * @param elbInfoList An array that contains information about the load balancers to use for
+     *   load balancing in a deployment. If you're using Classic Load Balancers, specify those load
+     *   balancers in this array.
      *
-     * Adding more than one load balancer to the array is not supported.
+     * You can add up to 10 load balancers to the array. &gt; If you're using Application Load
+     * Balancers or Network Load Balancers, use the `targetGroupInfoList` array instead of this one.
      */
     public fun elbInfoList(elbInfoList: IResolvable) {
         cdkBuilder.elbInfoList(elbInfoList)
     }
 
     /**
-     * @param targetGroupInfoList An array that contains information about the target group to use
-     *   for load balancing in a deployment. In Elastic Load Balancing , target groups are used with
-     *   Application Load Balancers .
+     * @param targetGroupInfoList An array that contains information about the target groups to use
+     *   for load balancing in a deployment. If you're using Application Load Balancers and Network
+     *   Load Balancers, specify their associated target groups in this array.
      *
-     * Adding more than one target group to the array is not supported.
+     * You can add up to 10 target groups to the array. &gt; If you're using Classic Load Balancers,
+     * use the `elbInfoList` array instead of this one.
      */
     public fun targetGroupInfoList(vararg targetGroupInfoList: Any) {
         _targetGroupInfoList.addAll(listOf(*targetGroupInfoList))
     }
 
     /**
-     * @param targetGroupInfoList An array that contains information about the target group to use
-     *   for load balancing in a deployment. In Elastic Load Balancing , target groups are used with
-     *   Application Load Balancers .
+     * @param targetGroupInfoList An array that contains information about the target groups to use
+     *   for load balancing in a deployment. If you're using Application Load Balancers and Network
+     *   Load Balancers, specify their associated target groups in this array.
      *
-     * Adding more than one target group to the array is not supported.
+     * You can add up to 10 target groups to the array. &gt; If you're using Classic Load Balancers,
+     * use the `elbInfoList` array instead of this one.
      */
     public fun targetGroupInfoList(targetGroupInfoList: Collection<Any>) {
         _targetGroupInfoList.addAll(targetGroupInfoList)
     }
 
     /**
-     * @param targetGroupInfoList An array that contains information about the target group to use
-     *   for load balancing in a deployment. In Elastic Load Balancing , target groups are used with
-     *   Application Load Balancers .
+     * @param targetGroupInfoList An array that contains information about the target groups to use
+     *   for load balancing in a deployment. If you're using Application Load Balancers and Network
+     *   Load Balancers, specify their associated target groups in this array.
      *
-     * Adding more than one target group to the array is not supported.
+     * You can add up to 10 target groups to the array. &gt; If you're using Classic Load Balancers,
+     * use the `elbInfoList` array instead of this one.
      */
     public fun targetGroupInfoList(targetGroupInfoList: IResolvable) {
         cdkBuilder.targetGroupInfoList(targetGroupInfoList)
     }
 
-    /** @param targetGroupPairInfoList the value to be set. */
+    /**
+     * @param targetGroupPairInfoList The target group pair information. This is an array of
+     *   `TargeGroupPairInfo` objects with a maximum size of one.
+     */
     public fun targetGroupPairInfoList(vararg targetGroupPairInfoList: Any) {
         _targetGroupPairInfoList.addAll(listOf(*targetGroupPairInfoList))
     }
 
-    /** @param targetGroupPairInfoList the value to be set. */
+    /**
+     * @param targetGroupPairInfoList The target group pair information. This is an array of
+     *   `TargeGroupPairInfo` objects with a maximum size of one.
+     */
     public fun targetGroupPairInfoList(targetGroupPairInfoList: Collection<Any>) {
         _targetGroupPairInfoList.addAll(targetGroupPairInfoList)
     }
 
-    /** @param targetGroupPairInfoList the value to be set. */
+    /**
+     * @param targetGroupPairInfoList The target group pair information. This is an array of
+     *   `TargeGroupPairInfo` objects with a maximum size of one.
+     */
     public fun targetGroupPairInfoList(targetGroupPairInfoList: IResolvable) {
         cdkBuilder.targetGroupPairInfoList(targetGroupPairInfoList)
     }

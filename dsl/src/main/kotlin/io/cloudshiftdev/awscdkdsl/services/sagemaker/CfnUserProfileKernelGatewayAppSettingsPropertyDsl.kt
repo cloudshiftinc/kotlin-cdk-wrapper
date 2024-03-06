@@ -80,8 +80,8 @@ public class CfnUserProfileKernelGatewayAppSettingsPropertyDsl {
      *   the default SageMaker image used by the KernelGateway app.
      *
      * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
-     * default instance type set here is used when Apps are created using the AWS Command Line
-     * Interface or AWS CloudFormation and the instance type parameter value is not passed.
+     * default instance type set here is used when Apps are created using the AWS CLI or AWS
+     * CloudFormation and the instance type parameter value is not passed.
      */
     public fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec)
@@ -92,8 +92,8 @@ public class CfnUserProfileKernelGatewayAppSettingsPropertyDsl {
      *   the default SageMaker image used by the KernelGateway app.
      *
      * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
-     * default instance type set here is used when Apps are created using the AWS Command Line
-     * Interface or AWS CloudFormation and the instance type parameter value is not passed.
+     * default instance type set here is used when Apps are created using the AWS CLI or AWS
+     * CloudFormation and the instance type parameter value is not passed.
      */
     public fun defaultResourceSpec(defaultResourceSpec: CfnUserProfile.ResourceSpecProperty) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec)

@@ -18,6 +18,12 @@ import software.amazon.awscdk.services.cassandra.CfnTable
 /**
  * The name and data type of an individual column in a table.
  *
+ * In addition to the data type, you can also use the following two keywords:
+ * * `STATIC` if the table has a clustering column. Static columns store values that are shared by
+ *   all rows in the same partition.
+ * * `FROZEN` for collection data types. In frozen collections the values of the collection are
+ *   serialized into a single immutable value, and Amazon Keyspaces treats them like a `BLOB` .
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.

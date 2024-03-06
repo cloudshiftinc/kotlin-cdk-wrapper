@@ -148,7 +148,7 @@ public object greengrass {
      * protocols, AWS , and other cloud services.
      *
      * For more information, see
-     * [Integrate with Services and Protocols Using Greengrass Connectors](https://docs.aws.amazon.com/greengrass/latest/developerguide/connectors.html)
+     * [Integrate with Services and Protocols Using Greengrass Connectors](https://docs.aws.amazon.com/greengrass/v1/developerguide/connectors.html)
      * in the *Developer Guide* .
      *
      * In an AWS CloudFormation template, the `Connectors` property of the
@@ -266,7 +266,7 @@ public object greengrass {
      * protocols, AWS , and other cloud services.
      *
      * For more information, see
-     * [Integrate with Services and Protocols Using Greengrass Connectors](https://docs.aws.amazon.com/greengrass/latest/developerguide/connectors.html)
+     * [Integrate with Services and Protocols Using Greengrass Connectors](https://docs.aws.amazon.com/greengrass/v1/developerguide/connectors.html)
      * in the *Developer Guide* .
      *
      * In an AWS CloudFormation template, the `Connectors` property of the
@@ -430,7 +430,7 @@ public object greengrass {
      * processes for a Greengrass group.
      *
      * For more information, see
-     * [What Is AWS IoT Greengrass ?](https://docs.aws.amazon.com/greengrass/latest/developerguide/what-is-gg.html)
+     * [What Is AWS IoT Greengrass ?](https://docs.aws.amazon.com/greengrass/v1/developerguide/what-is-gg.html)
      * in the *Developer Guide* .
      *
      * In an AWS CloudFormation template, the `Cores` property of the
@@ -548,7 +548,7 @@ public object greengrass {
      * processes for a Greengrass group.
      *
      * For more information, see
-     * [What Is AWS IoT Greengrass ?](https://docs.aws.amazon.com/greengrass/latest/developerguide/what-is-gg.html)
+     * [What Is AWS IoT Greengrass ?](https://docs.aws.amazon.com/greengrass/v1/developerguide/what-is-gg.html)
      * in the *Developer Guide* .
      *
      * In an AWS CloudFormation template, the `Cores` property of the
@@ -713,7 +713,7 @@ public object greengrass {
      *
      * Greengrass devices can communicate with the Greengrass core in the same group. For more
      * information, see
-     * [What Is AWS IoT Greengrass ?](https://docs.aws.amazon.com/greengrass/latest/developerguide/what-is-gg.html)
+     * [What Is AWS IoT Greengrass ?](https://docs.aws.amazon.com/greengrass/v1/developerguide/what-is-gg.html)
      * in the *Developer Guide* .
      *
      * In an AWS CloudFormation template, the `Devices` property of the
@@ -831,7 +831,7 @@ public object greengrass {
      *
      * Greengrass devices can communicate with the Greengrass core in the same group. For more
      * information, see
-     * [What Is AWS IoT Greengrass ?](https://docs.aws.amazon.com/greengrass/latest/developerguide/what-is-gg.html)
+     * [What Is AWS IoT Greengrass ?](https://docs.aws.amazon.com/greengrass/v1/developerguide/what-is-gg.html)
      * in the *Developer Guide* .
      *
      * In an AWS CloudFormation template, the `Devices` property of the
@@ -1095,7 +1095,7 @@ public object greengrass {
      *
      * These settings configure the function's behavior in the Greengrass group. For more
      * information, see
-     * [Controlling Execution of Greengrass Lambda Functions by Using Group-Specific Configuration](https://docs.aws.amazon.com/greengrass/latest/developerguide/lambda-group-config.html)
+     * [Controlling Execution of Greengrass Lambda Functions by Using Group-Specific Configuration](https://docs.aws.amazon.com/greengrass/v1/developerguide/lambda-group-config.html)
      * in the *Developer Guide* .
      *
      * In an AWS CloudFormation template, `FunctionConfiguration` is a property of the
@@ -1222,7 +1222,7 @@ public object greengrass {
      *
      * The function is deployed to a Greengrass core where it runs locally. For more information,
      * see
-     * [Run Lambda Functions on the AWS IoT Greengrass Core](https://docs.aws.amazon.com/greengrass/latest/developerguide/lambda-functions.html)
+     * [Run Lambda Functions on the AWS IoT Greengrass Core](https://docs.aws.amazon.com/greengrass/v1/developerguide/lambda-functions.html)
      * in the *Developer Guide* .
      *
      * In an AWS CloudFormation template, the `Functions` property of the
@@ -1383,12 +1383,12 @@ public object greengrass {
      * This setting overrides the default access identity that's specified for the group (by
      * default, ggc_user and ggc_group). You can override the user, group, or both. For more
      * information, see
-     * [Run as](https://docs.aws.amazon.com/greengrass/latest/developerguide/lambda-group-config.html#lambda-access-identity.html)
+     * [Run as](https://docs.aws.amazon.com/greengrass/v1/developerguide/lambda-group-config.html#lambda-access-identity.html)
      * in the *Developer Guide* .
      *
      * Running as the root user increases risks to your data and device. Do not run as root
      * (UID/GID=0) unless your business case requires it. For more information and requirements, see
-     * [Running a Lambda Function as Root](https://docs.aws.amazon.com/greengrass/latest/developerguide/lambda-group-config.html#lambda-running-as-root)
+     * [Running a Lambda Function as Root](https://docs.aws.amazon.com/greengrass/v1/developerguide/lambda-group-config.html#lambda-running-as-root)
      * .
      *
      * In an AWS CloudFormation template, `RunAs` is a property of the
@@ -1610,7 +1610,7 @@ public object greengrass {
      *
      * These settings configure the function's behavior in the Greengrass group. For more
      * information, see
-     * [Controlling Execution of Greengrass Lambda Functions by Using Group-Specific Configuration](https://docs.aws.amazon.com/greengrass/latest/developerguide/lambda-group-config.html)
+     * [Controlling Execution of Greengrass Lambda Functions by Using Group-Specific Configuration](https://docs.aws.amazon.com/greengrass/v1/developerguide/lambda-group-config.html)
      * in the *Developer Guide* .
      *
      * In an AWS CloudFormation template, `FunctionConfiguration` is a property of the
@@ -1665,7 +1665,7 @@ public object greengrass {
      *
      * The function is deployed to a Greengrass core where it runs locally. For more information,
      * see
-     * [Run Lambda Functions on the AWS IoT Greengrass Core](https://docs.aws.amazon.com/greengrass/latest/developerguide/lambda-functions.html)
+     * [Run Lambda Functions on the AWS IoT Greengrass Core](https://docs.aws.amazon.com/greengrass/v1/developerguide/lambda-functions.html)
      * in the *Developer Guide* .
      *
      * In an AWS CloudFormation template, the `Functions` property of the
@@ -1822,12 +1822,12 @@ public object greengrass {
      * This setting overrides the default access identity that's specified for the group (by
      * default, ggc_user and ggc_group). You can override the user, group, or both. For more
      * information, see
-     * [Run as](https://docs.aws.amazon.com/greengrass/latest/developerguide/lambda-group-config.html#lambda-access-identity.html)
+     * [Run as](https://docs.aws.amazon.com/greengrass/v1/developerguide/lambda-group-config.html#lambda-access-identity.html)
      * in the *Developer Guide* .
      *
      * Running as the root user increases risks to your data and device. Do not run as root
      * (UID/GID=0) unless your business case requires it. For more information and requirements, see
-     * [Running a Lambda Function as Root](https://docs.aws.amazon.com/greengrass/latest/developerguide/lambda-group-config.html#lambda-running-as-root)
+     * [Running a Lambda Function as Root](https://docs.aws.amazon.com/greengrass/v1/developerguide/lambda-group-config.html#lambda-running-as-root)
      * .
      *
      * In an AWS CloudFormation template, `RunAs` is a property of the
@@ -1862,11 +1862,10 @@ public object greengrass {
      * With AWS IoT Greengrass , connected devices can run AWS Lambda functions, execute predictions
      * based on machine learning models, keep device data in sync, and communicate with other
      * devices securely – even when not connected to the internet. For more information, see the
-     * [Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/what-is-gg.html)
-     * .
+     * [Developer Guide](https://docs.aws.amazon.com/greengrass/v1/developerguide/what-is-gg.html) .
      *
      * For AWS Region support, see
-     * [AWS CloudFormation Support for AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/latest/developerguide/cloudformation-support.html)
+     * [AWS CloudFormation Support for AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/v1/developerguide/cloudformation-support.html)
      * in the *Developer Guide* .
      *
      * The `AWS::Greengrass::Group` resource represents a group in AWS IoT Greengrass . In the AWS
@@ -1896,11 +1895,11 @@ public object greengrass {
      *
      * After you create the group version in your AWS CloudFormation template, you can deploy it
      * using the
-     * [`aws greengrass create-deployment`](https://docs.aws.amazon.com/greengrass/latest/apireference/createdeployment-post.html)
+     * [`aws greengrass create-deployment`](https://docs.aws.amazon.com/greengrass/v1/apireference/createdeployment-post.html)
      * command in the AWS CLI or from the *Greengrass* node in the AWS IoT console. To deploy a
      * group version, you must have a Greengrass service role associated with your AWS account . For
      * more information, see
-     * [AWS CloudFormation Support for AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/latest/developerguide/cloudformation-support.html)
+     * [AWS CloudFormation Support for AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/v1/developerguide/cloudformation-support.html)
      * in the *Developer Guide* .
      *
      * Example:
@@ -2192,7 +2191,7 @@ public object greengrass {
      *
      * All log entries include a timestamp, log level, and information about the event. For more
      * information, see
-     * [Monitoring with AWS IoT Greengrass Logs](https://docs.aws.amazon.com/greengrass/latest/developerguide/greengrass-logs-overview.html)
+     * [Monitoring with AWS IoT Greengrass Logs](https://docs.aws.amazon.com/greengrass/v1/developerguide/greengrass-logs-overview.html)
      * in the *Developer Guide* .
      *
      * In an AWS CloudFormation template, the `Loggers` property of the
@@ -2314,7 +2313,7 @@ public object greengrass {
      *
      * All log entries include a timestamp, log level, and information about the event. For more
      * information, see
-     * [Monitoring with AWS IoT Greengrass Logs](https://docs.aws.amazon.com/greengrass/latest/developerguide/greengrass-logs-overview.html)
+     * [Monitoring with AWS IoT Greengrass Logs](https://docs.aws.amazon.com/greengrass/v1/developerguide/greengrass-logs-overview.html)
      * in the *Developer Guide* .
      *
      * In an AWS CloudFormation template, the `Loggers` property of the
@@ -2514,7 +2513,7 @@ public object greengrass {
      * Settings for a local device resource, which represents a file under `/dev` .
      *
      * For more information, see
-     * [Access Local Resources with Lambda Functions](https://docs.aws.amazon.com/greengrass/latest/developerguide/access-local-resources.html)
+     * [Access Local Resources with Lambda Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-local-resources.html)
      * in the *Developer Guide* .
      *
      * In an AWS CloudFormation template, `LocalDeviceResourceData` can be used in the
@@ -2553,7 +2552,7 @@ public object greengrass {
      * system.
      *
      * For more information, see
-     * [Access Local Resources with Lambda Functions](https://docs.aws.amazon.com/greengrass/latest/developerguide/access-local-resources.html)
+     * [Access Local Resources with Lambda Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-local-resources.html)
      * in the *Developer Guide* .
      *
      * In an AWS CloudFormation template, `LocalVolumeResourceData` can be used in the
@@ -2826,7 +2825,7 @@ public object greengrass {
      * The owner setting for a downloaded machine learning resource.
      *
      * For more information, see
-     * [Access Machine Learning Resources from Lambda Functions](https://docs.aws.amazon.com/greengrass/latest/developerguide/access-ml-resources.html)
+     * [Access Machine Learning Resources from Lambda Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
      * in the *Developer Guide* .
      *
      * In an AWS CloudFormation template, `ResourceDownloadOwnerSetting` is the property type of the
@@ -2862,11 +2861,11 @@ public object greengrass {
      * A local resource, machine learning resource, or secret resource.
      *
      * For more information, see
-     * [Access Local Resources with Lambda Functions](https://docs.aws.amazon.com/greengrass/latest/developerguide/access-local-resources.html)
+     * [Access Local Resources with Lambda Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-local-resources.html)
      * ,
-     * [Perform Machine Learning Inference](https://docs.aws.amazon.com/greengrass/latest/developerguide/ml-inference.html)
+     * [Perform Machine Learning Inference](https://docs.aws.amazon.com/greengrass/v1/developerguide/ml-inference.html)
      * , and
-     * [Deploy Secrets to the AWS IoT Greengrass Core](https://docs.aws.amazon.com/greengrass/latest/developerguide/secrets.html)
+     * [Deploy Secrets to the AWS IoT Greengrass Core](https://docs.aws.amazon.com/greengrass/v1/developerguide/secrets.html)
      * in the *Developer Guide* .
      *
      * In an AWS CloudFormation template, the `Resources` property of the
@@ -2942,7 +2941,7 @@ public object greengrass {
      * Settings for an Amazon S3 machine learning resource.
      *
      * For more information, see
-     * [Perform Machine Learning Inference](https://docs.aws.amazon.com/greengrass/latest/developerguide/ml-inference.html)
+     * [Perform Machine Learning Inference](https://docs.aws.amazon.com/greengrass/v1/developerguide/ml-inference.html)
      * in the *Developer Guide* .
      *
      * In an AWS CloudFormation template, `S3MachineLearningModelResourceData` can be used in the
@@ -2980,7 +2979,7 @@ public object greengrass {
      * Settings for an Secrets Manager machine learning resource.
      *
      * For more information, see
-     * [Perform Machine Learning Inference](https://docs.aws.amazon.com/greengrass/latest/developerguide/ml-inference.html)
+     * [Perform Machine Learning Inference](https://docs.aws.amazon.com/greengrass/v1/developerguide/ml-inference.html)
      * in the *Developer Guide* .
      *
      * In an AWS CloudFormation template, `SageMakerMachineLearningModelResourceData` can be used in
@@ -3023,7 +3022,7 @@ public object greengrass {
      *
      * AWS IoT Greengrass stores a local, encrypted copy of the secret on the Greengrass core, where
      * it can be securely accessed by connectors and Lambda functions. For more information, see
-     * [Deploy Secrets to the AWS IoT Greengrass Core](https://docs.aws.amazon.com/greengrass/latest/developerguide/secrets.html)
+     * [Deploy Secrets to the AWS IoT Greengrass Core](https://docs.aws.amazon.com/greengrass/v1/developerguide/secrets.html)
      * in the *Developer Guide* .
      *
      * In an AWS CloudFormation template, `SecretsManagerSecretResourceData` can be used in the
@@ -3181,7 +3180,7 @@ public object greengrass {
      * Settings for a local device resource, which represents a file under `/dev` .
      *
      * For more information, see
-     * [Access Local Resources with Lambda Functions](https://docs.aws.amazon.com/greengrass/latest/developerguide/access-local-resources.html)
+     * [Access Local Resources with Lambda Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-local-resources.html)
      * in the *Developer Guide* .
      *
      * In an AWS CloudFormation template, `LocalDeviceResourceData` can be used in the
@@ -3220,7 +3219,7 @@ public object greengrass {
      * system.
      *
      * For more information, see
-     * [Access Local Resources with Lambda Functions](https://docs.aws.amazon.com/greengrass/latest/developerguide/access-local-resources.html)
+     * [Access Local Resources with Lambda Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-local-resources.html)
      * in the *Developer Guide* .
      *
      * In an AWS CloudFormation template, `LocalVolumeResourceData` can be used in the
@@ -3407,7 +3406,7 @@ public object greengrass {
      * The owner setting for a downloaded machine learning resource.
      *
      * For more information, see
-     * [Access Machine Learning Resources from Lambda Functions](https://docs.aws.amazon.com/greengrass/latest/developerguide/access-ml-resources.html)
+     * [Access Machine Learning Resources from Lambda Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
      * in the *Developer Guide* .
      *
      * In an AWS CloudFormation template, `ResourceDownloadOwnerSetting` is the property type of the
@@ -3443,11 +3442,11 @@ public object greengrass {
      * A local resource, machine learning resource, or secret resource.
      *
      * For more information, see
-     * [Access Local Resources with Lambda Functions](https://docs.aws.amazon.com/greengrass/latest/developerguide/access-local-resources.html)
+     * [Access Local Resources with Lambda Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-local-resources.html)
      * ,
-     * [Perform Machine Learning Inference](https://docs.aws.amazon.com/greengrass/latest/developerguide/ml-inference.html)
+     * [Perform Machine Learning Inference](https://docs.aws.amazon.com/greengrass/v1/developerguide/ml-inference.html)
      * , and
-     * [Deploy Secrets to the AWS IoT Greengrass Core](https://docs.aws.amazon.com/greengrass/latest/developerguide/secrets.html)
+     * [Deploy Secrets to the AWS IoT Greengrass Core](https://docs.aws.amazon.com/greengrass/v1/developerguide/secrets.html)
      * in the *Developer Guide* .
      *
      * In an AWS CloudFormation template, the `Resources` property of the
@@ -3523,7 +3522,7 @@ public object greengrass {
      * Settings for an Amazon S3 machine learning resource.
      *
      * For more information, see
-     * [Perform Machine Learning Inference](https://docs.aws.amazon.com/greengrass/latest/developerguide/ml-inference.html)
+     * [Perform Machine Learning Inference](https://docs.aws.amazon.com/greengrass/v1/developerguide/ml-inference.html)
      * in the *Developer Guide* .
      *
      * In an AWS CloudFormation template, `S3MachineLearningModelResourceData` can be used in the
@@ -3563,7 +3562,7 @@ public object greengrass {
      * Settings for an Secrets Manager machine learning resource.
      *
      * For more information, see
-     * [Perform Machine Learning Inference](https://docs.aws.amazon.com/greengrass/latest/developerguide/ml-inference.html)
+     * [Perform Machine Learning Inference](https://docs.aws.amazon.com/greengrass/v1/developerguide/ml-inference.html)
      * in the *Developer Guide* .
      *
      * In an AWS CloudFormation template, `SageMakerMachineLearningModelResourceData` can be used in
@@ -3608,7 +3607,7 @@ public object greengrass {
      *
      * AWS IoT Greengrass stores a local, encrypted copy of the secret on the Greengrass core, where
      * it can be securely accessed by connectors and Lambda functions. For more information, see
-     * [Deploy Secrets to the AWS IoT Greengrass Core](https://docs.aws.amazon.com/greengrass/latest/developerguide/secrets.html)
+     * [Deploy Secrets to the AWS IoT Greengrass Core](https://docs.aws.amazon.com/greengrass/v1/developerguide/secrets.html)
      * in the *Developer Guide* .
      *
      * In an AWS CloudFormation template, `SecretsManagerSecretResourceData` can be used in the

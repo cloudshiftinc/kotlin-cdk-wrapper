@@ -67,8 +67,8 @@ public class CfnBridgeSourcePropsDsl {
     }
 
     /**
-     * @param name The name of the network source. This name is used to reference the source and
-     *   must be unique among sources in this bridge.
+     * @param name The name of the flow source. This name is used to reference the source and must
+     *   be unique among sources in this bridge.
      */
     public fun name(name: String) {
         cdkBuilder.name(name)

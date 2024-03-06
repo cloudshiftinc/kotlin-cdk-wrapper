@@ -19,7 +19,7 @@ import software.amazon.awscdk.services.opsworks.CfnUserProfile
 import software.constructs.Construct
 
 /**
- * Describes a user's SSH information.
+ * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html.
  *
  * Example:
  * ```

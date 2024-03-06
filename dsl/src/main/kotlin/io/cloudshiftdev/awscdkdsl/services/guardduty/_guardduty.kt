@@ -59,16 +59,17 @@ public object guardduty {
      * .enable(false)
      * .build())
      * .build())
-     * .features(List.of(FeatureConfigurationsProperty.builder()
-     * .additionalConfiguration(List.of(FeatureAdditionalConfigurationProperty.builder()
+     * .features(List.of(CFNFeatureConfigurationProperty.builder()
+     * .name("name")
+     * .status("status")
+     * // the properties below are optional
+     * .additionalConfiguration(List.of(CFNFeatureAdditionalConfigurationProperty.builder()
      * .name("name")
      * .status("status")
      * .build()))
-     * .name("name")
-     * .status("status")
      * .build()))
      * .findingPublishingFrequency("findingPublishingFrequency")
-     * .tags(List.of(CfnTag.builder()
+     * .tags(List.of(TagItemProperty.builder()
      * .key("key")
      * .value("value")
      * .build()))
@@ -120,6 +121,61 @@ public object guardduty {
         block: CfnDetectorCFNDataSourceConfigurationsPropertyDsl.() -> Unit = {}
     ): CfnDetector.CFNDataSourceConfigurationsProperty {
         val builder = CfnDetectorCFNDataSourceConfigurationsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Information about the additional configuration of a feature in your account.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.guardduty.*;
+     * CFNFeatureAdditionalConfigurationProperty cFNFeatureAdditionalConfigurationProperty =
+     * CFNFeatureAdditionalConfigurationProperty.builder()
+     * .name("name")
+     * .status("status")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfnfeatureadditionalconfiguration.html)
+     */
+    public inline fun cfnDetectorCFNFeatureAdditionalConfigurationProperty(
+        block: CfnDetectorCFNFeatureAdditionalConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnDetector.CFNFeatureAdditionalConfigurationProperty {
+        val builder = CfnDetectorCFNFeatureAdditionalConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Information about the configuration of a feature in your account.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.guardduty.*;
+     * CFNFeatureConfigurationProperty cFNFeatureConfigurationProperty =
+     * CFNFeatureConfigurationProperty.builder()
+     * .name("name")
+     * .status("status")
+     * // the properties below are optional
+     * .additionalConfiguration(List.of(CFNFeatureAdditionalConfigurationProperty.builder()
+     * .name("name")
+     * .status("status")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfnfeatureconfiguration.html)
+     */
+    public inline fun cfnDetectorCFNFeatureConfigurationProperty(
+        block: CfnDetectorCFNFeatureConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnDetector.CFNFeatureConfigurationProperty {
+        val builder = CfnDetectorCFNFeatureConfigurationPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -252,75 +308,6 @@ public object guardduty {
     }
 
     /**
-     * Describes the additional configuration for a feature.
-     *
-     * If you want to specify any additional configuration for your feature, it is required to
-     * provide the `Name` and `Status` for that additional configuration. For more information, see
-     * [DetectorAdditionalConfiguration](https://docs.aws.amazon.com/guardduty/latest/APIReference/API_DetectorAdditionalConfiguration.html)
-     * .
-     *
-     * If you're providing additional configuration, ensure to provide the corresponding
-     * [FeatureConfigurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-featureconfigurations.html#cfn-guardduty-detector-featureconfigurations-additionalconfiguration)
-     * .
-     *
-     * Example:
-     * ```
-     * // The code below shows an example of how to instantiate this type.
-     * // The values are placeholders you should change.
-     * import software.amazon.awscdk.services.guardduty.*;
-     * FeatureAdditionalConfigurationProperty featureAdditionalConfigurationProperty =
-     * FeatureAdditionalConfigurationProperty.builder()
-     * .name("name")
-     * .status("status")
-     * .build();
-     * ```
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-featureadditionalconfiguration.html)
-     */
-    public inline fun cfnDetectorFeatureAdditionalConfigurationProperty(
-        block: CfnDetectorFeatureAdditionalConfigurationPropertyDsl.() -> Unit = {}
-    ): CfnDetector.FeatureAdditionalConfigurationProperty {
-        val builder = CfnDetectorFeatureAdditionalConfigurationPropertyDsl()
-        builder.apply(block)
-        return builder.build()
-    }
-
-    /**
-     * Describes the configuration for a feature.
-     *
-     * Although the `Required` field associated with the following properties specifies `No` , if
-     * you provide information for `Name` , you will need to provide the information for `Status`
-     * too. For information about the available feature configurations, see
-     * [DetectorFeatureConfiguration](https://docs.aws.amazon.com/guardduty/latest/APIReference/API_DetectorFeatureConfiguration.html)
-     * .
-     *
-     * Example:
-     * ```
-     * // The code below shows an example of how to instantiate this type.
-     * // The values are placeholders you should change.
-     * import software.amazon.awscdk.services.guardduty.*;
-     * FeatureConfigurationsProperty featureConfigurationsProperty =
-     * FeatureConfigurationsProperty.builder()
-     * .additionalConfiguration(List.of(FeatureAdditionalConfigurationProperty.builder()
-     * .name("name")
-     * .status("status")
-     * .build()))
-     * .name("name")
-     * .status("status")
-     * .build();
-     * ```
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-featureconfigurations.html)
-     */
-    public inline fun cfnDetectorFeatureConfigurationsProperty(
-        block: CfnDetectorFeatureConfigurationsPropertyDsl.() -> Unit = {}
-    ): CfnDetector.FeatureConfigurationsProperty {
-        val builder = CfnDetectorFeatureConfigurationsPropertyDsl()
-        builder.apply(block)
-        return builder.build()
-    }
-
-    /**
      * Properties for defining a `CfnDetector`.
      *
      * Example:
@@ -346,16 +333,17 @@ public object guardduty {
      * .enable(false)
      * .build())
      * .build())
-     * .features(List.of(FeatureConfigurationsProperty.builder()
-     * .additionalConfiguration(List.of(FeatureAdditionalConfigurationProperty.builder()
+     * .features(List.of(CFNFeatureConfigurationProperty.builder()
+     * .name("name")
+     * .status("status")
+     * // the properties below are optional
+     * .additionalConfiguration(List.of(CFNFeatureAdditionalConfigurationProperty.builder()
      * .name("name")
      * .status("status")
      * .build()))
-     * .name("name")
-     * .status("status")
      * .build()))
      * .findingPublishingFrequency("findingPublishingFrequency")
-     * .tags(List.of(CfnTag.builder()
+     * .tags(List.of(TagItemProperty.builder()
      * .key("key")
      * .value("value")
      * .build()))
@@ -373,6 +361,30 @@ public object guardduty {
     }
 
     /**
+     * Describes a tag.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.guardduty.*;
+     * TagItemProperty tagItemProperty = TagItemProperty.builder()
+     * .key("key")
+     * .value("value")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-tagitem.html)
+     */
+    public inline fun cfnDetectorTagItemProperty(
+        block: CfnDetectorTagItemPropertyDsl.() -> Unit = {}
+    ): CfnDetector.TagItemProperty {
+        val builder = CfnDetectorTagItemPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The `AWS::GuardDuty::Filter` resource specifies a new filter defined by the provided
      * `findingCriteria` .
      *
@@ -383,9 +395,6 @@ public object guardduty {
      * import software.amazon.awscdk.services.guardduty.*;
      * Object criterion;
      * CfnFilter cfnFilter = CfnFilter.Builder.create(this, "MyCfnFilter")
-     * .action("action")
-     * .description("description")
-     * .detectorId("detectorId")
      * .findingCriteria(FindingCriteriaProperty.builder()
      * .criterion(criterion)
      * .itemType(ConditionProperty.builder()
@@ -403,9 +412,12 @@ public object guardduty {
      * .notEquals(List.of("notEquals"))
      * .build())
      * .build())
+     * // the properties below are optional
+     * .action("action")
+     * .description("description")
+     * .detectorId("detectorId")
      * .name("name")
      * .rank(123)
-     * // the properties below are optional
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -508,9 +520,6 @@ public object guardduty {
      * import software.amazon.awscdk.services.guardduty.*;
      * Object criterion;
      * CfnFilterProps cfnFilterProps = CfnFilterProps.builder()
-     * .action("action")
-     * .description("description")
-     * .detectorId("detectorId")
      * .findingCriteria(FindingCriteriaProperty.builder()
      * .criterion(criterion)
      * .itemType(ConditionProperty.builder()
@@ -528,9 +537,12 @@ public object guardduty {
      * .notEquals(List.of("notEquals"))
      * .build())
      * .build())
+     * // the properties below are optional
+     * .action("action")
+     * .description("description")
+     * .detectorId("detectorId")
      * .name("name")
      * .rank(123)
-     * // the properties below are optional
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -558,11 +570,11 @@ public object guardduty {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.guardduty.*;
      * CfnIPSet cfnIPSet = CfnIPSet.Builder.create(this, "MyCfnIPSet")
-     * .activate(false)
-     * .detectorId("detectorId")
      * .format("format")
      * .location("location")
      * // the properties below are optional
+     * .activate(false)
+     * .detectorId("detectorId")
      * .name("name")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
@@ -592,11 +604,11 @@ public object guardduty {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.guardduty.*;
      * CfnIPSetProps cfnIPSetProps = CfnIPSetProps.builder()
-     * .activate(false)
-     * .detectorId("detectorId")
      * .format("format")
      * .location("location")
      * // the properties below are optional
+     * .activate(false)
+     * .detectorId("detectorId")
      * .name("name")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
@@ -687,11 +699,11 @@ public object guardduty {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.guardduty.*;
      * CfnMember cfnMember = CfnMember.Builder.create(this, "MyCfnMember")
-     * .detectorId("detectorId")
      * .email("email")
-     * .memberId("memberId")
      * // the properties below are optional
+     * .detectorId("detectorId")
      * .disableEmailNotification(false)
+     * .memberId("memberId")
      * .message("message")
      * .status("status")
      * .build();
@@ -718,11 +730,11 @@ public object guardduty {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.guardduty.*;
      * CfnMemberProps cfnMemberProps = CfnMemberProps.builder()
-     * .detectorId("detectorId")
      * .email("email")
-     * .memberId("memberId")
      * // the properties below are optional
+     * .detectorId("detectorId")
      * .disableEmailNotification(false)
+     * .memberId("memberId")
      * .message("message")
      * .status("status")
      * .build();
@@ -749,11 +761,11 @@ public object guardduty {
      * import software.amazon.awscdk.services.guardduty.*;
      * CfnThreatIntelSet cfnThreatIntelSet = CfnThreatIntelSet.Builder.create(this,
      * "MyCfnThreatIntelSet")
-     * .activate(false)
-     * .detectorId("detectorId")
      * .format("format")
      * .location("location")
      * // the properties below are optional
+     * .activate(false)
+     * .detectorId("detectorId")
      * .name("name")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
@@ -783,11 +795,11 @@ public object guardduty {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.guardduty.*;
      * CfnThreatIntelSetProps cfnThreatIntelSetProps = CfnThreatIntelSetProps.builder()
-     * .activate(false)
-     * .detectorId("detectorId")
      * .format("format")
      * .location("location")
      * // the properties below are optional
+     * .activate(false)
+     * .detectorId("detectorId")
      * .name("name")
      * .tags(List.of(CfnTag.builder()
      * .key("key")

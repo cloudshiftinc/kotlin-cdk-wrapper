@@ -293,10 +293,6 @@ public class CfnReplicaKeyDsl(
      * [Deleting KMS keys](https://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html)
      * in the *AWS Key Management Service Developer Guide* .
      *
-     * *Minimum* : 7
-     *
-     * *Maximum* : 30
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-replicakey.html#cfn-kms-replicakey-pendingwindowindays)
      *
      * @param pendingWindowInDays Specifies the number of days in the waiting period before AWS KMS

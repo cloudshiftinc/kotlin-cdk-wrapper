@@ -44,14 +44,10 @@ import software.constructs.Construct
  *
  * Example:
  * ```
- * Pass stateMachineDefinition = new Pass(this, "PassState");
- * IStateMachine stateMachine = StateMachine.Builder.create(this, "StateMachine")
- * .definition(stateMachineDefinition)
- * .stateMachineType(StateMachineType.EXPRESS)
- * .build();
+ * IStateMachine machine;
  * StepFunctionsRestApi.Builder.create(this, "StepFunctionsRestApi")
- * .deploy(true)
- * .stateMachine(stateMachine)
+ * .stateMachine(machine)
+ * .useDefaultMethodResponses(false)
  * .build();
  * ```
  */
@@ -641,6 +637,18 @@ public class StepFunctionsRestApiDsl(
      */
     public fun stateMachine(stateMachine: IStateMachine) {
         cdkBuilder.stateMachine(stateMachine)
+    }
+
+    /**
+     * Whether to add default response models with 200, 400, and 500 status codes to the method.
+     *
+     * Default: true
+     *
+     * @param useDefaultMethodResponses Whether to add default response models with 200, 400, and
+     *   500 status codes to the method.
+     */
+    public fun useDefaultMethodResponses(useDefaultMethodResponses: Boolean) {
+        cdkBuilder.useDefaultMethodResponses(useDefaultMethodResponses)
     }
 
     public fun build(): StepFunctionsRestApi {

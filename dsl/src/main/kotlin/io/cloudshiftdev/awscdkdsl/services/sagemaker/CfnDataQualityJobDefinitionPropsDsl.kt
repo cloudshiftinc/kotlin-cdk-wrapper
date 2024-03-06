@@ -56,6 +56,7 @@ import software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinitionProp
  * .build())
  * .localPath("localPath")
  * // the properties below are optional
+ * .excludeFeaturesAttribute("excludeFeaturesAttribute")
  * .s3DataDistributionType("s3DataDistributionType")
  * .s3InputMode("s3InputMode")
  * .build())
@@ -63,6 +64,7 @@ import software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinitionProp
  * .endpointName("endpointName")
  * .localPath("localPath")
  * // the properties below are optional
+ * .excludeFeaturesAttribute("excludeFeaturesAttribute")
  * .s3DataDistributionType("s3DataDistributionType")
  * .s3InputMode("s3InputMode")
  * .build())

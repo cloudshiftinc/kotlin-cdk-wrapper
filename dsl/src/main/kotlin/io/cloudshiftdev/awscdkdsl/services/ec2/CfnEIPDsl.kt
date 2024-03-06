@@ -99,9 +99,6 @@ public class CfnEIPDsl(
      * [DescribeAvailabilityZones](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAvailabilityZones.html)
      * to view the network border groups.
      *
-     * You cannot use a network border group with EC2 Classic. If you attempt this operation on EC2
-     * Classic, you receive an `InvalidParameterCombination` error.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-eip.html#cfn-ec2-eip-networkbordergroup)
      *
      * @param networkBorderGroup A unique set of Availability Zones, Local Zones, or Wavelength

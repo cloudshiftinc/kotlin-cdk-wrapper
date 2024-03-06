@@ -16,9 +16,6 @@ import kotlin.String
 import software.amazon.awscdk.services.resourceexplorer2.CfnView
 
 /**
- * An object with a `FilterString` that specifies which resources to include in the results of
- * queries made using this view.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.

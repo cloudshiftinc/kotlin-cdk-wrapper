@@ -43,6 +43,18 @@ import software.amazon.awscdk.services.ecs.CfnService
  * .build()))
  * .discoveryName("discoveryName")
  * .ingressPortOverride(123)
+ * .timeout(TimeoutConfigurationProperty.builder()
+ * .idleTimeoutSeconds(123)
+ * .perRequestTimeoutSeconds(123)
+ * .build())
+ * .tls(ServiceConnectTlsConfigurationProperty.builder()
+ * .issuerCertificateAuthority(ServiceConnectTlsCertificateAuthorityProperty.builder()
+ * .awsPcaAuthorityArn("awsPcaAuthorityArn")
+ * .build())
+ * // the properties below are optional
+ * .kmsKey("kmsKey")
+ * .roleArn("roleArn")
+ * .build())
  * .build();
  * ```
  *
@@ -139,6 +151,38 @@ public class CfnServiceServiceConnectServicePropertyDsl {
      */
     public fun portName(portName: String) {
         cdkBuilder.portName(portName)
+    }
+
+    /**
+     * @param timeout A reference to an object that represents the configured timeouts for Service
+     *   Connect.
+     */
+    public fun timeout(timeout: IResolvable) {
+        cdkBuilder.timeout(timeout)
+    }
+
+    /**
+     * @param timeout A reference to an object that represents the configured timeouts for Service
+     *   Connect.
+     */
+    public fun timeout(timeout: CfnService.TimeoutConfigurationProperty) {
+        cdkBuilder.timeout(timeout)
+    }
+
+    /**
+     * @param tls A reference to an object that represents a Transport Layer Security (TLS)
+     *   configuration.
+     */
+    public fun tls(tls: IResolvable) {
+        cdkBuilder.tls(tls)
+    }
+
+    /**
+     * @param tls A reference to an object that represents a Transport Layer Security (TLS)
+     *   configuration.
+     */
+    public fun tls(tls: CfnService.ServiceConnectTlsConfigurationProperty) {
+        cdkBuilder.tls(tls)
     }
 
     public fun build(): CfnService.ServiceConnectServiceProperty {

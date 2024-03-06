@@ -276,8 +276,8 @@ public class CfnDistributionDefaultCacheBehaviorPropertyDsl {
 
     /**
      * @param functionAssociations A list of CloudFront functions that are associated with this
-     *   cache behavior. CloudFront functions must be published to the `LIVE` stage to associate
-     *   them with a cache behavior.
+     *   cache behavior. Your functions must be published to the `LIVE` stage to associate them with
+     *   a cache behavior.
      */
     public fun functionAssociations(vararg functionAssociations: Any) {
         _functionAssociations.addAll(listOf(*functionAssociations))
@@ -285,8 +285,8 @@ public class CfnDistributionDefaultCacheBehaviorPropertyDsl {
 
     /**
      * @param functionAssociations A list of CloudFront functions that are associated with this
-     *   cache behavior. CloudFront functions must be published to the `LIVE` stage to associate
-     *   them with a cache behavior.
+     *   cache behavior. Your functions must be published to the `LIVE` stage to associate them with
+     *   a cache behavior.
      */
     public fun functionAssociations(functionAssociations: Collection<Any>) {
         _functionAssociations.addAll(functionAssociations)
@@ -294,8 +294,8 @@ public class CfnDistributionDefaultCacheBehaviorPropertyDsl {
 
     /**
      * @param functionAssociations A list of CloudFront functions that are associated with this
-     *   cache behavior. CloudFront functions must be published to the `LIVE` stage to associate
-     *   them with a cache behavior.
+     *   cache behavior. Your functions must be published to the `LIVE` stage to associate them with
+     *   a cache behavior.
      */
     public fun functionAssociations(functionAssociations: IResolvable) {
         cdkBuilder.functionAssociations(functionAssociations)

@@ -65,22 +65,16 @@ public class CfnListenerPropsDsl {
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
-     * @param defaultAction The action for the default rule. Each listener has a default rule. Each
-     *   rule consists of a priority, one or more actions, and one or more conditions. The default
-     *   rule is the rule that's used if no other rules match. Each rule must include exactly one of
-     *   the following types of actions: `forward` or `fixed-response` , and it must be the last
-     *   action to be performed.
+     * @param defaultAction The action for the default rule. Each listener has a default rule. The
+     *   default rule is used if no other rules match.
      */
     public fun defaultAction(defaultAction: IResolvable) {
         cdkBuilder.defaultAction(defaultAction)
     }
 
     /**
-     * @param defaultAction The action for the default rule. Each listener has a default rule. Each
-     *   rule consists of a priority, one or more actions, and one or more conditions. The default
-     *   rule is the rule that's used if no other rules match. Each rule must include exactly one of
-     *   the following types of actions: `forward` or `fixed-response` , and it must be the last
-     *   action to be performed.
+     * @param defaultAction The action for the default rule. Each listener has a default rule. The
+     *   default rule is used if no other rules match.
      */
     public fun defaultAction(defaultAction: CfnListener.DefaultActionProperty) {
         cdkBuilder.defaultAction(defaultAction)
@@ -106,7 +100,7 @@ public class CfnListenerPropsDsl {
         cdkBuilder.port(port)
     }
 
-    /** @param protocol The listener protocol HTTP or HTTPS. */
+    /** @param protocol The listener protocol. */
     public fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
     }

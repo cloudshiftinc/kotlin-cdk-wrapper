@@ -60,6 +60,15 @@ public class GaugeWidgetPropsDsl {
         _annotations.addAll(annotations)
     }
 
+    /**
+     * @param end The end of the time range to use for each widget independently from those of the
+     *   dashboard. If you specify a value for end, you must also specify a value for start. Specify
+     *   an absolute time in the ISO 8601 format. For example, 2018-12-17T06:00:00.000Z.
+     */
+    public fun end(end: String) {
+        cdkBuilder.end(end)
+    }
+
     /** @param height Height of the widget. */
     public fun height(height: Number) {
         cdkBuilder.height(height)
@@ -118,6 +127,20 @@ public class GaugeWidgetPropsDsl {
      */
     public fun setPeriodToTimeRange(setPeriodToTimeRange: Boolean) {
         cdkBuilder.setPeriodToTimeRange(setPeriodToTimeRange)
+    }
+
+    /**
+     * @param start The start of the time range to use for each widget independently from those of
+     *   the dashboard. You can specify start without specifying end to specify a relative time
+     *   range that ends with the current time. In this case, the value of start must begin with -P,
+     *   and you can use M, H, D, W and M as abbreviations for minutes, hours, days, weeks and
+     *   months. For example, -PT8H shows the last 8 hours and -P3M shows the last three months. You
+     *   can also use start along with an end field, to specify an absolute time range. When
+     *   specifying an absolute time range, use the ISO 8601 format. For example,
+     *   2018-12-17T06:00:00.000Z.
+     */
+    public fun start(start: String) {
+        cdkBuilder.start(start)
     }
 
     /**

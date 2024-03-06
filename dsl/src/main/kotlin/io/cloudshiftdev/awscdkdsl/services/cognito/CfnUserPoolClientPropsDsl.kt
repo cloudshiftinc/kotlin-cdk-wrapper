@@ -104,7 +104,9 @@ public class CfnUserPoolClientPropsDsl {
     }
 
     /**
-     * @param allowedOAuthFlows The allowed OAuth flows.
+     * @param allowedOAuthFlows The OAuth grant types that you want your app client to generate. To
+     *   create an app client that generates client credentials grants, you must add
+     *   `client_credentials` as the only allowed OAuth flow.
      * * **code** - Use a code grant flow, which provides an authorization code as the response.
      *   This code can be exchanged for access tokens with the `/oauth2/token` endpoint.
      * * **implicit** - Issue the access token (and, optionally, ID token, based on scopes) directly
@@ -117,7 +119,9 @@ public class CfnUserPoolClientPropsDsl {
     }
 
     /**
-     * @param allowedOAuthFlows The allowed OAuth flows.
+     * @param allowedOAuthFlows The OAuth grant types that you want your app client to generate. To
+     *   create an app client that generates client credentials grants, you must add
+     *   `client_credentials` as the only allowed OAuth flow.
      * * **code** - Use a code grant flow, which provides an authorization code as the response.
      *   This code can be exchanged for access tokens with the `/oauth2/token` endpoint.
      * * **implicit** - Issue the access token (and, optionally, ID token, based on scopes) directly
@@ -463,12 +467,40 @@ public class CfnUserPoolClientPropsDsl {
         cdkBuilder.preventUserExistenceErrors(preventUserExistenceErrors)
     }
 
-    /** @param readAttributes The read attributes. */
+    /**
+     * @param readAttributes The list of user attributes that you want your app client to have
+     *   read-only access to. After your user authenticates in your app, their access token
+     *   authorizes them to read their own attribute value for any attribute in this list. An
+     *   example of this kind of activity is when your user selects a link to view their profile
+     *   information. Your app makes a
+     *   [GetUser](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_GetUser.html)
+     *   API request to retrieve and display your user's profile data.
+     *
+     * When you don't specify the `ReadAttributes` for your app client, your app can read the values
+     * of `email_verified` , `phone_number_verified` , and the Standard attributes of your user
+     * pool. When your user pool has read access to these default attributes, `ReadAttributes`
+     * doesn't return any information. Amazon Cognito only populates `ReadAttributes` in the API
+     * response if you have specified your own custom set of read attributes.
+     */
     public fun readAttributes(vararg readAttributes: String) {
         _readAttributes.addAll(listOf(*readAttributes))
     }
 
-    /** @param readAttributes The read attributes. */
+    /**
+     * @param readAttributes The list of user attributes that you want your app client to have
+     *   read-only access to. After your user authenticates in your app, their access token
+     *   authorizes them to read their own attribute value for any attribute in this list. An
+     *   example of this kind of activity is when your user selects a link to view their profile
+     *   information. Your app makes a
+     *   [GetUser](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_GetUser.html)
+     *   API request to retrieve and display your user's profile data.
+     *
+     * When you don't specify the `ReadAttributes` for your app client, your app can read the values
+     * of `email_verified` , `phone_number_verified` , and the Standard attributes of your user
+     * pool. When your user pool has read access to these default attributes, `ReadAttributes`
+     * doesn't return any information. Amazon Cognito only populates `ReadAttributes` in the API
+     * response if you have specified your own custom set of read attributes.
+     */
     public fun readAttributes(readAttributes: Collection<String>) {
         _readAttributes.addAll(readAttributes)
     }
@@ -539,28 +571,54 @@ public class CfnUserPoolClientPropsDsl {
     }
 
     /**
-     * @param writeAttributes The user pool attributes that the app client can write to. If your app
-     *   client allows users to sign in through an IdP, this array must include all attributes that
-     *   you have mapped to IdP attributes. Amazon Cognito updates mapped attributes when users sign
-     *   in to your application through an IdP. If your app client does not have write access to a
-     *   mapped attribute, Amazon Cognito throws an error when it tries to update the attribute. For
-     *   more information, see
-     *   [Specifying IdP Attribute Mappings for Your user pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-specifying-attribute-mapping.html)
-     *   .
+     * @param writeAttributes The list of user attributes that you want your app client to have
+     *   write access to. After your user authenticates in your app, their access token authorizes
+     *   them to set or modify their own attribute value for any attribute in this list. An example
+     *   of this kind of activity is when you present your user with a form to update their profile
+     *   information and they change their last name. Your app then makes an
+     *   [UpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserAttributes.html)
+     *   API request and sets `family_name` to the new value.
+     *
+     * When you don't specify the `WriteAttributes` for your app client, your app can write the
+     * values of the Standard attributes of your user pool. When your user pool has write access to
+     * these default attributes, `WriteAttributes` doesn't return any information. Amazon Cognito
+     * only populates `WriteAttributes` in the API response if you have specified your own custom
+     * set of write attributes.
+     *
+     * If your app client allows users to sign in through an IdP, this array must include all
+     * attributes that you have mapped to IdP attributes. Amazon Cognito updates mapped attributes
+     * when users sign in to your application through an IdP. If your app client does not have write
+     * access to a mapped attribute, Amazon Cognito throws an error when it tries to update the
+     * attribute. For more information, see
+     * [Specifying IdP Attribute Mappings for Your user pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-specifying-attribute-mapping.html)
+     * .
      */
     public fun writeAttributes(vararg writeAttributes: String) {
         _writeAttributes.addAll(listOf(*writeAttributes))
     }
 
     /**
-     * @param writeAttributes The user pool attributes that the app client can write to. If your app
-     *   client allows users to sign in through an IdP, this array must include all attributes that
-     *   you have mapped to IdP attributes. Amazon Cognito updates mapped attributes when users sign
-     *   in to your application through an IdP. If your app client does not have write access to a
-     *   mapped attribute, Amazon Cognito throws an error when it tries to update the attribute. For
-     *   more information, see
-     *   [Specifying IdP Attribute Mappings for Your user pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-specifying-attribute-mapping.html)
-     *   .
+     * @param writeAttributes The list of user attributes that you want your app client to have
+     *   write access to. After your user authenticates in your app, their access token authorizes
+     *   them to set or modify their own attribute value for any attribute in this list. An example
+     *   of this kind of activity is when you present your user with a form to update their profile
+     *   information and they change their last name. Your app then makes an
+     *   [UpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserAttributes.html)
+     *   API request and sets `family_name` to the new value.
+     *
+     * When you don't specify the `WriteAttributes` for your app client, your app can write the
+     * values of the Standard attributes of your user pool. When your user pool has write access to
+     * these default attributes, `WriteAttributes` doesn't return any information. Amazon Cognito
+     * only populates `WriteAttributes` in the API response if you have specified your own custom
+     * set of write attributes.
+     *
+     * If your app client allows users to sign in through an IdP, this array must include all
+     * attributes that you have mapped to IdP attributes. Amazon Cognito updates mapped attributes
+     * when users sign in to your application through an IdP. If your app client does not have write
+     * access to a mapped attribute, Amazon Cognito throws an error when it tries to update the
+     * attribute. For more information, see
+     * [Specifying IdP Attribute Mappings for Your user pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-specifying-attribute-mapping.html)
+     * .
      */
     public fun writeAttributes(writeAttributes: Collection<String>) {
         _writeAttributes.addAll(writeAttributes)

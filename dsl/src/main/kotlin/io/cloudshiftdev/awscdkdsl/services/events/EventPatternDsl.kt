@@ -45,11 +45,14 @@ import software.amazon.awscdk.services.events.EventPattern
  * * Number matching is at the string representation level. For example, 300, 300.0, and 3.0e2 are
  *   not considered equal.
  *
+ * For custom events, some optional properties are required. For more information, see
+ * [Minimum information needed for a valid custom event](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-events-structure.html#eb-custom-event).
+ *
  * Example:
  * ```
  * import software.amazon.awscdk.services.lambda.*;
  * Function fn = Function.Builder.create(this, "MyFunc")
- * .runtime(Runtime.NODEJS_14_X)
+ * .runtime(Runtime.NODEJS_LATEST)
  * .handler("index.handler")
  * .code(Code.fromInline("exports.handler = handler.toString()"))
  * .build();

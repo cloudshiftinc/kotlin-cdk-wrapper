@@ -20,11 +20,11 @@ import software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion
  * A local resource, machine learning resource, or secret resource.
  *
  * For more information, see
- * [Access Local Resources with Lambda Functions](https://docs.aws.amazon.com/greengrass/latest/developerguide/access-local-resources.html)
+ * [Access Local Resources with Lambda Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-local-resources.html)
  * ,
- * [Perform Machine Learning Inference](https://docs.aws.amazon.com/greengrass/latest/developerguide/ml-inference.html)
+ * [Perform Machine Learning Inference](https://docs.aws.amazon.com/greengrass/v1/developerguide/ml-inference.html)
  * , and
- * [Deploy Secrets to the AWS IoT Greengrass Core](https://docs.aws.amazon.com/greengrass/latest/developerguide/secrets.html)
+ * [Deploy Secrets to the AWS IoT Greengrass Core](https://docs.aws.amazon.com/greengrass/v1/developerguide/secrets.html)
  * in the *Developer Guide* .
  *
  * In an AWS CloudFormation template, the `Resources` property of the

@@ -50,12 +50,12 @@ public class CfnGatewayGatewayPlatformPropertyDsl {
         cdkBuilder.greengrass(greengrass)
     }
 
-    /** @param greengrassV2 A gateway that runs on AWS IoT Greengrass V2. */
+    /** @param greengrassV2 A gateway that runs on AWS IoT Greengrass V2 . */
     public fun greengrassV2(greengrassV2: IResolvable) {
         cdkBuilder.greengrassV2(greengrassV2)
     }
 
-    /** @param greengrassV2 A gateway that runs on AWS IoT Greengrass V2. */
+    /** @param greengrassV2 A gateway that runs on AWS IoT Greengrass V2 . */
     public fun greengrassV2(greengrassV2: CfnGateway.GreengrassV2Property) {
         cdkBuilder.greengrassV2(greengrassV2)
     }

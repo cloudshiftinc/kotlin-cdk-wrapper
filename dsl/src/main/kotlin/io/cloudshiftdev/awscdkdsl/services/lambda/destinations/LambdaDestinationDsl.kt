@@ -24,7 +24,7 @@ import software.amazon.awscdk.services.lambda.destinations.LambdaDestination
  * // Auto-extract response payload with a lambda destination
  * Function destinationFn;
  * Function sourceFn = Function.Builder.create(this, "Source")
- * .runtime(Runtime.NODEJS_14_X)
+ * .runtime(Runtime.NODEJS_LATEST)
  * .handler("index.handler")
  * .code(Code.fromAsset(join(__dirname, "lambda-handler")))
  * // auto-extract on success

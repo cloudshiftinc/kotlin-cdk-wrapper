@@ -73,6 +73,33 @@ import software.constructs.Construct
  * .key("key")
  * .value("value")
  * .build()))
+ * .taskReportConfig(TaskReportConfigProperty.builder()
+ * .destination(DestinationProperty.builder()
+ * .s3(S3Property.builder()
+ * .bucketAccessRoleArn("bucketAccessRoleArn")
+ * .s3BucketArn("s3BucketArn")
+ * .subdirectory("subdirectory")
+ * .build())
+ * .build())
+ * .outputType("outputType")
+ * // the properties below are optional
+ * .objectVersionIds("objectVersionIds")
+ * .overrides(OverridesProperty.builder()
+ * .deleted(DeletedProperty.builder()
+ * .reportLevel("reportLevel")
+ * .build())
+ * .skipped(SkippedProperty.builder()
+ * .reportLevel("reportLevel")
+ * .build())
+ * .transferred(TransferredProperty.builder()
+ * .reportLevel("reportLevel")
+ * .build())
+ * .verified(VerifiedProperty.builder()
+ * .reportLevel("reportLevel")
+ * .build())
+ * .build())
+ * .reportLevel("reportLevel")
+ * .build())
  * .build();
  * ```
  *
@@ -344,6 +371,50 @@ public class CfnTaskDsl(
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
+    }
+
+    /**
+     * Specifies how you want to configure a task report, which provides detailed information about
+     * your DataSync transfer.
+     *
+     * For more information, see
+     * [Monitoring your DataSync transfers with task reports](https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html)
+     * .
+     *
+     * When using this parameter, your caller identity (the role that you're using DataSync with)
+     * must have the `iam:PassRole` permission. The
+     * [AWSDataSyncFullAccess](https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess)
+     * policy includes this permission.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-taskreportconfig)
+     *
+     * @param taskReportConfig Specifies how you want to configure a task report, which provides
+     *   detailed information about your DataSync transfer.
+     */
+    public fun taskReportConfig(taskReportConfig: IResolvable) {
+        cdkBuilder.taskReportConfig(taskReportConfig)
+    }
+
+    /**
+     * Specifies how you want to configure a task report, which provides detailed information about
+     * your DataSync transfer.
+     *
+     * For more information, see
+     * [Monitoring your DataSync transfers with task reports](https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html)
+     * .
+     *
+     * When using this parameter, your caller identity (the role that you're using DataSync with)
+     * must have the `iam:PassRole` permission. The
+     * [AWSDataSyncFullAccess](https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess)
+     * policy includes this permission.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-taskreportconfig)
+     *
+     * @param taskReportConfig Specifies how you want to configure a task report, which provides
+     *   detailed information about your DataSync transfer.
+     */
+    public fun taskReportConfig(taskReportConfig: CfnTask.TaskReportConfigProperty) {
+        cdkBuilder.taskReportConfig(taskReportConfig)
     }
 
     public fun build(): CfnTask {

@@ -222,10 +222,6 @@ public class CfnReplicaKeyPropsDsl {
      * operation in the *AWS Key Management Service API Reference* and
      * [Deleting KMS keys](https://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html)
      * in the *AWS Key Management Service Developer Guide* .
-     *
-     * *Minimum* : 7
-     *
-     * *Maximum* : 30
      */
     public fun pendingWindowInDays(pendingWindowInDays: Number) {
         cdkBuilder.pendingWindowInDays(pendingWindowInDays)

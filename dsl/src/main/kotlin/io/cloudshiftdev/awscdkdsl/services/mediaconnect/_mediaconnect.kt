@@ -1502,7 +1502,7 @@ public object mediaconnect {
     }
 
     /**
-     * The settings for attaching a VPC interface to an resource.
+     * The VPC interface that you want to send your output to.
      *
      * Example:
      * ```
@@ -1571,7 +1571,7 @@ public object mediaconnect {
     }
 
     /**
-     * The settings for attaching a VPC interface to an resource.
+     * The VPC interface that you want to send your output to.
      *
      * Example:
      * ```

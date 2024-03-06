@@ -27,7 +27,7 @@ import software.amazon.awscdk.services.appsync.AuthorizationMode
  * Function authFunction;
  * GraphqlApi.Builder.create(this, "api")
  * .name("api")
- * .schema(SchemaFile.fromAsset(join(__dirname, "appsync.test.graphql")))
+ * .definition(Definition.fromFile(join(__dirname, "appsync.test.graphql")))
  * .authorizationConfig(AuthorizationConfig.builder()
  * .defaultAuthorization(AuthorizationMode.builder()
  * .authorizationType(AuthorizationType.LAMBDA)

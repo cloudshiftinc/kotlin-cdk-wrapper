@@ -143,13 +143,15 @@ public class EmrTerminateClusterDsl(
     /**
      * AWS Step Functions integrates with services directly in the Amazon States Language.
      *
-     * You can control these AWS services using service integration patterns
+     * You can control these AWS services using service integration patterns.
+     *
+     * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      *
      * Default: - `IntegrationPattern.REQUEST_RESPONSE` for most tasks. `IntegrationPattern.RUN_JOB`
      * for the following exceptions: `BatchSubmitJob`, `EmrAddStep`, `EmrCreateCluster`,
      * `EmrTerminationCluster`, and `EmrContainersStartJobRun`.
      *
-     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html#connect-wait-token)
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-supported-services.html)
      *
      * @param integrationPattern AWS Step Functions integrates with services directly in the Amazon
      *   States Language.
@@ -224,6 +226,17 @@ public class EmrTerminateClusterDsl(
      */
     public fun resultSelector(resultSelector: Map<String, Any>) {
         cdkBuilder.resultSelector(resultSelector)
+    }
+
+    /**
+     * Optional name for this state.
+     *
+     * Default: - The construct ID will be used as state name
+     *
+     * @param stateName Optional name for this state.
+     */
+    public fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
     }
 
     /**

@@ -76,6 +76,8 @@ public class CfnDatasetPropsDsl {
      * * Interactions
      * * Items
      * * Users
+     * * Actions
+     * * Action_Interactions
      */
     public fun datasetType(datasetType: String) {
         cdkBuilder.datasetType(datasetType)

@@ -23,13 +23,13 @@ import software.amazon.awscdk.services.eks.CfnIdentityProviderConfig
 import software.constructs.Construct
 
 /**
- * Associate an identity provider configuration to a cluster.
+ * Associates an identity provider configuration to a cluster.
  *
  * If you want to authenticate identities using an identity provider, you can create an identity
  * provider configuration and associate it to your cluster. After configuring authentication to your
- * cluster you can create Kubernetes `roles` and `clusterroles` to assign permissions to the roles,
- * and then bind the roles to the identities using Kubernetes `rolebindings` and
- * `clusterrolebindings` . For more information see
+ * cluster you can create Kubernetes `Role` and `ClusterRole` objects, assign permissions to them,
+ * and then bind them to the identities using Kubernetes `RoleBinding` and `ClusterRoleBinding`
+ * objects. For more information see
  * [Using RBAC Authorization](https://docs.aws.amazon.com/https://kubernetes.io/docs/reference/access-authn-authz/rbac/)
  * in the Kubernetes documentation.
  *
@@ -77,11 +77,11 @@ public class CfnIdentityProviderConfigDsl(
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
-     * The cluster that the configuration is associated to.
+     * The name of your cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-identityproviderconfig.html#cfn-eks-identityproviderconfig-clustername)
      *
-     * @param clusterName The cluster that the configuration is associated to.
+     * @param clusterName The name of your cluster.
      */
     public fun clusterName(clusterName: String) {
         cdkBuilder.clusterName(clusterName)
@@ -121,30 +121,28 @@ public class CfnIdentityProviderConfigDsl(
     }
 
     /**
-     * The metadata to apply to the provider configuration to assist with categorization and
-     * organization.
+     * Metadata that assists with categorization and organization.
      *
-     * Each tag consists of a key and an optional value. You define both.
+     * Each tag consists of a key and an optional value. You define both. Tags don't propagate to
+     * any other cluster or AWS resources.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-identityproviderconfig.html#cfn-eks-identityproviderconfig-tags)
      *
-     * @param tags The metadata to apply to the provider configuration to assist with categorization
-     *   and organization.
+     * @param tags Metadata that assists with categorization and organization.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
     /**
-     * The metadata to apply to the provider configuration to assist with categorization and
-     * organization.
+     * Metadata that assists with categorization and organization.
      *
-     * Each tag consists of a key and an optional value. You define both.
+     * Each tag consists of a key and an optional value. You define both. Tags don't propagate to
+     * any other cluster or AWS resources.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-identityproviderconfig.html#cfn-eks-identityproviderconfig-tags)
      *
-     * @param tags The metadata to apply to the provider configuration to assist with categorization
-     *   and organization.
+     * @param tags Metadata that assists with categorization and organization.
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)

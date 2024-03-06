@@ -18,7 +18,7 @@ import software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration
 
 /**
  * `MetadataOptions` is a property of
- * [AWS::AutoScaling::LaunchConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html)
+ * [AWS::AutoScaling::LaunchConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html)
  * that describes metadata options for the instances.
  *
  * For more information, see

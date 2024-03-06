@@ -38,12 +38,7 @@ public class CfnRuleRuleTriggerEventSourcePropertyDsl {
     private val cdkBuilder: CfnRule.RuleTriggerEventSourceProperty.Builder =
         CfnRule.RuleTriggerEventSourceProperty.builder()
 
-    /**
-     * @param eventSourceName The name of the event source. *Allowed values* :
-     *   `OnPostCallAnalysisAvailable` | `OnRealTimeCallAnalysisAvailable` |
-     *   `OnPostChatAnalysisAvailable` | `OnZendeskTicketCreate` | `OnZendeskTicketStatusUpdate` |
-     *   `OnSalesforceCaseCreate`
-     */
+    /** @param eventSourceName The name of the event source. */
     public fun eventSourceName(eventSourceName: String) {
         cdkBuilder.eventSourceName(eventSourceName)
     }

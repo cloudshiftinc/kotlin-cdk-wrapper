@@ -23,15 +23,7 @@ import software.amazon.awscdk.services.opsworks.CfnApp
 import software.constructs.Construct
 
 /**
- * Creates an app for a specified stack. For more information, see
- * [Creating Apps](https://docs.aws.amazon.com/opsworks/latest/userguide/workingapps-creating.html)
- * .
- *
- * *Required Permissions* : To use this action, an IAM user must have a Manage permissions level for
- * the stack, or an attached policy that explicitly grants permissions. For more information on user
- * permissions, see
- * [Managing User Permissions](https://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html)
- * .
+ * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html.
  *
  * Example:
  * ```

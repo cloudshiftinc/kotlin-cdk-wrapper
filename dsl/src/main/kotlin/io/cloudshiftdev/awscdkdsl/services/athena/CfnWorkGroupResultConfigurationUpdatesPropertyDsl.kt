@@ -18,9 +18,8 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.athena.CfnWorkGroup
 
 /**
- * The result configuration information about the queries in this workgroup that will be updated.
- *
- * Includes the updated results location and an updated option for encrypting query results.
+ * The information about the updates in the query results, such as output location and encryption
+ * configuration for the query results.
  *
  * Example:
  * ```
@@ -53,34 +52,22 @@ public class CfnWorkGroupResultConfigurationUpdatesPropertyDsl {
     private val cdkBuilder: CfnWorkGroup.ResultConfigurationUpdatesProperty.Builder =
         CfnWorkGroup.ResultConfigurationUpdatesProperty.builder()
 
-    /**
-     * @param aclConfiguration Indicates that an Amazon S3 canned ACL should be set to control
-     *   ownership of stored query results.
-     */
+    /** @param aclConfiguration The ACL configuration for the query results. */
     public fun aclConfiguration(aclConfiguration: IResolvable) {
         cdkBuilder.aclConfiguration(aclConfiguration)
     }
 
-    /**
-     * @param aclConfiguration Indicates that an Amazon S3 canned ACL should be set to control
-     *   ownership of stored query results.
-     */
+    /** @param aclConfiguration The ACL configuration for the query results. */
     public fun aclConfiguration(aclConfiguration: CfnWorkGroup.AclConfigurationProperty) {
         cdkBuilder.aclConfiguration(aclConfiguration)
     }
 
-    /**
-     * @param encryptionConfiguration If query results are encrypted in Amazon S3, indicates the
-     *   encryption option used (for example, SSE-KMS or CSE-KMS) and key information.
-     */
+    /** @param encryptionConfiguration The encryption configuration for the query results. */
     public fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
         cdkBuilder.encryptionConfiguration(encryptionConfiguration)
     }
 
-    /**
-     * @param encryptionConfiguration If query results are encrypted in Amazon S3, indicates the
-     *   encryption option used (for example, SSE-KMS or CSE-KMS) and key information.
-     */
+    /** @param encryptionConfiguration The encryption configuration for the query results. */
     public fun encryptionConfiguration(
         encryptionConfiguration: CfnWorkGroup.EncryptionConfigurationProperty
     ) {
@@ -88,8 +75,18 @@ public class CfnWorkGroupResultConfigurationUpdatesPropertyDsl {
     }
 
     /**
-     * @param expectedBucketOwner The AWS account ID of the owner of S3 bucket where query results
-     *   are stored.
+     * @param expectedBucketOwner The AWS account ID that you expect to be the owner of the Amazon
+     *   S3 bucket specified by `ResultConfiguration$OutputLocation` . If set, Athena uses the value
+     *   for `ExpectedBucketOwner` when it makes Amazon S3 calls to your specified output location.
+     *   If the `ExpectedBucketOwner` AWS account ID does not match the actual owner of the Amazon
+     *   S3 bucket, the call fails with a permissions error.
+     *
+     * If workgroup settings override client-side settings, then the query uses the
+     * `ExpectedBucketOwner` setting that is specified for the workgroup, and also uses the location
+     * for storing query results specified in the workgroup. See
+     * `WorkGroupConfiguration$EnforceWorkGroupConfiguration` and
+     * [Workgroup Settings Override Client-Side Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html)
+     * .
      */
     public fun expectedBucketOwner(expectedBucketOwner: String) {
         cdkBuilder.expectedBucketOwner(expectedBucketOwner)
@@ -97,50 +94,121 @@ public class CfnWorkGroupResultConfigurationUpdatesPropertyDsl {
 
     /**
      * @param outputLocation The location in Amazon S3 where your query results are stored, such as
-     *   s3://path/to/query/bucket/. To run the query, you must specify the query results location
-     *   using one of the ways: either for individual queries using either this setting
-     *   (client-side), or in the workgroup, using WorkGroupConfiguration
+     *   `s3://path/to/query/bucket/` . For more information, see
+     *   [Query Results](https://docs.aws.amazon.com/athena/latest/ug/querying.html) If workgroup
+     *   settings override client-side settings, then the query uses the location for the query
+     *   results and the encryption configuration that are specified for the workgroup. The
+     *   "workgroup settings override" is specified in EnforceWorkGroupConfiguration (true/false) in
+     *   the WorkGroupConfiguration. See `EnforceWorkGroupConfiguration` .
      */
     public fun outputLocation(outputLocation: String) {
         cdkBuilder.outputLocation(outputLocation)
     }
 
-    /** @param removeAclConfiguration the value to be set. */
+    /**
+     * @param removeAclConfiguration If set to `true` , indicates that the previously-specified ACL
+     *   configuration for queries in this workgroup should be ignored and set to null. If set to
+     *   `false` or not set, and a value is present in the `AclConfiguration` of
+     *   `ResultConfigurationUpdates` , the `AclConfiguration` in the workgroup's
+     *   `ResultConfiguration` is updated with the new value. For more information, see
+     *   [Workgroup Settings Override Client-Side Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html)
+     *   .
+     */
     public fun removeAclConfiguration(removeAclConfiguration: Boolean) {
         cdkBuilder.removeAclConfiguration(removeAclConfiguration)
     }
 
-    /** @param removeAclConfiguration the value to be set. */
+    /**
+     * @param removeAclConfiguration If set to `true` , indicates that the previously-specified ACL
+     *   configuration for queries in this workgroup should be ignored and set to null. If set to
+     *   `false` or not set, and a value is present in the `AclConfiguration` of
+     *   `ResultConfigurationUpdates` , the `AclConfiguration` in the workgroup's
+     *   `ResultConfiguration` is updated with the new value. For more information, see
+     *   [Workgroup Settings Override Client-Side Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html)
+     *   .
+     */
     public fun removeAclConfiguration(removeAclConfiguration: IResolvable) {
         cdkBuilder.removeAclConfiguration(removeAclConfiguration)
     }
 
-    /** @param removeEncryptionConfiguration the value to be set. */
+    /**
+     * @param removeEncryptionConfiguration If set to "true", indicates that the
+     *   previously-specified encryption configuration (also known as the client-side setting) for
+     *   queries in this workgroup should be ignored and set to null. If set to "false" or not set,
+     *   and a value is present in the EncryptionConfiguration in ResultConfigurationUpdates (the
+     *   client-side setting), the EncryptionConfiguration in the workgroup's ResultConfiguration
+     *   will be updated with the new value. For more information, see
+     *   [Workgroup Settings Override Client-Side Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html)
+     *   .
+     */
     public fun removeEncryptionConfiguration(removeEncryptionConfiguration: Boolean) {
         cdkBuilder.removeEncryptionConfiguration(removeEncryptionConfiguration)
     }
 
-    /** @param removeEncryptionConfiguration the value to be set. */
+    /**
+     * @param removeEncryptionConfiguration If set to "true", indicates that the
+     *   previously-specified encryption configuration (also known as the client-side setting) for
+     *   queries in this workgroup should be ignored and set to null. If set to "false" or not set,
+     *   and a value is present in the EncryptionConfiguration in ResultConfigurationUpdates (the
+     *   client-side setting), the EncryptionConfiguration in the workgroup's ResultConfiguration
+     *   will be updated with the new value. For more information, see
+     *   [Workgroup Settings Override Client-Side Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html)
+     *   .
+     */
     public fun removeEncryptionConfiguration(removeEncryptionConfiguration: IResolvable) {
         cdkBuilder.removeEncryptionConfiguration(removeEncryptionConfiguration)
     }
 
-    /** @param removeExpectedBucketOwner the value to be set. */
+    /**
+     * @param removeExpectedBucketOwner If set to "true", removes the AWS account ID previously
+     *   specified for `ResultConfiguration$ExpectedBucketOwner` . If set to "false" or not set, and
+     *   a value is present in the `ExpectedBucketOwner` in `ResultConfigurationUpdates` (the
+     *   client-side setting), the `ExpectedBucketOwner` in the workgroup's `ResultConfiguration` is
+     *   updated with the new value. For more information, see
+     *   [Workgroup Settings Override Client-Side Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html)
+     *   .
+     */
     public fun removeExpectedBucketOwner(removeExpectedBucketOwner: Boolean) {
         cdkBuilder.removeExpectedBucketOwner(removeExpectedBucketOwner)
     }
 
-    /** @param removeExpectedBucketOwner the value to be set. */
+    /**
+     * @param removeExpectedBucketOwner If set to "true", removes the AWS account ID previously
+     *   specified for `ResultConfiguration$ExpectedBucketOwner` . If set to "false" or not set, and
+     *   a value is present in the `ExpectedBucketOwner` in `ResultConfigurationUpdates` (the
+     *   client-side setting), the `ExpectedBucketOwner` in the workgroup's `ResultConfiguration` is
+     *   updated with the new value. For more information, see
+     *   [Workgroup Settings Override Client-Side Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html)
+     *   .
+     */
     public fun removeExpectedBucketOwner(removeExpectedBucketOwner: IResolvable) {
         cdkBuilder.removeExpectedBucketOwner(removeExpectedBucketOwner)
     }
 
-    /** @param removeOutputLocation the value to be set. */
+    /**
+     * @param removeOutputLocation If set to "true", indicates that the previously-specified query
+     *   results location (also known as a client-side setting) for queries in this workgroup should
+     *   be ignored and set to null. If set to "false" or not set, and a value is present in the
+     *   OutputLocation in ResultConfigurationUpdates (the client-side setting), the OutputLocation
+     *   in the workgroup's ResultConfiguration will be updated with the new value. For more
+     *   information, see
+     *   [Workgroup Settings Override Client-Side Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html)
+     *   .
+     */
     public fun removeOutputLocation(removeOutputLocation: Boolean) {
         cdkBuilder.removeOutputLocation(removeOutputLocation)
     }
 
-    /** @param removeOutputLocation the value to be set. */
+    /**
+     * @param removeOutputLocation If set to "true", indicates that the previously-specified query
+     *   results location (also known as a client-side setting) for queries in this workgroup should
+     *   be ignored and set to null. If set to "false" or not set, and a value is present in the
+     *   OutputLocation in ResultConfigurationUpdates (the client-side setting), the OutputLocation
+     *   in the workgroup's ResultConfiguration will be updated with the new value. For more
+     *   information, see
+     *   [Workgroup Settings Override Client-Side Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html)
+     *   .
+     */
     public fun removeOutputLocation(removeOutputLocation: IResolvable) {
         cdkBuilder.removeOutputLocation(removeOutputLocation)
     }

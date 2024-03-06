@@ -40,6 +40,10 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * .build())
  * // the properties below are optional
  * .measureAggregationFunction(AggregationFunctionProperty.builder()
+ * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+ * .simpleAttributeAggregation("simpleAttributeAggregation")
+ * .valueForMultipleValues("valueForMultipleValues")
+ * .build())
  * .categoricalAggregationFunction("categoricalAggregationFunction")
  * .dateAggregationFunction("dateAggregationFunction")
  * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -50,6 +54,7 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * .build())
  * .build())
  * .build())
+ * .seriesType("seriesType")
  * .staticConfiguration(ReferenceLineStaticDataConfigurationProperty.builder()
  * .value(123)
  * .build())
@@ -66,8 +71,8 @@ public class CfnAnalysisReferenceLineDataConfigurationPropertyDsl {
     /**
      * @param axisBinding The axis binding type of the reference line. Choose one of the following
      *   options:.
-     * * PrimaryY
-     * * SecondaryY
+     * * `PrimaryY`
+     * * `SecondaryY`
      */
     public fun axisBinding(axisBinding: String) {
         cdkBuilder.axisBinding(axisBinding)
@@ -89,6 +94,16 @@ public class CfnAnalysisReferenceLineDataConfigurationPropertyDsl {
         dynamicConfiguration: CfnAnalysis.ReferenceLineDynamicDataConfigurationProperty
     ) {
         cdkBuilder.dynamicConfiguration(dynamicConfiguration)
+    }
+
+    /**
+     * @param seriesType The series type of the reference line data configuration. Choose one of the
+     *   following options:.
+     * * `BAR`
+     * * `LINE`
+     */
+    public fun seriesType(seriesType: String) {
+        cdkBuilder.seriesType(seriesType)
     }
 
     /**

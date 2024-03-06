@@ -209,8 +209,8 @@ public class CfnMaintenanceWindowDsl(
      * The date and time, in ISO-8601 Extended format, for when the maintenance window is scheduled
      * to become active.
      *
-     * StartDate allows you to delay activation of the Maintenance Window until the specified future
-     * date.
+     * `StartDate` allows you to delay activation of the maintenance window until the specified
+     * future date.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindow.html#cfn-ssm-maintenancewindow-startdate)
      *

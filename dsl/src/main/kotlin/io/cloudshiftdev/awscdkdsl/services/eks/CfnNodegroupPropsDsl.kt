@@ -105,7 +105,7 @@ public class CfnNodegroupPropsDsl {
         cdkBuilder.capacityType(capacityType)
     }
 
-    /** @param clusterName The name of the cluster to create the node group in. */
+    /** @param clusterName The name of your cluster. */
     public fun clusterName(clusterName: String) {
         cdkBuilder.clusterName(clusterName)
     }
@@ -124,20 +124,20 @@ public class CfnNodegroupPropsDsl {
     }
 
     /**
-     * @param forceUpdateEnabled Force the update if the existing node group's pods are unable to be
-     *   drained due to a pod disruption budget issue. If an update fails because pods could not be
-     *   drained, you can force the update after it fails to terminate the old node whether or not
-     *   any pods are running on the node.
+     * @param forceUpdateEnabled Force the update if any `Pod` on the existing node group can't be
+     *   drained due to a `Pod` disruption budget issue. If an update fails because all Pods can't
+     *   be drained, you can force the update after it fails to terminate the old node whether or
+     *   not any `Pod` is running on the node.
      */
     public fun forceUpdateEnabled(forceUpdateEnabled: Boolean) {
         cdkBuilder.forceUpdateEnabled(forceUpdateEnabled)
     }
 
     /**
-     * @param forceUpdateEnabled Force the update if the existing node group's pods are unable to be
-     *   drained due to a pod disruption budget issue. If an update fails because pods could not be
-     *   drained, you can force the update after it fails to terminate the old node whether or not
-     *   any pods are running on the node.
+     * @param forceUpdateEnabled Force the update if any `Pod` on the existing node group can't be
+     *   drained due to a `Pod` disruption budget issue. If an update fails because all Pods can't
+     *   be drained, you can force the update after it fails to terminate the old node whether or
+     *   not any `Pod` is running on the node.
      */
     public fun forceUpdateEnabled(forceUpdateEnabled: IResolvable) {
         cdkBuilder.forceUpdateEnabled(forceUpdateEnabled)
@@ -182,20 +182,20 @@ public class CfnNodegroupPropsDsl {
     }
 
     /**
-     * @param labels The Kubernetes labels applied to the nodes in the node group.
+     * @param labels The Kubernetes `labels` applied to the nodes in the node group.
      *
-     * Only labels that are applied with the Amazon EKS API are shown here. There may be other
-     * Kubernetes labels applied to the nodes in this group.
+     * Only `labels` that are applied with the Amazon EKS API are shown here. There may be other
+     * Kubernetes `labels` applied to the nodes in this group.
      */
     public fun labels(labels: Map<String, String>) {
         cdkBuilder.labels(labels)
     }
 
     /**
-     * @param labels The Kubernetes labels applied to the nodes in the node group.
+     * @param labels The Kubernetes `labels` applied to the nodes in the node group.
      *
-     * Only labels that are applied with the Amazon EKS API are shown here. There may be other
-     * Kubernetes labels applied to the nodes in this group.
+     * Only `labels` that are applied with the Amazon EKS API are shown here. There may be other
+     * Kubernetes `labels` applied to the nodes in this group.
      */
     public fun labels(labels: IResolvable) {
         cdkBuilder.labels(labels)
@@ -227,7 +227,7 @@ public class CfnNodegroupPropsDsl {
      *   create an IAM role for those nodes to use when they are launched. For more information, see
      *   [Amazon EKS node IAM role](https://docs.aws.amazon.com/eks/latest/userguide/create-node-role.html)
      *   in the **Amazon EKS User Guide** . If you specify `launchTemplate` , then don't specify
-     *   [`IamInstanceProfile`](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IamInstanceProfile.html)
+     *   `[IamInstanceProfile](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IamInstanceProfile.html)`
      *   in your launch template, or the node group deployment will fail. For more information about
      *   using launch templates with Amazon EKS, see
      *   [Launch template support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html)
@@ -299,7 +299,7 @@ public class CfnNodegroupPropsDsl {
     /**
      * @param subnets The subnets to use for the Auto Scaling group that is created for your node
      *   group. If you specify `launchTemplate` , then don't specify
-     *   [`SubnetId`](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterface.html)
+     *   `[SubnetId](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterface.html)`
      *   in your launch template, or the node group deployment will fail. For more information about
      *   using launch templates with Amazon EKS, see
      *   [Launch template support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html)
@@ -312,7 +312,7 @@ public class CfnNodegroupPropsDsl {
     /**
      * @param subnets The subnets to use for the Auto Scaling group that is created for your node
      *   group. If you specify `launchTemplate` , then don't specify
-     *   [`SubnetId`](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterface.html)
+     *   `[SubnetId](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterface.html)`
      *   in your launch template, or the node group deployment will fail. For more information about
      *   using launch templates with Amazon EKS, see
      *   [Launch template support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html)
@@ -323,10 +323,9 @@ public class CfnNodegroupPropsDsl {
     }
 
     /**
-     * @param tags The metadata applied to the node group to assist with categorization and
-     *   organization. Each tag consists of a key and an optional value. You define both. Node group
-     *   tags do not propagate to any other resources associated with the node group, such as the
-     *   Amazon EC2 instances or subnets.
+     * @param tags Metadata that assists with categorization and organization. Each tag consists of
+     *   a key and an optional value. You define both. Tags don't propagate to any other cluster or
+     *   AWS resources.
      */
     public fun tags(tags: Map<String, String>) {
         cdkBuilder.tags(tags)

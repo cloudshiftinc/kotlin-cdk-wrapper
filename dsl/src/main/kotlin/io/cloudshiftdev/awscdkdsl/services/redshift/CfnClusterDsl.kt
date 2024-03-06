@@ -13,6 +13,8 @@ package io.cloudshiftdev.awscdkdsl.services.redshift
 
 import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import io.cloudshiftdev.awscdkdsl.common.MapBuilder
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -39,11 +41,11 @@ import software.constructs.Construct
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.redshift.*;
+ * Object namespaceResourcePolicy;
  * CfnCluster cfnCluster = CfnCluster.Builder.create(this, "MyCfnCluster")
  * .clusterType("clusterType")
  * .dbName("dbName")
  * .masterUsername("masterUsername")
- * .masterUserPassword("masterUserPassword")
  * .nodeType("nodeType")
  * // the properties below are optional
  * .allowVersionUpgrade(false)
@@ -76,11 +78,15 @@ import software.constructs.Construct
  * .kmsKeyId("kmsKeyId")
  * .loggingProperties(LoggingPropertiesProperty.builder()
  * .bucketName("bucketName")
- * // the properties below are optional
  * .s3KeyPrefix("s3KeyPrefix")
  * .build())
  * .maintenanceTrackName("maintenanceTrackName")
+ * .manageMasterPassword(false)
  * .manualSnapshotRetentionPeriod(123)
+ * .masterPasswordSecretKmsKeyId("masterPasswordSecretKmsKeyId")
+ * .masterUserPassword("masterUserPassword")
+ * .multiAz(false)
+ * .namespaceResourcePolicy(namespaceResourcePolicy)
  * .numberOfNodes(123)
  * .ownerAccount("ownerAccount")
  * .port(123)
@@ -732,6 +738,40 @@ public class CfnClusterDsl(
     }
 
     /**
+     * If `true` , Amazon Redshift uses AWS Secrets Manager to manage this cluster's admin
+     * credentials.
+     *
+     * You can't use `MasterUserPassword` if `ManageMasterPassword` is true. If
+     * `ManageMasterPassword` is false or not set, Amazon Redshift uses `MasterUserPassword` for the
+     * admin user account's password.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-managemasterpassword)
+     *
+     * @param manageMasterPassword If `true` , Amazon Redshift uses AWS Secrets Manager to manage
+     *   this cluster's admin credentials.
+     */
+    public fun manageMasterPassword(manageMasterPassword: Boolean) {
+        cdkBuilder.manageMasterPassword(manageMasterPassword)
+    }
+
+    /**
+     * If `true` , Amazon Redshift uses AWS Secrets Manager to manage this cluster's admin
+     * credentials.
+     *
+     * You can't use `MasterUserPassword` if `ManageMasterPassword` is true. If
+     * `ManageMasterPassword` is false or not set, Amazon Redshift uses `MasterUserPassword` for the
+     * admin user account's password.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-managemasterpassword)
+     *
+     * @param manageMasterPassword If `true` , Amazon Redshift uses AWS Secrets Manager to manage
+     *   this cluster's admin credentials.
+     */
+    public fun manageMasterPassword(manageMasterPassword: IResolvable) {
+        cdkBuilder.manageMasterPassword(manageMasterPassword)
+    }
+
+    /**
      * The default number of days to retain a manual snapshot.
      *
      * If the value is -1, the snapshot is retained indefinitely. This setting doesn't change the
@@ -748,7 +788,24 @@ public class CfnClusterDsl(
     }
 
     /**
+     * The ID of the AWS Key Management Service (KMS) key used to encrypt and store the cluster's
+     * admin credentials secret.
+     *
+     * You can only use this parameter if `ManageMasterPassword` is true.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-masterpasswordsecretkmskeyid)
+     *
+     * @param masterPasswordSecretKmsKeyId The ID of the AWS Key Management Service (KMS) key used
+     *   to encrypt and store the cluster's admin credentials secret.
+     */
+    public fun masterPasswordSecretKmsKeyId(masterPasswordSecretKmsKeyId: String) {
+        cdkBuilder.masterPasswordSecretKmsKeyId(masterPasswordSecretKmsKeyId)
+    }
+
+    /**
      * The password associated with the admin user account for the cluster that is being created.
+     *
+     * You can't use `MasterUserPassword` if `ManageMasterPassword` is `true` .
      *
      * Constraints:
      * * Must be between 8 and 64 characters in length.
@@ -787,6 +844,60 @@ public class CfnClusterDsl(
      */
     public fun masterUsername(masterUsername: String) {
         cdkBuilder.masterUsername(masterUsername)
+    }
+
+    /**
+     * A boolean indicating whether Amazon Redshift should deploy the cluster in two Availability
+     * Zones.
+     *
+     * The default is false.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-multiaz)
+     *
+     * @param multiAz A boolean indicating whether Amazon Redshift should deploy the cluster in two
+     *   Availability Zones.
+     */
+    public fun multiAz(multiAz: Boolean) {
+        cdkBuilder.multiAz(multiAz)
+    }
+
+    /**
+     * A boolean indicating whether Amazon Redshift should deploy the cluster in two Availability
+     * Zones.
+     *
+     * The default is false.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-multiaz)
+     *
+     * @param multiAz A boolean indicating whether Amazon Redshift should deploy the cluster in two
+     *   Availability Zones.
+     */
+    public fun multiAz(multiAz: IResolvable) {
+        cdkBuilder.multiAz(multiAz)
+    }
+
+    /**
+     * The policy that is attached to a resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-namespaceresourcepolicy)
+     *
+     * @param namespaceResourcePolicy The policy that is attached to a resource.
+     */
+    public fun namespaceResourcePolicy(namespaceResourcePolicy: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(namespaceResourcePolicy)
+        cdkBuilder.namespaceResourcePolicy(builder.map)
+    }
+
+    /**
+     * The policy that is attached to a resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-namespaceresourcepolicy)
+     *
+     * @param namespaceResourcePolicy The policy that is attached to a resource.
+     */
+    public fun namespaceResourcePolicy(namespaceResourcePolicy: Any) {
+        cdkBuilder.namespaceResourcePolicy(namespaceResourcePolicy)
     }
 
     /**
@@ -912,7 +1023,8 @@ public class CfnClusterDsl(
     /**
      * The Amazon Redshift operation to be performed.
      *
-     * Supported operations are `pause-cluster` and `resume-cluster` .
+     * Supported operations are `pause-cluster` , `resume-cluster` , and `failover-primary-compute`
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-resourceaction)
      *

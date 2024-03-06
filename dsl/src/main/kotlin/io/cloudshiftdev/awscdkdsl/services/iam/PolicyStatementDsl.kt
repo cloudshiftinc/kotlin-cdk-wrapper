@@ -28,18 +28,23 @@ import software.amazon.awscdk.services.iam.PolicyStatement
  *
  * Example:
  * ```
- * // Option 3: Create a new role that allows the account root principal to assume. Add this role in
- * the `system:masters` and witch to this role from the AWS console.
- * Cluster cluster;
- * Role consoleReadOnlyRole = Role.Builder.create(this, "ConsoleReadOnlyRole")
- * .assumedBy(new ArnPrincipal("arn_for_trusted_principal"))
+ * String crossAccountRoleArn = "arn:aws:iam::OTHERACCOUNT:role/CrossAccountRoleName"; // arn of
+ * role deployed in separate account
+ * String callRegion = "us-west-1"; // sdk call to be made in specified region (optional)
+ * // sdk call to be made in specified region (optional)
+ * AwsCustomResource.Builder.create(this, "CrossAccount")
+ * .onCreate(AwsSdkCall.builder()
+ * .assumedRoleArn(crossAccountRoleArn)
+ * .region(callRegion) // optional
+ * .service("sts")
+ * .action("GetCallerIdentity")
+ * .physicalResourceId(PhysicalResourceId.of("id"))
+ * .build())
+ * .policy(AwsCustomResourcePolicy.fromStatements(List.of(PolicyStatement.fromJson(Map.of(
+ * "Effect", "Allow",
+ * "Action", "sts:AssumeRole",
+ * "Resource", crossAccountRoleArn)))))
  * .build();
- * consoleReadOnlyRole.addToPolicy(PolicyStatement.Builder.create()
- * .actions(List.of("eks:AccessKubernetesApi", "eks:Describe*", "eks:List*"))
- * .resources(List.of(cluster.getClusterArn()))
- * .build());
- * // Add this role to system:masters RBAC group
- * cluster.awsAuth.addMastersRole(consoleReadOnlyRole);
  * ```
  */
 @CdkDslMarker

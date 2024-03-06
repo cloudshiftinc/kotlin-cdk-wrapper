@@ -229,6 +229,13 @@ import software.constructs.Construct
  * .build())
  * .sapoData(SAPODataSourcePropertiesProperty.builder()
  * .objectPath("objectPath")
+ * // the properties below are optional
+ * .paginationConfig(SAPODataPaginationConfigProperty.builder()
+ * .maxPageSize(123)
+ * .build())
+ * .parallelismConfig(SAPODataParallelismConfigProperty.builder()
+ * .maxParallelism(123)
+ * .build())
  * .build())
  * .serviceNow(ServiceNowSourcePropertiesProperty.builder()
  * .object("object")
@@ -437,22 +444,28 @@ public class CfnFlowDsl(
     }
 
     /**
-     * Configurations of metadata catalog of the flow.
+     * Specifies the configuration that Amazon AppFlow uses when it catalogs your data.
+     *
+     * When Amazon AppFlow catalogs your data, it stores metadata in a data catalog.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-flow.html#cfn-appflow-flow-metadatacatalogconfig)
      *
-     * @param metadataCatalogConfig Configurations of metadata catalog of the flow.
+     * @param metadataCatalogConfig Specifies the configuration that Amazon AppFlow uses when it
+     *   catalogs your data.
      */
     public fun metadataCatalogConfig(metadataCatalogConfig: IResolvable) {
         cdkBuilder.metadataCatalogConfig(metadataCatalogConfig)
     }
 
     /**
-     * Configurations of metadata catalog of the flow.
+     * Specifies the configuration that Amazon AppFlow uses when it catalogs your data.
+     *
+     * When Amazon AppFlow catalogs your data, it stores metadata in a data catalog.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-flow.html#cfn-appflow-flow-metadatacatalogconfig)
      *
-     * @param metadataCatalogConfig Configurations of metadata catalog of the flow.
+     * @param metadataCatalogConfig Specifies the configuration that Amazon AppFlow uses when it
+     *   catalogs your data.
      */
     public fun metadataCatalogConfig(metadataCatalogConfig: CfnFlow.MetadataCatalogConfigProperty) {
         cdkBuilder.metadataCatalogConfig(metadataCatalogConfig)

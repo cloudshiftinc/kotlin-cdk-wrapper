@@ -26,7 +26,7 @@ import software.constructs.Construct
  * ```
  * GraphqlApi api = GraphqlApi.Builder.create(this, "api")
  * .name("api")
- * .schema(SchemaFile.fromAsset(join(__dirname, "schema.graphql")))
+ * .definition(Definition.fromFile(join(__dirname, "schema.graphql")))
  * .build();
  * HttpDataSource httpDs = api.addHttpDataSource("ds", "https://states.amazonaws.com",
  * HttpDataSourceOptions.builder()

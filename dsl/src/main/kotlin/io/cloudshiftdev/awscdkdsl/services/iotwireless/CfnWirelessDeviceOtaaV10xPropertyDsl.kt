@@ -16,8 +16,6 @@ import kotlin.String
 import software.amazon.awscdk.services.iotwireless.CfnWirelessDevice
 
 /**
- * OTAA device object for create APIs for v1.0.x.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -36,18 +34,15 @@ public class CfnWirelessDeviceOtaaV10xPropertyDsl {
     private val cdkBuilder: CfnWirelessDevice.OtaaV10xProperty.Builder =
         CfnWirelessDevice.OtaaV10xProperty.builder()
 
-    /** @param appEui The AppEUI value, with pattern of `[a-fA-F0-9]{16}` . */
+    /**
+     * @param appEui The AppEUI value. You specify this value when using LoRaWAN versions v1.0.2 or
+     *   v1.0.3.
+     */
     public fun appEui(appEui: String) {
         cdkBuilder.appEui(appEui)
     }
 
-    /**
-     * @param appKey The AppKey is a secret key, which you should handle in a similar way as you
-     *   would an application password. You can protect the AppKey value by storing it in the AWS
-     *   Secrets Manager and use the
-     *   [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-     *   to reference this value.
-     */
+    /** @param appKey The AppKey value. */
     public fun appKey(appKey: String) {
         cdkBuilder.appKey(appKey)
     }

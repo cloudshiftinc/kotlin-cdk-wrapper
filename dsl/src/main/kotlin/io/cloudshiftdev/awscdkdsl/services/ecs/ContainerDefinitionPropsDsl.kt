@@ -22,6 +22,7 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.ecs.ContainerDefinitionProps
 import software.amazon.awscdk.services.ecs.ContainerImage
+import software.amazon.awscdk.services.ecs.CredentialSpec
 import software.amazon.awscdk.services.ecs.EnvironmentFile
 import software.amazon.awscdk.services.ecs.HealthCheck
 import software.amazon.awscdk.services.ecs.LinuxParameters
@@ -43,6 +44,7 @@ import software.amazon.awscdk.services.ecs.Ulimit
  * import software.amazon.awscdk.services.ecs.*;
  * AppProtocol appProtocol;
  * ContainerImage containerImage;
+ * CredentialSpec credentialSpec;
  * EnvironmentFile environmentFile;
  * LinuxParameters linuxParameters;
  * LogDriver logDriver;
@@ -55,6 +57,7 @@ import software.amazon.awscdk.services.ecs.Ulimit
  * .command(List.of("command"))
  * .containerName("containerName")
  * .cpu(123)
+ * .credentialSpecs(List.of(credentialSpec))
  * .disableNetworking(false)
  * .dnsSearchDomains(List.of("dnsSearchDomains"))
  * .dnsServers(List.of("dnsServers"))
@@ -79,6 +82,7 @@ import software.amazon.awscdk.services.ecs.Ulimit
  * .build())
  * .hostname("hostname")
  * .inferenceAcceleratorResources(List.of("inferenceAcceleratorResources"))
+ * .interactive(false)
  * .linuxParameters(linuxParameters)
  * .logging(logDriver)
  * .memoryLimitMiB(123)
@@ -118,6 +122,8 @@ public class ContainerDefinitionPropsDsl {
     private val cdkBuilder: ContainerDefinitionProps.Builder = ContainerDefinitionProps.builder()
 
     private val _command: MutableList<String> = mutableListOf()
+
+    private val _credentialSpecs: MutableList<CredentialSpec> = mutableListOf()
 
     private val _dnsSearchDomains: MutableList<String> = mutableListOf()
 
@@ -161,6 +167,28 @@ public class ContainerDefinitionPropsDsl {
     /** @param cpu The minimum number of CPU units to reserve for the container. */
     public fun cpu(cpu: Number) {
         cdkBuilder.cpu(cpu)
+    }
+
+    /**
+     * @param credentialSpecs A list of ARNs in SSM or Amazon S3 to a credential spec (`CredSpec`)
+     *   file that configures the container for Active Directory authentication. We recommend that
+     *   you use this parameter instead of the `dockerSecurityOptions`.
+     *
+     * Currently, only one credential spec is allowed per container definition.
+     */
+    public fun credentialSpecs(vararg credentialSpecs: CredentialSpec) {
+        _credentialSpecs.addAll(listOf(*credentialSpecs))
+    }
+
+    /**
+     * @param credentialSpecs A list of ARNs in SSM or Amazon S3 to a credential spec (`CredSpec`)
+     *   file that configures the container for Active Directory authentication. We recommend that
+     *   you use this parameter instead of the `dockerSecurityOptions`.
+     *
+     * Currently, only one credential spec is allowed per container definition.
+     */
+    public fun credentialSpecs(credentialSpecs: Collection<CredentialSpec>) {
+        _credentialSpecs.addAll(credentialSpecs)
     }
 
     /**
@@ -313,6 +341,14 @@ public class ContainerDefinitionPropsDsl {
     }
 
     /**
+     * @param interactive When this parameter is true, you can deploy containerized applications
+     *   that require stdin or a tty to be allocated.
+     */
+    public fun interactive(interactive: Boolean) {
+        cdkBuilder.interactive(interactive)
+    }
+
+    /**
      * @param linuxParameters Linux-specific modifications that are applied to the container, such
      *   as Linux kernel capabilities. For more information see
      *   [KernelCapabilities](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_KernelCapabilities.html).
@@ -451,6 +487,7 @@ public class ContainerDefinitionPropsDsl {
 
     public fun build(): ContainerDefinitionProps {
         if (_command.isNotEmpty()) cdkBuilder.command(_command)
+        if (_credentialSpecs.isNotEmpty()) cdkBuilder.credentialSpecs(_credentialSpecs)
         if (_dnsSearchDomains.isNotEmpty()) cdkBuilder.dnsSearchDomains(_dnsSearchDomains)
         if (_dnsServers.isNotEmpty()) cdkBuilder.dnsServers(_dnsServers)
         if (_dockerSecurityOptions.isNotEmpty())

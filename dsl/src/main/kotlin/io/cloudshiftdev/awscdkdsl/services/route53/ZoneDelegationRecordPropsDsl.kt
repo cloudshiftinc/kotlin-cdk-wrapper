@@ -13,6 +13,7 @@ package io.cloudshiftdev.awscdkdsl.services.route53
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Boolean
+import kotlin.Number
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
@@ -39,8 +40,12 @@ import software.amazon.awscdk.services.route53.ZoneDelegationRecordProps
  * .comment("comment")
  * .deleteExisting(false)
  * .geoLocation(geoLocation)
+ * .multiValueAnswer(false)
  * .recordName("recordName")
+ * .region("region")
+ * .setIdentifier("setIdentifier")
  * .ttl(Duration.minutes(30))
+ * .weight(123)
  * .build();
  * ```
  */
@@ -78,6 +83,14 @@ public class ZoneDelegationRecordPropsDsl {
         cdkBuilder.geoLocation(geoLocation)
     }
 
+    /**
+     * @param multiValueAnswer Whether to return multiple values, such as IP addresses for your web
+     *   servers, in response to DNS queries.
+     */
+    public fun multiValueAnswer(multiValueAnswer: Boolean) {
+        cdkBuilder.multiValueAnswer(multiValueAnswer)
+    }
+
     /** @param nameServers The name servers to report in the delegation records. */
     public fun nameServers(vararg nameServers: String) {
         _nameServers.addAll(listOf(*nameServers))
@@ -100,9 +113,48 @@ public class ZoneDelegationRecordPropsDsl {
         cdkBuilder.recordName(recordName)
     }
 
+    /**
+     * @param region The Amazon EC2 Region where you created the resource that this resource record
+     *   set refers to. The resource typically is an AWS resource, such as an EC2 instance or an ELB
+     *   load balancer, and is referred to by an IP address or a DNS domain name, depending on the
+     *   record type.
+     *
+     * When Amazon Route 53 receives a DNS query for a domain name and type for which you have
+     * created latency resource record sets, Route 53 selects the latency resource record set that
+     * has the lowest latency between the end user and the associated Amazon EC2 Region. Route 53
+     * then returns the value that is associated with the selected resource record set.
+     */
+    public fun region(region: String) {
+        cdkBuilder.region(region)
+    }
+
+    /**
+     * @param setIdentifier A string used to distinguish between different records with the same
+     *   combination of DNS name and type. It can only be set when either weight or geoLocation is
+     *   defined.
+     *
+     * This parameter must be between 1 and 128 characters in length.
+     */
+    public fun setIdentifier(setIdentifier: String) {
+        cdkBuilder.setIdentifier(setIdentifier)
+    }
+
     /** @param ttl The resource record cache time to live (TTL). */
     public fun ttl(ttl: Duration) {
         cdkBuilder.ttl(ttl)
+    }
+
+    /**
+     * @param weight Among resource record sets that have the same combination of DNS name and type,
+     *   a value that determines the proportion of DNS queries that Amazon Route 53 responds to
+     *   using the current resource record set. Route 53 calculates the sum of the weights for the
+     *   resource record sets that have the same combination of DNS name and type. Route 53 then
+     *   responds to queries based on the ratio of a resource's weight to the total.
+     *
+     * This value can be a number between 0 and 255.
+     */
+    public fun weight(weight: Number) {
+        cdkBuilder.weight(weight)
     }
 
     /** @param zone The hosted zone in which to define the new record. */

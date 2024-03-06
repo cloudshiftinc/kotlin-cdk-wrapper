@@ -22,6 +22,12 @@ import software.amazon.awscdk.services.s3.BucketNotificationDestinationConfig
 import software.amazon.awscdk.services.s3.BucketPolicy
 import software.amazon.awscdk.services.s3.BucketPolicyProps
 import software.amazon.awscdk.services.s3.BucketProps
+import software.amazon.awscdk.services.s3.CfnAccessGrant
+import software.amazon.awscdk.services.s3.CfnAccessGrantProps
+import software.amazon.awscdk.services.s3.CfnAccessGrantsInstance
+import software.amazon.awscdk.services.s3.CfnAccessGrantsInstanceProps
+import software.amazon.awscdk.services.s3.CfnAccessGrantsLocation
+import software.amazon.awscdk.services.s3.CfnAccessGrantsLocationProps
 import software.amazon.awscdk.services.s3.CfnAccessPoint
 import software.amazon.awscdk.services.s3.CfnAccessPointProps
 import software.amazon.awscdk.services.s3.CfnBucket
@@ -33,6 +39,8 @@ import software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointPolicy
 import software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointPolicyProps
 import software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointProps
 import software.amazon.awscdk.services.s3.CfnStorageLens
+import software.amazon.awscdk.services.s3.CfnStorageLensGroup
+import software.amazon.awscdk.services.s3.CfnStorageLensGroupProps
 import software.amazon.awscdk.services.s3.CfnStorageLensProps
 import software.amazon.awscdk.services.s3.CorsRule
 import software.amazon.awscdk.services.s3.IntelligentTieringConfiguration
@@ -270,6 +278,301 @@ public object s3 {
      */
     public inline fun bucketProps(block: BucketPropsDsl.() -> Unit = {}): BucketProps {
         val builder = BucketPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The `AWS::S3::AccessGrant` resource creates an access grant that gives a grantee access to
+     * your S3 data.
+     *
+     * The grantee can be an IAM user or role or a directory user, or group. Before you can create a
+     * grant, you must have an S3 Access Grants instance in the same Region as the S3 data. You can
+     * create an S3 Access Grants instance using the
+     * [AWS::S3::AccessGrantsInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accessgrantsinstance.html)
+     * . You must also have registered at least one S3 data location in your S3 Access Grants
+     * instance using
+     * [AWS::S3::AccessGrantsLocation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accessgrantslocation.html)
+     * .
+     * * **Permissions** - You must have the `s3:CreateAccessGrant` permission to use this resource.
+     * * **Additional Permissions** - For any directory identity - `sso:DescribeInstance` and
+     *   `sso:DescribeApplication`
+     *
+     * For directory users - `identitystore:DescribeUser`
+     *
+     * For directory groups - `identitystore:DescribeGroup`
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.s3.*;
+     * CfnAccessGrant cfnAccessGrant = CfnAccessGrant.Builder.create(this, "MyCfnAccessGrant")
+     * .accessGrantsLocationId("accessGrantsLocationId")
+     * .grantee(GranteeProperty.builder()
+     * .granteeIdentifier("granteeIdentifier")
+     * .granteeType("granteeType")
+     * .build())
+     * .permission("permission")
+     * // the properties below are optional
+     * .accessGrantsLocationConfiguration(AccessGrantsLocationConfigurationProperty.builder()
+     * .s3SubPrefix("s3SubPrefix")
+     * .build())
+     * .applicationArn("applicationArn")
+     * .s3PrefixType("s3PrefixType")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accessgrant.html)
+     */
+    public inline fun cfnAccessGrant(
+        scope: Construct,
+        id: String,
+        block: CfnAccessGrantDsl.() -> Unit = {},
+    ): CfnAccessGrant {
+        val builder = CfnAccessGrantDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The configuration options of the S3 Access Grants location.
+     *
+     * It contains the `S3SubPrefix` field. The grant scope, the data to which you are granting
+     * access, is the result of appending the `Subprefix` field to the scope of the registered
+     * location.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.s3.*;
+     * AccessGrantsLocationConfigurationProperty accessGrantsLocationConfigurationProperty =
+     * AccessGrantsLocationConfigurationProperty.builder()
+     * .s3SubPrefix("s3SubPrefix")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-accessgrant-accessgrantslocationconfiguration.html)
+     */
+    public inline fun cfnAccessGrantAccessGrantsLocationConfigurationProperty(
+        block: CfnAccessGrantAccessGrantsLocationConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnAccessGrant.AccessGrantsLocationConfigurationProperty {
+        val builder = CfnAccessGrantAccessGrantsLocationConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The user, group, or role to which you are granting access.
+     *
+     * You can grant access to an IAM user or role. If you have added your corporate directory to
+     * AWS IAM Identity Center and associated your Identity Center instance with your S3 Access
+     * Grants instance, the grantee can also be a corporate directory user or group.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.s3.*;
+     * GranteeProperty granteeProperty = GranteeProperty.builder()
+     * .granteeIdentifier("granteeIdentifier")
+     * .granteeType("granteeType")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-accessgrant-grantee.html)
+     */
+    public inline fun cfnAccessGrantGranteeProperty(
+        block: CfnAccessGrantGranteePropertyDsl.() -> Unit = {}
+    ): CfnAccessGrant.GranteeProperty {
+        val builder = CfnAccessGrantGranteePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnAccessGrant`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.s3.*;
+     * CfnAccessGrantProps cfnAccessGrantProps = CfnAccessGrantProps.builder()
+     * .accessGrantsLocationId("accessGrantsLocationId")
+     * .grantee(GranteeProperty.builder()
+     * .granteeIdentifier("granteeIdentifier")
+     * .granteeType("granteeType")
+     * .build())
+     * .permission("permission")
+     * // the properties below are optional
+     * .accessGrantsLocationConfiguration(AccessGrantsLocationConfigurationProperty.builder()
+     * .s3SubPrefix("s3SubPrefix")
+     * .build())
+     * .applicationArn("applicationArn")
+     * .s3PrefixType("s3PrefixType")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accessgrant.html)
+     */
+    public inline fun cfnAccessGrantProps(
+        block: CfnAccessGrantPropsDsl.() -> Unit = {}
+    ): CfnAccessGrantProps {
+        val builder = CfnAccessGrantPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The `AWS::S3::AccessGrantInstance` resource creates an S3 Access Grants instance, which
+     * serves as a logical grouping for access grants.
+     *
+     * You can create one S3 Access Grants instance per Region per account.
+     * * **Permissions** - You must have the `s3:CreateAccessGrantsInstance` permission to use this
+     *   resource.
+     * * **Additional Permissions** - To associate an IAM Identity Center instance with your S3
+     *   Access Grants instance, you must also have the `sso:DescribeInstance` ,
+     *   `sso:CreateApplication` , `sso:PutApplicationGrant` , and
+     *   `sso:PutApplicationAuthenticationMethod` permissions.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.s3.*;
+     * CfnAccessGrantsInstance cfnAccessGrantsInstance = CfnAccessGrantsInstance.Builder.create(this,
+     * "MyCfnAccessGrantsInstance")
+     * .identityCenterArn("identityCenterArn")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accessgrantsinstance.html)
+     */
+    public inline fun cfnAccessGrantsInstance(
+        scope: Construct,
+        id: String,
+        block: CfnAccessGrantsInstanceDsl.() -> Unit = {},
+    ): CfnAccessGrantsInstance {
+        val builder = CfnAccessGrantsInstanceDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnAccessGrantsInstance`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.s3.*;
+     * CfnAccessGrantsInstanceProps cfnAccessGrantsInstanceProps =
+     * CfnAccessGrantsInstanceProps.builder()
+     * .identityCenterArn("identityCenterArn")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accessgrantsinstance.html)
+     */
+    public inline fun cfnAccessGrantsInstanceProps(
+        block: CfnAccessGrantsInstancePropsDsl.() -> Unit = {}
+    ): CfnAccessGrantsInstanceProps {
+        val builder = CfnAccessGrantsInstancePropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The `AWS::S3::AccessGrantsLocation` resource creates the S3 data location that you would like
+     * to register in your S3 Access Grants instance.
+     *
+     * Your S3 data must be in the same Region as your S3 Access Grants instance. The location can
+     * be one of the following:
+     * * The default S3 location `s3://`
+     * * A bucket - `S3://&lt;bucket-name&gt;`
+     * * A bucket and prefix - `S3://&lt;bucket-name&gt;/&lt;prefix&gt;`
+     *
+     * When you register a location, you must include the IAM role that has permission to manage the
+     * S3 location that you are registering. Give S3 Access Grants permission to assume this role
+     * [using a policy](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-grants-location.html)
+     * . S3 Access Grants assumes this role to manage access to the location and to vend temporary
+     * credentials to grantees or client applications.
+     * * **Permissions** - You must have the `s3:CreateAccessGrantsLocation` permission to use this
+     *   resource.
+     * * **Additional Permissions** - You must also have the following permission for the specified
+     *   IAM role: `iam:PassRole`
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.s3.*;
+     * CfnAccessGrantsLocation cfnAccessGrantsLocation = CfnAccessGrantsLocation.Builder.create(this,
+     * "MyCfnAccessGrantsLocation")
+     * .iamRoleArn("iamRoleArn")
+     * .locationScope("locationScope")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accessgrantslocation.html)
+     */
+    public inline fun cfnAccessGrantsLocation(
+        scope: Construct,
+        id: String,
+        block: CfnAccessGrantsLocationDsl.() -> Unit = {},
+    ): CfnAccessGrantsLocation {
+        val builder = CfnAccessGrantsLocationDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnAccessGrantsLocation`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.s3.*;
+     * CfnAccessGrantsLocationProps cfnAccessGrantsLocationProps =
+     * CfnAccessGrantsLocationProps.builder()
+     * .iamRoleArn("iamRoleArn")
+     * .locationScope("locationScope")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accessgrantslocation.html)
+     */
+    public inline fun cfnAccessGrantsLocationProps(
+        block: CfnAccessGrantsLocationPropsDsl.() -> Unit = {}
+    ): CfnAccessGrantsLocationProps {
+        val builder = CfnAccessGrantsLocationPropsDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -858,8 +1161,15 @@ public object s3 {
     }
 
     /**
-     * Specifies the Amazon S3 object key name to filter on and whether to filter on the suffix or
-     * prefix of the key name.
+     * Specifies the Amazon S3 object key name to filter on.
+     *
+     * An object key name is the name assigned to an object in your Amazon S3 bucket. You specify
+     * whether to filter on the suffix or prefix of the object key name. A prefix is a specific
+     * string of characters at the beginning of an object key name, which you can use to organize
+     * objects. For example, you can start the key names of related objects with a prefix, such as
+     * `2023-` or `engineering/` . Then, you can use `FilterRule` to find objects in a bucket with
+     * key names that have the same prefix. A suffix is similar to a prefix, but it is at the end of
+     * the object key name instead of at the beginning.
      *
      * Example:
      * ```
@@ -1086,10 +1396,17 @@ public object s3 {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.s3.*;
+     * Object simplePrefix;
      * LoggingConfigurationProperty loggingConfigurationProperty =
      * LoggingConfigurationProperty.builder()
      * .destinationBucketName("destinationBucketName")
      * .logFilePrefix("logFilePrefix")
+     * .targetObjectKeyFormat(TargetObjectKeyFormatProperty.builder()
+     * .partitionedPrefix(PartitionedPrefixProperty.builder()
+     * .partitionDateSource("partitionDateSource")
+     * .build())
+     * .simplePrefix(simplePrefix)
+     * .build())
      * .build();
      * ```
      *
@@ -1480,6 +1797,33 @@ public object s3 {
     }
 
     /**
+     * Amazon S3 keys for log objects are partitioned in the following format:.
+     *
+     * `[DestinationPrefix][SourceAccountId]/[SourceRegion]/[SourceBucket]/[YYYY]/[MM]/[DD]/[YYYY]-[MM]-[DD]-[hh]-[mm]-[ss]-[UniqueString]`
+     *
+     * PartitionedPrefix defaults to EventTime delivery when server access logs are delivered.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.s3.*;
+     * PartitionedPrefixProperty partitionedPrefixProperty = PartitionedPrefixProperty.builder()
+     * .partitionDateSource("partitionDateSource")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-partitionedprefix.html)
+     */
+    public inline fun cfnBucketPartitionedPrefixProperty(
+        block: CfnBucketPartitionedPrefixPropertyDsl.() -> Unit = {}
+    ): CfnBucket.PartitionedPrefixProperty {
+        val builder = CfnBucketPartitionedPrefixPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Applies an Amazon S3 bucket policy to an Amazon S3 bucket.
      *
      * If you are using an identity other than the root user of the AWS account that owns the
@@ -1722,7 +2066,11 @@ public object s3 {
     /**
      * A container for replication rules.
      *
-     * You can add up to 1,000 rules. The maximum size of a replication configuration is 2 MB.
+     * You can add up to 1,000 rules. The maximum size of a replication configuration is 2 MB. The
+     * latest version of the replication configuration XML is V2. For more information about XML V2
+     * replication configurations, see
+     * [Replication configuration](https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication-add-config.html)
+     * in the *Amazon S3 User Guide* .
      *
      * Example:
      * ```
@@ -2409,6 +2757,36 @@ public object s3 {
     }
 
     /**
+     * Amazon S3 key format for log objects.
+     *
+     * Only one format, PartitionedPrefix or SimplePrefix, is allowed.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.s3.*;
+     * Object simplePrefix;
+     * TargetObjectKeyFormatProperty targetObjectKeyFormatProperty =
+     * TargetObjectKeyFormatProperty.builder()
+     * .partitionedPrefix(PartitionedPrefixProperty.builder()
+     * .partitionDateSource("partitionDateSource")
+     * .build())
+     * .simplePrefix(simplePrefix)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-targetobjectkeyformat.html)
+     */
+    public inline fun cfnBucketTargetObjectKeyFormatProperty(
+        block: CfnBucketTargetObjectKeyFormatPropertyDsl.() -> Unit = {}
+    ): CfnBucket.TargetObjectKeyFormatProperty {
+        val builder = CfnBucketTargetObjectKeyFormatPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The S3 Intelligent-Tiering storage class is designed to optimize storage costs by
      * automatically moving data to the most cost-effective storage access tier, without additional
      * operational overhead.
@@ -2838,6 +3216,12 @@ public object s3 {
      * .detailedStatusCodesMetrics(DetailedStatusCodesMetricsProperty.builder()
      * .isEnabled(false)
      * .build())
+     * .storageLensGroupLevel(StorageLensGroupLevelProperty.builder()
+     * .storageLensGroupSelectionCriteria(StorageLensGroupSelectionCriteriaProperty.builder()
+     * .exclude(List.of("exclude"))
+     * .include(List.of("include"))
+     * .build())
+     * .build())
      * .build())
      * .id("id")
      * .isEnabled(false)
@@ -2939,6 +3323,12 @@ public object s3 {
      * .build())
      * .detailedStatusCodesMetrics(DetailedStatusCodesMetricsProperty.builder()
      * .isEnabled(false)
+     * .build())
+     * .storageLensGroupLevel(StorageLensGroupLevelProperty.builder()
+     * .storageLensGroupSelectionCriteria(StorageLensGroupSelectionCriteriaProperty.builder()
+     * .exclude(List.of("exclude"))
+     * .include(List.of("include"))
+     * .build())
      * .build())
      * .build();
      * ```
@@ -3278,6 +3668,368 @@ public object s3 {
     }
 
     /**
+     * The `AWS::S3::StorageLensGroup` resource creates an S3 Storage Lens group.
+     *
+     * A Storage Lens group is a custom grouping of objects that include filters for prefixes,
+     * suffixes, object tags, object size, or object age. You can create an S3 Storage Lens group
+     * that includes a single filter or multiple filter conditions. To specify multiple filter
+     * conditions, you use `AND` or `OR` logical operators. For more information about S3 Storage
+     * Lens groups, see
+     * [Working with S3 Storage Lens groups](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups-overview.html)
+     * .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.s3.*;
+     * CfnStorageLensGroup cfnStorageLensGroup = CfnStorageLensGroup.Builder.create(this,
+     * "MyCfnStorageLensGroup")
+     * .filter(FilterProperty.builder()
+     * .and(AndProperty.builder()
+     * .matchAnyPrefix(List.of("matchAnyPrefix"))
+     * .matchAnySuffix(List.of("matchAnySuffix"))
+     * .matchAnyTag(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .matchObjectAge(MatchObjectAgeProperty.builder()
+     * .daysGreaterThan(123)
+     * .daysLessThan(123)
+     * .build())
+     * .matchObjectSize(MatchObjectSizeProperty.builder()
+     * .bytesGreaterThan(123)
+     * .bytesLessThan(123)
+     * .build())
+     * .build())
+     * .matchAnyPrefix(List.of("matchAnyPrefix"))
+     * .matchAnySuffix(List.of("matchAnySuffix"))
+     * .matchAnyTag(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .matchObjectAge(MatchObjectAgeProperty.builder()
+     * .daysGreaterThan(123)
+     * .daysLessThan(123)
+     * .build())
+     * .matchObjectSize(MatchObjectSizeProperty.builder()
+     * .bytesGreaterThan(123)
+     * .bytesLessThan(123)
+     * .build())
+     * .or(OrProperty.builder()
+     * .matchAnyPrefix(List.of("matchAnyPrefix"))
+     * .matchAnySuffix(List.of("matchAnySuffix"))
+     * .matchAnyTag(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .matchObjectAge(MatchObjectAgeProperty.builder()
+     * .daysGreaterThan(123)
+     * .daysLessThan(123)
+     * .build())
+     * .matchObjectSize(MatchObjectSizeProperty.builder()
+     * .bytesGreaterThan(123)
+     * .bytesLessThan(123)
+     * .build())
+     * .build())
+     * .build())
+     * .name("name")
+     * // the properties below are optional
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-storagelensgroup.html)
+     */
+    public inline fun cfnStorageLensGroup(
+        scope: Construct,
+        id: String,
+        block: CfnStorageLensGroupDsl.() -> Unit = {},
+    ): CfnStorageLensGroup {
+        val builder = CfnStorageLensGroupDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * This resource is a logical operator that allows multiple filter conditions to be joined for
+     * more complex comparisons of Storage Lens group data.
+     *
+     * Objects must match all of the listed filter conditions that are joined by the `And` logical
+     * operator. Only one of each filter condition is allowed.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.s3.*;
+     * AndProperty andProperty = AndProperty.builder()
+     * .matchAnyPrefix(List.of("matchAnyPrefix"))
+     * .matchAnySuffix(List.of("matchAnySuffix"))
+     * .matchAnyTag(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .matchObjectAge(MatchObjectAgeProperty.builder()
+     * .daysGreaterThan(123)
+     * .daysLessThan(123)
+     * .build())
+     * .matchObjectSize(MatchObjectSizeProperty.builder()
+     * .bytesGreaterThan(123)
+     * .bytesLessThan(123)
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelensgroup-and.html)
+     */
+    public inline fun cfnStorageLensGroupAndProperty(
+        block: CfnStorageLensGroupAndPropertyDsl.() -> Unit = {}
+    ): CfnStorageLensGroup.AndProperty {
+        val builder = CfnStorageLensGroupAndPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * This resource sets the criteria for the Storage Lens group data that is displayed.
+     *
+     * For multiple filter conditions, the `AND` or `OR` logical operator is used.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.s3.*;
+     * FilterProperty filterProperty = FilterProperty.builder()
+     * .and(AndProperty.builder()
+     * .matchAnyPrefix(List.of("matchAnyPrefix"))
+     * .matchAnySuffix(List.of("matchAnySuffix"))
+     * .matchAnyTag(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .matchObjectAge(MatchObjectAgeProperty.builder()
+     * .daysGreaterThan(123)
+     * .daysLessThan(123)
+     * .build())
+     * .matchObjectSize(MatchObjectSizeProperty.builder()
+     * .bytesGreaterThan(123)
+     * .bytesLessThan(123)
+     * .build())
+     * .build())
+     * .matchAnyPrefix(List.of("matchAnyPrefix"))
+     * .matchAnySuffix(List.of("matchAnySuffix"))
+     * .matchAnyTag(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .matchObjectAge(MatchObjectAgeProperty.builder()
+     * .daysGreaterThan(123)
+     * .daysLessThan(123)
+     * .build())
+     * .matchObjectSize(MatchObjectSizeProperty.builder()
+     * .bytesGreaterThan(123)
+     * .bytesLessThan(123)
+     * .build())
+     * .or(OrProperty.builder()
+     * .matchAnyPrefix(List.of("matchAnyPrefix"))
+     * .matchAnySuffix(List.of("matchAnySuffix"))
+     * .matchAnyTag(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .matchObjectAge(MatchObjectAgeProperty.builder()
+     * .daysGreaterThan(123)
+     * .daysLessThan(123)
+     * .build())
+     * .matchObjectSize(MatchObjectSizeProperty.builder()
+     * .bytesGreaterThan(123)
+     * .bytesLessThan(123)
+     * .build())
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelensgroup-filter.html)
+     */
+    public inline fun cfnStorageLensGroupFilterProperty(
+        block: CfnStorageLensGroupFilterPropertyDsl.() -> Unit = {}
+    ): CfnStorageLensGroup.FilterProperty {
+        val builder = CfnStorageLensGroupFilterPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * This resource contains `DaysGreaterThan` and `DaysLessThan` to define the object age range
+     * (minimum and maximum number of days).
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.s3.*;
+     * MatchObjectAgeProperty matchObjectAgeProperty = MatchObjectAgeProperty.builder()
+     * .daysGreaterThan(123)
+     * .daysLessThan(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelensgroup-matchobjectage.html)
+     */
+    public inline fun cfnStorageLensGroupMatchObjectAgeProperty(
+        block: CfnStorageLensGroupMatchObjectAgePropertyDsl.() -> Unit = {}
+    ): CfnStorageLensGroup.MatchObjectAgeProperty {
+        val builder = CfnStorageLensGroupMatchObjectAgePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * This resource filters objects that match the specified object size range.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.s3.*;
+     * MatchObjectSizeProperty matchObjectSizeProperty = MatchObjectSizeProperty.builder()
+     * .bytesGreaterThan(123)
+     * .bytesLessThan(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelensgroup-matchobjectsize.html)
+     */
+    public inline fun cfnStorageLensGroupMatchObjectSizeProperty(
+        block: CfnStorageLensGroupMatchObjectSizePropertyDsl.() -> Unit = {}
+    ): CfnStorageLensGroup.MatchObjectSizeProperty {
+        val builder = CfnStorageLensGroupMatchObjectSizePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * This resource contains the `Or` logical operator, which allows multiple filter conditions to
+     * be joined for more complex comparisons of Storage Lens group data.
+     *
+     * Objects can match any of the listed filter conditions that are joined by the `Or` logical
+     * operator. Only one of each filter condition is allowed.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.s3.*;
+     * OrProperty orProperty = OrProperty.builder()
+     * .matchAnyPrefix(List.of("matchAnyPrefix"))
+     * .matchAnySuffix(List.of("matchAnySuffix"))
+     * .matchAnyTag(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .matchObjectAge(MatchObjectAgeProperty.builder()
+     * .daysGreaterThan(123)
+     * .daysLessThan(123)
+     * .build())
+     * .matchObjectSize(MatchObjectSizeProperty.builder()
+     * .bytesGreaterThan(123)
+     * .bytesLessThan(123)
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelensgroup-or.html)
+     */
+    public inline fun cfnStorageLensGroupOrProperty(
+        block: CfnStorageLensGroupOrPropertyDsl.() -> Unit = {}
+    ): CfnStorageLensGroup.OrProperty {
+        val builder = CfnStorageLensGroupOrPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnStorageLensGroup`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.s3.*;
+     * CfnStorageLensGroupProps cfnStorageLensGroupProps = CfnStorageLensGroupProps.builder()
+     * .filter(FilterProperty.builder()
+     * .and(AndProperty.builder()
+     * .matchAnyPrefix(List.of("matchAnyPrefix"))
+     * .matchAnySuffix(List.of("matchAnySuffix"))
+     * .matchAnyTag(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .matchObjectAge(MatchObjectAgeProperty.builder()
+     * .daysGreaterThan(123)
+     * .daysLessThan(123)
+     * .build())
+     * .matchObjectSize(MatchObjectSizeProperty.builder()
+     * .bytesGreaterThan(123)
+     * .bytesLessThan(123)
+     * .build())
+     * .build())
+     * .matchAnyPrefix(List.of("matchAnyPrefix"))
+     * .matchAnySuffix(List.of("matchAnySuffix"))
+     * .matchAnyTag(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .matchObjectAge(MatchObjectAgeProperty.builder()
+     * .daysGreaterThan(123)
+     * .daysLessThan(123)
+     * .build())
+     * .matchObjectSize(MatchObjectSizeProperty.builder()
+     * .bytesGreaterThan(123)
+     * .bytesLessThan(123)
+     * .build())
+     * .or(OrProperty.builder()
+     * .matchAnyPrefix(List.of("matchAnyPrefix"))
+     * .matchAnySuffix(List.of("matchAnySuffix"))
+     * .matchAnyTag(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .matchObjectAge(MatchObjectAgeProperty.builder()
+     * .daysGreaterThan(123)
+     * .daysLessThan(123)
+     * .build())
+     * .matchObjectSize(MatchObjectSizeProperty.builder()
+     * .bytesGreaterThan(123)
+     * .bytesLessThan(123)
+     * .build())
+     * .build())
+     * .build())
+     * .name("name")
+     * // the properties below are optional
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-storagelensgroup.html)
+     */
+    public inline fun cfnStorageLensGroupProps(
+        block: CfnStorageLensGroupPropsDsl.() -> Unit = {}
+    ): CfnStorageLensGroupProps {
+        val builder = CfnStorageLensGroupPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * This resource contains the details of the prefix-level of the Amazon S3 Storage Lens.
      *
      * Example:
@@ -3385,6 +4137,12 @@ public object s3 {
      * .build())
      * .detailedStatusCodesMetrics(DetailedStatusCodesMetricsProperty.builder()
      * .isEnabled(false)
+     * .build())
+     * .storageLensGroupLevel(StorageLensGroupLevelProperty.builder()
+     * .storageLensGroupSelectionCriteria(StorageLensGroupSelectionCriteriaProperty.builder()
+     * .exclude(List.of("exclude"))
+     * .include(List.of("include"))
+     * .build())
      * .build())
      * .build())
      * .id("id")
@@ -3574,6 +4332,12 @@ public object s3 {
      * .detailedStatusCodesMetrics(DetailedStatusCodesMetricsProperty.builder()
      * .isEnabled(false)
      * .build())
+     * .storageLensGroupLevel(StorageLensGroupLevelProperty.builder()
+     * .storageLensGroupSelectionCriteria(StorageLensGroupSelectionCriteriaProperty.builder()
+     * .exclude(List.of("exclude"))
+     * .include(List.of("include"))
+     * .build())
+     * .build())
      * .build())
      * .id("id")
      * .isEnabled(false)
@@ -3618,6 +4382,64 @@ public object s3 {
         block: CfnStorageLensStorageLensConfigurationPropertyDsl.() -> Unit = {}
     ): CfnStorageLens.StorageLensConfigurationProperty {
         val builder = CfnStorageLensStorageLensConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * This resource determines the scope of Storage Lens group data that is displayed in the
+     * Storage Lens dashboard.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.s3.*;
+     * StorageLensGroupLevelProperty storageLensGroupLevelProperty =
+     * StorageLensGroupLevelProperty.builder()
+     * .storageLensGroupSelectionCriteria(StorageLensGroupSelectionCriteriaProperty.builder()
+     * .exclude(List.of("exclude"))
+     * .include(List.of("include"))
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-storagelensgrouplevel.html)
+     */
+    public inline fun cfnStorageLensStorageLensGroupLevelProperty(
+        block: CfnStorageLensStorageLensGroupLevelPropertyDsl.() -> Unit = {}
+    ): CfnStorageLens.StorageLensGroupLevelProperty {
+        val builder = CfnStorageLensStorageLensGroupLevelPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * This resource indicates which Storage Lens group ARNs to include or exclude in the Storage
+     * Lens group aggregation.
+     *
+     * You can only attach Storage Lens groups to your dashboard if they're included in your Storage
+     * Lens group aggregation. If this value is left null, then all Storage Lens groups are
+     * selected.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.s3.*;
+     * StorageLensGroupSelectionCriteriaProperty storageLensGroupSelectionCriteriaProperty =
+     * StorageLensGroupSelectionCriteriaProperty.builder()
+     * .exclude(List.of("exclude"))
+     * .include(List.of("include"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-storagelensgroupselectioncriteria.html)
+     */
+    public inline fun cfnStorageLensStorageLensGroupSelectionCriteriaProperty(
+        block: CfnStorageLensStorageLensGroupSelectionCriteriaPropertyDsl.() -> Unit = {}
+    ): CfnStorageLens.StorageLensGroupSelectionCriteriaProperty {
+        val builder = CfnStorageLensStorageLensGroupSelectionCriteriaPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -3801,11 +4623,13 @@ public object s3 {
      * Function.Builder.create(lambdaStack, "Lambda")
      * .code(lambdaCode)
      * .handler("index.handler")
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .build();
      * // other resources that your Lambda needs, added to the lambdaStack...
      * Stack pipelineStack = new Stack(app, "PipelineStack");
-     * Pipeline pipeline = new Pipeline(pipelineStack, "Pipeline");
+     * Pipeline pipeline = Pipeline.Builder.create(pipelineStack, "Pipeline")
+     * .crossAccountKeys(true)
+     * .build();
      * // add the source code repository containing this code to your Pipeline,
      * // and the source code of the Lambda Function, if they're separate
      * Artifact cdkSourceOutput = new Artifact();
@@ -3833,7 +4657,7 @@ public object s3 {
      * // adjust the build environment and/or commands accordingly
      * Project cdkBuildProject = Project.Builder.create(pipelineStack, "CdkBuildProject")
      * .environment(BuildEnvironment.builder()
-     * .buildImage(LinuxBuildImage.UBUNTU_14_04_NODEJS_10_1_0)
+     * .buildImage(LinuxBuildImage.STANDARD_7_0)
      * .build())
      * .buildSpec(BuildSpec.fromObject(Map.of(
      * "version", "0.2",
@@ -3858,7 +4682,7 @@ public object s3 {
      * situation
      * Project lambdaBuildProject = Project.Builder.create(pipelineStack, "LambdaBuildProject")
      * .environment(BuildEnvironment.builder()
-     * .buildImage(LinuxBuildImage.UBUNTU_14_04_NODEJS_10_1_0)
+     * .buildImage(LinuxBuildImage.STANDARD_7_0)
      * .build())
      * .buildSpec(BuildSpec.fromObject(Map.of(
      * "version", "0.2",

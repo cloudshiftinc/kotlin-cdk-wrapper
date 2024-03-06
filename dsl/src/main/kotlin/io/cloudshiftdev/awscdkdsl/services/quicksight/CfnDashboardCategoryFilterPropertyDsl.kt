@@ -53,6 +53,7 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * .matchOperator("matchOperator")
  * // the properties below are optional
  * .categoryValues(List.of("categoryValues"))
+ * .nullOption("nullOption")
  * .selectAllOptions("selectAllOptions")
  * .build())
  * .build())

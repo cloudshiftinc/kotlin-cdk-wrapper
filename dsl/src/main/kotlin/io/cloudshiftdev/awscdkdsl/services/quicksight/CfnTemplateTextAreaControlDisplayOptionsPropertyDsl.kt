@@ -25,6 +25,10 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * import software.amazon.awscdk.services.quicksight.*;
  * TextAreaControlDisplayOptionsProperty textAreaControlDisplayOptionsProperty =
  * TextAreaControlDisplayOptionsProperty.builder()
+ * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+ * .infoIconText("infoIconText")
+ * .visibility("visibility")
+ * .build())
  * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
  * .visibility("visibility")
  * .build())
@@ -52,6 +56,18 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
 public class CfnTemplateTextAreaControlDisplayOptionsPropertyDsl {
     private val cdkBuilder: CfnTemplate.TextAreaControlDisplayOptionsProperty.Builder =
         CfnTemplate.TextAreaControlDisplayOptionsProperty.builder()
+
+    /** @param infoIconLabelOptions The configuration of info icon label options. */
+    public fun infoIconLabelOptions(infoIconLabelOptions: IResolvable) {
+        cdkBuilder.infoIconLabelOptions(infoIconLabelOptions)
+    }
+
+    /** @param infoIconLabelOptions The configuration of info icon label options. */
+    public fun infoIconLabelOptions(
+        infoIconLabelOptions: CfnTemplate.SheetControlInfoIconLabelOptionsProperty
+    ) {
+        cdkBuilder.infoIconLabelOptions(infoIconLabelOptions)
+    }
 
     /**
      * @param placeholderOptions The configuration of the placeholder options in a text area

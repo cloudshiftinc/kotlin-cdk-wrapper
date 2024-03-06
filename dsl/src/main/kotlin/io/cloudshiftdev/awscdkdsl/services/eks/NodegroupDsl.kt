@@ -65,6 +65,8 @@ import software.constructs.Construct
  * .version("version")
  * .build())
  * .maxSize(123)
+ * .maxUnavailable(123)
+ * .maxUnavailablePercentage(123)
  * .minSize(123)
  * .nodegroupName("nodegroupName")
  * .nodeRole(role)
@@ -260,6 +262,44 @@ public class NodegroupDsl(
      */
     public fun maxSize(maxSize: Number) {
         cdkBuilder.maxSize(maxSize)
+    }
+
+    /**
+     * The maximum number of nodes unavailable at once during a version update.
+     *
+     * Nodes will be updated in parallel. The maximum number is 100.
+     *
+     * This value or `maxUnavailablePercentage` is required to have a value for custom update
+     * configurations to be applied.
+     *
+     * Default: 1
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-updateconfig.html#cfn-eks-nodegroup-updateconfig-maxunavailable)
+     *
+     * @param maxUnavailable The maximum number of nodes unavailable at once during a version
+     *   update.
+     */
+    public fun maxUnavailable(maxUnavailable: Number) {
+        cdkBuilder.maxUnavailable(maxUnavailable)
+    }
+
+    /**
+     * The maximum percentage of nodes unavailable during a version update.
+     *
+     * This percentage of nodes will be updated in parallel, up to 100 nodes at once.
+     *
+     * This value or `maxUnavailable` is required to have a value for custom update configurations
+     * to be applied.
+     *
+     * Default: undefined - node groups will update instances one at a time
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-updateconfig.html#cfn-eks-nodegroup-updateconfig-maxunavailablepercentage)
+     *
+     * @param maxUnavailablePercentage The maximum percentage of nodes unavailable during a version
+     *   update.
+     */
+    public fun maxUnavailablePercentage(maxUnavailablePercentage: Number) {
+        cdkBuilder.maxUnavailablePercentage(maxUnavailablePercentage)
     }
 
     /**

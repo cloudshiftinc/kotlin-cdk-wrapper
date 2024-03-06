@@ -967,7 +967,7 @@ public object evidently {
      * traffic splits for the different audience segments.
      *
      * For more information about segment pattern syntax, see
-     * [Segment rule pattern syntax](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments-syntax.html)
+     * [Segment rule pattern syntax](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html#CloudWatch-Evidently-segments-syntax)
      * .
      *
      * The pattern that you define for a segment is matched against the value of `evaluationContext`

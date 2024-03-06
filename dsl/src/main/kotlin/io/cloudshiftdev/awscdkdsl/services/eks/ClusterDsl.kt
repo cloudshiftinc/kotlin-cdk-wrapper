@@ -47,7 +47,7 @@ import software.constructs.Construct
  * Example:
  * ```
  * Cluster cluster = Cluster.Builder.create(this, "HelloEKS")
- * .version(KubernetesVersion.V1_27)
+ * .version(KubernetesVersion.V1_29)
  * .defaultCapacity(0)
  * .build();
  * cluster.addNodegroupCapacity("custom-node-group", NodegroupOptions.builder()
@@ -341,7 +341,7 @@ public class ClusterDsl(
      * ```
      * LayerVersion layer = LayerVersion.Builder.create(this, "proxy-agent-layer")
      * .code(Code.fromAsset(String.format("%s/layer.zip", __dirname)))
-     * .compatibleRuntimes(List.of(Runtime.NODEJS_14_X))
+     * .compatibleRuntimes(List.of(Runtime.NODEJS_LATEST))
      * .build();
      * ```
      *
@@ -509,8 +509,6 @@ public class ClusterDsl(
     /**
      * Where to place EKS Control Plane ENIs.
      *
-     * If you want to create public load balancers, this must include public subnets.
-     *
      * For example, to only select private subnets, supply the following:
      *
      * `vpcSubnets: [{ subnetType: ec2.SubnetType.PRIVATE_WITH_EGRESS }]`
@@ -525,8 +523,6 @@ public class ClusterDsl(
 
     /**
      * Where to place EKS Control Plane ENIs.
-     *
-     * If you want to create public load balancers, this must include public subnets.
      *
      * For example, to only select private subnets, supply the following:
      *

@@ -63,7 +63,7 @@ public class CfnFargateProfilePropsDsl {
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
-    /** @param clusterName The name of the Amazon EKS cluster to apply the Fargate profile to. */
+    /** @param clusterName The name of your cluster. */
     public fun clusterName(clusterName: String) {
         cdkBuilder.clusterName(clusterName)
     }
@@ -74,11 +74,11 @@ public class CfnFargateProfilePropsDsl {
     }
 
     /**
-     * @param podExecutionRoleArn The Amazon Resource Name (ARN) of the pod execution role to use
-     *   for pods that match the selectors in the Fargate profile. The pod execution role allows
-     *   Fargate infrastructure to register with your cluster as a node, and it provides read access
-     *   to Amazon ECR image repositories. For more information, see
-     *   [Pod Execution Role](https://docs.aws.amazon.com/eks/latest/userguide/pod-execution-role.html)
+     * @param podExecutionRoleArn The Amazon Resource Name (ARN) of the `Pod` execution role to use
+     *   for a `Pod` that matches the selectors in the Fargate profile. The `Pod` execution role
+     *   allows Fargate infrastructure to register with your cluster as a node, and it provides read
+     *   access to Amazon ECR image repositories. For more information, see
+     *   [`Pod` execution role](https://docs.aws.amazon.com/eks/latest/userguide/pod-execution-role.html)
      *   in the *Amazon EKS User Guide* .
      */
     public fun podExecutionRoleArn(podExecutionRoleArn: String) {
@@ -86,65 +86,63 @@ public class CfnFargateProfilePropsDsl {
     }
 
     /**
-     * @param selectors The selectors to match for pods to use this Fargate profile. Each selector
-     *   must have an associated namespace. Optionally, you can also specify labels for a namespace.
-     *   You may specify up to five selectors in a Fargate profile.
+     * @param selectors The selectors to match for a `Pod` to use this Fargate profile. Each
+     *   selector must have an associated Kubernetes `namespace` . Optionally, you can also specify
+     *   `labels` for a `namespace` . You may specify up to five selectors in a Fargate profile.
      */
     public fun selectors(vararg selectors: Any) {
         _selectors.addAll(listOf(*selectors))
     }
 
     /**
-     * @param selectors The selectors to match for pods to use this Fargate profile. Each selector
-     *   must have an associated namespace. Optionally, you can also specify labels for a namespace.
-     *   You may specify up to five selectors in a Fargate profile.
+     * @param selectors The selectors to match for a `Pod` to use this Fargate profile. Each
+     *   selector must have an associated Kubernetes `namespace` . Optionally, you can also specify
+     *   `labels` for a `namespace` . You may specify up to five selectors in a Fargate profile.
      */
     public fun selectors(selectors: Collection<Any>) {
         _selectors.addAll(selectors)
     }
 
     /**
-     * @param selectors The selectors to match for pods to use this Fargate profile. Each selector
-     *   must have an associated namespace. Optionally, you can also specify labels for a namespace.
-     *   You may specify up to five selectors in a Fargate profile.
+     * @param selectors The selectors to match for a `Pod` to use this Fargate profile. Each
+     *   selector must have an associated Kubernetes `namespace` . Optionally, you can also specify
+     *   `labels` for a `namespace` . You may specify up to five selectors in a Fargate profile.
      */
     public fun selectors(selectors: IResolvable) {
         cdkBuilder.selectors(selectors)
     }
 
     /**
-     * @param subnets The IDs of subnets to launch your pods into. At this time, pods running on
-     *   Fargate are not assigned public IP addresses, so only private subnets (with no direct route
-     *   to an Internet Gateway) are accepted for this parameter.
+     * @param subnets The IDs of subnets to launch a `Pod` into. A `Pod` running on Fargate isn't
+     *   assigned a public IP address, so only private subnets (with no direct route to an Internet
+     *   Gateway) are accepted for this parameter.
      */
     public fun subnets(vararg subnets: String) {
         _subnets.addAll(listOf(*subnets))
     }
 
     /**
-     * @param subnets The IDs of subnets to launch your pods into. At this time, pods running on
-     *   Fargate are not assigned public IP addresses, so only private subnets (with no direct route
-     *   to an Internet Gateway) are accepted for this parameter.
+     * @param subnets The IDs of subnets to launch a `Pod` into. A `Pod` running on Fargate isn't
+     *   assigned a public IP address, so only private subnets (with no direct route to an Internet
+     *   Gateway) are accepted for this parameter.
      */
     public fun subnets(subnets: Collection<String>) {
         _subnets.addAll(subnets)
     }
 
     /**
-     * @param tags The metadata to apply to the Fargate profile to assist with categorization and
-     *   organization. Each tag consists of a key and an optional value. You define both. Fargate
-     *   profile tags do not propagate to any other resources associated with the Fargate profile,
-     *   such as the pods that are scheduled with it.
+     * @param tags Metadata that assists with categorization and organization. Each tag consists of
+     *   a key and an optional value. You define both. Tags don't propagate to any other cluster or
+     *   AWS resources.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
     /**
-     * @param tags The metadata to apply to the Fargate profile to assist with categorization and
-     *   organization. Each tag consists of a key and an optional value. You define both. Fargate
-     *   profile tags do not propagate to any other resources associated with the Fargate profile,
-     *   such as the pods that are scheduled with it.
+     * @param tags Metadata that assists with categorization and organization. Each tag consists of
+     *   a key and an optional value. You define both. Tags don't propagate to any other cluster or
+     *   AWS resources.
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)

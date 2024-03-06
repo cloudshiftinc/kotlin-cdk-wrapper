@@ -32,9 +32,9 @@ import software.amazon.awscdk.services.iotwireless.CfnDestinationProps
  * .expression("expression")
  * .expressionType("expressionType")
  * .name("name")
- * .roleArn("roleArn")
  * // the properties below are optional
  * .description("description")
+ * .roleArn("roleArn")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")

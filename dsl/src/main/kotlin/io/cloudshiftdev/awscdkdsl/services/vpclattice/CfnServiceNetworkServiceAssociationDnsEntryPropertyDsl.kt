@@ -16,7 +16,7 @@ import kotlin.String
 import software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociation
 
 /**
- * DNS information about the service.
+ * The DNS information.
  *
  * Example:
  * ```

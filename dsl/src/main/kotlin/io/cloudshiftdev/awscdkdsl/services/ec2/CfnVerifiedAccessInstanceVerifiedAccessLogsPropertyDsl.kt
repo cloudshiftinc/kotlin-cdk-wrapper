@@ -62,12 +62,18 @@ public class CfnVerifiedAccessInstanceVerifiedAccessLogsPropertyDsl {
         cdkBuilder.cloudWatchLogs(cloudWatchLogs)
     }
 
-    /** @param includeTrustContext Include trust data sent by trust providers into the logs. */
+    /**
+     * @param includeTrustContext Indicates whether to include trust data sent by trust providers in
+     *   the logs.
+     */
     public fun includeTrustContext(includeTrustContext: Boolean) {
         cdkBuilder.includeTrustContext(includeTrustContext)
     }
 
-    /** @param includeTrustContext Include trust data sent by trust providers into the logs. */
+    /**
+     * @param includeTrustContext Indicates whether to include trust data sent by trust providers in
+     *   the logs.
+     */
     public fun includeTrustContext(includeTrustContext: IResolvable) {
         cdkBuilder.includeTrustContext(includeTrustContext)
     }
@@ -84,9 +90,7 @@ public class CfnVerifiedAccessInstanceVerifiedAccessLogsPropertyDsl {
         cdkBuilder.kinesisDataFirehose(kinesisDataFirehose)
     }
 
-    /**
-     * @param logVersion The logging version to use. Valid values: `ocsf-0.1` | `ocsf-1.0.0-rc.2`
-     */
+    /** @param logVersion The logging version. Valid values: `ocsf-0.1` | `ocsf-1.0.0-rc.2` */
     public fun logVersion(logVersion: String) {
         cdkBuilder.logVersion(logVersion)
     }

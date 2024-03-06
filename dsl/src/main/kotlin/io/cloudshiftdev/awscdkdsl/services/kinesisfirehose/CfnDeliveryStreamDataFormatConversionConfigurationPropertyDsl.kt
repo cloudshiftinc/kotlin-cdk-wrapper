@@ -106,18 +106,18 @@ public class CfnDeliveryStreamDataFormatConversionConfigurationPropertyDsl {
     }
 
     /**
-     * @param inputFormatConfiguration Specifies the deserializer that you want Kinesis Data
-     *   Firehose to use to convert the format of your data from JSON. This parameter is required if
-     *   `Enabled` is set to true.
+     * @param inputFormatConfiguration Specifies the deserializer that you want Firehose to use to
+     *   convert the format of your data from JSON. This parameter is required if `Enabled` is set
+     *   to true.
      */
     public fun inputFormatConfiguration(inputFormatConfiguration: IResolvable) {
         cdkBuilder.inputFormatConfiguration(inputFormatConfiguration)
     }
 
     /**
-     * @param inputFormatConfiguration Specifies the deserializer that you want Kinesis Data
-     *   Firehose to use to convert the format of your data from JSON. This parameter is required if
-     *   `Enabled` is set to true.
+     * @param inputFormatConfiguration Specifies the deserializer that you want Firehose to use to
+     *   convert the format of your data from JSON. This parameter is required if `Enabled` is set
+     *   to true.
      */
     public fun inputFormatConfiguration(
         inputFormatConfiguration: CfnDeliveryStream.InputFormatConfigurationProperty
@@ -126,18 +126,18 @@ public class CfnDeliveryStreamDataFormatConversionConfigurationPropertyDsl {
     }
 
     /**
-     * @param outputFormatConfiguration Specifies the serializer that you want Kinesis Data Firehose
-     *   to use to convert the format of your data to the Parquet or ORC format. This parameter is
-     *   required if `Enabled` is set to true.
+     * @param outputFormatConfiguration Specifies the serializer that you want Firehose to use to
+     *   convert the format of your data to the Parquet or ORC format. This parameter is required if
+     *   `Enabled` is set to true.
      */
     public fun outputFormatConfiguration(outputFormatConfiguration: IResolvable) {
         cdkBuilder.outputFormatConfiguration(outputFormatConfiguration)
     }
 
     /**
-     * @param outputFormatConfiguration Specifies the serializer that you want Kinesis Data Firehose
-     *   to use to convert the format of your data to the Parquet or ORC format. This parameter is
-     *   required if `Enabled` is set to true.
+     * @param outputFormatConfiguration Specifies the serializer that you want Firehose to use to
+     *   convert the format of your data to the Parquet or ORC format. This parameter is required if
+     *   `Enabled` is set to true.
      */
     public fun outputFormatConfiguration(
         outputFormatConfiguration: CfnDeliveryStream.OutputFormatConfigurationProperty

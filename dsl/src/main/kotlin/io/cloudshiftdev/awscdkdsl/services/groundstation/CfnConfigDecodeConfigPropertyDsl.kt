@@ -35,10 +35,7 @@ public class CfnConfigDecodeConfigPropertyDsl {
     private val cdkBuilder: CfnConfig.DecodeConfigProperty.Builder =
         CfnConfig.DecodeConfigProperty.builder()
 
-    /**
-     * @param unvalidatedJson The decoding settings are in JSON format and define a set of steps to
-     *   perform to decode the data.
-     */
+    /** @param unvalidatedJson the value to be set. */
     public fun unvalidatedJson(unvalidatedJson: String) {
         cdkBuilder.unvalidatedJson(unvalidatedJson)
     }

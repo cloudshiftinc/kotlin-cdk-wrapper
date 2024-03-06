@@ -37,7 +37,13 @@ import software.constructs.Construct
  * "MyCfnNetworkInterface")
  * .subnetId("subnetId")
  * // the properties below are optional
+ * .connectionTrackingSpecification(ConnectionTrackingSpecificationProperty.builder()
+ * .tcpEstablishedTimeout(123)
+ * .udpStreamTimeout(123)
+ * .udpTimeout(123)
+ * .build())
  * .description("description")
+ * .enablePrimaryIpv6(false)
  * .groupSet(List.of("groupSet"))
  * .interfaceType("interfaceType")
  * .ipv4PrefixCount(123)
@@ -89,6 +95,32 @@ public class CfnNetworkInterfaceDsl(
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
+     * A connection tracking specification for the network interface.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-connectiontrackingspecification)
+     *
+     * @param connectionTrackingSpecification A connection tracking specification for the network
+     *   interface.
+     */
+    public fun connectionTrackingSpecification(connectionTrackingSpecification: IResolvable) {
+        cdkBuilder.connectionTrackingSpecification(connectionTrackingSpecification)
+    }
+
+    /**
+     * A connection tracking specification for the network interface.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-connectiontrackingspecification)
+     *
+     * @param connectionTrackingSpecification A connection tracking specification for the network
+     *   interface.
+     */
+    public fun connectionTrackingSpecification(
+        connectionTrackingSpecification: CfnNetworkInterface.ConnectionTrackingSpecificationProperty
+    ) {
+        cdkBuilder.connectionTrackingSpecification(connectionTrackingSpecification)
+    }
+
+    /**
      * A description for the network interface.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-description)
@@ -97,6 +129,54 @@ public class CfnNetworkInterfaceDsl(
      */
     public fun description(description: String) {
         cdkBuilder.description(description)
+    }
+
+    /**
+     * If you’re modifying a network interface in a dual-stack or IPv6-only subnet, you have the
+     * option to assign a primary IPv6 IP address.
+     *
+     * A primary IPv6 address is an IPv6 GUA address associated with an ENI that you have enabled to
+     * use a primary IPv6 address. Use this option if the instance that this ENI will be attached to
+     * relies on its IPv6 address not changing. AWS will automatically assign an IPv6 address
+     * associated with the ENI attached to your instance to be the primary IPv6 address. Once you
+     * enable an IPv6 GUA address to be a primary IPv6, you cannot disable it. When you enable an
+     * IPv6 GUA address to be a primary IPv6, the first IPv6 GUA will be made the primary IPv6
+     * address until the instance is terminated or the network interface is detached. If you have
+     * multiple IPv6 addresses associated with an ENI attached to your instance and you enable a
+     * primary IPv6 address, the first IPv6 GUA address associated with the ENI becomes the primary
+     * IPv6 address.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-enableprimaryipv6)
+     *
+     * @param enablePrimaryIpv6 If you’re modifying a network interface in a dual-stack or IPv6-only
+     *   subnet, you have the option to assign a primary IPv6 IP address.
+     */
+    public fun enablePrimaryIpv6(enablePrimaryIpv6: Boolean) {
+        cdkBuilder.enablePrimaryIpv6(enablePrimaryIpv6)
+    }
+
+    /**
+     * If you’re modifying a network interface in a dual-stack or IPv6-only subnet, you have the
+     * option to assign a primary IPv6 IP address.
+     *
+     * A primary IPv6 address is an IPv6 GUA address associated with an ENI that you have enabled to
+     * use a primary IPv6 address. Use this option if the instance that this ENI will be attached to
+     * relies on its IPv6 address not changing. AWS will automatically assign an IPv6 address
+     * associated with the ENI attached to your instance to be the primary IPv6 address. Once you
+     * enable an IPv6 GUA address to be a primary IPv6, you cannot disable it. When you enable an
+     * IPv6 GUA address to be a primary IPv6, the first IPv6 GUA will be made the primary IPv6
+     * address until the instance is terminated or the network interface is detached. If you have
+     * multiple IPv6 addresses associated with an ENI attached to your instance and you enable a
+     * primary IPv6 address, the first IPv6 GUA address associated with the ENI becomes the primary
+     * IPv6 address.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-enableprimaryipv6)
+     *
+     * @param enablePrimaryIpv6 If you’re modifying a network interface in a dual-stack or IPv6-only
+     *   subnet, you have the option to assign a primary IPv6 IP address.
+     */
+    public fun enablePrimaryIpv6(enablePrimaryIpv6: IResolvable) {
+        cdkBuilder.enablePrimaryIpv6(enablePrimaryIpv6)
     }
 
     /**
@@ -136,8 +216,6 @@ public class CfnNetworkInterfaceDsl(
 
     /**
      * The number of IPv4 prefixes to be automatically assigned to the network interface.
-     *
-     * You cannot use this option if you use the `Ipv4Prefix` option.
      *
      * When creating a network interface, you can't specify a count of IPv4 prefixes if you've
      * specified one of the following: specific IPv4 prefixes, specific private IPv4 addresses, or a
@@ -277,8 +355,6 @@ public class CfnNetworkInterfaceDsl(
 
     /**
      * The number of IPv6 prefixes to be automatically assigned to the network interface.
-     *
-     * You cannot use this option if you use the `Ipv6Prefix` option.
      *
      * When creating a network interface, you can't specify a count of IPv6 prefixes if you've
      * specified one of the following: specific IPv6 prefixes, specific IPv6 addresses, or a count

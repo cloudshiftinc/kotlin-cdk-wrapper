@@ -30,23 +30,25 @@ import software.amazon.awscdk.services.s3.IBucket
  *
  * Example:
  * ```
- * import software.amazon.awscdk.services.kms.*;
- * Artifact sourceOutput = new Artifact();
- * Bucket targetBucket = new Bucket(this, "MyBucket");
- * IKey key = Key.Builder.create(this, "EnvVarEncryptKey")
- * .description("sample key")
- * .build();
- * Pipeline pipeline = new Pipeline(this, "MyPipeline");
- * S3DeployAction deployAction = S3DeployAction.Builder.create()
- * .actionName("S3Deploy")
- * .bucket(targetBucket)
- * .input(sourceOutput)
- * .encryptionKey(key)
- * .build();
- * IStage deployStage = pipeline.addStage(StageOptions.builder()
+ * S3SourceAction sourceAction;
+ * Artifact sourceOutput;
+ * Bucket deployBucket;
+ * Pipeline.Builder.create(this, "Pipeline")
+ * .stages(List.of(StageProps.builder()
+ * .stageName("Source")
+ * .actions(List.of(sourceAction))
+ * .build(), StageProps.builder()
  * .stageName("Deploy")
- * .actions(List.of(deployAction))
- * .build());
+ * .actions(List.of(
+ * S3DeployAction.Builder.create()
+ * .actionName("DeployAction")
+ * // can reference the variables
+ * .objectKey(String.format("%s.txt", sourceAction.getVariables().getVersionId()))
+ * .input(sourceOutput)
+ * .bucket(deployBucket)
+ * .build()))
+ * .build()))
+ * .build();
  * ```
  */
 @CdkDslMarker

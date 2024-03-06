@@ -211,9 +211,13 @@ public class CfnStudioComponentDsl(
     }
 
     /**
+     * An IAM role attached to a Studio Component that gives the studio component access to AWS
+     * resources at anytime while the instance is running.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-runtimerolearn)
      *
-     * @param runtimeRoleArn
+     * @param runtimeRoleArn An IAM role attached to a Studio Component that gives the studio
+     *   component access to AWS resources at anytime while the instance is running.
      */
     public fun runtimeRoleArn(runtimeRoleArn: String) {
         cdkBuilder.runtimeRoleArn(runtimeRoleArn)
@@ -253,9 +257,14 @@ public class CfnStudioComponentDsl(
     }
 
     /**
+     * An IAM role attached to Studio Component when the system initialization script runs which
+     * give the studio component access to AWS resources when the system initialization script runs.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-secureinitializationrolearn)
      *
-     * @param secureInitializationRoleArn
+     * @param secureInitializationRoleArn An IAM role attached to Studio Component when the system
+     *   initialization script runs which give the studio component access to AWS resources when the
+     *   system initialization script runs.
      */
     public fun secureInitializationRoleArn(secureInitializationRoleArn: String) {
         cdkBuilder.secureInitializationRoleArn(secureInitializationRoleArn)

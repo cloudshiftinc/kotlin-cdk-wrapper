@@ -181,11 +181,11 @@ public class CfnInferenceSchedulerDsl(
     }
 
     /**
-     * The name of the ML model used for the inference scheduler.
+     * The name of the machine learning model used for the inference scheduler.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html#cfn-lookoutequipment-inferencescheduler-modelname)
      *
-     * @param modelName The name of the ML model used for the inference scheduler.
+     * @param modelName The name of the machine learning model used for the inference scheduler.
      */
     public fun modelName(modelName: String) {
         cdkBuilder.modelName(modelName)

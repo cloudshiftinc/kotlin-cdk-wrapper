@@ -35,11 +35,11 @@ import software.constructs.Construct
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.guardduty.*;
  * CfnIPSet cfnIPSet = CfnIPSet.Builder.create(this, "MyCfnIPSet")
- * .activate(false)
- * .detectorId("detectorId")
  * .format("format")
  * .location("location")
  * // the properties below are optional
+ * .activate(false)
+ * .detectorId("detectorId")
  * .name("name")
  * .tags(List.of(CfnTag.builder()
  * .key("key")

@@ -29,6 +29,8 @@ import software.amazon.awscdk.services.ec2.SubnetProps
  * .cidrBlock("cidrBlock")
  * .vpcId("vpcId")
  * // the properties below are optional
+ * .assignIpv6AddressOnCreation(false)
+ * .ipv6CidrBlock("ipv6CidrBlock")
  * .mapPublicIpOnLaunch(false)
  * .build();
  * ```
@@ -36,6 +38,15 @@ import software.amazon.awscdk.services.ec2.SubnetProps
 @CdkDslMarker
 public class SubnetPropsDsl {
     private val cdkBuilder: SubnetProps.Builder = SubnetProps.builder()
+
+    /**
+     * @param assignIpv6AddressOnCreation Indicates whether a network interface created in this
+     *   subnet receives an IPv6 address. If you specify AssignIpv6AddressOnCreation, you must also
+     *   specify Ipv6CidrBlock.
+     */
+    public fun assignIpv6AddressOnCreation(assignIpv6AddressOnCreation: Boolean) {
+        cdkBuilder.assignIpv6AddressOnCreation(assignIpv6AddressOnCreation)
+    }
 
     /** @param availabilityZone The availability zone for the subnet. */
     public fun availabilityZone(availabilityZone: String) {
@@ -45,6 +56,14 @@ public class SubnetPropsDsl {
     /** @param cidrBlock The CIDR notation for this subnet. */
     public fun cidrBlock(cidrBlock: String) {
         cdkBuilder.cidrBlock(cidrBlock)
+    }
+
+    /**
+     * @param ipv6CidrBlock The IPv6 CIDR block. If you specify AssignIpv6AddressOnCreation, you
+     *   must also specify Ipv6CidrBlock.
+     */
+    public fun ipv6CidrBlock(ipv6CidrBlock: String) {
+        cdkBuilder.ipv6CidrBlock(ipv6CidrBlock)
     }
 
     /**

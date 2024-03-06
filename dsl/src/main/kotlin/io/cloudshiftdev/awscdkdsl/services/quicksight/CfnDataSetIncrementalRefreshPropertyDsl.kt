@@ -16,7 +16,7 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
 /**
- * Incremental Refresh</p>.
+ * The incremental refresh configuration for a dataset.
  *
  * Example:
  * ```
@@ -39,12 +39,12 @@ public class CfnDataSetIncrementalRefreshPropertyDsl {
     private val cdkBuilder: CfnDataSet.IncrementalRefreshProperty.Builder =
         CfnDataSet.IncrementalRefreshProperty.builder()
 
-    /** @param lookbackWindow the value to be set. */
+    /** @param lookbackWindow The lookback window setup for an incremental refresh configuration. */
     public fun lookbackWindow(lookbackWindow: IResolvable) {
         cdkBuilder.lookbackWindow(lookbackWindow)
     }
 
-    /** @param lookbackWindow the value to be set. */
+    /** @param lookbackWindow The lookback window setup for an incremental refresh configuration. */
     public fun lookbackWindow(lookbackWindow: CfnDataSet.LookbackWindowProperty) {
         cdkBuilder.lookbackWindow(lookbackWindow)
     }

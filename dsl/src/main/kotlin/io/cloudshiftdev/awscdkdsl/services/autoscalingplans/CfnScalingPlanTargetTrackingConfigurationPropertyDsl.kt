@@ -20,8 +20,7 @@ import software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan
 /**
  * `TargetTrackingConfiguration` is a subproperty of
  * [ScalingInstruction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html)
- * that specifies a target tracking configuration to use with AWS Auto Scaling ( Auto Scaling Plans
- * ).
+ * that specifies a target tracking configuration for a scalable resource.
  *
  * Example:
  * ```

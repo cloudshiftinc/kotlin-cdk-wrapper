@@ -46,6 +46,7 @@ import software.constructs.Construct
  * .permissionArns(List.of("permissionArns"))
  * .principals(List.of("principals"))
  * .resourceArns(List.of("resourceArns"))
+ * .sources(List.of("sources"))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -67,6 +68,8 @@ public class CfnResourceShareDsl(
     private val _principals: MutableList<String> = mutableListOf()
 
     private val _resourceArns: MutableList<String> = mutableListOf()
+
+    private val _sources: MutableList<String> = mutableListOf()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
@@ -226,6 +229,24 @@ public class CfnResourceShareDsl(
     }
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html#cfn-ram-resourceshare-sources)
+     *
+     * @param sources
+     */
+    public fun sources(vararg sources: String) {
+        _sources.addAll(listOf(*sources))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html#cfn-ram-resourceshare-sources)
+     *
+     * @param sources
+     */
+    public fun sources(sources: Collection<String>) {
+        _sources.addAll(sources)
+    }
+
+    /**
      * Specifies one or more tags to attach to the resource share itself.
      *
      * It doesn't attach the tags to the resources associated with the resource share.
@@ -255,6 +276,7 @@ public class CfnResourceShareDsl(
         if (_permissionArns.isNotEmpty()) cdkBuilder.permissionArns(_permissionArns)
         if (_principals.isNotEmpty()) cdkBuilder.principals(_principals)
         if (_resourceArns.isNotEmpty()) cdkBuilder.resourceArns(_resourceArns)
+        if (_sources.isNotEmpty()) cdkBuilder.sources(_sources)
         if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
         return cdkBuilder.build()
     }

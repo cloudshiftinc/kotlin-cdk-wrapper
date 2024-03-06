@@ -65,14 +65,13 @@ public class CfnNetworkAclEntryDsl(
         CfnNetworkAclEntry.Builder.create(scope, id)
 
     /**
-     * The IPv4 CIDR range to allow or deny, in CIDR notation (for example, 172.16.0.0/24).
-     * Requirement is conditional: You must specify the `CidrBlock` or `Ipv6CidrBlock` property.
+     * The IPv4 CIDR range to allow or deny, in CIDR notation (for example, 172.16.0.0/24). You must
+     * specify an IPv4 CIDR block or an IPv6 CIDR block.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkaclentry.html#cfn-ec2-networkaclentry-cidrblock)
      *
      * @param cidrBlock The IPv4 CIDR range to allow or deny, in CIDR notation (for example,
-     *   172.16.0.0/24). Requirement is conditional: You must specify the `CidrBlock` or
-     *   `Ipv6CidrBlock` property.
+     *   172.16.0.0/24). You must specify an IPv4 CIDR block or an IPv6 CIDR block.
      */
     public fun cidrBlock(cidrBlock: String) {
         cdkBuilder.cidrBlock(cidrBlock)
@@ -111,7 +110,7 @@ public class CfnNetworkAclEntryDsl(
     /**
      * The Internet Control Message Protocol (ICMP) code and type.
      *
-     * Requirement is conditional: Required if specifying 1 (ICMP) for the protocol parameter.
+     * Required if specifying 1 (ICMP) for the protocol parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkaclentry.html#cfn-ec2-networkaclentry-icmp)
      *
@@ -124,7 +123,7 @@ public class CfnNetworkAclEntryDsl(
     /**
      * The Internet Control Message Protocol (ICMP) code and type.
      *
-     * Requirement is conditional: Required if specifying 1 (ICMP) for the protocol parameter.
+     * Required if specifying 1 (ICMP) for the protocol parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkaclentry.html#cfn-ec2-networkaclentry-icmp)
      *
@@ -137,7 +136,7 @@ public class CfnNetworkAclEntryDsl(
     /**
      * The IPv6 network range to allow or deny, in CIDR notation.
      *
-     * Requirement is conditional: You must specify the `CidrBlock` or `Ipv6CidrBlock` property.
+     * You must specify an IPv4 CIDR block or an IPv6 CIDR block.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkaclentry.html#cfn-ec2-networkaclentry-ipv6cidrblock)
      *
@@ -161,7 +160,7 @@ public class CfnNetworkAclEntryDsl(
     /**
      * The range of port numbers for the UDP/TCP protocol.
      *
-     * Conditional required if specifying 6 (TCP) or 17 (UDP) for the protocol parameter.
+     * Required if specifying 6 (TCP) or 17 (UDP) for the protocol parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkaclentry.html#cfn-ec2-networkaclentry-portrange)
      *
@@ -174,7 +173,7 @@ public class CfnNetworkAclEntryDsl(
     /**
      * The range of port numbers for the UDP/TCP protocol.
      *
-     * Conditional required if specifying 6 (TCP) or 17 (UDP) for the protocol parameter.
+     * Required if specifying 6 (TCP) or 17 (UDP) for the protocol parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkaclentry.html#cfn-ec2-networkaclentry-portrange)
      *

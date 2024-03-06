@@ -37,7 +37,7 @@ public inline fun CfnBucket.setLifecycleConfiguration(
     return setLifecycleConfiguration(builder.build())
 }
 
-/**  */
+/** The failure reason, if any, for a create or delete endpoint operation. */
 public inline fun CfnEndpoint.setFailedReason(
     block: CfnEndpointFailedReasonPropertyDsl.() -> Unit = {}
 ) {

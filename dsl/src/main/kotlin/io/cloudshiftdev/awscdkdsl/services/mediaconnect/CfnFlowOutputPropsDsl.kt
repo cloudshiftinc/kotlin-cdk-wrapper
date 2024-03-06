@@ -128,7 +128,7 @@ public class CfnFlowOutputPropsDsl {
         cdkBuilder.minLatency(minLatency)
     }
 
-    /** @param name The name of the VPC interface. */
+    /** @param name The name of the output. This value must be unique within the current flow. */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }

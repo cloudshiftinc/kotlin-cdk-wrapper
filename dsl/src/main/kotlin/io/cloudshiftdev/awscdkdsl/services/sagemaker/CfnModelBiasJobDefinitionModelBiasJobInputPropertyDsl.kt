@@ -73,12 +73,12 @@ public class CfnModelBiasJobDefinitionModelBiasJobInputPropertyDsl {
     private val cdkBuilder: CfnModelBiasJobDefinition.ModelBiasJobInputProperty.Builder =
         CfnModelBiasJobDefinition.ModelBiasJobInputProperty.builder()
 
-    /** @param batchTransformInput The batch transform input for a monitoring job. */
+    /** @param batchTransformInput Input object for the batch transform job. */
     public fun batchTransformInput(batchTransformInput: IResolvable) {
         cdkBuilder.batchTransformInput(batchTransformInput)
     }
 
-    /** @param batchTransformInput The batch transform input for a monitoring job. */
+    /** @param batchTransformInput Input object for the batch transform job. */
     public fun batchTransformInput(
         batchTransformInput: CfnModelBiasJobDefinition.BatchTransformInputProperty
     ) {

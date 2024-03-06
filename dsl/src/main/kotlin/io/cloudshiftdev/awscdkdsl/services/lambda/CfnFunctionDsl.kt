@@ -104,6 +104,12 @@ import software.constructs.Construct
  * .build())
  * .kmsKeyArn("kmsKeyArn")
  * .layers(List.of("layers"))
+ * .loggingConfig(LoggingConfigProperty.builder()
+ * .applicationLogLevel("applicationLogLevel")
+ * .logFormat("logFormat")
+ * .logGroup("logGroup")
+ * .systemLogLevel("systemLogLevel")
+ * .build())
  * .memorySize(123)
  * .packageType("packageType")
  * .reservedConcurrentExecutions(123)
@@ -125,6 +131,7 @@ import software.constructs.Construct
  * .mode("mode")
  * .build())
  * .vpcConfig(VpcConfigProperty.builder()
+ * .ipv6AllowedForDualStack(false)
  * .securityGroupIds(List.of("securityGroupIds"))
  * .subnetIds(List.of("subnetIds"))
  * .build())
@@ -502,17 +509,43 @@ public class CfnFunctionDsl(
     }
 
     /**
+     * The function's Amazon CloudWatch Logs configuration settings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-loggingconfig)
+     *
+     * @param loggingConfig The function's Amazon CloudWatch Logs configuration settings.
+     */
+    public fun loggingConfig(loggingConfig: IResolvable) {
+        cdkBuilder.loggingConfig(loggingConfig)
+    }
+
+    /**
+     * The function's Amazon CloudWatch Logs configuration settings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-loggingconfig)
+     *
+     * @param loggingConfig The function's Amazon CloudWatch Logs configuration settings.
+     */
+    public fun loggingConfig(loggingConfig: CfnFunction.LoggingConfigProperty) {
+        cdkBuilder.loggingConfig(loggingConfig)
+    }
+
+    /**
      * The amount of
      * [memory available to the function](https://docs.aws.amazon.com/lambda/latest/dg/configuration-function-common.html#configuration-memory-console)
      * at runtime. Increasing the function memory also increases its CPU allocation. The default
-     * value is 128 MB. The value can be any multiple of 1 MB.
+     * value is 128 MB. The value can be any multiple of 1 MB. Note that new AWS accounts have
+     * reduced concurrency and memory quotas. AWS raises these quotas automatically based on your
+     * usage. You can also request a quota increase.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-memorysize)
      *
      * @param memorySize The amount of
      *   [memory available to the function](https://docs.aws.amazon.com/lambda/latest/dg/configuration-function-common.html#configuration-memory-console)
      *   at runtime. Increasing the function memory also increases its CPU allocation. The default
-     *   value is 128 MB. The value can be any multiple of 1 MB.
+     *   value is 128 MB. The value can be any multiple of 1 MB. Note that new AWS accounts have
+     *   reduced concurrency and memory quotas. AWS raises these quotas automatically based on your
+     *   usage. You can also request a quota increase.
      */
     public fun memorySize(memorySize: Number) {
         cdkBuilder.memorySize(memorySize)

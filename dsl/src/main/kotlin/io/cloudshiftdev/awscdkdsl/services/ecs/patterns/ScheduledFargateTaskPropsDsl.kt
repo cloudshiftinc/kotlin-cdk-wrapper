@@ -111,6 +111,16 @@ public class ScheduledFargateTaskPropsDsl {
     }
 
     /**
+     * @param ephemeralStorageGiB The amount (in GiB) of ephemeral storage to be allocated to the
+     *   task. The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
+     *
+     * Only supported in Fargate platform version 1.4.0 or later.
+     */
+    public fun ephemeralStorageGiB(ephemeralStorageGiB: Number) {
+        cdkBuilder.ephemeralStorageGiB(ephemeralStorageGiB)
+    }
+
+    /**
      * @param memoryLimitMiB The amount (in MiB) of memory used by the task. This field is required
      *   and you must use one of the following values, which determines your range of valid values
      *   for the cpu parameter:

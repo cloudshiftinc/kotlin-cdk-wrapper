@@ -31,7 +31,7 @@ import software.constructs.Construct
 
 public object sam {
     /**
-     * Definition of AWS::Serverless::Api.
+     * https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi.
      *
      * Example:
      * ```
@@ -50,6 +50,7 @@ public object sam {
      * .destinationArn("destinationArn")
      * .format("format")
      * .build())
+     * .alwaysDeploy(false)
      * .auth(AuthProperty.builder()
      * .addDefaultAuthorizerToCorsPreflight(false)
      * .authorizers(authorizers)
@@ -318,6 +319,7 @@ public object sam {
      * .destinationArn("destinationArn")
      * .format("format")
      * .build())
+     * .alwaysDeploy(false)
      * .auth(AuthProperty.builder()
      * .addDefaultAuthorizerToCorsPreflight(false)
      * .authorizers(authorizers)
@@ -431,7 +433,7 @@ public object sam {
     }
 
     /**
-     * Definition of AWS::Serverless::Application.
+     * https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapplication.
      *
      * Example:
      * ```
@@ -515,7 +517,7 @@ public object sam {
     }
 
     /**
-     * Definition of AWS::Serverless::Function.
+     * https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction.
      *
      * Example:
      * ```
@@ -549,6 +551,9 @@ public object sam {
      * .variables(Map.of(
      * "variablesKey", "variables"))
      * .build())
+     * .ephemeralStorage(EphemeralStorageProperty.builder()
+     * .size(123)
+     * .build())
      * .eventInvokeConfig(EventInvokeConfigProperty.builder()
      * .destinationConfig(EventInvokeDestinationConfigProperty.builder()
      * .onFailure(DestinationProperty.builder()
@@ -577,6 +582,12 @@ public object sam {
      * .localMountPath("localMountPath")
      * .build()))
      * .functionName("functionName")
+     * .functionUrlConfig(FunctionUrlConfigProperty.builder()
+     * .authType("authType")
+     * // the properties below are optional
+     * .cors("cors")
+     * .invokeMode("invokeMode")
+     * .build())
      * .handler("handler")
      * .imageConfig(ImageConfigProperty.builder()
      * .command(List.of("command"))
@@ -880,6 +891,32 @@ public object sam {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.sam.*;
+     * CorsConfigurationProperty corsConfigurationProperty = CorsConfigurationProperty.builder()
+     * .allowOrigin("allowOrigin")
+     * // the properties below are optional
+     * .allowCredentials(false)
+     * .allowHeaders("allowHeaders")
+     * .allowMethods("allowMethods")
+     * .maxAge("maxAge")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-corsconfiguration.html)
+     */
+    public inline fun cfnFunctionCorsConfigurationProperty(
+        block: CfnFunctionCorsConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnFunction.CorsConfigurationProperty {
+        val builder = CfnFunctionCorsConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sam.*;
      * DeadLetterQueueProperty deadLetterQueueProperty = DeadLetterQueueProperty.builder()
      * .targetArn("targetArn")
      * .type("type")
@@ -1046,6 +1083,27 @@ public object sam {
         block: CfnFunctionEmptySAMPTPropertyDsl.() -> Unit = {}
     ): CfnFunction.EmptySAMPTProperty {
         val builder = CfnFunctionEmptySAMPTPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sam.*;
+     * EphemeralStorageProperty ephemeralStorageProperty = EphemeralStorageProperty.builder()
+     * .size(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-ephemeralstorage.html)
+     */
+    public inline fun cfnFunctionEphemeralStorageProperty(
+        block: CfnFunctionEphemeralStoragePropertyDsl.() -> Unit = {}
+    ): CfnFunction.EphemeralStorageProperty {
+        val builder = CfnFunctionEphemeralStoragePropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -1227,6 +1285,30 @@ public object sam {
         block: CfnFunctionFunctionSAMPTPropertyDsl.() -> Unit = {}
     ): CfnFunction.FunctionSAMPTProperty {
         val builder = CfnFunctionFunctionSAMPTPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sam.*;
+     * FunctionUrlConfigProperty functionUrlConfigProperty = FunctionUrlConfigProperty.builder()
+     * .authType("authType")
+     * // the properties below are optional
+     * .cors("cors")
+     * .invokeMode("invokeMode")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-functionurlconfig.html)
+     */
+    public inline fun cfnFunctionFunctionUrlConfigProperty(
+        block: CfnFunctionFunctionUrlConfigPropertyDsl.() -> Unit = {}
+    ): CfnFunction.FunctionUrlConfigProperty {
+        val builder = CfnFunctionFunctionUrlConfigPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -1525,6 +1607,9 @@ public object sam {
      * .variables(Map.of(
      * "variablesKey", "variables"))
      * .build())
+     * .ephemeralStorage(EphemeralStorageProperty.builder()
+     * .size(123)
+     * .build())
      * .eventInvokeConfig(EventInvokeConfigProperty.builder()
      * .destinationConfig(EventInvokeDestinationConfigProperty.builder()
      * .onFailure(DestinationProperty.builder()
@@ -1553,6 +1638,12 @@ public object sam {
      * .localMountPath("localMountPath")
      * .build()))
      * .functionName("functionName")
+     * .functionUrlConfig(FunctionUrlConfigProperty.builder()
+     * .authType("authType")
+     * // the properties below are optional
+     * .cors("cors")
+     * .invokeMode("invokeMode")
+     * .build())
      * .handler("handler")
      * .imageConfig(ImageConfigProperty.builder()
      * .command(List.of("command"))
@@ -2166,7 +2257,7 @@ public object sam {
     }
 
     /**
-     * Definition of AWS::Serverless::HttpApi.
+     * https://github.com/aws/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlesshttpapi.
      *
      * Example:
      * ```
@@ -2525,7 +2616,7 @@ public object sam {
     }
 
     /**
-     * Definition of AWS::Serverless::LayerVersion.
+     * https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlesslayerversion.
      *
      * Example:
      * ```
@@ -2607,7 +2698,7 @@ public object sam {
     }
 
     /**
-     * Definition of AWS::Serverless::SimpleTable.
+     * https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlesssimpletable.
      *
      * Example:
      * ```
@@ -2753,7 +2844,7 @@ public object sam {
     }
 
     /**
-     * Definition of AWS::Serverless::StateMachine.
+     * https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-statemachine.html.
      *
      * Example:
      * ```

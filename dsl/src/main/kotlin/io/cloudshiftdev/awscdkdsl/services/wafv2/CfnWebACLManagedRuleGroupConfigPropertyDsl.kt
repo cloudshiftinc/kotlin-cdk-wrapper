@@ -119,6 +119,8 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
  * .build())
  * .awsManagedRulesBotControlRuleSet(AWSManagedRulesBotControlRuleSetProperty.builder()
  * .inspectionLevel("inspectionLevel")
+ * // the properties below are optional
+ * .enableMachineLearning(false)
  * .build())
  * .loginPath("loginPath")
  * .passwordField(FieldIdentifierProperty.builder()

@@ -18,9 +18,6 @@ import software.amazon.awscdk.services.vpclattice.CfnRule
 /**
  * Describes the action for a rule.
  *
- * Each rule must include exactly one of the following types of actions: `forward` or
- * `fixed-response` , and it must be the last action to be performed.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -46,12 +43,12 @@ import software.amazon.awscdk.services.vpclattice.CfnRule
 public class CfnRuleActionPropertyDsl {
     private val cdkBuilder: CfnRule.ActionProperty.Builder = CfnRule.ActionProperty.builder()
 
-    /** @param fixedResponse Describes the rule action that returns a custom HTTP response. */
+    /** @param fixedResponse The fixed response action. The rule returns a custom HTTP response. */
     public fun fixedResponse(fixedResponse: IResolvable) {
         cdkBuilder.fixedResponse(fixedResponse)
     }
 
-    /** @param fixedResponse Describes the rule action that returns a custom HTTP response. */
+    /** @param fixedResponse The fixed response action. The rule returns a custom HTTP response. */
     public fun fixedResponse(fixedResponse: CfnRule.FixedResponseProperty) {
         cdkBuilder.fixedResponse(fixedResponse)
     }

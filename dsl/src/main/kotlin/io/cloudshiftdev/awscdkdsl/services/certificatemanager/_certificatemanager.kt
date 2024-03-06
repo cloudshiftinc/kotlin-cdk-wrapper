@@ -344,6 +344,7 @@ public object certificatemanager {
      * import software.amazon.awscdk.services.route53.*;
      * CertificateValidation certificateValidation;
      * HostedZone hostedZone;
+     * KeyAlgorithm keyAlgorithm;
      * Role role;
      * DnsValidatedCertificate dnsValidatedCertificate = DnsValidatedCertificate.Builder.create(this,
      * "MyDnsValidatedCertificate")
@@ -353,6 +354,7 @@ public object certificatemanager {
      * .certificateName("certificateName")
      * .cleanupRoute53Records(false)
      * .customResourceRole(role)
+     * .keyAlgorithm(keyAlgorithm)
      * .region("region")
      * .route53Endpoint("route53Endpoint")
      * .subjectAlternativeNames(List.of("subjectAlternativeNames"))
@@ -386,6 +388,7 @@ public object certificatemanager {
      * import software.amazon.awscdk.services.route53.*;
      * CertificateValidation certificateValidation;
      * HostedZone hostedZone;
+     * KeyAlgorithm keyAlgorithm;
      * Role role;
      * DnsValidatedCertificateProps dnsValidatedCertificateProps =
      * DnsValidatedCertificateProps.builder()
@@ -395,6 +398,7 @@ public object certificatemanager {
      * .certificateName("certificateName")
      * .cleanupRoute53Records(false)
      * .customResourceRole(role)
+     * .keyAlgorithm(keyAlgorithm)
      * .region("region")
      * .route53Endpoint("route53Endpoint")
      * .subjectAlternativeNames(List.of("subjectAlternativeNames"))
@@ -422,6 +426,7 @@ public object certificatemanager {
      * .subjectAlternativeNames(List.of("cool.example.com", "test.example.net")) // optional
      * .certificateAuthority(CertificateAuthority.fromCertificateAuthorityArn(this, "CA",
      * "arn:aws:acm-pca:us-east-1:123456789012:certificate-authority/023077d8-2bfa-4eb0-8f22-05c96deade77"))
+     * .keyAlgorithm(KeyAlgorithm.RSA_2048)
      * .build();
      * ```
      */
@@ -446,6 +451,7 @@ public object certificatemanager {
      * .subjectAlternativeNames(List.of("cool.example.com", "test.example.net")) // optional
      * .certificateAuthority(CertificateAuthority.fromCertificateAuthorityArn(this, "CA",
      * "arn:aws:acm-pca:us-east-1:123456789012:certificate-authority/023077d8-2bfa-4eb0-8f22-05c96deade77"))
+     * .keyAlgorithm(KeyAlgorithm.RSA_2048)
      * .build();
      * ```
      */

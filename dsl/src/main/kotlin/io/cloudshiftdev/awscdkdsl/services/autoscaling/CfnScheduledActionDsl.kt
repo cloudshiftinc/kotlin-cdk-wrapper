@@ -33,7 +33,7 @@ import software.constructs.Construct
  * scheduled actions by specifying an
  * [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html)
  * for the Auto Scaling group. You can find a sample update policy for rolling updates in
- * [Auto scaling template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)
+ * [Configure Amazon EC2 Auto Scaling resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html)
  * .
  *
  * For more information, see

@@ -142,7 +142,7 @@ public object targets {
      * .build();
      * Function fn = Function.Builder.create(this, "MyFunc")
      * .handler("index.handler")
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .code(Code.fromInline("exports.handler = e =&gt; {}"))
      * .build();
      * LambdaRestApi restApi = LambdaRestApi.Builder.create(this, "MyRestAPI").handler(fn).build();
@@ -182,7 +182,7 @@ public object targets {
      * .build();
      * Function fn = Function.Builder.create(this, "MyFunc")
      * .handler("index.handler")
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .code(Code.fromInline("exports.handler = e =&gt; {}"))
      * .build();
      * LambdaRestApi restApi = LambdaRestApi.Builder.create(this, "MyRestAPI").handler(fn).build();
@@ -300,7 +300,7 @@ public object targets {
      * ```
      * import software.amazon.awscdk.services.ec2.*;
      * import software.amazon.awscdk.services.ecs.*;
-     * import software.amazon.awscdk.services.batch.alpha.*;
+     * import software.amazon.awscdk.services.batch.*;
      * import software.amazon.awscdk.services.ecs.ContainerImage;
      * Vpc vpc;
      * FargateComputeEnvironment computeEnvironment = FargateComputeEnvironment.Builder.create(this,
@@ -353,7 +353,7 @@ public object targets {
      * ```
      * import software.amazon.awscdk.services.ec2.*;
      * import software.amazon.awscdk.services.ecs.*;
-     * import software.amazon.awscdk.services.batch.alpha.*;
+     * import software.amazon.awscdk.services.batch.*;
      * import software.amazon.awscdk.services.ecs.ContainerImage;
      * Vpc vpc;
      * FargateComputeEnvironment computeEnvironment = FargateComputeEnvironment.Builder.create(this,
@@ -567,20 +567,18 @@ public object targets {
      * Example:
      * ```
      * import software.amazon.awscdk.services.ecs.*;
+     * import software.amazon.awscdk.services.ec2.*;
      * ICluster cluster;
      * TaskDefinition taskDefinition;
      * Rule rule = Rule.Builder.create(this, "Rule")
      * .schedule(Schedule.rate(Duration.hours(1)))
      * .build();
-     * rule.addTarget(EcsTask.Builder.create()
+     * rule.addTarget(
+     * EcsTask.Builder.create()
      * .cluster(cluster)
      * .taskDefinition(taskDefinition)
-     * .taskCount(1)
-     * .containerOverrides(List.of(ContainerOverride.builder()
-     * .containerName("TheContainer")
-     * .command(List.of("echo", EventField.fromPath("$.detail.event")))
-     * .build()))
-     * .enableExecuteCommand(true)
+     * .assignPublicIp(true)
+     * .subnetSelection(SubnetSelection.builder().subnetType(SubnetType.PUBLIC).build())
      * .build());
      * ```
      */
@@ -596,20 +594,18 @@ public object targets {
      * Example:
      * ```
      * import software.amazon.awscdk.services.ecs.*;
+     * import software.amazon.awscdk.services.ec2.*;
      * ICluster cluster;
      * TaskDefinition taskDefinition;
      * Rule rule = Rule.Builder.create(this, "Rule")
      * .schedule(Schedule.rate(Duration.hours(1)))
      * .build();
-     * rule.addTarget(EcsTask.Builder.create()
+     * rule.addTarget(
+     * EcsTask.Builder.create()
      * .cluster(cluster)
      * .taskDefinition(taskDefinition)
-     * .taskCount(1)
-     * .containerOverrides(List.of(ContainerOverride.builder()
-     * .containerName("TheContainer")
-     * .command(List.of("echo", EventField.fromPath("$.detail.event")))
-     * .build()))
-     * .enableExecuteCommand(true)
+     * .assignPublicIp(true)
+     * .subnetSelection(SubnetSelection.builder().subnetType(SubnetType.PUBLIC).build())
      * .build());
      * ```
      */
@@ -764,7 +760,7 @@ public object targets {
      * ```
      * import software.amazon.awscdk.services.lambda.*;
      * Function fn = Function.Builder.create(this, "MyFunc")
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .handler("index.handler")
      * .code(Code.fromInline("exports.handler = handler.toString()"))
      * .build();
@@ -797,7 +793,7 @@ public object targets {
      * ```
      * import software.amazon.awscdk.services.lambda.*;
      * Function fn = Function.Builder.create(this, "MyFunc")
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .handler("index.handler")
      * .code(Code.fromInline("exports.handler = handler.toString()"))
      * .build();

@@ -13,6 +13,7 @@ package io.cloudshiftdev.awscdkdsl.services.appflow
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.String
+import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appflow.CfnConnectorProfile
 
 /**
@@ -25,6 +26,16 @@ import software.amazon.awscdk.services.appflow.CfnConnectorProfile
  * import software.amazon.awscdk.services.appflow.*;
  * ServiceNowConnectorProfileCredentialsProperty serviceNowConnectorProfileCredentialsProperty =
  * ServiceNowConnectorProfileCredentialsProperty.builder()
+ * .oAuth2Credentials(OAuth2CredentialsProperty.builder()
+ * .accessToken("accessToken")
+ * .clientId("clientId")
+ * .clientSecret("clientSecret")
+ * .oAuthRequest(ConnectorOAuthRequestProperty.builder()
+ * .authCode("authCode")
+ * .redirectUri("redirectUri")
+ * .build())
+ * .refreshToken("refreshToken")
+ * .build())
  * .password("password")
  * .username("username")
  * .build();
@@ -37,6 +48,16 @@ public class CfnConnectorProfileServiceNowConnectorProfileCredentialsPropertyDsl
     private val cdkBuilder:
         CfnConnectorProfile.ServiceNowConnectorProfileCredentialsProperty.Builder =
         CfnConnectorProfile.ServiceNowConnectorProfileCredentialsProperty.builder()
+
+    /** @param oAuth2Credentials the value to be set. */
+    public fun oAuth2Credentials(oAuth2Credentials: IResolvable) {
+        cdkBuilder.oAuth2Credentials(oAuth2Credentials)
+    }
+
+    /** @param oAuth2Credentials the value to be set. */
+    public fun oAuth2Credentials(oAuth2Credentials: CfnConnectorProfile.OAuth2CredentialsProperty) {
+        cdkBuilder.oAuth2Credentials(oAuth2Credentials)
+    }
 
     /** @param password The password that corresponds to the user name. */
     public fun password(password: String) {

@@ -57,14 +57,14 @@ public class CfnMaintenanceWindowTaskMaintenanceWindowAutomationParametersProper
         cdkBuilder.documentVersion(documentVersion)
     }
 
-    /** @param parameters The parameters for the AUTOMATION task. */
+    /** @param parameters The parameters for the `AUTOMATION` type task. */
     public fun parameters(parameters: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
         builder.apply(parameters)
         cdkBuilder.parameters(builder.map)
     }
 
-    /** @param parameters The parameters for the AUTOMATION task. */
+    /** @param parameters The parameters for the `AUTOMATION` type task. */
     public fun parameters(parameters: Any) {
         cdkBuilder.parameters(parameters)
     }

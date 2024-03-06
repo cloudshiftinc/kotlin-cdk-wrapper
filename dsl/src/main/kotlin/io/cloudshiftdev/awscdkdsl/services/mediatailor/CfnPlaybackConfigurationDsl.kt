@@ -113,8 +113,8 @@ public class CfnPlaybackConfigurationDsl(
     /**
      * The configuration for avail suppression, also known as ad suppression.
      *
-     * For more information about ad suppression, see Ad Suppression
-     * (https://docs.aws.amazon.com/mediatailor/latest/ug/ad-behavior.html).
+     * For more information about ad suppression, see
+     * [Ad Suppression](https://docs.aws.amazon.com/mediatailor/latest/ug/ad-behavior.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-availsuppression)
      *
@@ -128,8 +128,8 @@ public class CfnPlaybackConfigurationDsl(
     /**
      * The configuration for avail suppression, also known as ad suppression.
      *
-     * For more information about ad suppression, see Ad Suppression
-     * (https://docs.aws.amazon.com/mediatailor/latest/ug/ad-behavior.html).
+     * For more information about ad suppression, see
+     * [Ad Suppression](https://docs.aws.amazon.com/mediatailor/latest/ug/ad-behavior.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-availsuppression)
      *
@@ -146,8 +146,8 @@ public class CfnPlaybackConfigurationDsl(
      * The configuration for bumpers.
      *
      * Bumpers are short audio or video clips that play at the start or before the end of an ad
-     * break. To learn more about bumpers, see Bumpers
-     * (https://docs.aws.amazon.com/mediatailor/latest/ug/bumpers.html).
+     * break. To learn more about bumpers, see
+     * [Bumpers](https://docs.aws.amazon.com/mediatailor/latest/ug/bumpers.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-bumper)
      *
@@ -161,8 +161,8 @@ public class CfnPlaybackConfigurationDsl(
      * The configuration for bumpers.
      *
      * Bumpers are short audio or video clips that play at the start or before the end of an ad
-     * break. To learn more about bumpers, see Bumpers
-     * (https://docs.aws.amazon.com/mediatailor/latest/ug/bumpers.html).
+     * break. To learn more about bumpers, see
+     * [Bumpers](https://docs.aws.amazon.com/mediatailor/latest/ug/bumpers.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-bumper)
      *
@@ -248,22 +248,22 @@ public class CfnPlaybackConfigurationDsl(
     }
 
     /**
-     * The configuration for DASH PUT operations.
+     * The configuration for a DASH source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-dashconfiguration)
      *
-     * @param dashConfiguration The configuration for DASH PUT operations.
+     * @param dashConfiguration The configuration for a DASH source.
      */
     public fun dashConfiguration(dashConfiguration: IResolvable) {
         cdkBuilder.dashConfiguration(dashConfiguration)
     }
 
     /**
-     * The configuration for DASH PUT operations.
+     * The configuration for a DASH source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-dashconfiguration)
      *
-     * @param dashConfiguration The configuration for DASH PUT operations.
+     * @param dashConfiguration The configuration for a DASH source.
      */
     public fun dashConfiguration(
         dashConfiguration: CfnPlaybackConfiguration.DashConfigurationProperty
@@ -365,10 +365,11 @@ public class CfnPlaybackConfigurationDsl(
      *
      * If the duration of underfilled ad time exceeds the personalization threshold, then the
      * personalization of the ad break is abandoned and the underlying content is shown. This
-     * feature applies to ad replacement in live and VOD streams, rather than ad insertion, because
-     * it relies on an underlying content stream. For more information about ad break behavior,
-     * including ad replacement and insertion, see Ad Behavior in AWS Elemental MediaTailor
-     * (https://docs.aws.amazon.com/mediatailor/latest/ug/ad-behavior.html).
+     * feature applies to *ad replacement* in live and VOD streams, rather than ad insertion,
+     * because it relies on an underlying content stream. For more information about ad break
+     * behavior, including ad replacement and insertion, see
+     * [Ad Behavior in AWS Elemental MediaTailor](https://docs.aws.amazon.com/mediatailor/latest/ug/ad-behavior.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-personalizationthresholdseconds)
      *
@@ -380,18 +381,17 @@ public class CfnPlaybackConfigurationDsl(
     }
 
     /**
-     * The URL for a high-quality video asset to transcode and use to fill in time that's not used
-     * by ads.
+     * The URL for a video asset to transcode and use to fill in time that's not used by ads.
      *
      * AWS Elemental MediaTailor shows the slate to fill in gaps in media content. Configuring the
-     * slate is optional for non-VPAID configurations. For VPAID, the slate is required because
-     * MediaTailor provides it in the slots that are designated for dynamic ad content. The slate
+     * slate is optional for non-VPAID playback configurations. For VPAID, the slate is required
+     * because MediaTailor provides it in the slots designated for dynamic ad content. The slate
      * must be a high-quality asset that contains both audio and video.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-slateadurl)
      *
-     * @param slateAdUrl The URL for a high-quality video asset to transcode and use to fill in time
-     *   that's not used by ads.
+     * @param slateAdUrl The URL for a video asset to transcode and use to fill in time that's not
+     *   used by ads.
      */
     public fun slateAdUrl(slateAdUrl: String) {
         cdkBuilder.slateAdUrl(slateAdUrl)
@@ -399,6 +399,11 @@ public class CfnPlaybackConfigurationDsl(
 
     /**
      * The tags to assign to the playback configuration.
+     *
+     * Tags are key-value pairs that you can associate with Amazon resources to help with
+     * organization, access control, and cost tracking. For more information, see
+     * [Tagging AWS Elemental MediaTailor Resources](https://docs.aws.amazon.com/mediatailor/latest/ug/tagging.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-tags)
      *
@@ -410,6 +415,11 @@ public class CfnPlaybackConfigurationDsl(
 
     /**
      * The tags to assign to the playback configuration.
+     *
+     * Tags are key-value pairs that you can associate with Amazon resources to help with
+     * organization, access control, and cost tracking. For more information, see
+     * [Tagging AWS Elemental MediaTailor Resources](https://docs.aws.amazon.com/mediatailor/latest/ug/tagging.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-tags)
      *

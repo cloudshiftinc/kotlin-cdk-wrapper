@@ -39,14 +39,31 @@ import software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy
  * .targetValue(123)
  * // the properties below are optional
  * .customizedMetricSpecification(CustomizedMetricSpecificationProperty.builder()
- * .metricName("metricName")
- * .namespace("namespace")
- * .statistic("statistic")
- * // the properties below are optional
  * .dimensions(List.of(MetricDimensionProperty.builder()
  * .name("name")
  * .value("value")
  * .build()))
+ * .metricName("metricName")
+ * .metrics(List.of(TargetTrackingMetricDataQueryProperty.builder()
+ * .expression("expression")
+ * .id("id")
+ * .label("label")
+ * .metricStat(TargetTrackingMetricStatProperty.builder()
+ * .metric(TargetTrackingMetricProperty.builder()
+ * .dimensions(List.of(TargetTrackingMetricDimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * .build())
+ * .stat("stat")
+ * .unit("unit")
+ * .build())
+ * .returnData(false)
+ * .build()))
+ * .namespace("namespace")
+ * .statistic("statistic")
  * .unit("unit")
  * .build())
  * .disableScaleIn(false)
@@ -130,7 +147,7 @@ public class CfnScalingPolicyTargetTrackingScalingPolicyConfigurationPropertyDsl
      * @param scaleInCooldown The amount of time, in seconds, after a scale-in activity completes
      *   before another scale-in activity can start. For more information and for default values,
      *   see
-     *   [Define cooldown periods](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-target-tracking.html#target-tracking-cooldown)
+     *   [Define cooldown periods](https://docs.aws.amazon.com/autoscaling/application/userguide/target-tracking-scaling-policy-overview.html#target-tracking-cooldown)
      *   in the *Application Auto Scaling User Guide* .
      */
     public fun scaleInCooldown(scaleInCooldown: Number) {
@@ -140,7 +157,7 @@ public class CfnScalingPolicyTargetTrackingScalingPolicyConfigurationPropertyDsl
     /**
      * @param scaleOutCooldown The amount of time, in seconds, to wait for a previous scale-out
      *   activity to take effect. For more information and for default values, see
-     *   [Define cooldown periods](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-target-tracking.html#target-tracking-cooldown)
+     *   [Define cooldown periods](https://docs.aws.amazon.com/autoscaling/application/userguide/target-tracking-scaling-policy-overview.html#target-tracking-cooldown)
      *   in the *Application Auto Scaling User Guide* .
      */
     public fun scaleOutCooldown(scaleOutCooldown: Number) {

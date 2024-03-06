@@ -165,6 +165,7 @@ public object resourceexplorer2 {
      * .includedProperties(List.of(IncludedPropertyProperty.builder()
      * .name("name")
      * .build()))
+     * .scope("scope")
      * .tags(Map.of(
      * "tagsKey", "tags"))
      * .build();
@@ -183,9 +184,6 @@ public object resourceexplorer2 {
     }
 
     /**
-     * An object with a `FilterString` that specifies which resources to include in the results of
-     * queries made using this view.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -247,6 +245,7 @@ public object resourceexplorer2 {
      * .includedProperties(List.of(IncludedPropertyProperty.builder()
      * .name("name")
      * .build()))
+     * .scope("scope")
      * .tags(Map.of(
      * "tagsKey", "tags"))
      * .build();
@@ -256,6 +255,29 @@ public object resourceexplorer2 {
      */
     public inline fun cfnViewProps(block: CfnViewPropsDsl.() -> Unit = {}): CfnViewProps {
         val builder = CfnViewPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A search filter defines which resources can be part of a search query result set.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.resourceexplorer2.*;
+     * SearchFilterProperty searchFilterProperty = SearchFilterProperty.builder()
+     * .filterString("filterString")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourceexplorer2-view-searchfilter.html)
+     */
+    public inline fun cfnViewSearchFilterProperty(
+        block: CfnViewSearchFilterPropertyDsl.() -> Unit = {}
+    ): CfnView.SearchFilterProperty {
+        val builder = CfnViewSearchFilterPropertyDsl()
         builder.apply(block)
         return builder.build()
     }

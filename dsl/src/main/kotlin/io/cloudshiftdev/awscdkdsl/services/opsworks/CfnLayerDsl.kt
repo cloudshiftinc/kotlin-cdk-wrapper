@@ -27,21 +27,7 @@ import software.amazon.awscdk.services.opsworks.CfnLayer
 import software.constructs.Construct
 
 /**
- * Creates a layer. For more information, see
- * [How to Create a Layer](https://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-create.html)
- * .
- *
- * You should use *CreateLayer* for noncustom layer types such as PHP App Server only if the stack
- * does not have an existing layer of that type. A stack can have at most one instance of each
- * noncustom layer; if you attempt to create a second instance, *CreateLayer* fails. A stack can
- * have an arbitrary number of custom layers, so you can call *CreateLayer* as many times as you
- * like for that layer type.
- *
- * *Required Permissions* : To use this action, an IAM user must have a Manage permissions level for
- * the stack, or an attached policy that explicitly grants permissions. For more information on user
- * permissions, see
- * [Managing User Permissions](https://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html)
- * .
+ * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html.
  *
  * Example:
  * ```
@@ -353,10 +339,9 @@ public class CfnLayerDsl(
      * Whether to install operating system and package updates when the instance boots.
      *
      * The default value is `true` . To control when updates are installed, set this value to
-     * `false` . You must then update your instances manually by using
-     * [CreateDeployment](https://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/CreateDeployment)
-     * to run the `update_dependencies` stack command or by manually running `yum` (Amazon Linux) or
-     * `apt-get` (Ubuntu) on the instances.
+     * `false` . You must then update your instances manually by using `CreateDeployment` to run the
+     * `update_dependencies` stack command or by manually running `yum` (Amazon Linux) or `apt-get`
+     * (Ubuntu) on the instances.
      *
      * To ensure that your instances have the latest security updates, we strongly recommend using
      * the default value of `true` .
@@ -374,10 +359,9 @@ public class CfnLayerDsl(
      * Whether to install operating system and package updates when the instance boots.
      *
      * The default value is `true` . To control when updates are installed, set this value to
-     * `false` . You must then update your instances manually by using
-     * [CreateDeployment](https://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/CreateDeployment)
-     * to run the `update_dependencies` stack command or by manually running `yum` (Amazon Linux) or
-     * `apt-get` (Ubuntu) on the instances.
+     * `false` . You must then update your instances manually by using `CreateDeployment` to run the
+     * `update_dependencies` stack command or by manually running `yum` (Amazon Linux) or `apt-get`
+     * (Ubuntu) on the instances.
      *
      * To ensure that your instances have the latest security updates, we strongly recommend using
      * the default value of `true` .

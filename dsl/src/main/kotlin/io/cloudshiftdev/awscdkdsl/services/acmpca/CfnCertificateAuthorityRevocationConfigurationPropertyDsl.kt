@@ -49,6 +49,9 @@ import software.amazon.awscdk.services.acmpca.CfnCertificateAuthority
  * RevocationConfigurationProperty revocationConfigurationProperty =
  * RevocationConfigurationProperty.builder()
  * .crlConfiguration(CrlConfigurationProperty.builder()
+ * .crlDistributionPointExtensionConfiguration(CrlDistributionPointExtensionConfigurationProperty.builder()
+ * .omitExtension(false)
+ * .build())
  * .customCname("customCname")
  * .enabled(false)
  * .expirationInDays(123)

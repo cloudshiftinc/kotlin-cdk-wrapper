@@ -27,15 +27,18 @@ import software.amazon.awscdk.services.iam.RoleProps
  *
  * Example:
  * ```
- * Role lambdaRole = Role.Builder.create(this, "Role")
- * .assumedBy(new ServicePrincipal("lambda.amazonaws.com"))
- * .description("Example role...")
+ * // Option 3: Create a new role that allows the account root principal to assume. Add this role in
+ * the `system:masters` and witch to this role from the AWS console.
+ * Cluster cluster;
+ * Role consoleReadOnlyRole = Role.Builder.create(this, "ConsoleReadOnlyRole")
+ * .assumedBy(new ArnPrincipal("arn_for_trusted_principal"))
  * .build();
- * Stream stream = Stream.Builder.create(this, "MyEncryptedStream")
- * .encryption(StreamEncryption.KMS)
- * .build();
- * // give lambda permissions to read stream
- * stream.grantRead(lambdaRole);
+ * consoleReadOnlyRole.addToPolicy(PolicyStatement.Builder.create()
+ * .actions(List.of("eks:AccessKubernetesApi", "eks:Describe*", "eks:List*"))
+ * .resources(List.of(cluster.getClusterArn()))
+ * .build());
+ * // Add this role to system:masters RBAC group
+ * cluster.awsAuth.addMastersRole(consoleReadOnlyRole);
  * ```
  */
 @CdkDslMarker

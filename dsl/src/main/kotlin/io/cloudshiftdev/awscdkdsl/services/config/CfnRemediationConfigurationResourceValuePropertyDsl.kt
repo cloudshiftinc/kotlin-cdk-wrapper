@@ -16,8 +16,6 @@ import kotlin.String
 import software.amazon.awscdk.services.config.CfnRemediationConfiguration
 
 /**
- * The dynamic value of the resource.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -35,7 +33,7 @@ public class CfnRemediationConfigurationResourceValuePropertyDsl {
     private val cdkBuilder: CfnRemediationConfiguration.ResourceValueProperty.Builder =
         CfnRemediationConfiguration.ResourceValueProperty.builder()
 
-    /** @param value The value is a resource ID. */
+    /** @param value the value to be set. */
     public fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
     }

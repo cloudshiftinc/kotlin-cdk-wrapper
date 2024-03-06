@@ -27,6 +27,9 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * MaximumMinimumComputationProperty maximumMinimumComputationProperty =
  * MaximumMinimumComputationProperty.builder()
  * .computationId("computationId")
+ * .type("type")
+ * // the properties below are optional
+ * .name("name")
  * .time(DimensionFieldProperty.builder()
  * .categoricalDimensionField(CategoricalDimensionFieldProperty.builder()
  * .column(ColumnIdentifierProperty.builder()
@@ -265,9 +268,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * .hierarchyId("hierarchyId")
  * .build())
  * .build())
- * .type("type")
- * // the properties below are optional
- * .name("name")
  * .value(MeasureFieldProperty.builder()
  * .calculatedMeasureField(CalculatedMeasureFieldProperty.builder()
  * .expression("expression")

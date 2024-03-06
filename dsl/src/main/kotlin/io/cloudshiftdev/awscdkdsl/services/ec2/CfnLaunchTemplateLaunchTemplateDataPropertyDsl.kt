@@ -117,6 +117,7 @@ import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
  * .instanceGenerations(List.of("instanceGenerations"))
  * .localStorage("localStorage")
  * .localStorageTypes(List.of("localStorageTypes"))
+ * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
  * .memoryGiBPerVCpu(MemoryGiBPerVCpuProperty.builder()
  * .max(123)
  * .min(123)
@@ -153,6 +154,7 @@ import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
  * .build()))
  * .maintenanceOptions(MaintenanceOptionsProperty.builder()
  * .autoRecovery("autoRecovery")
+ * .rebootMigration("rebootMigration")
  * .build())
  * .metadataOptions(MetadataOptionsProperty.builder()
  * .httpEndpoint("httpEndpoint")
@@ -167,9 +169,20 @@ import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
  * .networkInterfaces(List.of(NetworkInterfaceProperty.builder()
  * .associateCarrierIpAddress(false)
  * .associatePublicIpAddress(false)
+ * .connectionTrackingSpecification(ConnectionTrackingSpecificationProperty.builder()
+ * .tcpEstablishedTimeout(123)
+ * .udpStreamTimeout(123)
+ * .udpTimeout(123)
+ * .build())
  * .deleteOnTermination(false)
  * .description("description")
  * .deviceIndex(123)
+ * .enaSrdSpecification(EnaSrdSpecificationProperty.builder()
+ * .enaSrdEnabled(false)
+ * .enaSrdUdpSpecification(EnaSrdUdpSpecificationProperty.builder()
+ * .enaSrdUdpEnabled(false)
+ * .build())
+ * .build())
  * .groups(List.of("groups"))
  * .interfaceType("interfaceType")
  * .ipv4PrefixCount(123)
@@ -186,6 +199,7 @@ import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
  * .build()))
  * .networkCardIndex(123)
  * .networkInterfaceId("networkInterfaceId")
+ * .primaryIpv6(false)
  * .privateIpAddress("privateIpAddress")
  * .privateIpAddresses(List.of(PrivateIpAddProperty.builder()
  * .primary(false)
@@ -384,32 +398,86 @@ public class CfnLaunchTemplateLaunchTemplateDataPropertyDsl {
         cdkBuilder.ebsOptimized(ebsOptimized)
     }
 
-    /** @param elasticGpuSpecifications An elastic GPU to associate with the instance. */
+    /**
+     * @param elasticGpuSpecifications Deprecated.
+     *
+     * Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require
+     * graphics acceleration, we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+     */
     public fun elasticGpuSpecifications(vararg elasticGpuSpecifications: Any) {
         _elasticGpuSpecifications.addAll(listOf(*elasticGpuSpecifications))
     }
 
-    /** @param elasticGpuSpecifications An elastic GPU to associate with the instance. */
+    /**
+     * @param elasticGpuSpecifications Deprecated.
+     *
+     * Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require
+     * graphics acceleration, we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+     */
     public fun elasticGpuSpecifications(elasticGpuSpecifications: Collection<Any>) {
         _elasticGpuSpecifications.addAll(elasticGpuSpecifications)
     }
 
-    /** @param elasticGpuSpecifications An elastic GPU to associate with the instance. */
+    /**
+     * @param elasticGpuSpecifications Deprecated.
+     *
+     * Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require
+     * graphics acceleration, we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+     */
     public fun elasticGpuSpecifications(elasticGpuSpecifications: IResolvable) {
         cdkBuilder.elasticGpuSpecifications(elasticGpuSpecifications)
     }
 
-    /** @param elasticInferenceAccelerators The elastic inference accelerator for the instance. */
+    /**
+     * @param elasticInferenceAccelerators An elastic inference accelerator to associate with the
+     *   instance. Elastic inference accelerators are a resource you can attach to your Amazon EC2
+     *   instances to accelerate your Deep Learning (DL) inference workloads.
+     *
+     * You cannot specify accelerators from different generations in the same request.
+     *
+     * Starting April 15, 2023, AWS will not onboard new customers to Amazon Elastic Inference (EI),
+     * and will help current customers migrate their workloads to options that offer better price
+     * and performance. After April 15, 2023, new customers will not be able to launch instances
+     * with Amazon EI accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However,
+     * customers who have used Amazon EI at least once during the past 30-day period are considered
+     * current customers and will be able to continue using the service.
+     */
     public fun elasticInferenceAccelerators(vararg elasticInferenceAccelerators: Any) {
         _elasticInferenceAccelerators.addAll(listOf(*elasticInferenceAccelerators))
     }
 
-    /** @param elasticInferenceAccelerators The elastic inference accelerator for the instance. */
+    /**
+     * @param elasticInferenceAccelerators An elastic inference accelerator to associate with the
+     *   instance. Elastic inference accelerators are a resource you can attach to your Amazon EC2
+     *   instances to accelerate your Deep Learning (DL) inference workloads.
+     *
+     * You cannot specify accelerators from different generations in the same request.
+     *
+     * Starting April 15, 2023, AWS will not onboard new customers to Amazon Elastic Inference (EI),
+     * and will help current customers migrate their workloads to options that offer better price
+     * and performance. After April 15, 2023, new customers will not be able to launch instances
+     * with Amazon EI accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However,
+     * customers who have used Amazon EI at least once during the past 30-day period are considered
+     * current customers and will be able to continue using the service.
+     */
     public fun elasticInferenceAccelerators(elasticInferenceAccelerators: Collection<Any>) {
         _elasticInferenceAccelerators.addAll(elasticInferenceAccelerators)
     }
 
-    /** @param elasticInferenceAccelerators The elastic inference accelerator for the instance. */
+    /**
+     * @param elasticInferenceAccelerators An elastic inference accelerator to associate with the
+     *   instance. Elastic inference accelerators are a resource you can attach to your Amazon EC2
+     *   instances to accelerate your Deep Learning (DL) inference workloads.
+     *
+     * You cannot specify accelerators from different generations in the same request.
+     *
+     * Starting April 15, 2023, AWS will not onboard new customers to Amazon Elastic Inference (EI),
+     * and will help current customers migrate their workloads to options that offer better price
+     * and performance. After April 15, 2023, new customers will not be able to launch instances
+     * with Amazon EI accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However,
+     * customers who have used Amazon EI at least once during the past 30-day period are considered
+     * current customers and will be able to continue using the service.
+     */
     public fun elasticInferenceAccelerators(elasticInferenceAccelerators: IResolvable) {
         cdkBuilder.elasticInferenceAccelerators(elasticInferenceAccelerators)
     }
@@ -777,8 +845,7 @@ public class CfnLaunchTemplateLaunchTemplateDataPropertyDsl {
 
     /**
      * @param securityGroups One or more security group names. For a nondefault VPC, you must use
-     *   security group IDs instead. You cannot specify both a security group ID and security name
-     *   in the same request.
+     *   security group IDs instead.
      */
     public fun securityGroups(vararg securityGroups: String) {
         _securityGroups.addAll(listOf(*securityGroups))
@@ -786,8 +853,7 @@ public class CfnLaunchTemplateLaunchTemplateDataPropertyDsl {
 
     /**
      * @param securityGroups One or more security group names. For a nondefault VPC, you must use
-     *   security group IDs instead. You cannot specify both a security group ID and security name
-     *   in the same request.
+     *   security group IDs instead.
      */
     public fun securityGroups(securityGroups: Collection<String>) {
         _securityGroups.addAll(securityGroups)
@@ -795,19 +861,12 @@ public class CfnLaunchTemplateLaunchTemplateDataPropertyDsl {
 
     /**
      * @param tagSpecifications The tags to apply to the resources that are created during instance
-     *   launch. You can specify tags for the following resources only:
-     * * Instances
-     * * Volumes
-     * * Elastic graphics
-     * * Spot Instance requests
-     * * Network interfaces
+     *   launch. To tag a resource after it has been created, see
+     *   [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
      *
-     * To tag a resource after it has been created, see
-     * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
-     *
-     * To tag the launch template itself, you must use the
-     * [TagSpecification](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLaunchTemplate.html)
-     * parameter.
+     * To tag the launch template itself, use
+     * [TagSpecifications](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-tagspecifications)
+     * .
      */
     public fun tagSpecifications(vararg tagSpecifications: Any) {
         _tagSpecifications.addAll(listOf(*tagSpecifications))
@@ -815,19 +874,12 @@ public class CfnLaunchTemplateLaunchTemplateDataPropertyDsl {
 
     /**
      * @param tagSpecifications The tags to apply to the resources that are created during instance
-     *   launch. You can specify tags for the following resources only:
-     * * Instances
-     * * Volumes
-     * * Elastic graphics
-     * * Spot Instance requests
-     * * Network interfaces
+     *   launch. To tag a resource after it has been created, see
+     *   [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
      *
-     * To tag a resource after it has been created, see
-     * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
-     *
-     * To tag the launch template itself, you must use the
-     * [TagSpecification](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLaunchTemplate.html)
-     * parameter.
+     * To tag the launch template itself, use
+     * [TagSpecifications](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-tagspecifications)
+     * .
      */
     public fun tagSpecifications(tagSpecifications: Collection<Any>) {
         _tagSpecifications.addAll(tagSpecifications)
@@ -835,19 +887,12 @@ public class CfnLaunchTemplateLaunchTemplateDataPropertyDsl {
 
     /**
      * @param tagSpecifications The tags to apply to the resources that are created during instance
-     *   launch. You can specify tags for the following resources only:
-     * * Instances
-     * * Volumes
-     * * Elastic graphics
-     * * Spot Instance requests
-     * * Network interfaces
+     *   launch. To tag a resource after it has been created, see
+     *   [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
      *
-     * To tag a resource after it has been created, see
-     * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
-     *
-     * To tag the launch template itself, you must use the
-     * [TagSpecification](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLaunchTemplate.html)
-     * parameter.
+     * To tag the launch template itself, use
+     * [TagSpecifications](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-tagspecifications)
+     * .
      */
     public fun tagSpecifications(tagSpecifications: IResolvable) {
         cdkBuilder.tagSpecifications(tagSpecifications)

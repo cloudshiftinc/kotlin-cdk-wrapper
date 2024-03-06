@@ -43,8 +43,6 @@ import software.constructs.Construct
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.ec2.*;
  * CfnIPAM cfnIPAM = CfnIPAM.Builder.create(this, "MyCfnIPAM")
- * .defaultResourceDiscoveryAssociationId("defaultResourceDiscoveryAssociationId")
- * .defaultResourceDiscoveryId("defaultResourceDiscoveryId")
  * .description("description")
  * .operatingRegions(List.of(IpamOperatingRegionProperty.builder()
  * .regionName("regionName")
@@ -53,6 +51,7 @@ import software.constructs.Construct
  * .key("key")
  * .value("value")
  * .build()))
+ * .tier("tier")
  * .build();
  * ```
  *
@@ -68,31 +67,6 @@ public class CfnIPAMDsl(
     private val _operatingRegions: MutableList<Any> = mutableListOf()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
-
-    /**
-     * The IPAM's default resource discovery association ID.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipam.html#cfn-ec2-ipam-defaultresourcediscoveryassociationid)
-     *
-     * @param defaultResourceDiscoveryAssociationId The IPAM's default resource discovery
-     *   association ID.
-     */
-    public fun defaultResourceDiscoveryAssociationId(
-        defaultResourceDiscoveryAssociationId: String
-    ) {
-        cdkBuilder.defaultResourceDiscoveryAssociationId(defaultResourceDiscoveryAssociationId)
-    }
-
-    /**
-     * The IPAM's default resource discovery ID.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipam.html#cfn-ec2-ipam-defaultresourcediscoveryid)
-     *
-     * @param defaultResourceDiscoveryId The IPAM's default resource discovery ID.
-     */
-    public fun defaultResourceDiscoveryId(defaultResourceDiscoveryId: String) {
-        cdkBuilder.defaultResourceDiscoveryId(defaultResourceDiscoveryId)
-    }
 
     /**
      * The description for the IPAM.
@@ -187,6 +161,21 @@ public class CfnIPAMDsl(
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
+    }
+
+    /**
+     * IPAM is offered in a Free Tier and an Advanced Tier.
+     *
+     * For more information about the features available in each tier and the costs associated with
+     * the tiers, see the [VPC IPAM product pricing page](https://docs.aws.amazon.com//vpc/pricing/)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipam.html#cfn-ec2-ipam-tier)
+     *
+     * @param tier IPAM is offered in a Free Tier and an Advanced Tier.
+     */
+    public fun tier(tier: String) {
+        cdkBuilder.tier(tier)
     }
 
     public fun build(): CfnIPAM {

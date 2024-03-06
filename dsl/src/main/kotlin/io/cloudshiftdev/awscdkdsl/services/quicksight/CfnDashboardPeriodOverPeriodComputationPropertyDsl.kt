@@ -27,6 +27,8 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * PeriodOverPeriodComputationProperty periodOverPeriodComputationProperty =
  * PeriodOverPeriodComputationProperty.builder()
  * .computationId("computationId")
+ * // the properties below are optional
+ * .name("name")
  * .time(DimensionFieldProperty.builder()
  * .categoricalDimensionField(CategoricalDimensionFieldProperty.builder()
  * .column(ColumnIdentifierProperty.builder()
@@ -265,8 +267,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * .hierarchyId("hierarchyId")
  * .build())
  * .build())
- * // the properties below are optional
- * .name("name")
  * .value(MeasureFieldProperty.builder()
  * .calculatedMeasureField(CalculatedMeasureFieldProperty.builder()
  * .expression("expression")

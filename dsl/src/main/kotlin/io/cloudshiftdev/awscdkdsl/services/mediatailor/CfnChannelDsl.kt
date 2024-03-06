@@ -24,7 +24,11 @@ import software.amazon.awscdk.services.mediatailor.CfnChannel
 import software.constructs.Construct
 
 /**
- * Definition of AWS::MediaTailor::Channel Resource Type.
+ * The configuration parameters for a channel.
+ *
+ * For information about MediaTailor channels, see
+ * [Working with channels](https://docs.aws.amazon.com/mediatailor/latest/ug/channel-assembly-channels.html)
+ * in the *MediaTailor User Guide* .
  *
  * Example:
  * ```
@@ -44,6 +48,7 @@ import software.constructs.Construct
  * .suggestedPresentationDelaySeconds(123)
  * .build())
  * .hlsPlaylistSettings(HlsPlaylistSettingsProperty.builder()
+ * .adMarkupType(List.of("adMarkupType"))
  * .manifestWindowSeconds(123)
  * .build())
  * .build()))
@@ -61,6 +66,9 @@ import software.constructs.Construct
  * .value("value")
  * .build()))
  * .tier("tier")
+ * .timeShiftConfiguration(TimeShiftConfigurationProperty.builder()
+ * .maxTimeDelaySeconds(123)
+ * .build())
  * .build();
  * ```
  *
@@ -78,95 +86,110 @@ public class CfnChannelDsl(
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
+     * The name of the channel.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html#cfn-mediatailor-channel-channelname)
      *
-     * @param channelName
+     * @param channelName The name of the channel.
      */
     public fun channelName(channelName: String) {
         cdkBuilder.channelName(channelName)
     }
 
     /**
-     * Slate VOD source configuration.</p>.
+     * The slate used to fill gaps between programs in the schedule.
+     *
+     * You must configure filler slate if your channel uses the `LINEAR` `PlaybackMode` .
+     * MediaTailor doesn't support filler slate for channels using the `LOOP` `PlaybackMode` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html#cfn-mediatailor-channel-fillerslate)
      *
-     * @param fillerSlate Slate VOD source configuration.</p>.
+     * @param fillerSlate The slate used to fill gaps between programs in the schedule.
      */
     public fun fillerSlate(fillerSlate: IResolvable) {
         cdkBuilder.fillerSlate(fillerSlate)
     }
 
     /**
-     * Slate VOD source configuration.</p>.
+     * The slate used to fill gaps between programs in the schedule.
+     *
+     * You must configure filler slate if your channel uses the `LINEAR` `PlaybackMode` .
+     * MediaTailor doesn't support filler slate for channels using the `LOOP` `PlaybackMode` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html#cfn-mediatailor-channel-fillerslate)
      *
-     * @param fillerSlate Slate VOD source configuration.</p>.
+     * @param fillerSlate The slate used to fill gaps between programs in the schedule.
      */
     public fun fillerSlate(fillerSlate: CfnChannel.SlateSourceProperty) {
         cdkBuilder.fillerSlate(fillerSlate)
     }
 
     /**
-     * The log configuration for the channel.</p>.
+     * The log configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html#cfn-mediatailor-channel-logconfiguration)
      *
-     * @param logConfiguration The log configuration for the channel.</p>.
+     * @param logConfiguration The log configuration.
      */
     public fun logConfiguration(logConfiguration: IResolvable) {
         cdkBuilder.logConfiguration(logConfiguration)
     }
 
     /**
-     * The log configuration for the channel.</p>.
+     * The log configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html#cfn-mediatailor-channel-logconfiguration)
      *
-     * @param logConfiguration The log configuration for the channel.</p>.
+     * @param logConfiguration The log configuration.
      */
     public fun logConfiguration(logConfiguration: CfnChannel.LogConfigurationForChannelProperty) {
         cdkBuilder.logConfiguration(logConfiguration)
     }
 
     /**
-     * The channel's output properties.</p>.
+     * The channel's output properties.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html#cfn-mediatailor-channel-outputs)
      *
-     * @param outputs The channel's output properties.</p>.
+     * @param outputs The channel's output properties.
      */
     public fun outputs(vararg outputs: Any) {
         _outputs.addAll(listOf(*outputs))
     }
 
     /**
-     * The channel's output properties.</p>.
+     * The channel's output properties.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html#cfn-mediatailor-channel-outputs)
      *
-     * @param outputs The channel's output properties.</p>.
+     * @param outputs The channel's output properties.
      */
     public fun outputs(outputs: Collection<Any>) {
         _outputs.addAll(outputs)
     }
 
     /**
-     * The channel's output properties.</p>.
+     * The channel's output properties.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html#cfn-mediatailor-channel-outputs)
      *
-     * @param outputs The channel's output properties.</p>.
+     * @param outputs The channel's output properties.
      */
     public fun outputs(outputs: IResolvable) {
         cdkBuilder.outputs(outputs)
     }
 
     /**
+     * The type of playback mode for this channel.
+     *
+     * `LINEAR` - Programs play back-to-back only once.
+     *
+     * `LOOP` - Programs play back-to-back in an endless loop. When the last program in the schedule
+     * plays, playback loops back to the first program in the schedule.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html#cfn-mediatailor-channel-playbackmode)
      *
-     * @param playbackMode
+     * @param playbackMode The type of playback mode for this channel.
      */
     public fun playbackMode(playbackMode: String) {
         cdkBuilder.playbackMode(playbackMode)
@@ -174,6 +197,11 @@ public class CfnChannelDsl(
 
     /**
      * The tags to assign to the channel.
+     *
+     * Tags are key-value pairs that you can associate with Amazon resources to help with
+     * organization, access control, and cost tracking. For more information, see
+     * [Tagging AWS Elemental MediaTailor Resources](https://docs.aws.amazon.com/mediatailor/latest/ug/tagging.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html#cfn-mediatailor-channel-tags)
      *
@@ -186,6 +214,11 @@ public class CfnChannelDsl(
     /**
      * The tags to assign to the channel.
      *
+     * Tags are key-value pairs that you can associate with Amazon resources to help with
+     * organization, access control, and cost tracking. For more information, see
+     * [Tagging AWS Elemental MediaTailor Resources](https://docs.aws.amazon.com/mediatailor/latest/ug/tagging.html)
+     * .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html#cfn-mediatailor-channel-tags)
      *
      * @param tags The tags to assign to the channel.
@@ -195,12 +228,40 @@ public class CfnChannelDsl(
     }
 
     /**
+     * The tier for this channel.
+     *
+     * STANDARD tier channels can contain live programs.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html#cfn-mediatailor-channel-tier)
      *
-     * @param tier
+     * @param tier The tier for this channel.
      */
     public fun tier(tier: String) {
         cdkBuilder.tier(tier)
+    }
+
+    /**
+     * The configuration for time-shifted viewing.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html#cfn-mediatailor-channel-timeshiftconfiguration)
+     *
+     * @param timeShiftConfiguration The configuration for time-shifted viewing.
+     */
+    public fun timeShiftConfiguration(timeShiftConfiguration: IResolvable) {
+        cdkBuilder.timeShiftConfiguration(timeShiftConfiguration)
+    }
+
+    /**
+     * The configuration for time-shifted viewing.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html#cfn-mediatailor-channel-timeshiftconfiguration)
+     *
+     * @param timeShiftConfiguration The configuration for time-shifted viewing.
+     */
+    public fun timeShiftConfiguration(
+        timeShiftConfiguration: CfnChannel.TimeShiftConfigurationProperty
+    ) {
+        cdkBuilder.timeShiftConfiguration(timeShiftConfiguration)
     }
 
     public fun build(): CfnChannel {

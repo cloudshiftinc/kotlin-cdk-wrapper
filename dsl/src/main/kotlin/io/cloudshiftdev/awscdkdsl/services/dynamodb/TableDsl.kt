@@ -22,6 +22,7 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.dynamodb.Attribute
 import software.amazon.awscdk.services.dynamodb.BillingMode
+import software.amazon.awscdk.services.dynamodb.ImportSourceSpecification
 import software.amazon.awscdk.services.dynamodb.StreamViewType
 import software.amazon.awscdk.services.dynamodb.Table
 import software.amazon.awscdk.services.dynamodb.TableClass
@@ -35,18 +36,25 @@ import software.constructs.Construct
  *
  * Example:
  * ```
- * import software.amazon.awscdk.services.cloudwatch.*;
- * Table table = Table.Builder.create(this, "Table")
- * .partitionKey(Attribute.builder().name("id").type(AttributeType.STRING).build())
- * .build();
- * IMetric metric = table.metricThrottledRequestsForOperations(OperationsMetricOptions.builder()
- * .operations(List.of(Operation.PUT_ITEM))
- * .period(Duration.minutes(1))
- * .build());
- * Alarm.Builder.create(this, "Alarm")
- * .metric(metric)
- * .evaluationPeriods(1)
- * .threshold(1)
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.s3.*;
+ * IBucket bucket;
+ * App app = new App();
+ * Stack stack = new Stack(app, "Stack");
+ * Table.Builder.create(stack, "Table")
+ * .partitionKey(Attribute.builder()
+ * .name("id")
+ * .type(AttributeType.STRING)
+ * .build())
+ * .importSource(ImportSourceSpecification.builder()
+ * .compressionType(InputCompressionType.GZIP)
+ * .inputFormat(InputFormat.csv(CsvOptions.builder()
+ * .delimiter(",")
+ * .headerList(List.of("id", "name"))
+ * .build()))
+ * .bucket(bucket)
+ * .keyPrefix("prefix")
+ * .build())
  * .build();
  * ```
  */
@@ -128,6 +136,32 @@ public class TableDsl(
      */
     public fun encryptionKey(encryptionKey: IKey) {
         cdkBuilder.encryptionKey(encryptionKey)
+    }
+
+    /**
+     * The properties of data being imported from the S3 bucket source to the table.
+     *
+     * Default: - no data import from the S3 bucket
+     *
+     * @param importSource The properties of data being imported from the S3 bucket source to the
+     *   table.
+     */
+    public fun importSource(importSource: ImportSourceSpecificationDsl.() -> Unit = {}) {
+        val builder = ImportSourceSpecificationDsl()
+        builder.apply(importSource)
+        cdkBuilder.importSource(builder.build())
+    }
+
+    /**
+     * The properties of data being imported from the S3 bucket source to the table.
+     *
+     * Default: - no data import from the S3 bucket
+     *
+     * @param importSource The properties of data being imported from the S3 bucket source to the
+     *   table.
+     */
+    public fun importSource(importSource: ImportSourceSpecification) {
+        cdkBuilder.importSource(importSource)
     }
 
     /**

@@ -46,6 +46,7 @@ import software.constructs.Construct
  * .build()))
  * .name("name")
  * // the properties below are optional
+ * .agentAvailabilityTimer("agentAvailabilityTimer")
  * .queueConfigs(List.of(RoutingProfileQueueConfigProperty.builder()
  * .delay(123)
  * .priority(123)
@@ -75,6 +76,20 @@ public class CfnRoutingProfileDsl(
     private val _queueConfigs: MutableList<Any> = mutableListOf()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
+
+    /**
+     * Whether agents with this routing profile will have their routing order calculated based on
+     * *time since their last inbound contact* or *longest idle time* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-routingprofile.html#cfn-connect-routingprofile-agentavailabilitytimer)
+     *
+     * @param agentAvailabilityTimer Whether agents with this routing profile will have their
+     *   routing order calculated based on *time since their last inbound contact* or *longest idle
+     *   time* .
+     */
+    public fun agentAvailabilityTimer(agentAvailabilityTimer: String) {
+        cdkBuilder.agentAvailabilityTimer(agentAvailabilityTimer)
+    }
 
     /**
      * The Amazon Resource Name (ARN) of the default outbound queue for the routing profile.
@@ -199,7 +214,7 @@ public class CfnRoutingProfileDsl(
     /**
      * The tags used to organize, track, or control access for this resource.
      *
-     * For example, { "tags": {"key1":"value1", "key2":"value2"} }.
+     * For example, { "Tags": {"key1":"value1", "key2":"value2"} }.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-routingprofile.html#cfn-connect-routingprofile-tags)
      *
@@ -212,7 +227,7 @@ public class CfnRoutingProfileDsl(
     /**
      * The tags used to organize, track, or control access for this resource.
      *
-     * For example, { "tags": {"key1":"value1", "key2":"value2"} }.
+     * For example, { "Tags": {"key1":"value1", "key2":"value2"} }.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-routingprofile.html#cfn-connect-routingprofile-tags)
      *

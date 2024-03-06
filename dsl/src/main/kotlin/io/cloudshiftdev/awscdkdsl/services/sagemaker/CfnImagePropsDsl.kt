@@ -49,12 +49,7 @@ public class CfnImagePropsDsl {
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
-    /**
-     * @param imageDescription The description of the image. *Length Constraints* : Minimum length
-     *   of 1. Maximum length of 512.
-     *
-     * *Pattern* : `.*`
-     */
+    /** @param imageDescription The description of the image. */
     public fun imageDescription(imageDescription: String) {
         cdkBuilder.imageDescription(imageDescription)
     }

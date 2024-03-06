@@ -39,6 +39,10 @@ import software.constructs.Construct
  * .componentTypeId("componentTypeId")
  * .workspaceId("workspaceId")
  * // the properties below are optional
+ * .compositeComponentTypes(Map.of(
+ * "compositeComponentTypesKey", CompositeComponentTypeProperty.builder()
+ * .componentTypeId("componentTypeId")
+ * .build()))
  * .description("description")
  * .extendsFrom(List.of("extendsFrom"))
  * .functions(Map.of(
@@ -126,6 +130,50 @@ public class CfnComponentTypeDsl(
      */
     public fun componentTypeId(componentTypeId: String) {
         cdkBuilder.componentTypeId(componentTypeId)
+    }
+
+    /**
+     * Maps strings to `compositeComponentTypes` of the `componentType` .
+     *
+     * `CompositeComponentType` is referenced by `componentTypeId` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-componenttype.html#cfn-iottwinmaker-componenttype-compositecomponenttypes)
+     *
+     * @param compositeComponentTypes Maps strings to `compositeComponentTypes` of the
+     *   `componentType` .
+     */
+    public fun compositeComponentTypes(compositeComponentTypes: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(compositeComponentTypes)
+        cdkBuilder.compositeComponentTypes(builder.map)
+    }
+
+    /**
+     * Maps strings to `compositeComponentTypes` of the `componentType` .
+     *
+     * `CompositeComponentType` is referenced by `componentTypeId` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-componenttype.html#cfn-iottwinmaker-componenttype-compositecomponenttypes)
+     *
+     * @param compositeComponentTypes Maps strings to `compositeComponentTypes` of the
+     *   `componentType` .
+     */
+    public fun compositeComponentTypes(compositeComponentTypes: Map<String, Any>) {
+        cdkBuilder.compositeComponentTypes(compositeComponentTypes)
+    }
+
+    /**
+     * Maps strings to `compositeComponentTypes` of the `componentType` .
+     *
+     * `CompositeComponentType` is referenced by `componentTypeId` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-componenttype.html#cfn-iottwinmaker-componenttype-compositecomponenttypes)
+     *
+     * @param compositeComponentTypes Maps strings to `compositeComponentTypes` of the
+     *   `componentType` .
+     */
+    public fun compositeComponentTypes(compositeComponentTypes: IResolvable) {
+        cdkBuilder.compositeComponentTypes(compositeComponentTypes)
     }
 
     /**
@@ -352,11 +400,11 @@ public class CfnComponentTypeDsl(
     }
 
     /**
-     * The ID of the workspace.
+     * The ID of the workspace that contains the component type.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-componenttype.html#cfn-iottwinmaker-componenttype-workspaceid)
      *
-     * @param workspaceId The ID of the workspace.
+     * @param workspaceId The ID of the workspace that contains the component type.
      */
     public fun workspaceId(workspaceId: String) {
         cdkBuilder.workspaceId(workspaceId)

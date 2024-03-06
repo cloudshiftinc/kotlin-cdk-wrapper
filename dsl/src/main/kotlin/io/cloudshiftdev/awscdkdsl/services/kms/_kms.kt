@@ -218,8 +218,8 @@ public object kms {
      * of all supported types. To replicate a multi-Region key, use the `AWS::KMS::ReplicaKey`
      * resource.
      *
-     * If you change the value of the `KeySpec` , `KeyUsage` , or `MultiRegion` properties of an
-     * existing KMS key, the update request fails, regardless of the value of the
+     * If you change the value of the `KeySpec` , `KeyUsage` , `Origin` , or `MultiRegion`
+     * properties of an existing KMS key, the update request fails, regardless of the value of the
      * [`UpdateReplacePolicy` attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatereplacepolicy.html)
      * . This prevents you from accidentally deleting a KMS key by changing any of its immutable
      * property values. &gt; AWS KMS replaced the term *customer master key (CMK)* with *AWS KMS
@@ -429,14 +429,20 @@ public object kms {
      *
      * Example:
      * ```
-     * import software.amazon.awscdk.services.kms.*;
-     * Key encryptionKey = Key.Builder.create(this, "Key")
-     * .enableKeyRotation(true)
-     * .build();
-     * Table table = Table.Builder.create(this, "MyTable")
-     * .partitionKey(Attribute.builder().name("id").type(AttributeType.STRING).build())
-     * .encryption(TableEncryption.CUSTOMER_MANAGED)
-     * .encryptionKey(encryptionKey)
+     * Vpc vpc;
+     * IInstanceEngine engine =
+     * DatabaseInstanceEngine.postgres(PostgresInstanceEngineProps.builder().version(PostgresEngineVersion.VER_15_2).build());
+     * Key myKey = new Key(this, "MyKey");
+     * DatabaseInstance.Builder.create(this, "InstanceWithCustomizedSecret")
+     * .engine(engine)
+     * .vpc(vpc)
+     * .credentials(Credentials.fromGeneratedSecret("postgres", CredentialsBaseOptions.builder()
+     * .secretName("my-cool-name")
+     * .encryptionKey(myKey)
+     * .excludeCharacters("!&amp;*^#&#64;()")
+     * .replicaRegions(List.of(ReplicaRegion.builder().region("eu-west-1").build(),
+     * ReplicaRegion.builder().region("eu-west-2").build()))
+     * .build()))
      * .build();
      * ```
      */

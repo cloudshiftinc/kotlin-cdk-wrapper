@@ -68,6 +68,38 @@ import software.amazon.awscdk.services.iottwinmaker.CfnEntityProps
  * .state("state")
  * .build())
  * .build()))
+ * .compositeComponents(Map.of(
+ * "compositeComponentsKey", CompositeComponentProperty.builder()
+ * .componentName("componentName")
+ * .componentPath("componentPath")
+ * .componentTypeId("componentTypeId")
+ * .description("description")
+ * .properties(Map.of(
+ * "propertiesKey", PropertyProperty.builder()
+ * .definition(definition)
+ * .value(DataValueProperty.builder()
+ * .booleanValue(false)
+ * .doubleValue(123)
+ * .expression("expression")
+ * .integerValue(123)
+ * .listValue(List.of(dataValueProperty_))
+ * .longValue(123)
+ * .mapValue(Map.of(
+ * "mapValueKey", dataValueProperty_))
+ * .relationshipValue(relationshipValue)
+ * .stringValue("stringValue")
+ * .build())
+ * .build()))
+ * .propertyGroups(Map.of(
+ * "propertyGroupsKey", PropertyGroupProperty.builder()
+ * .groupType("groupType")
+ * .propertyNames(List.of("propertyNames"))
+ * .build()))
+ * .status(StatusProperty.builder()
+ * .error(error)
+ * .state("state")
+ * .build())
+ * .build()))
  * .description("description")
  * .entityId("entityId")
  * .parentEntityId("parentEntityId")
@@ -120,12 +152,38 @@ public class CfnEntityPropsDsl {
         cdkBuilder.components(components)
     }
 
+    /**
+     * @param compositeComponents Maps string to `compositeComponent` updates in the request. Each
+     *   key of the map represents the `componentPath` of the `compositeComponent` .
+     */
+    public fun compositeComponents(compositeComponents: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(compositeComponents)
+        cdkBuilder.compositeComponents(builder.map)
+    }
+
+    /**
+     * @param compositeComponents Maps string to `compositeComponent` updates in the request. Each
+     *   key of the map represents the `componentPath` of the `compositeComponent` .
+     */
+    public fun compositeComponents(compositeComponents: Map<String, Any>) {
+        cdkBuilder.compositeComponents(compositeComponents)
+    }
+
+    /**
+     * @param compositeComponents Maps string to `compositeComponent` updates in the request. Each
+     *   key of the map represents the `componentPath` of the `compositeComponent` .
+     */
+    public fun compositeComponents(compositeComponents: IResolvable) {
+        cdkBuilder.compositeComponents(compositeComponents)
+    }
+
     /** @param description The description of the entity. */
     public fun description(description: String) {
         cdkBuilder.description(description)
     }
 
-    /** @param entityId The entity ID. */
+    /** @param entityId The ID of the entity. */
     public fun entityId(entityId: String) {
         cdkBuilder.entityId(entityId)
     }
@@ -145,7 +203,7 @@ public class CfnEntityPropsDsl {
         cdkBuilder.tags(tags)
     }
 
-    /** @param workspaceId The ID of the workspace. */
+    /** @param workspaceId The ID of the workspace that contains the entity. */
     public fun workspaceId(workspaceId: String) {
         cdkBuilder.workspaceId(workspaceId)
     }

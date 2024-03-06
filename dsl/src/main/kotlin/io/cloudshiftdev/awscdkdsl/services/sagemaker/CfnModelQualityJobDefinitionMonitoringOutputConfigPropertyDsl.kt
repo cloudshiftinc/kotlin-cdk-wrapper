@@ -52,7 +52,7 @@ public class CfnModelQualityJobDefinitionMonitoringOutputConfigPropertyDsl {
     private val _monitoringOutputs: MutableList<Any> = mutableListOf()
 
     /**
-     * @param kmsKeyId The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to
+     * @param kmsKeyId The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses to
      *   encrypt the model artifacts at rest using Amazon S3 server-side encryption.
      */
     public fun kmsKeyId(kmsKeyId: String) {

@@ -68,8 +68,8 @@ public class CfnGatewayPropsDsl {
     }
 
     /**
-     * @param name The name of the gateway. This name can not be modified after the gateway is
-     *   created.
+     * @param name The name of the network. This name is used to reference the network and must be
+     *   unique among networks in this gateway.
      */
     public fun name(name: String) {
         cdkBuilder.name(name)

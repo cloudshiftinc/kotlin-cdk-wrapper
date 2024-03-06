@@ -64,7 +64,7 @@ public class CfnRecordingConfigurationThumbnailConfigurationPropertyDsl {
      *   recorded at the selected resolution if the corresponding rendition is available during the
      *   stream; otherwise, they are recorded at source resolution. For more information about
      *   resolution values and their corresponding height and width dimensions, see
-     *   [Auto-Record to Amazon S3](https://docs.aws.amazon.com//ivs/latest/userguide/record-to-s3.html)
+     *   [Auto-Record to Amazon S3](https://docs.aws.amazon.com//ivs/latest/LowLatencyUserGuide/record-to-s3.html)
      *   .
      */
     public fun resolution(resolution: String) {
@@ -103,7 +103,7 @@ public class CfnRecordingConfigurationThumbnailConfigurationPropertyDsl {
      * at the specified interval. For thumbnails to be generated at the `TargetIntervalSeconds`
      * interval, the `IDR/Keyframe` value for the input video must be less than the
      * `TargetIntervalSeconds` value. See
-     * [Amazon IVS Streaming Configuration](https://docs.aws.amazon.com/ivs/latest/userguide/streaming-config.html)
+     * [Amazon IVS Streaming Configuration](https://docs.aws.amazon.com/ivs/latest/LowLatencyUserGuide/streaming-config.html)
      * for information on setting `IDR/Keyframe` to the recommended value in video-encoder settings.
      *
      * *Default* : 60

@@ -16,8 +16,6 @@ import kotlin.String
 import software.amazon.awscdk.services.appconfig.CfnEnvironment
 
 /**
- * Amazon CloudWatch alarms to monitor during the deployment process.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -36,15 +34,12 @@ public class CfnEnvironmentMonitorsPropertyDsl {
     private val cdkBuilder: CfnEnvironment.MonitorsProperty.Builder =
         CfnEnvironment.MonitorsProperty.builder()
 
-    /** @param alarmArn Amazon Resource Name (ARN) of the Amazon CloudWatch alarm. */
+    /** @param alarmArn the value to be set. */
     public fun alarmArn(alarmArn: String) {
         cdkBuilder.alarmArn(alarmArn)
     }
 
-    /**
-     * @param alarmRoleArn ARN of an AWS Identity and Access Management (IAM) role for AWS AppConfig
-     *   to monitor `AlarmArn` .
-     */
+    /** @param alarmRoleArn the value to be set. */
     public fun alarmRoleArn(alarmRoleArn: String) {
         cdkBuilder.alarmRoleArn(alarmRoleArn)
     }

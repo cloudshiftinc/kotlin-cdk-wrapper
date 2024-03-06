@@ -30,6 +30,14 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * .dataSetIdentifier("dataSetIdentifier")
  * .build())
  * // the properties below are optional
+ * .colorsConfiguration(ColorsConfigurationProperty.builder()
+ * .customColors(List.of(CustomColorProperty.builder()
+ * .color("color")
+ * // the properties below are optional
+ * .fieldValue("fieldValue")
+ * .specialValue("specialValue")
+ * .build()))
+ * .build())
  * .formatConfiguration(FormatConfigurationProperty.builder()
  * .dateTimeFormatConfiguration(DateTimeFormatConfigurationProperty.builder()
  * .dateTimeFormat("dateTimeFormat")
@@ -250,6 +258,16 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
 public class CfnTemplateColumnConfigurationPropertyDsl {
     private val cdkBuilder: CfnTemplate.ColumnConfigurationProperty.Builder =
         CfnTemplate.ColumnConfigurationProperty.builder()
+
+    /** @param colorsConfiguration The color configurations of the column. */
+    public fun colorsConfiguration(colorsConfiguration: IResolvable) {
+        cdkBuilder.colorsConfiguration(colorsConfiguration)
+    }
+
+    /** @param colorsConfiguration The color configurations of the column. */
+    public fun colorsConfiguration(colorsConfiguration: CfnTemplate.ColorsConfigurationProperty) {
+        cdkBuilder.colorsConfiguration(colorsConfiguration)
+    }
 
     /** @param column The column. */
     public fun column(column: IResolvable) {

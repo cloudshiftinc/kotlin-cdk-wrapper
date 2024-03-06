@@ -41,6 +41,7 @@ import software.amazon.awscdk.services.kendra.CfnFaqProps
  * // the properties below are optional
  * .description("description")
  * .fileFormat("fileFormat")
+ * .languageCode("languageCode")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -81,6 +82,11 @@ public class CfnFaqPropsDsl {
     /** @param indexId The identifier of the index that contains the FAQ. */
     public fun indexId(indexId: String) {
         cdkBuilder.indexId(indexId)
+    }
+
+    /** @param languageCode The code for a language. */
+    public fun languageCode(languageCode: String) {
+        cdkBuilder.languageCode(languageCode)
     }
 
     /** @param name The name that you assigned the FAQ when you created or updated the FAQ. */

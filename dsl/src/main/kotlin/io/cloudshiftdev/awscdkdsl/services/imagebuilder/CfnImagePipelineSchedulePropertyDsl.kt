@@ -16,7 +16,7 @@ import kotlin.String
 import software.amazon.awscdk.services.imagebuilder.CfnImagePipeline
 
 /**
- * A schedule configures how often and when a pipeline will automatically create a new image.
+ * A schedule configures when and how often a pipeline will automatically create a new image.
  *
  * Example:
  * ```

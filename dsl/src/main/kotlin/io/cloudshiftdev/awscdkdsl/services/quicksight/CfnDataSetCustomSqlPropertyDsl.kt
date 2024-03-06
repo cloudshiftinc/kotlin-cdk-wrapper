@@ -31,6 +31,8 @@ import software.amazon.awscdk.services.quicksight.CfnDataSet
  * .columns(List.of(InputColumnProperty.builder()
  * .name("name")
  * .type("type")
+ * // the properties below are optional
+ * .subType("subType")
  * .build()))
  * .dataSourceArn("dataSourceArn")
  * .name("name")

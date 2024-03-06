@@ -19,6 +19,8 @@ import software.amazon.awscdk.services.glue.CfnConnection
 import software.amazon.awscdk.services.glue.CfnConnectionProps
 import software.amazon.awscdk.services.glue.CfnCrawler
 import software.amazon.awscdk.services.glue.CfnCrawlerProps
+import software.amazon.awscdk.services.glue.CfnCustomEntityType
+import software.amazon.awscdk.services.glue.CfnCustomEntityTypeProps
 import software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings
 import software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettingsProps
 import software.amazon.awscdk.services.glue.CfnDataQualityRuleset
@@ -44,6 +46,8 @@ import software.amazon.awscdk.services.glue.CfnSchemaVersionProps
 import software.amazon.awscdk.services.glue.CfnSecurityConfiguration
 import software.amazon.awscdk.services.glue.CfnSecurityConfigurationProps
 import software.amazon.awscdk.services.glue.CfnTable
+import software.amazon.awscdk.services.glue.CfnTableOptimizer
+import software.amazon.awscdk.services.glue.CfnTableOptimizerProps
 import software.amazon.awscdk.services.glue.CfnTableProps
 import software.amazon.awscdk.services.glue.CfnTrigger
 import software.amazon.awscdk.services.glue.CfnTriggerProps
@@ -583,6 +587,8 @@ public object glue {
     }
 
     /**
+     * Specifies Apache Iceberg data store targets.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -910,6 +916,67 @@ public object glue {
     }
 
     /**
+     * Creates a custom pattern that is used to detect sensitive data across the columns and rows of
+     * your structured data.
+     *
+     * Each custom pattern you create specifies a regular expression and an optional list of context
+     * words. If no context words are passed only a regular expression is checked.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.glue.*;
+     * Object tags;
+     * CfnCustomEntityType cfnCustomEntityType = CfnCustomEntityType.Builder.create(this,
+     * "MyCfnCustomEntityType")
+     * .contextWords(List.of("contextWords"))
+     * .name("name")
+     * .regexString("regexString")
+     * .tags(tags)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-customentitytype.html)
+     */
+    public inline fun cfnCustomEntityType(
+        scope: Construct,
+        id: String,
+        block: CfnCustomEntityTypeDsl.() -> Unit = {},
+    ): CfnCustomEntityType {
+        val builder = CfnCustomEntityTypeDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnCustomEntityType`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.glue.*;
+     * Object tags;
+     * CfnCustomEntityTypeProps cfnCustomEntityTypeProps = CfnCustomEntityTypeProps.builder()
+     * .contextWords(List.of("contextWords"))
+     * .name("name")
+     * .regexString("regexString")
+     * .tags(tags)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-customentitytype.html)
+     */
+    public inline fun cfnCustomEntityTypeProps(
+        block: CfnCustomEntityTypePropsDsl.() -> Unit = {}
+    ): CfnCustomEntityTypeProps {
+        val builder = CfnCustomEntityTypePropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Sets the security configuration for a specified catalog.
      *
      * After the configuration has been set, the specified encryption is applied to every catalog
@@ -930,6 +997,7 @@ public object glue {
      * .build())
      * .encryptionAtRest(EncryptionAtRestProperty.builder()
      * .catalogEncryptionMode("catalogEncryptionMode")
+     * .catalogEncryptionServiceRole("catalogEncryptionServiceRole")
      * .sseAwsKmsKeyId("sseAwsKmsKeyId")
      * .build())
      * .build())
@@ -1002,6 +1070,7 @@ public object glue {
      * .build())
      * .encryptionAtRest(EncryptionAtRestProperty.builder()
      * .catalogEncryptionMode("catalogEncryptionMode")
+     * .catalogEncryptionServiceRole("catalogEncryptionServiceRole")
      * .sseAwsKmsKeyId("sseAwsKmsKeyId")
      * .build())
      * .build();
@@ -1028,6 +1097,7 @@ public object glue {
      * import software.amazon.awscdk.services.glue.*;
      * EncryptionAtRestProperty encryptionAtRestProperty = EncryptionAtRestProperty.builder()
      * .catalogEncryptionMode("catalogEncryptionMode")
+     * .catalogEncryptionServiceRole("catalogEncryptionServiceRole")
      * .sseAwsKmsKeyId("sseAwsKmsKeyId")
      * .build();
      * ```
@@ -1060,6 +1130,7 @@ public object glue {
      * .build())
      * .encryptionAtRest(EncryptionAtRestProperty.builder()
      * .catalogEncryptionMode("catalogEncryptionMode")
+     * .catalogEncryptionServiceRole("catalogEncryptionServiceRole")
      * .sseAwsKmsKeyId("sseAwsKmsKeyId")
      * .build())
      * .build())
@@ -3109,6 +3180,8 @@ public object glue {
     }
 
     /**
+     * Specifies an input structure that defines an Apache Iceberg metadata table.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -3131,6 +3204,8 @@ public object glue {
     }
 
     /**
+     * Specifies an `OpenTableFormatInput` structure when creating an open format table.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -3151,6 +3226,95 @@ public object glue {
         block: CfnTableOpenTableFormatInputPropertyDsl.() -> Unit = {}
     ): CfnTable.OpenTableFormatInputProperty {
         val builder = CfnTableOpenTableFormatInputPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A resource that describes the AWS Glue resource for enabling compaction to improve read
+     * performance for open table formats.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.glue.*;
+     * CfnTableOptimizer cfnTableOptimizer = CfnTableOptimizer.Builder.create(this,
+     * "MyCfnTableOptimizer")
+     * .catalogId("catalogId")
+     * .databaseName("databaseName")
+     * .tableName("tableName")
+     * .tableOptimizerConfiguration(TableOptimizerConfigurationProperty.builder()
+     * .enabled(false)
+     * .roleArn("roleArn")
+     * .build())
+     * .type("type")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-tableoptimizer.html)
+     */
+    public inline fun cfnTableOptimizer(
+        scope: Construct,
+        id: String,
+        block: CfnTableOptimizerDsl.() -> Unit = {},
+    ): CfnTableOptimizer {
+        val builder = CfnTableOptimizerDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnTableOptimizer`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.glue.*;
+     * CfnTableOptimizerProps cfnTableOptimizerProps = CfnTableOptimizerProps.builder()
+     * .catalogId("catalogId")
+     * .databaseName("databaseName")
+     * .tableName("tableName")
+     * .tableOptimizerConfiguration(TableOptimizerConfigurationProperty.builder()
+     * .enabled(false)
+     * .roleArn("roleArn")
+     * .build())
+     * .type("type")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-tableoptimizer.html)
+     */
+    public inline fun cfnTableOptimizerProps(
+        block: CfnTableOptimizerPropsDsl.() -> Unit = {}
+    ): CfnTableOptimizerProps {
+        val builder = CfnTableOptimizerPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies configuration details of a table optimizer.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.glue.*;
+     * TableOptimizerConfigurationProperty tableOptimizerConfigurationProperty =
+     * TableOptimizerConfigurationProperty.builder()
+     * .enabled(false)
+     * .roleArn("roleArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-tableoptimizer-tableoptimizerconfiguration.html)
+     */
+    public inline fun cfnTableOptimizerTableOptimizerConfigurationProperty(
+        block: CfnTableOptimizerTableOptimizerConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnTableOptimizer.TableOptimizerConfigurationProperty {
+        val builder = CfnTableOptimizerTableOptimizerConfigurationPropertyDsl()
         builder.apply(block)
         return builder.build()
     }

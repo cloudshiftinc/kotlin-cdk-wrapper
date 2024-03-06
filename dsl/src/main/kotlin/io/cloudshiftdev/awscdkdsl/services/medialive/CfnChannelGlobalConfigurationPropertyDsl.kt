@@ -27,6 +27,7 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.medialive.*;
+ * Object pipelineLockingSettings;
  * GlobalConfigurationProperty globalConfigurationProperty = GlobalConfigurationProperty.builder()
  * .initialAudioGain(123)
  * .inputEndAction("inputEndAction")
@@ -42,6 +43,13 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * .repeatFrameMsec(123)
  * .build())
  * .outputLockingMode("outputLockingMode")
+ * .outputLockingSettings(OutputLockingSettingsProperty.builder()
+ * .epochLockingSettings(EpochLockingSettingsProperty.builder()
+ * .customEpoch("customEpoch")
+ * .jamSyncTime("jamSyncTime")
+ * .build())
+ * .pipelineLockingSettings(pipelineLockingSettings)
+ * .build())
  * .outputTimingSource("outputTimingSource")
  * .supportLowFramerateInputs("supportLowFramerateInputs")
  * .build();
@@ -88,6 +96,18 @@ public class CfnChannelGlobalConfigurationPropertyDsl {
      */
     public fun outputLockingMode(outputLockingMode: String) {
         cdkBuilder.outputLockingMode(outputLockingMode)
+    }
+
+    /** @param outputLockingSettings the value to be set. */
+    public fun outputLockingSettings(outputLockingSettings: IResolvable) {
+        cdkBuilder.outputLockingSettings(outputLockingSettings)
+    }
+
+    /** @param outputLockingSettings the value to be set. */
+    public fun outputLockingSettings(
+        outputLockingSettings: CfnChannel.OutputLockingSettingsProperty
+    ) {
+        cdkBuilder.outputLockingSettings(outputLockingSettings)
     }
 
     /**

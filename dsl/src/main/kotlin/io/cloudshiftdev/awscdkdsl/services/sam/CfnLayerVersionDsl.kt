@@ -20,7 +20,7 @@ import software.amazon.awscdk.services.sam.CfnLayerVersion
 import software.constructs.Construct
 
 /**
- * Definition of AWS::Serverless::LayerVersion.
+ * https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlesslayerversion.
  *
  * Example:
  * ```

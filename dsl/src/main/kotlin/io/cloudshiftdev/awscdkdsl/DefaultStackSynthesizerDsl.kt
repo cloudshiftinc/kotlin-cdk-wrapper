@@ -30,9 +30,13 @@ import software.amazon.awscdk.DefaultStackSynthesizer
  *
  * Example:
  * ```
- * MyStack.Builder.create(app, "MyStack")
+ * App app;
+ * Stage prodStage = Stage.Builder.create(app, "ProdStage")
+ * .permissionsBoundary(PermissionsBoundary.fromName("cdk-${Qualifier}-PermissionsBoundary-${AWS::AccountId}-${AWS::Region}"))
+ * .build();
+ * Stack.Builder.create(prodStage, "ProdStack")
  * .synthesizer(DefaultStackSynthesizer.Builder.create()
- * .fileAssetsBucketName("my-orgs-asset-bucket")
+ * .qualifier("custom")
  * .build())
  * .build();
  * ```

@@ -111,6 +111,18 @@ import software.amazon.awscdk.services.ecs.CfnServiceProps
  * .build()))
  * .discoveryName("discoveryName")
  * .ingressPortOverride(123)
+ * .timeout(TimeoutConfigurationProperty.builder()
+ * .idleTimeoutSeconds(123)
+ * .perRequestTimeoutSeconds(123)
+ * .build())
+ * .tls(ServiceConnectTlsConfigurationProperty.builder()
+ * .issuerCertificateAuthority(ServiceConnectTlsCertificateAuthorityProperty.builder()
+ * .awsPcaAuthorityArn("awsPcaAuthorityArn")
+ * .build())
+ * // the properties below are optional
+ * .kmsKey("kmsKey")
+ * .roleArn("roleArn")
+ * .build())
  * .build()))
  * .build())
  * .serviceName("serviceName")
@@ -125,6 +137,31 @@ import software.amazon.awscdk.services.ecs.CfnServiceProps
  * .value("value")
  * .build()))
  * .taskDefinition("taskDefinition")
+ * .volumeConfigurations(List.of(ServiceVolumeConfigurationProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .managedEbsVolume(ServiceManagedEBSVolumeConfigurationProperty.builder()
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .encrypted(false)
+ * .filesystemType("filesystemType")
+ * .iops(123)
+ * .kmsKeyId("kmsKeyId")
+ * .sizeInGiB(123)
+ * .snapshotId("snapshotId")
+ * .tagSpecifications(List.of(EBSTagSpecificationProperty.builder()
+ * .resourceType("resourceType")
+ * // the properties below are optional
+ * .propagateTags("propagateTags")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build()))
+ * .throughput(123)
+ * .volumeType("volumeType")
+ * .build())
+ * .build()))
  * .build();
  * ```
  *
@@ -145,6 +182,8 @@ public class CfnServicePropsDsl {
     private val _serviceRegistries: MutableList<Any> = mutableListOf()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
+
+    private val _volumeConfigurations: MutableList<Any> = mutableListOf()
 
     /**
      * @param capacityProviderStrategy The capacity provider strategy to use for the service. If a
@@ -630,6 +669,33 @@ public class CfnServicePropsDsl {
         cdkBuilder.taskDefinition(taskDefinition)
     }
 
+    /**
+     * @param volumeConfigurations The configuration for a volume specified in the task definition
+     *   as a volume that is configured at launch time. Currently, the only supported volume type is
+     *   an Amazon EBS volume.
+     */
+    public fun volumeConfigurations(vararg volumeConfigurations: Any) {
+        _volumeConfigurations.addAll(listOf(*volumeConfigurations))
+    }
+
+    /**
+     * @param volumeConfigurations The configuration for a volume specified in the task definition
+     *   as a volume that is configured at launch time. Currently, the only supported volume type is
+     *   an Amazon EBS volume.
+     */
+    public fun volumeConfigurations(volumeConfigurations: Collection<Any>) {
+        _volumeConfigurations.addAll(volumeConfigurations)
+    }
+
+    /**
+     * @param volumeConfigurations The configuration for a volume specified in the task definition
+     *   as a volume that is configured at launch time. Currently, the only supported volume type is
+     *   an Amazon EBS volume.
+     */
+    public fun volumeConfigurations(volumeConfigurations: IResolvable) {
+        cdkBuilder.volumeConfigurations(volumeConfigurations)
+    }
+
     public fun build(): CfnServiceProps {
         if (_capacityProviderStrategy.isNotEmpty())
             cdkBuilder.capacityProviderStrategy(_capacityProviderStrategy)
@@ -639,6 +705,8 @@ public class CfnServicePropsDsl {
         if (_placementStrategies.isNotEmpty()) cdkBuilder.placementStrategies(_placementStrategies)
         if (_serviceRegistries.isNotEmpty()) cdkBuilder.serviceRegistries(_serviceRegistries)
         if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        if (_volumeConfigurations.isNotEmpty())
+            cdkBuilder.volumeConfigurations(_volumeConfigurations)
         return cdkBuilder.build()
     }
 }

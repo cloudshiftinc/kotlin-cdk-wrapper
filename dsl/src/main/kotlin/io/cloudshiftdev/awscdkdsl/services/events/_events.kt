@@ -375,6 +375,7 @@ public object events {
      * import software.amazon.awscdk.services.events.*;
      * CfnConnection cfnConnection = CfnConnection.Builder.create(this, "MyCfnConnection")
      * .authorizationType("authorizationType")
+     * // the properties below are optional
      * .authParameters(AuthParametersProperty.builder()
      * .apiKeyAuthParameters(ApiKeyAuthParametersProperty.builder()
      * .apiKeyName("apiKeyName")
@@ -434,7 +435,6 @@ public object events {
      * .build())
      * .build())
      * .build())
-     * // the properties below are optional
      * .description("description")
      * .name("name")
      * .build();
@@ -733,6 +733,7 @@ public object events {
      * import software.amazon.awscdk.services.events.*;
      * CfnConnectionProps cfnConnectionProps = CfnConnectionProps.builder()
      * .authorizationType("authorizationType")
+     * // the properties below are optional
      * .authParameters(AuthParametersProperty.builder()
      * .apiKeyAuthParameters(ApiKeyAuthParametersProperty.builder()
      * .apiKeyName("apiKeyName")
@@ -792,7 +793,6 @@ public object events {
      * .build())
      * .build())
      * .build())
-     * // the properties below are optional
      * .description("description")
      * .name("name")
      * .build();
@@ -1053,21 +1053,29 @@ public object events {
     }
 
     /**
-     * Creates a new event bus within your account.
+     * Specifies an event bus within your account.
      *
      * This can be a custom event bus which you can use to receive events from your custom
      * applications and services, or it can be a partner event bus which can be matched to a partner
      * event source.
+     *
+     * As an aid to help you jumpstart developing CloudFormation templates, the EventBridge console
+     * enables you to create templates from the existing event buses in your account. For more
+     * information, see
+     * [Generating CloudFormation templates from an EventBridge event bus](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-generate-event-bus-template.html)
+     * in the *Amazon EventBridge User Guide* .
      *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.events.*;
+     * Object policy;
      * CfnEventBus cfnEventBus = CfnEventBus.Builder.create(this, "MyCfnEventBus")
      * .name("name")
      * // the properties below are optional
      * .eventSourceName("eventSourceName")
+     * .policy(policy)
      * .tags(List.of(TagEntryProperty.builder()
      * .key("key")
      * .value("value")
@@ -1218,10 +1226,12 @@ public object events {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.events.*;
+     * Object policy;
      * CfnEventBusProps cfnEventBusProps = CfnEventBusProps.builder()
      * .name("name")
      * // the properties below are optional
      * .eventSourceName("eventSourceName")
+     * .policy(policy)
      * .tags(List.of(TagEntryProperty.builder()
      * .key("key")
      * .value("value")
@@ -1240,10 +1250,6 @@ public object events {
     }
 
     /**
-     * A key-value pair associated with an AWS resource.
-     *
-     * In EventBridge, rules and event buses support tagging.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -1312,6 +1318,12 @@ public object events {
      * [Managing Your Costs with Budgets](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/budgets-managing-costs.html)
      * .
      *
+     * As an aid to help you jumpstart developing CloudFormation templates, the EventBridge console
+     * enables you to create templates from the existing rules in your account. For more
+     * information, see
+     * [Generating CloudFormation templates from an EventBridge rule](https://docs.aws.amazon.com/eventbridge/latest/userguide/rule-generate-template.html)
+     * in the *Amazon EventBridge User Guide* .
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -1330,6 +1342,9 @@ public object events {
      * .arn("arn")
      * .id("id")
      * // the properties below are optional
+     * .appSyncParameters(AppSyncParametersProperty.builder()
+     * .graphQlOperation("graphQlOperation")
+     * .build())
      * .batchParameters(BatchParametersProperty.builder()
      * .jobDefinition("jobDefinition")
      * .jobName("jobName")
@@ -1406,6 +1421,7 @@ public object events {
      * .dbUser("dbUser")
      * .secretManagerArn("secretManagerArn")
      * .sql("sql")
+     * .sqls(List.of("sqls"))
      * .statementName("statementName")
      * .withEvent(false)
      * .build())
@@ -1441,6 +1457,30 @@ public object events {
         block: CfnRuleDsl.() -> Unit = {},
     ): CfnRule {
         val builder = CfnRuleDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Contains the GraphQL operation to be parsed and executed, if the event target is an AWS
+     * AppSync API.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.events.*;
+     * AppSyncParametersProperty appSyncParametersProperty = AppSyncParametersProperty.builder()
+     * .graphQlOperation("graphQlOperation")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-appsyncparameters.html)
+     */
+    public inline fun cfnRuleAppSyncParametersProperty(
+        block: CfnRuleAppSyncParametersPropertyDsl.() -> Unit = {}
+    ): CfnRule.AppSyncParametersProperty {
+        val builder = CfnRuleAppSyncParametersPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -1863,6 +1903,9 @@ public object events {
      * .arn("arn")
      * .id("id")
      * // the properties below are optional
+     * .appSyncParameters(AppSyncParametersProperty.builder()
+     * .graphQlOperation("graphQlOperation")
+     * .build())
      * .batchParameters(BatchParametersProperty.builder()
      * .jobDefinition("jobDefinition")
      * .jobName("jobName")
@@ -1939,6 +1982,7 @@ public object events {
      * .dbUser("dbUser")
      * .secretManagerArn("secretManagerArn")
      * .sql("sql")
+     * .sqls(List.of("sqls"))
      * .statementName("statementName")
      * .withEvent(false)
      * .build())
@@ -1990,6 +2034,7 @@ public object events {
      * .dbUser("dbUser")
      * .secretManagerArn("secretManagerArn")
      * .sql("sql")
+     * .sqls(List.of("sqls"))
      * .statementName("statementName")
      * .withEvent(false)
      * .build();
@@ -2213,6 +2258,9 @@ public object events {
      * .arn("arn")
      * .id("id")
      * // the properties below are optional
+     * .appSyncParameters(AppSyncParametersProperty.builder()
+     * .graphQlOperation("graphQlOperation")
+     * .build())
      * .batchParameters(BatchParametersProperty.builder()
      * .jobDefinition("jobDefinition")
      * .jobName("jobName")
@@ -2289,6 +2337,7 @@ public object events {
      * .dbUser("dbUser")
      * .secretManagerArn("secretManagerArn")
      * .sql("sql")
+     * .sqls(List.of("sqls"))
      * .statementName("statementName")
      * .withEvent(false)
      * .build())
@@ -2555,17 +2604,18 @@ public object events {
      * Example:
      * ```
      * import software.amazon.awscdk.services.events.*;
-     * EventBus myEventBus = EventBus.Builder.create(this, "EventBus")
-     * .eventBusName("MyEventBus1")
+     * EventBus eventBus = EventBus.Builder.create(this, "EventBus")
+     * .eventBusName("DomainEvents")
      * .build();
-     * EventBridgePutEvents.Builder.create(this, "Send an event to EventBridge")
-     * .entries(List.of(EventBridgePutEventsEntry.builder()
-     * .detail(TaskInput.fromObject(Map.of(
-     * "Message", "Hello from Step Functions!")))
-     * .eventBus(myEventBus)
-     * .detailType("MessageFromStepFunctions")
-     * .source("step.functions")
-     * .build()))
+     * EventBridgePutEventsEntry eventEntry = EventBridgePutEventsEntry.builder()
+     * .eventBus(eventBus)
+     * .source("PetService")
+     * .detail(ScheduleTargetInput.fromObject(Map.of("Name", "Fluffy")))
+     * .detailType("🐶")
+     * .build();
+     * Schedule.Builder.create(this, "Schedule")
+     * .schedule(ScheduleExpression.rate(Duration.hours(1)))
+     * .target(EventBridgePutEvents.Builder.create(eventEntry).build())
      * .build();
      * ```
      */
@@ -2637,11 +2687,14 @@ public object events {
      * * Number matching is at the string representation level. For example, 300, 300.0, and 3.0e2
      *   are not considered equal.
      *
+     * For custom events, some optional properties are required. For more information, see
+     * [Minimum information needed for a valid custom event](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-events-structure.html#eb-custom-event).
+     *
      * Example:
      * ```
      * import software.amazon.awscdk.services.lambda.*;
      * Function fn = Function.Builder.create(this, "MyFunc")
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .handler("index.handler")
      * .code(Code.fromInline("exports.handler = handler.toString()"))
      * .build();
@@ -2741,7 +2794,7 @@ public object events {
      * ```
      * import software.amazon.awscdk.services.lambda.*;
      * Function fn = Function.Builder.create(this, "MyFunc")
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .handler("index.handler")
      * .code(Code.fromInline("exports.handler = handler.toString()"))
      * .build();
@@ -2775,7 +2828,7 @@ public object events {
      * ```
      * import software.amazon.awscdk.services.lambda.*;
      * Function fn = Function.Builder.create(this, "MyFunc")
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .handler("index.handler")
      * .code(Code.fromInline("exports.handler = handler.toString()"))
      * .build();

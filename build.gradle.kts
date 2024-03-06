@@ -3,17 +3,7 @@ import cloudshift.awscdkdsl.build.dsl.GenerateDslTask
 plugins {
     java
     id("cloudshift.awscdkdsl.build.base")
-    alias(libs.plugins.release)
     alias(libs.plugins.nexusPublish)
-}
-
-release {
-    preReleaseHooks {
-        processTemplates {
-            from(fileTree("gradle/docs") { include("**/*.md") })
-            into(layout.projectDirectory)
-        }
-    }
 }
 
 nexusPublishing {
@@ -28,7 +18,6 @@ nexusPublishing {
 
 val awscdk: Configuration by configurations.creating
 val awscdkSource: Configuration by configurations.creating
-val ktfmt by configurations.creating
 
 dependencies {
     awscdk(project.libs.awscdk)
@@ -36,7 +25,6 @@ dependencies {
         artifact { classifier = "sources" }
         isTransitive = false
     }
-    ktfmt("com.facebook:ktfmt:0.44")
 }
 
 tasks {
@@ -71,25 +59,6 @@ tasks {
                 }
             preprocessWorkflows { dependsOn(task) }
         }
-
-    val ktfmtFormat by
-        registering(JavaExec::class) {
-            onlyIf { System.getenv()["CI"] == null }
-            val ktfmtArgs =
-                mutableListOf(
-                    "--kotlinlang-style",
-                    "--do-not-remove-unused-imports",
-                    layout.projectDirectory.asFile.absolutePath,
-                )
-            if (System.getenv()["CI"] != null) ktfmtArgs.add("--set-exit-if-changed")
-            group = "formatting"
-            description = "Run ktfmt"
-            classpath = ktfmt
-            mainClass.set("com.facebook.ktfmt.cli.Main")
-            args(ktfmtArgs)
-        }
-
-    val check = named("check") { dependsOn(ktfmtFormat) }
 
     named("precommit") { dependsOn(check, preprocessWorkflows) }
 }

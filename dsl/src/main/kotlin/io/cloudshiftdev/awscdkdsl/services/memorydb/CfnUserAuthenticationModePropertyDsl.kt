@@ -18,6 +18,11 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.memorydb.CfnUser
 
 /**
+ * Denotes the user's authentication properties, such as whether it requires a password to
+ * authenticate.
+ *
+ * Used in output responses.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -38,23 +43,20 @@ public class CfnUserAuthenticationModePropertyDsl {
 
     private val _passwords: MutableList<String> = mutableListOf()
 
-    /**
-     * @param passwords Passwords used for this user account. You can create up to two passwords for
-     *   each user.
-     */
+    /** @param passwords The password(s) used for authentication. */
     public fun passwords(vararg passwords: String) {
         _passwords.addAll(listOf(*passwords))
     }
 
-    /**
-     * @param passwords Passwords used for this user account. You can create up to two passwords for
-     *   each user.
-     */
+    /** @param passwords The password(s) used for authentication. */
     public fun passwords(passwords: Collection<String>) {
         _passwords.addAll(passwords)
     }
 
-    /** @param type Type of authentication strategy for this user. */
+    /**
+     * @param type Indicates whether the user requires a password to authenticate. All newly-created
+     *   users require a password.
+     */
     public fun type(type: String) {
         cdkBuilder.type(type)
     }

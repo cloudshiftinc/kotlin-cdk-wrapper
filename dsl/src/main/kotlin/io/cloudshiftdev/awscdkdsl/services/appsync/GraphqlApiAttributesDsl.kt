@@ -20,14 +20,23 @@ import software.amazon.awscdk.services.appsync.GraphqlApiAttributes
  *
  * Example:
  * ```
- * GraphqlApi api;
- * Table table;
- * IGraphqlApi importedApi = GraphqlApi.fromGraphqlApiAttributes(this, "IApi",
+ * GraphqlApi sourceApi = GraphqlApi.Builder.create(this, "FirstSourceAPI")
+ * .name("FirstSourceAPI")
+ * .definition(Definition.fromFile(join(__dirname, "appsync.merged-api-1.graphql")))
+ * .build();
+ * IGraphqlApi importedMergedApi = GraphqlApi.fromGraphqlApiAttributes(this, "ImportedMergedApi",
  * GraphqlApiAttributes.builder()
- * .graphqlApiId(api.getApiId())
- * .graphqlApiArn(api.getArn())
+ * .graphqlApiId("MyApiId")
+ * .graphqlApiArn("MyApiArn")
  * .build());
- * importedApi.addDynamoDbDataSource("TableDataSource", table);
+ * IRole importedExecutionRole = Role.fromRoleArn(this, "ExecutionRole",
+ * "arn:aws:iam::ACCOUNT:role/MyExistingRole");
+ * SourceApiAssociation.Builder.create(this, "SourceApiAssociation2")
+ * .sourceApi(sourceApi)
+ * .mergedApi(importedMergedApi)
+ * .mergeType(MergeType.MANUAL_MERGE)
+ * .mergedApiExecutionRole(importedExecutionRole)
+ * .build();
  * ```
  */
 @CdkDslMarker

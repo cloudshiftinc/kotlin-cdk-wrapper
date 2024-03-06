@@ -18,6 +18,7 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.certificatemanager.CertificateValidation
 import software.amazon.awscdk.services.certificatemanager.DnsValidatedCertificateProps
+import software.amazon.awscdk.services.certificatemanager.KeyAlgorithm
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.route53.IHostedZone
 
@@ -33,6 +34,7 @@ import software.amazon.awscdk.services.route53.IHostedZone
  * import software.amazon.awscdk.services.route53.*;
  * CertificateValidation certificateValidation;
  * HostedZone hostedZone;
+ * KeyAlgorithm keyAlgorithm;
  * Role role;
  * DnsValidatedCertificateProps dnsValidatedCertificateProps =
  * DnsValidatedCertificateProps.builder()
@@ -42,6 +44,7 @@ import software.amazon.awscdk.services.route53.IHostedZone
  * .certificateName("certificateName")
  * .cleanupRoute53Records(false)
  * .customResourceRole(role)
+ * .keyAlgorithm(keyAlgorithm)
  * .region("region")
  * .route53Endpoint("route53Endpoint")
  * .subjectAlternativeNames(List.of("subjectAlternativeNames"))
@@ -97,6 +100,14 @@ public class DnsValidatedCertificatePropsDsl {
      */
     public fun hostedZone(hostedZone: IHostedZone) {
         cdkBuilder.hostedZone(hostedZone)
+    }
+
+    /**
+     * @param keyAlgorithm Specifies the algorithm of the public and private key pair that your
+     *   certificate uses to encrypt data.
+     */
+    public fun keyAlgorithm(keyAlgorithm: KeyAlgorithm) {
+        cdkBuilder.keyAlgorithm(keyAlgorithm)
     }
 
     /**

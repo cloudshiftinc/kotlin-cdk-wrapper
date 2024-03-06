@@ -37,6 +37,7 @@ import software.amazon.awscdk.services.ram.CfnResourceShareProps
  * .permissionArns(List.of("permissionArns"))
  * .principals(List.of("principals"))
  * .resourceArns(List.of("resourceArns"))
+ * .sources(List.of("sources"))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -55,6 +56,8 @@ public class CfnResourceSharePropsDsl {
     private val _principals: MutableList<String> = mutableListOf()
 
     private val _resourceArns: MutableList<String> = mutableListOf()
+
+    private val _sources: MutableList<String> = mutableListOf()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
@@ -161,6 +164,16 @@ public class CfnResourceSharePropsDsl {
         _resourceArns.addAll(resourceArns)
     }
 
+    /** @param sources the value to be set. */
+    public fun sources(vararg sources: String) {
+        _sources.addAll(listOf(*sources))
+    }
+
+    /** @param sources the value to be set. */
+    public fun sources(sources: Collection<String>) {
+        _sources.addAll(sources)
+    }
+
     /**
      * @param tags Specifies one or more tags to attach to the resource share itself. It doesn't
      *   attach the tags to the resources associated with the resource share.
@@ -181,6 +194,7 @@ public class CfnResourceSharePropsDsl {
         if (_permissionArns.isNotEmpty()) cdkBuilder.permissionArns(_permissionArns)
         if (_principals.isNotEmpty()) cdkBuilder.principals(_principals)
         if (_resourceArns.isNotEmpty()) cdkBuilder.resourceArns(_resourceArns)
+        if (_sources.isNotEmpty()) cdkBuilder.sources(_sources)
         if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
         return cdkBuilder.build()
     }

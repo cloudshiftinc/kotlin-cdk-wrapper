@@ -13,6 +13,8 @@ package io.cloudshiftdev.awscdkdsl.services.elasticloadbalancingv2
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.String
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancerAttributes
 
@@ -54,6 +56,8 @@ public class NetworkLoadBalancerAttributesDsl {
     private val cdkBuilder: NetworkLoadBalancerAttributes.Builder =
         NetworkLoadBalancerAttributes.builder()
 
+    private val _loadBalancerSecurityGroups: MutableList<String> = mutableListOf()
+
     /** @param loadBalancerArn ARN of the load balancer. */
     public fun loadBalancerArn(loadBalancerArn: String) {
         cdkBuilder.loadBalancerArn(loadBalancerArn)
@@ -71,10 +75,24 @@ public class NetworkLoadBalancerAttributesDsl {
         cdkBuilder.loadBalancerDnsName(loadBalancerDnsName)
     }
 
+    /** @param loadBalancerSecurityGroups Security groups to associate with this load balancer. */
+    public fun loadBalancerSecurityGroups(vararg loadBalancerSecurityGroups: String) {
+        _loadBalancerSecurityGroups.addAll(listOf(*loadBalancerSecurityGroups))
+    }
+
+    /** @param loadBalancerSecurityGroups Security groups to associate with this load balancer. */
+    public fun loadBalancerSecurityGroups(loadBalancerSecurityGroups: Collection<String>) {
+        _loadBalancerSecurityGroups.addAll(loadBalancerSecurityGroups)
+    }
+
     /** @param vpc The VPC to associate with the load balancer. */
     public fun vpc(vpc: IVpc) {
         cdkBuilder.vpc(vpc)
     }
 
-    public fun build(): NetworkLoadBalancerAttributes = cdkBuilder.build()
+    public fun build(): NetworkLoadBalancerAttributes {
+        if (_loadBalancerSecurityGroups.isNotEmpty())
+            cdkBuilder.loadBalancerSecurityGroups(_loadBalancerSecurityGroups)
+        return cdkBuilder.build()
+    }
 }

@@ -456,6 +456,12 @@ public class CfnAssociationDsl(
      * If the association status doesn't show "Success" after the specified number of seconds, then
      * stack creation fails.
      *
+     * When you specify a value for the `WaitForSuccessTimeoutSeconds` ,
+     * [drift detection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html)
+     * for your AWS CloudFormation stack’s configuration might yield inaccurate results. If drift
+     * detection is important in your scenario, we recommend that you don’t include
+     * `WaitForSuccessTimeoutSeconds` in your template.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-waitforsuccesstimeoutseconds)
      *
      * @param waitForSuccessTimeoutSeconds The number of seconds the service should wait for the

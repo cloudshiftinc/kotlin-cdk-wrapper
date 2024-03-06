@@ -32,6 +32,7 @@ public object emrserverless {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.emrserverless.*;
+     * ConfigurationObjectProperty configurationObjectProperty_;
      * CfnApplication cfnApplication = CfnApplication.Builder.create(this, "MyCfnApplication")
      * .releaseLabel("releaseLabel")
      * .type("type")
@@ -65,11 +66,38 @@ public object emrserverless {
      * // the properties below are optional
      * .disk("disk")
      * .build())
+     * .monitoringConfiguration(MonitoringConfigurationProperty.builder()
+     * .cloudWatchLoggingConfiguration(CloudWatchLoggingConfigurationProperty.builder()
+     * .enabled(false)
+     * .encryptionKeyArn("encryptionKeyArn")
+     * .logGroupName("logGroupName")
+     * .logStreamNamePrefix("logStreamNamePrefix")
+     * .logTypeMap(List.of(LogTypeMapKeyValuePairProperty.builder()
+     * .key("key")
+     * .value(List.of("value"))
+     * .build()))
+     * .build())
+     * .managedPersistenceMonitoringConfiguration(ManagedPersistenceMonitoringConfigurationProperty.builder()
+     * .enabled(false)
+     * .encryptionKeyArn("encryptionKeyArn")
+     * .build())
+     * .s3MonitoringConfiguration(S3MonitoringConfigurationProperty.builder()
+     * .encryptionKeyArn("encryptionKeyArn")
+     * .logUri("logUri")
+     * .build())
+     * .build())
      * .name("name")
      * .networkConfiguration(NetworkConfigurationProperty.builder()
      * .securityGroupIds(List.of("securityGroupIds"))
      * .subnetIds(List.of("subnetIds"))
      * .build())
+     * .runtimeConfiguration(List.of(ConfigurationObjectProperty.builder()
+     * .classification("classification")
+     * // the properties below are optional
+     * .configurations(List.of(configurationObjectProperty_))
+     * .properties(Map.of(
+     * "propertiesKey", "properties"))
+     * .build()))
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -96,7 +124,7 @@ public object emrserverless {
     }
 
     /**
-     * The conﬁguration for an application to automatically start on job submission.
+     * Configuration for Auto Start of Application.
      *
      * Example:
      * ```
@@ -120,8 +148,7 @@ public object emrserverless {
     }
 
     /**
-     * The conﬁguration for an application to automatically stop after a certain amount of time
-     * being idle.
+     * Configuration for Auto Stop of Application.
      *
      * Example:
      * ```
@@ -141,6 +168,67 @@ public object emrserverless {
         block: CfnApplicationAutoStopConfigurationPropertyDsl.() -> Unit = {}
     ): CfnApplication.AutoStopConfigurationProperty {
         val builder = CfnApplicationAutoStopConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The Amazon CloudWatch configuration for monitoring logs.
+     *
+     * You can configure your jobs to send log information to CloudWatch .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.emrserverless.*;
+     * CloudWatchLoggingConfigurationProperty cloudWatchLoggingConfigurationProperty =
+     * CloudWatchLoggingConfigurationProperty.builder()
+     * .enabled(false)
+     * .encryptionKeyArn("encryptionKeyArn")
+     * .logGroupName("logGroupName")
+     * .logStreamNamePrefix("logStreamNamePrefix")
+     * .logTypeMap(List.of(LogTypeMapKeyValuePairProperty.builder()
+     * .key("key")
+     * .value(List.of("value"))
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-cloudwatchloggingconfiguration.html)
+     */
+    public inline fun cfnApplicationCloudWatchLoggingConfigurationProperty(
+        block: CfnApplicationCloudWatchLoggingConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnApplication.CloudWatchLoggingConfigurationProperty {
+        val builder = CfnApplicationCloudWatchLoggingConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Configuration for a JobRun.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.emrserverless.*;
+     * ConfigurationObjectProperty configurationObjectProperty_;
+     * ConfigurationObjectProperty configurationObjectProperty = ConfigurationObjectProperty.builder()
+     * .classification("classification")
+     * // the properties below are optional
+     * .configurations(List.of(configurationObjectProperty_))
+     * .properties(Map.of(
+     * "propertiesKey", "properties"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-configurationobject.html)
+     */
+    public inline fun cfnApplicationConfigurationObjectProperty(
+        block: CfnApplicationConfigurationObjectPropertyDsl.() -> Unit = {}
+    ): CfnApplication.ConfigurationObjectProperty {
+        val builder = CfnApplicationConfigurationObjectPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -170,8 +258,6 @@ public object emrserverless {
     }
 
     /**
-     * The initial capacity configuration per worker.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -233,6 +319,55 @@ public object emrserverless {
     }
 
     /**
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.emrserverless.*;
+     * LogTypeMapKeyValuePairProperty logTypeMapKeyValuePairProperty =
+     * LogTypeMapKeyValuePairProperty.builder()
+     * .key("key")
+     * .value(List.of("value"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-logtypemapkeyvaluepair.html)
+     */
+    public inline fun cfnApplicationLogTypeMapKeyValuePairProperty(
+        block: CfnApplicationLogTypeMapKeyValuePairPropertyDsl.() -> Unit = {}
+    ): CfnApplication.LogTypeMapKeyValuePairProperty {
+        val builder = CfnApplicationLogTypeMapKeyValuePairPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The managed log persistence configuration for a job run.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.emrserverless.*;
+     * ManagedPersistenceMonitoringConfigurationProperty
+     * managedPersistenceMonitoringConfigurationProperty =
+     * ManagedPersistenceMonitoringConfigurationProperty.builder()
+     * .enabled(false)
+     * .encryptionKeyArn("encryptionKeyArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-managedpersistencemonitoringconfiguration.html)
+     */
+    public inline fun cfnApplicationManagedPersistenceMonitoringConfigurationProperty(
+        block: CfnApplicationManagedPersistenceMonitoringConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnApplication.ManagedPersistenceMonitoringConfigurationProperty {
+        val builder = CfnApplicationManagedPersistenceMonitoringConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The maximum allowed cumulative resources for an application.
      *
      * No new resources will be created once the limit is hit.
@@ -257,6 +392,47 @@ public object emrserverless {
         block: CfnApplicationMaximumAllowedResourcesPropertyDsl.() -> Unit = {}
     ): CfnApplication.MaximumAllowedResourcesProperty {
         val builder = CfnApplicationMaximumAllowedResourcesPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The configuration setting for monitoring.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.emrserverless.*;
+     * MonitoringConfigurationProperty monitoringConfigurationProperty =
+     * MonitoringConfigurationProperty.builder()
+     * .cloudWatchLoggingConfiguration(CloudWatchLoggingConfigurationProperty.builder()
+     * .enabled(false)
+     * .encryptionKeyArn("encryptionKeyArn")
+     * .logGroupName("logGroupName")
+     * .logStreamNamePrefix("logStreamNamePrefix")
+     * .logTypeMap(List.of(LogTypeMapKeyValuePairProperty.builder()
+     * .key("key")
+     * .value(List.of("value"))
+     * .build()))
+     * .build())
+     * .managedPersistenceMonitoringConfiguration(ManagedPersistenceMonitoringConfigurationProperty.builder()
+     * .enabled(false)
+     * .encryptionKeyArn("encryptionKeyArn")
+     * .build())
+     * .s3MonitoringConfiguration(S3MonitoringConfigurationProperty.builder()
+     * .encryptionKeyArn("encryptionKeyArn")
+     * .logUri("logUri")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-monitoringconfiguration.html)
+     */
+    public inline fun cfnApplicationMonitoringConfigurationProperty(
+        block: CfnApplicationMonitoringConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnApplication.MonitoringConfigurationProperty {
+        val builder = CfnApplicationMonitoringConfigurationPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -294,6 +470,7 @@ public object emrserverless {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.emrserverless.*;
+     * ConfigurationObjectProperty configurationObjectProperty_;
      * CfnApplicationProps cfnApplicationProps = CfnApplicationProps.builder()
      * .releaseLabel("releaseLabel")
      * .type("type")
@@ -327,11 +504,38 @@ public object emrserverless {
      * // the properties below are optional
      * .disk("disk")
      * .build())
+     * .monitoringConfiguration(MonitoringConfigurationProperty.builder()
+     * .cloudWatchLoggingConfiguration(CloudWatchLoggingConfigurationProperty.builder()
+     * .enabled(false)
+     * .encryptionKeyArn("encryptionKeyArn")
+     * .logGroupName("logGroupName")
+     * .logStreamNamePrefix("logStreamNamePrefix")
+     * .logTypeMap(List.of(LogTypeMapKeyValuePairProperty.builder()
+     * .key("key")
+     * .value(List.of("value"))
+     * .build()))
+     * .build())
+     * .managedPersistenceMonitoringConfiguration(ManagedPersistenceMonitoringConfigurationProperty.builder()
+     * .enabled(false)
+     * .encryptionKeyArn("encryptionKeyArn")
+     * .build())
+     * .s3MonitoringConfiguration(S3MonitoringConfigurationProperty.builder()
+     * .encryptionKeyArn("encryptionKeyArn")
+     * .logUri("logUri")
+     * .build())
+     * .build())
      * .name("name")
      * .networkConfiguration(NetworkConfigurationProperty.builder()
      * .securityGroupIds(List.of("securityGroupIds"))
      * .subnetIds(List.of("subnetIds"))
      * .build())
+     * .runtimeConfiguration(List.of(ConfigurationObjectProperty.builder()
+     * .classification("classification")
+     * // the properties below are optional
+     * .configurations(List.of(configurationObjectProperty_))
+     * .properties(Map.of(
+     * "propertiesKey", "properties"))
+     * .build()))
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -356,8 +560,33 @@ public object emrserverless {
     }
 
     /**
-     * The resource configuration of the initial capacity configuration.
+     * The Amazon S3 configuration for monitoring log publishing.
      *
+     * You can configure your jobs to send log information to Amazon S3.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.emrserverless.*;
+     * S3MonitoringConfigurationProperty s3MonitoringConfigurationProperty =
+     * S3MonitoringConfigurationProperty.builder()
+     * .encryptionKeyArn("encryptionKeyArn")
+     * .logUri("logUri")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-s3monitoringconfiguration.html)
+     */
+    public inline fun cfnApplicationS3MonitoringConfigurationProperty(
+        block: CfnApplicationS3MonitoringConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnApplication.S3MonitoringConfigurationProperty {
+        val builder = CfnApplicationS3MonitoringConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.

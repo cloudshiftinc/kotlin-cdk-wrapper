@@ -31,15 +31,7 @@ import software.constructs.Construct
 
 public object opsworks {
     /**
-     * Creates an app for a specified stack. For more information, see
-     * [Creating Apps](https://docs.aws.amazon.com/opsworks/latest/userguide/workingapps-creating.html)
-     * .
-     *
-     * *Required Permissions* : To use this action, an IAM user must have a Manage permissions level
-     * for the stack, or an attached policy that explicitly grants permissions. For more information
-     * on user permissions, see
-     * [Managing User Permissions](https://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html)
-     * .
+     * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html.
      *
      * Example:
      * ```
@@ -97,8 +89,6 @@ public object opsworks {
     }
 
     /**
-     * Describes an app's data source.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -122,8 +112,6 @@ public object opsworks {
     }
 
     /**
-     * Represents an app's environment variable.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -202,14 +190,6 @@ public object opsworks {
     }
 
     /**
-     * Contains the information required to retrieve an app or cookbook from a repository.
-     *
-     * For more information, see
-     * [Creating Apps](https://docs.aws.amazon.com/opsworks/latest/userguide/workingapps-creating.html)
-     * or
-     * [Custom Recipes and Cookbooks](https://docs.aws.amazon.com/opsworks/latest/userguide/workingcookbook.html)
-     * .
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -236,8 +216,6 @@ public object opsworks {
     }
 
     /**
-     * Describes an app's SSL configuration.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -261,7 +239,7 @@ public object opsworks {
     }
 
     /**
-     * Attaches an Elastic Load Balancing load balancer to an AWS OpsWorks layer that you specify.
+     * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-elbattachment.html.
      *
      * Example:
      * ```
@@ -313,15 +291,7 @@ public object opsworks {
     }
 
     /**
-     * Creates an instance in a specified stack. For more information, see
-     * [Adding an Instance to a Layer](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-add.html)
-     * .
-     *
-     * *Required Permissions* : To use this action, an IAM user must have a Manage permissions level
-     * for the stack, or an attached policy that explicitly grants permissions. For more information
-     * on user permissions, see
-     * [Managing User Permissions](https://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html)
-     * .
+     * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html.
      *
      * Example:
      * ```
@@ -393,12 +363,6 @@ public object opsworks {
     }
 
     /**
-     * Describes a block device mapping.
-     *
-     * This data type maps directly to the Amazon EC2
-     * [BlockDeviceMapping](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_BlockDeviceMapping.html)
-     * data type.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -429,12 +393,6 @@ public object opsworks {
     }
 
     /**
-     * Describes an Amazon EBS volume.
-     *
-     * This data type maps directly to the Amazon EC2
-     * [EbsBlockDevice](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EbsBlockDevice.html)
-     * data type.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -530,8 +488,6 @@ public object opsworks {
     }
 
     /**
-     * Describes an instance's time-based auto scaling configuration.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -567,21 +523,7 @@ public object opsworks {
     }
 
     /**
-     * Creates a layer. For more information, see
-     * [How to Create a Layer](https://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-create.html)
-     * .
-     *
-     * You should use *CreateLayer* for noncustom layer types such as PHP App Server only if the
-     * stack does not have an existing layer of that type. A stack can have at most one instance of
-     * each noncustom layer; if you attempt to create a second instance, *CreateLayer* fails. A
-     * stack can have an arbitrary number of custom layers, so you can call *CreateLayer* as many
-     * times as you like for that layer type.
-     *
-     * *Required Permissions* : To use this action, an IAM user must have a Manage permissions level
-     * for the stack, or an attached policy that explicitly grants permissions. For more information
-     * on user permissions, see
-     * [Managing User Permissions](https://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html)
-     * .
+     * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html.
      *
      * Example:
      * ```
@@ -667,9 +609,6 @@ public object opsworks {
     }
 
     /**
-     * Describes a load-based auto scaling upscaling or downscaling threshold configuration, which
-     * specifies when AWS OpsWorks Stacks starts or stops load-based instances.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -697,8 +636,6 @@ public object opsworks {
     }
 
     /**
-     * Specifies the lifecycle event configuration.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -724,8 +661,6 @@ public object opsworks {
     }
 
     /**
-     * Describes a layer's load-based auto scaling configuration.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -846,18 +781,6 @@ public object opsworks {
     }
 
     /**
-     * AWS OpsWorks Stacks supports five lifecycle events: *setup* , *configuration* , *deploy* ,
-     * *undeploy* , and *shutdown* .
-     *
-     * For each layer, AWS OpsWorks Stacks runs a set of standard recipes for each event. In
-     * addition, you can provide custom recipes for any or all layers and events. AWS OpsWorks
-     * Stacks runs custom event recipes after the standard recipes. `LayerCustomRecipes` specifies
-     * the custom recipes for a particular layer to be run in response to each of the five events.
-     *
-     * To specify a recipe, use the cookbook's directory name in the repository followed by two
-     * colons and the recipe name, which is the recipe's file name without the .rb extension. For
-     * example: phpapp2::dbsetup specifies the dbsetup.rb recipe in the repository's phpapp2 folder.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -883,8 +806,6 @@ public object opsworks {
     }
 
     /**
-     * The Shutdown event configuration.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -908,8 +829,6 @@ public object opsworks {
     }
 
     /**
-     * Describes an Amazon EBS volume configuration.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -937,14 +856,7 @@ public object opsworks {
     }
 
     /**
-     * Creates a new stack. For more information, see
-     * [Create a New Stack](https://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks-edit.html)
-     * .
-     *
-     * *Required Permissions* : To use this action, an IAM user must have an attached policy that
-     * explicitly grants permissions. For more information about user permissions, see
-     * [Managing User Permissions](https://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html)
-     * .
+     * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html.
      *
      * Example:
      * ```
@@ -1020,8 +932,6 @@ public object opsworks {
     }
 
     /**
-     * Describes the Chef configuration.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -1044,8 +954,6 @@ public object opsworks {
     }
 
     /**
-     * Describes an Elastic IP address.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -1141,8 +1049,6 @@ public object opsworks {
     }
 
     /**
-     * Describes an Amazon RDS instance.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -1166,14 +1072,6 @@ public object opsworks {
     }
 
     /**
-     * Contains the information required to retrieve an app or cookbook from a repository.
-     *
-     * For more information, see
-     * [Creating Apps](https://docs.aws.amazon.com/opsworks/latest/userguide/workingapps-creating.html)
-     * or
-     * [Custom Recipes and Cookbooks](https://docs.aws.amazon.com/opsworks/latest/userguide/workingcookbook.html)
-     * .
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -1200,8 +1098,6 @@ public object opsworks {
     }
 
     /**
-     * Describes the configuration manager.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -1225,7 +1121,7 @@ public object opsworks {
     }
 
     /**
-     * Describes a user's SSH information.
+     * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html.
      *
      * Example:
      * ```
@@ -1281,7 +1177,7 @@ public object opsworks {
     }
 
     /**
-     * Describes an instance's Amazon EBS volume.
+     * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-volume.html.
      *
      * Example:
      * ```

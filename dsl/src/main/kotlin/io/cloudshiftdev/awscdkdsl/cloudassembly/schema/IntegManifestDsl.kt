@@ -44,6 +44,7 @@ import software.amazon.awscdk.cloudassembly.schema.TestCase
  * .changeSetName("changeSetName")
  * .ci(false)
  * .color(false)
+ * .concurrency(123)
  * .context(Map.of(
  * "contextKey", "context"))
  * .debug(false)

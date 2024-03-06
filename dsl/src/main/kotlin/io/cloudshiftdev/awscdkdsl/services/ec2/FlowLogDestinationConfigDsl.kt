@@ -38,6 +38,7 @@ import software.amazon.awscdk.services.s3.IBucket
  * FlowLogDestinationConfig flowLogDestinationConfig = FlowLogDestinationConfig.builder()
  * .logDestinationType(FlowLogDestinationType.CLOUD_WATCH_LOGS)
  * // the properties below are optional
+ * .deliveryStreamArn("deliveryStreamArn")
  * .destinationOptions(DestinationOptions.builder()
  * .fileFormat(FlowLogFileFormat.PLAIN_TEXT)
  * .hiveCompatiblePartitions(false)
@@ -53,6 +54,14 @@ import software.amazon.awscdk.services.s3.IBucket
 @CdkDslMarker
 public class FlowLogDestinationConfigDsl {
     private val cdkBuilder: FlowLogDestinationConfig.Builder = FlowLogDestinationConfig.builder()
+
+    /**
+     * @param deliveryStreamArn The ARN of Kinesis Data Firehose delivery stream to publish the flow
+     *   logs to.
+     */
+    public fun deliveryStreamArn(deliveryStreamArn: String) {
+        cdkBuilder.deliveryStreamArn(deliveryStreamArn)
+    }
 
     /** @param destinationOptions Options for writing flow logs to a supported destination. */
     public fun destinationOptions(destinationOptions: DestinationOptionsDsl.() -> Unit = {}) {

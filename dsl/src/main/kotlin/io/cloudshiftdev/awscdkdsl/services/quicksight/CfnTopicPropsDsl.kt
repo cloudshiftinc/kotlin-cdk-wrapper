@@ -72,6 +72,7 @@ import software.amazon.awscdk.services.quicksight.CfnTopicProps
  * .build())
  * .isIncludedInTopic(false)
  * .neverAggregateInFilter(false)
+ * .nonAdditive(false)
  * .notAllowedAggregations(List.of("notAllowedAggregations"))
  * .semanticType(SemanticTypeProperty.builder()
  * .falseyCellValue("falseyCellValue")
@@ -125,6 +126,7 @@ import software.amazon.awscdk.services.quicksight.CfnTopicProps
  * .build())
  * .isIncludedInTopic(false)
  * .neverAggregateInFilter(false)
+ * .nonAdditive(false)
  * .notAllowedAggregations(List.of("notAllowedAggregations"))
  * .semanticType(SemanticTypeProperty.builder()
  * .falseyCellValue("falseyCellValue")
@@ -228,6 +230,7 @@ import software.amazon.awscdk.services.quicksight.CfnTopicProps
  * .description("description")
  * .name("name")
  * .topicId("topicId")
+ * .userExperienceVersion("userExperienceVersion")
  * .build();
  * ```
  *
@@ -274,6 +277,11 @@ public class CfnTopicPropsDsl {
      */
     public fun topicId(topicId: String) {
         cdkBuilder.topicId(topicId)
+    }
+
+    /** @param userExperienceVersion The user experience version of a topic. */
+    public fun userExperienceVersion(userExperienceVersion: String) {
+        cdkBuilder.userExperienceVersion(userExperienceVersion)
     }
 
     public fun build(): CfnTopicProps {

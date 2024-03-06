@@ -15,10 +15,6 @@ import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import software.amazon.awscdk.services.medialive.CfnChannel
 
 /**
- * Passthrough applies no color space conversion to the output.
- *
- * The parents of this entity are H264ColorSpaceSettings and H265ColorSpaceSettings.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.

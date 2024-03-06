@@ -100,8 +100,20 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * .name("name")
  * .build())
  * .build())
+ * .sparkline(KPISparklineOptionsProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .color("color")
+ * .tooltipVisibility("tooltipVisibility")
+ * .visibility("visibility")
+ * .build())
  * .trendArrows(TrendArrowOptionsProperty.builder()
  * .visibility("visibility")
+ * .build())
+ * .visualLayoutOptions(KPIVisualLayoutOptionsProperty.builder()
+ * .standardLayout(KPIVisualStandardLayoutProperty.builder()
+ * .type("type")
+ * .build())
  * .build())
  * .build();
  * ```
@@ -197,6 +209,22 @@ public class CfnTemplateKPIOptionsPropertyDsl {
     }
 
     /**
+     * @param sparkline The options that determine the visibility, color, type, and tooltip
+     *   visibility of the sparkline of a KPI visual.
+     */
+    public fun sparkline(sparkline: IResolvable) {
+        cdkBuilder.sparkline(sparkline)
+    }
+
+    /**
+     * @param sparkline The options that determine the visibility, color, type, and tooltip
+     *   visibility of the sparkline of a KPI visual.
+     */
+    public fun sparkline(sparkline: CfnTemplate.KPISparklineOptionsProperty) {
+        cdkBuilder.sparkline(sparkline)
+    }
+
+    /**
      * @param trendArrows The options that determine the presentation of trend arrows in a KPI
      *   visual.
      */
@@ -210,6 +238,18 @@ public class CfnTemplateKPIOptionsPropertyDsl {
      */
     public fun trendArrows(trendArrows: CfnTemplate.TrendArrowOptionsProperty) {
         cdkBuilder.trendArrows(trendArrows)
+    }
+
+    /** @param visualLayoutOptions The options that determine the layout a KPI visual. */
+    public fun visualLayoutOptions(visualLayoutOptions: IResolvable) {
+        cdkBuilder.visualLayoutOptions(visualLayoutOptions)
+    }
+
+    /** @param visualLayoutOptions The options that determine the layout a KPI visual. */
+    public fun visualLayoutOptions(
+        visualLayoutOptions: CfnTemplate.KPIVisualLayoutOptionsProperty
+    ) {
+        cdkBuilder.visualLayoutOptions(visualLayoutOptions)
     }
 
     public fun build(): CfnTemplate.KPIOptionsProperty = cdkBuilder.build()

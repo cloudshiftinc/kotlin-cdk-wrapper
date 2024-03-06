@@ -28,6 +28,7 @@ import software.amazon.awscdk.services.ecs.AuthorizationConfig
 import software.amazon.awscdk.services.ecs.AwsLogDriver
 import software.amazon.awscdk.services.ecs.AwsLogDriverProps
 import software.amazon.awscdk.services.ecs.BaseLogDriverProps
+import software.amazon.awscdk.services.ecs.BaseMountPoint
 import software.amazon.awscdk.services.ecs.BaseServiceOptions
 import software.amazon.awscdk.services.ecs.BaseServiceProps
 import software.amazon.awscdk.services.ecs.BottleRocketImage
@@ -59,13 +60,16 @@ import software.amazon.awscdk.services.ecs.ContainerDefinitionOptions
 import software.amazon.awscdk.services.ecs.ContainerDefinitionProps
 import software.amazon.awscdk.services.ecs.ContainerDependency
 import software.amazon.awscdk.services.ecs.ContainerImageConfig
+import software.amazon.awscdk.services.ecs.ContainerMountPoint
 import software.amazon.awscdk.services.ecs.CpuUtilizationScalingProps
+import software.amazon.awscdk.services.ecs.CredentialSpecConfig
 import software.amazon.awscdk.services.ecs.DeploymentAlarmConfig
 import software.amazon.awscdk.services.ecs.DeploymentAlarmOptions
 import software.amazon.awscdk.services.ecs.DeploymentCircuitBreaker
 import software.amazon.awscdk.services.ecs.DeploymentController
 import software.amazon.awscdk.services.ecs.Device
 import software.amazon.awscdk.services.ecs.DockerVolumeConfiguration
+import software.amazon.awscdk.services.ecs.EBSTagSpecification
 import software.amazon.awscdk.services.ecs.Ec2Service
 import software.amazon.awscdk.services.ecs.Ec2ServiceAttributes
 import software.amazon.awscdk.services.ecs.Ec2ServiceProps
@@ -130,6 +134,9 @@ import software.amazon.awscdk.services.ecs.SecretVersionInfo
 import software.amazon.awscdk.services.ecs.ServiceConnect
 import software.amazon.awscdk.services.ecs.ServiceConnectProps
 import software.amazon.awscdk.services.ecs.ServiceConnectService
+import software.amazon.awscdk.services.ecs.ServiceManagedEBSVolumeConfiguration
+import software.amazon.awscdk.services.ecs.ServiceManagedVolume
+import software.amazon.awscdk.services.ecs.ServiceManagedVolumeProps
 import software.amazon.awscdk.services.ecs.SplunkLogDriver
 import software.amazon.awscdk.services.ecs.SplunkLogDriverProps
 import software.amazon.awscdk.services.ecs.SyslogLogDriver
@@ -178,24 +185,12 @@ public object ecs {
      *
      * Example:
      * ```
-     * Vpc vpc;
-     * // Create an ECS cluster
-     * Cluster cluster = Cluster.Builder.create(this, "Cluster").vpc(vpc).build();
-     * // Add capacity to it
-     * cluster.addCapacity("DefaultAutoScalingGroupCapacity", AddCapacityOptions.builder()
-     * .instanceType(new InstanceType("t2.xlarge"))
-     * .desiredCapacity(3)
+     * Cluster cluster;
+     * cluster.addCapacity("graviton-cluster", AddCapacityOptions.builder()
+     * .minCapacity(2)
+     * .instanceType(new InstanceType("c6g.large"))
+     * .machineImage(EcsOptimizedImage.amazonLinux2(AmiHardwareType.ARM))
      * .build());
-     * Ec2TaskDefinition taskDefinition = new Ec2TaskDefinition(this, "TaskDef");
-     * taskDefinition.addContainer("DefaultContainer", ContainerDefinitionOptions.builder()
-     * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
-     * .memoryLimitMiB(512)
-     * .build());
-     * // Instantiate an Amazon ECS Service
-     * Ec2Service ecsService = Ec2Service.Builder.create(this, "Service")
-     * .cluster(cluster)
-     * .taskDefinition(taskDefinition)
-     * .build();
      * ```
      */
     public inline fun addCapacityOptions(
@@ -504,6 +499,7 @@ public object ecs {
      * .buildSecrets(Map.of(
      * "buildSecretsKey", "buildSecrets"))
      * .buildSsh("buildSsh")
+     * .cacheDisabled(false)
      * .cacheFrom(List.of(DockerCacheOption.builder()
      * .type("type")
      * // the properties below are optional
@@ -678,6 +674,26 @@ public object ecs {
     }
 
     /**
+     * The base details of where a volume will be mounted within a container.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ecs.*;
+     * BaseMountPoint baseMountPoint = BaseMountPoint.builder()
+     * .containerPath("containerPath")
+     * .readOnly(false)
+     * .build();
+     * ```
+     */
+    public inline fun baseMountPoint(block: BaseMountPointDsl.() -> Unit = {}): BaseMountPoint {
+        val builder = BaseMountPointDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The properties for the base Ec2Service or FargateService service.
      *
      * Example:
@@ -691,6 +707,8 @@ public object ecs {
      * ContainerDefinition containerDefinition;
      * LogDriver logDriver;
      * INamespace namespace;
+     * ServiceManagedVolume serviceManagedVolume;
+     * TaskDefinitionRevision taskDefinitionRevision;
      * BaseServiceOptions baseServiceOptions = BaseServiceOptions.builder()
      * .cluster(cluster)
      * // the properties below are optional
@@ -701,6 +719,7 @@ public object ecs {
      * .weight(123)
      * .build()))
      * .circuitBreaker(DeploymentCircuitBreaker.builder()
+     * .enable(false)
      * .rollback(false)
      * .build())
      * .cloudMapOptions(CloudMapOptions.builder()
@@ -735,11 +754,15 @@ public object ecs {
      * // the properties below are optional
      * .discoveryName("discoveryName")
      * .dnsName("dnsName")
+     * .idleTimeout(Duration.minutes(30))
      * .ingressPortOverride(123)
+     * .perRequestTimeout(Duration.minutes(30))
      * .port(123)
      * .build()))
      * .build())
      * .serviceName("serviceName")
+     * .taskDefinitionRevision(taskDefinitionRevision)
+     * .volumeConfigurations(List.of(serviceManagedVolume))
      * .build();
      * ```
      */
@@ -766,6 +789,8 @@ public object ecs {
      * ContainerDefinition containerDefinition;
      * LogDriver logDriver;
      * INamespace namespace;
+     * ServiceManagedVolume serviceManagedVolume;
+     * TaskDefinitionRevision taskDefinitionRevision;
      * BaseServiceProps baseServiceProps = BaseServiceProps.builder()
      * .cluster(cluster)
      * .launchType(LaunchType.EC2)
@@ -777,6 +802,7 @@ public object ecs {
      * .weight(123)
      * .build()))
      * .circuitBreaker(DeploymentCircuitBreaker.builder()
+     * .enable(false)
      * .rollback(false)
      * .build())
      * .cloudMapOptions(CloudMapOptions.builder()
@@ -811,11 +837,15 @@ public object ecs {
      * // the properties below are optional
      * .discoveryName("discoveryName")
      * .dnsName("dnsName")
+     * .idleTimeout(Duration.minutes(30))
      * .ingressPortOverride(123)
+     * .perRequestTimeout(Duration.minutes(30))
      * .port(123)
      * .build()))
      * .build())
      * .serviceName("serviceName")
+     * .taskDefinitionRevision(taskDefinitionRevision)
+     * .volumeConfigurations(List.of(serviceManagedVolume))
      * .build();
      * ```
      */
@@ -853,15 +883,13 @@ public object ecs {
      *
      * Example:
      * ```
-     * // The code below shows an example of how to instantiate this type.
-     * // The values are placeholders you should change.
-     * import software.amazon.awscdk.services.ec2.*;
-     * import software.amazon.awscdk.services.ecs.*;
-     * BottleRocketImageProps bottleRocketImageProps = BottleRocketImageProps.builder()
-     * .architecture(InstanceArchitecture.ARM_64)
-     * .cachedInContext(false)
-     * .variant(BottlerocketEcsVariant.AWS_ECS_1)
-     * .build();
+     * Cluster cluster;
+     * cluster.addCapacity("bottlerocket-asg", AddCapacityOptions.builder()
+     * .instanceType(new InstanceType("p3.2xlarge"))
+     * .machineImage(BottleRocketImage.Builder.create()
+     * .variant(BottlerocketEcsVariant.AWS_ECS_2_NVIDIA)
+     * .build())
+     * .build());
      * ```
      */
     public inline fun bottleRocketImageProps(
@@ -916,6 +944,7 @@ public object ecs {
      * .autoScalingGroupProvider(AutoScalingGroupProviderProperty.builder()
      * .autoScalingGroupArn("autoScalingGroupArn")
      * // the properties below are optional
+     * .managedDraining("managedDraining")
      * .managedScaling(ManagedScalingProperty.builder()
      * .instanceWarmupPeriod(123)
      * .maximumScalingStepSize(123)
@@ -958,6 +987,7 @@ public object ecs {
      * AutoScalingGroupProviderProperty.builder()
      * .autoScalingGroupArn("autoScalingGroupArn")
      * // the properties below are optional
+     * .managedDraining("managedDraining")
      * .managedScaling(ManagedScalingProperty.builder()
      * .instanceWarmupPeriod(123)
      * .maximumScalingStepSize(123)
@@ -981,15 +1011,6 @@ public object ecs {
 
     /**
      * The managed scaling settings for the Auto Scaling group capacity provider.
-     *
-     * When managed scaling is turned on, Amazon ECS manages the scale-in and scale-out actions of
-     * the Auto Scaling group. Amazon ECS manages a target tracking scaling policy using an Amazon
-     * ECS managed CloudWatch metric with the specified `targetCapacity` value as the target value
-     * for the metric. For more information, see
-     * [Using managed scaling](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/asg-capacity-providers.html#asg-capacity-providers-managed-scaling)
-     * in the *Amazon Elastic Container Service Developer Guide* .
-     *
-     * If managed scaling is off, the user must manage the scaling of the Auto Scaling group.
      *
      * Example:
      * ```
@@ -1027,6 +1048,7 @@ public object ecs {
      * .autoScalingGroupProvider(AutoScalingGroupProviderProperty.builder()
      * .autoScalingGroupArn("autoScalingGroupArn")
      * // the properties below are optional
+     * .managedDraining("managedDraining")
      * .managedScaling(ManagedScalingProperty.builder()
      * .instanceWarmupPeriod(123)
      * .maximumScalingStepSize(123)
@@ -1608,6 +1630,18 @@ public object ecs {
      * .build()))
      * .discoveryName("discoveryName")
      * .ingressPortOverride(123)
+     * .timeout(TimeoutConfigurationProperty.builder()
+     * .idleTimeoutSeconds(123)
+     * .perRequestTimeoutSeconds(123)
+     * .build())
+     * .tls(ServiceConnectTlsConfigurationProperty.builder()
+     * .issuerCertificateAuthority(ServiceConnectTlsCertificateAuthorityProperty.builder()
+     * .awsPcaAuthorityArn("awsPcaAuthorityArn")
+     * .build())
+     * // the properties below are optional
+     * .kmsKey("kmsKey")
+     * .roleArn("roleArn")
+     * .build())
      * .build()))
      * .build())
      * .serviceName("serviceName")
@@ -1622,6 +1656,31 @@ public object ecs {
      * .value("value")
      * .build()))
      * .taskDefinition("taskDefinition")
+     * .volumeConfigurations(List.of(ServiceVolumeConfigurationProperty.builder()
+     * .name("name")
+     * // the properties below are optional
+     * .managedEbsVolume(ServiceManagedEBSVolumeConfigurationProperty.builder()
+     * .roleArn("roleArn")
+     * // the properties below are optional
+     * .encrypted(false)
+     * .filesystemType("filesystemType")
+     * .iops(123)
+     * .kmsKeyId("kmsKeyId")
+     * .sizeInGiB(123)
+     * .snapshotId("snapshotId")
+     * .tagSpecifications(List.of(EBSTagSpecificationProperty.builder()
+     * .resourceType("resourceType")
+     * // the properties below are optional
+     * .propagateTags("propagateTags")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build()))
+     * .throughput(123)
+     * .volumeType("volumeType")
+     * .build())
+     * .build()))
      * .build();
      * ```
      *
@@ -1639,6 +1698,9 @@ public object ecs {
 
     /**
      * An object representing the networking details for a task or service.
+     *
+     * For example
+     * `awsvpcConfiguration={subnets=["subnet-12344321"],securityGroups=["sg-12344321"]}`
      *
      * Example:
      * ```
@@ -1836,6 +1898,35 @@ public object ecs {
         block: CfnServiceDeploymentControllerPropertyDsl.() -> Unit = {}
     ): CfnService.DeploymentControllerProperty {
         val builder = CfnServiceDeploymentControllerPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The tag specifications of an Amazon EBS volume.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ecs.*;
+     * EBSTagSpecificationProperty eBSTagSpecificationProperty = EBSTagSpecificationProperty.builder()
+     * .resourceType("resourceType")
+     * // the properties below are optional
+     * .propagateTags("propagateTags")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-ebstagspecification.html)
+     */
+    public inline fun cfnServiceEBSTagSpecificationProperty(
+        block: CfnServiceEBSTagSpecificationPropertyDsl.() -> Unit = {}
+    ): CfnService.EBSTagSpecificationProperty {
+        val builder = CfnServiceEBSTagSpecificationPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -2122,6 +2213,18 @@ public object ecs {
      * .build()))
      * .discoveryName("discoveryName")
      * .ingressPortOverride(123)
+     * .timeout(TimeoutConfigurationProperty.builder()
+     * .idleTimeoutSeconds(123)
+     * .perRequestTimeoutSeconds(123)
+     * .build())
+     * .tls(ServiceConnectTlsConfigurationProperty.builder()
+     * .issuerCertificateAuthority(ServiceConnectTlsCertificateAuthorityProperty.builder()
+     * .awsPcaAuthorityArn("awsPcaAuthorityArn")
+     * .build())
+     * // the properties below are optional
+     * .kmsKey("kmsKey")
+     * .roleArn("roleArn")
+     * .build())
      * .build()))
      * .build())
      * .serviceName("serviceName")
@@ -2136,6 +2239,31 @@ public object ecs {
      * .value("value")
      * .build()))
      * .taskDefinition("taskDefinition")
+     * .volumeConfigurations(List.of(ServiceVolumeConfigurationProperty.builder()
+     * .name("name")
+     * // the properties below are optional
+     * .managedEbsVolume(ServiceManagedEBSVolumeConfigurationProperty.builder()
+     * .roleArn("roleArn")
+     * // the properties below are optional
+     * .encrypted(false)
+     * .filesystemType("filesystemType")
+     * .iops(123)
+     * .kmsKeyId("kmsKeyId")
+     * .sizeInGiB(123)
+     * .snapshotId("snapshotId")
+     * .tagSpecifications(List.of(EBSTagSpecificationProperty.builder()
+     * .resourceType("resourceType")
+     * // the properties below are optional
+     * .propagateTags("propagateTags")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build()))
+     * .throughput(123)
+     * .volumeType("volumeType")
+     * .build())
+     * .build()))
      * .build();
      * ```
      *
@@ -2261,6 +2389,18 @@ public object ecs {
      * .build()))
      * .discoveryName("discoveryName")
      * .ingressPortOverride(123)
+     * .timeout(TimeoutConfigurationProperty.builder()
+     * .idleTimeoutSeconds(123)
+     * .perRequestTimeoutSeconds(123)
+     * .build())
+     * .tls(ServiceConnectTlsConfigurationProperty.builder()
+     * .issuerCertificateAuthority(ServiceConnectTlsCertificateAuthorityProperty.builder()
+     * .awsPcaAuthorityArn("awsPcaAuthorityArn")
+     * .build())
+     * // the properties below are optional
+     * .kmsKey("kmsKey")
+     * .roleArn("roleArn")
+     * .build())
      * .build()))
      * .build();
      * ```
@@ -2298,6 +2438,18 @@ public object ecs {
      * .build()))
      * .discoveryName("discoveryName")
      * .ingressPortOverride(123)
+     * .timeout(TimeoutConfigurationProperty.builder()
+     * .idleTimeoutSeconds(123)
+     * .perRequestTimeoutSeconds(123)
+     * .build())
+     * .tls(ServiceConnectTlsConfigurationProperty.builder()
+     * .issuerCertificateAuthority(ServiceConnectTlsCertificateAuthorityProperty.builder()
+     * .awsPcaAuthorityArn("awsPcaAuthorityArn")
+     * .build())
+     * // the properties below are optional
+     * .kmsKey("kmsKey")
+     * .roleArn("roleArn")
+     * .build())
      * .build();
      * ```
      *
@@ -2307,6 +2459,107 @@ public object ecs {
         block: CfnServiceServiceConnectServicePropertyDsl.() -> Unit = {}
     ): CfnService.ServiceConnectServiceProperty {
         val builder = CfnServiceServiceConnectServicePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * An object that represents the AWS Private Certificate Authority certificate.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ecs.*;
+     * ServiceConnectTlsCertificateAuthorityProperty serviceConnectTlsCertificateAuthorityProperty =
+     * ServiceConnectTlsCertificateAuthorityProperty.builder()
+     * .awsPcaAuthorityArn("awsPcaAuthorityArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttlscertificateauthority.html)
+     */
+    public inline fun cfnServiceServiceConnectTlsCertificateAuthorityProperty(
+        block: CfnServiceServiceConnectTlsCertificateAuthorityPropertyDsl.() -> Unit = {}
+    ): CfnService.ServiceConnectTlsCertificateAuthorityProperty {
+        val builder = CfnServiceServiceConnectTlsCertificateAuthorityPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * An object that represents the configuration for Service Connect TLS.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ecs.*;
+     * ServiceConnectTlsConfigurationProperty serviceConnectTlsConfigurationProperty =
+     * ServiceConnectTlsConfigurationProperty.builder()
+     * .issuerCertificateAuthority(ServiceConnectTlsCertificateAuthorityProperty.builder()
+     * .awsPcaAuthorityArn("awsPcaAuthorityArn")
+     * .build())
+     * // the properties below are optional
+     * .kmsKey("kmsKey")
+     * .roleArn("roleArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttlsconfiguration.html)
+     */
+    public inline fun cfnServiceServiceConnectTlsConfigurationProperty(
+        block: CfnServiceServiceConnectTlsConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnService.ServiceConnectTlsConfigurationProperty {
+        val builder = CfnServiceServiceConnectTlsConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The configuration for the Amazon EBS volume that Amazon ECS creates and manages on your
+     * behalf.
+     *
+     * These settings are used to create each Amazon EBS volume, with one volume created for each
+     * task in the service.
+     *
+     * Many of these parameters map 1:1 with the Amazon EBS `CreateVolume` API request parameters.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ecs.*;
+     * ServiceManagedEBSVolumeConfigurationProperty serviceManagedEBSVolumeConfigurationProperty =
+     * ServiceManagedEBSVolumeConfigurationProperty.builder()
+     * .roleArn("roleArn")
+     * // the properties below are optional
+     * .encrypted(false)
+     * .filesystemType("filesystemType")
+     * .iops(123)
+     * .kmsKeyId("kmsKeyId")
+     * .sizeInGiB(123)
+     * .snapshotId("snapshotId")
+     * .tagSpecifications(List.of(EBSTagSpecificationProperty.builder()
+     * .resourceType("resourceType")
+     * // the properties below are optional
+     * .propagateTags("propagateTags")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build()))
+     * .throughput(123)
+     * .volumeType("volumeType")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-servicemanagedebsvolumeconfiguration.html)
+     */
+    public inline fun cfnServiceServiceManagedEBSVolumeConfigurationProperty(
+        block: CfnServiceServiceManagedEBSVolumeConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnService.ServiceManagedEBSVolumeConfigurationProperty {
+        val builder = CfnServiceServiceManagedEBSVolumeConfigurationPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -2337,6 +2590,83 @@ public object ecs {
         block: CfnServiceServiceRegistryPropertyDsl.() -> Unit = {}
     ): CfnService.ServiceRegistryProperty {
         val builder = CfnServiceServiceRegistryPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The configuration for a volume specified in the task definition as a volume that is
+     * configured at launch time.
+     *
+     * Currently, the only supported volume type is an Amazon EBS volume.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ecs.*;
+     * ServiceVolumeConfigurationProperty serviceVolumeConfigurationProperty =
+     * ServiceVolumeConfigurationProperty.builder()
+     * .name("name")
+     * // the properties below are optional
+     * .managedEbsVolume(ServiceManagedEBSVolumeConfigurationProperty.builder()
+     * .roleArn("roleArn")
+     * // the properties below are optional
+     * .encrypted(false)
+     * .filesystemType("filesystemType")
+     * .iops(123)
+     * .kmsKeyId("kmsKeyId")
+     * .sizeInGiB(123)
+     * .snapshotId("snapshotId")
+     * .tagSpecifications(List.of(EBSTagSpecificationProperty.builder()
+     * .resourceType("resourceType")
+     * // the properties below are optional
+     * .propagateTags("propagateTags")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build()))
+     * .throughput(123)
+     * .volumeType("volumeType")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-servicevolumeconfiguration.html)
+     */
+    public inline fun cfnServiceServiceVolumeConfigurationProperty(
+        block: CfnServiceServiceVolumeConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnService.ServiceVolumeConfigurationProperty {
+        val builder = CfnServiceServiceVolumeConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * An object that represents the timeout configurations for Service Connect.
+     *
+     * If `idleTimeout` is set to a time that is less than `perRequestTimeout` , the connection will
+     * close when the `idleTimeout` is reached and not the `perRequestTimeout` .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ecs.*;
+     * TimeoutConfigurationProperty timeoutConfigurationProperty =
+     * TimeoutConfigurationProperty.builder()
+     * .idleTimeoutSeconds(123)
+     * .perRequestTimeoutSeconds(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-timeoutconfiguration.html)
+     */
+    public inline fun cfnServiceTimeoutConfigurationProperty(
+        block: CfnServiceTimeoutConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnService.TimeoutConfigurationProperty {
+        val builder = CfnServiceTimeoutConfigurationPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -2378,6 +2708,7 @@ public object ecs {
      * // the properties below are optional
      * .command(List.of("command"))
      * .cpu(123)
+     * .credentialSpecs(List.of("credentialSpecs"))
      * .dependsOn(List.of(ContainerDependencyProperty.builder()
      * .condition("condition")
      * .containerName("containerName")
@@ -2534,6 +2865,7 @@ public object ecs {
      * .build()))
      * .taskRoleArn("taskRoleArn")
      * .volumes(List.of(VolumeProperty.builder()
+     * .configuredAtLaunch(false)
      * .dockerVolumeConfiguration(DockerVolumeConfigurationProperty.builder()
      * .autoprovision(false)
      * .driver("driver")
@@ -2615,6 +2947,7 @@ public object ecs {
      * // the properties below are optional
      * .command(List.of("command"))
      * .cpu(123)
+     * .credentialSpecs(List.of("credentialSpecs"))
      * .dependsOn(List.of(ContainerDependencyProperty.builder()
      * .condition("condition")
      * .containerName("containerName")
@@ -2889,10 +3222,7 @@ public object ecs {
      *
      * You can specify up to ten environment files. The file must have a `.env` file extension. Each
      * line in an environment file should contain an environment variable in `VARIABLE=VALUE`
-     * format. Lines beginning with `#` are treated as comments and are ignored. For more
-     * information about the environment variable file syntax, see
-     * [Declare default environment variables in file](https://docs.aws.amazon.com/https://docs.docker.com/compose/env-file/)
-     * .
+     * format. Lines beginning with `#` are treated as comments and are ignored.
      *
      * If there are environment variables specified using the `environment` parameter in a container
      * definition, they take precedence over the variables contained within an environment file. If
@@ -2904,6 +3234,11 @@ public object ecs {
      * You must use the following platforms for the Fargate launch type:
      * * Linux platform version `1.4.0` or later.
      * * Windows platform version `1.0.0` or later.
+     *
+     * Consider the following when using the Fargate launch type:
+     * * The file is handled like a native Docker env-file.
+     * * There is no support for shell escape handling.
+     * * The container entry point interperts the `VARIABLE` values.
      *
      * Example:
      * ```
@@ -2931,8 +3266,8 @@ public object ecs {
      *
      * This parameter is used to expand the total amount of ephemeral storage available, beyond the
      * default amount, for tasks hosted on AWS Fargate . For more information, see
-     * [Fargate task storage](https://docs.aws.amazon.com/AmazonECS/latest/userguide/using_data_volumes.html)
-     * in the *Amazon ECS User Guide for AWS Fargate* .
+     * [Using data volumes in tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_data_volumes.html)
+     * in the *Amazon ECS Developer Guide;* .
      *
      * For tasks using the Fargate launch type, the task requires the following platforms:
      * * Linux platform version `1.4.0` or later.
@@ -3124,13 +3459,13 @@ public object ecs {
     }
 
     /**
-     * The `KernelCapabilities` property specifies the Linux capabilities for the container that are
-     * added to or dropped from the default configuration that is provided by Docker.
+     * The Linux capabilities to add or remove from the default Docker configuration for a container
+     * defined in the task definition.
      *
-     * For more information on the default capabilities and the non-default available capabilities,
-     * see
+     * For more information about the default capabilities and the non-default available
+     * capabilities, see
      * [Runtime privilege and Linux capabilities](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities)
-     * in the *Docker run reference* . For more detailed information on these Linux capabilities,
+     * in the *Docker run reference* . For more detailed information about these Linux capabilities,
      * see the
      * [capabilities(7)](https://docs.aws.amazon.com/http://man7.org/linux/man-pages/man7/capabilities.7.html)
      * Linux manual page.
@@ -3334,6 +3669,7 @@ public object ecs {
      * // the properties below are optional
      * .command(List.of("command"))
      * .cpu(123)
+     * .credentialSpecs(List.of("credentialSpecs"))
      * .dependsOn(List.of(ContainerDependencyProperty.builder()
      * .condition("condition")
      * .containerName("containerName")
@@ -3490,6 +3826,7 @@ public object ecs {
      * .build()))
      * .taskRoleArn("taskRoleArn")
      * .volumes(List.of(VolumeProperty.builder()
+     * .configuredAtLaunch(false)
      * .dockerVolumeConfiguration(DockerVolumeConfigurationProperty.builder()
      * .autoprovision(false)
      * .driver("driver")
@@ -3690,18 +4027,30 @@ public object ecs {
      * [Docker Remote API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/)
      * and the `--sysctl` option to
      * [docker run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * . For example, you can configure `net.ipv4.tcp_keepalive_time` setting to maintain longer
+     * lived connections.
      *
      * We don't recommend that you specify network-related `systemControls` parameters for multiple
-     * containers in a single task. This task also uses either the `awsvpc` or `host` network mode.
-     * It does it for the following reasons.
-     * * For tasks that use the `awsvpc` network mode, if you set `systemControls` for any
-     *   container, it applies to all containers in the task. If you set different `systemControls`
-     *   for multiple containers in a single task, the container that's started last determines
-     *   which `systemControls` take effect.
-     * * For tasks that use the `host` network mode, the `systemControls` parameter applies to the
-     *   container instance's kernel parameter and that of all containers of any tasks running on
-     *   that container instance.
+     * containers in a single task that also uses either the `awsvpc` or `host` network mode. Doing
+     * this has the following disadvantages:
+     * * For tasks that use the `awsvpc` network mode including Fargate, if you set `systemControls`
+     *   for any container, it applies to all containers in the task. If you set different
+     *   `systemControls` for multiple containers in a single task, the container that's started
+     *   last determines which `systemControls` take effect.
+     * * For tasks that use the `host` network mode, the network namespace `systemControls` aren't
+     *   supported.
+     *
+     * If you're setting an IPC resource namespace to use for the containers in the task, the
+     * following conditions apply to your system controls. For more information, see
+     * [IPC mode](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#task_definition_ipcmode)
+     * .
+     * * For tasks that use the `host` IPC mode, IPC namespace `systemControls` aren't supported.
+     * * For tasks that use the `task` IPC mode, IPC namespace `systemControls` values apply to all
+     *   containers within a task.
+     *
+     * This parameter is not supported for Windows containers. &gt; This parameter is only supported
+     * for tasks that are hosted on AWS Fargate if the tasks are using platform version `1.4.0` or
+     * later (Linux). This isn't supported for Windows containers on Fargate.
      *
      * Example:
      * ```
@@ -3789,7 +4138,7 @@ public object ecs {
      * operating system with the exception of the `nofile` resource limit parameter which AWS
      * Fargate overrides. The `nofile` resource limit sets a restriction on the number of open files
      * that a container can use. The default `nofile` soft limit is `1024` and the default hard
-     * limit is `4096` .
+     * limit is `65535` .
      *
      * You can specify the `ulimit` settings for a container in a task definition.
      *
@@ -3840,14 +4189,15 @@ public object ecs {
     }
 
     /**
-     * The `Volume` property specifies a data volume used in a task definition.
+     * The data volume configuration for tasks launched using this task definition.
      *
-     * For tasks that use a Docker volume, specify a `DockerVolumeConfiguration` . For tasks that
-     * use a bind mount host volume, specify a `host` and optional `sourcePath` . For more
-     * information about `host` and optional `sourcePath` , see
-     * [Volumes](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#volumes)
-     * and
-     * [Using Data Volumes in Tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_data_volumes.html)
+     * Specifying a volume configuration in a task definition is optional. The volume configuration
+     * may contain multiple volumes but only one volume configured at launch is supported. Each
+     * volume defined in the volume configuration may only specify a `name` and one of either
+     * `configuredAtLaunch` , `dockerVolumeConfiguration` , `efsVolumeConfiguration` ,
+     * `fsxWindowsFileServerVolumeConfiguration` , or `host` . If an empty volume configuration is
+     * specified, by default Amazon ECS uses a host volume. For more information, see
+     * [Using data volumes in tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_data_volumes.html)
      * .
      *
      * Example:
@@ -3856,6 +4206,7 @@ public object ecs {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.ecs.*;
      * VolumeProperty volumeProperty = VolumeProperty.builder()
+     * .configuredAtLaunch(false)
      * .dockerVolumeConfiguration(DockerVolumeConfigurationProperty.builder()
      * .autoprovision(false)
      * .driver("driver")
@@ -3899,6 +4250,10 @@ public object ecs {
      * This is used when a service uses the `EXTERNAL` deployment controller type. For more
      * information, see
      * [Amazon ECS deployment types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html)
+     * in the *Amazon Elastic Container Service Developer Guide* .
+     *
+     * For information about the maximum number of task sets and otther quotas, see
+     * [Amazon ECS service quotas](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-quotas.html)
      * in the *Amazon Elastic Container Service Developer Guide* .
      *
      * Example:
@@ -3954,6 +4309,9 @@ public object ecs {
 
     /**
      * An object representing the networking details for a task or service.
+     *
+     * For example
+     * `awsvpcConfiguration={subnets=["subnet-12344321"],securityGroups=["sg-12344321"]}`
      *
      * Example:
      * ```
@@ -4218,34 +4576,23 @@ public object ecs {
      *
      * Example:
      * ```
-     * Vpc vpc;
-     * Cluster cluster = Cluster.Builder.create(this, "Cluster")
-     * .vpc(vpc)
+     * import software.amazon.awscdk.Tags;
+     * Vpc vpc = Vpc.Builder.create(this, "Vpc").maxAzs(1).build();
+     * Cluster cluster = Cluster.Builder.create(this, "EcsCluster").vpc(vpc).build();
+     * FargateTaskDefinition taskDefinition = FargateTaskDefinition.Builder.create(this, "TaskDef")
+     * .memoryLimitMiB(512)
+     * .cpu(256)
      * .build();
-     * AutoScalingGroup autoScalingGroup = AutoScalingGroup.Builder.create(this, "ASG")
-     * .vpc(vpc)
-     * .instanceType(new InstanceType("t2.micro"))
-     * .machineImage(EcsOptimizedImage.amazonLinux2())
-     * .minCapacity(0)
-     * .maxCapacity(100)
-     * .build();
-     * AsgCapacityProvider capacityProvider = AsgCapacityProvider.Builder.create(this,
-     * "AsgCapacityProvider")
-     * .autoScalingGroup(autoScalingGroup)
-     * .build();
-     * cluster.addAsgCapacityProvider(capacityProvider);
-     * Ec2TaskDefinition taskDefinition = new Ec2TaskDefinition(this, "TaskDef");
-     * taskDefinition.addContainer("web", ContainerDefinitionOptions.builder()
+     * taskDefinition.addContainer("WebContainer", ContainerDefinitionOptions.builder()
      * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
-     * .memoryReservationMiB(256)
      * .build());
-     * Ec2Service.Builder.create(this, "EC2Service")
+     * Tags.of(taskDefinition).add("my-tag", "my-tag-value");
+     * ScheduledFargateTask scheduledFargateTask = ScheduledFargateTask.Builder.create(this,
+     * "ScheduledFargateTask")
      * .cluster(cluster)
      * .taskDefinition(taskDefinition)
-     * .capacityProviderStrategies(List.of(CapacityProviderStrategy.builder()
-     * .capacityProvider(capacityProvider.getCapacityProviderName())
-     * .weight(1)
-     * .build()))
+     * .schedule(Schedule.expression("rate(1 minute)"))
+     * .propagateTags(PropagatedTagSource.TASK_DEFINITION)
      * .build();
      * ```
      */
@@ -4316,31 +4663,35 @@ public object ecs {
      *
      * Example:
      * ```
-     * IVpc vpc = Vpc.fromLookup(this, "Vpc", VpcLookupOptions.builder()
-     * .isDefault(true)
-     * .build());
-     * Cluster cluster = Cluster.Builder.create(this, "FargateCluster").vpc(vpc).build();
-     * TaskDefinition taskDefinition = TaskDefinition.Builder.create(this, "TD")
-     * .memoryMiB("512")
-     * .cpu("256")
-     * .compatibility(Compatibility.FARGATE)
+     * Vpc vpc;
+     * Cluster cluster = Cluster.Builder.create(this, "Cluster")
+     * .vpc(vpc)
      * .build();
-     * ContainerDefinition containerDefinition = taskDefinition.addContainer("TheContainer",
-     * ContainerDefinitionOptions.builder()
-     * .image(ContainerImage.fromRegistry("foo/bar"))
-     * .memoryLimitMiB(256)
+     * AutoScalingGroup autoScalingGroup = AutoScalingGroup.Builder.create(this, "ASG")
+     * .vpc(vpc)
+     * .instanceType(new InstanceType("t2.micro"))
+     * .machineImage(EcsOptimizedImage.amazonLinux2())
+     * .minCapacity(0)
+     * .maxCapacity(100)
+     * .build();
+     * AsgCapacityProvider capacityProvider = AsgCapacityProvider.Builder.create(this,
+     * "AsgCapacityProvider")
+     * .autoScalingGroup(autoScalingGroup)
+     * .instanceWarmupPeriod(300)
+     * .build();
+     * cluster.addAsgCapacityProvider(capacityProvider);
+     * Ec2TaskDefinition taskDefinition = new Ec2TaskDefinition(this, "TaskDef");
+     * taskDefinition.addContainer("web", ContainerDefinitionOptions.builder()
+     * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+     * .memoryReservationMiB(256)
      * .build());
-     * EcsRunTask runTask = EcsRunTask.Builder.create(this, "RunFargate")
-     * .integrationPattern(IntegrationPattern.RUN_JOB)
+     * Ec2Service.Builder.create(this, "EC2Service")
      * .cluster(cluster)
      * .taskDefinition(taskDefinition)
-     * .assignPublicIp(true)
-     * .containerOverrides(List.of(ContainerOverride.builder()
-     * .containerDefinition(containerDefinition)
-     * .environment(List.of(TaskEnvironmentVariable.builder().name("SOME_KEY").value(JsonPath.stringAt("$.SomeKey")).build()))
+     * .capacityProviderStrategies(List.of(CapacityProviderStrategy.builder()
+     * .capacityProvider(capacityProvider.getCapacityProviderName())
+     * .weight(1)
      * .build()))
-     * .launchTarget(new EcsFargateLaunchTarget())
-     * .propagatedTagSource(PropagatedTagSource.TASK_DEFINITION)
      * .build();
      * ```
      */
@@ -4400,6 +4751,7 @@ public object ecs {
      * .volumes(List.of(Volume.builder()
      * .name("name")
      * // the properties below are optional
+     * .configuredAtLaunch(false)
      * .dockerVolumeConfiguration(DockerVolumeConfiguration.builder()
      * .driver("driver")
      * .scope(Scope.TASK)
@@ -4526,6 +4878,7 @@ public object ecs {
      * import software.amazon.awscdk.services.ecs.*;
      * AppProtocol appProtocol;
      * ContainerImage containerImage;
+     * CredentialSpec credentialSpec;
      * EnvironmentFile environmentFile;
      * LinuxParameters linuxParameters;
      * LogDriver logDriver;
@@ -4538,6 +4891,7 @@ public object ecs {
      * .command(List.of("command"))
      * .containerName("containerName")
      * .cpu(123)
+     * .credentialSpecs(List.of(credentialSpec))
      * .disableNetworking(false)
      * .dnsSearchDomains(List.of("dnsSearchDomains"))
      * .dnsServers(List.of("dnsServers"))
@@ -4562,6 +4916,7 @@ public object ecs {
      * .build())
      * .hostname("hostname")
      * .inferenceAcceleratorResources(List.of("inferenceAcceleratorResources"))
+     * .interactive(false)
      * .linuxParameters(linuxParameters)
      * .logging(logDriver)
      * .memoryLimitMiB(123)
@@ -4656,6 +5011,54 @@ public object ecs {
     }
 
     /**
+     * Defines the mount point details for attaching a volume to a container.
+     *
+     * Example:
+     * ```
+     * Cluster cluster;
+     * FargateTaskDefinition taskDefinition = new FargateTaskDefinition(this, "TaskDef");
+     * ContainerDefinition container = taskDefinition.addContainer("web",
+     * ContainerDefinitionOptions.builder()
+     * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+     * .portMappings(List.of(PortMapping.builder()
+     * .containerPort(80)
+     * .protocol(Protocol.TCP)
+     * .build()))
+     * .build());
+     * ServiceManagedVolume volume = ServiceManagedVolume.Builder.create(this, "EBSVolume")
+     * .name("ebs1")
+     * .managedEBSVolume(ServiceManagedEBSVolumeConfiguration.builder()
+     * .size(Size.gibibytes(15))
+     * .volumeType(EbsDeviceVolumeType.GP3)
+     * .fileSystemType(FileSystemType.XFS)
+     * .tagSpecifications(List.of(EBSTagSpecification.builder()
+     * .tags(Map.of(
+     * "purpose", "production"))
+     * .propagateTags(EbsPropagatedTagSource.SERVICE)
+     * .build()))
+     * .build())
+     * .build();
+     * volume.mountIn(container, ContainerMountPoint.builder()
+     * .containerPath("/var/lib")
+     * .readOnly(false)
+     * .build());
+     * taskDefinition.addVolume(volume);
+     * FargateService service = FargateService.Builder.create(this, "FargateService")
+     * .cluster(cluster)
+     * .taskDefinition(taskDefinition)
+     * .build();
+     * service.addVolume(volume);
+     * ```
+     */
+    public inline fun containerMountPoint(
+        block: ContainerMountPointDsl.() -> Unit = {}
+    ): ContainerMountPoint {
+        val builder = ContainerMountPointDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The properties for enabling scaling based on CPU utilization.
      *
      * Example:
@@ -4677,6 +5080,28 @@ public object ecs {
         block: CpuUtilizationScalingPropsDsl.() -> Unit = {}
     ): CpuUtilizationScalingProps {
         val builder = CpuUtilizationScalingPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Configuration for a credential specification (CredSpec) used for a ECS container.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ecs.*;
+     * CredentialSpecConfig credentialSpecConfig = CredentialSpecConfig.builder()
+     * .location("location")
+     * .typePrefix("typePrefix")
+     * .build();
+     * ```
+     */
+    public inline fun credentialSpecConfig(
+        block: CredentialSpecConfigDsl.() -> Unit = {}
+    ): CredentialSpecConfig {
+        val builder = CredentialSpecConfigDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -4767,7 +5192,10 @@ public object ecs {
      * FargateService service = FargateService.Builder.create(this, "Service")
      * .cluster(cluster)
      * .taskDefinition(taskDefinition)
-     * .circuitBreaker(DeploymentCircuitBreaker.builder().rollback(true).build())
+     * .circuitBreaker(DeploymentCircuitBreaker.builder()
+     * .enable(true)
+     * .rollback(true)
+     * .build())
      * .build();
      * ```
      */
@@ -4864,6 +5292,29 @@ public object ecs {
         block: DockerVolumeConfigurationDsl.() -> Unit = {}
     ): DockerVolumeConfiguration {
         val builder = DockerVolumeConfigurationDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Tag Specification for EBS volume.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ecs.*;
+     * EBSTagSpecification eBSTagSpecification = EBSTagSpecification.builder()
+     * .propagateTags(EbsPropagatedTagSource.SERVICE)
+     * .tags(Map.of(
+     * "tagsKey", "tags"))
+     * .build();
+     * ```
+     */
+    public inline fun eBSTagSpecification(
+        block: EBSTagSpecificationDsl.() -> Unit = {}
+    ): EBSTagSpecification {
+        val builder = EBSTagSpecificationDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -5357,6 +5808,7 @@ public object ecs {
      * .volumes(List.of(Volume.builder()
      * .name("name")
      * // the properties below are optional
+     * .configuredAtLaunch(false)
      * .dockerVolumeConfiguration(DockerVolumeConfiguration.builder()
      * .driver("driver")
      * .scope(Scope.TASK)
@@ -5684,6 +6136,7 @@ public object ecs {
      * import software.amazon.awscdk.services.ecs.*;
      * AppProtocol appProtocol;
      * ContainerImage containerImage;
+     * CredentialSpec credentialSpec;
      * EnvironmentFile environmentFile;
      * LinuxParameters linuxParameters;
      * LogDriver logDriver;
@@ -5706,6 +6159,7 @@ public object ecs {
      * .command(List.of("command"))
      * .containerName("containerName")
      * .cpu(123)
+     * .credentialSpecs(List.of(credentialSpec))
      * .disableNetworking(false)
      * .dnsSearchDomains(List.of("dnsSearchDomains"))
      * .dnsServers(List.of("dnsServers"))
@@ -5730,6 +6184,7 @@ public object ecs {
      * .build())
      * .hostname("hostname")
      * .inferenceAcceleratorResources(List.of("inferenceAcceleratorResources"))
+     * .interactive(false)
      * .linuxParameters(linuxParameters)
      * .logging(logDriver)
      * .memoryLimitMiB(123)
@@ -5785,6 +6240,7 @@ public object ecs {
      * import software.amazon.awscdk.services.ecs.*;
      * AppProtocol appProtocol;
      * ContainerImage containerImage;
+     * CredentialSpec credentialSpec;
      * EnvironmentFile environmentFile;
      * LinuxParameters linuxParameters;
      * LogDriver logDriver;
@@ -5805,6 +6261,7 @@ public object ecs {
      * .command(List.of("command"))
      * .containerName("containerName")
      * .cpu(123)
+     * .credentialSpecs(List.of(credentialSpec))
      * .disableNetworking(false)
      * .dnsSearchDomains(List.of("dnsSearchDomains"))
      * .dnsServers(List.of("dnsServers"))
@@ -5829,6 +6286,7 @@ public object ecs {
      * .build())
      * .hostname("hostname")
      * .inferenceAcceleratorResources(List.of("inferenceAcceleratorResources"))
+     * .interactive(false)
      * .linuxParameters(linuxParameters)
      * .logging(logDriver)
      * .memoryLimitMiB(123)
@@ -5882,6 +6340,7 @@ public object ecs {
      * import software.amazon.awscdk.services.ecs.*;
      * AppProtocol appProtocol;
      * ContainerImage containerImage;
+     * CredentialSpec credentialSpec;
      * EnvironmentFile environmentFile;
      * LinuxParameters linuxParameters;
      * LogDriver logDriver;
@@ -5903,6 +6362,7 @@ public object ecs {
      * .command(List.of("command"))
      * .containerName("containerName")
      * .cpu(123)
+     * .credentialSpecs(List.of(credentialSpec))
      * .disableNetworking(false)
      * .dnsSearchDomains(List.of("dnsSearchDomains"))
      * .dnsServers(List.of("dnsServers"))
@@ -5927,6 +6387,7 @@ public object ecs {
      * .build())
      * .hostname("hostname")
      * .inferenceAcceleratorResources(List.of("inferenceAcceleratorResources"))
+     * .interactive(false)
      * .linuxParameters(linuxParameters)
      * .logging(logDriver)
      * .memoryLimitMiB(123)
@@ -6825,23 +7286,19 @@ public object ecs {
      * ```
      * Cluster cluster;
      * TaskDefinition taskDefinition;
-     * ContainerDefinitionOptions containerOptions;
-     * ContainerDefinition container = taskDefinition.addContainer("MyContainer", containerOptions);
-     * container.addPortMappings(PortMapping.builder()
-     * .name("api")
-     * .containerPort(8080)
-     * .build());
-     * cluster.addDefaultCloudMapNamespace(CloudMapNamespaceOptions.builder()
-     * .name("local")
-     * .build());
-     * FargateService service = FargateService.Builder.create(this, "Service")
+     * FargateService customService = FargateService.Builder.create(this, "CustomizedService")
      * .cluster(cluster)
      * .taskDefinition(taskDefinition)
      * .serviceConnectConfiguration(ServiceConnectProps.builder()
+     * .logDriver(LogDrivers.awsLogs(AwsLogDriverProps.builder()
+     * .streamPrefix("sc-traffic")
+     * .build()))
      * .services(List.of(ServiceConnectService.builder()
      * .portMappingName("api")
-     * .dnsName("http-api")
+     * .dnsName("customized-api")
      * .port(80)
+     * .ingressPortOverride(20040)
+     * .discoveryName("custom")
      * .build()))
      * .build())
      * .build();
@@ -6862,13 +7319,16 @@ public object ecs {
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
+     * import software.amazon.awscdk.*;
      * import software.amazon.awscdk.services.ecs.*;
      * ServiceConnectService serviceConnectService = ServiceConnectService.builder()
      * .portMappingName("portMappingName")
      * // the properties below are optional
      * .discoveryName("discoveryName")
      * .dnsName("dnsName")
+     * .idleTimeout(Duration.minutes(30))
      * .ingressPortOverride(123)
+     * .perRequestTimeout(Duration.minutes(30))
      * .port(123)
      * .build();
      * ```
@@ -6877,6 +7337,152 @@ public object ecs {
         block: ServiceConnectServiceDsl.() -> Unit = {}
     ): ServiceConnectService {
         val builder = ServiceConnectServiceDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Represents the configuration for an ECS Service managed EBS volume.
+     *
+     * Example:
+     * ```
+     * Cluster cluster;
+     * FargateTaskDefinition taskDefinition = new FargateTaskDefinition(this, "TaskDef");
+     * ContainerDefinition container = taskDefinition.addContainer("web",
+     * ContainerDefinitionOptions.builder()
+     * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+     * .portMappings(List.of(PortMapping.builder()
+     * .containerPort(80)
+     * .protocol(Protocol.TCP)
+     * .build()))
+     * .build());
+     * ServiceManagedVolume volume = ServiceManagedVolume.Builder.create(this, "EBSVolume")
+     * .name("ebs1")
+     * .managedEBSVolume(ServiceManagedEBSVolumeConfiguration.builder()
+     * .size(Size.gibibytes(15))
+     * .volumeType(EbsDeviceVolumeType.GP3)
+     * .fileSystemType(FileSystemType.XFS)
+     * .tagSpecifications(List.of(EBSTagSpecification.builder()
+     * .tags(Map.of(
+     * "purpose", "production"))
+     * .propagateTags(EbsPropagatedTagSource.SERVICE)
+     * .build()))
+     * .build())
+     * .build();
+     * volume.mountIn(container, ContainerMountPoint.builder()
+     * .containerPath("/var/lib")
+     * .readOnly(false)
+     * .build());
+     * taskDefinition.addVolume(volume);
+     * FargateService service = FargateService.Builder.create(this, "FargateService")
+     * .cluster(cluster)
+     * .taskDefinition(taskDefinition)
+     * .build();
+     * service.addVolume(volume);
+     * ```
+     */
+    public inline fun serviceManagedEBSVolumeConfiguration(
+        block: ServiceManagedEBSVolumeConfigurationDsl.() -> Unit = {}
+    ): ServiceManagedEBSVolumeConfiguration {
+        val builder = ServiceManagedEBSVolumeConfigurationDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Represents a service-managed volume and always configured at launch.
+     *
+     * Example:
+     * ```
+     * Cluster cluster;
+     * FargateTaskDefinition taskDefinition = new FargateTaskDefinition(this, "TaskDef");
+     * ContainerDefinition container = taskDefinition.addContainer("web",
+     * ContainerDefinitionOptions.builder()
+     * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+     * .portMappings(List.of(PortMapping.builder()
+     * .containerPort(80)
+     * .protocol(Protocol.TCP)
+     * .build()))
+     * .build());
+     * ServiceManagedVolume volume = ServiceManagedVolume.Builder.create(this, "EBSVolume")
+     * .name("ebs1")
+     * .managedEBSVolume(ServiceManagedEBSVolumeConfiguration.builder()
+     * .size(Size.gibibytes(15))
+     * .volumeType(EbsDeviceVolumeType.GP3)
+     * .fileSystemType(FileSystemType.XFS)
+     * .tagSpecifications(List.of(EBSTagSpecification.builder()
+     * .tags(Map.of(
+     * "purpose", "production"))
+     * .propagateTags(EbsPropagatedTagSource.SERVICE)
+     * .build()))
+     * .build())
+     * .build();
+     * volume.mountIn(container, ContainerMountPoint.builder()
+     * .containerPath("/var/lib")
+     * .readOnly(false)
+     * .build());
+     * taskDefinition.addVolume(volume);
+     * FargateService service = FargateService.Builder.create(this, "FargateService")
+     * .cluster(cluster)
+     * .taskDefinition(taskDefinition)
+     * .build();
+     * service.addVolume(volume);
+     * ```
+     */
+    public inline fun serviceManagedVolume(
+        scope: Construct,
+        id: String,
+        block: ServiceManagedVolumeDsl.() -> Unit = {},
+    ): ServiceManagedVolume {
+        val builder = ServiceManagedVolumeDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Represents the Volume configuration for an ECS service.
+     *
+     * Example:
+     * ```
+     * Cluster cluster;
+     * FargateTaskDefinition taskDefinition = new FargateTaskDefinition(this, "TaskDef");
+     * ContainerDefinition container = taskDefinition.addContainer("web",
+     * ContainerDefinitionOptions.builder()
+     * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+     * .portMappings(List.of(PortMapping.builder()
+     * .containerPort(80)
+     * .protocol(Protocol.TCP)
+     * .build()))
+     * .build());
+     * ServiceManagedVolume volume = ServiceManagedVolume.Builder.create(this, "EBSVolume")
+     * .name("ebs1")
+     * .managedEBSVolume(ServiceManagedEBSVolumeConfiguration.builder()
+     * .size(Size.gibibytes(15))
+     * .volumeType(EbsDeviceVolumeType.GP3)
+     * .fileSystemType(FileSystemType.XFS)
+     * .tagSpecifications(List.of(EBSTagSpecification.builder()
+     * .tags(Map.of(
+     * "purpose", "production"))
+     * .propagateTags(EbsPropagatedTagSource.SERVICE)
+     * .build()))
+     * .build())
+     * .build();
+     * volume.mountIn(container, ContainerMountPoint.builder()
+     * .containerPath("/var/lib")
+     * .readOnly(false)
+     * .build());
+     * taskDefinition.addVolume(volume);
+     * FargateService service = FargateService.Builder.create(this, "FargateService")
+     * .cluster(cluster)
+     * .taskDefinition(taskDefinition)
+     * .build();
+     * service.addVolume(volume);
+     * ```
+     */
+    public inline fun serviceManagedVolumeProps(
+        block: ServiceManagedVolumePropsDsl.() -> Unit = {}
+    ): ServiceManagedVolumeProps {
+        val builder = ServiceManagedVolumePropsDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -7216,17 +7822,28 @@ public object ecs {
      *
      * Example:
      * ```
-     * FargateTaskDefinition fargateTaskDefinition = FargateTaskDefinition.Builder.create(this,
-     * "TaskDef")
-     * .memoryLimitMiB(512)
-     * .cpu(256)
+     * ContainerDefinition container;
+     * Cluster cluster;
+     * TaskDefinition taskDefinition;
+     * ServiceManagedVolume volumeFromSnapshot = ServiceManagedVolume.Builder.create(this,
+     * "EBSVolume")
+     * .name("nginx-vol")
+     * .managedEBSVolume(ServiceManagedEBSVolumeConfiguration.builder()
+     * .snapShotId("snap-066877671789bd71b")
+     * .volumeType(EbsDeviceVolumeType.GP3)
+     * .fileSystemType(FileSystemType.XFS)
+     * .build())
      * .build();
-     * Map&lt;String, Object&gt; volume = Map.of(
-     * // Use an Elastic FileSystem
-     * "name", "mydatavolume",
-     * "efsVolumeConfiguration", Map.of(
-     * "fileSystemId", "EFS"));
-     * void container = fargateTaskDefinition.addVolume(volume);
+     * volumeFromSnapshot.mountIn(container, ContainerMountPoint.builder()
+     * .containerPath("/var/lib")
+     * .readOnly(false)
+     * .build());
+     * taskDefinition.addVolume(volumeFromSnapshot);
+     * FargateService service = FargateService.Builder.create(this, "FargateService")
+     * .cluster(cluster)
+     * .taskDefinition(taskDefinition)
+     * .build();
+     * service.addVolume(volumeFromSnapshot);
      * ```
      */
     public inline fun volume(block: VolumeDsl.() -> Unit = {}): Volume {

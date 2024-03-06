@@ -126,7 +126,7 @@ public class CfnQuickConnectDsl(
     /**
      * The tags used to organize, track, or control access for this resource.
      *
-     * For example, { "tags": {"key1":"value1", "key2":"value2"} }.
+     * For example, { "Tags": {"key1":"value1", "key2":"value2"} }.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-quickconnect.html#cfn-connect-quickconnect-tags)
      *
@@ -139,7 +139,7 @@ public class CfnQuickConnectDsl(
     /**
      * The tags used to organize, track, or control access for this resource.
      *
-     * For example, { "tags": {"key1":"value1", "key2":"value2"} }.
+     * For example, { "Tags": {"key1":"value1", "key2":"value2"} }.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-quickconnect.html#cfn-connect-quickconnect-tags)
      *

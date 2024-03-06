@@ -58,14 +58,31 @@ import software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy
  * import software.amazon.awscdk.services.applicationautoscaling.*;
  * CustomizedMetricSpecificationProperty customizedMetricSpecificationProperty =
  * CustomizedMetricSpecificationProperty.builder()
- * .metricName("metricName")
- * .namespace("namespace")
- * .statistic("statistic")
- * // the properties below are optional
  * .dimensions(List.of(MetricDimensionProperty.builder()
  * .name("name")
  * .value("value")
  * .build()))
+ * .metricName("metricName")
+ * .metrics(List.of(TargetTrackingMetricDataQueryProperty.builder()
+ * .expression("expression")
+ * .id("id")
+ * .label("label")
+ * .metricStat(TargetTrackingMetricStatProperty.builder()
+ * .metric(TargetTrackingMetricProperty.builder()
+ * .dimensions(List.of(TargetTrackingMetricDimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * .build())
+ * .stat("stat")
+ * .unit("unit")
+ * .build())
+ * .returnData(false)
+ * .build()))
+ * .namespace("namespace")
+ * .statistic("statistic")
  * .unit("unit")
  * .build();
  * ```
@@ -78,6 +95,8 @@ public class CfnScalingPolicyCustomizedMetricSpecificationPropertyDsl {
         CfnScalingPolicy.CustomizedMetricSpecificationProperty.builder()
 
     private val _dimensions: MutableList<Any> = mutableListOf()
+
+    private val _metrics: MutableList<Any> = mutableListOf()
 
     /**
      * @param dimensions The dimensions of the metric. Conditional: If you published your metric
@@ -115,6 +134,30 @@ public class CfnScalingPolicyCustomizedMetricSpecificationPropertyDsl {
         cdkBuilder.metricName(metricName)
     }
 
+    /**
+     * @param metrics The metrics to include in the target tracking scaling policy, as a metric data
+     *   query. This can include both raw metric and metric math expressions.
+     */
+    public fun metrics(vararg metrics: Any) {
+        _metrics.addAll(listOf(*metrics))
+    }
+
+    /**
+     * @param metrics The metrics to include in the target tracking scaling policy, as a metric data
+     *   query. This can include both raw metric and metric math expressions.
+     */
+    public fun metrics(metrics: Collection<Any>) {
+        _metrics.addAll(metrics)
+    }
+
+    /**
+     * @param metrics The metrics to include in the target tracking scaling policy, as a metric data
+     *   query. This can include both raw metric and metric math expressions.
+     */
+    public fun metrics(metrics: IResolvable) {
+        cdkBuilder.metrics(metrics)
+    }
+
     /** @param namespace The namespace of the metric. */
     public fun namespace(namespace: String) {
         cdkBuilder.namespace(namespace)
@@ -137,6 +180,7 @@ public class CfnScalingPolicyCustomizedMetricSpecificationPropertyDsl {
 
     public fun build(): CfnScalingPolicy.CustomizedMetricSpecificationProperty {
         if (_dimensions.isNotEmpty()) cdkBuilder.dimensions(_dimensions)
+        if (_metrics.isNotEmpty()) cdkBuilder.metrics(_metrics)
         return cdkBuilder.build()
     }
 }

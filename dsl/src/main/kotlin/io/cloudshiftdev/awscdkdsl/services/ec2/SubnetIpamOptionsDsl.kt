@@ -19,7 +19,7 @@ import software.amazon.awscdk.services.ec2.AllocatedSubnet
 import software.amazon.awscdk.services.ec2.SubnetIpamOptions
 
 /**
- * Cidr Allocated Subnets.
+ * CIDR Allocated Subnets.
  *
  * Example:
  * ```
@@ -29,6 +29,8 @@ import software.amazon.awscdk.services.ec2.SubnetIpamOptions
  * SubnetIpamOptions subnetIpamOptions = SubnetIpamOptions.builder()
  * .allocatedSubnets(List.of(AllocatedSubnet.builder()
  * .cidr("cidr")
+ * // the properties below are optional
+ * .ipv6Cidr("ipv6Cidr")
  * .build()))
  * .build();
  * ```
@@ -39,12 +41,12 @@ public class SubnetIpamOptionsDsl {
 
     private val _allocatedSubnets: MutableList<AllocatedSubnet> = mutableListOf()
 
-    /** @param allocatedSubnets Cidr Allocations for Subnets. */
+    /** @param allocatedSubnets CIDR Allocations for Subnets. */
     public fun allocatedSubnets(allocatedSubnets: AllocatedSubnetDsl.() -> Unit) {
         _allocatedSubnets.add(AllocatedSubnetDsl().apply(allocatedSubnets).build())
     }
 
-    /** @param allocatedSubnets Cidr Allocations for Subnets. */
+    /** @param allocatedSubnets CIDR Allocations for Subnets. */
     public fun allocatedSubnets(allocatedSubnets: Collection<AllocatedSubnet>) {
         _allocatedSubnets.addAll(allocatedSubnets)
     }

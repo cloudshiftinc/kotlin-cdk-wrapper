@@ -226,6 +226,8 @@ public object panorama {
     }
 
     /**
+     * A storage location.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.

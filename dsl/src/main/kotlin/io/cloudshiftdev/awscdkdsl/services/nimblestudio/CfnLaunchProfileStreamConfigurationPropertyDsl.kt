@@ -67,7 +67,17 @@ public class CfnLaunchProfileStreamConfigurationPropertyDsl {
 
     private val _streamingImageIds: MutableList<String> = mutableListOf()
 
-    /** @param automaticTerminationMode the value to be set. */
+    /**
+     * @param automaticTerminationMode Indicates if a streaming session created from this launch
+     *   profile should be terminated automatically or retained without termination after being in a
+     *   `STOPPED` state.
+     * * When `ACTIVATED` , the streaming session is scheduled for termination after being in the
+     *   `STOPPED` state for the time specified in `maxStoppedSessionLengthInMinutes` .
+     * * When `DEACTIVATED` , the streaming session can remain in the `STOPPED` state indefinitely.
+     *
+     * This parameter is only allowed when `sessionPersistenceMode` is `ACTIVATED` . When allowed,
+     * the default value for this parameter is `DEACTIVATED` .
+     */
     public fun automaticTerminationMode(automaticTerminationMode: String) {
         cdkBuilder.automaticTerminationMode(automaticTerminationMode)
     }
@@ -128,25 +138,23 @@ public class CfnLaunchProfileStreamConfigurationPropertyDsl {
         cdkBuilder.maxStoppedSessionLengthInMinutes(maxStoppedSessionLengthInMinutes)
     }
 
-    /**
-     * @param sessionBackup Configures how streaming sessions are backed up when launched from this
-     *   launch profile.</p>.
-     */
+    /** @param sessionBackup Information about the streaming session backup. */
     public fun sessionBackup(sessionBackup: IResolvable) {
         cdkBuilder.sessionBackup(sessionBackup)
     }
 
-    /**
-     * @param sessionBackup Configures how streaming sessions are backed up when launched from this
-     *   launch profile.</p>.
-     */
+    /** @param sessionBackup Information about the streaming session backup. */
     public fun sessionBackup(
         sessionBackup: CfnLaunchProfile.StreamConfigurationSessionBackupProperty
     ) {
         cdkBuilder.sessionBackup(sessionBackup)
     }
 
-    /** @param sessionPersistenceMode the value to be set. */
+    /**
+     * @param sessionPersistenceMode Determine if a streaming session created from this launch
+     *   profile can configure persistent storage. This means that `volumeConfiguration` and
+     *   `automaticTerminationMode` are configured.
+     */
     public fun sessionPersistenceMode(sessionPersistenceMode: String) {
         cdkBuilder.sessionPersistenceMode(sessionPersistenceMode)
     }
@@ -181,8 +189,8 @@ public class CfnLaunchProfileStreamConfigurationPropertyDsl {
 
     /**
      * @param volumeConfiguration Custom volume configuration for the root volumes that are attached
-     *   to streaming sessions.</p> This parameter is only allowed when `sessionPersistenceMode` is
-     *   `ACTIVATED`.</p>.
+     *   to streaming sessions. This parameter is only allowed when `sessionPersistenceMode` is
+     *   `ACTIVATED` .
      */
     public fun volumeConfiguration(volumeConfiguration: IResolvable) {
         cdkBuilder.volumeConfiguration(volumeConfiguration)
@@ -190,8 +198,8 @@ public class CfnLaunchProfileStreamConfigurationPropertyDsl {
 
     /**
      * @param volumeConfiguration Custom volume configuration for the root volumes that are attached
-     *   to streaming sessions.</p> This parameter is only allowed when `sessionPersistenceMode` is
-     *   `ACTIVATED`.</p>.
+     *   to streaming sessions. This parameter is only allowed when `sessionPersistenceMode` is
+     *   `ACTIVATED` .
      */
     public fun volumeConfiguration(
         volumeConfiguration: CfnLaunchProfile.VolumeConfigurationProperty

@@ -33,10 +33,11 @@ import software.amazon.awscdk.services.customerprofiles.CfnObjectTypeProps
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.customerprofiles.*;
  * CfnObjectTypeProps cfnObjectTypeProps = CfnObjectTypeProps.builder()
+ * .description("description")
  * .domainName("domainName")
+ * .objectTypeName("objectTypeName")
  * // the properties below are optional
  * .allowProfileCreation(false)
- * .description("description")
  * .encryptionKey("encryptionKey")
  * .expirationDays(123)
  * .fields(List.of(FieldMapProperty.builder()
@@ -54,7 +55,7 @@ import software.amazon.awscdk.services.customerprofiles.CfnObjectTypeProps
  * .standardIdentifiers(List.of("standardIdentifiers"))
  * .build()))
  * .build()))
- * .objectTypeName("objectTypeName")
+ * .sourceLastUpdatedTimestampFormat("sourceLastUpdatedTimestampFormat")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -163,6 +164,14 @@ public class CfnObjectTypePropsDsl {
     /** @param objectTypeName The name of the profile object type. */
     public fun objectTypeName(objectTypeName: String) {
         cdkBuilder.objectTypeName(objectTypeName)
+    }
+
+    /**
+     * @param sourceLastUpdatedTimestampFormat The format of your sourceLastUpdatedTimestamp that
+     *   was previously set up.
+     */
+    public fun sourceLastUpdatedTimestampFormat(sourceLastUpdatedTimestampFormat: String) {
+        cdkBuilder.sourceLastUpdatedTimestampFormat(sourceLastUpdatedTimestampFormat)
     }
 
     /** @param tags The tags used to organize, track, or control access for this resource. */

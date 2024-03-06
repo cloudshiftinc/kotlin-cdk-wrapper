@@ -35,13 +35,18 @@ import software.amazon.awscdk.services.fsx.CfnVolumeProps
  * // the properties below are optional
  * .backupId("backupId")
  * .ontapConfiguration(OntapConfigurationProperty.builder()
- * .sizeInMegabytes("sizeInMegabytes")
  * .storageVirtualMachineId("storageVirtualMachineId")
  * // the properties below are optional
+ * .aggregateConfiguration(AggregateConfigurationProperty.builder()
+ * .aggregates(List.of("aggregates"))
+ * .constituentsPerAggregate(123)
+ * .build())
  * .copyTagsToBackups("copyTagsToBackups")
  * .junctionPath("junctionPath")
  * .ontapVolumeType("ontapVolumeType")
  * .securityStyle("securityStyle")
+ * .sizeInBytes("sizeInBytes")
+ * .sizeInMegabytes("sizeInMegabytes")
  * .snaplockConfiguration(SnaplockConfigurationProperty.builder()
  * .snaplockType("snaplockType")
  * // the properties below are optional
@@ -77,6 +82,7 @@ import software.amazon.awscdk.services.fsx.CfnVolumeProps
  * .coolingPeriod(123)
  * .name("name")
  * .build())
+ * .volumeStyle("volumeStyle")
  * .build())
  * .openZfsConfiguration(OpenZFSConfigurationProperty.builder()
  * .parentVolumeId("parentVolumeId")

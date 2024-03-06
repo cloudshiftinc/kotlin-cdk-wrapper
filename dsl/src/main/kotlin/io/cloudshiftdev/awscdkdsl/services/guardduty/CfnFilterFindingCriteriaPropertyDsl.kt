@@ -278,18 +278,12 @@ public class CfnFilterFindingCriteriaPropertyDsl {
         cdkBuilder.criterion(criterion)
     }
 
-    /**
-     * @param itemType Specifies the condition to be applied to a single field when filtering
-     *   through findings.
-     */
+    /** @param itemType the value to be set. */
     public fun itemType(itemType: IResolvable) {
         cdkBuilder.itemType(itemType)
     }
 
-    /**
-     * @param itemType Specifies the condition to be applied to a single field when filtering
-     *   through findings.
-     */
+    /** @param itemType the value to be set. */
     public fun itemType(itemType: CfnFilter.ConditionProperty) {
         cdkBuilder.itemType(itemType)
     }

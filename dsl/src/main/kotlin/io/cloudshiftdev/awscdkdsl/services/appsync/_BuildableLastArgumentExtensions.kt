@@ -135,7 +135,7 @@ public inline fun CfnDataSource.setRelationalDatabaseConfig(
     return setRelationalDatabaseConfig(builder.build())
 }
 
-/** Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync function. */
+/** Describes a runtime used by an AWS AppSync resolver or AWS AppSync function. */
 public inline fun CfnFunctionConfiguration.setRuntime(
     block: CfnFunctionConfigurationAppSyncRuntimePropertyDsl.() -> Unit = {}
 ) {
@@ -151,6 +151,15 @@ public inline fun CfnFunctionConfiguration.setSyncConfig(
     val builder = CfnFunctionConfigurationSyncConfigPropertyDsl()
     builder.apply(block)
     return setSyncConfig(builder.build())
+}
+
+/** Enables and controls the enhanced metrics feature. */
+public inline fun CfnGraphQLApi.setEnhancedMetricsConfig(
+    block: CfnGraphQLApiEnhancedMetricsConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnGraphQLApiEnhancedMetricsConfigPropertyDsl()
+    builder.apply(block)
+    return setEnhancedMetricsConfig(builder.build())
 }
 
 /**
@@ -213,7 +222,7 @@ public inline fun CfnResolver.setPipelineConfig(
     return setPipelineConfig(builder.build())
 }
 
-/** Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync function. */
+/** Describes a runtime used by an AWS AppSync resolver or AWS AppSync function. */
 public inline fun CfnResolver.setRuntime(
     block: CfnResolverAppSyncRuntimePropertyDsl.() -> Unit = {}
 ) {

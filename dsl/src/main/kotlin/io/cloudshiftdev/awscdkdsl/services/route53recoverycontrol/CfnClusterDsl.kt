@@ -68,22 +68,22 @@ public class CfnClusterDsl(
     }
 
     /**
-     * The value for a tag.
+     * The tags associated with the cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-cluster.html#cfn-route53recoverycontrol-cluster-tags)
      *
-     * @param tags The value for a tag.
+     * @param tags The tags associated with the cluster.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
     /**
-     * The value for a tag.
+     * The tags associated with the cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-cluster.html#cfn-route53recoverycontrol-cluster-tags)
      *
-     * @param tags The value for a tag.
+     * @param tags The tags associated with the cluster.
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)

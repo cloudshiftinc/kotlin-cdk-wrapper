@@ -38,7 +38,7 @@ import software.amazon.awscdk.services.apigatewayv2.CfnApiMappingProps
 public class CfnApiMappingPropsDsl {
     private val cdkBuilder: CfnApiMappingProps.Builder = CfnApiMappingProps.builder()
 
-    /** @param apiId The identifier of the API. */
+    /** @param apiId The API identifier. */
     public fun apiId(apiId: String) {
         cdkBuilder.apiId(apiId)
     }

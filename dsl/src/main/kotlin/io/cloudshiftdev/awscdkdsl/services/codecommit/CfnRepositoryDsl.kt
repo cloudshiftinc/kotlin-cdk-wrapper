@@ -44,6 +44,7 @@ import software.constructs.Construct
  * // the properties below are optional
  * .branchName("branchName")
  * .build())
+ * .kmsKeyId("kmsKeyId")
  * .repositoryDescription("repositoryDescription")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -111,6 +112,23 @@ public class CfnRepositoryDsl(
      */
     public fun code(code: CfnRepository.CodeProperty) {
         cdkBuilder.code(code)
+    }
+
+    /**
+     * The ID of the AWS Key Management Service encryption key used to encrypt and decrypt the
+     * repository.
+     *
+     * The input can be the full ARN, the key ID, or the key alias. For more information, see
+     * [Finding the key ID and key ARN](https://docs.aws.amazon.com/kms/latest/developerguide/find-cmk-id-arn.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codecommit-repository.html#cfn-codecommit-repository-kmskeyid)
+     *
+     * @param kmsKeyId The ID of the AWS Key Management Service encryption key used to encrypt and
+     *   decrypt the repository.
+     */
+    public fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
     /**

@@ -15,10 +15,6 @@ import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import software.amazon.awscdk.services.medialive.CfnChannel
 
 /**
- * Settings for a frame capture output in an HLS output group.
- *
- * The parent of this entity is HlsSettings.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.

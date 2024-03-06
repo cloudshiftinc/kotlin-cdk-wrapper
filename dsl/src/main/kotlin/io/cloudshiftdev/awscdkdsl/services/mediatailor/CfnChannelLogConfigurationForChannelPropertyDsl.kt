@@ -18,7 +18,7 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.mediatailor.CfnChannel
 
 /**
- * The log configuration for the channel.</p>.
+ * The log configuration for the channel.
  *
  * Example:
  * ```
@@ -40,12 +40,12 @@ public class CfnChannelLogConfigurationForChannelPropertyDsl {
 
     private val _logTypes: MutableList<String> = mutableListOf()
 
-    /** @param logTypes The log types.</p>. */
+    /** @param logTypes The log types. */
     public fun logTypes(vararg logTypes: String) {
         _logTypes.addAll(listOf(*logTypes))
     }
 
-    /** @param logTypes The log types.</p>. */
+    /** @param logTypes The log types. */
     public fun logTypes(logTypes: Collection<String>) {
         _logTypes.addAll(logTypes)
     }

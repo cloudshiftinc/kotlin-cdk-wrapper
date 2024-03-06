@@ -117,6 +117,7 @@ public object assets {
      * .buildSecrets(Map.of(
      * "buildSecretsKey", "buildSecrets"))
      * .buildSsh("buildSsh")
+     * .cacheDisabled(false)
      * .cacheFrom(List.of(DockerCacheOption.builder()
      * .type("type")
      * // the properties below are optional

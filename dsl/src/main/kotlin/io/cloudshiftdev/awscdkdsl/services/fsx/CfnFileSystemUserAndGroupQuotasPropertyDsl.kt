@@ -17,7 +17,12 @@ import kotlin.String
 import software.amazon.awscdk.services.fsx.CfnFileSystem
 
 /**
- * The configuration for how much storage a user or group can use on the volume.
+ * Used to configure quotas that define how much storage a user or group can use on an FSx for
+ * OpenZFS volume.
+ *
+ * For more information, see
+ * [Volume properties](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-volumes.html#volume-properties)
+ * in the FSx for OpenZFS User Guide.
  *
  * Example:
  * ```
@@ -38,20 +43,17 @@ public class CfnFileSystemUserAndGroupQuotasPropertyDsl {
     private val cdkBuilder: CfnFileSystem.UserAndGroupQuotasProperty.Builder =
         CfnFileSystem.UserAndGroupQuotasProperty.builder()
 
-    /** @param id The ID of the user or group. */
+    /** @param id The ID of the user or group that the quota applies to. */
     public fun id(id: Number) {
         cdkBuilder.id(id)
     }
 
-    /**
-     * @param storageCapacityQuotaGiB The amount of storage that the user or group can use in
-     *   gibibytes (GiB).
-     */
+    /** @param storageCapacityQuotaGiB The user or group's storage quota, in gibibytes (GiB). */
     public fun storageCapacityQuotaGiB(storageCapacityQuotaGiB: Number) {
         cdkBuilder.storageCapacityQuotaGiB(storageCapacityQuotaGiB)
     }
 
-    /** @param type A value that specifies whether the quota applies to a user or group. */
+    /** @param type Specifies whether the quota applies to a user or group. */
     public fun type(type: String) {
         cdkBuilder.type(type)
     }

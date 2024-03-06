@@ -157,11 +157,11 @@ public class CfnWorkflowDsl(
     }
 
     /**
-     * A storage capacity for the workflow in gigabytes.
+     * A storage capacity for the workflow in gibibytes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-storagecapacity)
      *
-     * @param storageCapacity A storage capacity for the workflow in gigabytes.
+     * @param storageCapacity A storage capacity for the workflow in gibibytes.
      */
     public fun storageCapacity(storageCapacity: Number) {
         cdkBuilder.storageCapacity(storageCapacity)

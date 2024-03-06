@@ -249,6 +249,7 @@ import software.amazon.awscdk.services.sagemaker.CfnModelPackageProps
  * .build())
  * .modelPackageVersion(123)
  * .samplePayloadUrl("samplePayloadUrl")
+ * .skipModelValidation("skipModelValidation")
  * .sourceAlgorithmSpecification(SourceAlgorithmSpecificationProperty.builder()
  * .sourceAlgorithms(List.of(SourceAlgorithmProperty.builder()
  * .algorithmName("algorithmName")
@@ -554,6 +555,11 @@ public class CfnModelPackagePropsDsl {
      */
     public fun samplePayloadUrl(samplePayloadUrl: String) {
         cdkBuilder.samplePayloadUrl(samplePayloadUrl)
+    }
+
+    /** @param skipModelValidation Indicates if you want to skip model validation. */
+    public fun skipModelValidation(skipModelValidation: String) {
+        cdkBuilder.skipModelValidation(skipModelValidation)
     }
 
     /**

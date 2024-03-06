@@ -52,10 +52,7 @@ public class CfnDataflowEndpointGroupDataflowEndpointPropertyDsl {
         cdkBuilder.address(address)
     }
 
-    /**
-     * @param mtu Maximum transmission unit (MTU) size in bytes of a dataflow endpoint. Valid values
-     *   are between 1400 and 1500. A default value of 1500 is used if not set.
-     */
+    /** @param mtu the value to be set. */
     public fun mtu(mtu: Number) {
         cdkBuilder.mtu(mtu)
     }

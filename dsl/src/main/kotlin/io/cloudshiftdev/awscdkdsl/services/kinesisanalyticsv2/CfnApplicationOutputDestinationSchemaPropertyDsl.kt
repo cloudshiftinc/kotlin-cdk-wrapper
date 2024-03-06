@@ -16,8 +16,8 @@ import kotlin.String
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput
 
 /**
- * Describes the data format when records are written to the destination in a SQL-based Kinesis Data
- * Analytics application.
+ * Describes the data format when records are written to the destination in a SQL-based Managed
+ * Service for Apache Flink application.
  *
  * Example:
  * ```

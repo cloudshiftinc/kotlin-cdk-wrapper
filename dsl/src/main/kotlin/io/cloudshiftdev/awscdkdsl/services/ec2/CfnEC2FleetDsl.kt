@@ -71,6 +71,7 @@ import software.constructs.Construct
  * .instanceGenerations(List.of("instanceGenerations"))
  * .localStorage("localStorage")
  * .localStorageTypes(List.of("localStorageTypes"))
+ * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
  * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
  * .max(123)
  * .min(123)
@@ -318,7 +319,7 @@ public class CfnEC2FleetDsl(
 
     /**
      * The key-value pair for tagging the EC2 Fleet request on creation. For more information, see
-     * [Tagging your resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)
+     * [Tag your resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)
      * .
      *
      * If the fleet type is `instant` , specify a resource type of `fleet` to tag the fleet or
@@ -334,7 +335,7 @@ public class CfnEC2FleetDsl(
      *
      * @param tagSpecifications The key-value pair for tagging the EC2 Fleet request on creation.
      *   For more information, see
-     *   [Tagging your resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)
+     *   [Tag your resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)
      *   .
      */
     public fun tagSpecifications(vararg tagSpecifications: Any) {
@@ -343,7 +344,7 @@ public class CfnEC2FleetDsl(
 
     /**
      * The key-value pair for tagging the EC2 Fleet request on creation. For more information, see
-     * [Tagging your resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)
+     * [Tag your resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)
      * .
      *
      * If the fleet type is `instant` , specify a resource type of `fleet` to tag the fleet or
@@ -359,7 +360,7 @@ public class CfnEC2FleetDsl(
      *
      * @param tagSpecifications The key-value pair for tagging the EC2 Fleet request on creation.
      *   For more information, see
-     *   [Tagging your resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)
+     *   [Tag your resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)
      *   .
      */
     public fun tagSpecifications(tagSpecifications: Collection<Any>) {
@@ -368,7 +369,7 @@ public class CfnEC2FleetDsl(
 
     /**
      * The key-value pair for tagging the EC2 Fleet request on creation. For more information, see
-     * [Tagging your resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)
+     * [Tag your resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)
      * .
      *
      * If the fleet type is `instant` , specify a resource type of `fleet` to tag the fleet or
@@ -384,7 +385,7 @@ public class CfnEC2FleetDsl(
      *
      * @param tagSpecifications The key-value pair for tagging the EC2 Fleet request on creation.
      *   For more information, see
-     *   [Tagging your resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)
+     *   [Tag your resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)
      *   .
      */
     public fun tagSpecifications(tagSpecifications: IResolvable) {

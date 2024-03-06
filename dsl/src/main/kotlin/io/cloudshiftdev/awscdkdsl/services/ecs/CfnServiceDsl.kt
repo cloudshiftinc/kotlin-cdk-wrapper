@@ -122,6 +122,18 @@ import software.constructs.Construct
  * .build()))
  * .discoveryName("discoveryName")
  * .ingressPortOverride(123)
+ * .timeout(TimeoutConfigurationProperty.builder()
+ * .idleTimeoutSeconds(123)
+ * .perRequestTimeoutSeconds(123)
+ * .build())
+ * .tls(ServiceConnectTlsConfigurationProperty.builder()
+ * .issuerCertificateAuthority(ServiceConnectTlsCertificateAuthorityProperty.builder()
+ * .awsPcaAuthorityArn("awsPcaAuthorityArn")
+ * .build())
+ * // the properties below are optional
+ * .kmsKey("kmsKey")
+ * .roleArn("roleArn")
+ * .build())
  * .build()))
  * .build())
  * .serviceName("serviceName")
@@ -136,6 +148,31 @@ import software.constructs.Construct
  * .value("value")
  * .build()))
  * .taskDefinition("taskDefinition")
+ * .volumeConfigurations(List.of(ServiceVolumeConfigurationProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .managedEbsVolume(ServiceManagedEBSVolumeConfigurationProperty.builder()
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .encrypted(false)
+ * .filesystemType("filesystemType")
+ * .iops(123)
+ * .kmsKeyId("kmsKeyId")
+ * .sizeInGiB(123)
+ * .snapshotId("snapshotId")
+ * .tagSpecifications(List.of(EBSTagSpecificationProperty.builder()
+ * .resourceType("resourceType")
+ * // the properties below are optional
+ * .propagateTags("propagateTags")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build()))
+ * .throughput(123)
+ * .volumeType("volumeType")
+ * .build())
+ * .build()))
  * .build();
  * ```
  *
@@ -159,6 +196,8 @@ public class CfnServiceDsl(
     private val _serviceRegistries: MutableList<Any> = mutableListOf()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
+
+    private val _volumeConfigurations: MutableList<Any> = mutableListOf()
 
     /**
      * The capacity provider strategy to use for the service.
@@ -868,6 +907,51 @@ public class CfnServiceDsl(
         cdkBuilder.taskDefinition(taskDefinition)
     }
 
+    /**
+     * The configuration for a volume specified in the task definition as a volume that is
+     * configured at launch time.
+     *
+     * Currently, the only supported volume type is an Amazon EBS volume.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-volumeconfigurations)
+     *
+     * @param volumeConfigurations The configuration for a volume specified in the task definition
+     *   as a volume that is configured at launch time.
+     */
+    public fun volumeConfigurations(vararg volumeConfigurations: Any) {
+        _volumeConfigurations.addAll(listOf(*volumeConfigurations))
+    }
+
+    /**
+     * The configuration for a volume specified in the task definition as a volume that is
+     * configured at launch time.
+     *
+     * Currently, the only supported volume type is an Amazon EBS volume.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-volumeconfigurations)
+     *
+     * @param volumeConfigurations The configuration for a volume specified in the task definition
+     *   as a volume that is configured at launch time.
+     */
+    public fun volumeConfigurations(volumeConfigurations: Collection<Any>) {
+        _volumeConfigurations.addAll(volumeConfigurations)
+    }
+
+    /**
+     * The configuration for a volume specified in the task definition as a volume that is
+     * configured at launch time.
+     *
+     * Currently, the only supported volume type is an Amazon EBS volume.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-volumeconfigurations)
+     *
+     * @param volumeConfigurations The configuration for a volume specified in the task definition
+     *   as a volume that is configured at launch time.
+     */
+    public fun volumeConfigurations(volumeConfigurations: IResolvable) {
+        cdkBuilder.volumeConfigurations(volumeConfigurations)
+    }
+
     public fun build(): CfnService {
         if (_capacityProviderStrategy.isNotEmpty())
             cdkBuilder.capacityProviderStrategy(_capacityProviderStrategy)
@@ -877,6 +961,8 @@ public class CfnServiceDsl(
         if (_placementStrategies.isNotEmpty()) cdkBuilder.placementStrategies(_placementStrategies)
         if (_serviceRegistries.isNotEmpty()) cdkBuilder.serviceRegistries(_serviceRegistries)
         if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        if (_volumeConfigurations.isNotEmpty())
+            cdkBuilder.volumeConfigurations(_volumeConfigurations)
         return cdkBuilder.build()
     }
 }

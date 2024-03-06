@@ -78,6 +78,7 @@ import software.amazon.awscdk.services.amplifyuibuilder.CfnComponent
  * .events(Map.of(
  * "eventsKey", ComponentEventProperty.builder()
  * .action("action")
+ * .bindingEvent("bindingEvent")
  * .parameters(ActionParametersProperty.builder()
  * .anchor(ComponentPropertyProperty.builder()
  * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
@@ -383,6 +384,7 @@ import software.amazon.awscdk.services.amplifyuibuilder.CfnComponent
  * .build())
  * .build())
  * .build()))
+ * .sourceId("sourceId")
  * .build();
  * ```
  *
@@ -473,6 +475,14 @@ public class CfnComponentComponentChildPropertyDsl {
      */
     public fun properties(properties: IResolvable) {
         cdkBuilder.properties(properties)
+    }
+
+    /**
+     * @param sourceId The unique ID of the child component in its original source system, such as
+     *   Figma.
+     */
+    public fun sourceId(sourceId: String) {
+        cdkBuilder.sourceId(sourceId)
     }
 
     public fun build(): CfnComponent.ComponentChildProperty {

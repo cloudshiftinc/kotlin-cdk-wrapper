@@ -18,8 +18,6 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opsworks.CfnApp
 
 /**
- * Represents an app's environment variable.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -50,8 +48,7 @@ public class CfnAppEnvironmentVariablePropertyDsl {
     }
 
     /**
-     * @param secure (Optional) Whether the variable's value is returned by the
-     *   [DescribeApps](https://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeApps)
+     * @param secure (Optional) Whether the variable's value is returned by the `DescribeApps`
      *   action. To hide an environment variable's value, set `Secure` to `true` . `DescribeApps`
      *   returns `*****FILTERED*****` instead of the actual value. The default value for `Secure` is
      *   `false` .
@@ -61,8 +58,7 @@ public class CfnAppEnvironmentVariablePropertyDsl {
     }
 
     /**
-     * @param secure (Optional) Whether the variable's value is returned by the
-     *   [DescribeApps](https://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeApps)
+     * @param secure (Optional) Whether the variable's value is returned by the `DescribeApps`
      *   action. To hide an environment variable's value, set `Secure` to `true` . `DescribeApps`
      *   returns `*****FILTERED*****` instead of the actual value. The default value for `Secure` is
      *   `false` .

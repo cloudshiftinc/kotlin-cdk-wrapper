@@ -19,7 +19,10 @@ import kotlin.collections.Collection
 import kotlin.collections.Map
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.codepipeline.Pipeline
+import software.amazon.awscdk.services.codepipeline.PipelineType
 import software.amazon.awscdk.services.codepipeline.StageProps
+import software.amazon.awscdk.services.codepipeline.TriggerProps
+import software.amazon.awscdk.services.codepipeline.Variable
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.s3.IBucket
 import software.constructs.Construct
@@ -53,6 +56,10 @@ public class PipelineDsl(
 
     private val _stages: MutableList<StageProps> = mutableListOf()
 
+    private val _triggers: MutableList<TriggerProps> = mutableListOf()
+
+    private val _variables: MutableList<Variable> = mutableListOf()
+
     /**
      * The S3 bucket used by this Pipeline to store artifacts.
      *
@@ -76,7 +83,8 @@ public class PipelineDsl(
      * keys and save on that cost (the artifact bucket will be encrypted with an AWS-managed key).
      * However, cross-account deployments will no longer be possible.
      *
-     * Default: true
+     * Default: false - false if the feature flag
+     * `CODEPIPELINE_CROSS_ACCOUNT_KEYS_DEFAULT_VALUE_TO_FALSE` is true, true otherwise
      *
      * @param crossAccountKeys Create KMS keys for cross-account deployments.
      */
@@ -123,6 +131,19 @@ public class PipelineDsl(
      */
     public fun pipelineName(pipelineName: String) {
         cdkBuilder.pipelineName(pipelineName)
+    }
+
+    /**
+     * Type of the pipeline.
+     *
+     * Default: - PipelineType.V1
+     *
+     * [Documentation](https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html)
+     *
+     * @param pipelineType Type of the pipeline.
+     */
+    public fun pipelineType(pipelineType: PipelineType) {
+        cdkBuilder.pipelineType(pipelineType)
     }
 
     /**
@@ -186,8 +207,76 @@ public class PipelineDsl(
         _stages.addAll(stages)
     }
 
+    /**
+     * The trigger configuration specifying a type of event, such as Git tags, that starts the
+     * pipeline.
+     *
+     * When a trigger configuration is specified, default change detection for repository and branch
+     * commits is disabled.
+     *
+     * `triggers` can only be used when `pipelineType` is set to `PipelineType.V2`. You can always
+     * add more triggers later by calling `Pipeline#addTrigger`.
+     *
+     * Default: - No triggers
+     *
+     * @param triggers The trigger configuration specifying a type of event, such as Git tags, that
+     *   starts the pipeline.
+     */
+    public fun triggers(triggers: TriggerPropsDsl.() -> Unit) {
+        _triggers.add(TriggerPropsDsl().apply(triggers).build())
+    }
+
+    /**
+     * The trigger configuration specifying a type of event, such as Git tags, that starts the
+     * pipeline.
+     *
+     * When a trigger configuration is specified, default change detection for repository and branch
+     * commits is disabled.
+     *
+     * `triggers` can only be used when `pipelineType` is set to `PipelineType.V2`. You can always
+     * add more triggers later by calling `Pipeline#addTrigger`.
+     *
+     * Default: - No triggers
+     *
+     * @param triggers The trigger configuration specifying a type of event, such as Git tags, that
+     *   starts the pipeline.
+     */
+    public fun triggers(triggers: Collection<TriggerProps>) {
+        _triggers.addAll(triggers)
+    }
+
+    /**
+     * A list that defines the pipeline variables for a pipeline resource.
+     *
+     * `variables` can only be used when `pipelineType` is set to `PipelineType.V2`. You can always
+     * add more variables later by calling `Pipeline#addVariable`.
+     *
+     * Default: - No variables
+     *
+     * @param variables A list that defines the pipeline variables for a pipeline resource.
+     */
+    public fun variables(variables: VariableDsl.() -> Unit) {
+        _variables.add(VariableDsl().apply(variables).build())
+    }
+
+    /**
+     * A list that defines the pipeline variables for a pipeline resource.
+     *
+     * `variables` can only be used when `pipelineType` is set to `PipelineType.V2`. You can always
+     * add more variables later by calling `Pipeline#addVariable`.
+     *
+     * Default: - No variables
+     *
+     * @param variables A list that defines the pipeline variables for a pipeline resource.
+     */
+    public fun variables(variables: Collection<Variable>) {
+        _variables.addAll(variables)
+    }
+
     public fun build(): Pipeline {
         if (_stages.isNotEmpty()) cdkBuilder.stages(_stages)
+        if (_triggers.isNotEmpty()) cdkBuilder.triggers(_triggers)
+        if (_variables.isNotEmpty()) cdkBuilder.variables(_variables)
         return cdkBuilder.build()
     }
 }

@@ -64,7 +64,7 @@ public class CfnClusterServiceConnectDefaultsPropertyDsl {
      * discovery method is the "HTTP" namespace type in the AWS Command Line Interface . Other types
      * of instance discovery aren't used by Service Connect.
      *
-     * If you update the service with an empty string `""` for the namespace name, the cluster
+     * If you update the cluster with an empty string `""` for the namespace name, the cluster
      * configuration for Service Connect is removed. Note that the namespace will remain in AWS
      * Cloud Map and must be deleted separately.
      *

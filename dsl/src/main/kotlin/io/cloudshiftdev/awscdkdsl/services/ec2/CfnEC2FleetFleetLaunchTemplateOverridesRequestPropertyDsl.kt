@@ -56,6 +56,7 @@ import software.amazon.awscdk.services.ec2.CfnEC2Fleet
  * .instanceGenerations(List.of("instanceGenerations"))
  * .localStorage("localStorage")
  * .localStorageTypes(List.of("localStorageTypes"))
+ * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
  * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
  * .max(123)
  * .min(123)

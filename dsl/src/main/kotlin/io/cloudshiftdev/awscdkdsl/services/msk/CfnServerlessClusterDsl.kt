@@ -22,7 +22,7 @@ import software.amazon.awscdk.services.msk.CfnServerlessCluster
 import software.constructs.Construct
 
 /**
- * Resource Type definition for AWS::MSK::ServerlessCluster.
+ * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html.
  *
  * Example:
  * ```
@@ -63,18 +63,22 @@ public class CfnServerlessClusterDsl(
     private val _vpcConfigs: MutableList<Any> = mutableListOf()
 
     /**
+     * Includes all client authentication information.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html#cfn-msk-serverlesscluster-clientauthentication)
      *
-     * @param clientAuthentication
+     * @param clientAuthentication Includes all client authentication information.
      */
     public fun clientAuthentication(clientAuthentication: IResolvable) {
         cdkBuilder.clientAuthentication(clientAuthentication)
     }
 
     /**
+     * Includes all client authentication information.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html#cfn-msk-serverlesscluster-clientauthentication)
      *
-     * @param clientAuthentication
+     * @param clientAuthentication Includes all client authentication information.
      */
     public fun clientAuthentication(
         clientAuthentication: CfnServerlessCluster.ClientAuthenticationProperty

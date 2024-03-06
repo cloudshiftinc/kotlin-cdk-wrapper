@@ -123,6 +123,8 @@ public class CfnStackSetOperationPreferencesPropertyDsl {
 
     /**
      * @param regionOrder The order of the Regions where you want to perform the stack operation.
+     *
+     * `RegionOrder` isn't followed if `AutoDeployment` is enabled.
      */
     public fun regionOrder(vararg regionOrder: String) {
         _regionOrder.addAll(listOf(*regionOrder))
@@ -130,6 +132,8 @@ public class CfnStackSetOperationPreferencesPropertyDsl {
 
     /**
      * @param regionOrder The order of the Regions where you want to perform the stack operation.
+     *
+     * `RegionOrder` isn't followed if `AutoDeployment` is enabled.
      */
     public fun regionOrder(regionOrder: Collection<String>) {
         _regionOrder.addAll(regionOrder)

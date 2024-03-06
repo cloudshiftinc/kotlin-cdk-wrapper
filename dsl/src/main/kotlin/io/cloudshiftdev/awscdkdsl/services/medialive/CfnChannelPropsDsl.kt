@@ -134,12 +134,12 @@ public class CfnChannelPropsDsl {
         cdkBuilder.logLevel(logLevel)
     }
 
-    /** @param maintenance the value to be set. */
+    /** @param maintenance Maintenance settings for this channel. */
     public fun maintenance(maintenance: IResolvable) {
         cdkBuilder.maintenance(maintenance)
     }
 
-    /** @param maintenance the value to be set. */
+    /** @param maintenance Maintenance settings for this channel. */
     public fun maintenance(maintenance: CfnChannel.MaintenanceCreateSettingsProperty) {
         cdkBuilder.maintenance(maintenance)
     }

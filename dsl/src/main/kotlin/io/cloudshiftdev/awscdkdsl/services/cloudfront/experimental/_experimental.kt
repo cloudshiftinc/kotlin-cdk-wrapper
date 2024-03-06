@@ -34,7 +34,7 @@ public object experimental {
      * // A Lambda&#64;Edge function added to default behavior of a Distribution
      * // and triggered on every request
      * EdgeFunction myFunc = EdgeFunction.Builder.create(this, "MyFunction")
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .handler("index.handler")
      * .code(Code.fromAsset(join(__dirname, "lambda-handler")))
      * .build();
@@ -68,7 +68,7 @@ public object experimental {
      * // A Lambda&#64;Edge function added to default behavior of a Distribution
      * // and triggered on every request
      * EdgeFunction myFunc = EdgeFunction.Builder.create(this, "MyFunction")
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .handler("index.handler")
      * .code(Code.fromAsset(join(__dirname, "lambda-handler")))
      * .build();

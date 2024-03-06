@@ -21,7 +21,7 @@ import software.amazon.awscdk.services.cloudfront.CfnDistribution
  * failover criteria that you specify.
  *
  * You create an origin group to support origin failover in CloudFront. When you create or update a
- * distribution, you can specifiy the origin group instead of a single origin, and CloudFront will
+ * distribution, you can specify the origin group instead of a single origin, and CloudFront will
  * failover from the primary origin to the second origin under the failover conditions that you've
  * chosen.
  *

@@ -22,6 +22,7 @@ import kotlin.collections.Map
 import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.iot.CfnSecurityProfile
 import software.amazon.awscdk.services.iot.CfnSecurityProfileProps
 
 /**
@@ -36,6 +37,7 @@ import software.amazon.awscdk.services.iot.CfnSecurityProfileProps
  * .additionalMetricsToRetainV2(List.of(MetricToRetainProperty.builder()
  * .metric("metric")
  * // the properties below are optional
+ * .exportMetric(false)
  * .metricDimension(MetricDimensionProperty.builder()
  * .dimensionName("dimensionName")
  * // the properties below are optional
@@ -70,6 +72,7 @@ import software.amazon.awscdk.services.iot.CfnSecurityProfileProps
  * .strings(List.of("strings"))
  * .build())
  * .build())
+ * .exportMetric(false)
  * .metric("metric")
  * .metricDimension(MetricDimensionProperty.builder()
  * .dimensionName("dimensionName")
@@ -78,6 +81,10 @@ import software.amazon.awscdk.services.iot.CfnSecurityProfileProps
  * .build())
  * .suppressAlerts(false)
  * .build()))
+ * .metricsExportConfig(MetricsExportConfigProperty.builder()
+ * .mqttTopic("mqttTopic")
+ * .roleArn("roleArn")
+ * .build())
  * .securityProfileDescription("securityProfileDescription")
  * .securityProfileName("securityProfileName")
  * .tags(List.of(CfnTag.builder()
@@ -180,6 +187,22 @@ public class CfnSecurityProfilePropsDsl {
      */
     public fun behaviors(behaviors: IResolvable) {
         cdkBuilder.behaviors(behaviors)
+    }
+
+    /**
+     * @param metricsExportConfig Specifies the MQTT topic and role ARN required for metric export.
+     */
+    public fun metricsExportConfig(metricsExportConfig: IResolvable) {
+        cdkBuilder.metricsExportConfig(metricsExportConfig)
+    }
+
+    /**
+     * @param metricsExportConfig Specifies the MQTT topic and role ARN required for metric export.
+     */
+    public fun metricsExportConfig(
+        metricsExportConfig: CfnSecurityProfile.MetricsExportConfigProperty
+    ) {
+        cdkBuilder.metricsExportConfig(metricsExportConfig)
     }
 
     /** @param securityProfileDescription A description of the security profile. */

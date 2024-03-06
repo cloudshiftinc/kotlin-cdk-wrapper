@@ -271,7 +271,8 @@ public object config {
     }
 
     /**
-     * Compliance details of the Config rule.
+     * Indicates whether an AWS resource or AWS Config rule is compliant and provides the number of
+     * contributors that affect the compliance.
      *
      * Example:
      * ```
@@ -294,10 +295,9 @@ public object config {
     }
 
     /**
-     * Provides the runtime system, policy definition, and whether debug logging enabled.
-     *
-     * You can specify the following CustomPolicyDetails parameter values only for AWS Config Custom
-     * Policy rules.
+     * Provides the CustomPolicyDetails, the rule owner ( `AWS` for managed rules, `CUSTOM_POLICY`
+     * for Custom Policy rules, and `CUSTOM_LAMBDA` for Custom Lambda rules), the rule identifier,
+     * and the events that cause the evaluation of your AWS resources.
      *
      * Example:
      * ```
@@ -322,7 +322,9 @@ public object config {
     }
 
     /**
-     * Evaluation mode for the AWS Config rule.
+     * The configuration object for AWS Config rule evaluation mode.
+     *
+     * The supported valid values are Detective or Proactive.
      *
      * Example:
      * ```
@@ -685,6 +687,16 @@ public object config {
      * .build())
      * .resourceTypes(List.of("resourceTypes"))
      * .build())
+     * .recordingMode(RecordingModeProperty.builder()
+     * .recordingFrequency("recordingFrequency")
+     * // the properties below are optional
+     * .recordingModeOverrides(List.of(RecordingModeOverrideProperty.builder()
+     * .recordingFrequency("recordingFrequency")
+     * .resourceTypes(List.of("resourceTypes"))
+     * // the properties below are optional
+     * .description("description")
+     * .build()))
+     * .build())
      * .build();
      * ```
      *
@@ -701,14 +713,42 @@ public object config {
     }
 
     /**
-     * Specifies whether the configuration recorder excludes resource types from being recorded.
+     * Specifies whether the configuration recorder excludes certain resource types from being
+     * recorded.
      *
-     * Use the `resourceTypes` field to enter a comma-separated list of resource types to exclude as
-     * exemptions.
+     * Use the `ResourceTypes` field to enter a comma-separated list of resource types you want to
+     * exclude from recording.
+     *
+     * By default, when AWS Config adds support for a new resource type in the Region where you set
+     * up the configuration recorder, including global resource types, AWS Config starts recording
+     * resources of that type automatically.
+     *
+     * *How to use the exclusion recording strategy*
      *
      * To use this option, you must set the `useOnly` field of
-     * [AWS::Config::ConfigurationRecorder RecordingStrategy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordingstrategy.html)
+     * [RecordingStrategy](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingStrategy.html)
      * to `EXCLUSION_BY_RESOURCE_TYPES` .
+     *
+     * AWS Config will then record configuration changes for all supported resource types, except
+     * the resource types that you specify to exclude from being recorded.
+     *
+     * *Global resource types and the exclusion recording strategy*
+     *
+     * Unless specifically listed as exclusions, `AWS::RDS::GlobalCluster` will be recorded
+     * automatically in all supported AWS Config Regions were the configuration recorder is enabled.
+     *
+     * IAM users, groups, roles, and customer managed policies will be recorded in the Region where
+     * you set up the configuration recorder if that is a Region where AWS Config was available
+     * before February 2022. You cannot be record the global IAM resouce types in Regions supported
+     * by AWS Config after February 2022. This list where you cannot record the global IAM resource
+     * types includes the following Regions:
+     * * Asia Pacific (Hyderabad)
+     * * Asia Pacific (Melbourne)
+     * * Canada West (Calgary)
+     * * Europe (Spain)
+     * * Europe (Zurich)
+     * * Israel (Tel Aviv)
+     * * Middle East (UAE)
      *
      * Example:
      * ```
@@ -755,6 +795,16 @@ public object config {
      * .build())
      * .resourceTypes(List.of("resourceTypes"))
      * .build())
+     * .recordingMode(RecordingModeProperty.builder()
+     * .recordingFrequency("recordingFrequency")
+     * // the properties below are optional
+     * .recordingModeOverrides(List.of(RecordingModeOverrideProperty.builder()
+     * .recordingFrequency("recordingFrequency")
+     * .resourceTypes(List.of("resourceTypes"))
+     * // the properties below are optional
+     * .description("description")
+     * .build()))
+     * .build())
      * .build();
      * ```
      *
@@ -771,40 +821,33 @@ public object config {
     /**
      * Specifies which resource types AWS Config records for configuration changes.
      *
-     * In the recording group, you specify whether you want to record all supported resource types
-     * or to include or exclude specific types of resources.
+     * By default, AWS Config records configuration changes for all current and future supported
+     * resource types in the AWS Region where you have enabled AWS Config , excluding the global IAM
+     * resource types: IAM users, groups, roles, and customer managed policies.
      *
-     * By default, AWS Config records configuration changes for all supported types of *Regional
-     * resources* that AWS Config discovers in the AWS Region in which it is running. Regional
-     * resources are tied to a Region and can be used only in that Region. Examples of Regional
-     * resources are Amazon EC2 instances and Amazon EBS volumes.
-     *
-     * You can also have AWS Config record supported types of *globally recorded resources* .
-     * Globally recorded resource types are not tied to a specific Region and can be used in all
-     * Regions. The globally recorded resource types that AWS Config supports are IAM users, groups,
-     * roles, and customer managed policies. These resource types are recorded in all enabled AWS
-     * Config regions where AWS Config was available before February 2022 (which excludes Asia
-     * Pacific (Hyderabad), Asia Pacific (Melbourne), Europe (Spain), Europe (Zurich), Israel (Tel
-     * Aviv), and Middle East (UAE)). AWS Config also supports some global resources types for
-     * Amazon Elastic Container Registry Public , AWS Global Accelerator , and Amazon Route 53 ;
-     * however, these resource types are not globally recorded in all enabled AWS Config regions.
-     *
-     * Global resource types onboarded to AWS Config recording after February 2022 will be recorded
-     * only in the service's home Region for the commercial partition and AWS GovCloud (US-West) for
-     * the AWS GovCloud (US) partition. You can view the Configuration Items for these new global
-     * resource types only in their home Region and AWS GovCloud (US-West).
-     *
-     * If you don't want AWS Config to record all resources, you can specify which types of
-     * resources AWS Config records with the `resourceTypes` parameter.
-     *
-     * For a list of supported resource types, see
+     * In the recording group, you specify whether you want to record all supported current and
+     * future supported resource types or to include or exclude specific resources types. For a list
+     * of supported resource types, see
      * [Supported Resource Types](https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources)
      * in the *AWS Config developer guide* .
      *
-     * For more information and a table of the Home Regions for Global Resource Types Onboarded
-     * after February 2022, see
-     * [Selecting Which Resources AWS Config Records](https://docs.aws.amazon.com/config/latest/developerguide/select-resources.html)
-     * in the *AWS Config developer guide* .
+     * If you don't want AWS Config to record all current and future supported resource types
+     * (excluding the global IAM resource types), use one of the following recording strategies:
+     * * *Record all current and future resource types with exclusions* (
+     *   `EXCLUSION_BY_RESOURCE_TYPES` ), or
+     * * *Record specific resource types* ( `INCLUSION_BY_RESOURCE_TYPES` ).
+     *
+     * If you use the recording strategy to *Record all current and future resource types* (
+     * `ALL_SUPPORTED_RESOURCE_TYPES` ), you can use the flag `IncludeGlobalResourceTypes` to
+     * include the global IAM resource types in your recording.
+     *
+     * *Aurora global clusters are recorded in all enabled Regions*
+     *
+     * The `AWS::RDS::GlobalCluster` resource type will be recorded in all supported AWS Config
+     * Regions where the configuration recorder is enabled.
+     *
+     * If you do not want to record `AWS::RDS::GlobalCluster` in all enabled Regions, use the
+     * `EXCLUSION_BY_RESOURCE_TYPES` or `INCLUSION_BY_RESOURCE_TYPES` recording strategy.
      *
      * Example:
      * ```
@@ -830,6 +873,76 @@ public object config {
         block: CfnConfigurationRecorderRecordingGroupPropertyDsl.() -> Unit = {}
     ): CfnConfigurationRecorder.RecordingGroupProperty {
         val builder = CfnConfigurationRecorderRecordingGroupPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * An object for you to specify your overrides for the recording mode.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.config.*;
+     * RecordingModeOverrideProperty recordingModeOverrideProperty =
+     * RecordingModeOverrideProperty.builder()
+     * .recordingFrequency("recordingFrequency")
+     * .resourceTypes(List.of("resourceTypes"))
+     * // the properties below are optional
+     * .description("description")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordingmodeoverride.html)
+     */
+    public inline fun cfnConfigurationRecorderRecordingModeOverrideProperty(
+        block: CfnConfigurationRecorderRecordingModeOverridePropertyDsl.() -> Unit = {}
+    ): CfnConfigurationRecorder.RecordingModeOverrideProperty {
+        val builder = CfnConfigurationRecorderRecordingModeOverridePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies the default recording frequency that AWS Config uses to record configuration
+     * changes.
+     *
+     * AWS Config supports *Continuous recording* and *Daily recording* .
+     * * Continuous recording allows you to record configuration changes continuously whenever a
+     *   change occurs.
+     * * Daily recording allows you to receive a configuration item (CI) representing the most
+     *   recent state of your resources over the last 24-hour period, only if it’s different from
+     *   the previous CI recorded.
+     *
+     * AWS Firewall Manager depends on continuous recording to monitor your resources. If you are
+     * using Firewall Manager, it is recommended that you set the recording frequency to Continuous.
+     *
+     * You can also override the recording frequency for specific resource types.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.config.*;
+     * RecordingModeProperty recordingModeProperty = RecordingModeProperty.builder()
+     * .recordingFrequency("recordingFrequency")
+     * // the properties below are optional
+     * .recordingModeOverrides(List.of(RecordingModeOverrideProperty.builder()
+     * .recordingFrequency("recordingFrequency")
+     * .resourceTypes(List.of("resourceTypes"))
+     * // the properties below are optional
+     * .description("description")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordingmode.html)
+     */
+    public inline fun cfnConfigurationRecorderRecordingModeProperty(
+        block: CfnConfigurationRecorderRecordingModePropertyDsl.() -> Unit = {}
+    ): CfnConfigurationRecorder.RecordingModeProperty {
+        val builder = CfnConfigurationRecorderRecordingModePropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -1269,6 +1382,12 @@ public object config {
     }
 
     /**
+     * An object that specifies metadata for your organization's AWS Config Custom Policy rule.
+     *
+     * The metadata includes the runtime system in use, which accounts have debug logging enabled,
+     * and other custom rule metadata, such as resource type, resource ID of AWS resource, and
+     * organization trigger types that initiate AWS Config to evaluate AWS resources against a rule.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -1303,9 +1422,9 @@ public object config {
     }
 
     /**
-     * organization custom rule metadata such as resource type, resource ID of AWS resource, Lambda
-     * function ARN, and organization trigger types that trigger AWS Config to evaluate your AWS
-     * resources against a rule.
+     * An object that specifies organization custom rule metadata such as resource type, resource ID
+     * of AWS resource, Lambda function ARN, and organization trigger types that trigger AWS Config
+     * to evaluate your AWS resources against a rule.
      *
      * It also provides the frequency with which you want AWS Config to run evaluations for the rule
      * if the trigger type is periodic.
@@ -1341,8 +1460,8 @@ public object config {
     }
 
     /**
-     * organization managed rule metadata such as resource type and ID of AWS resource along with
-     * the rule identifier.
+     * An object that specifies organization managed rule metadata such as resource type and ID of
+     * AWS resource along with the rule identifier.
      *
      * It also provides the frequency with which you want AWS Config to run evaluations for the rule
      * if the trigger type is periodic.
@@ -1687,8 +1806,6 @@ public object config {
     }
 
     /**
-     * The dynamic value of the resource.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -1734,8 +1851,6 @@ public object config {
     }
 
     /**
-     * The static value of the resource.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.

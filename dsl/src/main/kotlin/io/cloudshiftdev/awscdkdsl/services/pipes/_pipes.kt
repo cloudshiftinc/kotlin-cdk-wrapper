@@ -19,10 +19,16 @@ import software.constructs.Construct
 
 public object pipes {
     /**
-     * Create a pipe.
+     * Specifies a pipe.
      *
      * Amazon EventBridge Pipes connect event sources to targets and reduces the need for
      * specialized knowledge and integration code.
+     *
+     * As an aid to help you jumpstart developing CloudFormation templates, the EventBridge console
+     * enables you to create templates from the existing pipes in your account. For more
+     * information, see
+     * [Generate an CloudFormation template from EventBridge Pipes](https://docs.aws.amazon.com/eventbridge/latest/userguide/pipes-generate-template.html)
+     * in the *Amazon EventBridge User Guide* .
      *
      * Example:
      * ```
@@ -46,6 +52,22 @@ public object pipes {
      * "queryStringParametersKey", "queryStringParameters"))
      * .build())
      * .inputTemplate("inputTemplate")
+     * .build())
+     * .logConfiguration(PipeLogConfigurationProperty.builder()
+     * .cloudwatchLogsLogDestination(CloudwatchLogsLogDestinationProperty.builder()
+     * .logGroupArn("logGroupArn")
+     * .build())
+     * .firehoseLogDestination(FirehoseLogDestinationProperty.builder()
+     * .deliveryStreamArn("deliveryStreamArn")
+     * .build())
+     * .includeExecutionData(List.of("includeExecutionData"))
+     * .level("level")
+     * .s3LogDestination(S3LogDestinationProperty.builder()
+     * .bucketName("bucketName")
+     * .bucketOwner("bucketOwner")
+     * .outputFormat("outputFormat")
+     * .prefix("prefix")
+     * .build())
      * .build())
      * .name("name")
      * .sourceParameters(PipeSourceParametersProperty.builder()
@@ -532,6 +554,34 @@ public object pipes {
     }
 
     /**
+     * Represents the Amazon CloudWatch Logs logging configuration settings for the pipe.
+     *
+     * Example:
+     * ```
+     * Queue sourceQueue;
+     * Queue targetQueue;
+     * Filter sourceFilter = new Filter(List.of(FilterPattern.fromObject(Map.of(
+     * "body", Map.of(
+     * // only forward events with customerType B2B or B2C
+     * "customerType", List.of("B2B", "B2C"))))));
+     * Pipe pipe = Pipe.Builder.create(this, "Pipe")
+     * .source(new SqsSource(sourceQueue))
+     * .target(new SqsTarget(targetQueue))
+     * .filter(sourceFilter)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-cloudwatchlogslogdestination.html)
+     */
+    public inline fun cfnPipeCloudwatchLogsLogDestinationProperty(
+        block: CfnPipeCloudwatchLogsLogDestinationPropertyDsl.() -> Unit = {}
+    ): CfnPipe.CloudwatchLogsLogDestinationProperty {
+        val builder = CfnPipeCloudwatchLogsLogDestinationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * A `DeadLetterConfig` object that contains information about a dead-letter queue
      * configuration.
      *
@@ -876,6 +926,30 @@ public object pipes {
     }
 
     /**
+     * Represents the Amazon Data Firehose logging configuration settings for the pipe.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.pipes.*;
+     * FirehoseLogDestinationProperty firehoseLogDestinationProperty =
+     * FirehoseLogDestinationProperty.builder()
+     * .deliveryStreamArn("deliveryStreamArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-firehoselogdestination.html)
+     */
+    public inline fun cfnPipeFirehoseLogDestinationProperty(
+        block: CfnPipeFirehoseLogDestinationPropertyDsl.() -> Unit = {}
+    ): CfnPipe.FirehoseLogDestinationProperty {
+        val builder = CfnPipeFirehoseLogDestinationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The AWS Secrets Manager secret that stores your broker credentials.
      *
      * Example:
@@ -990,19 +1064,16 @@ public object pipes {
      *
      * Example:
      * ```
-     * // The code below shows an example of how to instantiate this type.
-     * // The values are placeholders you should change.
-     * import software.amazon.awscdk.services.pipes.*;
-     * PipeEnrichmentParametersProperty pipeEnrichmentParametersProperty =
-     * PipeEnrichmentParametersProperty.builder()
-     * .httpParameters(PipeEnrichmentHttpParametersProperty.builder()
-     * .headerParameters(Map.of(
-     * "headerParametersKey", "headerParameters"))
-     * .pathParameterValues(List.of("pathParameterValues"))
-     * .queryStringParameters(Map.of(
-     * "queryStringParametersKey", "queryStringParameters"))
-     * .build())
-     * .inputTemplate("inputTemplate")
+     * Queue sourceQueue;
+     * Queue targetQueue;
+     * LogGroup loggroup;
+     * Pipe pipe = Pipe.Builder.create(this, "Pipe")
+     * .source(new SqsSource(sourceQueue))
+     * .target(new SqsTarget(targetQueue))
+     * .logLevel(LogLevel.TRACE)
+     * .logIncludeExecutionData(List.of(IncludeExecutionData.ALL))
+     * .logDestinations(List.of(
+     * new CloudwatchDestination(loggroup)))
      * .build();
      * ```
      *
@@ -1012,6 +1083,43 @@ public object pipes {
         block: CfnPipePipeEnrichmentParametersPropertyDsl.() -> Unit = {}
     ): CfnPipe.PipeEnrichmentParametersProperty {
         val builder = CfnPipePipeEnrichmentParametersPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Represents the configuration settings for the logs to which this pipe should report events.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.pipes.*;
+     * PipeLogConfigurationProperty pipeLogConfigurationProperty =
+     * PipeLogConfigurationProperty.builder()
+     * .cloudwatchLogsLogDestination(CloudwatchLogsLogDestinationProperty.builder()
+     * .logGroupArn("logGroupArn")
+     * .build())
+     * .firehoseLogDestination(FirehoseLogDestinationProperty.builder()
+     * .deliveryStreamArn("deliveryStreamArn")
+     * .build())
+     * .includeExecutionData(List.of("includeExecutionData"))
+     * .level("level")
+     * .s3LogDestination(S3LogDestinationProperty.builder()
+     * .bucketName("bucketName")
+     * .bucketOwner("bucketOwner")
+     * .outputFormat("outputFormat")
+     * .prefix("prefix")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipelogconfiguration.html)
+     */
+    public inline fun cfnPipePipeLogConfigurationProperty(
+        block: CfnPipePipeLogConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnPipe.PipeLogConfigurationProperty {
+        val builder = CfnPipePipeLogConfigurationPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -1291,7 +1399,7 @@ public object pipes {
     }
 
     /**
-     * The parameters for using a self-managed Apache Kafka stream as a source.
+     * The parameters for using a stream as a source.
      *
      * Example:
      * ```
@@ -1637,157 +1745,15 @@ public object pipes {
      *
      * Example:
      * ```
-     * // The code below shows an example of how to instantiate this type.
-     * // The values are placeholders you should change.
-     * import software.amazon.awscdk.services.pipes.*;
-     * PipeTargetParametersProperty pipeTargetParametersProperty =
-     * PipeTargetParametersProperty.builder()
-     * .batchJobParameters(PipeTargetBatchJobParametersProperty.builder()
-     * .jobDefinition("jobDefinition")
-     * .jobName("jobName")
-     * // the properties below are optional
-     * .arrayProperties(BatchArrayPropertiesProperty.builder()
-     * .size(123)
-     * .build())
-     * .containerOverrides(BatchContainerOverridesProperty.builder()
-     * .command(List.of("command"))
-     * .environment(List.of(BatchEnvironmentVariableProperty.builder()
-     * .name("name")
-     * .value("value")
-     * .build()))
-     * .instanceType("instanceType")
-     * .resourceRequirements(List.of(BatchResourceRequirementProperty.builder()
-     * .type("type")
-     * .value("value")
-     * .build()))
-     * .build())
-     * .dependsOn(List.of(BatchJobDependencyProperty.builder()
-     * .jobId("jobId")
-     * .type("type")
-     * .build()))
-     * .parameters(Map.of(
-     * "parametersKey", "parameters"))
-     * .retryStrategy(BatchRetryStrategyProperty.builder()
-     * .attempts(123)
-     * .build())
-     * .build())
-     * .cloudWatchLogsParameters(PipeTargetCloudWatchLogsParametersProperty.builder()
-     * .logStreamName("logStreamName")
-     * .timestamp("timestamp")
-     * .build())
-     * .ecsTaskParameters(PipeTargetEcsTaskParametersProperty.builder()
-     * .taskDefinitionArn("taskDefinitionArn")
-     * // the properties below are optional
-     * .capacityProviderStrategy(List.of(CapacityProviderStrategyItemProperty.builder()
-     * .capacityProvider("capacityProvider")
-     * // the properties below are optional
-     * .base(123)
-     * .weight(123)
-     * .build()))
-     * .enableEcsManagedTags(false)
-     * .enableExecuteCommand(false)
-     * .group("group")
-     * .launchType("launchType")
-     * .networkConfiguration(NetworkConfigurationProperty.builder()
-     * .awsvpcConfiguration(AwsVpcConfigurationProperty.builder()
-     * .subnets(List.of("subnets"))
-     * // the properties below are optional
-     * .assignPublicIp("assignPublicIp")
-     * .securityGroups(List.of("securityGroups"))
-     * .build())
-     * .build())
-     * .overrides(EcsTaskOverrideProperty.builder()
-     * .containerOverrides(List.of(EcsContainerOverrideProperty.builder()
-     * .command(List.of("command"))
-     * .cpu(123)
-     * .environment(List.of(EcsEnvironmentVariableProperty.builder()
-     * .name("name")
-     * .value("value")
-     * .build()))
-     * .environmentFiles(List.of(EcsEnvironmentFileProperty.builder()
-     * .type("type")
-     * .value("value")
-     * .build()))
-     * .memory(123)
-     * .memoryReservation(123)
-     * .name("name")
-     * .resourceRequirements(List.of(EcsResourceRequirementProperty.builder()
-     * .type("type")
-     * .value("value")
-     * .build()))
-     * .build()))
-     * .cpu("cpu")
-     * .ephemeralStorage(EcsEphemeralStorageProperty.builder()
-     * .sizeInGiB(123)
-     * .build())
-     * .executionRoleArn("executionRoleArn")
-     * .inferenceAcceleratorOverrides(List.of(EcsInferenceAcceleratorOverrideProperty.builder()
-     * .deviceName("deviceName")
-     * .deviceType("deviceType")
-     * .build()))
-     * .memory("memory")
-     * .taskRoleArn("taskRoleArn")
-     * .build())
-     * .placementConstraints(List.of(PlacementConstraintProperty.builder()
-     * .expression("expression")
-     * .type("type")
-     * .build()))
-     * .placementStrategy(List.of(PlacementStrategyProperty.builder()
-     * .field("field")
-     * .type("type")
-     * .build()))
-     * .platformVersion("platformVersion")
-     * .propagateTags("propagateTags")
-     * .referenceId("referenceId")
-     * .tags(List.of(CfnTag.builder()
-     * .key("key")
-     * .value("value")
-     * .build()))
-     * .taskCount(123)
-     * .build())
-     * .eventBridgeEventBusParameters(PipeTargetEventBridgeEventBusParametersProperty.builder()
-     * .detailType("detailType")
-     * .endpointId("endpointId")
-     * .resources(List.of("resources"))
-     * .source("source")
-     * .time("time")
-     * .build())
-     * .httpParameters(PipeTargetHttpParametersProperty.builder()
-     * .headerParameters(Map.of(
-     * "headerParametersKey", "headerParameters"))
-     * .pathParameterValues(List.of("pathParameterValues"))
-     * .queryStringParameters(Map.of(
-     * "queryStringParametersKey", "queryStringParameters"))
-     * .build())
-     * .inputTemplate("inputTemplate")
-     * .kinesisStreamParameters(PipeTargetKinesisStreamParametersProperty.builder()
-     * .partitionKey("partitionKey")
-     * .build())
-     * .lambdaFunctionParameters(PipeTargetLambdaFunctionParametersProperty.builder()
-     * .invocationType("invocationType")
-     * .build())
-     * .redshiftDataParameters(PipeTargetRedshiftDataParametersProperty.builder()
-     * .database("database")
-     * .sqls(List.of("sqls"))
-     * // the properties below are optional
-     * .dbUser("dbUser")
-     * .secretManagerArn("secretManagerArn")
-     * .statementName("statementName")
-     * .withEvent(false)
-     * .build())
-     * .sageMakerPipelineParameters(PipeTargetSageMakerPipelineParametersProperty.builder()
-     * .pipelineParameterList(List.of(SageMakerPipelineParameterProperty.builder()
-     * .name("name")
-     * .value("value")
-     * .build()))
-     * .build())
-     * .sqsQueueParameters(PipeTargetSqsQueueParametersProperty.builder()
-     * .messageDeduplicationId("messageDeduplicationId")
-     * .messageGroupId("messageGroupId")
-     * .build())
-     * .stepFunctionStateMachineParameters(PipeTargetStateMachineParametersProperty.builder()
-     * .invocationType("invocationType")
-     * .build())
+     * Queue sourceQueue;
+     * Queue targetQueue;
+     * SqsSource pipeSource = SqsSource.Builder.create(sourceQueue)
+     * .batchSize(10)
+     * .maximumBatchingWindow(Duration.seconds(10))
+     * .build();
+     * Pipe pipe = Pipe.Builder.create(this, "Pipe")
+     * .source(pipeSource)
+     * .target(new SomeTarget(targetQueue))
      * .build();
      * ```
      *
@@ -1989,6 +1955,22 @@ public object pipes {
      * "queryStringParametersKey", "queryStringParameters"))
      * .build())
      * .inputTemplate("inputTemplate")
+     * .build())
+     * .logConfiguration(PipeLogConfigurationProperty.builder()
+     * .cloudwatchLogsLogDestination(CloudwatchLogsLogDestinationProperty.builder()
+     * .logGroupArn("logGroupArn")
+     * .build())
+     * .firehoseLogDestination(FirehoseLogDestinationProperty.builder()
+     * .deliveryStreamArn("deliveryStreamArn")
+     * .build())
+     * .includeExecutionData(List.of("includeExecutionData"))
+     * .level("level")
+     * .s3LogDestination(S3LogDestinationProperty.builder()
+     * .bucketName("bucketName")
+     * .bucketOwner("bucketOwner")
+     * .outputFormat("outputFormat")
+     * .prefix("prefix")
+     * .build())
      * .build())
      * .name("name")
      * .sourceParameters(PipeSourceParametersProperty.builder()
@@ -2237,6 +2219,32 @@ public object pipes {
      */
     public inline fun cfnPipeProps(block: CfnPipePropsDsl.() -> Unit = {}): CfnPipeProps {
         val builder = CfnPipePropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Represents the Amazon S3 logging configuration settings for the pipe.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.pipes.*;
+     * S3LogDestinationProperty s3LogDestinationProperty = S3LogDestinationProperty.builder()
+     * .bucketName("bucketName")
+     * .bucketOwner("bucketOwner")
+     * .outputFormat("outputFormat")
+     * .prefix("prefix")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-s3logdestination.html)
+     */
+    public inline fun cfnPipeS3LogDestinationProperty(
+        block: CfnPipeS3LogDestinationPropertyDsl.() -> Unit = {}
+    ): CfnPipe.S3LogDestinationProperty {
+        val builder = CfnPipeS3LogDestinationPropertyDsl()
         builder.apply(block)
         return builder.build()
     }

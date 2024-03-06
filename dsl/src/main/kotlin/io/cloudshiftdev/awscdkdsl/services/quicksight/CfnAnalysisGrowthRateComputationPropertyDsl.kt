@@ -28,6 +28,9 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * GrowthRateComputationProperty growthRateComputationProperty =
  * GrowthRateComputationProperty.builder()
  * .computationId("computationId")
+ * // the properties below are optional
+ * .name("name")
+ * .periodSize(123)
  * .time(DimensionFieldProperty.builder()
  * .categoricalDimensionField(CategoricalDimensionFieldProperty.builder()
  * .column(ColumnIdentifierProperty.builder()
@@ -266,9 +269,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * .hierarchyId("hierarchyId")
  * .build())
  * .build())
- * // the properties below are optional
- * .name("name")
- * .periodSize(123)
  * .value(MeasureFieldProperty.builder()
  * .calculatedMeasureField(CalculatedMeasureFieldProperty.builder()
  * .expression("expression")

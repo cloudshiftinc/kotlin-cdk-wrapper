@@ -63,6 +63,7 @@ import software.amazon.awscdk.services.stepfunctions.tasks.HttpMethod
  * .resultPath("resultPath")
  * .resultSelector(Map.of(
  * "resultSelectorKey", resultSelector))
+ * .stateName("stateName")
  * .taskTimeout(timeout)
  * .timeout(Duration.minutes(30))
  * .build();
@@ -139,7 +140,9 @@ public class CallApiGatewayEndpointBasePropsDsl {
 
     /**
      * @param integrationPattern AWS Step Functions integrates with services directly in the Amazon
-     *   States Language. You can control these AWS services using service integration patterns
+     *   States Language. You can control these AWS services using service integration patterns.
+     *
+     * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      */
     public fun integrationPattern(integrationPattern: IntegrationPattern) {
         cdkBuilder.integrationPattern(integrationPattern)
@@ -196,6 +199,11 @@ public class CallApiGatewayEndpointBasePropsDsl {
      */
     public fun resultSelector(resultSelector: Map<String, Any>) {
         cdkBuilder.resultSelector(resultSelector)
+    }
+
+    /** @param stateName Optional name for this state. */
+    public fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
     }
 
     /**

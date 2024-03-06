@@ -109,18 +109,28 @@ public class CfnIndexDsl(
     private val _userTokenConfigurations: MutableList<Any> = mutableListOf()
 
     /**
+     * Specifies additional capacity units configured for your Enterprise Edition index.
+     *
+     * You can add and remove capacity units to fit your usage requirements.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendra-index.html#cfn-kendra-index-capacityunits)
      *
-     * @param capacityUnits
+     * @param capacityUnits Specifies additional capacity units configured for your Enterprise
+     *   Edition index.
      */
     public fun capacityUnits(capacityUnits: IResolvable) {
         cdkBuilder.capacityUnits(capacityUnits)
     }
 
     /**
+     * Specifies additional capacity units configured for your Enterprise Edition index.
+     *
+     * You can add and remove capacity units to fit your usage requirements.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendra-index.html#cfn-kendra-index-capacityunits)
      *
-     * @param capacityUnits
+     * @param capacityUnits Specifies additional capacity units configured for your Enterprise
+     *   Edition index.
      */
     public fun capacityUnits(capacityUnits: CfnIndex.CapacityUnitsConfigurationProperty) {
         cdkBuilder.capacityUnits(capacityUnits)

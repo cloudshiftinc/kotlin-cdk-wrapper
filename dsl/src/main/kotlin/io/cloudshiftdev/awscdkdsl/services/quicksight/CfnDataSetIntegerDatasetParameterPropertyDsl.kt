@@ -17,7 +17,7 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
 /**
- * A parameter created in the dataset of integer data type.</p>.
+ * An integer parameter that is created in the dataset.
  *
  * Example:
  * ```
@@ -44,16 +44,16 @@ public class CfnDataSetIntegerDatasetParameterPropertyDsl {
         CfnDataSet.IntegerDatasetParameterProperty.builder()
 
     /**
-     * @param defaultValues List of default values defined for a given integer dataset parameter
-     *   type. Currently only static values are supported.</p>
+     * @param defaultValues A list of default values for a given integer parameter. This structure
+     *   only accepts static values.
      */
     public fun defaultValues(defaultValues: IResolvable) {
         cdkBuilder.defaultValues(defaultValues)
     }
 
     /**
-     * @param defaultValues List of default values defined for a given integer dataset parameter
-     *   type. Currently only static values are supported.</p>
+     * @param defaultValues A list of default values for a given integer parameter. This structure
+     *   only accepts static values.
      */
     public fun defaultValues(
         defaultValues: CfnDataSet.IntegerDatasetParameterDefaultValuesProperty
@@ -61,19 +61,19 @@ public class CfnDataSetIntegerDatasetParameterPropertyDsl {
         cdkBuilder.defaultValues(defaultValues)
     }
 
-    /** @param id Identifier of the parameter created in the dataset.</p>. */
+    /** @param id An identifier for the integer parameter created in the dataset. */
     public fun id(id: String) {
         cdkBuilder.id(id)
     }
 
-    /** @param name Name of the parameter created in the dataset.</p>. */
+    /** @param name The name of the integer parameter that is created in the dataset. */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }
 
     /**
-     * @param valueType Every parameter value could be either a single value or multi value which
-     *   helps to validate before evaluation.</p>.
+     * @param valueType The value type of the dataset parameter. Valid values are `single value` or
+     *   `multi value` .
      */
     public fun valueType(valueType: String) {
         cdkBuilder.valueType(valueType)

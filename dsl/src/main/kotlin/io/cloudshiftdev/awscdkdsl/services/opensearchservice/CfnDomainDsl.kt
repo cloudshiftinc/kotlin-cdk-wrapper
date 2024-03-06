@@ -62,6 +62,9 @@ import software.constructs.Construct
  * .build())
  * .build())
  * .clusterConfig(ClusterConfigProperty.builder()
+ * .coldStorageOptions(ColdStorageOptionsProperty.builder()
+ * .enabled(false)
+ * .build())
  * .dedicatedMasterCount(123)
  * .dedicatedMasterEnabled(false)
  * .dedicatedMasterType("dedicatedMasterType")
@@ -103,6 +106,7 @@ import software.constructs.Construct
  * .kmsKeyId("kmsKeyId")
  * .build())
  * .engineVersion("engineVersion")
+ * .ipAddressType("ipAddressType")
  * .logPublishingOptions(Map.of(
  * "logPublishingOptionsKey", LogPublishingOptionProperty.builder()
  * .cloudWatchLogsLogGroupArn("cloudWatchLogsLogGroupArn")
@@ -405,6 +409,11 @@ public class CfnDomainDsl(
      * [Encryption of data at rest for Amazon OpenSearch Service](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/encryption-at-rest.html)
      * .
      *
+     * If no encryption at rest options were initially specified in the template, updating this
+     * property by adding it causes no interruption. However, if you change this property after it's
+     * already been set within a template, the domain is deleted and recreated in order to modify
+     * the property.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-encryptionatrestoptions)
      *
      * @param encryptionAtRestOptions Whether the domain should encrypt data at rest, and if so, the
@@ -420,6 +429,11 @@ public class CfnDomainDsl(
      * See
      * [Encryption of data at rest for Amazon OpenSearch Service](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/encryption-at-rest.html)
      * .
+     *
+     * If no encryption at rest options were initially specified in the template, updating this
+     * property by adding it causes no interruption. However, if you change this property after it's
+     * already been set within a template, the domain is deleted and recreated in order to modify
+     * the property.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-encryptionatrestoptions)
      *
@@ -455,6 +469,21 @@ public class CfnDomainDsl(
      */
     public fun engineVersion(engineVersion: String) {
         cdkBuilder.engineVersion(engineVersion)
+    }
+
+    /**
+     * Choose either dual stack or IPv4 as your IP address type.
+     *
+     * Dual stack allows you to share domain resources across IPv4 and IPv6 address types, and is
+     * the recommended option. If you set your IP address type to dual stack, you can't change your
+     * address type later.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-ipaddresstype)
+     *
+     * @param ipAddressType Choose either dual stack or IPv4 as your IP address type.
+     */
+    public fun ipAddressType(ipAddressType: String) {
+        cdkBuilder.ipAddressType(ipAddressType)
     }
 
     /**
@@ -598,22 +627,22 @@ public class CfnDomainDsl(
     }
 
     /**
-     * Options for configuring service software updates for a domain.
+     * Service software update options for the domain.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-softwareupdateoptions)
      *
-     * @param softwareUpdateOptions Options for configuring service software updates for a domain.
+     * @param softwareUpdateOptions Service software update options for the domain.
      */
     public fun softwareUpdateOptions(softwareUpdateOptions: IResolvable) {
         cdkBuilder.softwareUpdateOptions(softwareUpdateOptions)
     }
 
     /**
-     * Options for configuring service software updates for a domain.
+     * Service software update options for the domain.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-softwareupdateoptions)
      *
-     * @param softwareUpdateOptions Options for configuring service software updates for a domain.
+     * @param softwareUpdateOptions Service software update options for the domain.
      */
     public fun softwareUpdateOptions(
         softwareUpdateOptions: CfnDomain.SoftwareUpdateOptionsProperty

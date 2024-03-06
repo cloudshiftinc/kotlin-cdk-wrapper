@@ -23,7 +23,11 @@ import software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider
 import software.constructs.Construct
 
 /**
- * Describes a Verified Access trust provider.
+ * A trust provider is a third-party entity that creates, maintains, and manages identity
+ * information for users and devices.
+ *
+ * When an application request is made, the identity information sent by the trust provider is
+ * evaluated by Verified Access before allowing or denying the application request.
  *
  * Example:
  * ```
@@ -37,6 +41,7 @@ import software.constructs.Construct
  * // the properties below are optional
  * .description("description")
  * .deviceOptions(DeviceOptionsProperty.builder()
+ * .publicSigningKeyUrl("publicSigningKeyUrl")
  * .tenantId("tenantId")
  * .build())
  * .deviceTrustProviderType("deviceTrustProviderType")
@@ -48,6 +53,10 @@ import software.constructs.Construct
  * .scope("scope")
  * .tokenEndpoint("tokenEndpoint")
  * .userInfoEndpoint("userInfoEndpoint")
+ * .build())
+ * .sseSpecification(SseSpecificationProperty.builder()
+ * .customerManagedKeyEnabled(false)
+ * .kmsKeyArn("kmsKeyArn")
  * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -144,6 +153,30 @@ public class CfnVerifiedAccessTrustProviderDsl(
      */
     public fun policyReferenceName(policyReferenceName: String) {
         cdkBuilder.policyReferenceName(policyReferenceName)
+    }
+
+    /**
+     * The options for additional server side encryption.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccesstrustprovider.html#cfn-ec2-verifiedaccesstrustprovider-ssespecification)
+     *
+     * @param sseSpecification The options for additional server side encryption.
+     */
+    public fun sseSpecification(sseSpecification: IResolvable) {
+        cdkBuilder.sseSpecification(sseSpecification)
+    }
+
+    /**
+     * The options for additional server side encryption.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccesstrustprovider.html#cfn-ec2-verifiedaccesstrustprovider-ssespecification)
+     *
+     * @param sseSpecification The options for additional server side encryption.
+     */
+    public fun sseSpecification(
+        sseSpecification: CfnVerifiedAccessTrustProvider.SseSpecificationProperty
+    ) {
+        cdkBuilder.sseSpecification(sseSpecification)
     }
 
     /**

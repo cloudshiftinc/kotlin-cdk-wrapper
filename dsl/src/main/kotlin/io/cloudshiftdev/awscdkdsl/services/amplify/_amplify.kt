@@ -305,6 +305,9 @@ public object amplify {
      * .appId("appId")
      * .branchName("branchName")
      * // the properties below are optional
+     * .backend(BackendProperty.builder()
+     * .stackArn("stackArn")
+     * .build())
      * .basicAuthConfig(BasicAuthConfigProperty.builder()
      * .password("password")
      * .username("username")
@@ -338,6 +341,29 @@ public object amplify {
         block: CfnBranchDsl.() -> Unit = {},
     ): CfnBranch {
         val builder = CfnBranchDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Describes the backend properties associated with an Amplify `Branch` .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.amplify.*;
+     * BackendProperty backendProperty = BackendProperty.builder()
+     * .stackArn("stackArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-branch-backend.html)
+     */
+    public inline fun cfnBranchBackendProperty(
+        block: CfnBranchBackendPropertyDsl.() -> Unit = {}
+    ): CfnBranch.BackendProperty {
+        val builder = CfnBranchBackendPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -406,6 +432,9 @@ public object amplify {
      * .appId("appId")
      * .branchName("branchName")
      * // the properties below are optional
+     * .backend(BackendProperty.builder()
+     * .stackArn("stackArn")
+     * .build())
      * .basicAuthConfig(BasicAuthConfigProperty.builder()
      * .password("password")
      * .username("username")

@@ -16,7 +16,7 @@ import kotlin.String
 import software.amazon.awscdk.services.mediaconnect.CfnFlowSource
 
 /**
- * The settings for attaching a VPC interface to an resource.
+ * The VPC interface that you want to send your output to.
  *
  * Example:
  * ```
@@ -36,7 +36,9 @@ public class CfnFlowSourceVpcInterfaceAttachmentPropertyDsl {
     private val cdkBuilder: CfnFlowSource.VpcInterfaceAttachmentProperty.Builder =
         CfnFlowSource.VpcInterfaceAttachmentProperty.builder()
 
-    /** @param vpcInterfaceName The name of the VPC interface to use for this resource. */
+    /**
+     * @param vpcInterfaceName The name of the VPC interface that you want to send your output to.
+     */
     public fun vpcInterfaceName(vpcInterfaceName: String) {
         cdkBuilder.vpcInterfaceName(vpcInterfaceName)
     }

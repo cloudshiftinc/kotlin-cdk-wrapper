@@ -58,6 +58,12 @@ import software.constructs.Construct
  * .publicIpSource("publicIpSource")
  * .publiclyAdvertisable(false)
  * .sourceIpamPoolId("sourceIpamPoolId")
+ * .sourceResource(SourceResourceProperty.builder()
+ * .resourceId("resourceId")
+ * .resourceOwner("resourceOwner")
+ * .resourceRegion("resourceRegion")
+ * .resourceType("resourceType")
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -372,6 +378,28 @@ public class CfnIPAMPoolDsl(
      */
     public fun sourceIpamPoolId(sourceIpamPoolId: String) {
         cdkBuilder.sourceIpamPoolId(sourceIpamPoolId)
+    }
+
+    /**
+     * The resource used to provision CIDRs to a resource planning pool.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipampool.html#cfn-ec2-ipampool-sourceresource)
+     *
+     * @param sourceResource The resource used to provision CIDRs to a resource planning pool.
+     */
+    public fun sourceResource(sourceResource: IResolvable) {
+        cdkBuilder.sourceResource(sourceResource)
+    }
+
+    /**
+     * The resource used to provision CIDRs to a resource planning pool.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipampool.html#cfn-ec2-ipampool-sourceresource)
+     *
+     * @param sourceResource The resource used to provision CIDRs to a resource planning pool.
+     */
+    public fun sourceResource(sourceResource: CfnIPAMPool.SourceResourceProperty) {
+        cdkBuilder.sourceResource(sourceResource)
     }
 
     /**

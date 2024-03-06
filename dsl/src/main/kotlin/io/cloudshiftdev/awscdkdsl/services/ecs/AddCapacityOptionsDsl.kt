@@ -42,24 +42,12 @@ import software.amazon.awscdk.services.kms.IKey
  *
  * Example:
  * ```
- * Vpc vpc;
- * // Create an ECS cluster
- * Cluster cluster = Cluster.Builder.create(this, "Cluster").vpc(vpc).build();
- * // Add capacity to it
- * cluster.addCapacity("DefaultAutoScalingGroupCapacity", AddCapacityOptions.builder()
- * .instanceType(new InstanceType("t2.xlarge"))
- * .desiredCapacity(3)
+ * Cluster cluster;
+ * cluster.addCapacity("graviton-cluster", AddCapacityOptions.builder()
+ * .minCapacity(2)
+ * .instanceType(new InstanceType("c6g.large"))
+ * .machineImage(EcsOptimizedImage.amazonLinux2(AmiHardwareType.ARM))
  * .build());
- * Ec2TaskDefinition taskDefinition = new Ec2TaskDefinition(this, "TaskDef");
- * taskDefinition.addContainer("DefaultContainer", ContainerDefinitionOptions.builder()
- * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
- * .memoryLimitMiB(512)
- * .build());
- * // Instantiate an Amazon ECS Service
- * Ec2Service ecsService = Ec2Service.Builder.create(this, "Service")
- * .cluster(cluster)
- * .taskDefinition(taskDefinition)
- * .build();
  * ```
  */
 @CdkDslMarker

@@ -12,11 +12,10 @@
 package io.cloudshiftdev.awscdkdsl.services.apigatewayv2
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
-import io.cloudshiftdev.awscdkdsl.common.MapBuilder
 import kotlin.Any
 import kotlin.String
-import kotlin.Unit
 import kotlin.collections.Collection
+import kotlin.collections.Map
 import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigatewayv2.CfnDomainName
@@ -36,7 +35,6 @@ import software.constructs.Construct
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.apigatewayv2.*;
- * Object tags;
  * CfnDomainName cfnDomainName = CfnDomainName.Builder.create(this, "MyCfnDomainName")
  * .domainName("domainName")
  * // the properties below are optional
@@ -51,7 +49,8 @@ import software.constructs.Construct
  * .truststoreUri("truststoreUri")
  * .truststoreVersion("truststoreVersion")
  * .build())
- * .tags(tags)
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
  * .build();
  * ```
  *
@@ -145,20 +144,7 @@ public class CfnDomainNameDsl(
      *
      * @param tags The collection of tags associated with a domain name.
      */
-    public fun tags(tags: MapBuilder.() -> Unit = {}) {
-        val builder = MapBuilder()
-        builder.apply(tags)
-        cdkBuilder.tags(builder.map)
-    }
-
-    /**
-     * The collection of tags associated with a domain name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-tags)
-     *
-     * @param tags The collection of tags associated with a domain name.
-     */
-    public fun tags(tags: Any) {
+    public fun tags(tags: Map<String, String>) {
         cdkBuilder.tags(tags)
     }
 

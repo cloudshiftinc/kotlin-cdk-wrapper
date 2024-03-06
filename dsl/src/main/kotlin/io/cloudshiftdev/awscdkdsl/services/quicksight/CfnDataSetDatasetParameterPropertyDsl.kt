@@ -16,8 +16,7 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
 /**
- * A parameter created in the dataset that could be of any one data type such as string, integer,
- * decimal or datetime.</p>.
+ * The parameter declarations of the dataset.
  *
  * Example:
  * ```
@@ -72,66 +71,48 @@ public class CfnDataSetDatasetParameterPropertyDsl {
     private val cdkBuilder: CfnDataSet.DatasetParameterProperty.Builder =
         CfnDataSet.DatasetParameterProperty.builder()
 
-    /**
-     * @param dateTimeDatasetParameter A parameter created in the dataset of date time data
-     *   type.</p>.
-     */
+    /** @param dateTimeDatasetParameter A date time parameter that is created in the dataset. */
     public fun dateTimeDatasetParameter(dateTimeDatasetParameter: IResolvable) {
         cdkBuilder.dateTimeDatasetParameter(dateTimeDatasetParameter)
     }
 
-    /**
-     * @param dateTimeDatasetParameter A parameter created in the dataset of date time data
-     *   type.</p>.
-     */
+    /** @param dateTimeDatasetParameter A date time parameter that is created in the dataset. */
     public fun dateTimeDatasetParameter(
         dateTimeDatasetParameter: CfnDataSet.DateTimeDatasetParameterProperty
     ) {
         cdkBuilder.dateTimeDatasetParameter(dateTimeDatasetParameter)
     }
 
-    /**
-     * @param decimalDatasetParameter A parameter created in the dataset of decimal data type.</p>.
-     */
+    /** @param decimalDatasetParameter A decimal parameter that is created in the dataset. */
     public fun decimalDatasetParameter(decimalDatasetParameter: IResolvable) {
         cdkBuilder.decimalDatasetParameter(decimalDatasetParameter)
     }
 
-    /**
-     * @param decimalDatasetParameter A parameter created in the dataset of decimal data type.</p>.
-     */
+    /** @param decimalDatasetParameter A decimal parameter that is created in the dataset. */
     public fun decimalDatasetParameter(
         decimalDatasetParameter: CfnDataSet.DecimalDatasetParameterProperty
     ) {
         cdkBuilder.decimalDatasetParameter(decimalDatasetParameter)
     }
 
-    /**
-     * @param integerDatasetParameter A parameter created in the dataset of integer data type.</p>.
-     */
+    /** @param integerDatasetParameter An integer parameter that is created in the dataset. */
     public fun integerDatasetParameter(integerDatasetParameter: IResolvable) {
         cdkBuilder.integerDatasetParameter(integerDatasetParameter)
     }
 
-    /**
-     * @param integerDatasetParameter A parameter created in the dataset of integer data type.</p>.
-     */
+    /** @param integerDatasetParameter An integer parameter that is created in the dataset. */
     public fun integerDatasetParameter(
         integerDatasetParameter: CfnDataSet.IntegerDatasetParameterProperty
     ) {
         cdkBuilder.integerDatasetParameter(integerDatasetParameter)
     }
 
-    /**
-     * @param stringDatasetParameter A parameter created in the dataset of string data type.</p>.
-     */
+    /** @param stringDatasetParameter A string parameter that is created in the dataset. */
     public fun stringDatasetParameter(stringDatasetParameter: IResolvable) {
         cdkBuilder.stringDatasetParameter(stringDatasetParameter)
     }
 
-    /**
-     * @param stringDatasetParameter A parameter created in the dataset of string data type.</p>.
-     */
+    /** @param stringDatasetParameter A string parameter that is created in the dataset. */
     public fun stringDatasetParameter(
         stringDatasetParameter: CfnDataSet.StringDatasetParameterProperty
     ) {

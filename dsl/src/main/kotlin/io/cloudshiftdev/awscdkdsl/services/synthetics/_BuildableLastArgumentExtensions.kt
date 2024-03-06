@@ -11,8 +11,50 @@
 
 package io.cloudshiftdev.awscdkdsl.services.synthetics
 
+import io.cloudshiftdev.awscdkdsl.services.cloudwatch.MetricOptionsDsl
 import kotlin.Unit
+import software.amazon.awscdk.services.cloudwatch.Metric
+import software.amazon.awscdk.services.synthetics.Canary
 import software.amazon.awscdk.services.synthetics.CfnCanary
+
+/**
+ * Measure the Duration of a single canary run, in seconds.
+ *
+ * Default: avg over 5 minutes
+ *
+ * @param options * configuration options for the metric.
+ */
+public inline fun Canary.metricDuration(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricDuration(builder.build())
+}
+
+/**
+ * Measure the number of failed canary runs over a given time period.
+ *
+ * Default: sum over 5 minutes
+ *
+ * @param options * configuration options for the metric.
+ */
+public inline fun Canary.metricFailed(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricFailed(builder.build())
+}
+
+/**
+ * Measure the percentage of successful canary runs.
+ *
+ * Default: avg over 5 minutes
+ *
+ * @param options * configuration options for the metric.
+ */
+public inline fun Canary.metricSuccessPercent(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricSuccessPercent(builder.build())
+}
 
 /**
  * A structure that contains the configuration for canary artifacts, including the

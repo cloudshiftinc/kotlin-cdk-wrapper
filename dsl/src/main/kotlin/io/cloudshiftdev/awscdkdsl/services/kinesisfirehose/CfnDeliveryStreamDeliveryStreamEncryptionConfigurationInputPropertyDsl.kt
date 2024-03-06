@@ -43,8 +43,8 @@ public class CfnDeliveryStreamDeliveryStreamEncryptionConfigurationInputProperty
 
     /**
      * @param keyArn If you set `KeyType` to `CUSTOMER_MANAGED_CMK` , you must specify the Amazon
-     *   Resource Name (ARN) of the CMK. If you set `KeyType` to `AWS _OWNED_CMK` , Kinesis Data
-     *   Firehose uses a service-account CMK.
+     *   Resource Name (ARN) of the CMK. If you set `KeyType` to `AWS _OWNED_CMK` , Firehose uses a
+     *   service-account CMK.
      */
     public fun keyArn(keyArn: String) {
         cdkBuilder.keyArn(keyArn)

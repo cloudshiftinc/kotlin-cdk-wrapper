@@ -16,8 +16,8 @@ import kotlin.String
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2
 
 /**
- * For a SQL-based Kinesis Data Analytics application, provides additional mapping information when
- * the record format uses delimiters, such as CSV.
+ * For a SQL-based Managed Service for Apache Flink application, provides additional mapping
+ * information when the record format uses delimiters, such as CSV.
  *
  * For example, the following sample records use CSV format, where the records use the *'\n'* as the
  * row delimiter and a comma (",") as the column delimiter:

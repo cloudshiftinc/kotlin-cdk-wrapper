@@ -45,6 +45,7 @@ public object codecommit {
      * // the properties below are optional
      * .branchName("branchName")
      * .build())
+     * .kmsKeyId("kmsKeyId")
      * .repositoryDescription("repositoryDescription")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
@@ -124,6 +125,7 @@ public object codecommit {
      * // the properties below are optional
      * .branchName("branchName")
      * .build())
+     * .kmsKeyId("kmsKeyId")
      * .repositoryDescription("repositoryDescription")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
@@ -373,6 +375,7 @@ public object codecommit {
      * .runOrder(3)
      * .build()));
      * Pipeline.Builder.create(stack, "Pipeline")
+     * .crossAccountKeys(true)
      * .stages(List.of(sourceStage, prodStage))
      * .build();
      * ```

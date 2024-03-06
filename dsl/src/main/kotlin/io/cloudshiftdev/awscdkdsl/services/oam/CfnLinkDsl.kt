@@ -84,7 +84,8 @@ public class CfnLinkDsl(
      * An array of strings that define which types of data that the source account shares with the
      * monitoring account.
      *
-     * Valid values are `AWS::CloudWatch::Metric | AWS::Logs::LogGroup | AWS::XRay::Trace` .
+     * Valid values are `AWS::CloudWatch::Metric | AWS::Logs::LogGroup | AWS::XRay::Trace |
+     * AWS::ApplicationInsights::Application` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-resourcetypes)
      *
@@ -99,7 +100,8 @@ public class CfnLinkDsl(
      * An array of strings that define which types of data that the source account shares with the
      * monitoring account.
      *
-     * Valid values are `AWS::CloudWatch::Metric | AWS::Logs::LogGroup | AWS::XRay::Trace` .
+     * Valid values are `AWS::CloudWatch::Metric | AWS::Logs::LogGroup | AWS::XRay::Trace |
+     * AWS::ApplicationInsights::Application` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-resourcetypes)
      *

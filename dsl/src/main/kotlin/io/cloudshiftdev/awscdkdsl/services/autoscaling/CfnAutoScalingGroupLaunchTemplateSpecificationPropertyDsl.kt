@@ -23,7 +23,7 @@ import software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup
  * * The version of the launch template.
  *
  * `LaunchTemplateSpecification` is property of the
- * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html)
+ * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
  * resource. It is also a property of the
  * [AWS::AutoScaling::AutoScalingGroup LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplate.html)
  * and
@@ -37,10 +37,8 @@ import software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup
  * in the *Amazon EC2 Auto Scaling User Guide* .
  *
  * For examples of launch templates, see
- * [Auto scaling template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)
- * and the
- * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate--examples)
- * section in the `AWS::EC2::LaunchTemplate` resource.
+ * [Create launch templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-launch-templates.html)
+ * .
  *
  * Example:
  * ```
@@ -88,7 +86,7 @@ public class CfnAutoScalingGroupLaunchTemplateSpecificationPropertyDsl {
      *   .
      *
      * For an example of using the `Fn::GetAtt` function, see the
-     * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#aws-properties-as-group--examples)
+     * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#aws-resource-autoscaling-autoscalinggroup--examples)
      * section of the `AWS::AutoScaling::AutoScalingGroup` resource.
      */
     public fun version(version: String) {

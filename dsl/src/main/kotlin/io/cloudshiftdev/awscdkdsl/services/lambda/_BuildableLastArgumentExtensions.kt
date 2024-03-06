@@ -184,8 +184,8 @@ public inline fun CfnEventSourceMapping.setAmazonManagedKafkaEventSourceConfig(
 }
 
 /**
- * (Kinesis and DynamoDB Streams only) An Amazon SQS queue or Amazon SNS topic destination for
- * discarded records.
+ * (Kinesis, DynamoDB Streams, Amazon MSK, and self-managed Apache Kafka event sources only) A
+ * configuration object that specifies the destination of an event after Lambda processes it.
  */
 public inline fun CfnEventSourceMapping.setDestinationConfig(
     block: CfnEventSourceMappingDestinationConfigPropertyDsl.() -> Unit = {}
@@ -288,6 +288,15 @@ public inline fun CfnFunction.setImageConfig(
     return setImageConfig(builder.build())
 }
 
+/** The function's Amazon CloudWatch Logs configuration settings. */
+public inline fun CfnFunction.setLoggingConfig(
+    block: CfnFunctionLoggingConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnFunctionLoggingConfigPropertyDsl()
+    builder.apply(block)
+    return setLoggingConfig(builder.build())
+}
+
 /** Sets the runtime management configuration for a function's version. */
 public inline fun CfnFunction.setRuntimeManagementConfig(
     block: CfnFunctionRuntimeManagementConfigPropertyDsl.() -> Unit = {}
@@ -373,6 +382,15 @@ public inline fun CfnVersion.setProvisionedConcurrencyConfig(
     val builder = CfnVersionProvisionedConcurrencyConfigurationPropertyDsl()
     builder.apply(block)
     return setProvisionedConcurrencyConfig(builder.build())
+}
+
+/** Runtime Management Config of a function. */
+public inline fun CfnVersion.setRuntimePolicy(
+    block: CfnVersionRuntimePolicyPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnVersionRuntimePolicyPropertyDsl()
+    builder.apply(block)
+    return setRuntimePolicy(builder.build())
 }
 
 /**

@@ -120,6 +120,9 @@ public object opensearchservice {
      * .build())
      * .build())
      * .clusterConfig(ClusterConfigProperty.builder()
+     * .coldStorageOptions(ColdStorageOptionsProperty.builder()
+     * .enabled(false)
+     * .build())
      * .dedicatedMasterCount(123)
      * .dedicatedMasterEnabled(false)
      * .dedicatedMasterType("dedicatedMasterType")
@@ -161,6 +164,7 @@ public object opensearchservice {
      * .kmsKeyId("kmsKeyId")
      * .build())
      * .engineVersion("engineVersion")
+     * .ipAddressType("ipAddressType")
      * .logPublishingOptions(Map.of(
      * "logPublishingOptionsKey", LogPublishingOptionProperty.builder()
      * .cloudWatchLogsLogGroupArn("cloudWatchLogsLogGroupArn")
@@ -273,6 +277,9 @@ public object opensearchservice {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.opensearchservice.*;
      * ClusterConfigProperty clusterConfigProperty = ClusterConfigProperty.builder()
+     * .coldStorageOptions(ColdStorageOptionsProperty.builder()
+     * .enabled(false)
+     * .build())
      * .dedicatedMasterCount(123)
      * .dedicatedMasterEnabled(false)
      * .dedicatedMasterType("dedicatedMasterType")
@@ -321,6 +328,34 @@ public object opensearchservice {
         block: CfnDomainCognitoOptionsPropertyDsl.() -> Unit = {}
     ): CfnDomain.CognitoOptionsProperty {
         val builder = CfnDomainCognitoOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Container for the parameters required to enable cold storage for an OpenSearch Service
+     * domain.
+     *
+     * For more information, see
+     * [Cold storage for Amazon OpenSearch Service](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cold-storage.html)
+     * .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.opensearchservice.*;
+     * ColdStorageOptionsProperty coldStorageOptionsProperty = ColdStorageOptionsProperty.builder()
+     * .enabled(false)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-coldstorageoptions.html)
+     */
+    public inline fun cfnDomainColdStorageOptionsProperty(
+        block: CfnDomainColdStorageOptionsPropertyDsl.() -> Unit = {}
+    ): CfnDomain.ColdStorageOptionsProperty {
+        val builder = CfnDomainColdStorageOptionsPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -623,6 +658,9 @@ public object opensearchservice {
      * .build())
      * .build())
      * .clusterConfig(ClusterConfigProperty.builder()
+     * .coldStorageOptions(ColdStorageOptionsProperty.builder()
+     * .enabled(false)
+     * .build())
      * .dedicatedMasterCount(123)
      * .dedicatedMasterEnabled(false)
      * .dedicatedMasterType("dedicatedMasterType")
@@ -664,6 +702,7 @@ public object opensearchservice {
      * .kmsKeyId("kmsKeyId")
      * .build())
      * .engineVersion("engineVersion")
+     * .ipAddressType("ipAddressType")
      * .logPublishingOptions(Map.of(
      * "logPublishingOptionsKey", LogPublishingOptionProperty.builder()
      * .cloudWatchLogsLogGroupArn("cloudWatchLogsLogGroupArn")
@@ -1093,19 +1132,18 @@ public object opensearchservice {
      *
      * Example:
      * ```
-     * Domain prodDomain = Domain.Builder.create(this, "Domain")
+     * Domain domain = Domain.Builder.create(this, "Domain")
      * .version(EngineVersion.OPENSEARCH_1_0)
-     * .capacity(CapacityConfig.builder()
-     * .masterNodes(5)
-     * .dataNodes(20)
+     * .enforceHttps(true)
+     * .nodeToNodeEncryption(true)
+     * .encryptionAtRest(EncryptionAtRestOptions.builder()
+     * .enabled(true)
      * .build())
-     * .ebs(EbsOptions.builder()
-     * .volumeSize(20)
-     * .build())
-     * .zoneAwareness(ZoneAwarenessConfig.builder()
-     * .availabilityZoneCount(3)
+     * .fineGrainedAccessControl(AdvancedSecurityOptions.builder()
+     * .masterUserName("master-user")
      * .build())
      * .logging(LoggingOptions.builder()
+     * .auditLogEnabled(true)
      * .slowSearchLogEnabled(true)
      * .appLogEnabled(true)
      * .slowIndexLogEnabled(true)

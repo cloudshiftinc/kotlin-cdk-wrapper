@@ -88,7 +88,7 @@ public class CfnCoreDefinitionPropsDsl {
      * @param tags Application-specific metadata to attach to the core definition. You can use tags
      *   in IAM policies to control access to AWS IoT Greengrass resources. You can also use tags to
      *   categorize your resources. For more information, see
-     *   [Tagging Your AWS IoT Greengrass Resources](https://docs.aws.amazon.com/greengrass/latest/developerguide/tagging.html)
+     *   [Tagging Your AWS IoT Greengrass Resources](https://docs.aws.amazon.com/greengrass/v1/developerguide/tagging.html)
      *   in the *Developer Guide* .
      *
      * This `Json` property type is processed as a map of key-value pairs. It uses the following
@@ -109,7 +109,7 @@ public class CfnCoreDefinitionPropsDsl {
      * @param tags Application-specific metadata to attach to the core definition. You can use tags
      *   in IAM policies to control access to AWS IoT Greengrass resources. You can also use tags to
      *   categorize your resources. For more information, see
-     *   [Tagging Your AWS IoT Greengrass Resources](https://docs.aws.amazon.com/greengrass/latest/developerguide/tagging.html)
+     *   [Tagging Your AWS IoT Greengrass Resources](https://docs.aws.amazon.com/greengrass/v1/developerguide/tagging.html)
      *   in the *Developer Guide* .
      *
      * This `Json` property type is processed as a map of key-value pairs. It uses the following

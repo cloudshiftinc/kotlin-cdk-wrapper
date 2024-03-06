@@ -42,10 +42,6 @@ import software.constructs.Construct
  * .type("type")
  * // the properties below are optional
  * .config(TargetGroupConfigProperty.builder()
- * .port(123)
- * .protocol("protocol")
- * .vpcIdentifier("vpcIdentifier")
- * // the properties below are optional
  * .healthCheck(HealthCheckConfigProperty.builder()
  * .enabled(false)
  * .healthCheckIntervalSeconds(123)
@@ -61,7 +57,11 @@ import software.constructs.Construct
  * .unhealthyThresholdCount(123)
  * .build())
  * .ipAddressType("ipAddressType")
+ * .lambdaEventStructureVersion("lambdaEventStructureVersion")
+ * .port(123)
+ * .protocol("protocol")
  * .protocolVersion("protocolVersion")
+ * .vpcIdentifier("vpcIdentifier")
  * .build())
  * .name("name")
  * .tags(List.of(CfnTag.builder()
@@ -92,8 +92,6 @@ public class CfnTargetGroupDsl(
     /**
      * The target group configuration.
      *
-     * If the target group type is `LAMBDA` , this parameter doesn't apply.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-targetgroup.html#cfn-vpclattice-targetgroup-config)
      *
      * @param config The target group configuration.
@@ -104,8 +102,6 @@ public class CfnTargetGroupDsl(
 
     /**
      * The target group configuration.
-     *
-     * If the target group type is `LAMBDA` , this parameter doesn't apply.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-targetgroup.html#cfn-vpclattice-targetgroup-config)
      *

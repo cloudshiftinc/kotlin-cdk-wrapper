@@ -24,6 +24,7 @@ import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.ecs.FargatePlatformVersion
 import software.amazon.awscdk.services.ecs.ICluster
 import software.amazon.awscdk.services.ecs.ITaskDefinition
+import software.amazon.awscdk.services.ecs.LaunchType
 import software.amazon.awscdk.services.ecs.PropagatedTagSource
 import software.amazon.awscdk.services.events.targets.ContainerOverride
 import software.amazon.awscdk.services.events.targets.EcsTask
@@ -37,20 +38,18 @@ import software.amazon.awscdk.services.sqs.IQueue
  * Example:
  * ```
  * import software.amazon.awscdk.services.ecs.*;
+ * import software.amazon.awscdk.services.ec2.*;
  * ICluster cluster;
  * TaskDefinition taskDefinition;
  * Rule rule = Rule.Builder.create(this, "Rule")
  * .schedule(Schedule.rate(Duration.hours(1)))
  * .build();
- * rule.addTarget(EcsTask.Builder.create()
+ * rule.addTarget(
+ * EcsTask.Builder.create()
  * .cluster(cluster)
  * .taskDefinition(taskDefinition)
- * .taskCount(1)
- * .containerOverrides(List.of(ContainerOverride.builder()
- * .containerName("TheContainer")
- * .command(List.of("echo", EventField.fromPath("$.detail.event")))
- * .build()))
- * .enableExecuteCommand(true)
+ * .assignPublicIp(true)
+ * .subnetSelection(SubnetSelection.builder().subnetType(SubnetType.PUBLIC).build())
  * .build());
  * ```
  */
@@ -138,6 +137,20 @@ public class EcsTaskDsl {
      */
     public fun enableExecuteCommand(enableExecuteCommand: Boolean) {
         cdkBuilder.enableExecuteCommand(enableExecuteCommand)
+    }
+
+    /**
+     * Specifies the launch type on which your task is running.
+     *
+     * The launch type that you specify here must match one of the launch type (compatibilities) of
+     * the target task.
+     *
+     * Default: - 'EC2' if `isEc2Compatible` for the `taskDefinition` is true, otherwise 'FARGATE'
+     *
+     * @param launchType Specifies the launch type on which your task is running.
+     */
+    public fun launchType(launchType: LaunchType) {
+        cdkBuilder.launchType(launchType)
     }
 
     /**

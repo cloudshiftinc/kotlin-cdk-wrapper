@@ -70,18 +70,22 @@ public class CfnPackageDsl(
     }
 
     /**
+     * A storage location.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-panorama-package.html#cfn-panorama-package-storagelocation)
      *
-     * @param storageLocation
+     * @param storageLocation A storage location.
      */
     public fun storageLocation(storageLocation: IResolvable) {
         cdkBuilder.storageLocation(storageLocation)
     }
 
     /**
+     * A storage location.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-panorama-package.html#cfn-panorama-package-storagelocation)
      *
-     * @param storageLocation
+     * @param storageLocation A storage location.
      */
     public fun storageLocation(storageLocation: CfnPackage.StorageLocationProperty) {
         cdkBuilder.storageLocation(storageLocation)

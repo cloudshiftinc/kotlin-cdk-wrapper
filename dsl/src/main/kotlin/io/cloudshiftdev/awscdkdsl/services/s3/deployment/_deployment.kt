@@ -79,14 +79,21 @@ public object deployment {
      *
      * Example:
      * ```
+     * import software.amazon.awscdk.services.iam.*;
      * import software.amazon.awscdk.services.lambda.*;
      * Function myLambdaFunction;
      * Bucket destinationBucket;
+     * //(Optional) if provided, the resulting processed file would be uploaded to the
+     * destinationBucket under the destinationKey name.
+     * String destinationKey;
+     * Role role;
      * DeployTimeSubstitutedFile.Builder.create(this, "MyFile")
      * .source("my-file.yaml")
+     * .destinationKey(destinationKey)
      * .destinationBucket(destinationBucket)
      * .substitutions(Map.of(
      * "variableName", myLambdaFunction.getFunctionName()))
+     * .role(role)
      * .build();
      * ```
      */
@@ -103,14 +110,21 @@ public object deployment {
     /**
      * Example:
      * ```
+     * import software.amazon.awscdk.services.iam.*;
      * import software.amazon.awscdk.services.lambda.*;
      * Function myLambdaFunction;
      * Bucket destinationBucket;
+     * //(Optional) if provided, the resulting processed file would be uploaded to the
+     * destinationBucket under the destinationKey name.
+     * String destinationKey;
+     * Role role;
      * DeployTimeSubstitutedFile.Builder.create(this, "MyFile")
      * .source("my-file.yaml")
+     * .destinationKey(destinationKey)
      * .destinationBucket(destinationBucket)
      * .substitutions(Map.of(
      * "variableName", myLambdaFunction.getFunctionName()))
+     * .role(role)
      * .build();
      * ```
      */

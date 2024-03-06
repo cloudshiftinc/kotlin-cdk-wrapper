@@ -12,6 +12,7 @@
 package io.cloudshiftdev.awscdkdsl.services.ec2
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnSubnetCidrBlockProps
 
@@ -24,8 +25,11 @@ import software.amazon.awscdk.services.ec2.CfnSubnetCidrBlockProps
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.ec2.*;
  * CfnSubnetCidrBlockProps cfnSubnetCidrBlockProps = CfnSubnetCidrBlockProps.builder()
- * .ipv6CidrBlock("ipv6CidrBlock")
  * .subnetId("subnetId")
+ * // the properties below are optional
+ * .ipv6CidrBlock("ipv6CidrBlock")
+ * .ipv6IpamPoolId("ipv6IpamPoolId")
+ * .ipv6NetmaskLength(123)
  * .build();
  * ```
  *
@@ -35,12 +39,19 @@ import software.amazon.awscdk.services.ec2.CfnSubnetCidrBlockProps
 public class CfnSubnetCidrBlockPropsDsl {
     private val cdkBuilder: CfnSubnetCidrBlockProps.Builder = CfnSubnetCidrBlockProps.builder()
 
-    /**
-     * @param ipv6CidrBlock The IPv6 network range for the subnet, in CIDR notation. The subnet size
-     *   must use a /64 prefix length. This parameter is required for an IPv6 only subnet.
-     */
+    /** @param ipv6CidrBlock The IPv6 network range for the subnet, in CIDR notation. */
     public fun ipv6CidrBlock(ipv6CidrBlock: String) {
         cdkBuilder.ipv6CidrBlock(ipv6CidrBlock)
+    }
+
+    /** @param ipv6IpamPoolId An IPv6 IPAM pool ID for the subnet. */
+    public fun ipv6IpamPoolId(ipv6IpamPoolId: String) {
+        cdkBuilder.ipv6IpamPoolId(ipv6IpamPoolId)
+    }
+
+    /** @param ipv6NetmaskLength An IPv6 netmask length for the subnet. */
+    public fun ipv6NetmaskLength(ipv6NetmaskLength: Number) {
+        cdkBuilder.ipv6NetmaskLength(ipv6NetmaskLength)
     }
 
     /** @param subnetId The ID of the subnet. */

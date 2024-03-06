@@ -26,11 +26,11 @@ import software.amazon.awscdk.services.connectcampaigns.CfnCampaign
  * import software.amazon.awscdk.services.connectcampaigns.*;
  * OutboundCallConfigProperty outboundCallConfigProperty = OutboundCallConfigProperty.builder()
  * .connectContactFlowArn("connectContactFlowArn")
- * .connectQueueArn("connectQueueArn")
  * // the properties below are optional
  * .answerMachineDetectionConfig(AnswerMachineDetectionConfigProperty.builder()
  * .enableAnswerMachineDetection(false)
  * .build())
+ * .connectQueueArn("connectQueueArn")
  * .connectSourcePhoneNumber("connectSourcePhoneNumber")
  * .build();
  * ```
@@ -42,18 +42,12 @@ public class CfnCampaignOutboundCallConfigPropertyDsl {
     private val cdkBuilder: CfnCampaign.OutboundCallConfigProperty.Builder =
         CfnCampaign.OutboundCallConfigProperty.builder()
 
-    /**
-     * @param answerMachineDetectionConfig The configuration used for answering machine detection
-     *   during outbound calls.
-     */
+    /** @param answerMachineDetectionConfig Whether answering machine detection has been enabled. */
     public fun answerMachineDetectionConfig(answerMachineDetectionConfig: IResolvable) {
         cdkBuilder.answerMachineDetectionConfig(answerMachineDetectionConfig)
     }
 
-    /**
-     * @param answerMachineDetectionConfig The configuration used for answering machine detection
-     *   during outbound calls.
-     */
+    /** @param answerMachineDetectionConfig Whether answering machine detection has been enabled. */
     public fun answerMachineDetectionConfig(
         answerMachineDetectionConfig: CfnCampaign.AnswerMachineDetectionConfigProperty
     ) {

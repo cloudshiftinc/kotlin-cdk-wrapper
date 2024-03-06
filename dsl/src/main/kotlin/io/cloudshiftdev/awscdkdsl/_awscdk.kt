@@ -101,6 +101,8 @@ import software.amazon.awscdk.CliCredentialsStackSynthesizerProps
 import software.amazon.awscdk.CopyOptions
 import software.amazon.awscdk.CustomResource
 import software.amazon.awscdk.CustomResourceProps
+import software.amazon.awscdk.CustomResourceProviderBaseProps
+import software.amazon.awscdk.CustomResourceProviderOptions
 import software.amazon.awscdk.CustomResourceProviderProps
 import software.amazon.awscdk.DefaultStackSynthesizer
 import software.amazon.awscdk.DefaultStackSynthesizerProps
@@ -175,21 +177,25 @@ public object awscdk {
      * Example:
      * ```
      * import software.amazon.awscdk.*;
-     * import software.amazon.awscdk.*;
+     * import software.amazon.awscdk.services.s3.*;
+     * IBucket bucket;
      * App app = new App();
-     * Stack stack = new Stack(app, "aws-servicediscovery-integ");
-     * PublicDnsNamespace namespace = PublicDnsNamespace.Builder.create(stack, "Namespace")
-     * .name("foobar.com")
+     * Stack stack = new Stack(app, "Stack");
+     * Table.Builder.create(stack, "Table")
+     * .partitionKey(Attribute.builder()
+     * .name("id")
+     * .type(AttributeType.STRING)
+     * .build())
+     * .importSource(ImportSourceSpecification.builder()
+     * .compressionType(InputCompressionType.GZIP)
+     * .inputFormat(InputFormat.csv(CsvOptions.builder()
+     * .delimiter(",")
+     * .headerList(List.of("id", "name"))
+     * .build()))
+     * .bucket(bucket)
+     * .keyPrefix("prefix")
+     * .build())
      * .build();
-     * Service service = namespace.createService("Service", DnsServiceProps.builder()
-     * .name("foo")
-     * .dnsRecordType(DnsRecordType.CNAME)
-     * .dnsTtl(Duration.seconds(30))
-     * .build());
-     * service.registerCnameInstance("CnameInstance", CnameInstanceBaseProps.builder()
-     * .instanceCname("service.pizza")
-     * .build());
-     * app.synth();
      * ```
      *
      * [Documentation](https://docs.aws.amazon.com/cdk/latest/guide/apps.html)
@@ -205,9 +211,11 @@ public object awscdk {
      *
      * Example:
      * ```
+     * import software.amazon.awscdk.services.s3.BucketEncryption;
      * App app = App.Builder.create()
      * .defaultStackSynthesizer(AppStagingSynthesizer.defaultResources(DefaultResourcesOptions.builder()
      * .appId("my-app-id")
+     * .stagingBucketEncryption(BucketEncryption.S3_MANAGED)
      * .deploymentIdentities(DeploymentIdentities.cliCredentials())
      * .build()))
      * .build();
@@ -1498,8 +1506,9 @@ public object awscdk {
      * "regionName", "US East (N. Virginia)"),
      * "us-east-2", Map.of(
      * "regionName", "US East (Ohio)")))
+     * .lazy(true)
      * .build();
-     * regionTable.findInMap(Aws.REGION, "regionName");
+     * regionTable.findInMap("us-east-2", "regionName");
      * ```
      */
     public inline fun cfnMappingProps(block: CfnMappingPropsDsl.() -> Unit = {}): CfnMappingProps {
@@ -1515,7 +1524,7 @@ public object awscdk {
      * and Region.
      *
      * To register a module version, use the
-     * `[AWS::CloudFormation::ModuleVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduleversion.html)`
+     * `[`AWS::CloudFormation::ModuleVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduleversion.html)`
      * resource.
      *
      * For more information using modules, see
@@ -1584,7 +1593,7 @@ public object awscdk {
      * account and Region.
      *
      * To specify a module version as the default version, use the
-     * `[AWS::CloudFormation::ModuleDefaultVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html)`
+     * `[`AWS::CloudFormation::ModuleDefaultVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html)`
      * resource.
      *
      * For more information using modules, see
@@ -2261,7 +2270,41 @@ public object awscdk {
      * verify that you have cancel update stack permissions, which is required if an update rolls
      * back. For more information about IAM and CloudFormation , see
      * [Controlling access with AWS Identity and Access Management](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html)
-     * .
+     * . &gt; A subset of `AWS::CloudFormation::Stack` resource type properties listed below are
+     * available to customers using AWS CloudFormation , AWS CDK , and AWS Cloud Control API to
+     * configure.
+     * * `NotificationARNs`
+     * * `Parameters`
+     * * `Tags`
+     * * `TemplateURL`
+     * * `TimeoutInMinutes`
+     *
+     * These properties can be configured only when using AWS Cloud Control API . This is because
+     * the below properties are set by the parent stack, and thus cannot be configured using AWS
+     * CloudFormation or AWS CDK but only AWS Cloud Control API .
+     * * `Capabilities`
+     * * `Description`
+     * * `DisableRollback`
+     * * `EnableTerminationProtection`
+     * * `RoleARN`
+     * * `StackName`
+     * * `StackPolicyBody`
+     * * `StackPolicyURL`
+     * * `StackStatusReason`
+     * * `TemplateBody`
+     *
+     * Customers that configure `AWS::CloudFormation::Stack` using AWS CloudFormation and AWS CDK
+     * can do so for nesting a CloudFormation stack as a resource in their top-level template.
+     *
+     * These read-only properties can be accessed only when using AWS Cloud Control API .
+     * * `ChangeSetId`
+     * * `CreationTime`
+     * * `LastUpdateTime`
+     * * `Outputs`
+     * * `ParentId`
+     * * `RootId`
+     * * `StackId`
+     * * `StackStatus`
      *
      * Example:
      * ```
@@ -2269,8 +2312,6 @@ public object awscdk {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.*;
      * CfnStack cfnStack = CfnStack.Builder.create(this, "MyCfnStack")
-     * .templateUrl("templateUrl")
-     * // the properties below are optional
      * .notificationArns(List.of("notificationArns"))
      * .parameters(Map.of(
      * "parametersKey", "parameters"))
@@ -2278,6 +2319,7 @@ public object awscdk {
      * .key("key")
      * .value("value")
      * .build()))
+     * .templateUrl("templateUrl")
      * .timeoutInMinutes(123)
      * .build();
      * ```
@@ -2295,6 +2337,32 @@ public object awscdk {
     }
 
     /**
+     * The Output data type.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.*;
+     * OutputProperty outputProperty = OutputProperty.builder()
+     * .description("description")
+     * .exportName("exportName")
+     * .outputKey("outputKey")
+     * .outputValue("outputValue")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stack-output.html)
+     */
+    public inline fun cfnStackOutputProperty(
+        block: CfnStackOutputPropertyDsl.() -> Unit = {}
+    ): CfnStack.OutputProperty {
+        val builder = CfnStackOutputPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Properties for defining a `CfnStack`.
      *
      * Example:
@@ -2303,8 +2371,6 @@ public object awscdk {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.*;
      * CfnStackProps cfnStackProps = CfnStackProps.builder()
-     * .templateUrl("templateUrl")
-     * // the properties below are optional
      * .notificationArns(List.of("notificationArns"))
      * .parameters(Map.of(
      * "parametersKey", "parameters"))
@@ -2312,6 +2378,7 @@ public object awscdk {
      * .key("key")
      * .value("value")
      * .build()))
+     * .templateUrl("templateUrl")
      * .timeoutInMinutes(123)
      * .build();
      * ```
@@ -2370,6 +2437,7 @@ public object awscdk {
      * .deploymentTargets(DeploymentTargetsProperty.builder()
      * .accountFilterType("accountFilterType")
      * .accounts(List.of("accounts"))
+     * .accountsUrl("accountsUrl")
      * .organizationalUnitIds(List.of("organizationalUnitIds"))
      * .build())
      * .regions(List.of("regions"))
@@ -2437,6 +2505,7 @@ public object awscdk {
      * DeploymentTargetsProperty deploymentTargetsProperty = DeploymentTargetsProperty.builder()
      * .accountFilterType("accountFilterType")
      * .accounts(List.of("accounts"))
+     * .accountsUrl("accountsUrl")
      * .organizationalUnitIds(List.of("organizationalUnitIds"))
      * .build();
      * ```
@@ -2571,6 +2640,7 @@ public object awscdk {
      * .deploymentTargets(DeploymentTargetsProperty.builder()
      * .accountFilterType("accountFilterType")
      * .accounts(List.of("accounts"))
+     * .accountsUrl("accountsUrl")
      * .organizationalUnitIds(List.of("organizationalUnitIds"))
      * .build())
      * .regions(List.of("regions"))
@@ -2611,6 +2681,7 @@ public object awscdk {
      * .deploymentTargets(DeploymentTargetsProperty.builder()
      * .accountFilterType("accountFilterType")
      * .accounts(List.of("accounts"))
+     * .accountsUrl("accountsUrl")
      * .organizationalUnitIds(List.of("organizationalUnitIds"))
      * .build())
      * .regions(List.of("regions"))
@@ -3190,7 +3261,7 @@ public object awscdk {
      * String serviceToken = CustomResourceProvider.getOrCreate(this, "Custom::MyCustomResourceType",
      * CustomResourceProviderProps.builder()
      * .codeDirectory(String.format("%s/my-handler", __dirname))
-     * .runtime(CustomResourceProviderRuntime.NODEJS_14_X)
+     * .runtime(CustomResourceProviderRuntime.NODEJS_18_X)
      * .description("Lambda function created by the custom resource provider")
      * .build());
      * CustomResource.Builder.create(this, "MyResource")
@@ -3217,7 +3288,7 @@ public object awscdk {
      * String serviceToken = CustomResourceProvider.getOrCreate(this, "Custom::MyCustomResourceType",
      * CustomResourceProviderProps.builder()
      * .codeDirectory(String.format("%s/my-handler", __dirname))
-     * .runtime(CustomResourceProviderRuntime.NODEJS_14_X)
+     * .runtime(CustomResourceProviderRuntime.NODEJS_18_X)
      * .description("Lambda function created by the custom resource provider")
      * .build());
      * CustomResource.Builder.create(this, "MyResource")
@@ -3235,6 +3306,69 @@ public object awscdk {
     }
 
     /**
+     * Initialization properties for `CustomResourceProviderBase`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.*;
+     * Object policyStatements;
+     * Size size;
+     * CustomResourceProviderBaseProps customResourceProviderBaseProps =
+     * CustomResourceProviderBaseProps.builder()
+     * .codeDirectory("codeDirectory")
+     * .runtimeName("runtimeName")
+     * // the properties below are optional
+     * .description("description")
+     * .environment(Map.of(
+     * "environmentKey", "environment"))
+     * .memorySize(size)
+     * .policyStatements(List.of(policyStatements))
+     * .timeout(Duration.minutes(30))
+     * .useCfnResponseWrapper(false)
+     * .build();
+     * ```
+     */
+    public inline fun customResourceProviderBaseProps(
+        block: CustomResourceProviderBasePropsDsl.() -> Unit = {}
+    ): CustomResourceProviderBaseProps {
+        val builder = CustomResourceProviderBasePropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Initialization options for custom resource providers.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.*;
+     * Object policyStatements;
+     * Size size;
+     * CustomResourceProviderOptions customResourceProviderOptions =
+     * CustomResourceProviderOptions.builder()
+     * .description("description")
+     * .environment(Map.of(
+     * "environmentKey", "environment"))
+     * .memorySize(size)
+     * .policyStatements(List.of(policyStatements))
+     * .timeout(Duration.minutes(30))
+     * .useCfnResponseWrapper(false)
+     * .build();
+     * ```
+     */
+    public inline fun customResourceProviderOptions(
+        block: CustomResourceProviderOptionsDsl.() -> Unit = {}
+    ): CustomResourceProviderOptions {
+        val builder = CustomResourceProviderOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Initialization properties for `CustomResourceProvider`.
      *
      * Example:
@@ -3242,7 +3376,7 @@ public object awscdk {
      * CustomResourceProvider provider = CustomResourceProvider.getOrCreateProvider(this,
      * "Custom::MyCustomResourceType", CustomResourceProviderProps.builder()
      * .codeDirectory(String.format("%s/my-handler", __dirname))
-     * .runtime(CustomResourceProviderRuntime.NODEJS_14_X)
+     * .runtime(CustomResourceProviderRuntime.NODEJS_18_X)
      * .build());
      * provider.addToRolePolicy(Map.of(
      * "Effect", "Allow",
@@ -3273,9 +3407,13 @@ public object awscdk {
      *
      * Example:
      * ```
-     * MyStack.Builder.create(app, "MyStack")
+     * App app;
+     * Stage prodStage = Stage.Builder.create(app, "ProdStage")
+     * .permissionsBoundary(PermissionsBoundary.fromName("cdk-${Qualifier}-PermissionsBoundary-${AWS::AccountId}-${AWS::Region}"))
+     * .build();
+     * Stack.Builder.create(prodStage, "ProdStack")
      * .synthesizer(DefaultStackSynthesizer.Builder.create()
-     * .fileAssetsBucketName("my-orgs-asset-bucket")
+     * .qualifier("custom")
      * .build())
      * .build();
      * ```
@@ -3403,6 +3541,7 @@ public object awscdk {
      * "dockerBuildSecretsKey", "dockerBuildSecrets"))
      * .dockerBuildSsh("dockerBuildSsh")
      * .dockerBuildTarget("dockerBuildTarget")
+     * .dockerCacheDisabled(false)
      * .dockerCacheFrom(List.of(DockerCacheOption.builder()
      * .type("type")
      * // the properties below are optional
@@ -3513,25 +3652,15 @@ public object awscdk {
      *
      * Example:
      * ```
-     * // Passing a replication bucket created in a different stack.
+     * import software.amazon.awscdk.*;
      * App app = new App();
-     * Stack replicationStack = Stack.Builder.create(app, "ReplicationStack")
-     * .env(Environment.builder()
-     * .region("us-west-1")
-     * .build())
+     * Stack stack = Stack.Builder.create(app,
+     * "Stack").env(Environment.builder().region("us-west-2").build()).build();
+     * TableV2 globalTable = TableV2.Builder.create(stack, "GlobalTable")
+     * .partitionKey(Attribute.builder().name("pk").type(AttributeType.STRING).build())
+     * .replicas(List.of(ReplicaTableProps.builder().region("us-east-1").build()))
      * .build();
-     * Key key = new Key(replicationStack, "ReplicationKey");
-     * Bucket replicationBucket = Bucket.Builder.create(replicationStack, "ReplicationBucket")
-     * // like was said above - replication buckets need a set physical name
-     * .bucketName(PhysicalName.GENERATE_IF_NEEDED)
-     * .encryptionKey(key)
-     * .build();
-     * // later...
-     * // later...
-     * Pipeline.Builder.create(replicationStack, "Pipeline")
-     * .crossRegionReplicationBuckets(Map.of(
-     * "us-west-1", replicationBucket))
-     * .build();
+     * globalTable.addReplica(ReplicaTableProps.builder().region("us-east-2").deletionProtection(true).build());
      * ```
      */
     public inline fun environment(block: EnvironmentDsl.() -> Unit = {}): Environment {
@@ -3549,6 +3678,7 @@ public object awscdk {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.*;
      * ExportValueOptions exportValueOptions = ExportValueOptions.builder()
+     * .description("description")
      * .name("name")
      * .build();
      * ```
@@ -4607,22 +4737,26 @@ public object awscdk {
      *
      * Example:
      * ```
-     * import path.*;
-     * import software.amazon.awscdk.services.cloudwatch.*;
      * import software.amazon.awscdk.*;
-     * import software.amazon.awscdk.services.kinesisanalytics.flink.alpha.*;
+     * import software.amazon.awscdk.services.s3.*;
+     * IBucket bucket;
      * App app = new App();
-     * Stack stack = new Stack(app, "FlinkAppTest");
-     * Application flinkApp = Application.Builder.create(stack, "App")
-     * .code(ApplicationCode.fromAsset(join(__dirname, "code-asset")))
-     * .runtime(Runtime.FLINK_1_11)
+     * Stack stack = new Stack(app, "Stack");
+     * Table.Builder.create(stack, "Table")
+     * .partitionKey(Attribute.builder()
+     * .name("id")
+     * .type(AttributeType.STRING)
+     * .build())
+     * .importSource(ImportSourceSpecification.builder()
+     * .compressionType(InputCompressionType.GZIP)
+     * .inputFormat(InputFormat.csv(CsvOptions.builder()
+     * .delimiter(",")
+     * .headerList(List.of("id", "name"))
+     * .build()))
+     * .bucket(bucket)
+     * .keyPrefix("prefix")
+     * .build())
      * .build();
-     * Alarm.Builder.create(stack, "Alarm")
-     * .metric(flinkApp.metricFullRestarts())
-     * .evaluationPeriods(1)
-     * .threshold(3)
-     * .build();
-     * app.synth();
      * ```
      */
     public inline fun stack(

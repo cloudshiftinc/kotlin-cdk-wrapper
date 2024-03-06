@@ -12,9 +12,11 @@
 package io.cloudshiftdev.awscdkdsl.services.lambda
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Boolean
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lambda.CfnFunction
 
 /**
@@ -40,6 +42,7 @@ import software.amazon.awscdk.services.lambda.CfnFunction
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.lambda.*;
  * VpcConfigProperty vpcConfigProperty = VpcConfigProperty.builder()
+ * .ipv6AllowedForDualStack(false)
  * .securityGroupIds(List.of("securityGroupIds"))
  * .subnetIds(List.of("subnetIds"))
  * .build();
@@ -55,6 +58,22 @@ public class CfnFunctionVpcConfigPropertyDsl {
     private val _securityGroupIds: MutableList<String> = mutableListOf()
 
     private val _subnetIds: MutableList<String> = mutableListOf()
+
+    /**
+     * @param ipv6AllowedForDualStack Allows outbound IPv6 traffic on VPC functions that are
+     *   connected to dual-stack subnets.
+     */
+    public fun ipv6AllowedForDualStack(ipv6AllowedForDualStack: Boolean) {
+        cdkBuilder.ipv6AllowedForDualStack(ipv6AllowedForDualStack)
+    }
+
+    /**
+     * @param ipv6AllowedForDualStack Allows outbound IPv6 traffic on VPC functions that are
+     *   connected to dual-stack subnets.
+     */
+    public fun ipv6AllowedForDualStack(ipv6AllowedForDualStack: IResolvable) {
+        cdkBuilder.ipv6AllowedForDualStack(ipv6AllowedForDualStack)
+    }
 
     /** @param securityGroupIds A list of VPC security group IDs. */
     public fun securityGroupIds(vararg securityGroupIds: String) {

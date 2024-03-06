@@ -152,12 +152,12 @@ public class CfnClusterPropsDsl {
         cdkBuilder.brokerNodeGroupInfo(brokerNodeGroupInfo)
     }
 
-    /** @param clientAuthentication Includes all client authentication related information. */
+    /** @param clientAuthentication VPC connection control settings for brokers. */
     public fun clientAuthentication(clientAuthentication: IResolvable) {
         cdkBuilder.clientAuthentication(clientAuthentication)
     }
 
-    /** @param clientAuthentication Includes all client authentication related information. */
+    /** @param clientAuthentication VPC connection control settings for brokers. */
     public fun clientAuthentication(clientAuthentication: CfnCluster.ClientAuthenticationProperty) {
         cdkBuilder.clientAuthentication(clientAuthentication)
     }

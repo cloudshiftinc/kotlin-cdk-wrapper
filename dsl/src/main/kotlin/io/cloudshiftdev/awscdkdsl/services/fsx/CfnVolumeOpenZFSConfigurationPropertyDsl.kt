@@ -228,24 +228,21 @@ public class CfnVolumeOpenZFSConfigurationPropertyDsl {
     }
 
     /**
-     * @param userAndGroupQuotas An object specifying how much storage users or groups can use on
-     *   the volume.
+     * @param userAndGroupQuotas Configures how much storage users and groups can use on the volume.
      */
     public fun userAndGroupQuotas(vararg userAndGroupQuotas: Any) {
         _userAndGroupQuotas.addAll(listOf(*userAndGroupQuotas))
     }
 
     /**
-     * @param userAndGroupQuotas An object specifying how much storage users or groups can use on
-     *   the volume.
+     * @param userAndGroupQuotas Configures how much storage users and groups can use on the volume.
      */
     public fun userAndGroupQuotas(userAndGroupQuotas: Collection<Any>) {
         _userAndGroupQuotas.addAll(userAndGroupQuotas)
     }
 
     /**
-     * @param userAndGroupQuotas An object specifying how much storage users or groups can use on
-     *   the volume.
+     * @param userAndGroupQuotas Configures how much storage users and groups can use on the volume.
      */
     public fun userAndGroupQuotas(userAndGroupQuotas: IResolvable) {
         cdkBuilder.userAndGroupQuotas(userAndGroupQuotas)

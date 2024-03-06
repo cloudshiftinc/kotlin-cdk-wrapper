@@ -78,7 +78,7 @@ public class CfnRepositoryDsl(
     /**
      * If true, deleting the repository force deletes the contents of the repository.
      *
-     * Without a force delete, you can only delete empty repositories.
+     * If false, the repository must be empty before attempting to delete it.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html#cfn-ecr-repository-emptyondelete)
      *
@@ -92,7 +92,7 @@ public class CfnRepositoryDsl(
     /**
      * If true, deleting the repository force deletes the contents of the repository.
      *
-     * Without a force delete, you can only delete empty repositories.
+     * If false, the repository must be empty before attempting to delete it.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html#cfn-ecr-repository-emptyondelete)
      *

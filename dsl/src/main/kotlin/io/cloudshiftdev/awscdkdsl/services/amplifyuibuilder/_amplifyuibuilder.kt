@@ -400,9 +400,11 @@ public object amplifyuibuilder {
      * .and(List.of(predicateProperty_))
      * .field("field")
      * .operand("operand")
+     * .operandType("operandType")
      * .operator("operator")
      * .or(List.of(predicateProperty_))
      * .build()))
+     * .slotName("slotName")
      * .userAttribute("userAttribute")
      * .build();
      * ```
@@ -443,9 +445,11 @@ public object amplifyuibuilder {
      * .and(List.of(predicateProperty_))
      * .field("field")
      * .operand("operand")
+     * .operandType("operandType")
      * .operator("operator")
      * .or(List.of(predicateProperty_))
      * .build()))
+     * .slotName("slotName")
      * .userAttribute("userAttribute")
      * .build())
      * .defaultValue("defaultValue")
@@ -520,6 +524,7 @@ public object amplifyuibuilder {
      * .events(Map.of(
      * "eventsKey", ComponentEventProperty.builder()
      * .action("action")
+     * .bindingEvent("bindingEvent")
      * .parameters(ActionParametersProperty.builder()
      * .anchor(ComponentPropertyProperty.builder()
      * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
@@ -825,6 +830,7 @@ public object amplifyuibuilder {
      * .build())
      * .build())
      * .build()))
+     * .sourceId("sourceId")
      * .build();
      * ```
      *
@@ -949,6 +955,7 @@ public object amplifyuibuilder {
      * .and(List.of(predicateProperty_))
      * .field("field")
      * .operand("operand")
+     * .operandType("operandType")
      * .operator("operator")
      * .or(List.of(predicateProperty_))
      * .build())
@@ -983,6 +990,7 @@ public object amplifyuibuilder {
      * ComponentPropertyProperty componentPropertyProperty_;
      * ComponentEventProperty componentEventProperty = ComponentEventProperty.builder()
      * .action("action")
+     * .bindingEvent("bindingEvent")
      * .parameters(ActionParametersProperty.builder()
      * .anchor(ComponentPropertyProperty.builder()
      * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
@@ -1521,6 +1529,7 @@ public object amplifyuibuilder {
      * .and(List.of(predicateProperty_))
      * .field("field")
      * .operand("operand")
+     * .operandType("operandType")
      * .operator("operator")
      * .or(List.of(predicateProperty_))
      * .build();
@@ -1586,97 +1595,8 @@ public object amplifyuibuilder {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.amplifyuibuilder.*;
+     * FormInputValuePropertyProperty formInputValuePropertyProperty_;
      * CfnForm cfnForm = CfnForm.Builder.create(this, "MyCfnForm")
-     * .dataType(FormDataTypeConfigProperty.builder()
-     * .dataSourceType("dataSourceType")
-     * .dataTypeName("dataTypeName")
-     * .build())
-     * .fields(Map.of(
-     * "fieldsKey", FieldConfigProperty.builder()
-     * .excluded(false)
-     * .inputType(FieldInputConfigProperty.builder()
-     * .type("type")
-     * // the properties below are optional
-     * .defaultChecked(false)
-     * .defaultCountryCode("defaultCountryCode")
-     * .defaultValue("defaultValue")
-     * .descriptiveText("descriptiveText")
-     * .fileUploaderConfig(FileUploaderFieldConfigProperty.builder()
-     * .acceptedFileTypes(List.of("acceptedFileTypes"))
-     * .accessLevel("accessLevel")
-     * // the properties below are optional
-     * .isResumable(false)
-     * .maxFileCount(123)
-     * .maxSize(123)
-     * .showThumbnails(false)
-     * .build())
-     * .isArray(false)
-     * .maxValue(123)
-     * .minValue(123)
-     * .name("name")
-     * .placeholder("placeholder")
-     * .readOnly(false)
-     * .required(false)
-     * .step(123)
-     * .value("value")
-     * .valueMappings(ValueMappingsProperty.builder()
-     * .values(List.of(ValueMappingProperty.builder()
-     * .value(FormInputValuePropertyProperty.builder()
-     * .value("value")
-     * .build())
-     * // the properties below are optional
-     * .displayValue(FormInputValuePropertyProperty.builder()
-     * .value("value")
-     * .build())
-     * .build()))
-     * .build())
-     * .build())
-     * .label("label")
-     * .position(FieldPositionProperty.builder()
-     * .below("below")
-     * .fixed("fixed")
-     * .rightOf("rightOf")
-     * .build())
-     * .validations(List.of(FieldValidationConfigurationProperty.builder()
-     * .type("type")
-     * // the properties below are optional
-     * .numValues(List.of(123))
-     * .strValues(List.of("strValues"))
-     * .validationMessage("validationMessage")
-     * .build()))
-     * .build()))
-     * .formActionType("formActionType")
-     * .name("name")
-     * .schemaVersion("schemaVersion")
-     * .sectionalElements(Map.of(
-     * "sectionalElementsKey", SectionalElementProperty.builder()
-     * .type("type")
-     * // the properties below are optional
-     * .excluded(false)
-     * .level(123)
-     * .orientation("orientation")
-     * .position(FieldPositionProperty.builder()
-     * .below("below")
-     * .fixed("fixed")
-     * .rightOf("rightOf")
-     * .build())
-     * .text("text")
-     * .build()))
-     * .style(FormStyleProperty.builder()
-     * .horizontalGap(FormStyleConfigProperty.builder()
-     * .tokenReference("tokenReference")
-     * .value("value")
-     * .build())
-     * .outerPadding(FormStyleConfigProperty.builder()
-     * .tokenReference("tokenReference")
-     * .value("value")
-     * .build())
-     * .verticalGap(FormStyleConfigProperty.builder()
-     * .tokenReference("tokenReference")
-     * .value("value")
-     * .build())
-     * .build())
-     * // the properties below are optional
      * .appId("appId")
      * .cta(FormCTAProperty.builder()
      * .cancel(FormButtonProperty.builder()
@@ -1708,8 +1628,117 @@ public object amplifyuibuilder {
      * .build())
      * .build())
      * .build())
+     * .dataType(FormDataTypeConfigProperty.builder()
+     * .dataSourceType("dataSourceType")
+     * .dataTypeName("dataTypeName")
+     * .build())
      * .environmentName("environmentName")
+     * .fields(Map.of(
+     * "fieldsKey", FieldConfigProperty.builder()
+     * .excluded(false)
+     * .inputType(FieldInputConfigProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .defaultChecked(false)
+     * .defaultCountryCode("defaultCountryCode")
+     * .defaultValue("defaultValue")
+     * .descriptiveText("descriptiveText")
+     * .fileUploaderConfig(FileUploaderFieldConfigProperty.builder()
+     * .acceptedFileTypes(List.of("acceptedFileTypes"))
+     * .accessLevel("accessLevel")
+     * // the properties below are optional
+     * .isResumable(false)
+     * .maxFileCount(123)
+     * .maxSize(123)
+     * .showThumbnails(false)
+     * .build())
+     * .isArray(false)
+     * .maxValue(123)
+     * .minValue(123)
+     * .name("name")
+     * .placeholder("placeholder")
+     * .readOnly(false)
+     * .required(false)
+     * .step(123)
+     * .value("value")
+     * .valueMappings(ValueMappingsProperty.builder()
+     * .values(List.of(ValueMappingProperty.builder()
+     * .value(FormInputValuePropertyProperty.builder()
+     * .bindingProperties(FormInputValuePropertyBindingPropertiesProperty.builder()
+     * .property("property")
+     * // the properties below are optional
+     * .field("field")
+     * .build())
+     * .concat(List.of(formInputValuePropertyProperty_))
+     * .value("value")
+     * .build())
+     * // the properties below are optional
+     * .displayValue(FormInputValuePropertyProperty.builder()
+     * .bindingProperties(FormInputValuePropertyBindingPropertiesProperty.builder()
+     * .property("property")
+     * // the properties below are optional
+     * .field("field")
+     * .build())
+     * .concat(List.of(formInputValuePropertyProperty_))
+     * .value("value")
+     * .build())
+     * .build()))
+     * // the properties below are optional
+     * .bindingProperties(Map.of(
+     * "bindingPropertiesKey", FormInputBindingPropertiesValueProperty.builder()
+     * .bindingProperties(FormInputBindingPropertiesValuePropertiesProperty.builder()
+     * .model("model")
+     * .build())
+     * .type("type")
+     * .build()))
+     * .build())
+     * .build())
+     * .label("label")
+     * .position(FieldPositionProperty.builder()
+     * .below("below")
+     * .fixed("fixed")
+     * .rightOf("rightOf")
+     * .build())
+     * .validations(List.of(FieldValidationConfigurationProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .numValues(List.of(123))
+     * .strValues(List.of("strValues"))
+     * .validationMessage("validationMessage")
+     * .build()))
+     * .build()))
+     * .formActionType("formActionType")
      * .labelDecorator("labelDecorator")
+     * .name("name")
+     * .schemaVersion("schemaVersion")
+     * .sectionalElements(Map.of(
+     * "sectionalElementsKey", SectionalElementProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .excluded(false)
+     * .level(123)
+     * .orientation("orientation")
+     * .position(FieldPositionProperty.builder()
+     * .below("below")
+     * .fixed("fixed")
+     * .rightOf("rightOf")
+     * .build())
+     * .text("text")
+     * .build()))
+     * .style(FormStyleProperty.builder()
+     * .horizontalGap(FormStyleConfigProperty.builder()
+     * .tokenReference("tokenReference")
+     * .value("value")
+     * .build())
+     * .outerPadding(FormStyleConfigProperty.builder()
+     * .tokenReference("tokenReference")
+     * .value("value")
+     * .build())
+     * .verticalGap(FormStyleConfigProperty.builder()
+     * .tokenReference("tokenReference")
+     * .value("value")
+     * .build())
+     * .build())
      * .tags(Map.of(
      * "tagsKey", "tags"))
      * .build();
@@ -1735,6 +1764,7 @@ public object amplifyuibuilder {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.amplifyuibuilder.*;
+     * FormInputValuePropertyProperty formInputValuePropertyProperty_;
      * FieldConfigProperty fieldConfigProperty = FieldConfigProperty.builder()
      * .excluded(false)
      * .inputType(FieldInputConfigProperty.builder()
@@ -1765,12 +1795,32 @@ public object amplifyuibuilder {
      * .valueMappings(ValueMappingsProperty.builder()
      * .values(List.of(ValueMappingProperty.builder()
      * .value(FormInputValuePropertyProperty.builder()
+     * .bindingProperties(FormInputValuePropertyBindingPropertiesProperty.builder()
+     * .property("property")
+     * // the properties below are optional
+     * .field("field")
+     * .build())
+     * .concat(List.of(formInputValuePropertyProperty_))
      * .value("value")
      * .build())
      * // the properties below are optional
      * .displayValue(FormInputValuePropertyProperty.builder()
+     * .bindingProperties(FormInputValuePropertyBindingPropertiesProperty.builder()
+     * .property("property")
+     * // the properties below are optional
+     * .field("field")
+     * .build())
+     * .concat(List.of(formInputValuePropertyProperty_))
      * .value("value")
      * .build())
+     * .build()))
+     * // the properties below are optional
+     * .bindingProperties(Map.of(
+     * "bindingPropertiesKey", FormInputBindingPropertiesValueProperty.builder()
+     * .bindingProperties(FormInputBindingPropertiesValuePropertiesProperty.builder()
+     * .model("model")
+     * .build())
+     * .type("type")
      * .build()))
      * .build())
      * .build())
@@ -1809,6 +1859,7 @@ public object amplifyuibuilder {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.amplifyuibuilder.*;
+     * FormInputValuePropertyProperty formInputValuePropertyProperty_;
      * FieldInputConfigProperty fieldInputConfigProperty = FieldInputConfigProperty.builder()
      * .type("type")
      * // the properties below are optional
@@ -1837,12 +1888,32 @@ public object amplifyuibuilder {
      * .valueMappings(ValueMappingsProperty.builder()
      * .values(List.of(ValueMappingProperty.builder()
      * .value(FormInputValuePropertyProperty.builder()
+     * .bindingProperties(FormInputValuePropertyBindingPropertiesProperty.builder()
+     * .property("property")
+     * // the properties below are optional
+     * .field("field")
+     * .build())
+     * .concat(List.of(formInputValuePropertyProperty_))
      * .value("value")
      * .build())
      * // the properties below are optional
      * .displayValue(FormInputValuePropertyProperty.builder()
+     * .bindingProperties(FormInputValuePropertyBindingPropertiesProperty.builder()
+     * .property("property")
+     * // the properties below are optional
+     * .field("field")
+     * .build())
+     * .concat(List.of(formInputValuePropertyProperty_))
      * .value("value")
      * .build())
+     * .build()))
+     * // the properties below are optional
+     * .bindingProperties(Map.of(
+     * "bindingPropertiesKey", FormInputBindingPropertiesValueProperty.builder()
+     * .bindingProperties(FormInputBindingPropertiesValuePropertiesProperty.builder()
+     * .model("model")
+     * .build())
+     * .type("type")
      * .build()))
      * .build())
      * .build();
@@ -2048,6 +2119,92 @@ public object amplifyuibuilder {
     }
 
     /**
+     * Represents the data binding configuration for a specific property using data stored in AWS .
+     *
+     * For AWS connected properties, you can bind a property to data stored in an Amplify DataStore
+     * model.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.amplifyuibuilder.*;
+     * FormInputBindingPropertiesValuePropertiesProperty
+     * formInputBindingPropertiesValuePropertiesProperty =
+     * FormInputBindingPropertiesValuePropertiesProperty.builder()
+     * .model("model")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputbindingpropertiesvalueproperties.html)
+     */
+    public inline fun cfnFormFormInputBindingPropertiesValuePropertiesProperty(
+        block: CfnFormFormInputBindingPropertiesValuePropertiesPropertyDsl.() -> Unit = {}
+    ): CfnForm.FormInputBindingPropertiesValuePropertiesProperty {
+        val builder = CfnFormFormInputBindingPropertiesValuePropertiesPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Represents the data binding configuration for a form's input fields at runtime.You can use
+     * `FormInputBindingPropertiesValue` to add exposed properties to a form to allow different
+     * values to be entered when a form is reused in different places in an app.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.amplifyuibuilder.*;
+     * FormInputBindingPropertiesValueProperty formInputBindingPropertiesValueProperty =
+     * FormInputBindingPropertiesValueProperty.builder()
+     * .bindingProperties(FormInputBindingPropertiesValuePropertiesProperty.builder()
+     * .model("model")
+     * .build())
+     * .type("type")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputbindingpropertiesvalue.html)
+     */
+    public inline fun cfnFormFormInputBindingPropertiesValueProperty(
+        block: CfnFormFormInputBindingPropertiesValuePropertyDsl.() -> Unit = {}
+    ): CfnForm.FormInputBindingPropertiesValueProperty {
+        val builder = CfnFormFormInputBindingPropertiesValuePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Associates a form property to a binding property.
+     *
+     * This enables exposed properties on the top level form to propagate data to the form's
+     * property values.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.amplifyuibuilder.*;
+     * FormInputValuePropertyBindingPropertiesProperty formInputValuePropertyBindingPropertiesProperty
+     * = FormInputValuePropertyBindingPropertiesProperty.builder()
+     * .property("property")
+     * // the properties below are optional
+     * .field("field")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputvaluepropertybindingproperties.html)
+     */
+    public inline fun cfnFormFormInputValuePropertyBindingPropertiesProperty(
+        block: CfnFormFormInputValuePropertyBindingPropertiesPropertyDsl.() -> Unit = {}
+    ): CfnForm.FormInputValuePropertyBindingPropertiesProperty {
+        val builder = CfnFormFormInputValuePropertyBindingPropertiesPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The `FormInputValueProperty` property specifies the configuration for an input field on a
      * form.
      *
@@ -2058,8 +2215,15 @@ public object amplifyuibuilder {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.amplifyuibuilder.*;
+     * FormInputValuePropertyProperty formInputValuePropertyProperty_;
      * FormInputValuePropertyProperty formInputValuePropertyProperty =
      * FormInputValuePropertyProperty.builder()
+     * .bindingProperties(FormInputValuePropertyBindingPropertiesProperty.builder()
+     * .property("property")
+     * // the properties below are optional
+     * .field("field")
+     * .build())
+     * .concat(List.of(formInputValuePropertyProperty_))
      * .value("value")
      * .build();
      * ```
@@ -2141,97 +2305,8 @@ public object amplifyuibuilder {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.amplifyuibuilder.*;
+     * FormInputValuePropertyProperty formInputValuePropertyProperty_;
      * CfnFormProps cfnFormProps = CfnFormProps.builder()
-     * .dataType(FormDataTypeConfigProperty.builder()
-     * .dataSourceType("dataSourceType")
-     * .dataTypeName("dataTypeName")
-     * .build())
-     * .fields(Map.of(
-     * "fieldsKey", FieldConfigProperty.builder()
-     * .excluded(false)
-     * .inputType(FieldInputConfigProperty.builder()
-     * .type("type")
-     * // the properties below are optional
-     * .defaultChecked(false)
-     * .defaultCountryCode("defaultCountryCode")
-     * .defaultValue("defaultValue")
-     * .descriptiveText("descriptiveText")
-     * .fileUploaderConfig(FileUploaderFieldConfigProperty.builder()
-     * .acceptedFileTypes(List.of("acceptedFileTypes"))
-     * .accessLevel("accessLevel")
-     * // the properties below are optional
-     * .isResumable(false)
-     * .maxFileCount(123)
-     * .maxSize(123)
-     * .showThumbnails(false)
-     * .build())
-     * .isArray(false)
-     * .maxValue(123)
-     * .minValue(123)
-     * .name("name")
-     * .placeholder("placeholder")
-     * .readOnly(false)
-     * .required(false)
-     * .step(123)
-     * .value("value")
-     * .valueMappings(ValueMappingsProperty.builder()
-     * .values(List.of(ValueMappingProperty.builder()
-     * .value(FormInputValuePropertyProperty.builder()
-     * .value("value")
-     * .build())
-     * // the properties below are optional
-     * .displayValue(FormInputValuePropertyProperty.builder()
-     * .value("value")
-     * .build())
-     * .build()))
-     * .build())
-     * .build())
-     * .label("label")
-     * .position(FieldPositionProperty.builder()
-     * .below("below")
-     * .fixed("fixed")
-     * .rightOf("rightOf")
-     * .build())
-     * .validations(List.of(FieldValidationConfigurationProperty.builder()
-     * .type("type")
-     * // the properties below are optional
-     * .numValues(List.of(123))
-     * .strValues(List.of("strValues"))
-     * .validationMessage("validationMessage")
-     * .build()))
-     * .build()))
-     * .formActionType("formActionType")
-     * .name("name")
-     * .schemaVersion("schemaVersion")
-     * .sectionalElements(Map.of(
-     * "sectionalElementsKey", SectionalElementProperty.builder()
-     * .type("type")
-     * // the properties below are optional
-     * .excluded(false)
-     * .level(123)
-     * .orientation("orientation")
-     * .position(FieldPositionProperty.builder()
-     * .below("below")
-     * .fixed("fixed")
-     * .rightOf("rightOf")
-     * .build())
-     * .text("text")
-     * .build()))
-     * .style(FormStyleProperty.builder()
-     * .horizontalGap(FormStyleConfigProperty.builder()
-     * .tokenReference("tokenReference")
-     * .value("value")
-     * .build())
-     * .outerPadding(FormStyleConfigProperty.builder()
-     * .tokenReference("tokenReference")
-     * .value("value")
-     * .build())
-     * .verticalGap(FormStyleConfigProperty.builder()
-     * .tokenReference("tokenReference")
-     * .value("value")
-     * .build())
-     * .build())
-     * // the properties below are optional
      * .appId("appId")
      * .cta(FormCTAProperty.builder()
      * .cancel(FormButtonProperty.builder()
@@ -2263,8 +2338,117 @@ public object amplifyuibuilder {
      * .build())
      * .build())
      * .build())
+     * .dataType(FormDataTypeConfigProperty.builder()
+     * .dataSourceType("dataSourceType")
+     * .dataTypeName("dataTypeName")
+     * .build())
      * .environmentName("environmentName")
+     * .fields(Map.of(
+     * "fieldsKey", FieldConfigProperty.builder()
+     * .excluded(false)
+     * .inputType(FieldInputConfigProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .defaultChecked(false)
+     * .defaultCountryCode("defaultCountryCode")
+     * .defaultValue("defaultValue")
+     * .descriptiveText("descriptiveText")
+     * .fileUploaderConfig(FileUploaderFieldConfigProperty.builder()
+     * .acceptedFileTypes(List.of("acceptedFileTypes"))
+     * .accessLevel("accessLevel")
+     * // the properties below are optional
+     * .isResumable(false)
+     * .maxFileCount(123)
+     * .maxSize(123)
+     * .showThumbnails(false)
+     * .build())
+     * .isArray(false)
+     * .maxValue(123)
+     * .minValue(123)
+     * .name("name")
+     * .placeholder("placeholder")
+     * .readOnly(false)
+     * .required(false)
+     * .step(123)
+     * .value("value")
+     * .valueMappings(ValueMappingsProperty.builder()
+     * .values(List.of(ValueMappingProperty.builder()
+     * .value(FormInputValuePropertyProperty.builder()
+     * .bindingProperties(FormInputValuePropertyBindingPropertiesProperty.builder()
+     * .property("property")
+     * // the properties below are optional
+     * .field("field")
+     * .build())
+     * .concat(List.of(formInputValuePropertyProperty_))
+     * .value("value")
+     * .build())
+     * // the properties below are optional
+     * .displayValue(FormInputValuePropertyProperty.builder()
+     * .bindingProperties(FormInputValuePropertyBindingPropertiesProperty.builder()
+     * .property("property")
+     * // the properties below are optional
+     * .field("field")
+     * .build())
+     * .concat(List.of(formInputValuePropertyProperty_))
+     * .value("value")
+     * .build())
+     * .build()))
+     * // the properties below are optional
+     * .bindingProperties(Map.of(
+     * "bindingPropertiesKey", FormInputBindingPropertiesValueProperty.builder()
+     * .bindingProperties(FormInputBindingPropertiesValuePropertiesProperty.builder()
+     * .model("model")
+     * .build())
+     * .type("type")
+     * .build()))
+     * .build())
+     * .build())
+     * .label("label")
+     * .position(FieldPositionProperty.builder()
+     * .below("below")
+     * .fixed("fixed")
+     * .rightOf("rightOf")
+     * .build())
+     * .validations(List.of(FieldValidationConfigurationProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .numValues(List.of(123))
+     * .strValues(List.of("strValues"))
+     * .validationMessage("validationMessage")
+     * .build()))
+     * .build()))
+     * .formActionType("formActionType")
      * .labelDecorator("labelDecorator")
+     * .name("name")
+     * .schemaVersion("schemaVersion")
+     * .sectionalElements(Map.of(
+     * "sectionalElementsKey", SectionalElementProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .excluded(false)
+     * .level(123)
+     * .orientation("orientation")
+     * .position(FieldPositionProperty.builder()
+     * .below("below")
+     * .fixed("fixed")
+     * .rightOf("rightOf")
+     * .build())
+     * .text("text")
+     * .build()))
+     * .style(FormStyleProperty.builder()
+     * .horizontalGap(FormStyleConfigProperty.builder()
+     * .tokenReference("tokenReference")
+     * .value("value")
+     * .build())
+     * .outerPadding(FormStyleConfigProperty.builder()
+     * .tokenReference("tokenReference")
+     * .value("value")
+     * .build())
+     * .verticalGap(FormStyleConfigProperty.builder()
+     * .tokenReference("tokenReference")
+     * .value("value")
+     * .build())
+     * .build())
      * .tags(Map.of(
      * "tagsKey", "tags"))
      * .build();
@@ -2326,12 +2510,25 @@ public object amplifyuibuilder {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.amplifyuibuilder.*;
+     * FormInputValuePropertyProperty formInputValuePropertyProperty_;
      * ValueMappingProperty valueMappingProperty = ValueMappingProperty.builder()
      * .value(FormInputValuePropertyProperty.builder()
+     * .bindingProperties(FormInputValuePropertyBindingPropertiesProperty.builder()
+     * .property("property")
+     * // the properties below are optional
+     * .field("field")
+     * .build())
+     * .concat(List.of(formInputValuePropertyProperty_))
      * .value("value")
      * .build())
      * // the properties below are optional
      * .displayValue(FormInputValuePropertyProperty.builder()
+     * .bindingProperties(FormInputValuePropertyBindingPropertiesProperty.builder()
+     * .property("property")
+     * // the properties below are optional
+     * .field("field")
+     * .build())
+     * .concat(List.of(formInputValuePropertyProperty_))
      * .value("value")
      * .build())
      * .build();
@@ -2355,15 +2552,36 @@ public object amplifyuibuilder {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.amplifyuibuilder.*;
+     * FormInputValuePropertyProperty formInputValuePropertyProperty_;
      * ValueMappingsProperty valueMappingsProperty = ValueMappingsProperty.builder()
      * .values(List.of(ValueMappingProperty.builder()
      * .value(FormInputValuePropertyProperty.builder()
+     * .bindingProperties(FormInputValuePropertyBindingPropertiesProperty.builder()
+     * .property("property")
+     * // the properties below are optional
+     * .field("field")
+     * .build())
+     * .concat(List.of(formInputValuePropertyProperty_))
      * .value("value")
      * .build())
      * // the properties below are optional
      * .displayValue(FormInputValuePropertyProperty.builder()
+     * .bindingProperties(FormInputValuePropertyBindingPropertiesProperty.builder()
+     * .property("property")
+     * // the properties below are optional
+     * .field("field")
+     * .build())
+     * .concat(List.of(formInputValuePropertyProperty_))
      * .value("value")
      * .build())
+     * .build()))
+     * // the properties below are optional
+     * .bindingProperties(Map.of(
+     * "bindingPropertiesKey", FormInputBindingPropertiesValueProperty.builder()
+     * .bindingProperties(FormInputBindingPropertiesValuePropertiesProperty.builder()
+     * .model("model")
+     * .build())
+     * .type("type")
      * .build()))
      * .build();
      * ```
@@ -2391,17 +2609,9 @@ public object amplifyuibuilder {
      * import software.amazon.awscdk.services.amplifyuibuilder.*;
      * ThemeValuesProperty themeValuesProperty_;
      * CfnTheme cfnTheme = CfnTheme.Builder.create(this, "MyCfnTheme")
-     * .name("name")
-     * .values(List.of(ThemeValuesProperty.builder()
-     * .key("key")
-     * .value(ThemeValueProperty.builder()
-     * .children(List.of(themeValuesProperty_))
-     * .value("value")
-     * .build())
-     * .build()))
-     * // the properties below are optional
      * .appId("appId")
      * .environmentName("environmentName")
+     * .name("name")
      * .overrides(List.of(ThemeValuesProperty.builder()
      * .key("key")
      * .value(ThemeValueProperty.builder()
@@ -2411,6 +2621,13 @@ public object amplifyuibuilder {
      * .build()))
      * .tags(Map.of(
      * "tagsKey", "tags"))
+     * .values(List.of(ThemeValuesProperty.builder()
+     * .key("key")
+     * .value(ThemeValueProperty.builder()
+     * .children(List.of(themeValuesProperty_))
+     * .value("value")
+     * .build())
+     * .build()))
      * .build();
      * ```
      *
@@ -2436,17 +2653,9 @@ public object amplifyuibuilder {
      * import software.amazon.awscdk.services.amplifyuibuilder.*;
      * ThemeValuesProperty themeValuesProperty_;
      * CfnThemeProps cfnThemeProps = CfnThemeProps.builder()
-     * .name("name")
-     * .values(List.of(ThemeValuesProperty.builder()
-     * .key("key")
-     * .value(ThemeValueProperty.builder()
-     * .children(List.of(themeValuesProperty_))
-     * .value("value")
-     * .build())
-     * .build()))
-     * // the properties below are optional
      * .appId("appId")
      * .environmentName("environmentName")
+     * .name("name")
      * .overrides(List.of(ThemeValuesProperty.builder()
      * .key("key")
      * .value(ThemeValueProperty.builder()
@@ -2456,6 +2665,13 @@ public object amplifyuibuilder {
      * .build()))
      * .tags(Map.of(
      * "tagsKey", "tags"))
+     * .values(List.of(ThemeValuesProperty.builder()
+     * .key("key")
+     * .value(ThemeValueProperty.builder()
+     * .children(List.of(themeValuesProperty_))
+     * .value("value")
+     * .build())
+     * .build()))
      * .build();
      * ```
      *

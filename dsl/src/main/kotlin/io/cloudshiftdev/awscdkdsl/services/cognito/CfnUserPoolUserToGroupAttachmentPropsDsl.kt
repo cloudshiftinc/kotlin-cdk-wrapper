@@ -38,7 +38,7 @@ public class CfnUserPoolUserToGroupAttachmentPropsDsl {
     private val cdkBuilder: CfnUserPoolUserToGroupAttachmentProps.Builder =
         CfnUserPoolUserToGroupAttachmentProps.builder()
 
-    /** @param groupName The group name. */
+    /** @param groupName The name of the group that you want to add your user to. */
     public fun groupName(groupName: String) {
         cdkBuilder.groupName(groupName)
     }
@@ -48,7 +48,7 @@ public class CfnUserPoolUserToGroupAttachmentPropsDsl {
         cdkBuilder.userPoolId(userPoolId)
     }
 
-    /** @param username The username for the user. */
+    /** @param username the value to be set. */
     public fun username(username: String) {
         cdkBuilder.username(username)
     }

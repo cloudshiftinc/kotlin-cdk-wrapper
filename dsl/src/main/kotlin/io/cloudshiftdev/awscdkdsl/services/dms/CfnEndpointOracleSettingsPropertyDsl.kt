@@ -502,7 +502,7 @@ public class CfnEndpointOracleSettingsPropertyDsl {
      *
      * You can specify one of two sets of values for these permissions. You can specify the values
      * for this setting and `SecretsManagerOracleAsmSecretId` . Or you can specify clear-text values
-     * for `AsmUserName` , `AsmPassword` , and `AsmServerName` . You can't specify both.
+     * for `AsmUser` , `AsmPassword` , and `AsmServerName` . You can't specify both.
      *
      * For more information on creating this `SecretsManagerOracleAsmSecret` , the corresponding
      * `SecretsManagerOracleAsmAccessRoleArn` , and the `SecretsManagerOracleAsmSecretId` that is

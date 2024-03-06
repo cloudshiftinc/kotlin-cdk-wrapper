@@ -12,6 +12,8 @@
 package io.cloudshiftdev.awscdkdsl.services.events
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import io.cloudshiftdev.awscdkdsl.common.MapBuilder
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -27,10 +29,12 @@ import software.amazon.awscdk.services.events.CfnEventBusProps
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.events.*;
+ * Object policy;
  * CfnEventBusProps cfnEventBusProps = CfnEventBusProps.builder()
  * .name("name")
  * // the properties below are optional
  * .eventSourceName("eventSourceName")
+ * .policy(policy)
  * .tags(List.of(TagEntryProperty.builder()
  * .key("key")
  * .value("value")
@@ -65,6 +69,24 @@ public class CfnEventBusPropsDsl {
      */
     public fun name(name: String) {
         cdkBuilder.name(name)
+    }
+
+    /**
+     * @param policy The permissions policy of the event bus, describing which other AWS accounts
+     *   can write events to this event bus.
+     */
+    public fun policy(policy: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(policy)
+        cdkBuilder.policy(builder.map)
+    }
+
+    /**
+     * @param policy The permissions policy of the event bus, describing which other AWS accounts
+     *   can write events to this event bus.
+     */
+    public fun policy(policy: Any) {
+        cdkBuilder.policy(policy)
     }
 
     /** @param tags Tags to associate with the event bus. */

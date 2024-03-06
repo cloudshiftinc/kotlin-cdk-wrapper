@@ -31,7 +31,7 @@ import software.constructs.Construct
  *
  * Any configuration update, including adding a streaming source using this operation, results in a
  * new version of the application. You can use the
- * [DescribeApplication](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_DescribeApplication.html)
+ * [DescribeApplication](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_DescribeApplication.html)
  * operation to find the current application version.
  *
  * Creation of multiple outputs should be sequential (use of DependsOn) to avoid a problem with a
@@ -86,15 +86,15 @@ public class CfnApplicationOutputDsl(
     }
 
     /**
-     * Describes a SQL-based Kinesis Data Analytics application's output configuration, in which you
-     * identify an in-application stream and a destination where you want the in-application stream
-     * data to be written.
+     * Describes a SQL-based Managed Service for Apache Flink application's output configuration, in
+     * which you identify an in-application stream and a destination where you want the
+     * in-application stream data to be written.
      *
      * The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationoutput.html#cfn-kinesisanalyticsv2-applicationoutput-output)
      *
-     * @param output Describes a SQL-based Kinesis Data Analytics application's output
+     * @param output Describes a SQL-based Managed Service for Apache Flink application's output
      *   configuration, in which you identify an in-application stream and a destination where you
      *   want the in-application stream data to be written.
      */
@@ -103,15 +103,15 @@ public class CfnApplicationOutputDsl(
     }
 
     /**
-     * Describes a SQL-based Kinesis Data Analytics application's output configuration, in which you
-     * identify an in-application stream and a destination where you want the in-application stream
-     * data to be written.
+     * Describes a SQL-based Managed Service for Apache Flink application's output configuration, in
+     * which you identify an in-application stream and a destination where you want the
+     * in-application stream data to be written.
      *
      * The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationoutput.html#cfn-kinesisanalyticsv2-applicationoutput-output)
      *
-     * @param output Describes a SQL-based Kinesis Data Analytics application's output
+     * @param output Describes a SQL-based Managed Service for Apache Flink application's output
      *   configuration, in which you identify an in-application stream and a destination where you
      *   want the in-application stream data to be written.
      */

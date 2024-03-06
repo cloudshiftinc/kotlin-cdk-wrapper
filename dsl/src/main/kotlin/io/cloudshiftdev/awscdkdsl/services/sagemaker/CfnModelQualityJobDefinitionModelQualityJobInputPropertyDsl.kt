@@ -18,7 +18,7 @@ import software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition
 /**
  * The input for the model quality monitoring job.
  *
- * Currently endponts are supported for input for model quality monitoring jobs.
+ * Currently endpoints are supported for input for model quality monitoring jobs.
  *
  * Example:
  * ```
@@ -74,12 +74,12 @@ public class CfnModelQualityJobDefinitionModelQualityJobInputPropertyDsl {
     private val cdkBuilder: CfnModelQualityJobDefinition.ModelQualityJobInputProperty.Builder =
         CfnModelQualityJobDefinition.ModelQualityJobInputProperty.builder()
 
-    /** @param batchTransformInput The batch transform input for a monitoring job. */
+    /** @param batchTransformInput Input object for the batch transform job. */
     public fun batchTransformInput(batchTransformInput: IResolvable) {
         cdkBuilder.batchTransformInput(batchTransformInput)
     }
 
-    /** @param batchTransformInput The batch transform input for a monitoring job. */
+    /** @param batchTransformInput Input object for the batch transform job. */
     public fun batchTransformInput(
         batchTransformInput: CfnModelQualityJobDefinition.BatchTransformInputProperty
     ) {

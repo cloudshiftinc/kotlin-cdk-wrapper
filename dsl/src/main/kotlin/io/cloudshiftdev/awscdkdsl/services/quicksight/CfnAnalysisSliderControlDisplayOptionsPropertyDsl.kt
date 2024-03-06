@@ -25,6 +25,10 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * import software.amazon.awscdk.services.quicksight.*;
  * SliderControlDisplayOptionsProperty sliderControlDisplayOptionsProperty =
  * SliderControlDisplayOptionsProperty.builder()
+ * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+ * .infoIconText("infoIconText")
+ * .visibility("visibility")
+ * .build())
  * .titleOptions(LabelOptionsProperty.builder()
  * .customLabel("customLabel")
  * .fontConfiguration(FontConfigurationProperty.builder()
@@ -49,6 +53,18 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
 public class CfnAnalysisSliderControlDisplayOptionsPropertyDsl {
     private val cdkBuilder: CfnAnalysis.SliderControlDisplayOptionsProperty.Builder =
         CfnAnalysis.SliderControlDisplayOptionsProperty.builder()
+
+    /** @param infoIconLabelOptions The configuration of info icon label options. */
+    public fun infoIconLabelOptions(infoIconLabelOptions: IResolvable) {
+        cdkBuilder.infoIconLabelOptions(infoIconLabelOptions)
+    }
+
+    /** @param infoIconLabelOptions The configuration of info icon label options. */
+    public fun infoIconLabelOptions(
+        infoIconLabelOptions: CfnAnalysis.SheetControlInfoIconLabelOptionsProperty
+    ) {
+        cdkBuilder.infoIconLabelOptions(infoIconLabelOptions)
+    }
 
     /** @param titleOptions The options to configure the title visibility, name, and font size. */
     public fun titleOptions(titleOptions: IResolvable) {

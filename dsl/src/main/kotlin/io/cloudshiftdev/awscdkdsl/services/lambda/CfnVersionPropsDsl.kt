@@ -33,6 +33,11 @@ import software.amazon.awscdk.services.lambda.CfnVersionProps
  * .provisionedConcurrencyConfig(ProvisionedConcurrencyConfigurationProperty.builder()
  * .provisionedConcurrentExecutions(123)
  * .build())
+ * .runtimePolicy(RuntimePolicyProperty.builder()
+ * .updateRuntimeOn("updateRuntimeOn")
+ * // the properties below are optional
+ * .runtimeVersionArn("runtimeVersionArn")
+ * .build())
  * .build();
  * ```
  *
@@ -88,6 +93,16 @@ public class CfnVersionPropsDsl {
         provisionedConcurrencyConfig: CfnVersion.ProvisionedConcurrencyConfigurationProperty
     ) {
         cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig)
+    }
+
+    /** @param runtimePolicy Runtime Management Config of a function. */
+    public fun runtimePolicy(runtimePolicy: IResolvable) {
+        cdkBuilder.runtimePolicy(runtimePolicy)
+    }
+
+    /** @param runtimePolicy Runtime Management Config of a function. */
+    public fun runtimePolicy(runtimePolicy: CfnVersion.RuntimePolicyProperty) {
+        cdkBuilder.runtimePolicy(runtimePolicy)
     }
 
     public fun build(): CfnVersionProps = cdkBuilder.build()

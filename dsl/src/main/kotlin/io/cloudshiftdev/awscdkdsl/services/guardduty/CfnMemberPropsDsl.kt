@@ -26,11 +26,11 @@ import software.amazon.awscdk.services.guardduty.CfnMemberProps
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.guardduty.*;
  * CfnMemberProps cfnMemberProps = CfnMemberProps.builder()
- * .detectorId("detectorId")
  * .email("email")
- * .memberId("memberId")
  * // the properties below are optional
+ * .detectorId("detectorId")
  * .disableEmailNotification(false)
+ * .memberId("memberId")
  * .message("message")
  * .status("status")
  * .build();

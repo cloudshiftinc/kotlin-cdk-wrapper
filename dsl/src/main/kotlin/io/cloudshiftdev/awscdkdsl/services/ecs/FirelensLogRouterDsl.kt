@@ -21,6 +21,7 @@ import kotlin.collections.Map
 import kotlin.collections.MutableList
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.ecs.ContainerImage
+import software.amazon.awscdk.services.ecs.CredentialSpec
 import software.amazon.awscdk.services.ecs.EnvironmentFile
 import software.amazon.awscdk.services.ecs.FirelensConfig
 import software.amazon.awscdk.services.ecs.FirelensLogRouter
@@ -45,6 +46,7 @@ import software.constructs.Construct
  * import software.amazon.awscdk.services.ecs.*;
  * AppProtocol appProtocol;
  * ContainerImage containerImage;
+ * CredentialSpec credentialSpec;
  * EnvironmentFile environmentFile;
  * LinuxParameters linuxParameters;
  * LogDriver logDriver;
@@ -67,6 +69,7 @@ import software.constructs.Construct
  * .command(List.of("command"))
  * .containerName("containerName")
  * .cpu(123)
+ * .credentialSpecs(List.of(credentialSpec))
  * .disableNetworking(false)
  * .dnsSearchDomains(List.of("dnsSearchDomains"))
  * .dnsServers(List.of("dnsServers"))
@@ -91,6 +94,7 @@ import software.constructs.Construct
  * .build())
  * .hostname("hostname")
  * .inferenceAcceleratorResources(List.of("inferenceAcceleratorResources"))
+ * .interactive(false)
  * .linuxParameters(linuxParameters)
  * .logging(logDriver)
  * .memoryLimitMiB(123)
@@ -133,6 +137,8 @@ public class FirelensLogRouterDsl(
     private val cdkBuilder: FirelensLogRouter.Builder = FirelensLogRouter.Builder.create(scope, id)
 
     private val _command: MutableList<String> = mutableListOf()
+
+    private val _credentialSpecs: MutableList<CredentialSpec> = mutableListOf()
 
     private val _dnsSearchDomains: MutableList<String> = mutableListOf()
 
@@ -198,6 +204,40 @@ public class FirelensLogRouterDsl(
      */
     public fun cpu(cpu: Number) {
         cdkBuilder.cpu(cpu)
+    }
+
+    /**
+     * A list of ARNs in SSM or Amazon S3 to a credential spec (`CredSpec`) file that configures the
+     * container for Active Directory authentication.
+     *
+     * We recommend that you use this parameter instead of the `dockerSecurityOptions`.
+     *
+     * Currently, only one credential spec is allowed per container definition.
+     *
+     * Default: - No credential specs.
+     *
+     * @param credentialSpecs A list of ARNs in SSM or Amazon S3 to a credential spec (`CredSpec`)
+     *   file that configures the container for Active Directory authentication.
+     */
+    public fun credentialSpecs(vararg credentialSpecs: CredentialSpec) {
+        _credentialSpecs.addAll(listOf(*credentialSpecs))
+    }
+
+    /**
+     * A list of ARNs in SSM or Amazon S3 to a credential spec (`CredSpec`) file that configures the
+     * container for Active Directory authentication.
+     *
+     * We recommend that you use this parameter instead of the `dockerSecurityOptions`.
+     *
+     * Currently, only one credential spec is allowed per container definition.
+     *
+     * Default: - No credential specs.
+     *
+     * @param credentialSpecs A list of ARNs in SSM or Amazon S3 to a credential spec (`CredSpec`)
+     *   file that configures the container for Active Directory authentication.
+     */
+    public fun credentialSpecs(credentialSpecs: Collection<CredentialSpec>) {
+        _credentialSpecs.addAll(credentialSpecs)
     }
 
     /**
@@ -494,6 +534,21 @@ public class FirelensLogRouterDsl(
     }
 
     /**
+     * When this parameter is true, you can deploy containerized applications that require stdin or
+     * a tty to be allocated.
+     *
+     * Default: - false
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-interactive)
+     *
+     * @param interactive When this parameter is true, you can deploy containerized applications
+     *   that require stdin or a tty to be allocated.
+     */
+    public fun interactive(interactive: Boolean) {
+        cdkBuilder.interactive(interactive)
+    }
+
+    /**
      * Linux-specific modifications that are applied to the container, such as Linux kernel
      * capabilities.
      *
@@ -739,6 +794,7 @@ public class FirelensLogRouterDsl(
 
     public fun build(): FirelensLogRouter {
         if (_command.isNotEmpty()) cdkBuilder.command(_command)
+        if (_credentialSpecs.isNotEmpty()) cdkBuilder.credentialSpecs(_credentialSpecs)
         if (_dnsSearchDomains.isNotEmpty()) cdkBuilder.dnsSearchDomains(_dnsSearchDomains)
         if (_dnsServers.isNotEmpty()) cdkBuilder.dnsServers(_dnsServers)
         if (_dockerSecurityOptions.isNotEmpty())

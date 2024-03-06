@@ -89,10 +89,7 @@ public class ApplicationLoadBalancerPropsDsl {
         cdkBuilder.internetFacing(internetFacing)
     }
 
-    /**
-     * @param ipAddressType The type of IP addresses to use. Only applies to application load
-     *   balancers.
-     */
+    /** @param ipAddressType The type of IP addresses to use. */
     public fun ipAddressType(ipAddressType: IpAddressType) {
         cdkBuilder.ipAddressType(ipAddressType)
     }

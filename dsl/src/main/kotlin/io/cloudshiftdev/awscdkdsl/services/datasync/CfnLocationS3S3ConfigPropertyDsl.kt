@@ -16,12 +16,12 @@ import kotlin.String
 import software.amazon.awscdk.services.datasync.CfnLocationS3
 
 /**
- * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role used to
- * access an Amazon S3 bucket.
+ * Specifies the Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role
+ * that DataSync uses to access your S3 bucket.
  *
- * For detailed information about using such a role, see
- * [Creating a Location for Amazon S3](https://docs.aws.amazon.com/datasync/latest/userguide/working-with-locations.html#create-s3-location)
- * in the *AWS DataSync User Guide* .
+ * For more information, see
+ * [Accessing S3 buckets](https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#create-s3-location-access)
+ * .
  *
  * Example:
  * ```
@@ -40,7 +40,10 @@ public class CfnLocationS3S3ConfigPropertyDsl {
     private val cdkBuilder: CfnLocationS3.S3ConfigProperty.Builder =
         CfnLocationS3.S3ConfigProperty.builder()
 
-    /** @param bucketAccessRoleArn The ARN of the IAM role for accessing the S3 bucket. */
+    /**
+     * @param bucketAccessRoleArn Specifies the ARN of the IAM role that DataSync uses to access
+     *   your S3 bucket.
+     */
     public fun bucketAccessRoleArn(bucketAccessRoleArn: String) {
         cdkBuilder.bucketAccessRoleArn(bucketAccessRoleArn)
     }

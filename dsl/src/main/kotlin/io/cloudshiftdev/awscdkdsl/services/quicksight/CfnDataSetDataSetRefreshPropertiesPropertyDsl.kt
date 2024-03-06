@@ -16,7 +16,7 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
 /**
- * The dataset refresh properties for the dataset.</p>.
+ * The refresh properties of a dataset.
  *
  * Example:
  * ```
@@ -44,12 +44,12 @@ public class CfnDataSetDataSetRefreshPropertiesPropertyDsl {
     private val cdkBuilder: CfnDataSet.DataSetRefreshPropertiesProperty.Builder =
         CfnDataSet.DataSetRefreshPropertiesProperty.builder()
 
-    /** @param refreshConfiguration Refresh Configuration.</p>. */
+    /** @param refreshConfiguration The refresh configuration for a dataset. */
     public fun refreshConfiguration(refreshConfiguration: IResolvable) {
         cdkBuilder.refreshConfiguration(refreshConfiguration)
     }
 
-    /** @param refreshConfiguration Refresh Configuration.</p>. */
+    /** @param refreshConfiguration The refresh configuration for a dataset. */
     public fun refreshConfiguration(refreshConfiguration: CfnDataSet.RefreshConfigurationProperty) {
         cdkBuilder.refreshConfiguration(refreshConfiguration)
     }

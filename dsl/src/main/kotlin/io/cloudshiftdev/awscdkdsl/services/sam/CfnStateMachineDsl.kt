@@ -24,7 +24,7 @@ import software.amazon.awscdk.services.sam.CfnStateMachine
 import software.constructs.Construct
 
 /**
- * Definition of AWS::Serverless::StateMachine.
+ * https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-statemachine.html.
  *
  * Example:
  * ```

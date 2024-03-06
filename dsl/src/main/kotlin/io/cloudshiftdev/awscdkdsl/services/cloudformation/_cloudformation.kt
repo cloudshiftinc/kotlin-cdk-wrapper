@@ -382,7 +382,7 @@ public object cloudformation {
      * and Region.
      *
      * To register a module version, use the
-     * `[AWS::CloudFormation::ModuleVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduleversion.html)`
+     * `[`AWS::CloudFormation::ModuleVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduleversion.html)`
      * resource.
      *
      * For more information using modules, see
@@ -451,7 +451,7 @@ public object cloudformation {
      * account and Region.
      *
      * To specify a module version as the default version, use the
-     * `[AWS::CloudFormation::ModuleDefaultVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html)`
+     * `[`AWS::CloudFormation::ModuleDefaultVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html)`
      * resource.
      *
      * For more information using modules, see
@@ -825,7 +825,41 @@ public object cloudformation {
      * verify that you have cancel update stack permissions, which is required if an update rolls
      * back. For more information about IAM and CloudFormation , see
      * [Controlling access with AWS Identity and Access Management](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html)
-     * .
+     * . &gt; A subset of `AWS::CloudFormation::Stack` resource type properties listed below are
+     * available to customers using AWS CloudFormation , AWS CDK , and AWS Cloud Control API to
+     * configure.
+     * * `NotificationARNs`
+     * * `Parameters`
+     * * `Tags`
+     * * `TemplateURL`
+     * * `TimeoutInMinutes`
+     *
+     * These properties can be configured only when using AWS Cloud Control API . This is because
+     * the below properties are set by the parent stack, and thus cannot be configured using AWS
+     * CloudFormation or AWS CDK but only AWS Cloud Control API .
+     * * `Capabilities`
+     * * `Description`
+     * * `DisableRollback`
+     * * `EnableTerminationProtection`
+     * * `RoleARN`
+     * * `StackName`
+     * * `StackPolicyBody`
+     * * `StackPolicyURL`
+     * * `StackStatusReason`
+     * * `TemplateBody`
+     *
+     * Customers that configure `AWS::CloudFormation::Stack` using AWS CloudFormation and AWS CDK
+     * can do so for nesting a CloudFormation stack as a resource in their top-level template.
+     *
+     * These read-only properties can be accessed only when using AWS Cloud Control API .
+     * * `ChangeSetId`
+     * * `CreationTime`
+     * * `LastUpdateTime`
+     * * `Outputs`
+     * * `ParentId`
+     * * `RootId`
+     * * `StackId`
+     * * `StackStatus`
      *
      * Example:
      * ```
@@ -833,8 +867,6 @@ public object cloudformation {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.cloudformation.*;
      * CfnStack cfnStack = CfnStack.Builder.create(this, "MyCfnStack")
-     * .templateUrl("templateUrl")
-     * // the properties below are optional
      * .notificationArns(List.of("notificationArns"))
      * .parameters(Map.of(
      * "parametersKey", "parameters"))
@@ -842,6 +874,7 @@ public object cloudformation {
      * .key("key")
      * .value("value")
      * .build()))
+     * .templateUrl("templateUrl")
      * .timeoutInMinutes(123)
      * .build();
      * ```
@@ -859,6 +892,32 @@ public object cloudformation {
     }
 
     /**
+     * The Output data type.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.cloudformation.*;
+     * OutputProperty outputProperty = OutputProperty.builder()
+     * .description("description")
+     * .exportName("exportName")
+     * .outputKey("outputKey")
+     * .outputValue("outputValue")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stack-output.html)
+     */
+    public inline fun cfnStackOutputProperty(
+        block: CfnStackOutputPropertyDsl.() -> Unit = {}
+    ): CfnStack.OutputProperty {
+        val builder = CfnStackOutputPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Properties for defining a `CfnStack`.
      *
      * Example:
@@ -867,8 +926,6 @@ public object cloudformation {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.cloudformation.*;
      * CfnStackProps cfnStackProps = CfnStackProps.builder()
-     * .templateUrl("templateUrl")
-     * // the properties below are optional
      * .notificationArns(List.of("notificationArns"))
      * .parameters(Map.of(
      * "parametersKey", "parameters"))
@@ -876,6 +933,7 @@ public object cloudformation {
      * .key("key")
      * .value("value")
      * .build()))
+     * .templateUrl("templateUrl")
      * .timeoutInMinutes(123)
      * .build();
      * ```
@@ -934,6 +992,7 @@ public object cloudformation {
      * .deploymentTargets(DeploymentTargetsProperty.builder()
      * .accountFilterType("accountFilterType")
      * .accounts(List.of("accounts"))
+     * .accountsUrl("accountsUrl")
      * .organizationalUnitIds(List.of("organizationalUnitIds"))
      * .build())
      * .regions(List.of("regions"))
@@ -1001,6 +1060,7 @@ public object cloudformation {
      * DeploymentTargetsProperty deploymentTargetsProperty = DeploymentTargetsProperty.builder()
      * .accountFilterType("accountFilterType")
      * .accounts(List.of("accounts"))
+     * .accountsUrl("accountsUrl")
      * .organizationalUnitIds(List.of("organizationalUnitIds"))
      * .build();
      * ```
@@ -1135,6 +1195,7 @@ public object cloudformation {
      * .deploymentTargets(DeploymentTargetsProperty.builder()
      * .accountFilterType("accountFilterType")
      * .accounts(List.of("accounts"))
+     * .accountsUrl("accountsUrl")
      * .organizationalUnitIds(List.of("organizationalUnitIds"))
      * .build())
      * .regions(List.of("regions"))
@@ -1175,6 +1236,7 @@ public object cloudformation {
      * .deploymentTargets(DeploymentTargetsProperty.builder()
      * .accountFilterType("accountFilterType")
      * .accounts(List.of("accounts"))
+     * .accountsUrl("accountsUrl")
      * .organizationalUnitIds(List.of("organizationalUnitIds"))
      * .build())
      * .regions(List.of("regions"))

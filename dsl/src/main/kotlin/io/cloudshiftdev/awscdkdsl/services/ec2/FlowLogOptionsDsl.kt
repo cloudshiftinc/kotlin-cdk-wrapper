@@ -76,7 +76,8 @@ public class FlowLogOptionsDsl {
 
     /**
      * @param maxAggregationInterval The maximum interval of time during which a flow of packets is
-     *   captured and aggregated into a flow log record.
+     *   captured and aggregated into a flow log record. When creating flow logs for a Transit
+     *   Gateway or Transit Gateway Attachment, this property must be ONE_MINUTES.
      */
     public fun maxAggregationInterval(maxAggregationInterval: FlowLogMaxAggregationInterval) {
         cdkBuilder.maxAggregationInterval(maxAggregationInterval)
@@ -84,7 +85,8 @@ public class FlowLogOptionsDsl {
 
     /**
      * @param trafficType The type of traffic to log. You can log traffic that the resource accepts
-     *   or rejects, or all traffic.
+     *   or rejects, or all traffic. When the target is either `TransitGateway` or
+     *   `TransitGatewayAttachment`, setting the traffic type is not possible.
      */
     public fun trafficType(trafficType: FlowLogTrafficType) {
         cdkBuilder.trafficType(trafficType)

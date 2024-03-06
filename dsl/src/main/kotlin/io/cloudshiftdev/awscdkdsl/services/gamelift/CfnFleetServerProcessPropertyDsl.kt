@@ -66,7 +66,9 @@ public class CfnFleetServerProcessPropertyDsl {
 
     /**
      * @param parameters An optional list of parameters to pass to the server executable or Realtime
-     *   script on launch.
+     *   script on launch. Length Constraints: Minimum length of 1. Maximum length of 1024.
+     *
+     * Pattern: [A-Za-z0-9_:.+/- =&#64;{},?'[]"]+
      */
     public fun parameters(parameters: String) {
         cdkBuilder.parameters(parameters)

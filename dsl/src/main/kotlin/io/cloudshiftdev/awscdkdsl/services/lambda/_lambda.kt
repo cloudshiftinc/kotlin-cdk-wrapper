@@ -134,7 +134,7 @@ public object lambda {
      * Function func = Function.Builder.create(this, "Lambda")
      * .code(lambdaCode)
      * .handler("index.handler")
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .build();
      * // used to make sure each CDK synthesis produces a different Version
      * Version version = func.getCurrentVersion();
@@ -217,7 +217,7 @@ public object lambda {
      * Function func = Function.Builder.create(this, "Lambda")
      * .code(lambdaCode)
      * .handler("index.handler")
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .build();
      * // used to make sure each CDK synthesis produces a different Version
      * Version version = func.getCurrentVersion();
@@ -291,6 +291,7 @@ public object lambda {
      * .buildSecrets(Map.of(
      * "buildSecretsKey", "buildSecrets"))
      * .buildSsh("buildSsh")
+     * .cacheDisabled(false)
      * .cacheFrom(List.of(DockerCacheOption.builder()
      * .type("type")
      * // the properties below are optional
@@ -358,6 +359,7 @@ public object lambda {
      * .buildSecrets(Map.of(
      * "buildSecretsKey", "buildSecrets"))
      * .buildSsh("buildSsh")
+     * .cacheDisabled(false)
      * .cacheFrom(List.of(DockerCacheOption.builder()
      * .type("type")
      * // the properties below are optional
@@ -1376,6 +1378,12 @@ public object lambda {
      * .build())
      * .kmsKeyArn("kmsKeyArn")
      * .layers(List.of("layers"))
+     * .loggingConfig(LoggingConfigProperty.builder()
+     * .applicationLogLevel("applicationLogLevel")
+     * .logFormat("logFormat")
+     * .logGroup("logGroup")
+     * .systemLogLevel("systemLogLevel")
+     * .build())
      * .memorySize(123)
      * .packageType("packageType")
      * .reservedConcurrentExecutions(123)
@@ -1397,6 +1405,7 @@ public object lambda {
      * .mode("mode")
      * .build())
      * .vpcConfig(VpcConfigProperty.builder()
+     * .ipv6AllowedForDualStack(false)
      * .securityGroupIds(List.of("securityGroupIds"))
      * .subnetIds(List.of("subnetIds"))
      * .build())
@@ -1423,8 +1432,9 @@ public object lambda {
      * you can specify the location of an object in Amazon S3. For Node.js and Python functions, you
      * can specify the function code inline in the template.
      *
-     * Changes to a deployment package in Amazon S3 are not detected automatically during stack
-     * updates. To update the function code, change the object key or version in the template.
+     * Changes to a deployment package in Amazon S3 or a container image in ECR are not detected
+     * automatically during stack updates. To update the function code, change the object key or
+     * version in the template.
      *
      * Example:
      * ```
@@ -1584,6 +1594,32 @@ public object lambda {
     }
 
     /**
+     * The function's Amazon CloudWatch Logs configuration settings.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.lambda.*;
+     * LoggingConfigProperty loggingConfigProperty = LoggingConfigProperty.builder()
+     * .applicationLogLevel("applicationLogLevel")
+     * .logFormat("logFormat")
+     * .logGroup("logGroup")
+     * .systemLogLevel("systemLogLevel")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-loggingconfig.html)
+     */
+    public inline fun cfnFunctionLoggingConfigProperty(
+        block: CfnFunctionLoggingConfigPropertyDsl.() -> Unit = {}
+    ): CfnFunction.LoggingConfigProperty {
+        val builder = CfnFunctionLoggingConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Properties for defining a `CfnFunction`.
      *
      * Example:
@@ -1627,6 +1663,12 @@ public object lambda {
      * .build())
      * .kmsKeyArn("kmsKeyArn")
      * .layers(List.of("layers"))
+     * .loggingConfig(LoggingConfigProperty.builder()
+     * .applicationLogLevel("applicationLogLevel")
+     * .logFormat("logFormat")
+     * .logGroup("logGroup")
+     * .systemLogLevel("systemLogLevel")
+     * .build())
      * .memorySize(123)
      * .packageType("packageType")
      * .reservedConcurrentExecutions(123)
@@ -1648,6 +1690,7 @@ public object lambda {
      * .mode("mode")
      * .build())
      * .vpcConfig(VpcConfigProperty.builder()
+     * .ipv6AllowedForDualStack(false)
      * .securityGroupIds(List.of("securityGroupIds"))
      * .subnetIds(List.of("subnetIds"))
      * .build())
@@ -1790,6 +1833,7 @@ public object lambda {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.lambda.*;
      * VpcConfigProperty vpcConfigProperty = VpcConfigProperty.builder()
+     * .ipv6AllowedForDualStack(false)
      * .securityGroupIds(List.of("securityGroupIds"))
      * .subnetIds(List.of("subnetIds"))
      * .build();
@@ -1985,11 +2029,13 @@ public object lambda {
      * Function.Builder.create(lambdaStack, "Lambda")
      * .code(lambdaCode)
      * .handler("index.handler")
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .build();
      * // other resources that your Lambda needs, added to the lambdaStack...
      * Stack pipelineStack = new Stack(app, "PipelineStack");
-     * Pipeline pipeline = new Pipeline(pipelineStack, "Pipeline");
+     * Pipeline pipeline = Pipeline.Builder.create(pipelineStack, "Pipeline")
+     * .crossAccountKeys(true)
+     * .build();
      * // add the source code repository containing this code to your Pipeline,
      * // and the source code of the Lambda Function, if they're separate
      * Artifact cdkSourceOutput = new Artifact();
@@ -2017,7 +2063,7 @@ public object lambda {
      * // adjust the build environment and/or commands accordingly
      * Project cdkBuildProject = Project.Builder.create(pipelineStack, "CdkBuildProject")
      * .environment(BuildEnvironment.builder()
-     * .buildImage(LinuxBuildImage.UBUNTU_14_04_NODEJS_10_1_0)
+     * .buildImage(LinuxBuildImage.STANDARD_7_0)
      * .build())
      * .buildSpec(BuildSpec.fromObject(Map.of(
      * "version", "0.2",
@@ -2042,7 +2088,7 @@ public object lambda {
      * situation
      * Project lambdaBuildProject = Project.Builder.create(pipelineStack, "LambdaBuildProject")
      * .environment(BuildEnvironment.builder()
-     * .buildImage(LinuxBuildImage.UBUNTU_14_04_NODEJS_10_1_0)
+     * .buildImage(LinuxBuildImage.STANDARD_7_0)
      * .build())
      * .buildSpec(BuildSpec.fromObject(Map.of(
      * "version", "0.2",
@@ -2326,6 +2372,11 @@ public object lambda {
      * .provisionedConcurrencyConfig(ProvisionedConcurrencyConfigurationProperty.builder()
      * .provisionedConcurrentExecutions(123)
      * .build())
+     * .runtimePolicy(RuntimePolicyProperty.builder()
+     * .updateRuntimeOn("updateRuntimeOn")
+     * // the properties below are optional
+     * .runtimeVersionArn("runtimeVersionArn")
+     * .build())
      * .build();
      * ```
      *
@@ -2356,6 +2407,11 @@ public object lambda {
      * .description("description")
      * .provisionedConcurrencyConfig(ProvisionedConcurrencyConfigurationProperty.builder()
      * .provisionedConcurrentExecutions(123)
+     * .build())
+     * .runtimePolicy(RuntimePolicyProperty.builder()
+     * .updateRuntimeOn("updateRuntimeOn")
+     * // the properties below are optional
+     * .runtimeVersionArn("runtimeVersionArn")
      * .build())
      * .build();
      * ```
@@ -2390,6 +2446,31 @@ public object lambda {
         block: CfnVersionProvisionedConcurrencyConfigurationPropertyDsl.() -> Unit = {}
     ): CfnVersion.ProvisionedConcurrencyConfigurationProperty {
         val builder = CfnVersionProvisionedConcurrencyConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Runtime Management Config of a function.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.lambda.*;
+     * RuntimePolicyProperty runtimePolicyProperty = RuntimePolicyProperty.builder()
+     * .updateRuntimeOn("updateRuntimeOn")
+     * // the properties below are optional
+     * .runtimeVersionArn("runtimeVersionArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-version-runtimepolicy.html)
+     */
+    public inline fun cfnVersionRuntimePolicyProperty(
+        block: CfnVersionRuntimePolicyPropertyDsl.() -> Unit = {}
+    ): CfnVersion.RuntimePolicyProperty {
+        val builder = CfnVersionRuntimePolicyPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -2583,6 +2664,19 @@ public object lambda {
      * DockerBuildAssetOptions dockerBuildAssetOptions = DockerBuildAssetOptions.builder()
      * .buildArgs(Map.of(
      * "buildArgsKey", "buildArgs"))
+     * .cacheDisabled(false)
+     * .cacheFrom(List.of(DockerCacheOption.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .params(Map.of(
+     * "paramsKey", "params"))
+     * .build()))
+     * .cacheTo(DockerCacheOption.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .params(Map.of(
+     * "paramsKey", "params"))
+     * .build())
      * .file("file")
      * .imagePath("imagePath")
      * .outputPath("outputPath")
@@ -2852,6 +2946,7 @@ public object lambda {
      * .build()))
      * .startingPosition(StartingPosition.TRIM_HORIZON)
      * .startingPositionTimestamp(123)
+     * .supportS3OnFailureDestination(false)
      * .tumblingWindow(Duration.minutes(30))
      * .build();
      * ```
@@ -2899,6 +2994,7 @@ public object lambda {
      * .build()))
      * .startingPosition(StartingPosition.TRIM_HORIZON)
      * .startingPositionTimestamp(123)
+     * .supportS3OnFailureDestination(false)
      * .tumblingWindow(Duration.minutes(30))
      * .build();
      * ```
@@ -2949,6 +3045,7 @@ public object lambda {
      * .build()))
      * .startingPosition(StartingPosition.TRIM_HORIZON)
      * .startingPositionTimestamp(123)
+     * .supportS3OnFailureDestination(false)
      * .tumblingWindow(Duration.minutes(30))
      * .build();
      * ```
@@ -3082,6 +3179,7 @@ public object lambda {
      * Key key;
      * LambdaInsightsVersion lambdaInsightsVersion;
      * LayerVersion layerVersion;
+     * LogGroup logGroup;
      * ParamsAndSecretsLayerVersion paramsAndSecretsLayerVersion;
      * PolicyStatement policyStatement;
      * ProfilingGroup profilingGroup;
@@ -3090,6 +3188,7 @@ public object lambda {
      * RuntimeManagementMode runtimeManagementMode;
      * SecurityGroup securityGroup;
      * Size size;
+     * SnapStartConf snapStartConf;
      * Subnet subnet;
      * SubnetFilter subnetFilter;
      * Topic topic;
@@ -3101,6 +3200,7 @@ public object lambda {
      * .build())
      * .allowAllOutbound(false)
      * .allowPublicSubnet(false)
+     * .applicationLogLevel("applicationLogLevel")
      * .architecture(architecture)
      * .codeSigningConfig(codeSigningConfig)
      * .currentVersionOptions(VersionOptions.builder()
@@ -3126,7 +3226,11 @@ public object lambda {
      * .functionName("functionName")
      * .initialPolicy(List.of(policyStatement))
      * .insightsVersion(lambdaInsightsVersion)
+     * .ipv6AllowedForDualStack(false)
      * .layers(List.of(layerVersion))
+     * .logFormat("logFormat")
+     * .loggingFormat(LoggingFormat.TEXT)
+     * .logGroup(logGroup)
      * .logRetention(RetentionDays.ONE_DAY)
      * .logRetentionRetryOptions(LogRetentionRetryOptions.builder()
      * .base(Duration.minutes(30))
@@ -3145,6 +3249,8 @@ public object lambda {
      * .role(role)
      * .runtimeManagementMode(runtimeManagementMode)
      * .securityGroups(List.of(securityGroup))
+     * .snapStart(snapStartConf)
+     * .systemLogLevel("systemLogLevel")
      * .timeout(Duration.minutes(30))
      * .tracing(Tracing.ACTIVE)
      * .vpc(vpc)
@@ -3170,7 +3276,7 @@ public object lambda {
      * ```
      * import software.amazon.awscdk.services.lambda.*;
      * Function fn = Function.Builder.create(this, "MyFunc")
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .handler("index.handler")
      * .code(Code.fromInline("exports.handler = handler.toString()"))
      * .build();
@@ -3200,11 +3306,10 @@ public object lambda {
      * ```
      * // Can be a Function or an Alias
      * Function fn;
-     * Role myRole;
-     * FunctionUrl fnUrl = fn.addFunctionUrl();
-     * fnUrl.grantInvokeUrl(myRole);
+     * FunctionUrl fnUrl = fn.addFunctionUrl(FunctionUrlOptions.builder()
+     * .authType(FunctionUrlAuthType.NONE)
+     * .build());
      * CfnOutput.Builder.create(this, "TheUrl")
-     * // The .url attributes will return the unique Function URL
      * .value(fnUrl.getUrl())
      * .build();
      * ```
@@ -3248,11 +3353,14 @@ public object lambda {
      *
      * Example:
      * ```
+     * // Can be a Function or an Alias
      * Function fn;
-     * fn.addFunctionUrl(FunctionUrlOptions.builder()
+     * FunctionUrl fnUrl = fn.addFunctionUrl(FunctionUrlOptions.builder()
      * .authType(FunctionUrlAuthType.NONE)
-     * .invokeMode(InvokeMode.RESPONSE_STREAM)
      * .build());
+     * CfnOutput.Builder.create(this, "TheUrl")
+     * .value(fnUrl.getUrl())
+     * .build();
      * ```
      */
     public inline fun functionUrlOptions(
@@ -3308,6 +3416,7 @@ public object lambda {
      * .isVariable(false)
      * .supportsCodeGuruProfiling(false)
      * .supportsInlineCode(false)
+     * .supportsSnapStart(false)
      * .build();
      * ```
      */
@@ -3398,7 +3507,7 @@ public object lambda {
      * ```
      * LayerVersion layer = LayerVersion.Builder.create(stack, "MyLayer")
      * .code(Code.fromAsset(join(__dirname, "layer-code")))
-     * .compatibleRuntimes(List.of(Runtime.NODEJS_14_X))
+     * .compatibleRuntimes(List.of(Runtime.NODEJS_LATEST))
      * .license("Apache-2.0")
      * .description("A layer to test the L2 construct")
      * .build();
@@ -3412,7 +3521,7 @@ public object lambda {
      * Function.Builder.create(stack, "MyLayeredLambda")
      * .code(new InlineCode("foo"))
      * .handler("index.handler")
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .layers(List.of(layer))
      * .build();
      * ```
@@ -3588,109 +3697,9 @@ public object lambda {
      *
      * Example:
      * ```
-     * // The code below shows an example of how to instantiate this type.
-     * // The values are placeholders you should change.
-     * import software.amazon.awscdk.*;
-     * import software.amazon.awscdk.services.codeguruprofiler.*;
-     * import software.amazon.awscdk.services.ec2.*;
-     * import software.amazon.awscdk.services.iam.*;
-     * import software.amazon.awscdk.services.kms.*;
-     * import software.amazon.awscdk.services.lambda.*;
-     * import software.amazon.awscdk.services.logs.*;
-     * import software.amazon.awscdk.services.sns.*;
-     * import software.amazon.awscdk.services.sqs.*;
-     * AdotLayerVersion adotLayerVersion;
-     * Architecture architecture;
-     * Code code;
-     * CodeSigningConfig codeSigningConfig;
-     * IDestination destination;
-     * IEventSource eventSource;
-     * FileSystem fileSystem;
-     * Key key;
-     * LambdaInsightsVersion lambdaInsightsVersion;
-     * LayerVersion layerVersion;
-     * ParamsAndSecretsLayerVersion paramsAndSecretsLayerVersion;
-     * PolicyStatement policyStatement;
-     * ProfilingGroup profilingGroup;
-     * Queue queue;
-     * Role role;
-     * Runtime runtime;
-     * RuntimeManagementMode runtimeManagementMode;
-     * SecurityGroup securityGroup;
-     * Size size;
-     * Subnet subnet;
-     * SubnetFilter subnetFilter;
-     * Topic topic;
-     * Vpc vpc;
-     * SingletonFunction singletonFunction = SingletonFunction.Builder.create(this,
-     * "MySingletonFunction")
-     * .code(code)
-     * .handler("handler")
-     * .runtime(runtime)
-     * .uuid("uuid")
-     * // the properties below are optional
-     * .adotInstrumentation(AdotInstrumentationConfig.builder()
-     * .execWrapper(AdotLambdaExecWrapper.REGULAR_HANDLER)
-     * .layerVersion(adotLayerVersion)
-     * .build())
-     * .allowAllOutbound(false)
-     * .allowPublicSubnet(false)
-     * .architecture(architecture)
-     * .codeSigningConfig(codeSigningConfig)
-     * .currentVersionOptions(VersionOptions.builder()
-     * .codeSha256("codeSha256")
-     * .description("description")
-     * .maxEventAge(Duration.minutes(30))
-     * .onFailure(destination)
-     * .onSuccess(destination)
-     * .provisionedConcurrentExecutions(123)
-     * .removalPolicy(RemovalPolicy.DESTROY)
-     * .retryAttempts(123)
-     * .build())
-     * .deadLetterQueue(queue)
-     * .deadLetterQueueEnabled(false)
-     * .deadLetterTopic(topic)
-     * .description("description")
-     * .environment(Map.of(
-     * "environmentKey", "environment"))
-     * .environmentEncryption(key)
-     * .ephemeralStorageSize(size)
-     * .events(List.of(eventSource))
-     * .filesystem(fileSystem)
-     * .functionName("functionName")
-     * .initialPolicy(List.of(policyStatement))
-     * .insightsVersion(lambdaInsightsVersion)
-     * .lambdaPurpose("lambdaPurpose")
-     * .layers(List.of(layerVersion))
-     * .logRetention(RetentionDays.ONE_DAY)
-     * .logRetentionRetryOptions(LogRetentionRetryOptions.builder()
-     * .base(Duration.minutes(30))
-     * .maxRetries(123)
-     * .build())
-     * .logRetentionRole(role)
-     * .maxEventAge(Duration.minutes(30))
-     * .memorySize(123)
-     * .onFailure(destination)
-     * .onSuccess(destination)
-     * .paramsAndSecrets(paramsAndSecretsLayerVersion)
-     * .profiling(false)
-     * .profilingGroup(profilingGroup)
-     * .reservedConcurrentExecutions(123)
-     * .retryAttempts(123)
-     * .role(role)
-     * .runtimeManagementMode(runtimeManagementMode)
-     * .securityGroups(List.of(securityGroup))
-     * .timeout(Duration.minutes(30))
-     * .tracing(Tracing.ACTIVE)
-     * .vpc(vpc)
-     * .vpcSubnets(SubnetSelection.builder()
-     * .availabilityZones(List.of("availabilityZones"))
-     * .onePerAz(false)
-     * .subnetFilters(List.of(subnetFilter))
-     * .subnetGroupName("subnetGroupName")
-     * .subnets(List.of(subnet))
-     * .subnetType(SubnetType.PRIVATE_ISOLATED)
-     * .build())
+     * SingletonFunction fn = new SingletonFunction(this, "MyProvider", functionProps);
+     * CustomResource.Builder.create(this, "MyResource")
+     * .serviceToken(fn.getFunctionArn())
      * .build();
      * ```
      */
@@ -3709,108 +3718,9 @@ public object lambda {
      *
      * Example:
      * ```
-     * // The code below shows an example of how to instantiate this type.
-     * // The values are placeholders you should change.
-     * import software.amazon.awscdk.*;
-     * import software.amazon.awscdk.services.codeguruprofiler.*;
-     * import software.amazon.awscdk.services.ec2.*;
-     * import software.amazon.awscdk.services.iam.*;
-     * import software.amazon.awscdk.services.kms.*;
-     * import software.amazon.awscdk.services.lambda.*;
-     * import software.amazon.awscdk.services.logs.*;
-     * import software.amazon.awscdk.services.sns.*;
-     * import software.amazon.awscdk.services.sqs.*;
-     * AdotLayerVersion adotLayerVersion;
-     * Architecture architecture;
-     * Code code;
-     * CodeSigningConfig codeSigningConfig;
-     * IDestination destination;
-     * IEventSource eventSource;
-     * FileSystem fileSystem;
-     * Key key;
-     * LambdaInsightsVersion lambdaInsightsVersion;
-     * LayerVersion layerVersion;
-     * ParamsAndSecretsLayerVersion paramsAndSecretsLayerVersion;
-     * PolicyStatement policyStatement;
-     * ProfilingGroup profilingGroup;
-     * Queue queue;
-     * Role role;
-     * Runtime runtime;
-     * RuntimeManagementMode runtimeManagementMode;
-     * SecurityGroup securityGroup;
-     * Size size;
-     * Subnet subnet;
-     * SubnetFilter subnetFilter;
-     * Topic topic;
-     * Vpc vpc;
-     * SingletonFunctionProps singletonFunctionProps = SingletonFunctionProps.builder()
-     * .code(code)
-     * .handler("handler")
-     * .runtime(runtime)
-     * .uuid("uuid")
-     * // the properties below are optional
-     * .adotInstrumentation(AdotInstrumentationConfig.builder()
-     * .execWrapper(AdotLambdaExecWrapper.REGULAR_HANDLER)
-     * .layerVersion(adotLayerVersion)
-     * .build())
-     * .allowAllOutbound(false)
-     * .allowPublicSubnet(false)
-     * .architecture(architecture)
-     * .codeSigningConfig(codeSigningConfig)
-     * .currentVersionOptions(VersionOptions.builder()
-     * .codeSha256("codeSha256")
-     * .description("description")
-     * .maxEventAge(Duration.minutes(30))
-     * .onFailure(destination)
-     * .onSuccess(destination)
-     * .provisionedConcurrentExecutions(123)
-     * .removalPolicy(RemovalPolicy.DESTROY)
-     * .retryAttempts(123)
-     * .build())
-     * .deadLetterQueue(queue)
-     * .deadLetterQueueEnabled(false)
-     * .deadLetterTopic(topic)
-     * .description("description")
-     * .environment(Map.of(
-     * "environmentKey", "environment"))
-     * .environmentEncryption(key)
-     * .ephemeralStorageSize(size)
-     * .events(List.of(eventSource))
-     * .filesystem(fileSystem)
-     * .functionName("functionName")
-     * .initialPolicy(List.of(policyStatement))
-     * .insightsVersion(lambdaInsightsVersion)
-     * .lambdaPurpose("lambdaPurpose")
-     * .layers(List.of(layerVersion))
-     * .logRetention(RetentionDays.ONE_DAY)
-     * .logRetentionRetryOptions(LogRetentionRetryOptions.builder()
-     * .base(Duration.minutes(30))
-     * .maxRetries(123)
-     * .build())
-     * .logRetentionRole(role)
-     * .maxEventAge(Duration.minutes(30))
-     * .memorySize(123)
-     * .onFailure(destination)
-     * .onSuccess(destination)
-     * .paramsAndSecrets(paramsAndSecretsLayerVersion)
-     * .profiling(false)
-     * .profilingGroup(profilingGroup)
-     * .reservedConcurrentExecutions(123)
-     * .retryAttempts(123)
-     * .role(role)
-     * .runtimeManagementMode(runtimeManagementMode)
-     * .securityGroups(List.of(securityGroup))
-     * .timeout(Duration.minutes(30))
-     * .tracing(Tracing.ACTIVE)
-     * .vpc(vpc)
-     * .vpcSubnets(SubnetSelection.builder()
-     * .availabilityZones(List.of("availabilityZones"))
-     * .onePerAz(false)
-     * .subnetFilters(List.of(subnetFilter))
-     * .subnetGroupName("subnetGroupName")
-     * .subnets(List.of(subnet))
-     * .subnetType(SubnetType.PRIVATE_ISOLATED)
-     * .build())
+     * SingletonFunction fn = new SingletonFunction(this, "MyProvider", functionProps);
+     * CustomResource.Builder.create(this, "MyResource")
+     * .serviceToken(fn.getFunctionArn())
      * .build();
      * ```
      */
@@ -3897,7 +3807,7 @@ public object lambda {
      * Function func = Function.Builder.create(this, "Lambda")
      * .code(lambdaCode)
      * .handler("index.handler")
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .build();
      * // used to make sure each CDK synthesis produces a different Version
      * Version version = func.getCurrentVersion();

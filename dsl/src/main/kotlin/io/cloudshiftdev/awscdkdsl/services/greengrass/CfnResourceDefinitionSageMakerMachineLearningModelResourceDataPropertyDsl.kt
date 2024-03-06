@@ -20,7 +20,7 @@ import software.amazon.awscdk.services.greengrass.CfnResourceDefinition
  * Settings for an Secrets Manager machine learning resource.
  *
  * For more information, see
- * [Perform Machine Learning Inference](https://docs.aws.amazon.com/greengrass/latest/developerguide/ml-inference.html)
+ * [Perform Machine Learning Inference](https://docs.aws.amazon.com/greengrass/v1/developerguide/ml-inference.html)
  * in the *Developer Guide* .
  *
  * In an AWS CloudFormation template, `SageMakerMachineLearningModelResourceData` can be used in the
@@ -63,7 +63,7 @@ public class CfnResourceDefinitionSageMakerMachineLearningModelResourceDataPrope
     /**
      * @param ownerSetting The owner setting for the downloaded machine learning resource. For more
      *   information, see
-     *   [Access Machine Learning Resources from Lambda Functions](https://docs.aws.amazon.com/greengrass/latest/developerguide/access-ml-resources.html)
+     *   [Access Machine Learning Resources from Lambda Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
      *   in the *Developer Guide* .
      */
     public fun ownerSetting(ownerSetting: IResolvable) {
@@ -73,7 +73,7 @@ public class CfnResourceDefinitionSageMakerMachineLearningModelResourceDataPrope
     /**
      * @param ownerSetting The owner setting for the downloaded machine learning resource. For more
      *   information, see
-     *   [Access Machine Learning Resources from Lambda Functions](https://docs.aws.amazon.com/greengrass/latest/developerguide/access-ml-resources.html)
+     *   [Access Machine Learning Resources from Lambda Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
      *   in the *Developer Guide* .
      */
     public fun ownerSetting(

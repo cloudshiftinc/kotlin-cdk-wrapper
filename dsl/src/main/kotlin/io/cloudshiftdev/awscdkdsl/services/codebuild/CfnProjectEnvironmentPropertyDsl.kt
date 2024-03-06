@@ -42,6 +42,9 @@ import software.amazon.awscdk.services.codebuild.CfnProject
  * // the properties below are optional
  * .type("type")
  * .build()))
+ * .fleet(ProjectFleetProperty.builder()
+ * .fleetArn("fleetArn")
+ * .build())
  * .imagePullCredentialsType("imagePullCredentialsType")
  * .privilegedMode(false)
  * .registryCredential(RegistryCredentialProperty.builder()
@@ -107,6 +110,16 @@ public class CfnProjectEnvironmentPropertyDsl {
      */
     public fun environmentVariables(environmentVariables: IResolvable) {
         cdkBuilder.environmentVariables(environmentVariables)
+    }
+
+    /** @param fleet the value to be set. */
+    public fun fleet(fleet: IResolvable) {
+        cdkBuilder.fleet(fleet)
+    }
+
+    /** @param fleet the value to be set. */
+    public fun fleet(fleet: CfnProject.ProjectFleetProperty) {
+        cdkBuilder.fleet(fleet)
     }
 
     /**
@@ -223,28 +236,25 @@ public class CfnProjectEnvironmentPropertyDsl {
 
     /**
      * @param type The type of build environment to use for related builds.
-     * * The environment type `ARM_CONTAINER` is available only in regions US East (Ohio), US East
-     *   (N. Virginia), US West (N. California), US West (Oregon), Asia Pacific (Hong Kong), Asia
-     *   Pacific (Jakarta), Asia Pacific (Hyderabad), Asia Pacific (Melbourne), Asia Pacific
-     *   (Mumbai), Asia Pacific (Osaka), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia
-     *   Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), China (Beijing), China (Ningxia),
-     *   Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Milan), Europe (Paris),
-     *   Europe (Spain), Europe (Stockholm), Europe (Zurich), Israel (Tel Aviv), Middle East
-     *   (Bahrain), Middle East (UAE), and South America (São Paulo).
-     * * The environment type `LINUX_CONTAINER` with compute type `build.general1.2xlarge` is
-     *   available only in regions US East (Ohio), US East (N. Virginia), US West (N. California),
-     *   US West (Oregon), Asia Pacific (Hyderabad), Asia Pacific (Hong Kong), Asia Pacific
-     *   (Jakarta), Asia Pacific (Melbourne), Asia Pacific (Mumbai), Asia Pacific (Seoul), Asia
-     *   Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), China
-     *   (Beijing), China (Ningxia), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe
-     *   (Paris), Europe (Spain), Europe (Stockholm), Europe (Zurich), Israel (Tel Aviv), Middle
-     *   East (Bahrain), Middle East (UAE), and South America (São Paulo).
-     * * The environment type `LINUX_GPU_CONTAINER` is available only in regions US East (Ohio), US
-     *   East (N. Virginia), US West (Oregon), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia
-     *   Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), China (Beijing), China (Ningxia),
-     *   Europe (Frankfurt), Europe (Ireland), and Europe (London).
-     * * The environment types `WINDOWS_SERVER_2019_CONTAINER` are available only in regions US East
-     *   (N. Virginia), US East (Ohio), US West (Oregon), and Europe (Ireland).
+     * * The environment type `ARM_CONTAINER` is available only in regions US East (N. Virginia), US
+     *   East (Ohio), US West (Oregon), EU (Ireland), Asia Pacific (Mumbai), Asia Pacific (Tokyo),
+     *   Asia Pacific (Sydney), and EU (Frankfurt).
+     * * The environment type `LINUX_CONTAINER` is available only in regions US East (N. Virginia),
+     *   US East (Ohio), US West (Oregon), Canada (Central), EU (Ireland), EU (London), EU
+     *   (Frankfurt), Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia
+     *   Pacific (Sydney), China (Beijing), and China (Ningxia).
+     * * The environment type `LINUX_GPU_CONTAINER` is available only in regions US East (N.
+     *   Virginia), US East (Ohio), US West (Oregon), Canada (Central), EU (Ireland), EU (London),
+     *   EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia
+     *   Pacific (Sydney) , China (Beijing), and China (Ningxia).
+     * * The environment types `ARM_LAMBDA_CONTAINER` and `LINUX_LAMBDA_CONTAINER` are available
+     *   only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific
+     *   (Mumbai), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), EU
+     *   (Frankfurt), EU (Ireland), and South America (São Paulo).
+     * * The environment types `WINDOWS_CONTAINER` and `WINDOWS_SERVER_2019_CONTAINER` are available
+     *   only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), and EU (Ireland).
+     *
+     * If you're using compute fleets during project creation, `type` will be ignored.
      *
      * For more information, see
      * [Build environment compute types](https://docs.aws.amazon.com//codebuild/latest/userguide/build-env-ref-compute-types.html)

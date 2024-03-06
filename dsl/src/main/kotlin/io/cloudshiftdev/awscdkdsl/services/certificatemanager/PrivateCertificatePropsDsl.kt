@@ -16,6 +16,7 @@ import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.acmpca.ICertificateAuthority
+import software.amazon.awscdk.services.certificatemanager.KeyAlgorithm
 import software.amazon.awscdk.services.certificatemanager.PrivateCertificateProps
 
 /**
@@ -29,6 +30,7 @@ import software.amazon.awscdk.services.certificatemanager.PrivateCertificateProp
  * .subjectAlternativeNames(List.of("cool.example.com", "test.example.net")) // optional
  * .certificateAuthority(CertificateAuthority.fromCertificateAuthorityArn(this, "CA",
  * "arn:aws:acm-pca:us-east-1:123456789012:certificate-authority/023077d8-2bfa-4eb0-8f22-05c96deade77"))
+ * .keyAlgorithm(KeyAlgorithm.RSA_2048)
  * .build();
  * ```
  */
@@ -52,6 +54,16 @@ public class PrivateCertificatePropsDsl {
      */
     public fun domainName(domainName: String) {
         cdkBuilder.domainName(domainName)
+    }
+
+    /**
+     * @param keyAlgorithm Specifies the algorithm of the public and private key pair that your
+     *   certificate uses to encrypt data. When you request a private PKI certificate signed by a CA
+     *   from AWS Private CA, the specified signing algorithm family (RSA or ECDSA) must match the
+     *   algorithm family of the CA's secret key.
+     */
+    public fun keyAlgorithm(keyAlgorithm: KeyAlgorithm) {
+        cdkBuilder.keyAlgorithm(keyAlgorithm)
     }
 
     /**

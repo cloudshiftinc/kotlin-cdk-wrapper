@@ -12,8 +12,11 @@
 package io.cloudshiftdev.awscdkdsl.services.iot
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Any
 import kotlin.String
+import kotlin.collections.Collection
 import kotlin.collections.Map
+import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnTopicRule
 
@@ -32,6 +35,10 @@ import software.amazon.awscdk.services.iot.CfnTopicRule
  * .destinationArn("destinationArn")
  * .topic("topic")
  * // the properties below are optional
+ * .headers(List.of(KafkaActionHeaderProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .key("key")
  * .partition("partition")
  * .build();
@@ -43,6 +50,8 @@ import software.amazon.awscdk.services.iot.CfnTopicRule
 public class CfnTopicRuleKafkaActionPropertyDsl {
     private val cdkBuilder: CfnTopicRule.KafkaActionProperty.Builder =
         CfnTopicRule.KafkaActionProperty.builder()
+
+    private val _headers: MutableList<Any> = mutableListOf()
 
     /** @param clientProperties Properties of the Apache Kafka producer client. */
     public fun clientProperties(clientProperties: Map<String, String>) {
@@ -57,6 +66,21 @@ public class CfnTopicRuleKafkaActionPropertyDsl {
     /** @param destinationArn The ARN of Kafka action's VPC `TopicRuleDestination` . */
     public fun destinationArn(destinationArn: String) {
         cdkBuilder.destinationArn(destinationArn)
+    }
+
+    /** @param headers The list of Kafka headers that you specify. */
+    public fun headers(vararg headers: Any) {
+        _headers.addAll(listOf(*headers))
+    }
+
+    /** @param headers The list of Kafka headers that you specify. */
+    public fun headers(headers: Collection<Any>) {
+        _headers.addAll(headers)
+    }
+
+    /** @param headers The list of Kafka headers that you specify. */
+    public fun headers(headers: IResolvable) {
+        cdkBuilder.headers(headers)
     }
 
     /** @param key The Kafka message key. */
@@ -74,5 +98,8 @@ public class CfnTopicRuleKafkaActionPropertyDsl {
         cdkBuilder.topic(topic)
     }
 
-    public fun build(): CfnTopicRule.KafkaActionProperty = cdkBuilder.build()
+    public fun build(): CfnTopicRule.KafkaActionProperty {
+        if (_headers.isNotEmpty()) cdkBuilder.headers(_headers)
+        return cdkBuilder.build()
+    }
 }

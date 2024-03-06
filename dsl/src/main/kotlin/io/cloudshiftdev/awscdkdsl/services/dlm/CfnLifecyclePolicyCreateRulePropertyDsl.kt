@@ -12,17 +12,21 @@
 package io.cloudshiftdev.awscdkdsl.services.dlm
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Any
 import kotlin.Number
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dlm.CfnLifecyclePolicy
 
 /**
- * *[Snapshot and AMI policies only]* Specifies when the policy should create snapshots or AMIs.
+ * *[Custom snapshot and AMI policies only]* Specifies when the policy should create snapshots or
+ * AMIs.
  * * You must specify either *CronExpression* , or *Interval* , *IntervalUnit* , and *Times* .
- * * If you need to specify an `ArchiveRule` for the schedule, then you must specify a creation
- *   frequency of at least 28 days.
+ * * If you need to specify an
+ *   [ArchiveRule](https://docs.aws.amazon.com/dlm/latest/APIReference/API_ArchiveRule.html) for the
+ *   schedule, then you must specify a creation frequency of at least 28 days.
  *
  * Example:
  * ```
@@ -34,6 +38,14 @@ import software.amazon.awscdk.services.dlm.CfnLifecyclePolicy
  * .interval(123)
  * .intervalUnit("intervalUnit")
  * .location("location")
+ * .scripts(List.of(ScriptProperty.builder()
+ * .executeOperationOnScriptFailure(false)
+ * .executionHandler("executionHandler")
+ * .executionHandlerService("executionHandlerService")
+ * .executionTimeout(123)
+ * .maximumRetryCount(123)
+ * .stages(List.of("stages"))
+ * .build()))
  * .times(List.of("times"))
  * .build();
  * ```
@@ -44,6 +56,8 @@ import software.amazon.awscdk.services.dlm.CfnLifecyclePolicy
 public class CfnLifecyclePolicyCreateRulePropertyDsl {
     private val cdkBuilder: CfnLifecyclePolicy.CreateRuleProperty.Builder =
         CfnLifecyclePolicy.CreateRuleProperty.builder()
+
+    private val _scripts: MutableList<Any> = mutableListOf()
 
     private val _times: MutableList<String> = mutableListOf()
 
@@ -71,10 +85,10 @@ public class CfnLifecyclePolicyCreateRulePropertyDsl {
     }
 
     /**
-     * @param location *[Snapshot policies only]* Specifies the destination for snapshots created by
-     *   the policy. To create snapshots in the same Region as the source resource, specify `CLOUD`
-     *   . To create snapshots on the same Outpost as the source resource, specify `OUTPOST_LOCAL` .
-     *   If you omit this parameter, `CLOUD` is used by default.
+     * @param location *[Custom snapshot policies only]* Specifies the destination for snapshots
+     *   created by the policy. To create snapshots in the same Region as the source resource,
+     *   specify `CLOUD` . To create snapshots on the same Outpost as the source resource, specify
+     *   `OUTPOST_LOCAL` . If you omit this parameter, `CLOUD` is used by default.
      *
      * If the policy targets resources in an AWS Region , then you must create snapshots in the same
      * Region as the source resource. If the policy targets resources on an Outpost, then you can
@@ -83,6 +97,48 @@ public class CfnLifecyclePolicyCreateRulePropertyDsl {
      */
     public fun location(location: String) {
         cdkBuilder.location(location)
+    }
+
+    /**
+     * @param scripts *[Custom snapshot policies that target instances only]* Specifies pre and/or
+     *   post scripts for a snapshot lifecycle policy that targets instances. This is useful for
+     *   creating application-consistent snapshots, or for performing specific administrative tasks
+     *   before or after Amazon Data Lifecycle Manager initiates snapshot creation.
+     *
+     * For more information, see
+     * [Automating application-consistent snapshots with pre and post scripts](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/automate-app-consistent-backups.html)
+     * .
+     */
+    public fun scripts(vararg scripts: Any) {
+        _scripts.addAll(listOf(*scripts))
+    }
+
+    /**
+     * @param scripts *[Custom snapshot policies that target instances only]* Specifies pre and/or
+     *   post scripts for a snapshot lifecycle policy that targets instances. This is useful for
+     *   creating application-consistent snapshots, or for performing specific administrative tasks
+     *   before or after Amazon Data Lifecycle Manager initiates snapshot creation.
+     *
+     * For more information, see
+     * [Automating application-consistent snapshots with pre and post scripts](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/automate-app-consistent-backups.html)
+     * .
+     */
+    public fun scripts(scripts: Collection<Any>) {
+        _scripts.addAll(scripts)
+    }
+
+    /**
+     * @param scripts *[Custom snapshot policies that target instances only]* Specifies pre and/or
+     *   post scripts for a snapshot lifecycle policy that targets instances. This is useful for
+     *   creating application-consistent snapshots, or for performing specific administrative tasks
+     *   before or after Amazon Data Lifecycle Manager initiates snapshot creation.
+     *
+     * For more information, see
+     * [Automating application-consistent snapshots with pre and post scripts](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/automate-app-consistent-backups.html)
+     * .
+     */
+    public fun scripts(scripts: IResolvable) {
+        cdkBuilder.scripts(scripts)
     }
 
     /**
@@ -104,6 +160,7 @@ public class CfnLifecyclePolicyCreateRulePropertyDsl {
     }
 
     public fun build(): CfnLifecyclePolicy.CreateRuleProperty {
+        if (_scripts.isNotEmpty()) cdkBuilder.scripts(_scripts)
         if (_times.isNotEmpty()) cdkBuilder.times(_times)
         return cdkBuilder.build()
     }

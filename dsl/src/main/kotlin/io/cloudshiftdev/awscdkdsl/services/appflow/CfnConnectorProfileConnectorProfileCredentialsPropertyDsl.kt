@@ -133,6 +133,16 @@ import software.amazon.awscdk.services.appflow.CfnConnectorProfile
  * .build())
  * .build())
  * .serviceNow(ServiceNowConnectorProfileCredentialsProperty.builder()
+ * .oAuth2Credentials(OAuth2CredentialsProperty.builder()
+ * .accessToken("accessToken")
+ * .clientId("clientId")
+ * .clientSecret("clientSecret")
+ * .oAuthRequest(ConnectorOAuthRequestProperty.builder()
+ * .authCode("authCode")
+ * .redirectUri("redirectUri")
+ * .build())
+ * .refreshToken("refreshToken")
+ * .build())
  * .password("password")
  * .username("username")
  * .build())
@@ -272,12 +282,12 @@ public class CfnConnectorProfileConnectorProfileCredentialsPropertyDsl {
         cdkBuilder.marketo(marketo)
     }
 
-    /** @param pardot the value to be set. */
+    /** @param pardot The connector-specific credentials required when using Salesforce Pardot. */
     public fun pardot(pardot: IResolvable) {
         cdkBuilder.pardot(pardot)
     }
 
-    /** @param pardot the value to be set. */
+    /** @param pardot The connector-specific credentials required when using Salesforce Pardot. */
     public fun pardot(pardot: CfnConnectorProfile.PardotConnectorProfileCredentialsProperty) {
         cdkBuilder.pardot(pardot)
     }

@@ -59,7 +59,7 @@ public class CfnConnectionDsl(
     /**
      * The name of the connection.
      *
-     * Connection names must be unique in an AWS user account.
+     * Connection names must be unique in an AWS account .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-connection.html#cfn-codestarconnections-connection-connectionname)
      *

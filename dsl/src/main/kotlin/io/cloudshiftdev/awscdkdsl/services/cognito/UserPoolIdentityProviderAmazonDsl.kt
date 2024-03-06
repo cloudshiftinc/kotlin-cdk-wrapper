@@ -22,7 +22,7 @@ import software.amazon.awscdk.services.cognito.UserPoolIdentityProviderAmazon
 import software.constructs.Construct
 
 /**
- * Represents a identity provider that integrates with 'Login with Amazon'.
+ * Represents an identity provider that integrates with Login with Amazon.
  *
  * Example:
  * ```
@@ -79,23 +79,23 @@ public class UserPoolIdentityProviderAmazonDsl(
     }
 
     /**
-     * The client id recognized by 'Login with Amazon' APIs.
+     * The client id recognized by Login with Amazon APIs.
      *
      * [Documentation](https://developer.amazon.com/docs/login-with-amazon/security-profile.html#client-identifier)
      *
-     * @param clientId The client id recognized by 'Login with Amazon' APIs.
+     * @param clientId The client id recognized by Login with Amazon APIs.
      */
     public fun clientId(clientId: String) {
         cdkBuilder.clientId(clientId)
     }
 
     /**
-     * The client secret to be accompanied with clientId for 'Login with Amazon' APIs to
-     * authenticate the client.
+     * The client secret to be accompanied with clientId for Login with Amazon APIs to authenticate
+     * the client.
      *
      * [Documentation](https://developer.amazon.com/docs/login-with-amazon/security-profile.html#client-identifier)
      *
-     * @param clientSecret The client secret to be accompanied with clientId for 'Login with Amazon'
+     * @param clientSecret The client secret to be accompanied with clientId for Login with Amazon
      *   APIs to authenticate the client.
      */
     public fun clientSecret(clientSecret: String) {

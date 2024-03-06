@@ -17,7 +17,10 @@ import software.amazon.awscdk.services.emr.CfnInstanceFleetConfig
 import software.amazon.awscdk.services.emr.CfnInstanceGroupConfig
 import software.amazon.awscdk.services.emr.CfnStep
 
-/**  */
+/**
+ * An auto-termination policy defines the amount of idle time in seconds after which a cluster
+ * automatically terminates.
+ */
 public inline fun CfnCluster.setAutoTerminationPolicy(
     block: CfnClusterAutoTerminationPolicyPropertyDsl.() -> Unit = {}
 ) {

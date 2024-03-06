@@ -69,6 +69,8 @@ import software.amazon.awscdk.services.dynamodb.CfnGlobalTableProps
  * .build()))
  * .kinesisStreamSpecification(KinesisStreamSpecificationProperty.builder()
  * .streamArn("streamArn")
+ * // the properties below are optional
+ * .approximateCreationDateTimePrecision("approximateCreationDateTimePrecision")
  * .build())
  * .pointInTimeRecoverySpecification(PointInTimeRecoverySpecificationProperty.builder()
  * .pointInTimeRecoveryEnabled(false)

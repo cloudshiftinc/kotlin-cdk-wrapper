@@ -14,7 +14,7 @@ package io.cloudshiftdev.awscdkdsl.services.healthlake
 import kotlin.Unit
 import software.amazon.awscdk.services.healthlake.CfnFHIRDatastore
 
-/** The identity provider configuration for the datastore. */
+/** The identity provider configuration that you gave when the data store was created. */
 public inline fun CfnFHIRDatastore.setIdentityProviderConfiguration(
     block: CfnFHIRDatastoreIdentityProviderConfigurationPropertyDsl.() -> Unit = {}
 ) {

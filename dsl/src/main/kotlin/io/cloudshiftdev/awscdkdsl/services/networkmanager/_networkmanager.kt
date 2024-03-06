@@ -209,6 +209,7 @@ public object networkmanager {
      * .build())
      * .coreNetworkAddress("coreNetworkAddress")
      * .insideCidrBlocks(List.of("insideCidrBlocks"))
+     * .subnetArn("subnetArn")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -328,6 +329,7 @@ public object networkmanager {
      * .build())
      * .coreNetworkAddress("coreNetworkAddress")
      * .insideCidrBlocks(List.of("insideCidrBlocks"))
+     * .subnetArn("subnetArn")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -571,7 +573,7 @@ public object networkmanager {
     }
 
     /**
-     * The Amazon Web Services location of the device, if applicable.
+     * Specifies a location in AWS .
      *
      * Example:
      * ```
@@ -669,7 +671,9 @@ public object networkmanager {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.networkmanager.*;
      * CfnGlobalNetwork cfnGlobalNetwork = CfnGlobalNetwork.Builder.create(this, "MyCfnGlobalNetwork")
+     * .createdAt("createdAt")
      * .description("description")
+     * .state("state")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -698,7 +702,9 @@ public object networkmanager {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.networkmanager.*;
      * CfnGlobalNetworkProps cfnGlobalNetworkProps = CfnGlobalNetworkProps.builder()
+     * .createdAt("createdAt")
      * .description("description")
+     * .state("state")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")

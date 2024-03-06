@@ -33,15 +33,16 @@ import software.amazon.awscdk.services.ec2.SubnetType
  * ```
  * Vpc vpc;
  * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
- * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder()
- * .version(AuroraMysqlEngineVersion.VER_3_03_0)
- * .build()))
- * .instances(2)
- * .instanceProps(InstanceProps.builder()
- * .instanceType(InstanceType.of(InstanceClass.BURSTABLE3, InstanceSize.SMALL))
- * .vpcSubnets(SubnetSelection.builder().subnetType(SubnetType.PUBLIC).build())
- * .vpc(vpc)
+ * .masterUser(Login.builder()
+ * .username("myuser")
  * .build())
+ * .instanceType(InstanceType.of(InstanceClass.MEMORY5, InstanceSize.LARGE))
+ * .vpcSubnets(SubnetSelection.builder()
+ * .subnetType(SubnetType.PUBLIC)
+ * .build())
+ * .vpc(vpc)
+ * .removalPolicy(RemovalPolicy.SNAPSHOT)
+ * .instanceRemovalPolicy(RemovalPolicy.RETAIN)
  * .build();
  * ```
  */

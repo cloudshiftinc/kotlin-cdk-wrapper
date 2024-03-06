@@ -25,13 +25,18 @@ import software.amazon.awscdk.services.fsx.CfnVolume
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.fsx.*;
  * OntapConfigurationProperty ontapConfigurationProperty = OntapConfigurationProperty.builder()
- * .sizeInMegabytes("sizeInMegabytes")
  * .storageVirtualMachineId("storageVirtualMachineId")
  * // the properties below are optional
+ * .aggregateConfiguration(AggregateConfigurationProperty.builder()
+ * .aggregates(List.of("aggregates"))
+ * .constituentsPerAggregate(123)
+ * .build())
  * .copyTagsToBackups("copyTagsToBackups")
  * .junctionPath("junctionPath")
  * .ontapVolumeType("ontapVolumeType")
  * .securityStyle("securityStyle")
+ * .sizeInBytes("sizeInBytes")
+ * .sizeInMegabytes("sizeInMegabytes")
  * .snaplockConfiguration(SnaplockConfigurationProperty.builder()
  * .snaplockType("snaplockType")
  * // the properties below are optional
@@ -67,6 +72,7 @@ import software.amazon.awscdk.services.fsx.CfnVolume
  * .coolingPeriod(123)
  * .name("name")
  * .build())
+ * .volumeStyle("volumeStyle")
  * .build();
  * ```
  *
@@ -76,6 +82,24 @@ import software.amazon.awscdk.services.fsx.CfnVolume
 public class CfnVolumeOntapConfigurationPropertyDsl {
     private val cdkBuilder: CfnVolume.OntapConfigurationProperty.Builder =
         CfnVolume.OntapConfigurationProperty.builder()
+
+    /**
+     * @param aggregateConfiguration Used to specify the configuration options for an FSx for ONTAP
+     *   volume's storage aggregate or aggregates.
+     */
+    public fun aggregateConfiguration(aggregateConfiguration: IResolvable) {
+        cdkBuilder.aggregateConfiguration(aggregateConfiguration)
+    }
+
+    /**
+     * @param aggregateConfiguration Used to specify the configuration options for an FSx for ONTAP
+     *   volume's storage aggregate or aggregates.
+     */
+    public fun aggregateConfiguration(
+        aggregateConfiguration: CfnVolume.AggregateConfigurationProperty
+    ) {
+        cdkBuilder.aggregateConfiguration(aggregateConfiguration)
+    }
 
     /**
      * @param copyTagsToBackups A boolean flag indicating whether tags for the volume should be
@@ -105,8 +129,8 @@ public class CfnVolumeOntapConfigurationPropertyDsl {
      *   destination of a NetApp SnapMirror relationship.
      *
      * For more information, see
-     * [Volume types](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-types) in the *Amazon
-     * FSx for NetApp ONTAP User Guide* .
+     * [Volume types](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-types) in the Amazon
+     * FSx for NetApp ONTAP User Guide.
      */
     public fun ontapVolumeType(ontapVolumeType: String) {
         cdkBuilder.ontapVolumeType(ontapVolumeType)
@@ -131,9 +155,14 @@ public class CfnVolumeOntapConfigurationPropertyDsl {
         cdkBuilder.securityStyle(securityStyle)
     }
 
+    /** @param sizeInBytes Specifies the configured size of the volume, in bytes. */
+    public fun sizeInBytes(sizeInBytes: String) {
+        cdkBuilder.sizeInBytes(sizeInBytes)
+    }
+
     /**
-     * @param sizeInMegabytes Specifies the size of the volume, in megabytes (MB), that you are
-     *   creating.
+     * @param sizeInMegabytes *This property has been deprecated. Use `SizeInBytes` .*. Specifies
+     *   the size of the volume, in megabytes (MB), that you are creating.
      */
     public fun sizeInMegabytes(sizeInMegabytes: String) {
         cdkBuilder.sizeInMegabytes(sizeInMegabytes)
@@ -174,7 +203,7 @@ public class CfnVolumeOntapConfigurationPropertyDsl {
      *
      * For more information, see
      * [Snapshot policies](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snapshots-ontap.html#snapshot-policies)
-     * in the *Amazon FSx for NetApp ONTAP User Guide* .
+     * in the Amazon FSx for NetApp ONTAP User Guide.
      */
     public fun snapshotPolicy(snapshotPolicy: String) {
         cdkBuilder.snapshotPolicy(snapshotPolicy)
@@ -183,6 +212,8 @@ public class CfnVolumeOntapConfigurationPropertyDsl {
     /**
      * @param storageEfficiencyEnabled Set to true to enable deduplication, compression, and
      *   compaction storage efficiency features on the volume, or set to false to disable them.
+     *   `StorageEfficiencyEnabled` is required when creating a `RW` volume ( `OntapVolumeType` set
+     *   to `RW` ).
      */
     public fun storageEfficiencyEnabled(storageEfficiencyEnabled: String) {
         cdkBuilder.storageEfficiencyEnabled(storageEfficiencyEnabled)
@@ -229,6 +260,17 @@ public class CfnVolumeOntapConfigurationPropertyDsl {
      */
     public fun tieringPolicy(tieringPolicy: CfnVolume.TieringPolicyProperty) {
         cdkBuilder.tieringPolicy(tieringPolicy)
+    }
+
+    /**
+     * @param volumeStyle Use to specify the style of an ONTAP volume. FSx for ONTAP offers two
+     *   styles of volumes that you can use for different purposes, FlexVol and FlexGroup volumes.
+     *   For more information, see
+     *   [Volume styles](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-styles.html) in
+     *   the Amazon FSx for NetApp ONTAP User Guide.
+     */
+    public fun volumeStyle(volumeStyle: String) {
+        cdkBuilder.volumeStyle(volumeStyle)
     }
 
     public fun build(): CfnVolume.OntapConfigurationProperty = cdkBuilder.build()

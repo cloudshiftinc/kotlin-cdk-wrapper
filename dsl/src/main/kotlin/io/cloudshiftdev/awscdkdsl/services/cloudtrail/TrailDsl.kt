@@ -39,7 +39,7 @@ import software.constructs.Construct
  * IAlias myKeyAlias = Alias.fromAliasName(this, "myKey", "alias/aws/s3");
  * Trail trail = Trail.Builder.create(this, "myCloudTrail")
  * .sendToCloudWatchLogs(true)
- * .kmsKey(myKeyAlias)
+ * .encryptionKey(myKeyAlias)
  * .build();
  * ```
  */
@@ -214,6 +214,19 @@ public class TrailDsl(
      */
     public fun managementEvents(managementEvents: ReadWriteType) {
         cdkBuilder.managementEvents(managementEvents)
+    }
+
+    /**
+     * The orgId.
+     *
+     * Required when `isOrganizationTrail` is set to true to attach the necessary permissions.
+     *
+     * Default: - No orgId
+     *
+     * @param orgId The orgId.
+     */
+    public fun orgId(orgId: String) {
+        cdkBuilder.orgId(orgId)
     }
 
     /**

@@ -255,7 +255,7 @@ public object ssm {
      *
      * This document defines the actions that Systems Manager performs on your AWS resources.
      *
-     * This resource does not support CloudFormation drift detection.
+     * This resource does not support AWS CloudFormation drift detection.
      *
      * Example:
      * ```
@@ -1120,7 +1120,6 @@ public object ssm {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.ssm.*;
-     * Object tags;
      * CfnParameter cfnParameter = CfnParameter.Builder.create(this, "MyCfnParameter")
      * .type("type")
      * .value("value")
@@ -1130,7 +1129,8 @@ public object ssm {
      * .description("description")
      * .name("name")
      * .policies("policies")
-     * .tags(tags)
+     * .tags(Map.of(
+     * "tagsKey", "tags"))
      * .tier("tier")
      * .build();
      * ```
@@ -1155,7 +1155,6 @@ public object ssm {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.ssm.*;
-     * Object tags;
      * CfnParameterProps cfnParameterProps = CfnParameterProps.builder()
      * .type("type")
      * .value("value")
@@ -1165,7 +1164,8 @@ public object ssm {
      * .description("description")
      * .name("name")
      * .policies("policies")
-     * .tags(tags)
+     * .tags(Map.of(
+     * "tagsKey", "tags"))
      * .tier("tier")
      * .build();
      * ```
@@ -1215,6 +1215,7 @@ public object ssm {
      * .approvedPatches(List.of("approvedPatches"))
      * .approvedPatchesComplianceLevel("approvedPatchesComplianceLevel")
      * .approvedPatchesEnableNonSecurity(false)
+     * .defaultBaseline(false)
      * .description("description")
      * .globalFilters(PatchFilterGroupProperty.builder()
      * .patchFilters(List.of(PatchFilterProperty.builder()
@@ -1325,7 +1326,7 @@ public object ssm {
      *
      * The AWS CloudFormation `AWS::SSM::PatchSource` resource is used to provide information about
      * the patches to use to update target instances, including target operating systems and source
-     * repository. Applies to Linux instances only.
+     * repository. Applies to Linux managed nodes only.
      *
      * Example:
      * ```
@@ -1377,6 +1378,7 @@ public object ssm {
      * .approvedPatches(List.of("approvedPatches"))
      * .approvedPatchesComplianceLevel("approvedPatchesComplianceLevel")
      * .approvedPatchesEnableNonSecurity(false)
+     * .defaultBaseline(false)
      * .description("description")
      * .globalFilters(PatchFilterGroupProperty.builder()
      * .patchFilters(List.of(PatchFilterProperty.builder()

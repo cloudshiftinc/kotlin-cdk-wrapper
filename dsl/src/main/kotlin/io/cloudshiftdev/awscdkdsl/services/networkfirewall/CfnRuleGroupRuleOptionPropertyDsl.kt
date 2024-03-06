@@ -43,7 +43,7 @@ public class CfnRuleGroupRuleOptionPropertyDsl {
 
     /**
      * @param keyword The Suricata rule option keywords. For Network Firewall , the keyword
-     *   signature ID (sid) is required in the format `sid: 112233` . The sid must be unique within
+     *   signature ID (sid) is required in the format `sid:112233` . The sid must be unique within
      *   the rule group. For information about Suricata rule option keywords, see
      *   [Rule options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
      *   .

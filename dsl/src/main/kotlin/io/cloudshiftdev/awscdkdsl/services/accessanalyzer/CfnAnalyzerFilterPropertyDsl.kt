@@ -20,7 +20,7 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer
 
 /**
- * The criteria that defines the rule.
+ * The criteria that defines the archive rule.
  *
  * To learn about filter keys that you can use to create an archive rule, see
  * [filter keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-reference-filter-keys.html)

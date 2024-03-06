@@ -34,6 +34,10 @@ import software.amazon.awscdk.services.backup.CfnFramework
 import software.amazon.awscdk.services.backup.CfnFrameworkProps
 import software.amazon.awscdk.services.backup.CfnReportPlan
 import software.amazon.awscdk.services.backup.CfnReportPlanProps
+import software.amazon.awscdk.services.backup.CfnRestoreTestingPlan
+import software.amazon.awscdk.services.backup.CfnRestoreTestingPlanProps
+import software.amazon.awscdk.services.backup.CfnRestoreTestingSelection
+import software.amazon.awscdk.services.backup.CfnRestoreTestingSelectionProps
 import software.amazon.awscdk.services.backup.LockConfiguration
 import software.amazon.awscdk.services.backup.TagCondition
 import software.constructs.Construct
@@ -165,7 +169,7 @@ public object backup {
      * "ServerlessCluster")
      * .engine(DatabaseClusterEngine.AURORA_POSTGRESQL)
      * .parameterGroup(ParameterGroup.fromParameterGroupName(this, "ParameterGroup",
-     * "default.aurora-postgresql10"))
+     * "default.aurora-postgresql11"))
      * .vpc(vpc)
      * .build();
      * Construct myCoolConstruct = new Construct(this, "MyCoolConstruct");
@@ -206,6 +210,7 @@ public object backup {
      * // the properties below are optional
      * .allowRestores(false)
      * .backupSelectionName("backupSelectionName")
+     * .disableDefaultBackupPolicy(false)
      * .role(role)
      * .build();
      * ```
@@ -243,7 +248,7 @@ public object backup {
      * "ServerlessCluster")
      * .engine(DatabaseClusterEngine.AURORA_POSTGRESQL)
      * .parameterGroup(ParameterGroup.fromParameterGroupName(this, "ParameterGroup",
-     * "default.aurora-postgresql10"))
+     * "default.aurora-postgresql11"))
      * .vpc(vpc)
      * .build();
      * Construct myCoolConstruct = new Construct(this, "MyCoolConstruct");
@@ -282,6 +287,7 @@ public object backup {
      * // the properties below are optional
      * .allowRestores(false)
      * .backupSelectionName("backupSelectionName")
+     * .disableDefaultBackupPolicy(false)
      * .role(role)
      * .build();
      * ```
@@ -367,16 +373,19 @@ public object backup {
      * .lifecycle(LifecycleResourceTypeProperty.builder()
      * .deleteAfterDays(123)
      * .moveToColdStorageAfterDays(123)
+     * .optInToArchiveForSupportedResources(false)
      * .build())
      * .build()))
      * .enableContinuousBackup(false)
      * .lifecycle(LifecycleResourceTypeProperty.builder()
      * .deleteAfterDays(123)
      * .moveToColdStorageAfterDays(123)
+     * .optInToArchiveForSupportedResources(false)
      * .build())
      * .recoveryPointTags(Map.of(
      * "recoveryPointTagsKey", "recoveryPointTags"))
      * .scheduleExpression("scheduleExpression")
+     * .scheduleExpressionTimezone("scheduleExpressionTimezone")
      * .startWindowMinutes(123)
      * .build()))
      * // the properties below are optional
@@ -454,16 +463,19 @@ public object backup {
      * .lifecycle(LifecycleResourceTypeProperty.builder()
      * .deleteAfterDays(123)
      * .moveToColdStorageAfterDays(123)
+     * .optInToArchiveForSupportedResources(false)
      * .build())
      * .build()))
      * .enableContinuousBackup(false)
      * .lifecycle(LifecycleResourceTypeProperty.builder()
      * .deleteAfterDays(123)
      * .moveToColdStorageAfterDays(123)
+     * .optInToArchiveForSupportedResources(false)
      * .build())
      * .recoveryPointTags(Map.of(
      * "recoveryPointTagsKey", "recoveryPointTags"))
      * .scheduleExpression("scheduleExpression")
+     * .scheduleExpressionTimezone("scheduleExpressionTimezone")
      * .startWindowMinutes(123)
      * .build()))
      * // the properties below are optional
@@ -505,16 +517,19 @@ public object backup {
      * .lifecycle(LifecycleResourceTypeProperty.builder()
      * .deleteAfterDays(123)
      * .moveToColdStorageAfterDays(123)
+     * .optInToArchiveForSupportedResources(false)
      * .build())
      * .build()))
      * .enableContinuousBackup(false)
      * .lifecycle(LifecycleResourceTypeProperty.builder()
      * .deleteAfterDays(123)
      * .moveToColdStorageAfterDays(123)
+     * .optInToArchiveForSupportedResources(false)
      * .build())
      * .recoveryPointTags(Map.of(
      * "recoveryPointTagsKey", "recoveryPointTags"))
      * .scheduleExpression("scheduleExpression")
+     * .scheduleExpressionTimezone("scheduleExpressionTimezone")
      * .startWindowMinutes(123)
      * .build();
      * ```
@@ -544,6 +559,7 @@ public object backup {
      * .lifecycle(LifecycleResourceTypeProperty.builder()
      * .deleteAfterDays(123)
      * .moveToColdStorageAfterDays(123)
+     * .optInToArchiveForSupportedResources(false)
      * .build())
      * .build();
      * ```
@@ -571,6 +587,7 @@ public object backup {
      * LifecycleResourceTypeProperty.builder()
      * .deleteAfterDays(123)
      * .moveToColdStorageAfterDays(123)
+     * .optInToArchiveForSupportedResources(false)
      * .build();
      * ```
      *
@@ -607,16 +624,19 @@ public object backup {
      * .lifecycle(LifecycleResourceTypeProperty.builder()
      * .deleteAfterDays(123)
      * .moveToColdStorageAfterDays(123)
+     * .optInToArchiveForSupportedResources(false)
      * .build())
      * .build()))
      * .enableContinuousBackup(false)
      * .lifecycle(LifecycleResourceTypeProperty.builder()
      * .deleteAfterDays(123)
      * .moveToColdStorageAfterDays(123)
+     * .optInToArchiveForSupportedResources(false)
      * .build())
      * .recoveryPointTags(Map.of(
      * "recoveryPointTagsKey", "recoveryPointTags"))
      * .scheduleExpression("scheduleExpression")
+     * .scheduleExpressionTimezone("scheduleExpressionTimezone")
      * .startWindowMinutes(123)
      * .build()))
      * // the properties below are optional
@@ -1310,6 +1330,290 @@ public object backup {
         block: CfnReportPlanReportSettingPropertyDsl.() -> Unit = {}
     ): CfnReportPlan.ReportSettingProperty {
         val builder = CfnReportPlanReportSettingPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * This is the first of two steps to create a restore testing plan;
+     *
+     * once this request is successful, finish the procedure with request
+     * CreateRestoreTestingSelection.
+     *
+     * You must include the parameter RestoreTestingPlan. You may optionally include
+     * CreatorRequestId and Tags.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.backup.*;
+     * CfnRestoreTestingPlan cfnRestoreTestingPlan = CfnRestoreTestingPlan.Builder.create(this,
+     * "MyCfnRestoreTestingPlan")
+     * .recoveryPointSelection(RestoreTestingRecoveryPointSelectionProperty.builder()
+     * .algorithm("algorithm")
+     * .includeVaults(List.of("includeVaults"))
+     * .recoveryPointTypes(List.of("recoveryPointTypes"))
+     * // the properties below are optional
+     * .excludeVaults(List.of("excludeVaults"))
+     * .selectionWindowDays(123)
+     * .build())
+     * .restoreTestingPlanName("restoreTestingPlanName")
+     * .scheduleExpression("scheduleExpression")
+     * // the properties below are optional
+     * .scheduleExpressionTimezone("scheduleExpressionTimezone")
+     * .startWindowHours(123)
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingplan.html)
+     */
+    public inline fun cfnRestoreTestingPlan(
+        scope: Construct,
+        id: String,
+        block: CfnRestoreTestingPlanDsl.() -> Unit = {},
+    ): CfnRestoreTestingPlan {
+        val builder = CfnRestoreTestingPlanDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnRestoreTestingPlan`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.backup.*;
+     * CfnRestoreTestingPlanProps cfnRestoreTestingPlanProps = CfnRestoreTestingPlanProps.builder()
+     * .recoveryPointSelection(RestoreTestingRecoveryPointSelectionProperty.builder()
+     * .algorithm("algorithm")
+     * .includeVaults(List.of("includeVaults"))
+     * .recoveryPointTypes(List.of("recoveryPointTypes"))
+     * // the properties below are optional
+     * .excludeVaults(List.of("excludeVaults"))
+     * .selectionWindowDays(123)
+     * .build())
+     * .restoreTestingPlanName("restoreTestingPlanName")
+     * .scheduleExpression("scheduleExpression")
+     * // the properties below are optional
+     * .scheduleExpressionTimezone("scheduleExpressionTimezone")
+     * .startWindowHours(123)
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingplan.html)
+     */
+    public inline fun cfnRestoreTestingPlanProps(
+        block: CfnRestoreTestingPlanPropsDsl.() -> Unit = {}
+    ): CfnRestoreTestingPlanProps {
+        val builder = CfnRestoreTestingPlanPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Required: Algorithm;
+     *
+     * Required: Recovery point types; IncludeVaults(one or more). Optional: SelectionWindowDays
+     * ('30' if not specified);ExcludeVaults (list of selectors), defaults to empty list if not
+     * listed.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.backup.*;
+     * RestoreTestingRecoveryPointSelectionProperty restoreTestingRecoveryPointSelectionProperty =
+     * RestoreTestingRecoveryPointSelectionProperty.builder()
+     * .algorithm("algorithm")
+     * .includeVaults(List.of("includeVaults"))
+     * .recoveryPointTypes(List.of("recoveryPointTypes"))
+     * // the properties below are optional
+     * .excludeVaults(List.of("excludeVaults"))
+     * .selectionWindowDays(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-restoretestingplan-restoretestingrecoverypointselection.html)
+     */
+    public inline fun cfnRestoreTestingPlanRestoreTestingRecoveryPointSelectionProperty(
+        block: CfnRestoreTestingPlanRestoreTestingRecoveryPointSelectionPropertyDsl.() -> Unit = {}
+    ): CfnRestoreTestingPlan.RestoreTestingRecoveryPointSelectionProperty {
+        val builder = CfnRestoreTestingPlanRestoreTestingRecoveryPointSelectionPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * This request can be sent after CreateRestoreTestingPlan request returns successfully.
+     *
+     * This is the second part of creating a resource testing plan, and it must be completed
+     * sequentially.
+     *
+     * This consists of `RestoreTestingSelectionName` , `ProtectedResourceType` , and one of the
+     * following:
+     * * `ProtectedResourceArns`
+     * * `ProtectedResourceConditions`
+     *
+     * Each protected resource type can have one single value.
+     *
+     * A restore testing selection can include a wildcard value ("*") for `ProtectedResourceArns`
+     * along with `ProtectedResourceConditions` . Alternatively, you can include up to 30 specific
+     * protected resource ARNs in `ProtectedResourceArns` .
+     *
+     * Cannot select by both protected resource types AND specific ARNs. Request will fail if both
+     * are included.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.backup.*;
+     * CfnRestoreTestingSelection cfnRestoreTestingSelection =
+     * CfnRestoreTestingSelection.Builder.create(this, "MyCfnRestoreTestingSelection")
+     * .iamRoleArn("iamRoleArn")
+     * .protectedResourceType("protectedResourceType")
+     * .restoreTestingPlanName("restoreTestingPlanName")
+     * .restoreTestingSelectionName("restoreTestingSelectionName")
+     * // the properties below are optional
+     * .protectedResourceArns(List.of("protectedResourceArns"))
+     * .protectedResourceConditions(ProtectedResourceConditionsProperty.builder()
+     * .stringEquals(List.of(KeyValueProperty.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .stringNotEquals(List.of(KeyValueProperty.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build())
+     * .restoreMetadataOverrides(Map.of(
+     * "restoreMetadataOverridesKey", "restoreMetadataOverrides"))
+     * .validationWindowHours(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingselection.html)
+     */
+    public inline fun cfnRestoreTestingSelection(
+        scope: Construct,
+        id: String,
+        block: CfnRestoreTestingSelectionDsl.() -> Unit = {},
+    ): CfnRestoreTestingSelection {
+        val builder = CfnRestoreTestingSelectionDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Pair of two related strings.
+     *
+     * Allowed characters are letters, white space, and numbers that can be represented in UTF-8 and
+     * the following characters: `+ - = . _ : /`
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.backup.*;
+     * KeyValueProperty keyValueProperty = KeyValueProperty.builder()
+     * .key("key")
+     * .value("value")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-restoretestingselection-keyvalue.html)
+     */
+    public inline fun cfnRestoreTestingSelectionKeyValueProperty(
+        block: CfnRestoreTestingSelectionKeyValuePropertyDsl.() -> Unit = {}
+    ): CfnRestoreTestingSelection.KeyValueProperty {
+        val builder = CfnRestoreTestingSelectionKeyValuePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnRestoreTestingSelection`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.backup.*;
+     * CfnRestoreTestingSelectionProps cfnRestoreTestingSelectionProps =
+     * CfnRestoreTestingSelectionProps.builder()
+     * .iamRoleArn("iamRoleArn")
+     * .protectedResourceType("protectedResourceType")
+     * .restoreTestingPlanName("restoreTestingPlanName")
+     * .restoreTestingSelectionName("restoreTestingSelectionName")
+     * // the properties below are optional
+     * .protectedResourceArns(List.of("protectedResourceArns"))
+     * .protectedResourceConditions(ProtectedResourceConditionsProperty.builder()
+     * .stringEquals(List.of(KeyValueProperty.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .stringNotEquals(List.of(KeyValueProperty.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build())
+     * .restoreMetadataOverrides(Map.of(
+     * "restoreMetadataOverridesKey", "restoreMetadataOverrides"))
+     * .validationWindowHours(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingselection.html)
+     */
+    public inline fun cfnRestoreTestingSelectionProps(
+        block: CfnRestoreTestingSelectionPropsDsl.() -> Unit = {}
+    ): CfnRestoreTestingSelectionProps {
+        val builder = CfnRestoreTestingSelectionPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A list of conditions that you define for resources in your restore testing plan using tags.
+     *
+     * For example, `"StringEquals": { "Key": "aws:ResourceTag/CreatedByCryo", "Value": "true" },` .
+     * Condition operators are case sensitive.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.backup.*;
+     * ProtectedResourceConditionsProperty protectedResourceConditionsProperty =
+     * ProtectedResourceConditionsProperty.builder()
+     * .stringEquals(List.of(KeyValueProperty.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .stringNotEquals(List.of(KeyValueProperty.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-restoretestingselection-protectedresourceconditions.html)
+     */
+    public inline fun cfnRestoreTestingSelectionProtectedResourceConditionsProperty(
+        block: CfnRestoreTestingSelectionProtectedResourceConditionsPropertyDsl.() -> Unit = {}
+    ): CfnRestoreTestingSelection.ProtectedResourceConditionsProperty {
+        val builder = CfnRestoreTestingSelectionProtectedResourceConditionsPropertyDsl()
         builder.apply(block)
         return builder.build()
     }

@@ -34,10 +34,14 @@ import software.amazon.awscdk.services.dms.CfnEndpoint
  * import software.amazon.awscdk.services.dms.*;
  * IbmDb2SettingsProperty ibmDb2SettingsProperty = IbmDb2SettingsProperty.builder()
  * .currentLsn("currentLsn")
+ * .keepCsvFiles(false)
+ * .loadTimeout(123)
+ * .maxFileSize(123)
  * .maxKBytesPerRead(123)
  * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
  * .secretsManagerSecretId("secretsManagerSecretId")
  * .setDataCaptureChanges(false)
+ * .writeBufferSize(123)
  * .build();
  * ```
  *
@@ -54,6 +58,40 @@ public class CfnEndpointIbmDb2SettingsPropertyDsl {
      */
     public fun currentLsn(currentLsn: String) {
         cdkBuilder.currentLsn(currentLsn)
+    }
+
+    /**
+     * @param keepCsvFiles If true, AWS DMS saves any .csv files to the Db2 LUW target that were
+     *   used to replicate data. DMS uses these files for analysis and troubleshooting. The default
+     *   value is false.
+     */
+    public fun keepCsvFiles(keepCsvFiles: Boolean) {
+        cdkBuilder.keepCsvFiles(keepCsvFiles)
+    }
+
+    /**
+     * @param keepCsvFiles If true, AWS DMS saves any .csv files to the Db2 LUW target that were
+     *   used to replicate data. DMS uses these files for analysis and troubleshooting. The default
+     *   value is false.
+     */
+    public fun keepCsvFiles(keepCsvFiles: IResolvable) {
+        cdkBuilder.keepCsvFiles(keepCsvFiles)
+    }
+
+    /**
+     * @param loadTimeout The amount of time (in milliseconds) before AWS DMS times out operations
+     *   performed by DMS on the Db2 target. The default value is 1200 (20 minutes).
+     */
+    public fun loadTimeout(loadTimeout: Number) {
+        cdkBuilder.loadTimeout(loadTimeout)
+    }
+
+    /**
+     * @param maxFileSize Specifies the maximum size (in KB) of .csv files used to transfer data to
+     *   Db2 LUW.
+     */
+    public fun maxFileSize(maxFileSize: Number) {
+        cdkBuilder.maxFileSize(maxFileSize)
     }
 
     /**
@@ -107,6 +145,15 @@ public class CfnEndpointIbmDb2SettingsPropertyDsl {
      */
     public fun setDataCaptureChanges(setDataCaptureChanges: IResolvable) {
         cdkBuilder.setDataCaptureChanges(setDataCaptureChanges)
+    }
+
+    /**
+     * @param writeBufferSize The size (in KB) of the in-memory file write buffer used when
+     *   generating .csv files on the local disk on the DMS replication instance. The default value
+     *   is 1024 (1 MB).
+     */
+    public fun writeBufferSize(writeBufferSize: Number) {
+        cdkBuilder.writeBufferSize(writeBufferSize)
     }
 
     public fun build(): CfnEndpoint.IbmDb2SettingsProperty = cdkBuilder.build()

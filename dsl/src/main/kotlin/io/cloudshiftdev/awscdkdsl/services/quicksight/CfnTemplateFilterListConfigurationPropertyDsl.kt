@@ -30,6 +30,7 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * .matchOperator("matchOperator")
  * // the properties below are optional
  * .categoryValues(List.of("categoryValues"))
+ * .nullOption("nullOption")
  * .selectAllOptions("selectAllOptions")
  * .build();
  * ```
@@ -59,6 +60,17 @@ public class CfnTemplateFilterListConfigurationPropertyDsl {
      */
     public fun matchOperator(matchOperator: String) {
         cdkBuilder.matchOperator(matchOperator)
+    }
+
+    /**
+     * @param nullOption This option determines how null values should be treated when filtering
+     *   data.
+     * * `ALL_VALUES` : Include null values in filtered results.
+     * * `NULLS_ONLY` : Only include null values in filtered results.
+     * * `NON_NULLS_ONLY` : Exclude null values from filtered results.
+     */
+    public fun nullOption(nullOption: String) {
+        cdkBuilder.nullOption(nullOption)
     }
 
     /**

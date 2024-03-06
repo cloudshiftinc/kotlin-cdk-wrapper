@@ -16,9 +16,6 @@ import kotlin.Number
 import software.amazon.awscdk.services.opsworks.CfnLayer
 
 /**
- * Describes a load-based auto scaling upscaling or downscaling threshold configuration, which
- * specifies when AWS OpsWorks Stacks starts or stops load-based instances.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.

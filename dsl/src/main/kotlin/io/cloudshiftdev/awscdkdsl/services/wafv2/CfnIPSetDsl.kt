@@ -25,7 +25,7 @@ import software.constructs.Construct
  * This is the latest version of *AWS WAF* , named AWS WAF V2, released in November, 2019.
  *
  * For information, including how to migrate your AWS WAF resources from the prior release, see the
- * [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)
+ * [AWS WAF developer guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)
  * .
  *
  * Use an `IPSet` to identify web requests that originate from specific IP addresses or ranges of IP
@@ -69,21 +69,19 @@ public class CfnIPSetDsl(
 
     /**
      * Contains an array of strings that specifies zero or more IP addresses or blocks of IP
-     * addresses.
+     * addresses that you want AWS WAF to inspect for in incoming requests.
      *
      * All addresses must be specified using Classless Inter-Domain Routing (CIDR) notation. AWS WAF
      * supports all IPv4 and IPv6 CIDR ranges except for `/0` .
      *
      * Example address strings:
-     * * To configure AWS WAF to allow, block, or count requests that originated from the IP address
-     *   192.0.2.44, specify `192.0.2.44/32` .
-     * * To configure AWS WAF to allow, block, or count requests that originated from IP addresses
-     *   from 192.0.2.0 to 192.0.2.255, specify `192.0.2.0/24` .
-     * * To configure AWS WAF to allow, block, or count requests that originated from the IP address
-     *   1111:0000:0000:0000:0000:0000:0000:0111, specify
-     *   `1111:0000:0000:0000:0000:0000:0000:0111/128` .
-     * * To configure AWS WAF to allow, block, or count requests that originated from IP addresses
-     *   1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
+     * * For requests that originated from the IP address 192.0.2.44, specify `192.0.2.44/32` .
+     * * For requests that originated from IP addresses from 192.0.2.0 to 192.0.2.255, specify
+     *   `192.0.2.0/24` .
+     * * For requests that originated from the IP address 1111:0000:0000:0000:0000:0000:0000:0111,
+     *   specify `1111:0000:0000:0000:0000:0000:0000:0111/128` .
+     * * For requests that originated from IP addresses 1111:0000:0000:0000:0000:0000:0000:0000 to
+     *   1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
      *   `1111:0000:0000:0000:0000:0000:0000:0000/64` .
      *
      * For more information about CIDR notation, see the Wikipedia entry
@@ -100,7 +98,7 @@ public class CfnIPSetDsl(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-ipset.html#cfn-wafv2-ipset-addresses)
      *
      * @param addresses Contains an array of strings that specifies zero or more IP addresses or
-     *   blocks of IP addresses.
+     *   blocks of IP addresses that you want AWS WAF to inspect for in incoming requests.
      */
     public fun addresses(vararg addresses: String) {
         _addresses.addAll(listOf(*addresses))
@@ -108,21 +106,19 @@ public class CfnIPSetDsl(
 
     /**
      * Contains an array of strings that specifies zero or more IP addresses or blocks of IP
-     * addresses.
+     * addresses that you want AWS WAF to inspect for in incoming requests.
      *
      * All addresses must be specified using Classless Inter-Domain Routing (CIDR) notation. AWS WAF
      * supports all IPv4 and IPv6 CIDR ranges except for `/0` .
      *
      * Example address strings:
-     * * To configure AWS WAF to allow, block, or count requests that originated from the IP address
-     *   192.0.2.44, specify `192.0.2.44/32` .
-     * * To configure AWS WAF to allow, block, or count requests that originated from IP addresses
-     *   from 192.0.2.0 to 192.0.2.255, specify `192.0.2.0/24` .
-     * * To configure AWS WAF to allow, block, or count requests that originated from the IP address
-     *   1111:0000:0000:0000:0000:0000:0000:0111, specify
-     *   `1111:0000:0000:0000:0000:0000:0000:0111/128` .
-     * * To configure AWS WAF to allow, block, or count requests that originated from IP addresses
-     *   1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
+     * * For requests that originated from the IP address 192.0.2.44, specify `192.0.2.44/32` .
+     * * For requests that originated from IP addresses from 192.0.2.0 to 192.0.2.255, specify
+     *   `192.0.2.0/24` .
+     * * For requests that originated from the IP address 1111:0000:0000:0000:0000:0000:0000:0111,
+     *   specify `1111:0000:0000:0000:0000:0000:0000:0111/128` .
+     * * For requests that originated from IP addresses 1111:0000:0000:0000:0000:0000:0000:0000 to
+     *   1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
      *   `1111:0000:0000:0000:0000:0000:0000:0000/64` .
      *
      * For more information about CIDR notation, see the Wikipedia entry
@@ -139,7 +135,7 @@ public class CfnIPSetDsl(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-ipset.html#cfn-wafv2-ipset-addresses)
      *
      * @param addresses Contains an array of strings that specifies zero or more IP addresses or
-     *   blocks of IP addresses.
+     *   blocks of IP addresses that you want AWS WAF to inspect for in incoming requests.
      */
     public fun addresses(addresses: Collection<String>) {
         _addresses.addAll(addresses)

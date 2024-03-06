@@ -31,13 +31,16 @@ public object personalize {
      * [CreateDatasetImportJob](https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDatasetImportJob.html)
      * to import your training data to a dataset.
      *
-     * There are three types of datasets:
-     * * Interactions
+     * There are 5 types of datasets:
+     * * Item interactions
      * * Items
      * * Users
+     * * Action interactions
+     * * Actions
      *
-     * Each dataset type has an associated schema with required field types. Only the `Interactions`
-     * dataset is required in order to train a model (also referred to as creating a solution).
+     * Each dataset type has an associated schema with required field types. Only the `Item
+     * interactions` dataset is required in order to train a model (also referred to as creating a
+     * solution).
      *
      * A dataset can be in one of the following states:
      * * CREATE PENDING &gt; CREATE IN_PROGRESS &gt; ACTIVE -or- CREATE FAILED
@@ -146,7 +149,8 @@ public object personalize {
     }
 
     /**
-     * A dataset group is a collection of related datasets (Interactions, User, and Item).
+     * A dataset group is a collection of related datasets (Item interactions, Users, Items,
+     * Actions, Action interactions).
      *
      * You create a dataset group by calling
      * [CreateDatasetGroup](https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDatasetGroup.html)
@@ -316,7 +320,8 @@ public object personalize {
     /**
      * An object that provides information about a solution.
      *
-     * A solution is a trained model that can be deployed as a campaign.
+     * A solution includes the custom recipe, customized parameters, and trained models (Solution
+     * Versions) that Amazon Personalize uses to generate recommendations.
      *
      * Example:
      * ```

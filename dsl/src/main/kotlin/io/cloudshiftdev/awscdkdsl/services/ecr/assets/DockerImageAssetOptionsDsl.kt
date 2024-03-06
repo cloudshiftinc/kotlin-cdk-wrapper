@@ -12,6 +12,7 @@
 package io.cloudshiftdev.awscdkdsl.services.ecr.assets
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -43,6 +44,7 @@ import software.amazon.awscdk.services.ecr.assets.Platform
  * .buildSecrets(Map.of(
  * "buildSecretsKey", "buildSecrets"))
  * .buildSsh("buildSsh")
+ * .cacheDisabled(false)
  * .cacheFrom(List.of(DockerCacheOption.builder()
  * .type("type")
  * // the properties below are optional
@@ -117,6 +119,13 @@ public class DockerImageAssetOptionsDsl {
      */
     public fun buildSsh(buildSsh: String) {
         cdkBuilder.buildSsh(buildSsh)
+    }
+
+    /**
+     * @param cacheDisabled Disable the cache and pass `--no-cache` to the `docker build` command.
+     */
+    public fun cacheDisabled(cacheDisabled: Boolean) {
+        cdkBuilder.cacheDisabled(cacheDisabled)
     }
 
     /** @param cacheFrom Cache from options to pass to the `docker build` command. */

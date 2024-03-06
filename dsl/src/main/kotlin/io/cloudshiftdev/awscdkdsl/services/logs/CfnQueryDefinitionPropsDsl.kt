@@ -57,7 +57,13 @@ public class CfnQueryDefinitionPropsDsl {
         _logGroupNames.addAll(logGroupNames)
     }
 
-    /** @param name A name for the query definition. */
+    /**
+     * @param name A name for the query definition.
+     *
+     * You can use the name to create a folder structure for your queries. To create a folder, use a
+     * forward slash (/) to prefix your desired query name with your desired folder name. For
+     * example, `/ *folder-name* / *query-name*` .
+     */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }

@@ -187,7 +187,7 @@ public class CfnFlowDestinationFlowConfigPropertyDsl {
 
     /**
      * @param connectorType The type of destination connector, such as Sales force, Amazon S3, and
-     *   so on. *Allowed Values* : `EventBridge | Redshift | S3 | Salesforce | Snowflake`
+     *   so on.
      */
     public fun connectorType(connectorType: String) {
         cdkBuilder.connectorType(connectorType)

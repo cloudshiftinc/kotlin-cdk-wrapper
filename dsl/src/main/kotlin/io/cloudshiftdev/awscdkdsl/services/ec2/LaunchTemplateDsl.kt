@@ -13,6 +13,7 @@ package io.cloudshiftdev.awscdkdsl.services.ec2
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -20,6 +21,7 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.BlockDevice
 import software.amazon.awscdk.services.ec2.CpuCredits
+import software.amazon.awscdk.services.ec2.IKeyPair
 import software.amazon.awscdk.services.ec2.IMachineImage
 import software.amazon.awscdk.services.ec2.ISecurityGroup
 import software.amazon.awscdk.services.ec2.InstanceInitiatedShutdownBehavior
@@ -301,14 +303,28 @@ public class LaunchTemplateDsl(
     }
 
     /**
-     * Name of SSH keypair to grant access to instance.
+     * (deprecated) Name of SSH keypair to grant access to instance.
      *
      * Default: - No SSH access will be possible.
+     * * Use `keyPair` instead -
+     *   https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_ec2-readme.html#using-an-existing-ec2-key-pair
      *
      * @param keyName Name of SSH keypair to grant access to instance.
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun keyName(keyName: String) {
         cdkBuilder.keyName(keyName)
+    }
+
+    /**
+     * The SSH keypair to grant access to the instance.
+     *
+     * Default: - No SSH access will be possible.
+     *
+     * @param keyPair The SSH keypair to grant access to the instance.
+     */
+    public fun keyPair(keyPair: IKeyPair) {
+        cdkBuilder.keyPair(keyPair)
     }
 
     /**

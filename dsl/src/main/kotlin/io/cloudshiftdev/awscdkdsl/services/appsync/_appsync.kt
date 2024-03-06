@@ -81,6 +81,11 @@ import software.amazon.awscdk.services.appsync.RuntimeConfig
 import software.amazon.awscdk.services.appsync.SchemaBindOptions
 import software.amazon.awscdk.services.appsync.SchemaFile
 import software.amazon.awscdk.services.appsync.SchemaProps
+import software.amazon.awscdk.services.appsync.SourceApi
+import software.amazon.awscdk.services.appsync.SourceApiAssociation
+import software.amazon.awscdk.services.appsync.SourceApiAssociationAttributes
+import software.amazon.awscdk.services.appsync.SourceApiAssociationProps
+import software.amazon.awscdk.services.appsync.SourceApiOptions
 import software.amazon.awscdk.services.appsync.UserPoolConfig
 import software.constructs.Construct
 
@@ -243,7 +248,7 @@ public object appsync {
      * Function authFunction;
      * GraphqlApi.Builder.create(this, "api")
      * .name("api")
-     * .schema(SchemaFile.fromAsset(join(__dirname, "appsync.test.graphql")))
+     * .definition(Definition.fromFile(join(__dirname, "appsync.test.graphql")))
      * .authorizationConfig(AuthorizationConfig.builder()
      * .defaultAuthorization(AuthorizationMode.builder()
      * .authorizationType(AuthorizationType.LAMBDA)
@@ -270,7 +275,7 @@ public object appsync {
      * ```
      * GraphqlApi api = GraphqlApi.Builder.create(this, "Api")
      * .name("demo")
-     * .schema(SchemaFile.fromAsset(join(__dirname, "schema.graphql")))
+     * .definition(Definition.fromFile(join(__dirname, "schema.graphql")))
      * .authorizationConfig(AuthorizationConfig.builder()
      * .defaultAuthorization(AuthorizationMode.builder()
      * .authorizationType(AuthorizationType.IAM)
@@ -327,7 +332,7 @@ public object appsync {
      * ```
      * GraphqlApi api = GraphqlApi.Builder.create(this, "api")
      * .name("api")
-     * .schema(SchemaFile.fromAsset(join(__dirname, "schema.graphql")))
+     * .definition(Definition.fromFile(join(__dirname, "schema.graphql")))
      * .build();
      * HttpDataSource httpDs = api.addHttpDataSource("ds", "https://states.amazonaws.com",
      * HttpDataSourceOptions.builder()
@@ -524,6 +529,7 @@ public object appsync {
      * .type("type")
      * // the properties below are optional
      * .atRestEncryptionEnabled(false)
+     * .healthMetricsConfig("healthMetricsConfig")
      * .transitEncryptionEnabled(false)
      * .build();
      * ```
@@ -555,6 +561,7 @@ public object appsync {
      * .type("type")
      * // the properties below are optional
      * .atRestEncryptionEnabled(false)
+     * .healthMetricsConfig("healthMetricsConfig")
      * .transitEncryptionEnabled(false)
      * .build();
      * ```
@@ -581,7 +588,6 @@ public object appsync {
      * CfnApiKey cfnApiKey = CfnApiKey.Builder.create(this, "MyCfnApiKey")
      * .apiId("apiId")
      * // the properties below are optional
-     * .apiKeyId("apiKeyId")
      * .description("description")
      * .expires(123)
      * .build();
@@ -610,7 +616,6 @@ public object appsync {
      * CfnApiKeyProps cfnApiKeyProps = CfnApiKeyProps.builder()
      * .apiId("apiId")
      * // the properties below are optional
-     * .apiKeyId("apiKeyId")
      * .description("description")
      * .expires(123)
      * .build();
@@ -675,6 +680,7 @@ public object appsync {
      * .lambdaConfig(LambdaConfigProperty.builder()
      * .lambdaFunctionArn("lambdaFunctionArn")
      * .build())
+     * .metricsConfig("metricsConfig")
      * .openSearchServiceConfig(OpenSearchServiceConfigProperty.builder()
      * .awsRegion("awsRegion")
      * .endpoint("endpoint")
@@ -1031,6 +1037,7 @@ public object appsync {
      * .lambdaConfig(LambdaConfigProperty.builder()
      * .lambdaFunctionArn("lambdaFunctionArn")
      * .build())
+     * .metricsConfig("metricsConfig")
      * .openSearchServiceConfig(OpenSearchServiceConfigProperty.builder()
      * .awsRegion("awsRegion")
      * .endpoint("endpoint")
@@ -1307,7 +1314,7 @@ public object appsync {
     }
 
     /**
-     * Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync function.
+     * Describes a runtime used by an AWS AppSync resolver or AWS AppSync function.
      *
      * Specifies the name and version of the runtime to use. Note that if a runtime is specified,
      * code must also be specified.
@@ -1448,6 +1455,7 @@ public object appsync {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.appsync.*;
+     * Object environmentVariables;
      * CfnGraphQLApi cfnGraphQLApi = CfnGraphQLApi.Builder.create(this, "MyCfnGraphQLApi")
      * .authenticationType("authenticationType")
      * .name("name")
@@ -1473,6 +1481,13 @@ public object appsync {
      * .build())
      * .build()))
      * .apiType("apiType")
+     * .enhancedMetricsConfig(EnhancedMetricsConfigProperty.builder()
+     * .dataSourceLevelMetricsBehavior("dataSourceLevelMetricsBehavior")
+     * .operationLevelMetricsConfig("operationLevelMetricsConfig")
+     * .resolverLevelMetricsBehavior("resolverLevelMetricsBehavior")
+     * .build())
+     * .environmentVariables(environmentVariables)
+     * .introspectionConfig("introspectionConfig")
      * .lambdaAuthorizerConfig(LambdaAuthorizerConfigProperty.builder()
      * .authorizerResultTtlInSeconds(123)
      * .authorizerUri("authorizerUri")
@@ -1491,6 +1506,8 @@ public object appsync {
      * .issuer("issuer")
      * .build())
      * .ownerContact("ownerContact")
+     * .queryDepthLimit(123)
+     * .resolverCountLimit(123)
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -1581,6 +1598,32 @@ public object appsync {
         block: CfnGraphQLApiCognitoUserPoolConfigPropertyDsl.() -> Unit = {}
     ): CfnGraphQLApi.CognitoUserPoolConfigProperty {
         val builder = CfnGraphQLApiCognitoUserPoolConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Describes an enhanced metrics configuration.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.appsync.*;
+     * EnhancedMetricsConfigProperty enhancedMetricsConfigProperty =
+     * EnhancedMetricsConfigProperty.builder()
+     * .dataSourceLevelMetricsBehavior("dataSourceLevelMetricsBehavior")
+     * .operationLevelMetricsConfig("operationLevelMetricsConfig")
+     * .resolverLevelMetricsBehavior("resolverLevelMetricsBehavior")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-enhancedmetricsconfig.html)
+     */
+    public inline fun cfnGraphQLApiEnhancedMetricsConfigProperty(
+        block: CfnGraphQLApiEnhancedMetricsConfigPropertyDsl.() -> Unit = {}
+    ): CfnGraphQLApi.EnhancedMetricsConfigProperty {
+        val builder = CfnGraphQLApiEnhancedMetricsConfigPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -1681,6 +1724,7 @@ public object appsync {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.appsync.*;
+     * Object environmentVariables;
      * CfnGraphQLApiProps cfnGraphQLApiProps = CfnGraphQLApiProps.builder()
      * .authenticationType("authenticationType")
      * .name("name")
@@ -1706,6 +1750,13 @@ public object appsync {
      * .build())
      * .build()))
      * .apiType("apiType")
+     * .enhancedMetricsConfig(EnhancedMetricsConfigProperty.builder()
+     * .dataSourceLevelMetricsBehavior("dataSourceLevelMetricsBehavior")
+     * .operationLevelMetricsConfig("operationLevelMetricsConfig")
+     * .resolverLevelMetricsBehavior("resolverLevelMetricsBehavior")
+     * .build())
+     * .environmentVariables(environmentVariables)
+     * .introspectionConfig("introspectionConfig")
      * .lambdaAuthorizerConfig(LambdaAuthorizerConfigProperty.builder()
      * .authorizerResultTtlInSeconds(123)
      * .authorizerUri("authorizerUri")
@@ -1724,6 +1775,8 @@ public object appsync {
      * .issuer("issuer")
      * .build())
      * .ownerContact("ownerContact")
+     * .queryDepthLimit(123)
+     * .resolverCountLimit(123)
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -1885,6 +1938,7 @@ public object appsync {
      * .dataSourceName("dataSourceName")
      * .kind("kind")
      * .maxBatchSize(123)
+     * .metricsConfig("metricsConfig")
      * .pipelineConfig(PipelineConfigProperty.builder()
      * .functions(List.of("functions"))
      * .build())
@@ -1920,7 +1974,7 @@ public object appsync {
     }
 
     /**
-     * Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync function.
+     * Describes a runtime used by an AWS AppSync resolver or AWS AppSync function.
      *
      * Specifies the name and version of the runtime to use. Note that if a runtime is specified,
      * code must also be specified.
@@ -2046,6 +2100,7 @@ public object appsync {
      * .dataSourceName("dataSourceName")
      * .kind("kind")
      * .maxBatchSize(123)
+     * .metricsConfig("metricsConfig")
      * .pipelineConfig(PipelineConfigProperty.builder()
      * .functions(List.of("functions"))
      * .build())
@@ -2259,7 +2314,7 @@ public object appsync {
      * SchemaFile schema = SchemaFile.Builder.create().filePath("mySchemaFile").build();
      * GraphqlApi api = GraphqlApi.Builder.create(this, "api")
      * .name("myApi")
-     * .schema(schema)
+     * .definition(Definition.fromSchema(schema))
      * .domainName(DomainOptions.builder()
      * .certificate(certificate)
      * .domainName(myDomainName)
@@ -2293,7 +2348,7 @@ public object appsync {
      * ```
      * GraphqlApi api = GraphqlApi.Builder.create(this, "Api")
      * .name("demo")
-     * .schema(SchemaFile.fromAsset(join(__dirname, "schema.graphql")))
+     * .definition(Definition.fromFile(join(__dirname, "schema.graphql")))
      * .authorizationConfig(AuthorizationConfig.builder()
      * .defaultAuthorization(AuthorizationMode.builder()
      * .authorizationType(AuthorizationType.IAM)
@@ -2456,7 +2511,7 @@ public object appsync {
      * import software.amazon.awscdk.services.events.*;
      * GraphqlApi api = GraphqlApi.Builder.create(this, "EventBridgeApi")
      * .name("EventBridgeApi")
-     * .schema(SchemaFile.fromAsset(join(__dirname, "appsync.eventbridge.graphql")))
+     * .definition(Definition.fromFile(join(__dirname, "appsync.eventbridge.graphql")))
      * .build();
      * EventBus bus = EventBus.Builder.create(this, "DestinationEventBus").build();
      * EventBridgeDataSource dataSource = api.addEventBridgeDataSource("NoneDS", bus);
@@ -2632,7 +2687,7 @@ public object appsync {
      * import software.amazon.awscdk.services.events.*;
      * GraphqlApi api = GraphqlApi.Builder.create(this, "EventBridgeApi")
      * .name("EventBridgeApi")
-     * .schema(SchemaFile.fromAsset(join(__dirname, "appsync.eventbridge.graphql")))
+     * .definition(Definition.fromFile(join(__dirname, "appsync.eventbridge.graphql")))
      * .build();
      * EventBus bus = EventBus.Builder.create(this, "DestinationEventBus").build();
      * EventBridgeDataSource dataSource = api.addEventBridgeDataSource("NoneDS", bus);
@@ -2659,14 +2714,23 @@ public object appsync {
      *
      * Example:
      * ```
-     * GraphqlApi api;
-     * Table table;
-     * IGraphqlApi importedApi = GraphqlApi.fromGraphqlApiAttributes(this, "IApi",
+     * GraphqlApi sourceApi = GraphqlApi.Builder.create(this, "FirstSourceAPI")
+     * .name("FirstSourceAPI")
+     * .definition(Definition.fromFile(join(__dirname, "appsync.merged-api-1.graphql")))
+     * .build();
+     * IGraphqlApi importedMergedApi = GraphqlApi.fromGraphqlApiAttributes(this, "ImportedMergedApi",
      * GraphqlApiAttributes.builder()
-     * .graphqlApiId(api.getApiId())
-     * .graphqlApiArn(api.getArn())
+     * .graphqlApiId("MyApiId")
+     * .graphqlApiArn("MyApiArn")
      * .build());
-     * importedApi.addDynamoDbDataSource("TableDataSource", table);
+     * IRole importedExecutionRole = Role.fromRoleArn(this, "ExecutionRole",
+     * "arn:aws:iam::ACCOUNT:role/MyExistingRole");
+     * SourceApiAssociation.Builder.create(this, "SourceApiAssociation2")
+     * .sourceApi(sourceApi)
+     * .mergedApi(importedMergedApi)
+     * .mergeType(MergeType.MANUAL_MERGE)
+     * .mergedApiExecutionRole(importedExecutionRole)
+     * .build();
      * ```
      */
     public inline fun graphqlApiAttributes(
@@ -2682,19 +2746,23 @@ public object appsync {
      *
      * Example:
      * ```
-     * import software.amazon.awscdk.services.events.*;
-     * GraphqlApi api = GraphqlApi.Builder.create(this, "EventBridgeApi")
-     * .name("EventBridgeApi")
-     * .schema(SchemaFile.fromAsset(join(__dirname, "appsync.eventbridge.graphql")))
+     * GraphqlApi sourceApi = GraphqlApi.Builder.create(this, "FirstSourceAPI")
+     * .name("FirstSourceAPI")
+     * .definition(Definition.fromFile(join(__dirname, "appsync.merged-api-1.graphql")))
      * .build();
-     * EventBus bus = EventBus.Builder.create(this, "DestinationEventBus").build();
-     * EventBridgeDataSource dataSource = api.addEventBridgeDataSource("NoneDS", bus);
-     * dataSource.createResolver("EventResolver", BaseResolverProps.builder()
-     * .typeName("Mutation")
-     * .fieldName("emitEvent")
-     * .requestMappingTemplate(MappingTemplate.fromFile("request.vtl"))
-     * .responseMappingTemplate(MappingTemplate.fromFile("response.vtl"))
+     * IGraphqlApi importedMergedApi = GraphqlApi.fromGraphqlApiAttributes(this, "ImportedMergedApi",
+     * GraphqlApiAttributes.builder()
+     * .graphqlApiId("MyApiId")
+     * .graphqlApiArn("MyApiArn")
      * .build());
+     * IRole importedExecutionRole = Role.fromRoleArn(this, "ExecutionRole",
+     * "arn:aws:iam::ACCOUNT:role/MyExistingRole");
+     * SourceApiAssociation.Builder.create(this, "SourceApiAssociation2")
+     * .sourceApi(sourceApi)
+     * .mergedApi(importedMergedApi)
+     * .mergeType(MergeType.MANUAL_MERGE)
+     * .mergedApiExecutionRole(importedExecutionRole)
+     * .build();
      * ```
      */
     public inline fun graphqlApiProps(block: GraphqlApiPropsDsl.() -> Unit = {}): GraphqlApiProps {
@@ -2710,7 +2778,7 @@ public object appsync {
      * ```
      * GraphqlApi api = GraphqlApi.Builder.create(this, "api")
      * .name("api")
-     * .schema(SchemaFile.fromAsset(join(__dirname, "schema.graphql")))
+     * .definition(Definition.fromFile(join(__dirname, "schema.graphql")))
      * .build();
      * HttpDataSource httpDs = api.addHttpDataSource("ds", "https://states.amazonaws.com",
      * HttpDataSourceOptions.builder()
@@ -2746,7 +2814,7 @@ public object appsync {
      * ```
      * GraphqlApi api = GraphqlApi.Builder.create(this, "api")
      * .name("api")
-     * .schema(SchemaFile.fromAsset(join(__dirname, "schema.graphql")))
+     * .definition(Definition.fromFile(join(__dirname, "schema.graphql")))
      * .build();
      * HttpDataSource httpDs = api.addHttpDataSource("ds", "https://states.amazonaws.com",
      * HttpDataSourceOptions.builder()
@@ -2814,7 +2882,7 @@ public object appsync {
      * Function authFunction;
      * GraphqlApi.Builder.create(this, "api")
      * .name("api")
-     * .schema(SchemaFile.fromAsset(join(__dirname, "appsync.test.graphql")))
+     * .definition(Definition.fromFile(join(__dirname, "appsync.test.graphql")))
      * .authorizationConfig(AuthorizationConfig.builder()
      * .defaultAuthorization(AuthorizationMode.builder()
      * .authorizationType(AuthorizationType.LAMBDA)
@@ -2910,7 +2978,7 @@ public object appsync {
      * GraphqlApi.Builder.create(this, "api")
      * .authorizationConfig(AuthorizationConfig.builder().build())
      * .name("myApi")
-     * .schema(SchemaFile.fromAsset(join(__dirname, "myApi.graphql")))
+     * .definition(Definition.fromFile(join(__dirname, "myApi.graphql")))
      * .logConfig(logConfig)
      * .build();
      * ```
@@ -3263,19 +3331,36 @@ public object appsync {
      *
      * Example:
      * ```
-     * import software.amazon.awscdk.services.events.*;
-     * GraphqlApi api = GraphqlApi.Builder.create(this, "EventBridgeApi")
-     * .name("EventBridgeApi")
-     * .schema(SchemaFile.fromAsset(join(__dirname, "appsync.eventbridge.graphql")))
+     * import software.amazon.awscdk.services.certificatemanager.*;
+     * import software.amazon.awscdk.services.route53.*;
+     * // hosted zone and route53 features
+     * String hostedZoneId;
+     * String zoneName = "example.com";
+     * String myDomainName = "api.example.com";
+     * Certificate certificate = Certificate.Builder.create(this,
+     * "cert").domainName(myDomainName).build();
+     * SchemaFile schema = SchemaFile.Builder.create().filePath("mySchemaFile").build();
+     * GraphqlApi api = GraphqlApi.Builder.create(this, "api")
+     * .name("myApi")
+     * .definition(Definition.fromSchema(schema))
+     * .domainName(DomainOptions.builder()
+     * .certificate(certificate)
+     * .domainName(myDomainName)
+     * .build())
      * .build();
-     * EventBus bus = EventBus.Builder.create(this, "DestinationEventBus").build();
-     * EventBridgeDataSource dataSource = api.addEventBridgeDataSource("NoneDS", bus);
-     * dataSource.createResolver("EventResolver", BaseResolverProps.builder()
-     * .typeName("Mutation")
-     * .fieldName("emitEvent")
-     * .requestMappingTemplate(MappingTemplate.fromFile("request.vtl"))
-     * .responseMappingTemplate(MappingTemplate.fromFile("response.vtl"))
+     * // hosted zone for adding appsync domain
+     * IHostedZone zone = HostedZone.fromHostedZoneAttributes(this, "HostedZone",
+     * HostedZoneAttributes.builder()
+     * .hostedZoneId(hostedZoneId)
+     * .zoneName(zoneName)
      * .build());
+     * // create a cname to the appsync domain. will map to something like xxxx.cloudfront.net
+     * // create a cname to the appsync domain. will map to something like xxxx.cloudfront.net
+     * CnameRecord.Builder.create(this, "CnameApiRecord")
+     * .recordName("api")
+     * .zone(zone)
+     * .domainName(api.getAppSyncDomainName())
+     * .build();
      * ```
      */
     public inline fun schemaFile(block: SchemaFileDsl.() -> Unit = {}): SchemaFile {
@@ -3300,7 +3385,7 @@ public object appsync {
      * SchemaFile schema = SchemaFile.Builder.create().filePath("mySchemaFile").build();
      * GraphqlApi api = GraphqlApi.Builder.create(this, "api")
      * .name("myApi")
-     * .schema(schema)
+     * .definition(Definition.fromSchema(schema))
      * .domainName(DomainOptions.builder()
      * .certificate(certificate)
      * .domainName(myDomainName)
@@ -3323,6 +3408,163 @@ public object appsync {
      */
     public inline fun schemaProps(block: SchemaPropsDsl.() -> Unit = {}): SchemaProps {
         val builder = SchemaPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Configuration of source API.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.appsync.*;
+     * GraphqlApi graphqlApi;
+     * SourceApi sourceApi = SourceApi.builder()
+     * .sourceApi(graphqlApi)
+     * // the properties below are optional
+     * .description("description")
+     * .mergeType(MergeType.MANUAL_MERGE)
+     * .build();
+     * ```
+     */
+    public inline fun sourceApi(block: SourceApiDsl.() -> Unit = {}): SourceApi {
+        val builder = SourceApiDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * AppSync SourceApiAssociation which associates an AppSync source API to an AppSync Merged API.
+     *
+     * The initial creation of the SourceApiAssociation merges the source API into the Merged API
+     * schema.
+     *
+     * Example:
+     * ```
+     * GraphqlApi sourceApi = GraphqlApi.Builder.create(this, "FirstSourceAPI")
+     * .name("FirstSourceAPI")
+     * .definition(Definition.fromFile(join(__dirname, "appsync.merged-api-1.graphql")))
+     * .build();
+     * IGraphqlApi importedMergedApi = GraphqlApi.fromGraphqlApiAttributes(this, "ImportedMergedApi",
+     * GraphqlApiAttributes.builder()
+     * .graphqlApiId("MyApiId")
+     * .graphqlApiArn("MyApiArn")
+     * .build());
+     * IRole importedExecutionRole = Role.fromRoleArn(this, "ExecutionRole",
+     * "arn:aws:iam::ACCOUNT:role/MyExistingRole");
+     * SourceApiAssociation.Builder.create(this, "SourceApiAssociation2")
+     * .sourceApi(sourceApi)
+     * .mergedApi(importedMergedApi)
+     * .mergeType(MergeType.MANUAL_MERGE)
+     * .mergedApiExecutionRole(importedExecutionRole)
+     * .build();
+     * ```
+     */
+    public inline fun sourceApiAssociation(
+        scope: Construct,
+        id: String,
+        block: SourceApiAssociationDsl.() -> Unit = {},
+    ): SourceApiAssociation {
+        val builder = SourceApiAssociationDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The attributes for imported AppSync Source Api Association.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.appsync.*;
+     * GraphqlApi graphqlApi;
+     * SourceApiAssociationAttributes sourceApiAssociationAttributes =
+     * SourceApiAssociationAttributes.builder()
+     * .associationArn("associationArn")
+     * .mergedApi(graphqlApi)
+     * .sourceApi(graphqlApi)
+     * .build();
+     * ```
+     */
+    public inline fun sourceApiAssociationAttributes(
+        block: SourceApiAssociationAttributesDsl.() -> Unit = {}
+    ): SourceApiAssociationAttributes {
+        val builder = SourceApiAssociationAttributesDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for SourceApiAssociation which associates an AppSync Source API with an AppSync
+     * Merged API.
+     *
+     * Example:
+     * ```
+     * GraphqlApi sourceApi = GraphqlApi.Builder.create(this, "FirstSourceAPI")
+     * .name("FirstSourceAPI")
+     * .definition(Definition.fromFile(join(__dirname, "appsync.merged-api-1.graphql")))
+     * .build();
+     * IGraphqlApi importedMergedApi = GraphqlApi.fromGraphqlApiAttributes(this, "ImportedMergedApi",
+     * GraphqlApiAttributes.builder()
+     * .graphqlApiId("MyApiId")
+     * .graphqlApiArn("MyApiArn")
+     * .build());
+     * IRole importedExecutionRole = Role.fromRoleArn(this, "ExecutionRole",
+     * "arn:aws:iam::ACCOUNT:role/MyExistingRole");
+     * SourceApiAssociation.Builder.create(this, "SourceApiAssociation2")
+     * .sourceApi(sourceApi)
+     * .mergedApi(importedMergedApi)
+     * .mergeType(MergeType.MANUAL_MERGE)
+     * .mergedApiExecutionRole(importedExecutionRole)
+     * .build();
+     * ```
+     */
+    public inline fun sourceApiAssociationProps(
+        block: SourceApiAssociationPropsDsl.() -> Unit = {}
+    ): SourceApiAssociationProps {
+        val builder = SourceApiAssociationPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Additional API configuration for creating a AppSync Merged API.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.*;
+     * // first source API
+     * GraphqlApi firstApi = GraphqlApi.Builder.create(this, "FirstSourceAPI")
+     * .name("FirstSourceAPI")
+     * .definition(Definition.fromFile(join(__dirname, "appsync.merged-api-1.graphql")))
+     * .build();
+     * // second source API
+     * GraphqlApi secondApi = GraphqlApi.Builder.create(this, "SecondSourceAPI")
+     * .name("SecondSourceAPI")
+     * .definition(Definition.fromFile(join(__dirname, "appsync.merged-api-2.graphql")))
+     * .build();
+     * // Merged API
+     * GraphqlApi mergedApi = GraphqlApi.Builder.create(this, "MergedAPI")
+     * .name("MergedAPI")
+     * .definition(Definition.fromSourceApis(SourceApiOptions.builder()
+     * .sourceApis(List.of(SourceApi.builder()
+     * .sourceApi(firstApi)
+     * .mergeType(MergeType.MANUAL_MERGE)
+     * .build(), SourceApi.builder()
+     * .sourceApi(secondApi)
+     * .mergeType(MergeType.AUTO_MERGE)
+     * .build()))
+     * .build()))
+     * .build();
+     * ```
+     */
+    public inline fun sourceApiOptions(
+        block: SourceApiOptionsDsl.() -> Unit = {}
+    ): SourceApiOptions {
+        val builder = SourceApiOptionsDsl()
         builder.apply(block)
         return builder.build()
     }

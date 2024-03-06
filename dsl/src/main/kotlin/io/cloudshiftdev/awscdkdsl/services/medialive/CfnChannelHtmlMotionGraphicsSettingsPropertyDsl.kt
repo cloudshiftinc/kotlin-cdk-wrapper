@@ -15,10 +15,6 @@ import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import software.amazon.awscdk.services.medialive.CfnChannel
 
 /**
- * Settings to configure the motion graphics overlay to use an HTML asset.
- *
- * The parent of this entity is MotionGraphicsSetting.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.

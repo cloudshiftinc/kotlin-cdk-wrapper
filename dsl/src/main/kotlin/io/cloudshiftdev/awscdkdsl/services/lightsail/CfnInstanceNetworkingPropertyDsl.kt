@@ -13,7 +13,6 @@ package io.cloudshiftdev.awscdkdsl.services.lightsail
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Any
-import kotlin.Number
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
@@ -44,7 +43,9 @@ import software.amazon.awscdk.services.lightsail.CfnInstance
  * .toPort(123)
  * .build()))
  * // the properties below are optional
- * .monthlyTransfer(123)
+ * .monthlyTransfer(MonthlyTransferProperty.builder()
+ * .gbPerMonthAllocated("gbPerMonthAllocated")
+ * .build())
  * .build();
  * ```
  *
@@ -61,7 +62,15 @@ public class CfnInstanceNetworkingPropertyDsl {
      * @param monthlyTransfer The monthly amount of data transfer, in GB, allocated for the
      *   instance.
      */
-    public fun monthlyTransfer(monthlyTransfer: Number) {
+    public fun monthlyTransfer(monthlyTransfer: IResolvable) {
+        cdkBuilder.monthlyTransfer(monthlyTransfer)
+    }
+
+    /**
+     * @param monthlyTransfer The monthly amount of data transfer, in GB, allocated for the
+     *   instance.
+     */
+    public fun monthlyTransfer(monthlyTransfer: CfnInstance.MonthlyTransferProperty) {
         cdkBuilder.monthlyTransfer(monthlyTransfer)
     }
 

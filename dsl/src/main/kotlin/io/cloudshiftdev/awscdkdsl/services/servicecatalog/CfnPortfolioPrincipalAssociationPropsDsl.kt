@@ -60,8 +60,7 @@ public class CfnPortfolioPrincipalAssociationPropsDsl {
     }
 
     /**
-     * @param principalType The principal type. The supported value is `IAM` . *Allowed Values* :
-     *   `IAM`
+     * @param principalType The principal type. The supported values are `IAM` and `IAM_PATTERN` .
      */
     public fun principalType(principalType: String) {
         cdkBuilder.principalType(principalType)

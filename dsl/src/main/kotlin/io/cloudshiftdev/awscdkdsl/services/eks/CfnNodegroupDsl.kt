@@ -27,14 +27,19 @@ import software.constructs.Construct
  * Creates a managed node group for an Amazon EKS cluster.
  *
  * You can only create a node group for your cluster that is equal to the current Kubernetes version
- * for the cluster.
+ * for the cluster. All node groups are created with the latest AMI release version for the
+ * respective minor Kubernetes version of the cluster, unless you deploy a custom AMI using a launch
+ * template. For more information about using launch templates, see
+ * [Launch template support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html)
+ * .
  *
  * An Amazon EKS managed node group is an Amazon EC2 Auto Scaling group and associated Amazon EC2
  * instances that are managed by AWS for an Amazon EKS cluster. For more information, see
  * [Managed node groups](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html)
  * in the *Amazon EKS User Guide* .
  *
- * Windows AMI types are only supported for commercial Regions that support Windows Amazon EKS.
+ * Windows AMI types are only supported for commercial AWS Regions that support Windows on Amazon
+ * EKS.
  *
  * Example:
  * ```
@@ -131,11 +136,11 @@ public class CfnNodegroupDsl(
     }
 
     /**
-     * The name of the cluster to create the node group in.
+     * The name of your cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-clustername)
      *
-     * @param clusterName The name of the cluster to create the node group in.
+     * @param clusterName The name of your cluster.
      */
     public fun clusterName(clusterName: String) {
         cdkBuilder.clusterName(clusterName)
@@ -160,36 +165,36 @@ public class CfnNodegroupDsl(
     }
 
     /**
-     * Force the update if the existing node group's pods are unable to be drained due to a pod
+     * Force the update if any `Pod` on the existing node group can't be drained due to a `Pod`
      * disruption budget issue.
      *
-     * If an update fails because pods could not be drained, you can force the update after it fails
-     * to terminate the old node whether or not any pods are running on the node.
+     * If an update fails because all Pods can't be drained, you can force the update after it fails
+     * to terminate the old node whether or not any `Pod` is running on the node.
      *
      * Default: - false
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-forceupdateenabled)
      *
-     * @param forceUpdateEnabled Force the update if the existing node group's pods are unable to be
-     *   drained due to a pod disruption budget issue.
+     * @param forceUpdateEnabled Force the update if any `Pod` on the existing node group can't be
+     *   drained due to a `Pod` disruption budget issue.
      */
     public fun forceUpdateEnabled(forceUpdateEnabled: Boolean) {
         cdkBuilder.forceUpdateEnabled(forceUpdateEnabled)
     }
 
     /**
-     * Force the update if the existing node group's pods are unable to be drained due to a pod
+     * Force the update if any `Pod` on the existing node group can't be drained due to a `Pod`
      * disruption budget issue.
      *
-     * If an update fails because pods could not be drained, you can force the update after it fails
-     * to terminate the old node whether or not any pods are running on the node.
+     * If an update fails because all Pods can't be drained, you can force the update after it fails
+     * to terminate the old node whether or not any `Pod` is running on the node.
      *
      * Default: - false
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-forceupdateenabled)
      *
-     * @param forceUpdateEnabled Force the update if the existing node group's pods are unable to be
-     *   drained due to a pod disruption budget issue.
+     * @param forceUpdateEnabled Force the update if any `Pod` on the existing node group can't be
+     *   drained due to a `Pod` disruption budget issue.
      */
     public fun forceUpdateEnabled(forceUpdateEnabled: IResolvable) {
         cdkBuilder.forceUpdateEnabled(forceUpdateEnabled)
@@ -244,28 +249,28 @@ public class CfnNodegroupDsl(
     }
 
     /**
-     * The Kubernetes labels applied to the nodes in the node group.
+     * The Kubernetes `labels` applied to the nodes in the node group.
      *
-     * Only labels that are applied with the Amazon EKS API are shown here. There may be other
-     * Kubernetes labels applied to the nodes in this group.
+     * Only `labels` that are applied with the Amazon EKS API are shown here. There may be other
+     * Kubernetes `labels` applied to the nodes in this group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-labels)
      *
-     * @param labels The Kubernetes labels applied to the nodes in the node group.
+     * @param labels The Kubernetes `labels` applied to the nodes in the node group.
      */
     public fun labels(labels: Map<String, String>) {
         cdkBuilder.labels(labels)
     }
 
     /**
-     * The Kubernetes labels applied to the nodes in the node group.
+     * The Kubernetes `labels` applied to the nodes in the node group.
      *
-     * Only labels that are applied with the Amazon EKS API are shown here. There may be other
-     * Kubernetes labels applied to the nodes in this group.
+     * Only `labels` that are applied with the Amazon EKS API are shown here. There may be other
+     * Kubernetes `labels` applied to the nodes in this group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-labels)
      *
-     * @param labels The Kubernetes labels applied to the nodes in the node group.
+     * @param labels The Kubernetes `labels` applied to the nodes in the node group.
      */
     public fun labels(labels: IResolvable) {
         cdkBuilder.labels(labels)
@@ -308,7 +313,7 @@ public class CfnNodegroupDsl(
      * IAM role for those nodes to use when they are launched. For more information, see
      * [Amazon EKS node IAM role](https://docs.aws.amazon.com/eks/latest/userguide/create-node-role.html)
      * in the **Amazon EKS User Guide** . If you specify `launchTemplate` , then don't specify
-     * [`IamInstanceProfile`](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IamInstanceProfile.html)
+     * `[IamInstanceProfile](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IamInstanceProfile.html)`
      * in your launch template, or the node group deployment will fail. For more information about
      * using launch templates with Amazon EKS, see
      * [Launch template support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html)
@@ -420,7 +425,7 @@ public class CfnNodegroupDsl(
      * The subnets to use for the Auto Scaling group that is created for your node group.
      *
      * If you specify `launchTemplate` , then don't specify
-     * [`SubnetId`](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterface.html)
+     * `[SubnetId](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterface.html)`
      * in your launch template, or the node group deployment will fail. For more information about
      * using launch templates with Amazon EKS, see
      * [Launch template support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html)
@@ -439,7 +444,7 @@ public class CfnNodegroupDsl(
      * The subnets to use for the Auto Scaling group that is created for your node group.
      *
      * If you specify `launchTemplate` , then don't specify
-     * [`SubnetId`](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterface.html)
+     * `[SubnetId](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterface.html)`
      * in your launch template, or the node group deployment will fail. For more information about
      * using launch templates with Amazon EKS, see
      * [Launch template support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html)
@@ -455,16 +460,14 @@ public class CfnNodegroupDsl(
     }
 
     /**
-     * The metadata applied to the node group to assist with categorization and organization.
+     * Metadata that assists with categorization and organization.
      *
-     * Each tag consists of a key and an optional value. You define both. Node group tags do not
-     * propagate to any other resources associated with the node group, such as the Amazon EC2
-     * instances or subnets.
+     * Each tag consists of a key and an optional value. You define both. Tags don't propagate to
+     * any other cluster or AWS resources.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-tags)
      *
-     * @param tags The metadata applied to the node group to assist with categorization and
-     *   organization.
+     * @param tags Metadata that assists with categorization and organization.
      */
     public fun tags(tags: Map<String, String>) {
         cdkBuilder.tags(tags)

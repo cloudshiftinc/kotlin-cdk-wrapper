@@ -63,12 +63,12 @@ public class CfnWirelessDeviceLoRaWANDevicePropertyDsl {
     private val cdkBuilder: CfnWirelessDevice.LoRaWANDeviceProperty.Builder =
         CfnWirelessDevice.LoRaWANDeviceProperty.builder()
 
-    /** @param abpV10X LoRaWAN object for create APIs. */
+    /** @param abpV10X ABP device object for LoRaWAN specification v1.0.x. */
     public fun abpV10X(abpV10X: IResolvable) {
         cdkBuilder.abpV10X(abpV10X)
     }
 
-    /** @param abpV10X LoRaWAN object for create APIs. */
+    /** @param abpV10X ABP device object for LoRaWAN specification v1.0.x. */
     public fun abpV10X(abpV10X: CfnWirelessDevice.AbpV10xProperty) {
         cdkBuilder.abpV10X(abpV10X)
     }

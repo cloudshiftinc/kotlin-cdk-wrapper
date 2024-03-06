@@ -47,7 +47,7 @@ public class CfnAccessPointTransformationConfigurationPropertyDsl {
 
     /**
      * @param actions A container for the action of an Object Lambda Access Point configuration.
-     *   Valid inputs are `GetObject` , `HeadObject` , `ListObject` , and `ListObjectV2` .
+     *   Valid inputs are `GetObject` , `HeadObject` , `ListObjects` , and `ListObjectsV2` .
      */
     public fun actions(vararg actions: String) {
         _actions.addAll(listOf(*actions))
@@ -55,7 +55,7 @@ public class CfnAccessPointTransformationConfigurationPropertyDsl {
 
     /**
      * @param actions A container for the action of an Object Lambda Access Point configuration.
-     *   Valid inputs are `GetObject` , `HeadObject` , `ListObject` , and `ListObjectV2` .
+     *   Valid inputs are `GetObject` , `HeadObject` , `ListObjects` , and `ListObjectsV2` .
      */
     public fun actions(actions: Collection<String>) {
         _actions.addAll(actions)

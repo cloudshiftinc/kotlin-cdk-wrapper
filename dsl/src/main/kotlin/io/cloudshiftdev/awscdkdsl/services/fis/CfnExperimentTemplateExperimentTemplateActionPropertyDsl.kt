@@ -24,7 +24,7 @@ import software.amazon.awscdk.services.fis.CfnExperimentTemplate
  *
  * For more information, see
  * [Actions](https://docs.aws.amazon.com/fis/latest/userguide/actions.html) in the *AWS Fault
- * Injection Simulator User Guide* .
+ * Injection Service User Guide* .
  *
  * Example:
  * ```
@@ -53,10 +53,7 @@ public class CfnExperimentTemplateExperimentTemplateActionPropertyDsl {
 
     private val _startAfter: MutableList<String> = mutableListOf()
 
-    /**
-     * @param actionId The ID of the action. The format of the action ID is: aws: *service-name* :
-     *   *action-type* .
-     */
+    /** @param actionId The ID of the action. */
     public fun actionId(actionId: String) {
         cdkBuilder.actionId(actionId)
     }
@@ -66,19 +63,19 @@ public class CfnExperimentTemplateExperimentTemplateActionPropertyDsl {
         cdkBuilder.description(description)
     }
 
-    /** @param parameters The parameters for the action, if applicable. */
+    /** @param parameters The parameters for the action. */
     public fun parameters(parameters: Map<String, String>) {
         cdkBuilder.parameters(parameters)
     }
 
-    /** @param parameters The parameters for the action, if applicable. */
+    /** @param parameters The parameters for the action. */
     public fun parameters(parameters: IResolvable) {
         cdkBuilder.parameters(parameters)
     }
 
     /**
      * @param startAfter The name of the action that must be completed before the current action
-     *   starts. Omit this parameter to run the action at the start of the experiment.
+     *   starts.
      */
     public fun startAfter(vararg startAfter: String) {
         _startAfter.addAll(listOf(*startAfter))
@@ -86,7 +83,7 @@ public class CfnExperimentTemplateExperimentTemplateActionPropertyDsl {
 
     /**
      * @param startAfter The name of the action that must be completed before the current action
-     *   starts. Omit this parameter to run the action at the start of the experiment.
+     *   starts.
      */
     public fun startAfter(startAfter: Collection<String>) {
         _startAfter.addAll(startAfter)

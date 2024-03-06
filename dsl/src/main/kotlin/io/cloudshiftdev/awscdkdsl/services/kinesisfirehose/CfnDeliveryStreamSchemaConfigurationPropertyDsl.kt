@@ -16,8 +16,8 @@ import kotlin.String
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
 /**
- * Specifies the schema to which you want Kinesis Data Firehose to configure your data before it
- * writes it to Amazon S3.
+ * Specifies the schema to which you want Firehose to configure your data before it writes it to
+ * Amazon S3.
  *
  * This parameter is required if `Enabled` is set to true.
  *
@@ -69,9 +69,8 @@ public class CfnDeliveryStreamSchemaConfigurationPropertyDsl {
     }
 
     /**
-     * @param roleArn The role that Kinesis Data Firehose can use to access AWS Glue. This role must
-     *   be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't
-     *   allowed.
+     * @param roleArn The role that Firehose can use to access AWS Glue. This role must be in the
+     *   same account you use for Firehose. Cross-account roles aren't allowed.
      *
      * If the `SchemaConfiguration` request parameter is used as part of invoking the
      * `CreateDeliveryStream` API, then the `RoleARN` property is required and its value must be
@@ -95,8 +94,8 @@ public class CfnDeliveryStreamSchemaConfigurationPropertyDsl {
 
     /**
      * @param versionId Specifies the table version for the output data schema. If you don't specify
-     *   this version ID, or if you set it to `LATEST` , Kinesis Data Firehose uses the most recent
-     *   version. This means that any updates to the table are automatically picked up.
+     *   this version ID, or if you set it to `LATEST` , Firehose uses the most recent version. This
+     *   means that any updates to the table are automatically picked up.
      */
     public fun versionId(versionId: String) {
         cdkBuilder.versionId(versionId)

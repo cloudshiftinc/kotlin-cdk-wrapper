@@ -22,7 +22,7 @@ import software.amazon.awscdk.services.greengrass.CfnDeviceDefinitionVersion
  *
  * Greengrass devices can communicate with the Greengrass core in the same group. For more
  * information, see
- * [What Is AWS IoT Greengrass ?](https://docs.aws.amazon.com/greengrass/latest/developerguide/what-is-gg.html)
+ * [What Is AWS IoT Greengrass ?](https://docs.aws.amazon.com/greengrass/v1/developerguide/what-is-gg.html)
  * in the *Developer Guide* .
  *
  * In an AWS CloudFormation template, the `Devices` property of the

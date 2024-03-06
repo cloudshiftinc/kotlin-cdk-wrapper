@@ -64,7 +64,7 @@ import software.constructs.Construct
  * MyJobProps().jobFlavor("medium")).prefixStates()).branch(new MyJob(this, "Slow", new
  * MyJobProps().jobFlavor("slow")).prefixStates());
  * StateMachine.Builder.create(this, "MyStateMachine")
- * .definition(parallel)
+ * .definitionBody(DefinitionBody.fromChainable(parallel))
  * .build();
  * }
  * }
@@ -168,6 +168,17 @@ public class ParallelDsl(
      */
     public fun resultSelector(resultSelector: Map<String, Any>) {
         cdkBuilder.resultSelector(resultSelector)
+    }
+
+    /**
+     * Optional name for this state.
+     *
+     * Default: - The construct ID will be used as state name
+     *
+     * @param stateName Optional name for this state.
+     */
+    public fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
     }
 
     public fun build(): Parallel = cdkBuilder.build()

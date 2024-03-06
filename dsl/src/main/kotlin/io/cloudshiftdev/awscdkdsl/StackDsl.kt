@@ -27,22 +27,26 @@ import software.constructs.Construct
  *
  * Example:
  * ```
- * import path.*;
- * import software.amazon.awscdk.services.cloudwatch.*;
  * import software.amazon.awscdk.*;
- * import software.amazon.awscdk.services.kinesisanalytics.flink.alpha.*;
+ * import software.amazon.awscdk.services.s3.*;
+ * IBucket bucket;
  * App app = new App();
- * Stack stack = new Stack(app, "FlinkAppTest");
- * Application flinkApp = Application.Builder.create(stack, "App")
- * .code(ApplicationCode.fromAsset(join(__dirname, "code-asset")))
- * .runtime(Runtime.FLINK_1_11)
+ * Stack stack = new Stack(app, "Stack");
+ * Table.Builder.create(stack, "Table")
+ * .partitionKey(Attribute.builder()
+ * .name("id")
+ * .type(AttributeType.STRING)
+ * .build())
+ * .importSource(ImportSourceSpecification.builder()
+ * .compressionType(InputCompressionType.GZIP)
+ * .inputFormat(InputFormat.csv(CsvOptions.builder()
+ * .delimiter(",")
+ * .headerList(List.of("id", "name"))
+ * .build()))
+ * .bucket(bucket)
+ * .keyPrefix("prefix")
+ * .build())
  * .build();
- * Alarm.Builder.create(stack, "Alarm")
- * .metric(flinkApp.metricFullRestarts())
- * .evaluationPeriods(1)
- * .threshold(3)
- * .build();
- * app.synth();
  * ```
  */
 @CdkDslMarker

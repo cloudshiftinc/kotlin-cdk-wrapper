@@ -50,7 +50,7 @@ public class CfnConnectionPropsDsl {
 
     /**
      * @param connectionName The name of the connection. Connection names must be unique in an AWS
-     *   user account.
+     *   account .
      */
     public fun connectionName(connectionName: String) {
         cdkBuilder.connectionName(connectionName)

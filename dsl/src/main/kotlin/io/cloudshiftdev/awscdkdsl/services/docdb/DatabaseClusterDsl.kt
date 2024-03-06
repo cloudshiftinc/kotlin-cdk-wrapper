@@ -46,7 +46,7 @@ import software.constructs.Construct
  * .subnetType(SubnetType.PUBLIC)
  * .build())
  * .vpc(vpc)
- * .deletionProtection(true)
+ * .removalPolicy(RemovalPolicy.SNAPSHOT)
  * .build();
  * ```
  */
@@ -213,6 +213,22 @@ public class DatabaseClusterDsl(
     }
 
     /**
+     * The removal policy to apply to the cluster's instances.
+     *
+     * Cannot be set to `SNAPSHOT`.
+     *
+     * Default: - `RemovalPolicy.DESTROY` when `removalPolicy` is set to `SNAPSHOT`, `removalPolicy`
+     * otherwise.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html)
+     *
+     * @param instanceRemovalPolicy The removal policy to apply to the cluster's instances.
+     */
+    public fun instanceRemovalPolicy(instanceRemovalPolicy: RemovalPolicy) {
+        cdkBuilder.instanceRemovalPolicy(instanceRemovalPolicy)
+    }
+
+    /**
      * What type of instance to start for the replicas.
      *
      * @param instanceType What type of instance to start for the replicas.
@@ -311,6 +327,11 @@ public class DatabaseClusterDsl(
      * This removal policy also applies to the implicit security group created for the cluster if
      * one is not supplied as a parameter.
      *
+     * When set to `SNAPSHOT`, the removal policy for the instances and the security group will
+     * default to `DESTROY` as those resources do not support the policy.
+     *
+     * Use the `instanceRemovalPolicy` and `securityGroupRemovalPolicy` to change the behavior.
+     *
      * Default: - Retain cluster.
      *
      * @param removalPolicy The removal policy to apply when the cluster and its instances are
@@ -329,6 +350,23 @@ public class DatabaseClusterDsl(
      */
     public fun securityGroup(securityGroup: ISecurityGroup) {
         cdkBuilder.securityGroup(securityGroup)
+    }
+
+    /**
+     * The removal policy to apply to the cluster's security group.
+     *
+     * Cannot be set to `SNAPSHOT`.
+     *
+     * Default: - `RemovalPolicy.DESTROY` when `removalPolicy` is set to `SNAPSHOT`, `removalPolicy`
+     * otherwise.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html)
+     *
+     * @param securityGroupRemovalPolicy The removal policy to apply to the cluster's security
+     *   group.
+     */
+    public fun securityGroupRemovalPolicy(securityGroupRemovalPolicy: RemovalPolicy) {
+        cdkBuilder.securityGroupRemovalPolicy(securityGroupRemovalPolicy)
     }
 
     /**

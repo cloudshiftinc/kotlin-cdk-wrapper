@@ -21,6 +21,7 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.sagemaker.CfnFeatureGroup
 import software.amazon.awscdk.services.sagemaker.CfnFeatureGroupProps
 
 /**
@@ -50,6 +51,12 @@ import software.amazon.awscdk.services.sagemaker.CfnFeatureGroupProps
  * .key("key")
  * .value("value")
  * .build()))
+ * .throughputConfig(ThroughputConfigProperty.builder()
+ * .throughputMode("throughputMode")
+ * // the properties below are optional
+ * .provisionedReadCapacityUnits(123)
+ * .provisionedWriteCapacityUnits(123)
+ * .build())
  * .build();
  * ```
  *
@@ -170,6 +177,44 @@ public class CfnFeatureGroupPropsDsl {
     /** @param tags Tags used to define a `FeatureGroup` . */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
+    }
+
+    /**
+     * @param throughputConfig Used to set feature group throughput configuration. There are two
+     *   modes: `ON_DEMAND` and `PROVISIONED` . With on-demand mode, you are charged for data reads
+     *   and writes that your application performs on your feature group. You do not need to specify
+     *   read and write throughput because Feature Store accommodates your workloads as they ramp up
+     *   and down. You can switch a feature group to on-demand only once in a 24 hour period. With
+     *   provisioned throughput mode, you specify the read and write capacity per second that you
+     *   expect your application to require, and you are billed based on those limits. Exceeding
+     *   provisioned throughput will result in your requests being throttled.
+     *
+     * Note: `PROVISIONED` throughput mode is supported only for feature groups that are
+     * offline-only, or use the
+     * [`Standard`](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_OnlineStoreConfig.html#sagemaker-Type-OnlineStoreConfig-StorageType)
+     * tier online store.
+     */
+    public fun throughputConfig(throughputConfig: IResolvable) {
+        cdkBuilder.throughputConfig(throughputConfig)
+    }
+
+    /**
+     * @param throughputConfig Used to set feature group throughput configuration. There are two
+     *   modes: `ON_DEMAND` and `PROVISIONED` . With on-demand mode, you are charged for data reads
+     *   and writes that your application performs on your feature group. You do not need to specify
+     *   read and write throughput because Feature Store accommodates your workloads as they ramp up
+     *   and down. You can switch a feature group to on-demand only once in a 24 hour period. With
+     *   provisioned throughput mode, you specify the read and write capacity per second that you
+     *   expect your application to require, and you are billed based on those limits. Exceeding
+     *   provisioned throughput will result in your requests being throttled.
+     *
+     * Note: `PROVISIONED` throughput mode is supported only for feature groups that are
+     * offline-only, or use the
+     * [`Standard`](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_OnlineStoreConfig.html#sagemaker-Type-OnlineStoreConfig-StorageType)
+     * tier online store.
+     */
+    public fun throughputConfig(throughputConfig: CfnFeatureGroup.ThroughputConfigProperty) {
+        cdkBuilder.throughputConfig(throughputConfig)
     }
 
     public fun build(): CfnFeatureGroupProps {

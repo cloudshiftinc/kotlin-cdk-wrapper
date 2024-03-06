@@ -15,8 +15,16 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.logs.CfnAccountPolicy
 import software.amazon.awscdk.services.logs.CfnAccountPolicyProps
+import software.amazon.awscdk.services.logs.CfnDelivery
+import software.amazon.awscdk.services.logs.CfnDeliveryDestination
+import software.amazon.awscdk.services.logs.CfnDeliveryDestinationProps
+import software.amazon.awscdk.services.logs.CfnDeliveryProps
+import software.amazon.awscdk.services.logs.CfnDeliverySource
+import software.amazon.awscdk.services.logs.CfnDeliverySourceProps
 import software.amazon.awscdk.services.logs.CfnDestination
 import software.amazon.awscdk.services.logs.CfnDestinationProps
+import software.amazon.awscdk.services.logs.CfnLogAnomalyDetector
+import software.amazon.awscdk.services.logs.CfnLogAnomalyDetectorProps
 import software.amazon.awscdk.services.logs.CfnLogGroup
 import software.amazon.awscdk.services.logs.CfnLogGroupProps
 import software.amazon.awscdk.services.logs.CfnLogStream
@@ -33,7 +41,6 @@ import software.amazon.awscdk.services.logs.ColumnRestriction
 import software.amazon.awscdk.services.logs.CrossAccountDestination
 import software.amazon.awscdk.services.logs.CrossAccountDestinationProps
 import software.amazon.awscdk.services.logs.DataProtectionPolicy
-import software.amazon.awscdk.services.logs.DataProtectionPolicyConfig
 import software.amazon.awscdk.services.logs.DataProtectionPolicyProps
 import software.amazon.awscdk.services.logs.LogGroup
 import software.amazon.awscdk.services.logs.LogGroupProps
@@ -60,12 +67,14 @@ import software.constructs.Construct
 
 public object logs {
     /**
-     * Creates or updates an account-level data protection policy that applies to all log groups in
-     * the account.
+     * Creates or updates an account-level data protection policy or subscription filter policy that
+     * applies to all log groups or a subset of log groups in the account.
+     *
+     * *Data protection policy*
      *
      * A data protection policy can help safeguard sensitive data that's ingested by your log groups
      * by auditing and masking the sensitive log data. Each account can have only one account-level
-     * policy.
+     * data protection policy.
      *
      * Sensitive data is detected and masked when it is ingested into a log group. When you set a
      * data protection policy, log events ingested into the log groups before that time are not
@@ -97,6 +106,31 @@ public object logs {
      * protection policy and the account also has an account-level data protection policy, then the
      * two policies are cumulative. Any sensitive term specified in either policy is masked.
      *
+     * *Subscription filter policy*
+     *
+     * A subscription filter policy sets up a real-time feed of log events from CloudWatch Logs to
+     * other AWS services. Account-level subscription filter policies apply to both existing log
+     * groups and log groups that are created later in this account. Supported destinations are
+     * Kinesis Data Streams , Firehose , and Lambda . When log events are sent to the receiving
+     * service, they are Base64 encoded and compressed with the GZIP format.
+     *
+     * The following destinations are supported for subscription filters:
+     * * An Kinesis Data Streams data stream in the same account as the subscription policy, for
+     *   same-account delivery.
+     * * An Firehose data stream in the same account as the subscription policy, for same-account
+     *   delivery.
+     * * A Lambda function in the same account as the subscription policy, for same-account
+     *   delivery.
+     * * A logical destination in a different account created with
+     *   [PutDestination](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDestination.html)
+     *   , for cross-account delivery. Kinesis Data Streams and Firehose are supported as logical
+     *   destinations.
+     *
+     * Each account can have one account-level subscription filter policy. If you are updating an
+     * existing filter, you must specify the correct name in `PolicyName` . To perform a
+     * `PutAccountPolicy` subscription filter operation for any destination except a Lambda
+     * function, you must also have the `iam:PassRole` permission.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -108,6 +142,7 @@ public object logs {
      * .policyType("policyType")
      * // the properties below are optional
      * .scope("scope")
+     * .selectionCriteria("selectionCriteria")
      * .build();
      * ```
      *
@@ -137,6 +172,7 @@ public object logs {
      * .policyType("policyType")
      * // the properties below are optional
      * .scope("scope")
+     * .selectionCriteria("selectionCriteria")
      * .build();
      * ```
      *
@@ -146,6 +182,257 @@ public object logs {
         block: CfnAccountPolicyPropsDsl.() -> Unit = {}
     ): CfnAccountPolicyProps {
         val builder = CfnAccountPolicyPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * This structure contains information about one *delivery* in your account.
+     *
+     * A delivery is a connection between a logical *delivery source* and a logical *delivery
+     * destination* .
+     *
+     * For more information, see
+     * [CreateDelivery](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_CreateDelivery.html)
+     * .
+     *
+     * You can't update an existing delivery. You can only create and delete deliveries.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.logs.*;
+     * CfnDelivery cfnDelivery = CfnDelivery.Builder.create(this, "MyCfnDelivery")
+     * .deliveryDestinationArn("deliveryDestinationArn")
+     * .deliverySourceName("deliverySourceName")
+     * // the properties below are optional
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html)
+     */
+    public inline fun cfnDelivery(
+        scope: Construct,
+        id: String,
+        block: CfnDeliveryDsl.() -> Unit = {},
+    ): CfnDelivery {
+        val builder = CfnDeliveryDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * This structure contains information about one *delivery destination* in your account.
+     *
+     * A delivery destination is an AWS resource that represents an AWS service that logs can be
+     * sent to. CloudWatch Logs, Amazon S3, are supported as Firehose delivery destinations.
+     *
+     * To configure logs delivery between a supported AWS service and a destination, you must do the
+     * following:
+     * * Create a delivery source, which is a logical object that represents the resource that is
+     *   actually sending the logs. For more information, see
+     *   [PutDeliverySource](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliverySource.html)
+     *   .
+     * * Create a *delivery destination* , which is a logical object that represents the actual
+     *   delivery destination.
+     * * If you are delivering logs cross-account, you must use
+     *   [PutDeliveryDestinationPolicy](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestinationPolicy.html)
+     *   in the destination account to assign an IAM policy to the destination. This policy allows
+     *   delivery to that destination.
+     * * Create a *delivery* by pairing exactly one delivery source and one delivery destination.
+     *   For more information, see
+     *   [CreateDelivery](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_CreateDelivery.html)
+     *   .
+     *
+     * You can configure a single delivery source to send logs to multiple destinations by creating
+     * multiple deliveries. You can also create multiple deliveries to configure multiple delivery
+     * sources to send logs to the same delivery destination.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.logs.*;
+     * Object deliveryDestinationPolicy;
+     * CfnDeliveryDestination cfnDeliveryDestination = CfnDeliveryDestination.Builder.create(this,
+     * "MyCfnDeliveryDestination")
+     * .name("name")
+     * // the properties below are optional
+     * .deliveryDestinationPolicy(deliveryDestinationPolicy)
+     * .destinationResourceArn("destinationResourceArn")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-deliverydestination.html)
+     */
+    public inline fun cfnDeliveryDestination(
+        scope: Construct,
+        id: String,
+        block: CfnDeliveryDestinationDsl.() -> Unit = {},
+    ): CfnDeliveryDestination {
+        val builder = CfnDeliveryDestinationDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnDeliveryDestination`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.logs.*;
+     * Object deliveryDestinationPolicy;
+     * CfnDeliveryDestinationProps cfnDeliveryDestinationProps = CfnDeliveryDestinationProps.builder()
+     * .name("name")
+     * // the properties below are optional
+     * .deliveryDestinationPolicy(deliveryDestinationPolicy)
+     * .destinationResourceArn("destinationResourceArn")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-deliverydestination.html)
+     */
+    public inline fun cfnDeliveryDestinationProps(
+        block: CfnDeliveryDestinationPropsDsl.() -> Unit = {}
+    ): CfnDeliveryDestinationProps {
+        val builder = CfnDeliveryDestinationPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnDelivery`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.logs.*;
+     * CfnDeliveryProps cfnDeliveryProps = CfnDeliveryProps.builder()
+     * .deliveryDestinationArn("deliveryDestinationArn")
+     * .deliverySourceName("deliverySourceName")
+     * // the properties below are optional
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html)
+     */
+    public inline fun cfnDeliveryProps(
+        block: CfnDeliveryPropsDsl.() -> Unit = {}
+    ): CfnDeliveryProps {
+        val builder = CfnDeliveryPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * This structure contains information about one *delivery source* in your account.
+     *
+     * A delivery source is an AWS resource that sends logs to an AWS destination. The destination
+     * can be CloudWatch Logs, Amazon S3, or Firehose.
+     *
+     * Only some AWS services support being configured as a delivery source. These services are
+     * listed as *Supported [V2 Permissions]* in the table at
+     * [Enabling logging from AWS services.](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html)
+     *
+     * To configure logs delivery between a supported AWS service and a destination, you must do the
+     * following:
+     * * Create a delivery source, which is a logical object that represents the resource that is
+     *   actually sending the logs. For more information, see
+     *   [PutDeliverySource](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliverySource.html)
+     *   .
+     * * Create a *delivery destination* , which is a logical object that represents the actual
+     *   delivery destination. For more information, see
+     *   [PutDeliveryDestination](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestination.html)
+     *   .
+     * * If you are delivering logs cross-account, you must use
+     *   [PutDeliveryDestinationPolicy](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestinationPolicy.html)
+     *   in the destination account to assign an IAM policy to the destination. This policy allows
+     *   delivery to that destination.
+     * * Create a *delivery* by pairing exactly one delivery source and one delivery destination.
+     *   For more information, see
+     *   [CreateDelivery](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_CreateDelivery.html)
+     *   .
+     *
+     * You can configure a single delivery source to send logs to multiple destinations by creating
+     * multiple deliveries. You can also create multiple deliveries to configure multiple delivery
+     * sources to send logs to the same delivery destination.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.logs.*;
+     * CfnDeliverySource cfnDeliverySource = CfnDeliverySource.Builder.create(this,
+     * "MyCfnDeliverySource")
+     * .name("name")
+     * // the properties below are optional
+     * .logType("logType")
+     * .resourceArn("resourceArn")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-deliverysource.html)
+     */
+    public inline fun cfnDeliverySource(
+        scope: Construct,
+        id: String,
+        block: CfnDeliverySourceDsl.() -> Unit = {},
+    ): CfnDeliverySource {
+        val builder = CfnDeliverySourceDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnDeliverySource`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.logs.*;
+     * CfnDeliverySourceProps cfnDeliverySourceProps = CfnDeliverySourceProps.builder()
+     * .name("name")
+     * // the properties below are optional
+     * .logType("logType")
+     * .resourceArn("resourceArn")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-deliverysource.html)
+     */
+    public inline fun cfnDeliverySourceProps(
+        block: CfnDeliverySourcePropsDsl.() -> Unit = {}
+    ): CfnDeliverySourceProps {
+        val builder = CfnDeliverySourcePropsDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -210,6 +497,84 @@ public object logs {
     }
 
     /**
+     * Creates or updates an *anomaly detector* that regularly scans one or more log groups and look
+     * for patterns and anomalies in the logs.
+     *
+     * An anomaly detector can help surface issues by automatically discovering anomalies in your
+     * log event traffic. An anomaly detector uses machine learning algorithms to scan log events
+     * and find *patterns* . A pattern is a shared text structure that recurs among your log fields.
+     * Patterns provide a useful tool for analyzing large sets of logs because a large number of log
+     * events can often be compressed into a few patterns.
+     *
+     * The anomaly detector uses pattern recognition to find `anomalies` , which are unusual log
+     * events. It compares current log events and patterns with trained baselines.
+     *
+     * Fields within a pattern are called *tokens* . Fields that vary within a pattern, such as a
+     * request ID or timestamp, are referred to as *dynamic tokens* and represented by `&lt;*&gt;` .
+     *
+     * For more information see
+     * [Log anomaly detection](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/LogsAnomalyDetection.html)
+     * .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.logs.*;
+     * CfnLogAnomalyDetector cfnLogAnomalyDetector = CfnLogAnomalyDetector.Builder.create(this,
+     * "MyCfnLogAnomalyDetector")
+     * .accountId("accountId")
+     * .anomalyVisibilityTime(123)
+     * .detectorName("detectorName")
+     * .evaluationFrequency("evaluationFrequency")
+     * .filterPattern("filterPattern")
+     * .kmsKeyId("kmsKeyId")
+     * .logGroupArnList(List.of("logGroupArnList"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loganomalydetector.html)
+     */
+    public inline fun cfnLogAnomalyDetector(
+        scope: Construct,
+        id: String,
+        block: CfnLogAnomalyDetectorDsl.() -> Unit = {},
+    ): CfnLogAnomalyDetector {
+        val builder = CfnLogAnomalyDetectorDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnLogAnomalyDetector`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.logs.*;
+     * CfnLogAnomalyDetectorProps cfnLogAnomalyDetectorProps = CfnLogAnomalyDetectorProps.builder()
+     * .accountId("accountId")
+     * .anomalyVisibilityTime(123)
+     * .detectorName("detectorName")
+     * .evaluationFrequency("evaluationFrequency")
+     * .filterPattern("filterPattern")
+     * .kmsKeyId("kmsKeyId")
+     * .logGroupArnList(List.of("logGroupArnList"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loganomalydetector.html)
+     */
+    public inline fun cfnLogAnomalyDetectorProps(
+        block: CfnLogAnomalyDetectorPropsDsl.() -> Unit = {}
+    ): CfnLogAnomalyDetectorProps {
+        val builder = CfnLogAnomalyDetectorPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The `AWS::Logs::LogGroup` resource specifies a log group.
      *
      * A log group defines common properties for log streams, such as their retention and access
@@ -231,6 +596,7 @@ public object logs {
      * CfnLogGroup cfnLogGroup = CfnLogGroup.Builder.create(this, "MyCfnLogGroup")
      * .dataProtectionPolicy(dataProtectionPolicy)
      * .kmsKeyId("kmsKeyId")
+     * .logGroupClass("logGroupClass")
      * .logGroupName("logGroupName")
      * .retentionInDays(123)
      * .tags(List.of(CfnTag.builder()
@@ -264,6 +630,7 @@ public object logs {
      * CfnLogGroupProps cfnLogGroupProps = CfnLogGroupProps.builder()
      * .dataProtectionPolicy(dataProtectionPolicy)
      * .kmsKeyId("kmsKeyId")
+     * .logGroupClass("logGroupClass")
      * .logGroupName("logGroupName")
      * .retentionInDays(123)
      * .tags(List.of(CfnTag.builder()
@@ -801,7 +1168,9 @@ public object logs {
      * DataProtectionPolicy dataProtectionPolicy = DataProtectionPolicy.Builder.create()
      * .name("data protection policy")
      * .description("policy description")
-     * .identifiers(List.of(DataIdentifier.DRIVERSLICENSE_US, new DataIdentifier("EmailAddress")))
+     * .identifiers(List.of(DataIdentifier.DRIVERSLICENSE_US,  // managed data identifier
+     * new DataIdentifier("EmailAddress"),  // forward compatibility for new managed data identifiers
+     * new CustomDataIdentifier("EmployeeId", "EmployeeId-\\d{9}"))) // custom data identifier
      * .logGroupAuditDestination(logGroupDestination)
      * .s3BucketAuditDestination(bucket)
      * .deliveryStreamNameAuditDestination(deliveryStream.getDeliveryStreamName())
@@ -816,31 +1185,6 @@ public object logs {
         block: DataProtectionPolicyDsl.() -> Unit = {}
     ): DataProtectionPolicy {
         val builder = DataProtectionPolicyDsl()
-        builder.apply(block)
-        return builder.build()
-    }
-
-    /**
-     * Interface representing a data protection policy.
-     *
-     * Example:
-     * ```
-     * // The code below shows an example of how to instantiate this type.
-     * // The values are placeholders you should change.
-     * import software.amazon.awscdk.services.logs.*;
-     * Object statement;
-     * DataProtectionPolicyConfig dataProtectionPolicyConfig = DataProtectionPolicyConfig.builder()
-     * .description("description")
-     * .name("name")
-     * .statement(statement)
-     * .version("version")
-     * .build();
-     * ```
-     */
-    public inline fun dataProtectionPolicyConfig(
-        block: DataProtectionPolicyConfigDsl.() -> Unit = {}
-    ): DataProtectionPolicyConfig {
-        val builder = DataProtectionPolicyConfigDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -863,7 +1207,9 @@ public object logs {
      * DataProtectionPolicy dataProtectionPolicy = DataProtectionPolicy.Builder.create()
      * .name("data protection policy")
      * .description("policy description")
-     * .identifiers(List.of(DataIdentifier.DRIVERSLICENSE_US, new DataIdentifier("EmailAddress")))
+     * .identifiers(List.of(DataIdentifier.DRIVERSLICENSE_US,  // managed data identifier
+     * new DataIdentifier("EmailAddress"),  // forward compatibility for new managed data identifiers
+     * new CustomDataIdentifier("EmployeeId", "EmployeeId-\\d{9}"))) // custom data identifier
      * .logGroupAuditDestination(logGroupDestination)
      * .s3BucketAuditDestination(bucket)
      * .deliveryStreamNameAuditDestination(deliveryStream.getDeliveryStreamName())
@@ -922,27 +1268,29 @@ public object logs {
      *
      * Example:
      * ```
-     * import software.amazon.awscdk.services.kinesisfirehose.alpha.*;
-     * import software.amazon.awscdk.services.kinesisfirehose.destinations.alpha.*;
-     * LogGroup logGroupDestination = LogGroup.Builder.create(this, "LogGroupLambdaAudit")
-     * .logGroupName("auditDestinationForCDK")
+     * Vpc vpc;
+     * Key kmsKey = new Key(this, "KmsKey");
+     * // Pass the KMS key in the `encryptionKey` field to associate the key to the log group
+     * LogGroup logGroup = LogGroup.Builder.create(this, "LogGroup")
+     * .encryptionKey(kmsKey)
      * .build();
-     * Bucket bucket = new Bucket(this, "audit-bucket");
-     * S3Bucket s3Destination = new S3Bucket(bucket);
-     * DeliveryStream deliveryStream = DeliveryStream.Builder.create(this, "Delivery Stream")
-     * .destinations(List.of(s3Destination))
+     * // Pass the KMS key in the `encryptionKey` field to associate the key to the S3 bucket
+     * Bucket execBucket = Bucket.Builder.create(this, "EcsExecBucket")
+     * .encryptionKey(kmsKey)
      * .build();
-     * DataProtectionPolicy dataProtectionPolicy = DataProtectionPolicy.Builder.create()
-     * .name("data protection policy")
-     * .description("policy description")
-     * .identifiers(List.of(DataIdentifier.DRIVERSLICENSE_US, new DataIdentifier("EmailAddress")))
-     * .logGroupAuditDestination(logGroupDestination)
-     * .s3BucketAuditDestination(bucket)
-     * .deliveryStreamNameAuditDestination(deliveryStream.getDeliveryStreamName())
-     * .build();
-     * LogGroup.Builder.create(this, "LogGroupLambda")
-     * .logGroupName("cdkIntegLogGroup")
-     * .dataProtectionPolicy(dataProtectionPolicy)
+     * Cluster cluster = Cluster.Builder.create(this, "Cluster")
+     * .vpc(vpc)
+     * .executeCommandConfiguration(ExecuteCommandConfiguration.builder()
+     * .kmsKey(kmsKey)
+     * .logConfiguration(ExecuteCommandLogConfiguration.builder()
+     * .cloudWatchLogGroup(logGroup)
+     * .cloudWatchEncryptionEnabled(true)
+     * .s3Bucket(execBucket)
+     * .s3EncryptionEnabled(true)
+     * .s3KeyPrefix("exec-command-output")
+     * .build())
+     * .logging(ExecuteCommandLogging.OVERRIDE)
+     * .build())
      * .build();
      * ```
      */

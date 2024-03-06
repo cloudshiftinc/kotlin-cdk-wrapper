@@ -65,9 +65,11 @@ public class CfnPipelineDsl(
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
+     * The parallelism configuration applied to the pipeline.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-parallelismconfiguration)
      *
-     * @param parallelismConfiguration
+     * @param parallelismConfiguration The parallelism configuration applied to the pipeline.
      */
     public fun parallelismConfiguration(parallelismConfiguration: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
@@ -76,9 +78,11 @@ public class CfnPipelineDsl(
     }
 
     /**
+     * The parallelism configuration applied to the pipeline.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-parallelismconfiguration)
      *
-     * @param parallelismConfiguration
+     * @param parallelismConfiguration The parallelism configuration applied to the pipeline.
      */
     public fun parallelismConfiguration(parallelismConfiguration: Any) {
         cdkBuilder.parallelismConfiguration(parallelismConfiguration)

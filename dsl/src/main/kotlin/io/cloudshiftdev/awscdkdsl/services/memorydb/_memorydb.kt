@@ -403,6 +403,11 @@ public object memorydb {
     }
 
     /**
+     * Denotes the user's authentication properties, such as whether it requires a password to
+     * authenticate.
+     *
+     * Used in output responses.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.

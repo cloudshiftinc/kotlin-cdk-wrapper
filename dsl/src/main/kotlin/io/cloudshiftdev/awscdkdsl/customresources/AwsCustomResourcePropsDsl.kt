@@ -24,6 +24,7 @@ import software.amazon.awscdk.customresources.AwsSdkCall
 import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.iam.IRole
+import software.amazon.awscdk.services.logs.ILogGroup
 import software.amazon.awscdk.services.logs.RetentionDays
 
 /**
@@ -38,7 +39,7 @@ import software.amazon.awscdk.services.logs.RetentionDays
  * .onCreate(AwsSdkCall.builder()
  * .assumedRoleArn("arn:aws:iam::OTHERACCOUNT:role/CrossAccount/ManageHostedZoneConnections")
  * .service("Route53")
- * .action("associateVPCWithHostedZone")
+ * .action("AssociateVPCWithHostedZone")
  * .parameters(Map.of(
  * "HostedZoneId", "hz-123",
  * "VPC", Map.of(
@@ -82,8 +83,20 @@ public class AwsCustomResourcePropsDsl {
     }
 
     /**
+     * @param logGroup The Log Group used for logging of events emitted by the custom resource's
+     *   lambda function. Providing a user-controlled log group was rolled out to commercial regions
+     *   on 2023-11-16. If you are deploying to another type of region, please check regional
+     *   availability first.
+     */
+    public fun logGroup(logGroup: ILogGroup) {
+        cdkBuilder.logGroup(logGroup)
+    }
+
+    /**
      * @param logRetention The number of days log events of the singleton Lambda function
-     *   implementing this custom resource are kept in CloudWatch Logs.
+     *   implementing this custom resource are kept in CloudWatch Logs. This is a legacy API and we
+     *   strongly recommend you migrate to `logGroup` if you can. `logGroup` allows you to create a
+     *   fully customizable log group and instruct the Lambda function to send logs to it.
      */
     public fun logRetention(logRetention: RetentionDays) {
         cdkBuilder.logRetention(logRetention)

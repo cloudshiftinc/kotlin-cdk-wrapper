@@ -13,6 +13,7 @@ package io.cloudshiftdev.awscdkdsl.services.s3
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.String
+import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3.CfnBucket
 
 /**
@@ -31,10 +32,17 @@ import software.amazon.awscdk.services.s3.CfnBucket
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.s3.*;
+ * Object simplePrefix;
  * LoggingConfigurationProperty loggingConfigurationProperty =
  * LoggingConfigurationProperty.builder()
  * .destinationBucketName("destinationBucketName")
  * .logFilePrefix("logFilePrefix")
+ * .targetObjectKeyFormat(TargetObjectKeyFormatProperty.builder()
+ * .partitionedPrefix(PartitionedPrefixProperty.builder()
+ * .partitionDateSource("partitionDateSource")
+ * .build())
+ * .simplePrefix(simplePrefix)
+ * .build())
  * .build();
  * ```
  *
@@ -61,6 +69,24 @@ public class CfnBucketLoggingConfigurationPropertyDsl {
      */
     public fun logFilePrefix(logFilePrefix: String) {
         cdkBuilder.logFilePrefix(logFilePrefix)
+    }
+
+    /**
+     * @param targetObjectKeyFormat Amazon S3 key format for log objects. Only one format, either
+     *   PartitionedPrefix or SimplePrefix, is allowed.
+     */
+    public fun targetObjectKeyFormat(targetObjectKeyFormat: IResolvable) {
+        cdkBuilder.targetObjectKeyFormat(targetObjectKeyFormat)
+    }
+
+    /**
+     * @param targetObjectKeyFormat Amazon S3 key format for log objects. Only one format, either
+     *   PartitionedPrefix or SimplePrefix, is allowed.
+     */
+    public fun targetObjectKeyFormat(
+        targetObjectKeyFormat: CfnBucket.TargetObjectKeyFormatProperty
+    ) {
+        cdkBuilder.targetObjectKeyFormat(targetObjectKeyFormat)
     }
 
     public fun build(): CfnBucket.LoggingConfigurationProperty = cdkBuilder.build()

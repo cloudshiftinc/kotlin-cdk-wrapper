@@ -40,6 +40,8 @@ import software.amazon.awscdk.services.transfer.CfnUserProps
  * .homeDirectoryMappings(List.of(HomeDirectoryMapEntryProperty.builder()
  * .entry("entry")
  * .target("target")
+ * // the properties below are optional
+ * .type("type")
  * .build()))
  * .homeDirectoryType("homeDirectoryType")
  * .policy("policy")
@@ -72,6 +74,8 @@ public class CfnUserPropsDsl {
     /**
      * @param homeDirectory The landing directory (folder) for a user when they log in to the server
      *   using the client. A `HomeDirectory` example is `/bucket_name/home/mydirectory` .
+     *
+     * The `HomeDirectory` parameter is only used if `HomeDirectoryType` is set to `PATH` .
      */
     public fun homeDirectory(homeDirectory: String) {
         cdkBuilder.homeDirectory(homeDirectory)

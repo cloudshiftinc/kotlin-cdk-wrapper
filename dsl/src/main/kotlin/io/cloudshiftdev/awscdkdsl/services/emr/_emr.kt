@@ -27,6 +27,8 @@ import software.amazon.awscdk.services.emr.CfnStudio
 import software.amazon.awscdk.services.emr.CfnStudioProps
 import software.amazon.awscdk.services.emr.CfnStudioSessionMapping
 import software.amazon.awscdk.services.emr.CfnStudioSessionMappingProps
+import software.amazon.awscdk.services.emr.CfnWALWorkspace
+import software.amazon.awscdk.services.emr.CfnWALWorkspaceProps
 import software.constructs.Construct
 
 public object emr {
@@ -404,6 +406,7 @@ public object emr {
      * .name("name")
      * .build()))
      * .terminationProtected(false)
+     * .unhealthyNodeReplacement(false)
      * .build())
      * .jobFlowRole("jobFlowRole")
      * .name("name")
@@ -436,7 +439,9 @@ public object emr {
      * .configurations(List.of(configurationProperty_))
      * .build()))
      * .customAmiId("customAmiId")
+     * .ebsRootVolumeIops(123)
      * .ebsRootVolumeSize(123)
+     * .ebsRootVolumeThroughput(123)
      * .kerberosAttributes(KerberosAttributesProperty.builder()
      * .kdcAdminPassword("kdcAdminPassword")
      * .realm("realm")
@@ -458,6 +463,11 @@ public object emr {
      * .build())
      * .build())
      * .osReleaseLabel("osReleaseLabel")
+     * .placementGroupConfigs(List.of(PlacementGroupConfigProperty.builder()
+     * .instanceRole("instanceRole")
+     * // the properties below are optional
+     * .placementStrategy("placementStrategy")
+     * .build()))
      * .releaseLabel("releaseLabel")
      * .scaleDownBehavior("scaleDownBehavior")
      * .securityConfiguration("securityConfiguration")
@@ -602,6 +612,13 @@ public object emr {
     }
 
     /**
+     * An auto-termination policy for an Amazon EMR cluster.
+     *
+     * An auto-termination policy defines the amount of idle time in seconds after which a cluster
+     * automatically terminates. For alternative cluster termination options, see
+     * [Control cluster termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html)
+     * .
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -1500,6 +1517,7 @@ public object emr {
      * .name("name")
      * .build()))
      * .terminationProtected(false)
+     * .unhealthyNodeReplacement(false)
      * .build();
      * ```
      *
@@ -1663,6 +1681,38 @@ public object emr {
         block: CfnClusterOnDemandProvisioningSpecificationPropertyDsl.() -> Unit = {}
     ): CfnCluster.OnDemandProvisioningSpecificationProperty {
         val builder = CfnClusterOnDemandProvisioningSpecificationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Placement group configuration for an Amazon EMR cluster.
+     *
+     * The configuration specifies the placement strategy that can be applied to instance roles
+     * during cluster creation.
+     *
+     * To use this configuration, consider attaching managed policy
+     * AmazonElasticMapReducePlacementGroupPolicy to the Amazon EMR role.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.emr.*;
+     * PlacementGroupConfigProperty placementGroupConfigProperty =
+     * PlacementGroupConfigProperty.builder()
+     * .instanceRole("instanceRole")
+     * // the properties below are optional
+     * .placementStrategy("placementStrategy")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-placementgroupconfig.html)
+     */
+    public inline fun cfnClusterPlacementGroupConfigProperty(
+        block: CfnClusterPlacementGroupConfigPropertyDsl.() -> Unit = {}
+    ): CfnCluster.PlacementGroupConfigProperty {
+        val builder = CfnClusterPlacementGroupConfigPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -2055,6 +2105,7 @@ public object emr {
      * .name("name")
      * .build()))
      * .terminationProtected(false)
+     * .unhealthyNodeReplacement(false)
      * .build())
      * .jobFlowRole("jobFlowRole")
      * .name("name")
@@ -2087,7 +2138,9 @@ public object emr {
      * .configurations(List.of(configurationProperty_))
      * .build()))
      * .customAmiId("customAmiId")
+     * .ebsRootVolumeIops(123)
      * .ebsRootVolumeSize(123)
+     * .ebsRootVolumeThroughput(123)
      * .kerberosAttributes(KerberosAttributesProperty.builder()
      * .kdcAdminPassword("kdcAdminPassword")
      * .realm("realm")
@@ -2109,6 +2162,11 @@ public object emr {
      * .build())
      * .build())
      * .osReleaseLabel("osReleaseLabel")
+     * .placementGroupConfigs(List.of(PlacementGroupConfigProperty.builder()
+     * .instanceRole("instanceRole")
+     * // the properties below are optional
+     * .placementStrategy("placementStrategy")
+     * .build()))
      * .releaseLabel("releaseLabel")
      * .scaleDownBehavior("scaleDownBehavior")
      * .securityConfiguration("securityConfiguration")
@@ -3577,15 +3635,45 @@ public object emr {
      *
      * Example:
      * ```
-     * // The code below shows an example of how to instantiate this type.
-     * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.emr.*;
-     * Object securityConfiguration;
      * CfnSecurityConfiguration cfnSecurityConfiguration =
-     * CfnSecurityConfiguration.Builder.create(this, "MyCfnSecurityConfiguration")
-     * .securityConfiguration(securityConfiguration)
-     * // the properties below are optional
-     * .name("name")
+     * CfnSecurityConfiguration.Builder.create(this, "EmrSecurityConfiguration")
+     * .name("AddStepRuntimeRoleSecConfig")
+     * .securityConfiguration(JSON.parse("\n    {\n      \"AuthorizationConfiguration\": {\n
+     * \"IAMConfiguration\": {\n              \"EnableApplicationScopedIAMRole\": true,\n
+     * \"ApplicationScopedIAMRoleConfiguration\":\n                  {\n
+     * \"PropagateSourceIdentity\": true\n                  }\n          },\n
+     * \"LakeFormationConfiguration\": {\n              \"AuthorizedSessionTagValue\": \"Amazon EMR\"\n
+     *        }\n      }\n    }"))
+     * .build();
+     * EmrCreateCluster task = EmrCreateCluster.Builder.create(this, "Create Cluster")
+     * .instances(InstancesConfigProperty.builder().build())
+     * .name(TaskInput.fromJsonPathAt("$.ClusterName").getValue())
+     * .securityConfiguration(cfnSecurityConfiguration.getName())
+     * .build();
+     * Role executionRole = Role.Builder.create(this, "Role")
+     * .assumedBy(new ArnPrincipal(task.getClusterRole().getRoleArn()))
+     * .build();
+     * executionRole.assumeRolePolicy.addStatements(
+     * PolicyStatement.Builder.create()
+     * .effect(Effect.ALLOW)
+     * .principals(List.of(task.getClusterRole()))
+     * .actions(List.of("sts:SetSourceIdentity"))
+     * .build(),
+     * PolicyStatement.Builder.create()
+     * .effect(Effect.ALLOW)
+     * .principals(List.of(task.getClusterRole()))
+     * .actions(List.of("sts:TagSession"))
+     * .conditions(Map.of(
+     * "StringEquals", Map.of(
+     * "aws:RequestTag/LakeFormationAuthorizedCaller", "Amazon EMR")))
+     * .build());
+     * EmrAddStep.Builder.create(this, "Task")
+     * .clusterId("ClusterId")
+     * .executionRoleArn(executionRole.getRoleArn())
+     * .name("StepName")
+     * .jar("Jar")
+     * .actionOnFailure(ActionOnFailure.CONTINUE)
      * .build();
      * ```
      *
@@ -3606,15 +3694,45 @@ public object emr {
      *
      * Example:
      * ```
-     * // The code below shows an example of how to instantiate this type.
-     * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.emr.*;
-     * Object securityConfiguration;
-     * CfnSecurityConfigurationProps cfnSecurityConfigurationProps =
-     * CfnSecurityConfigurationProps.builder()
-     * .securityConfiguration(securityConfiguration)
-     * // the properties below are optional
-     * .name("name")
+     * CfnSecurityConfiguration cfnSecurityConfiguration =
+     * CfnSecurityConfiguration.Builder.create(this, "EmrSecurityConfiguration")
+     * .name("AddStepRuntimeRoleSecConfig")
+     * .securityConfiguration(JSON.parse("\n    {\n      \"AuthorizationConfiguration\": {\n
+     * \"IAMConfiguration\": {\n              \"EnableApplicationScopedIAMRole\": true,\n
+     * \"ApplicationScopedIAMRoleConfiguration\":\n                  {\n
+     * \"PropagateSourceIdentity\": true\n                  }\n          },\n
+     * \"LakeFormationConfiguration\": {\n              \"AuthorizedSessionTagValue\": \"Amazon EMR\"\n
+     *        }\n      }\n    }"))
+     * .build();
+     * EmrCreateCluster task = EmrCreateCluster.Builder.create(this, "Create Cluster")
+     * .instances(InstancesConfigProperty.builder().build())
+     * .name(TaskInput.fromJsonPathAt("$.ClusterName").getValue())
+     * .securityConfiguration(cfnSecurityConfiguration.getName())
+     * .build();
+     * Role executionRole = Role.Builder.create(this, "Role")
+     * .assumedBy(new ArnPrincipal(task.getClusterRole().getRoleArn()))
+     * .build();
+     * executionRole.assumeRolePolicy.addStatements(
+     * PolicyStatement.Builder.create()
+     * .effect(Effect.ALLOW)
+     * .principals(List.of(task.getClusterRole()))
+     * .actions(List.of("sts:SetSourceIdentity"))
+     * .build(),
+     * PolicyStatement.Builder.create()
+     * .effect(Effect.ALLOW)
+     * .principals(List.of(task.getClusterRole()))
+     * .actions(List.of("sts:TagSession"))
+     * .conditions(Map.of(
+     * "StringEquals", Map.of(
+     * "aws:RequestTag/LakeFormationAuthorizedCaller", "Amazon EMR")))
+     * .build());
+     * EmrAddStep.Builder.create(this, "Task")
+     * .clusterId("ClusterId")
+     * .executionRoleArn(executionRole.getRoleArn())
+     * .name("StepName")
+     * .jar("Jar")
+     * .actionOnFailure(ActionOnFailure.CONTINUE)
      * .build();
      * ```
      *
@@ -3783,12 +3901,16 @@ public object emr {
      * .workspaceSecurityGroupId("workspaceSecurityGroupId")
      * // the properties below are optional
      * .description("description")
+     * .encryptionKeyArn("encryptionKeyArn")
+     * .idcInstanceArn("idcInstanceArn")
+     * .idcUserAssignment("idcUserAssignment")
      * .idpAuthUrl("idpAuthUrl")
      * .idpRelayStateParameterName("idpRelayStateParameterName")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
      * .build()))
+     * .trustedIdentityPropagationEnabled(false)
      * .userRole("userRole")
      * .build();
      * ```
@@ -3824,12 +3946,16 @@ public object emr {
      * .workspaceSecurityGroupId("workspaceSecurityGroupId")
      * // the properties below are optional
      * .description("description")
+     * .encryptionKeyArn("encryptionKeyArn")
+     * .idcInstanceArn("idcInstanceArn")
+     * .idcUserAssignment("idcUserAssignment")
      * .idpAuthUrl("idpAuthUrl")
      * .idpRelayStateParameterName("idpRelayStateParameterName")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
      * .build()))
+     * .trustedIdentityPropagationEnabled(false)
      * .userRole("userRole")
      * .build();
      * ```
@@ -3896,6 +4022,64 @@ public object emr {
         block: CfnStudioSessionMappingPropsDsl.() -> Unit = {}
     ): CfnStudioSessionMappingProps {
         val builder = CfnStudioSessionMappingPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A WAL workspace is a logical container of write-ahead logs (WALs).
+     *
+     * All WALs in Amazon EMR WAL are encapsulated by a WAL workspace.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.emr.*;
+     * CfnWALWorkspace cfnWALWorkspace = CfnWALWorkspace.Builder.create(this, "MyCfnWALWorkspace")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .walWorkspaceName("walWorkspaceName")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-walworkspace.html)
+     */
+    public inline fun cfnWALWorkspace(
+        scope: Construct,
+        id: String,
+        block: CfnWALWorkspaceDsl.() -> Unit = {},
+    ): CfnWALWorkspace {
+        val builder = CfnWALWorkspaceDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnWALWorkspace`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.emr.*;
+     * CfnWALWorkspaceProps cfnWALWorkspaceProps = CfnWALWorkspaceProps.builder()
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .walWorkspaceName("walWorkspaceName")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-walworkspace.html)
+     */
+    public inline fun cfnWALWorkspaceProps(
+        block: CfnWALWorkspacePropsDsl.() -> Unit = {}
+    ): CfnWALWorkspaceProps {
+        val builder = CfnWALWorkspacePropsDsl()
         builder.apply(block)
         return builder.build()
     }

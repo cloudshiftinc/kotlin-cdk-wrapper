@@ -14,6 +14,8 @@ package io.cloudshiftdev.awscdkdsl.services.events
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Boolean
 import kotlin.String
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.events.CfnRule
 
@@ -33,6 +35,7 @@ import software.amazon.awscdk.services.events.CfnRule
  * .dbUser("dbUser")
  * .secretManagerArn("secretManagerArn")
  * .sql("sql")
+ * .sqls(List.of("sqls"))
  * .statementName("statementName")
  * .withEvent(false)
  * .build();
@@ -44,6 +47,8 @@ import software.amazon.awscdk.services.events.CfnRule
 public class CfnRuleRedshiftDataParametersPropertyDsl {
     private val cdkBuilder: CfnRule.RedshiftDataParametersProperty.Builder =
         CfnRule.RedshiftDataParametersProperty.builder()
+
+    private val _sqls: MutableList<String> = mutableListOf()
 
     /**
      * @param database The name of the database. Required when authenticating using temporary
@@ -75,6 +80,26 @@ public class CfnRuleRedshiftDataParametersPropertyDsl {
     }
 
     /**
+     * @param sqls One or more SQL statements to run. The SQL statements are run as a single
+     *   transaction. They run serially in the order of the array. Subsequent SQL statements don't
+     *   start until the previous statement in the array completes. If any SQL statement fails, then
+     *   because they are run as one transaction, all work is rolled back.
+     */
+    public fun sqls(vararg sqls: String) {
+        _sqls.addAll(listOf(*sqls))
+    }
+
+    /**
+     * @param sqls One or more SQL statements to run. The SQL statements are run as a single
+     *   transaction. They run serially in the order of the array. Subsequent SQL statements don't
+     *   start until the previous statement in the array completes. If any SQL statement fails, then
+     *   because they are run as one transaction, all work is rolled back.
+     */
+    public fun sqls(sqls: Collection<String>) {
+        _sqls.addAll(sqls)
+    }
+
+    /**
      * @param statementName The name of the SQL statement. You can name the SQL statement when you
      *   create it to identify the query.
      */
@@ -98,5 +123,8 @@ public class CfnRuleRedshiftDataParametersPropertyDsl {
         cdkBuilder.withEvent(withEvent)
     }
 
-    public fun build(): CfnRule.RedshiftDataParametersProperty = cdkBuilder.build()
+    public fun build(): CfnRule.RedshiftDataParametersProperty {
+        if (_sqls.isNotEmpty()) cdkBuilder.sqls(_sqls)
+        return cdkBuilder.build()
+    }
 }

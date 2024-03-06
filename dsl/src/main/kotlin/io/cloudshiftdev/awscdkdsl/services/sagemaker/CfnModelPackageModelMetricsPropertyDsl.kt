@@ -90,12 +90,12 @@ public class CfnModelPackageModelMetricsPropertyDsl {
     private val cdkBuilder: CfnModelPackage.ModelMetricsProperty.Builder =
         CfnModelPackage.ModelMetricsProperty.builder()
 
-    /** @param bias Metrics that measure bais in a model. */
+    /** @param bias Metrics that measure bias in a model. */
     public fun bias(bias: IResolvable) {
         cdkBuilder.bias(bias)
     }
 
-    /** @param bias Metrics that measure bais in a model. */
+    /** @param bias Metrics that measure bias in a model. */
     public fun bias(bias: CfnModelPackage.BiasProperty) {
         cdkBuilder.bias(bias)
     }

@@ -19,7 +19,7 @@ import software.amazon.awscdk.services.greengrass.CfnResourceDefinition
  * The owner setting for a downloaded machine learning resource.
  *
  * For more information, see
- * [Access Machine Learning Resources from Lambda Functions](https://docs.aws.amazon.com/greengrass/latest/developerguide/access-ml-resources.html)
+ * [Access Machine Learning Resources from Lambda Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
  * in the *Developer Guide* .
  *
  * In an AWS CloudFormation template, `ResourceDownloadOwnerSetting` is the property type of the

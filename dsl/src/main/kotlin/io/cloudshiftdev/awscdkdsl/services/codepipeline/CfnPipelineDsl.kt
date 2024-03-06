@@ -30,7 +30,11 @@ import software.constructs.Construct
  *
  * For more information, see
  * [What Is CodePipeline?](https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html)
- * in the *AWS CodePipeline User Guide* .
+ * in the *CodePipeline User Guide* .
+ *
+ * For an example in YAML and JSON that contains the parameters in this reference, see
+ * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#aws-resource-codepipeline-pipeline--examples)
+ * .
  *
  * Example:
  * ```
@@ -95,11 +99,52 @@ import software.constructs.Construct
  * .reason("reason")
  * .stageName("stageName")
  * .build()))
+ * .executionMode("executionMode")
  * .name("name")
+ * .pipelineType("pipelineType")
  * .restartExecutionOnUpdate(false)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
+ * .build()))
+ * .triggers(List.of(PipelineTriggerDeclarationProperty.builder()
+ * .providerType("providerType")
+ * // the properties below are optional
+ * .gitConfiguration(GitConfigurationProperty.builder()
+ * .sourceActionName("sourceActionName")
+ * // the properties below are optional
+ * .pullRequest(List.of(GitPullRequestFilterProperty.builder()
+ * .branches(GitBranchFilterCriteriaProperty.builder()
+ * .excludes(List.of("excludes"))
+ * .includes(List.of("includes"))
+ * .build())
+ * .events(List.of("events"))
+ * .filePaths(GitFilePathFilterCriteriaProperty.builder()
+ * .excludes(List.of("excludes"))
+ * .includes(List.of("includes"))
+ * .build())
+ * .build()))
+ * .push(List.of(GitPushFilterProperty.builder()
+ * .branches(GitBranchFilterCriteriaProperty.builder()
+ * .excludes(List.of("excludes"))
+ * .includes(List.of("includes"))
+ * .build())
+ * .filePaths(GitFilePathFilterCriteriaProperty.builder()
+ * .excludes(List.of("excludes"))
+ * .includes(List.of("includes"))
+ * .build())
+ * .tags(GitTagFilterCriteriaProperty.builder()
+ * .excludes(List.of("excludes"))
+ * .includes(List.of("includes"))
+ * .build())
+ * .build()))
+ * .build())
+ * .build()))
+ * .variables(List.of(VariableDeclarationProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .defaultValue("defaultValue")
+ * .description("description")
  * .build()))
  * .build();
  * ```
@@ -120,6 +165,10 @@ public class CfnPipelineDsl(
     private val _stages: MutableList<Any> = mutableListOf()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
+
+    private val _triggers: MutableList<Any> = mutableListOf()
+
+    private val _variables: MutableList<Any> = mutableListOf()
 
     /**
      * The S3 bucket where artifacts for the pipeline are stored.
@@ -245,6 +294,19 @@ public class CfnPipelineDsl(
     }
 
     /**
+     * The method that the pipeline will use to handle multiple executions.
+     *
+     * The default mode is SUPERSEDED.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-executionmode)
+     *
+     * @param executionMode The method that the pipeline will use to handle multiple executions.
+     */
+    public fun executionMode(executionMode: String) {
+        cdkBuilder.executionMode(executionMode)
+    }
+
+    /**
      * The name of the pipeline.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-name)
@@ -253,6 +315,36 @@ public class CfnPipelineDsl(
      */
     public fun name(name: String) {
         cdkBuilder.name(name)
+    }
+
+    /**
+     * CodePipeline provides the following pipeline types, which differ in characteristics and
+     * price, so that you can tailor your pipeline features and cost to the needs of your
+     * applications.
+     * * V1 type pipelines have a JSON structure that contains standard pipeline, stage, and
+     *   action-level parameters.
+     * * V2 type pipelines have the same structure as a V1 type, along with additional parameters
+     *   for release safety and trigger configuration.
+     *
+     * Including V2 parameters, such as triggers on Git tags, in the pipeline JSON when creating or
+     * updating a pipeline will result in the pipeline having the V2 type of pipeline and the
+     * associated costs.
+     *
+     * For information about pricing for CodePipeline, see
+     * [Pricing](https://docs.aws.amazon.com/codepipeline/pricing/) .
+     *
+     * For information about which type of pipeline to choose, see
+     * [What type of pipeline is right for me?](https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-pipelinetype)
+     *
+     * @param pipelineType CodePipeline provides the following pipeline types, which differ in
+     *   characteristics and price, so that you can tailor your pipeline features and cost to the
+     *   needs of your applications.
+     */
+    public fun pipelineType(pipelineType: String) {
+        cdkBuilder.pipelineType(pipelineType)
     }
 
     /**
@@ -348,12 +440,104 @@ public class CfnPipelineDsl(
         _tags.addAll(tags)
     }
 
+    /**
+     * The trigger configuration specifying a type of event, such as Git tags, that starts the
+     * pipeline.
+     *
+     * When a trigger configuration is specified, default change detection for repository and branch
+     * commits is disabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-triggers)
+     *
+     * @param triggers The trigger configuration specifying a type of event, such as Git tags, that
+     *   starts the pipeline.
+     */
+    public fun triggers(vararg triggers: Any) {
+        _triggers.addAll(listOf(*triggers))
+    }
+
+    /**
+     * The trigger configuration specifying a type of event, such as Git tags, that starts the
+     * pipeline.
+     *
+     * When a trigger configuration is specified, default change detection for repository and branch
+     * commits is disabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-triggers)
+     *
+     * @param triggers The trigger configuration specifying a type of event, such as Git tags, that
+     *   starts the pipeline.
+     */
+    public fun triggers(triggers: Collection<Any>) {
+        _triggers.addAll(triggers)
+    }
+
+    /**
+     * The trigger configuration specifying a type of event, such as Git tags, that starts the
+     * pipeline.
+     *
+     * When a trigger configuration is specified, default change detection for repository and branch
+     * commits is disabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-triggers)
+     *
+     * @param triggers The trigger configuration specifying a type of event, such as Git tags, that
+     *   starts the pipeline.
+     */
+    public fun triggers(triggers: IResolvable) {
+        cdkBuilder.triggers(triggers)
+    }
+
+    /**
+     * A list that defines the pipeline variables for a pipeline resource.
+     *
+     * Variable names can have alphanumeric and underscore characters, and the values must match
+     * `[A-Za-z0-9&#64;\-_]+` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-variables)
+     *
+     * @param variables A list that defines the pipeline variables for a pipeline resource.
+     */
+    public fun variables(vararg variables: Any) {
+        _variables.addAll(listOf(*variables))
+    }
+
+    /**
+     * A list that defines the pipeline variables for a pipeline resource.
+     *
+     * Variable names can have alphanumeric and underscore characters, and the values must match
+     * `[A-Za-z0-9&#64;\-_]+` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-variables)
+     *
+     * @param variables A list that defines the pipeline variables for a pipeline resource.
+     */
+    public fun variables(variables: Collection<Any>) {
+        _variables.addAll(variables)
+    }
+
+    /**
+     * A list that defines the pipeline variables for a pipeline resource.
+     *
+     * Variable names can have alphanumeric and underscore characters, and the values must match
+     * `[A-Za-z0-9&#64;\-_]+` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-variables)
+     *
+     * @param variables A list that defines the pipeline variables for a pipeline resource.
+     */
+    public fun variables(variables: IResolvable) {
+        cdkBuilder.variables(variables)
+    }
+
     public fun build(): CfnPipeline {
         if (_artifactStores.isNotEmpty()) cdkBuilder.artifactStores(_artifactStores)
         if (_disableInboundStageTransitions.isNotEmpty())
             cdkBuilder.disableInboundStageTransitions(_disableInboundStageTransitions)
         if (_stages.isNotEmpty()) cdkBuilder.stages(_stages)
         if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        if (_triggers.isNotEmpty()) cdkBuilder.triggers(_triggers)
+        if (_variables.isNotEmpty()) cdkBuilder.variables(_variables)
         return cdkBuilder.build()
     }
 }

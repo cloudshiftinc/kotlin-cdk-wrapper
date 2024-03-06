@@ -13,6 +13,7 @@ package io.cloudshiftdev.awscdkdsl.services.ecr
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -50,8 +51,8 @@ public class RepositoryDsl(
     private val _lifecycleRules: MutableList<LifecycleRule> = mutableListOf()
 
     /**
-     * Whether all images should be automatically deleted when the repository is removed from the
-     * stack or when the stack is deleted.
+     * (deprecated) Whether all images should be automatically deleted when the repository is
+     * removed from the stack or when the stack is deleted.
      *
      * Requires the `removalPolicy` to be set to `RemovalPolicy.DESTROY`.
      *
@@ -59,9 +60,25 @@ public class RepositoryDsl(
      *
      * @param autoDeleteImages Whether all images should be automatically deleted when the
      *   repository is removed from the stack or when the stack is deleted.
+     * @deprecated Use `emptyOnDelete` instead.
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun autoDeleteImages(autoDeleteImages: Boolean) {
         cdkBuilder.autoDeleteImages(autoDeleteImages)
+    }
+
+    /**
+     * If true, deleting the repository force deletes the contents of the repository.
+     *
+     * If false, the repository must be empty before attempting to delete it.
+     *
+     * Default: false
+     *
+     * @param emptyOnDelete If true, deleting the repository force deletes the contents of the
+     *   repository.
+     */
+    public fun emptyOnDelete(emptyOnDelete: Boolean) {
+        cdkBuilder.emptyOnDelete(emptyOnDelete)
     }
 
     /**
@@ -168,6 +185,13 @@ public class RepositoryDsl(
 
     /**
      * Name for this repository.
+     *
+     * The repository name must start with a letter and can only contain lowercase letters, numbers,
+     * hyphens, underscores, and forward slashes.
+     *
+     * If you specify a name, you cannot perform updates that require replacement of this resource.
+     * You can perform updates that require no or some interruption. If you must replace the
+     * resource, specify a new name.
      *
      * Default: Automatically generated name.
      *

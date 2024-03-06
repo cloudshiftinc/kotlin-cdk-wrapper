@@ -38,12 +38,20 @@ import software.amazon.awscdk.services.dms.CfnEndpoint
  * MicrosoftSqlServerSettingsProperty.builder()
  * .bcpPacketSize(123)
  * .controlTablesFileGroup("controlTablesFileGroup")
+ * .databaseName("databaseName")
+ * .forceLobLookup(false)
+ * .password("password")
+ * .port(123)
  * .querySingleAlwaysOnNode(false)
  * .readBackupOnly(false)
  * .safeguardPolicy("safeguardPolicy")
  * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
  * .secretsManagerSecretId("secretsManagerSecretId")
+ * .serverName("serverName")
+ * .tlogAccessMode("tlogAccessMode")
+ * .trimSpaceInChar(false)
  * .useBcpFullLoad(false)
+ * .username("username")
  * .useThirdPartyBackupDevice(false)
  * .build();
  * ```
@@ -70,6 +78,31 @@ public class CfnEndpointMicrosoftSqlServerSettingsPropertyDsl {
      */
     public fun controlTablesFileGroup(controlTablesFileGroup: String) {
         cdkBuilder.controlTablesFileGroup(controlTablesFileGroup)
+    }
+
+    /** @param databaseName Database name for the endpoint. */
+    public fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+    }
+
+    /** @param forceLobLookup Forces LOB lookup on inline LOB. */
+    public fun forceLobLookup(forceLobLookup: Boolean) {
+        cdkBuilder.forceLobLookup(forceLobLookup)
+    }
+
+    /** @param forceLobLookup Forces LOB lookup on inline LOB. */
+    public fun forceLobLookup(forceLobLookup: IResolvable) {
+        cdkBuilder.forceLobLookup(forceLobLookup)
+    }
+
+    /** @param password Endpoint connection password. */
+    public fun password(password: String) {
+        cdkBuilder.password(password)
+    }
+
+    /** @param port Endpoint TCP port. */
+    public fun port(port: Number) {
+        cdkBuilder.port(port)
     }
 
     /**
@@ -164,6 +197,41 @@ public class CfnEndpointMicrosoftSqlServerSettingsPropertyDsl {
     }
 
     /**
+     * @param serverName Fully qualified domain name of the endpoint. For an Amazon RDS SQL Server
+     *   instance, this is the output of
+     *   [DescribeDBInstances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html)
+     *   , in the
+     *   `[Endpoint](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html)
+     *   .Address` field.
+     */
+    public fun serverName(serverName: String) {
+        cdkBuilder.serverName(serverName)
+    }
+
+    /** @param tlogAccessMode Indicates the mode used to fetch CDC data. */
+    public fun tlogAccessMode(tlogAccessMode: String) {
+        cdkBuilder.tlogAccessMode(tlogAccessMode)
+    }
+
+    /**
+     * @param trimSpaceInChar Use the `TrimSpaceInChar` source endpoint setting to right-trim data
+     *   on CHAR and NCHAR data types during migration. Setting `TrimSpaceInChar` does not left-trim
+     *   data. The default value is `true` .
+     */
+    public fun trimSpaceInChar(trimSpaceInChar: Boolean) {
+        cdkBuilder.trimSpaceInChar(trimSpaceInChar)
+    }
+
+    /**
+     * @param trimSpaceInChar Use the `TrimSpaceInChar` source endpoint setting to right-trim data
+     *   on CHAR and NCHAR data types during migration. Setting `TrimSpaceInChar` does not left-trim
+     *   data. The default value is `true` .
+     */
+    public fun trimSpaceInChar(trimSpaceInChar: IResolvable) {
+        cdkBuilder.trimSpaceInChar(trimSpaceInChar)
+    }
+
+    /**
      * @param useBcpFullLoad Use this to attribute to transfer data for full-load operations using
      *   BCP. When the target table contains an identity column that does not exist in the source
      *   table, you must disable the use BCP for loading table option.
@@ -195,6 +263,11 @@ public class CfnEndpointMicrosoftSqlServerSettingsPropertyDsl {
      */
     public fun useThirdPartyBackupDevice(useThirdPartyBackupDevice: IResolvable) {
         cdkBuilder.useThirdPartyBackupDevice(useThirdPartyBackupDevice)
+    }
+
+    /** @param username Endpoint connection user name. */
+    public fun username(username: String) {
+        cdkBuilder.username(username)
     }
 
     public fun build(): CfnEndpoint.MicrosoftSqlServerSettingsProperty = cdkBuilder.build()

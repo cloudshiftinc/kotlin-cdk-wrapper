@@ -69,6 +69,7 @@ import software.amazon.awscdk.services.quicksight.CfnTopic
  * .build())
  * .isIncludedInTopic(false)
  * .neverAggregateInFilter(false)
+ * .nonAdditive(false)
  * .notAllowedAggregations(List.of("notAllowedAggregations"))
  * .semanticType(SemanticTypeProperty.builder()
  * .falseyCellValue("falseyCellValue")
@@ -229,6 +230,16 @@ public class CfnTopicTopicCalculatedFieldPropertyDsl {
      */
     public fun neverAggregateInFilter(neverAggregateInFilter: IResolvable) {
         cdkBuilder.neverAggregateInFilter(neverAggregateInFilter)
+    }
+
+    /** @param nonAdditive The non additive for the table style target. */
+    public fun nonAdditive(nonAdditive: Boolean) {
+        cdkBuilder.nonAdditive(nonAdditive)
+    }
+
+    /** @param nonAdditive The non additive for the table style target. */
+    public fun nonAdditive(nonAdditive: IResolvable) {
+        cdkBuilder.nonAdditive(nonAdditive)
     }
 
     /**

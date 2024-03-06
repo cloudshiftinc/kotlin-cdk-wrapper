@@ -57,8 +57,6 @@ import software.amazon.awscdk.services.sqs.IQueue
  * Vpc vpc;
  * QueueProcessingServiceBaseProps queueProcessingServiceBaseProps =
  * QueueProcessingServiceBaseProps.builder()
- * .image(containerImage)
- * // the properties below are optional
  * .capacityProviderStrategies(List.of(CapacityProviderStrategy.builder()
  * .capacityProvider("capacityProvider")
  * // the properties below are optional
@@ -66,19 +64,24 @@ import software.amazon.awscdk.services.sqs.IQueue
  * .weight(123)
  * .build()))
  * .circuitBreaker(DeploymentCircuitBreaker.builder()
+ * .enable(false)
  * .rollback(false)
  * .build())
  * .cluster(cluster)
  * .command(List.of("command"))
+ * .cooldown(Duration.minutes(30))
+ * .cpuTargetUtilizationPercent(123)
  * .deploymentController(DeploymentController.builder()
  * .type(DeploymentControllerType.ECS)
  * .build())
+ * .disableCpuBasedScaling(false)
  * .enableECSManagedTags(false)
  * .enableExecuteCommand(false)
  * .enableLogging(false)
  * .environment(Map.of(
  * "environmentKey", "environment"))
  * .family("family")
+ * .image(containerImage)
  * .logDriver(logDriver)
  * .maxHealthyPercent(123)
  * .maxReceiveCount(123)
@@ -178,6 +181,24 @@ public class QueueProcessingServiceBasePropsDsl {
     }
 
     /**
+     * @param cooldown Grace period after scaling activity in seconds. Subsequent scale outs during
+     *   the cooldown period are squashed so that only the biggest scale out happens.
+     *
+     * Subsequent scale ins during the cooldown period are ignored.
+     */
+    public fun cooldown(cooldown: Duration) {
+        cdkBuilder.cooldown(cooldown)
+    }
+
+    /**
+     * @param cpuTargetUtilizationPercent The target CPU utilization percentage for CPU based
+     *   scaling strategy when enabled.
+     */
+    public fun cpuTargetUtilizationPercent(cpuTargetUtilizationPercent: Number) {
+        cdkBuilder.cpuTargetUtilizationPercent(cpuTargetUtilizationPercent)
+    }
+
+    /**
      * @param deploymentController Specifies which deployment controller to use for the service. For
      *   more information, see
      *   [Amazon ECS Deployment Types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html)
@@ -195,6 +216,13 @@ public class QueueProcessingServiceBasePropsDsl {
      */
     public fun deploymentController(deploymentController: DeploymentController) {
         cdkBuilder.deploymentController(deploymentController)
+    }
+
+    /**
+     * @param disableCpuBasedScaling Flag to disable CPU based auto scaling strategy on the service.
+     */
+    public fun disableCpuBasedScaling(disableCpuBasedScaling: Boolean) {
+        cdkBuilder.disableCpuBasedScaling(disableCpuBasedScaling)
     }
 
     /**
@@ -232,7 +260,11 @@ public class QueueProcessingServiceBasePropsDsl {
         cdkBuilder.family(family)
     }
 
-    /** @param image The image used to start a container. */
+    /**
+     * @param image The image used to start a container. For `QueueProcessingFargateService`, either
+     *   `image` or `taskDefinition` must be specified, but not both. For
+     *   `QueueProcessingEc2Service`, `image` is required.
+     */
     public fun image(image: ContainerImage) {
         cdkBuilder.image(image)
     }

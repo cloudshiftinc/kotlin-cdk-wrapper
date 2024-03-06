@@ -44,6 +44,22 @@ import software.amazon.awscdk.services.pipes.CfnPipeProps
  * .build())
  * .inputTemplate("inputTemplate")
  * .build())
+ * .logConfiguration(PipeLogConfigurationProperty.builder()
+ * .cloudwatchLogsLogDestination(CloudwatchLogsLogDestinationProperty.builder()
+ * .logGroupArn("logGroupArn")
+ * .build())
+ * .firehoseLogDestination(FirehoseLogDestinationProperty.builder()
+ * .deliveryStreamArn("deliveryStreamArn")
+ * .build())
+ * .includeExecutionData(List.of("includeExecutionData"))
+ * .level("level")
+ * .s3LogDestination(S3LogDestinationProperty.builder()
+ * .bucketName("bucketName")
+ * .bucketOwner("bucketOwner")
+ * .outputFormat("outputFormat")
+ * .prefix("prefix")
+ * .build())
+ * .build())
  * .name("name")
  * .sourceParameters(PipeSourceParametersProperty.builder()
  * .activeMqBrokerParameters(PipeSourceActiveMQBrokerParametersProperty.builder()
@@ -318,6 +334,16 @@ public class CfnPipePropsDsl {
         enrichmentParameters: CfnPipe.PipeEnrichmentParametersProperty
     ) {
         cdkBuilder.enrichmentParameters(enrichmentParameters)
+    }
+
+    /** @param logConfiguration The logging configuration settings for the pipe. */
+    public fun logConfiguration(logConfiguration: IResolvable) {
+        cdkBuilder.logConfiguration(logConfiguration)
+    }
+
+    /** @param logConfiguration The logging configuration settings for the pipe. */
+    public fun logConfiguration(logConfiguration: CfnPipe.PipeLogConfigurationProperty) {
+        cdkBuilder.logConfiguration(logConfiguration)
     }
 
     /** @param name The name of the pipe. */

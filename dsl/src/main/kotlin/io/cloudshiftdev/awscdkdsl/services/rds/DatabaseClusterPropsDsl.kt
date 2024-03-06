@@ -49,7 +49,7 @@ import software.amazon.awscdk.services.s3.IBucket
  * ```
  * Vpc vpc;
  * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
- * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_2_08_1).build()))
+ * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_3_01_0).build()))
  * .writer(ClusterInstance.provisioned("writer", ProvisionedClusterInstanceProps.builder()
  * .instanceType(InstanceType.of(InstanceClass.R6G, InstanceSize.XLARGE4))
  * .build()))
@@ -161,6 +161,25 @@ public class DatabaseClusterPropsDsl {
      */
     public fun deletionProtection(deletionProtection: Boolean) {
         cdkBuilder.deletionProtection(deletionProtection)
+    }
+
+    /**
+     * @param domain Directory ID for associating the DB cluster with a specific Active Directory.
+     *   Necessary for enabling Kerberos authentication. If specified, the DB cluster joins the
+     *   given Active Directory, enabling Kerberos authentication. If not specified, the DB cluster
+     *   will not be associated with any Active Directory, and Kerberos authentication will not be
+     *   enabled.
+     */
+    public fun domain(domain: String) {
+        cdkBuilder.domain(domain)
+    }
+
+    /**
+     * @param domainRole The IAM role to be used when making API calls to the Directory Service. The
+     *   role needs the AWS-managed policy `AmazonRDSDirectoryServiceAccess` or equivalent.
+     */
+    public fun domainRole(domainRole: IRole) {
+        cdkBuilder.domainRole(domainRole)
     }
 
     /** @param engine What kind of database to start. */

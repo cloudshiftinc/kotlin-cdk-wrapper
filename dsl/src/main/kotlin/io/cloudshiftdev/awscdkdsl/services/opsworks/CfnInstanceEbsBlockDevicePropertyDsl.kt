@@ -19,12 +19,6 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opsworks.CfnInstance
 
 /**
- * Describes an Amazon EBS volume.
- *
- * This data type maps directly to the Amazon EC2
- * [EbsBlockDevice](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EbsBlockDevice.html)
- * data type.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.

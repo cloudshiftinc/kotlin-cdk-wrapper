@@ -31,6 +31,7 @@ import software.amazon.awscdk.services.backup.CfnBackupPlan
  * .lifecycle(LifecycleResourceTypeProperty.builder()
  * .deleteAfterDays(123)
  * .moveToColdStorageAfterDays(123)
+ * .optInToArchiveForSupportedResources(false)
  * .build())
  * .build();
  * ```

@@ -36,6 +36,7 @@ import software.constructs.Construct
  * CfnApplication cfnApplication = CfnApplication.Builder.create(this, "MyCfnApplication")
  * .resourceGroupName("resourceGroupName")
  * // the properties below are optional
+ * .attachMissingPermission(false)
  * .autoConfigurationEnabled(false)
  * .componentMonitoringSettings(List.of(ComponentMonitoringSettingProperty.builder()
  * .componentConfigurationMode("componentConfigurationMode")
@@ -215,6 +216,32 @@ public class CfnApplicationDsl(
     private val _logPatternSets: MutableList<Any> = mutableListOf()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
+
+    /**
+     * If set to true, the managed policies for SSM and CW will be attached to the instance roles if
+     * they are missing.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationinsights-application.html#cfn-applicationinsights-application-attachmissingpermission)
+     *
+     * @param attachMissingPermission If set to true, the managed policies for SSM and CW will be
+     *   attached to the instance roles if they are missing.
+     */
+    public fun attachMissingPermission(attachMissingPermission: Boolean) {
+        cdkBuilder.attachMissingPermission(attachMissingPermission)
+    }
+
+    /**
+     * If set to true, the managed policies for SSM and CW will be attached to the instance roles if
+     * they are missing.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationinsights-application.html#cfn-applicationinsights-application-attachmissingpermission)
+     *
+     * @param attachMissingPermission If set to true, the managed policies for SSM and CW will be
+     *   attached to the instance roles if they are missing.
+     */
+    public fun attachMissingPermission(attachMissingPermission: IResolvable) {
+        cdkBuilder.attachMissingPermission(attachMissingPermission)
+    }
 
     /**
      * If set to `true` , the application components will be configured with the monitoring

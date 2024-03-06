@@ -39,7 +39,10 @@ import software.amazon.awscdk.services.apigateway.StageOptions
 public class StageOptionsDsl {
     private val cdkBuilder: StageOptions.Builder = StageOptions.builder()
 
-    /** @param accessLogDestination The CloudWatch Logs log group. */
+    /**
+     * @param accessLogDestination The CloudWatch Logs log group or Firehose delivery stream where
+     *   to write access logs.
+     */
     public fun accessLogDestination(accessLogDestination: IAccessLogDestination) {
         cdkBuilder.accessLogDestination(accessLogDestination)
     }

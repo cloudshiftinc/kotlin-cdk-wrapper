@@ -36,6 +36,7 @@ import software.amazon.awscdk.services.appconfig.CfnConfigurationProfileProps
  * .name("name")
  * // the properties below are optional
  * .description("description")
+ * .kmsKeyIdentifier("kmsKeyIdentifier")
  * .retrievalRoleArn("retrievalRoleArn")
  * .tags(List.of(TagsProperty.builder()
  * .key("key")
@@ -68,6 +69,14 @@ public class CfnConfigurationProfilePropsDsl {
     /** @param description A description of the configuration profile. */
     public fun description(description: String) {
         cdkBuilder.description(description)
+    }
+
+    /**
+     * @param kmsKeyIdentifier The AWS Key Management Service key identifier (key ID, key alias, or
+     *   key ARN) provided when the resource was created or updated.
+     */
+    public fun kmsKeyIdentifier(kmsKeyIdentifier: String) {
+        cdkBuilder.kmsKeyIdentifier(kmsKeyIdentifier)
     }
 
     /**

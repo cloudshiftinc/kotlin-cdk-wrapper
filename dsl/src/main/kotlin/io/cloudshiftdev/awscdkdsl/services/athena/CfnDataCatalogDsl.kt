@@ -111,10 +111,6 @@ public class CfnDataCatalogDsl(
      * `catalog-id= *catalog_id*`
      * * The `GLUE` data catalog type also applies to the default `AwsDataCatalog` that already
      *   exists in your account, of which you can have only one and cannot modify.
-     * * Queries that specify a GLUE data catalog other than the default `AwsDataCatalog` must be
-     *   run on Athena engine version 2.
-     * * In Regions where Athena engine version 2 is not available, creating new GLUE data catalogs
-     *   results in an `INVALID_INPUT` error.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-datacatalog.html#cfn-athena-datacatalog-parameters)
      *
@@ -149,10 +145,6 @@ public class CfnDataCatalogDsl(
      * `catalog-id= *catalog_id*`
      * * The `GLUE` data catalog type also applies to the default `AwsDataCatalog` that already
      *   exists in your account, of which you can have only one and cannot modify.
-     * * Queries that specify a GLUE data catalog other than the default `AwsDataCatalog` must be
-     *   run on Athena engine version 2.
-     * * In Regions where Athena engine version 2 is not available, creating new GLUE data catalogs
-     *   results in an `INVALID_INPUT` error.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-datacatalog.html#cfn-athena-datacatalog-parameters)
      *

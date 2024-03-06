@@ -16,7 +16,7 @@ import kotlin.String
 import software.amazon.awscdk.services.frauddetector.CfnDetector
 
 /**
- * A model to associate with a detector.
+ * The model.
  *
  * Example:
  * ```
@@ -34,7 +34,7 @@ import software.amazon.awscdk.services.frauddetector.CfnDetector
 public class CfnDetectorModelPropertyDsl {
     private val cdkBuilder: CfnDetector.ModelProperty.Builder = CfnDetector.ModelProperty.builder()
 
-    /** @param arn the value to be set. */
+    /** @param arn The ARN of the model. */
     public fun arn(arn: String) {
         cdkBuilder.arn(arn)
     }

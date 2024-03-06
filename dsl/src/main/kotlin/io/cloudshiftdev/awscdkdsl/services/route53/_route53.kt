@@ -79,14 +79,12 @@ public object route53 {
      *
      * Example:
      * ```
-     * import software.amazon.awscdk.services.apigatewayv2.alpha.*;
+     * import software.amazon.awscdk.services.apigateway.*;
      * HostedZone zone;
-     * DomainName domainName;
+     * LambdaRestApi restApi;
      * ARecord.Builder.create(this, "AliasRecord")
      * .zone(zone)
-     * .target(RecordTarget.fromAlias(new
-     * ApiGatewayv2DomainProperties(domainName.getRegionalDomainName(),
-     * domainName.getRegionalHostedZoneId())))
+     * .target(RecordTarget.fromAlias(new ApiGateway(restApi)))
      * .build();
      * ```
      */
@@ -105,14 +103,12 @@ public object route53 {
      *
      * Example:
      * ```
-     * import software.amazon.awscdk.services.apigatewayv2.alpha.*;
+     * import software.amazon.awscdk.services.apigateway.*;
      * HostedZone zone;
-     * DomainName domainName;
+     * LambdaRestApi restApi;
      * ARecord.Builder.create(this, "AliasRecord")
      * .zone(zone)
-     * .target(RecordTarget.fromAlias(new
-     * ApiGatewayv2DomainProperties(domainName.getRegionalDomainName(),
-     * domainName.getRegionalHostedZoneId())))
+     * .target(RecordTarget.fromAlias(new ApiGateway(restApi)))
      * .build();
      * ```
      */
@@ -208,8 +204,12 @@ public object route53 {
      * .comment("comment")
      * .deleteExisting(false)
      * .geoLocation(geoLocation)
+     * .multiValueAnswer(false)
      * .recordName("recordName")
+     * .region("region")
+     * .setIdentifier("setIdentifier")
      * .ttl(Duration.minutes(30))
+     * .weight(123)
      * .build();
      * ```
      */
@@ -240,8 +240,12 @@ public object route53 {
      * .comment("comment")
      * .deleteExisting(false)
      * .geoLocation(geoLocation)
+     * .multiValueAnswer(false)
      * .recordName("recordName")
+     * .region("region")
+     * .setIdentifier("setIdentifier")
      * .ttl(Duration.minutes(30))
+     * .weight(123)
      * .build();
      * ```
      */
@@ -275,8 +279,12 @@ public object route53 {
      * .comment("comment")
      * .deleteExisting(false)
      * .geoLocation(geoLocation)
+     * .multiValueAnswer(false)
      * .recordName("recordName")
+     * .region("region")
+     * .setIdentifier("setIdentifier")
      * .ttl(Duration.minutes(30))
+     * .weight(123)
      * .build();
      * ```
      */
@@ -312,8 +320,12 @@ public object route53 {
      * .comment("comment")
      * .deleteExisting(false)
      * .geoLocation(geoLocation)
+     * .multiValueAnswer(false)
      * .recordName("recordName")
+     * .region("region")
+     * .setIdentifier("setIdentifier")
      * .ttl(Duration.minutes(30))
+     * .weight(123)
      * .build();
      * ```
      */
@@ -1015,6 +1027,15 @@ public object route53 {
      * .countryCode("countryCode")
      * .subdivisionCode("subdivisionCode")
      * .build())
+     * .geoProximityLocation(GeoProximityLocationProperty.builder()
+     * .awsRegion("awsRegion")
+     * .bias(123)
+     * .coordinates(CoordinatesProperty.builder()
+     * .latitude("latitude")
+     * .longitude("longitude")
+     * .build())
+     * .localZoneGroup("localZoneGroup")
+     * .build())
      * .healthCheckId("healthCheckId")
      * .hostedZoneId("hostedZoneId")
      * .hostedZoneName("hostedZoneName")
@@ -1102,6 +1123,30 @@ public object route53 {
     }
 
     /**
+     * A complex type that lists the coordinates for a geoproximity resource record.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.route53.*;
+     * CoordinatesProperty coordinatesProperty = CoordinatesProperty.builder()
+     * .latitude("latitude")
+     * .longitude("longitude")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-coordinates.html)
+     */
+    public inline fun cfnRecordSetCoordinatesProperty(
+        block: CfnRecordSetCoordinatesPropertyDsl.() -> Unit = {}
+    ): CfnRecordSet.CoordinatesProperty {
+        val builder = CfnRecordSetCoordinatesPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * A complex type that contains information about a geographic location.
      *
      * Example:
@@ -1122,6 +1167,44 @@ public object route53 {
         block: CfnRecordSetGeoLocationPropertyDsl.() -> Unit = {}
     ): CfnRecordSet.GeoLocationProperty {
         val builder = CfnRecordSetGeoLocationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * (Resource record sets only): A complex type that lets you specify where your resources are
+     * located.
+     *
+     * Only one of `LocalZoneGroup` , `Coordinates` , or `AWS Region` is allowed per request at a
+     * time.
+     *
+     * For more information about geoproximity routing, see
+     * [Geoproximity routing](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy-geoproximity.html)
+     * in the *Amazon Route 53 Developer Guide* .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.route53.*;
+     * GeoProximityLocationProperty geoProximityLocationProperty =
+     * GeoProximityLocationProperty.builder()
+     * .awsRegion("awsRegion")
+     * .bias(123)
+     * .coordinates(CoordinatesProperty.builder()
+     * .latitude("latitude")
+     * .longitude("longitude")
+     * .build())
+     * .localZoneGroup("localZoneGroup")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geoproximitylocation.html)
+     */
+    public inline fun cfnRecordSetGeoProximityLocationProperty(
+        block: CfnRecordSetGeoProximityLocationPropertyDsl.() -> Unit = {}
+    ): CfnRecordSet.GeoProximityLocationProperty {
+        val builder = CfnRecordSetGeoProximityLocationPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -1159,6 +1242,15 @@ public object route53 {
      * .continentCode("continentCode")
      * .countryCode("countryCode")
      * .subdivisionCode("subdivisionCode")
+     * .build())
+     * .geoProximityLocation(GeoProximityLocationProperty.builder()
+     * .awsRegion("awsRegion")
+     * .bias(123)
+     * .coordinates(CoordinatesProperty.builder()
+     * .latitude("latitude")
+     * .longitude("longitude")
+     * .build())
+     * .localZoneGroup("localZoneGroup")
      * .build())
      * .healthCheckId("healthCheckId")
      * .hostedZoneId("hostedZoneId")
@@ -1248,6 +1340,30 @@ public object route53 {
     }
 
     /**
+     * A complex type that lists the coordinates for a geoproximity resource record.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.route53.*;
+     * CoordinatesProperty coordinatesProperty = CoordinatesProperty.builder()
+     * .latitude("latitude")
+     * .longitude("longitude")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-coordinates.html)
+     */
+    public inline fun cfnRecordSetGroupCoordinatesProperty(
+        block: CfnRecordSetGroupCoordinatesPropertyDsl.() -> Unit = {}
+    ): CfnRecordSetGroup.CoordinatesProperty {
+        val builder = CfnRecordSetGroupCoordinatesPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * A complex type that contains information about a geographic location.
      *
      * Example:
@@ -1268,6 +1384,44 @@ public object route53 {
         block: CfnRecordSetGroupGeoLocationPropertyDsl.() -> Unit = {}
     ): CfnRecordSetGroup.GeoLocationProperty {
         val builder = CfnRecordSetGroupGeoLocationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * (Resource record sets only): A complex type that lets you specify where your resources are
+     * located.
+     *
+     * Only one of `LocalZoneGroup` , `Coordinates` , or `AWS Region` is allowed per request at a
+     * time.
+     *
+     * For more information about geoproximity routing, see
+     * [Geoproximity routing](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy-geoproximity.html)
+     * in the *Amazon Route 53 Developer Guide* .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.route53.*;
+     * GeoProximityLocationProperty geoProximityLocationProperty =
+     * GeoProximityLocationProperty.builder()
+     * .awsRegion("awsRegion")
+     * .bias(123)
+     * .coordinates(CoordinatesProperty.builder()
+     * .latitude("latitude")
+     * .longitude("longitude")
+     * .build())
+     * .localZoneGroup("localZoneGroup")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geoproximitylocation.html)
+     */
+    public inline fun cfnRecordSetGroupGeoProximityLocationProperty(
+        block: CfnRecordSetGroupGeoProximityLocationPropertyDsl.() -> Unit = {}
+    ): CfnRecordSetGroup.GeoProximityLocationProperty {
+        val builder = CfnRecordSetGroupGeoProximityLocationPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -1303,6 +1457,15 @@ public object route53 {
      * .continentCode("continentCode")
      * .countryCode("countryCode")
      * .subdivisionCode("subdivisionCode")
+     * .build())
+     * .geoProximityLocation(GeoProximityLocationProperty.builder()
+     * .awsRegion("awsRegion")
+     * .bias(123)
+     * .coordinates(CoordinatesProperty.builder()
+     * .latitude("latitude")
+     * .longitude("longitude")
+     * .build())
+     * .localZoneGroup("localZoneGroup")
      * .build())
      * .healthCheckId("healthCheckId")
      * .hostedZoneId("hostedZoneId")
@@ -1355,6 +1518,15 @@ public object route53 {
      * .countryCode("countryCode")
      * .subdivisionCode("subdivisionCode")
      * .build())
+     * .geoProximityLocation(GeoProximityLocationProperty.builder()
+     * .awsRegion("awsRegion")
+     * .bias(123)
+     * .coordinates(CoordinatesProperty.builder()
+     * .latitude("latitude")
+     * .longitude("longitude")
+     * .build())
+     * .localZoneGroup("localZoneGroup")
+     * .build())
      * .healthCheckId("healthCheckId")
      * .hostedZoneId("hostedZoneId")
      * .hostedZoneName("hostedZoneName")
@@ -1406,6 +1578,15 @@ public object route53 {
      * .countryCode("countryCode")
      * .subdivisionCode("subdivisionCode")
      * .build())
+     * .geoProximityLocation(GeoProximityLocationProperty.builder()
+     * .awsRegion("awsRegion")
+     * .bias(123)
+     * .coordinates(CoordinatesProperty.builder()
+     * .latitude("latitude")
+     * .longitude("longitude")
+     * .build())
+     * .localZoneGroup("localZoneGroup")
+     * .build())
      * .healthCheckId("healthCheckId")
      * .hostedZoneId("hostedZoneId")
      * .hostedZoneName("hostedZoneName")
@@ -1444,7 +1625,7 @@ public object route53 {
      * SchemaFile schema = SchemaFile.Builder.create().filePath("mySchemaFile").build();
      * GraphqlApi api = GraphqlApi.Builder.create(this, "api")
      * .name("myApi")
-     * .schema(schema)
+     * .definition(Definition.fromSchema(schema))
      * .domainName(DomainOptions.builder()
      * .certificate(certificate)
      * .domainName(myDomainName)
@@ -1491,7 +1672,7 @@ public object route53 {
      * SchemaFile schema = SchemaFile.Builder.create().filePath("mySchemaFile").build();
      * GraphqlApi api = GraphqlApi.Builder.create(this, "api")
      * .name("myApi")
-     * .schema(schema)
+     * .definition(Definition.fromSchema(schema))
      * .domainName(DomainOptions.builder()
      * .certificate(certificate)
      * .domainName(myDomainName)
@@ -1789,8 +1970,12 @@ public object route53 {
      * .comment("comment")
      * .deleteExisting(false)
      * .geoLocation(geoLocation)
+     * .multiValueAnswer(false)
      * .recordName("recordName")
+     * .region("region")
+     * .setIdentifier("setIdentifier")
      * .ttl(Duration.minutes(30))
+     * .weight(123)
      * .build();
      * ```
      */
@@ -1825,8 +2010,12 @@ public object route53 {
      * .comment("comment")
      * .deleteExisting(false)
      * .geoLocation(geoLocation)
+     * .multiValueAnswer(false)
      * .recordName("recordName")
+     * .region("region")
+     * .setIdentifier("setIdentifier")
      * .ttl(Duration.minutes(30))
+     * .weight(123)
      * .build();
      * ```
      */
@@ -2014,25 +2203,41 @@ public object route53 {
      *
      * Example:
      * ```
-     * PublicHostedZone subZone = PublicHostedZone.Builder.create(this, "SubZone")
-     * .zoneName("sub.someexample.com")
+     * PublicHostedZone parentZone = PublicHostedZone.Builder.create(this, "HostedZone")
+     * .zoneName("someexample.com")
      * .build();
-     * // import the delegation role by constructing the roleArn
-     * String delegationRoleArn = Stack.of(this).formatArn(ArnComponents.builder()
-     * .region("") // IAM is global in each partition
-     * .service("iam")
-     * .account("parent-account-id")
-     * .resource("role")
-     * .resourceName("MyDelegationRole")
-     * .build());
-     * IRole delegationRole = Role.fromRoleArn(this, "DelegationRole", delegationRoleArn);
-     * // create the record
-     * // create the record
-     * CrossAccountZoneDelegationRecord.Builder.create(this, "delegate")
-     * .delegatedZone(subZone)
-     * .parentHostedZoneName("someexample.com") // or you can use parentHostedZoneId
-     * .delegationRole(delegationRole)
+     * Role crossAccountRole = Role.Builder.create(this, "CrossAccountRole")
+     * // The role name must be predictable
+     * .roleName("MyDelegationRole")
+     * // The other account
+     * .assumedBy(new AccountPrincipal("12345678901"))
+     * // You can scope down this role policy to be least privileged.
+     * // If you want the other account to be able to manage specific records,
+     * // you can scope down by resource and/or normalized record names
+     * .inlinePolicies(Map.of(
+     * "crossAccountPolicy", PolicyDocument.Builder.create()
+     * .statements(List.of(
+     * PolicyStatement.Builder.create()
+     * .sid("ListHostedZonesByName")
+     * .effect(Effect.ALLOW)
+     * .actions(List.of("route53:ListHostedZonesByName"))
+     * .resources(List.of("*"))
+     * .build(),
+     * PolicyStatement.Builder.create()
+     * .sid("GetHostedZoneAndChangeResourceRecordSet")
+     * .effect(Effect.ALLOW)
+     * .actions(List.of("route53:GetHostedZone", "route53:ChangeResourceRecordSet"))
+     * // This example assumes the RecordSet subdomain.somexample.com
+     * // is contained in the HostedZone
+     * .resources(List.of("arn:aws:route53:::hostedzone/HZID00000000000000000"))
+     * .conditions(Map.of(
+     * "ForAllValues:StringLike", Map.of(
+     * "route53:ChangeResourceRecordSetsNormalizedRecordNames",
+     * List.of("subdomain.someexample.com"))))
+     * .build()))
+     * .build()))
      * .build();
+     * parentZone.grantDelegation(crossAccountRole);
      * ```
      */
     public inline fun publicHostedZoneProps(
@@ -2063,8 +2268,12 @@ public object route53 {
      * .comment("comment")
      * .deleteExisting(false)
      * .geoLocation(geoLocation)
+     * .multiValueAnswer(false)
      * .recordName("recordName")
+     * .region("region")
+     * .setIdentifier("setIdentifier")
      * .ttl(Duration.minutes(30))
+     * .weight(123)
      * .build();
      * ```
      */
@@ -2095,8 +2304,12 @@ public object route53 {
      * .comment("comment")
      * .deleteExisting(false)
      * .geoLocation(geoLocation)
+     * .multiValueAnswer(false)
      * .recordName("recordName")
+     * .region("region")
+     * .setIdentifier("setIdentifier")
      * .ttl(Duration.minutes(30))
+     * .weight(123)
      * .build();
      * ```
      */
@@ -2128,8 +2341,12 @@ public object route53 {
      * .comment("comment")
      * .deleteExisting(false)
      * .geoLocation(geoLocation)
+     * .multiValueAnswer(false)
      * .recordName("recordName")
+     * .region("region")
+     * .setIdentifier("setIdentifier")
      * .ttl(Duration.minutes(30))
+     * .weight(123)
      * .build();
      * ```
      */
@@ -2162,8 +2379,12 @@ public object route53 {
      * .comment("comment")
      * .deleteExisting(false)
      * .geoLocation(geoLocation)
+     * .multiValueAnswer(false)
      * .recordName("recordName")
+     * .region("region")
+     * .setIdentifier("setIdentifier")
      * .ttl(Duration.minutes(30))
+     * .weight(123)
      * .build();
      * ```
      */
@@ -2200,8 +2421,12 @@ public object route53 {
      * .comment("comment")
      * .deleteExisting(false)
      * .geoLocation(geoLocation)
+     * .multiValueAnswer(false)
      * .recordName("recordName")
+     * .region("region")
+     * .setIdentifier("setIdentifier")
      * .ttl(Duration.minutes(30))
+     * .weight(123)
      * .build();
      * ```
      */
@@ -2376,8 +2601,12 @@ public object route53 {
      * .comment("comment")
      * .deleteExisting(false)
      * .geoLocation(geoLocation)
+     * .multiValueAnswer(false)
      * .recordName("recordName")
+     * .region("region")
+     * .setIdentifier("setIdentifier")
      * .ttl(Duration.minutes(30))
+     * .weight(123)
      * .build();
      * ```
      */
@@ -2409,8 +2638,12 @@ public object route53 {
      * .comment("comment")
      * .deleteExisting(false)
      * .geoLocation(geoLocation)
+     * .multiValueAnswer(false)
      * .recordName("recordName")
+     * .region("region")
+     * .setIdentifier("setIdentifier")
      * .ttl(Duration.minutes(30))
+     * .weight(123)
      * .build();
      * ```
      */

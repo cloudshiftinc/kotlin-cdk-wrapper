@@ -63,6 +63,7 @@ import software.amazon.awscdk.services.ec2.CfnEC2FleetProps
  * .instanceGenerations(List.of("instanceGenerations"))
  * .localStorage("localStorage")
  * .localStorageTypes(List.of("localStorageTypes"))
+ * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
  * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
  * .max(123)
  * .min(123)
@@ -245,7 +246,7 @@ public class CfnEC2FleetPropsDsl {
     /**
      * @param tagSpecifications The key-value pair for tagging the EC2 Fleet request on creation.
      *   For more information, see
-     *   [Tagging your resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)
+     *   [Tag your resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)
      *   . If the fleet type is `instant` , specify a resource type of `fleet` to tag the fleet or
      *   `instance` to tag the instances at launch.
      *
@@ -262,7 +263,7 @@ public class CfnEC2FleetPropsDsl {
     /**
      * @param tagSpecifications The key-value pair for tagging the EC2 Fleet request on creation.
      *   For more information, see
-     *   [Tagging your resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)
+     *   [Tag your resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)
      *   . If the fleet type is `instant` , specify a resource type of `fleet` to tag the fleet or
      *   `instance` to tag the instances at launch.
      *
@@ -279,7 +280,7 @@ public class CfnEC2FleetPropsDsl {
     /**
      * @param tagSpecifications The key-value pair for tagging the EC2 Fleet request on creation.
      *   For more information, see
-     *   [Tagging your resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)
+     *   [Tag your resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)
      *   . If the fleet type is `instant` , specify a resource type of `fleet` to tag the fleet or
      *   `instance` to tag the instances at launch.
      *

@@ -43,6 +43,7 @@ import software.constructs.Construct
  * .additionalMetricsToRetainV2(List.of(MetricToRetainProperty.builder()
  * .metric("metric")
  * // the properties below are optional
+ * .exportMetric(false)
  * .metricDimension(MetricDimensionProperty.builder()
  * .dimensionName("dimensionName")
  * // the properties below are optional
@@ -77,6 +78,7 @@ import software.constructs.Construct
  * .strings(List.of("strings"))
  * .build())
  * .build())
+ * .exportMetric(false)
  * .metric("metric")
  * .metricDimension(MetricDimensionProperty.builder()
  * .dimensionName("dimensionName")
@@ -85,6 +87,10 @@ import software.constructs.Construct
  * .build())
  * .suppressAlerts(false)
  * .build()))
+ * .metricsExportConfig(MetricsExportConfigProperty.builder()
+ * .mqttTopic("mqttTopic")
+ * .roleArn("roleArn")
+ * .build())
  * .securityProfileDescription("securityProfileDescription")
  * .securityProfileName("securityProfileName")
  * .tags(List.of(CfnTag.builder()
@@ -236,6 +242,30 @@ public class CfnSecurityProfileDsl(
      */
     public fun behaviors(behaviors: IResolvable) {
         cdkBuilder.behaviors(behaviors)
+    }
+
+    /**
+     * Specifies the MQTT topic and role ARN required for metric export.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-securityprofile.html#cfn-iot-securityprofile-metricsexportconfig)
+     *
+     * @param metricsExportConfig Specifies the MQTT topic and role ARN required for metric export.
+     */
+    public fun metricsExportConfig(metricsExportConfig: IResolvable) {
+        cdkBuilder.metricsExportConfig(metricsExportConfig)
+    }
+
+    /**
+     * Specifies the MQTT topic and role ARN required for metric export.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-securityprofile.html#cfn-iot-securityprofile-metricsexportconfig)
+     *
+     * @param metricsExportConfig Specifies the MQTT topic and role ARN required for metric export.
+     */
+    public fun metricsExportConfig(
+        metricsExportConfig: CfnSecurityProfile.MetricsExportConfigProperty
+    ) {
+        cdkBuilder.metricsExportConfig(metricsExportConfig)
     }
 
     /**

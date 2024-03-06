@@ -25,8 +25,7 @@ import software.amazon.awscdk.services.dms.CfnReplicationConfig
 import software.constructs.Construct
 
 /**
- * A replication configuration that you later provide to configure and start a AWS DMS Serverless
- * replication.
+ * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html.
  *
  * Example:
  * ```
@@ -50,7 +49,6 @@ import software.constructs.Construct
  * .replicationSubnetGroupId("replicationSubnetGroupId")
  * .vpcSecurityGroupIds(List.of("vpcSecurityGroupIds"))
  * .build())
- * .replicationConfigArn("replicationConfigArn")
  * .replicationConfigIdentifier("replicationConfigIdentifier")
  * .replicationSettings(replicationSettings)
  * .replicationType("replicationType")
@@ -100,18 +98,6 @@ public class CfnReplicationConfigDsl(
      */
     public fun computeConfig(computeConfig: CfnReplicationConfig.ComputeConfigProperty) {
         cdkBuilder.computeConfig(computeConfig)
-    }
-
-    /**
-     * The Amazon Resource Name (ARN) of this AWS DMS Serverless replication configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-replicationconfigarn)
-     *
-     * @param replicationConfigArn The Amazon Resource Name (ARN) of this AWS DMS Serverless
-     *   replication configuration.
-     */
-    public fun replicationConfigArn(replicationConfigArn: String) {
-        cdkBuilder.replicationConfigArn(replicationConfigArn)
     }
 
     /**

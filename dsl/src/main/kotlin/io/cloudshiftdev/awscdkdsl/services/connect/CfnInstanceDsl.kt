@@ -11,8 +11,13 @@
 
 package io.cloudshiftdev.awscdkdsl.services.connect
 
+import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.String
+import kotlin.Unit
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnInstance
 import software.constructs.Construct
@@ -48,6 +53,10 @@ import software.constructs.Construct
  * // the properties below are optional
  * .directoryId("directoryId")
  * .instanceAlias("instanceAlias")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -59,6 +68,8 @@ public class CfnInstanceDsl(
     id: String,
 ) {
     private val cdkBuilder: CfnInstance.Builder = CfnInstance.Builder.create(scope, id)
+
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
      * A toggle for an individual feature at the instance level.
@@ -118,5 +129,30 @@ public class CfnInstanceDsl(
         cdkBuilder.instanceAlias(instanceAlias)
     }
 
-    public fun build(): CfnInstance = cdkBuilder.build()
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-instance.html#cfn-connect-instance-tags)
+     *
+     * @param tags An array of key-value pairs to apply to this resource.
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
+
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-instance.html#cfn-connect-instance-tags)
+     *
+     * @param tags An array of key-value pairs to apply to this resource.
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
+
+    public fun build(): CfnInstance {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

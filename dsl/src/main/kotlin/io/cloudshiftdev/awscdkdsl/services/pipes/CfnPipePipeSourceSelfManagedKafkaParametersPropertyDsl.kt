@@ -20,7 +20,7 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pipes.CfnPipe
 
 /**
- * The parameters for using a self-managed Apache Kafka stream as a source.
+ * The parameters for using a stream as a source.
  *
  * Example:
  * ```

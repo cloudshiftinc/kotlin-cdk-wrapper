@@ -86,26 +86,40 @@ public class CfnFileSystemLustreConfigurationPropertyDsl {
     }
 
     /**
-     * @param copyTagsToBackups A Boolean flag indicating whether tags for the file system should be
-     *   copied to backups. This value defaults to false. If it's set to true, all tags for the file
-     *   system are copied to all automatic and user-initiated backups where the user doesn't
-     *   specify tags. If this value is true, and you specify one or more tags, only the specified
-     *   tags are copied to backups. If you specify one or more tags when creating a user-initiated
-     *   backup, no tags are copied from the file system, regardless of this value. Only valid for
-     *   use with `PERSISTENT_1` deployment types.
+     * @param copyTagsToBackups (Optional) Not available for use with file systems that are linked
+     *   to a data repository. A boolean flag indicating whether tags for the file system should be
+     *   copied to backups. The default value is false. If `CopyTagsToBackups` is set to true, all
+     *   file system tags are copied to all automatic and user-initiated backups when the user
+     *   doesn't specify any backup-specific tags. If `CopyTagsToBackups` is set to true and you
+     *   specify one or more backup tags, only the specified tags are copied to backups. If you
+     *   specify one or more tags when creating a user-initiated backup, no tags are copied from the
+     *   file system, regardless of this value.
+     *
+     * (Default = `false` )
+     *
+     * For more information, see
+     * [Working with backups](https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html)
+     * in the *Amazon FSx for Lustre User Guide* .
      */
     public fun copyTagsToBackups(copyTagsToBackups: Boolean) {
         cdkBuilder.copyTagsToBackups(copyTagsToBackups)
     }
 
     /**
-     * @param copyTagsToBackups A Boolean flag indicating whether tags for the file system should be
-     *   copied to backups. This value defaults to false. If it's set to true, all tags for the file
-     *   system are copied to all automatic and user-initiated backups where the user doesn't
-     *   specify tags. If this value is true, and you specify one or more tags, only the specified
-     *   tags are copied to backups. If you specify one or more tags when creating a user-initiated
-     *   backup, no tags are copied from the file system, regardless of this value. Only valid for
-     *   use with `PERSISTENT_1` deployment types.
+     * @param copyTagsToBackups (Optional) Not available for use with file systems that are linked
+     *   to a data repository. A boolean flag indicating whether tags for the file system should be
+     *   copied to backups. The default value is false. If `CopyTagsToBackups` is set to true, all
+     *   file system tags are copied to all automatic and user-initiated backups when the user
+     *   doesn't specify any backup-specific tags. If `CopyTagsToBackups` is set to true and you
+     *   specify one or more backup tags, only the specified tags are copied to backups. If you
+     *   specify one or more tags when creating a user-initiated backup, no tags are copied from the
+     *   file system, regardless of this value.
+     *
+     * (Default = `false` )
+     *
+     * For more information, see
+     * [Working with backups](https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html)
+     * in the *Amazon FSx for Lustre User Guide* .
      */
     public fun copyTagsToBackups(copyTagsToBackups: IResolvable) {
         cdkBuilder.copyTagsToBackups(copyTagsToBackups)

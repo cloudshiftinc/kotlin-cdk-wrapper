@@ -15,8 +15,6 @@ import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import software.amazon.awscdk.services.lakeformation.CfnPermissions
 
 /**
- * A wildcard object representing every table under a database.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.

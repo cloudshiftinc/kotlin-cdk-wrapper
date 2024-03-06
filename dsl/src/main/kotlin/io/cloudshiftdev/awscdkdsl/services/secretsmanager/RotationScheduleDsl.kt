@@ -55,7 +55,9 @@ public class RotationScheduleDsl(
      * Specifies the number of days after the previous rotation before Secrets Manager triggers the
      * next automatic rotation.
      *
-     * A value of zero will disable automatic rotation - `Duration.days(0)`.
+     * The minimum value is 4 hours. The maximum value is 1000 days.
+     *
+     * A value of zero (`Duration.days(0)`) will not create RotationRules.
      *
      * Default: Duration.days(30)
      *

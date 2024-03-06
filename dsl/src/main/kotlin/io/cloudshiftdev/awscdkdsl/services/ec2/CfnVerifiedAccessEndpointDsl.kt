@@ -59,6 +59,10 @@ import software.constructs.Construct
  * .policyDocument("policyDocument")
  * .policyEnabled(false)
  * .securityGroupIds(List.of("securityGroupIds"))
+ * .sseSpecification(SseSpecificationProperty.builder()
+ * .customerManagedKeyEnabled(false)
+ * .kmsKeyArn("kmsKeyArn")
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -258,6 +262,30 @@ public class CfnVerifiedAccessEndpointDsl(
      */
     public fun securityGroupIds(securityGroupIds: Collection<String>) {
         _securityGroupIds.addAll(securityGroupIds)
+    }
+
+    /**
+     * The options for additional server side encryption.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-ssespecification)
+     *
+     * @param sseSpecification The options for additional server side encryption.
+     */
+    public fun sseSpecification(sseSpecification: IResolvable) {
+        cdkBuilder.sseSpecification(sseSpecification)
+    }
+
+    /**
+     * The options for additional server side encryption.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-ssespecification)
+     *
+     * @param sseSpecification The options for additional server side encryption.
+     */
+    public fun sseSpecification(
+        sseSpecification: CfnVerifiedAccessEndpoint.SseSpecificationProperty
+    ) {
+        cdkBuilder.sseSpecification(sseSpecification)
     }
 
     /**

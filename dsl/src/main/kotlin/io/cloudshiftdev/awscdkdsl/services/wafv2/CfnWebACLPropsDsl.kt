@@ -194,27 +194,27 @@ public class CfnWebACLPropsDsl {
     }
 
     /**
-     * @param rules The rule statements used to identify the web requests that you want to allow,
-     *   block, or count. Each rule includes one top-level statement that AWS WAF uses to identify
-     *   matching web requests, and parameters that govern how AWS WAF handles them.
+     * @param rules The rule statements used to identify the web requests that you want to manage.
+     *   Each rule includes one top-level statement that AWS WAF uses to identify matching web
+     *   requests, and parameters that govern how AWS WAF handles them.
      */
     public fun rules(vararg rules: Any) {
         _rules.addAll(listOf(*rules))
     }
 
     /**
-     * @param rules The rule statements used to identify the web requests that you want to allow,
-     *   block, or count. Each rule includes one top-level statement that AWS WAF uses to identify
-     *   matching web requests, and parameters that govern how AWS WAF handles them.
+     * @param rules The rule statements used to identify the web requests that you want to manage.
+     *   Each rule includes one top-level statement that AWS WAF uses to identify matching web
+     *   requests, and parameters that govern how AWS WAF handles them.
      */
     public fun rules(rules: Collection<Any>) {
         _rules.addAll(rules)
     }
 
     /**
-     * @param rules The rule statements used to identify the web requests that you want to allow,
-     *   block, or count. Each rule includes one top-level statement that AWS WAF uses to identify
-     *   matching web requests, and parameters that govern how AWS WAF handles them.
+     * @param rules The rule statements used to identify the web requests that you want to manage.
+     *   Each rule includes one top-level statement that AWS WAF uses to identify matching web
+     *   requests, and parameters that govern how AWS WAF handles them.
      */
     public fun rules(rules: IResolvable) {
         cdkBuilder.rules(rules)

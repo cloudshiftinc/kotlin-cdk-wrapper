@@ -31,6 +31,7 @@ import software.amazon.awscdk.services.ec2.SubnetType
  * .subnetType(SubnetType.PRIVATE_ISOLATED)
  * // the properties below are optional
  * .cidrMask(123)
+ * .ipv6AssignAddressOnCreation(false)
  * .mapPublicIpOnLaunch(false)
  * .reserved(false)
  * .build();
@@ -45,13 +46,26 @@ public class SubnetConfigurationDsl {
      *   addresses in each subnet of this group will be equal to `2^(32 - cidrMask) - 2`.
      *
      * Valid values are `16--28`.
+     *
+     * Note this is specific to IPv4 addresses.
      */
     public fun cidrMask(cidrMask: Number) {
         cdkBuilder.cidrMask(cidrMask)
     }
 
     /**
-     * @param mapPublicIpOnLaunch Controls if a public IP is associated to an instance at launch.
+     * @param ipv6AssignAddressOnCreation This property is specific to dual stack VPCs. If set to
+     *   false, then an IPv6 address will not be automatically assigned.
+     *
+     * Note this is specific to IPv6 addresses.
+     */
+    public fun ipv6AssignAddressOnCreation(ipv6AssignAddressOnCreation: Boolean) {
+        cdkBuilder.ipv6AssignAddressOnCreation(ipv6AssignAddressOnCreation)
+    }
+
+    /**
+     * @param mapPublicIpOnLaunch Controls if a public IPv4 address is associated to an instance at
+     *   launch. Note this is specific to IPv4 addresses.
      */
     public fun mapPublicIpOnLaunch(mapPublicIpOnLaunch: Boolean) {
         cdkBuilder.mapPublicIpOnLaunch(mapPublicIpOnLaunch)

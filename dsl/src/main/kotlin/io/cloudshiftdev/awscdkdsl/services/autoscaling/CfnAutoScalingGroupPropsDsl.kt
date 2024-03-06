@@ -14,6 +14,7 @@ package io.cloudshiftdev.awscdkdsl.services.autoscaling
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Any
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -46,6 +47,10 @@ import software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroupProps
  * .healthCheckGracePeriod(123)
  * .healthCheckType("healthCheckType")
  * .instanceId("instanceId")
+ * .instanceMaintenancePolicy(InstanceMaintenancePolicyProperty.builder()
+ * .maxHealthyPercentage(123)
+ * .minHealthyPercentage(123)
+ * .build())
  * .launchConfigurationName("launchConfigurationName")
  * .launchTemplate(LaunchTemplateSpecificationProperty.builder()
  * .version("version")
@@ -81,6 +86,15 @@ import software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroupProps
  * // the properties below are optional
  * .overrides(List.of(LaunchTemplateOverridesProperty.builder()
  * .instanceRequirements(InstanceRequirementsProperty.builder()
+ * .memoryMiB(MemoryMiBRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .vCpuCount(VCpuCountRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * // the properties below are optional
  * .acceleratorCount(AcceleratorCountRequestProperty.builder()
  * .max(123)
  * .min(123)
@@ -104,11 +118,8 @@ import software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroupProps
  * .instanceGenerations(List.of("instanceGenerations"))
  * .localStorage("localStorage")
  * .localStorageTypes(List.of("localStorageTypes"))
+ * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
  * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
- * .max(123)
- * .min(123)
- * .build())
- * .memoryMiB(MemoryMiBRequestProperty.builder()
  * .max(123)
  * .min(123)
  * .build())
@@ -124,10 +135,6 @@ import software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroupProps
  * .requireHibernateSupport(false)
  * .spotMaxPricePercentageOverLowestPrice(123)
  * .totalLocalStorageGb(TotalLocalStorageGBRequestProperty.builder()
- * .max(123)
- * .min(123)
- * .build())
- * .vCpuCount(VCpuCountRequestProperty.builder()
  * .max(123)
  * .min(123)
  * .build())
@@ -153,6 +160,11 @@ import software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroupProps
  * .build())
  * .build())
  * .newInstancesProtectedFromScaleIn(false)
+ * .notificationConfiguration(NotificationConfigurationProperty.builder()
+ * .topicArn("topicArn")
+ * // the properties below are optional
+ * .notificationTypes(List.of("notificationTypes"))
+ * .build())
  * .notificationConfigurations(List.of(NotificationConfigurationProperty.builder()
  * .topicArn("topicArn")
  * // the properties below are optional
@@ -370,6 +382,26 @@ public class CfnAutoScalingGroupPropsDsl {
     }
 
     /**
+     * @param instanceMaintenancePolicy An instance maintenance policy. For more information, see
+     *   [Set instance maintenance policy](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-maintenance-policy.html)
+     *   in the *Amazon EC2 Auto Scaling User Guide* .
+     */
+    public fun instanceMaintenancePolicy(instanceMaintenancePolicy: IResolvable) {
+        cdkBuilder.instanceMaintenancePolicy(instanceMaintenancePolicy)
+    }
+
+    /**
+     * @param instanceMaintenancePolicy An instance maintenance policy. For more information, see
+     *   [Set instance maintenance policy](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-maintenance-policy.html)
+     *   in the *Amazon EC2 Auto Scaling User Guide* .
+     */
+    public fun instanceMaintenancePolicy(
+        instanceMaintenancePolicy: CfnAutoScalingGroup.InstanceMaintenancePolicyProperty
+    ) {
+        cdkBuilder.instanceMaintenancePolicy(instanceMaintenancePolicy)
+    }
+
+    /**
      * @param launchConfigurationName The name of the launch configuration to use to launch
      *   instances. Required only if you don't specify `LaunchTemplate` , `MixedInstancesPolicy` ,
      *   or `InstanceId` .
@@ -560,6 +592,26 @@ public class CfnAutoScalingGroupPropsDsl {
      */
     public fun newInstancesProtectedFromScaleIn(newInstancesProtectedFromScaleIn: IResolvable) {
         cdkBuilder.newInstancesProtectedFromScaleIn(newInstancesProtectedFromScaleIn)
+    }
+
+    /**
+     * @param notificationConfiguration the value to be set.
+     * @deprecated this property has been deprecated
+     */
+    @Deprecated(message = "deprecated in CDK")
+    public fun notificationConfiguration(notificationConfiguration: IResolvable) {
+        cdkBuilder.notificationConfiguration(notificationConfiguration)
+    }
+
+    /**
+     * @param notificationConfiguration the value to be set.
+     * @deprecated this property has been deprecated
+     */
+    @Deprecated(message = "deprecated in CDK")
+    public fun notificationConfiguration(
+        notificationConfiguration: CfnAutoScalingGroup.NotificationConfigurationProperty
+    ) {
+        cdkBuilder.notificationConfiguration(notificationConfiguration)
     }
 
     /**

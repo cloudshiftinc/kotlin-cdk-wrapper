@@ -13,6 +13,7 @@ package io.cloudshiftdev.awscdkdsl.cloudassembly.schema
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Boolean
+import kotlin.Number
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.Map
@@ -100,6 +101,11 @@ public class DeployOptionsDsl {
     /** @param color Show colors and other style from console output. */
     public fun color(color: Boolean) {
         cdkBuilder.color(color)
+    }
+
+    /** @param concurrency Deploy multiple stacks in parallel. */
+    public fun concurrency(concurrency: Number) {
+        cdkBuilder.concurrency(concurrency)
     }
 
     /** @param context Additional context. */

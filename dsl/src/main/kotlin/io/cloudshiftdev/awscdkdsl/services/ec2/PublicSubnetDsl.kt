@@ -30,6 +30,8 @@ import software.constructs.Construct
  * .cidrBlock("cidrBlock")
  * .vpcId("vpcId")
  * // the properties below are optional
+ * .assignIpv6AddressOnCreation(false)
+ * .ipv6CidrBlock("ipv6CidrBlock")
  * .mapPublicIpOnLaunch(false)
  * .build();
  * ```
@@ -40,6 +42,20 @@ public class PublicSubnetDsl(
     id: String,
 ) {
     private val cdkBuilder: PublicSubnet.Builder = PublicSubnet.Builder.create(scope, id)
+
+    /**
+     * Indicates whether a network interface created in this subnet receives an IPv6 address.
+     *
+     * If you specify AssignIpv6AddressOnCreation, you must also specify Ipv6CidrBlock.
+     *
+     * Default: false
+     *
+     * @param assignIpv6AddressOnCreation Indicates whether a network interface created in this
+     *   subnet receives an IPv6 address.
+     */
+    public fun assignIpv6AddressOnCreation(assignIpv6AddressOnCreation: Boolean) {
+        cdkBuilder.assignIpv6AddressOnCreation(assignIpv6AddressOnCreation)
+    }
 
     /**
      * The availability zone for the subnet.
@@ -57,6 +73,19 @@ public class PublicSubnetDsl(
      */
     public fun cidrBlock(cidrBlock: String) {
         cdkBuilder.cidrBlock(cidrBlock)
+    }
+
+    /**
+     * The IPv6 CIDR block.
+     *
+     * If you specify AssignIpv6AddressOnCreation, you must also specify Ipv6CidrBlock.
+     *
+     * Default: - no IPv6 CIDR block.
+     *
+     * @param ipv6CidrBlock The IPv6 CIDR block.
+     */
+    public fun ipv6CidrBlock(ipv6CidrBlock: String) {
+        cdkBuilder.ipv6CidrBlock(ipv6CidrBlock)
     }
 
     /**

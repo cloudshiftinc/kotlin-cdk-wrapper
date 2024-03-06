@@ -17,7 +17,7 @@ import kotlin.String
 import software.amazon.awscdk.services.fsx.CfnVolume
 
 /**
- * An object specifying how much storage users or groups can use on the volume.
+ * Configures how much storage users and groups can use on the volume.
  *
  * Example:
  * ```
@@ -38,20 +38,17 @@ public class CfnVolumeUserAndGroupQuotasPropertyDsl {
     private val cdkBuilder: CfnVolume.UserAndGroupQuotasProperty.Builder =
         CfnVolume.UserAndGroupQuotasProperty.builder()
 
-    /** @param id The ID of the user or group. */
+    /** @param id The ID of the user or group that the quota applies to. */
     public fun id(id: Number) {
         cdkBuilder.id(id)
     }
 
-    /**
-     * @param storageCapacityQuotaGiB The amount of storage that the user or group can use in
-     *   gibibytes (GiB).
-     */
+    /** @param storageCapacityQuotaGiB The user or group's storage quota, in gibibytes (GiB). */
     public fun storageCapacityQuotaGiB(storageCapacityQuotaGiB: Number) {
         cdkBuilder.storageCapacityQuotaGiB(storageCapacityQuotaGiB)
     }
 
-    /** @param type A value that specifies whether the quota applies to a user or group. */
+    /** @param type Specifies whether the quota applies to a user or group. */
     public fun type(type: String) {
         cdkBuilder.type(type)
     }

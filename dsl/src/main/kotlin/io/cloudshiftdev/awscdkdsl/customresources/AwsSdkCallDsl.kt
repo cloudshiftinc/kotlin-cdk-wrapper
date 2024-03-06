@@ -46,7 +46,13 @@ public class AwsSdkCallDsl {
 
     private val _outputPaths: MutableList<String> = mutableListOf()
 
-    /** @param action The service action to call. */
+    /**
+     * @param action The service action to call. This is the name of an AWS API call, in one of the
+     *   following forms:
+     * * An API call name as found in the API Reference documentation (`GetObject`)
+     * * The API call name starting with a lowercase letter (`getObject`)
+     * * The AWS SDK for JavaScript v3 command class name (`GetObjectCommand`)
+     */
     public fun action(action: String) {
         cdkBuilder.action(action)
     }
@@ -58,8 +64,10 @@ public class AwsSdkCallDsl {
 
     /**
      * @param assumedRoleArn Used for running the SDK calls in underlying lambda with a different
-     *   role Can be used primarily for cross-account requests to for example connect hostedzone
-     *   with a shared vpc. Example for Route53 / associateVPCWithHostedZone
+     *   role. Can be used primarily for cross-account requests to for example connect hostedzone
+     *   with a shared vpc. Region controls where assumeRole call is made.
+     *
+     * Example for Route53 / associateVPCWithHostedZone
      */
     public fun assumedRoleArn(assumedRoleArn: String) {
         cdkBuilder.assumedRoleArn(assumedRoleArn)
@@ -127,7 +135,14 @@ public class AwsSdkCallDsl {
         cdkBuilder.region(region)
     }
 
-    /** @param service The service to call. */
+    /**
+     * @param service The service to call. This is the name of an AWS service, in one of the
+     *   following forms:
+     * * An AWS SDK for JavaScript v3 package name (`&#64;aws-sdk/client-api-gateway`)
+     * * An AWS SDK for JavaScript v3 client name (`api-gateway`)
+     * * An AWS SDK for JavaScript v2 constructor name (`APIGateway`)
+     * * A lowercase AWS SDK for JavaScript v2 constructor name (`apigateway`)
+     */
     public fun service(service: String) {
         cdkBuilder.service(service)
     }

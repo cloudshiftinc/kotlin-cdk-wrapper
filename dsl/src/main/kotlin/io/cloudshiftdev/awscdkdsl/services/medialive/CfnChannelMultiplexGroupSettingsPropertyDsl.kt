@@ -15,10 +15,6 @@ import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import software.amazon.awscdk.services.medialive.CfnChannel
 
 /**
- * The settings for a Multiplex output group.
- *
- * The parent of this entity is OutputGroupSettings.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.

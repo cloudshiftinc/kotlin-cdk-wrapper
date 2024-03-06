@@ -217,18 +217,22 @@ public class CfnChannelDsl(
     }
 
     /**
+     * Maintenance settings for this channel.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-maintenance)
      *
-     * @param maintenance
+     * @param maintenance Maintenance settings for this channel.
      */
     public fun maintenance(maintenance: IResolvable) {
         cdkBuilder.maintenance(maintenance)
     }
 
     /**
+     * Maintenance settings for this channel.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-maintenance)
      *
-     * @param maintenance
+     * @param maintenance Maintenance settings for this channel.
      */
     public fun maintenance(maintenance: CfnChannel.MaintenanceCreateSettingsProperty) {
         cdkBuilder.maintenance(maintenance)

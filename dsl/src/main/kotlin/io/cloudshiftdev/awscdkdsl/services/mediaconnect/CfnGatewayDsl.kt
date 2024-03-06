@@ -89,13 +89,13 @@ public class CfnGatewayDsl(
     }
 
     /**
-     * The name of the gateway.
+     * The name of the network.
      *
-     * This name can not be modified after the gateway is created.
+     * This name is used to reference the network and must be unique among networks in this gateway.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-gateway.html#cfn-mediaconnect-gateway-name)
      *
-     * @param name The name of the gateway.
+     * @param name The name of the network.
      */
     public fun name(name: String) {
         cdkBuilder.name(name)

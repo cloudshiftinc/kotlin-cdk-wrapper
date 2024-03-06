@@ -36,6 +36,7 @@ import software.amazon.awscdk.services.ec2.CfnFlowLogProps
  * .resourceId("resourceId")
  * .resourceType("resourceType")
  * // the properties below are optional
+ * .deliverCrossAccountRole("deliverCrossAccountRole")
  * .deliverLogsPermissionArn("deliverLogsPermissionArn")
  * .destinationOptions(destinationOptions)
  * .logDestination("logDestination")
@@ -58,6 +59,14 @@ public class CfnFlowLogPropsDsl {
     private val cdkBuilder: CfnFlowLogProps.Builder = CfnFlowLogProps.builder()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
+
+    /**
+     * @param deliverCrossAccountRole The ARN of the IAM role that allows the service to publish
+     *   flow logs across accounts.
+     */
+    public fun deliverCrossAccountRole(deliverCrossAccountRole: String) {
+        cdkBuilder.deliverCrossAccountRole(deliverCrossAccountRole)
+    }
 
     /**
      * @param deliverLogsPermissionArn The ARN of the IAM role that allows Amazon EC2 to publish

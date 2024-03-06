@@ -59,7 +59,7 @@ import software.amazon.awscdk.services.iam.IRole
  * App app = new App();
  * Stack stack = new Stack(app, "RequestAuthorizerInteg");
  * Function authorizerFn = Function.Builder.create(stack, "MyAuthorizerFunction")
- * .runtime(Runtime.NODEJS_14_X)
+ * .runtime(Runtime.NODEJS_LATEST)
  * .handler("index.handler")
  * .code(AssetCode.fromAsset(join(__dirname, "integ.request-authorizer.handler")))
  * .build();

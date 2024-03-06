@@ -40,12 +40,15 @@ import software.amazon.awscdk.services.lambda.IEventSource
 import software.amazon.awscdk.services.lambda.ILayerVersion
 import software.amazon.awscdk.services.lambda.LambdaInsightsVersion
 import software.amazon.awscdk.services.lambda.LogRetentionRetryOptions
+import software.amazon.awscdk.services.lambda.LoggingFormat
 import software.amazon.awscdk.services.lambda.ParamsAndSecretsLayerVersion
 import software.amazon.awscdk.services.lambda.Runtime
 import software.amazon.awscdk.services.lambda.RuntimeManagementMode
 import software.amazon.awscdk.services.lambda.SingletonFunctionProps
+import software.amazon.awscdk.services.lambda.SnapStartConf
 import software.amazon.awscdk.services.lambda.Tracing
 import software.amazon.awscdk.services.lambda.VersionOptions
+import software.amazon.awscdk.services.logs.ILogGroup
 import software.amazon.awscdk.services.logs.RetentionDays
 import software.amazon.awscdk.services.sns.ITopic
 import software.amazon.awscdk.services.sqs.IQueue
@@ -55,108 +58,9 @@ import software.amazon.awscdk.services.sqs.IQueue
  *
  * Example:
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import software.amazon.awscdk.*;
- * import software.amazon.awscdk.services.codeguruprofiler.*;
- * import software.amazon.awscdk.services.ec2.*;
- * import software.amazon.awscdk.services.iam.*;
- * import software.amazon.awscdk.services.kms.*;
- * import software.amazon.awscdk.services.lambda.*;
- * import software.amazon.awscdk.services.logs.*;
- * import software.amazon.awscdk.services.sns.*;
- * import software.amazon.awscdk.services.sqs.*;
- * AdotLayerVersion adotLayerVersion;
- * Architecture architecture;
- * Code code;
- * CodeSigningConfig codeSigningConfig;
- * IDestination destination;
- * IEventSource eventSource;
- * FileSystem fileSystem;
- * Key key;
- * LambdaInsightsVersion lambdaInsightsVersion;
- * LayerVersion layerVersion;
- * ParamsAndSecretsLayerVersion paramsAndSecretsLayerVersion;
- * PolicyStatement policyStatement;
- * ProfilingGroup profilingGroup;
- * Queue queue;
- * Role role;
- * Runtime runtime;
- * RuntimeManagementMode runtimeManagementMode;
- * SecurityGroup securityGroup;
- * Size size;
- * Subnet subnet;
- * SubnetFilter subnetFilter;
- * Topic topic;
- * Vpc vpc;
- * SingletonFunctionProps singletonFunctionProps = SingletonFunctionProps.builder()
- * .code(code)
- * .handler("handler")
- * .runtime(runtime)
- * .uuid("uuid")
- * // the properties below are optional
- * .adotInstrumentation(AdotInstrumentationConfig.builder()
- * .execWrapper(AdotLambdaExecWrapper.REGULAR_HANDLER)
- * .layerVersion(adotLayerVersion)
- * .build())
- * .allowAllOutbound(false)
- * .allowPublicSubnet(false)
- * .architecture(architecture)
- * .codeSigningConfig(codeSigningConfig)
- * .currentVersionOptions(VersionOptions.builder()
- * .codeSha256("codeSha256")
- * .description("description")
- * .maxEventAge(Duration.minutes(30))
- * .onFailure(destination)
- * .onSuccess(destination)
- * .provisionedConcurrentExecutions(123)
- * .removalPolicy(RemovalPolicy.DESTROY)
- * .retryAttempts(123)
- * .build())
- * .deadLetterQueue(queue)
- * .deadLetterQueueEnabled(false)
- * .deadLetterTopic(topic)
- * .description("description")
- * .environment(Map.of(
- * "environmentKey", "environment"))
- * .environmentEncryption(key)
- * .ephemeralStorageSize(size)
- * .events(List.of(eventSource))
- * .filesystem(fileSystem)
- * .functionName("functionName")
- * .initialPolicy(List.of(policyStatement))
- * .insightsVersion(lambdaInsightsVersion)
- * .lambdaPurpose("lambdaPurpose")
- * .layers(List.of(layerVersion))
- * .logRetention(RetentionDays.ONE_DAY)
- * .logRetentionRetryOptions(LogRetentionRetryOptions.builder()
- * .base(Duration.minutes(30))
- * .maxRetries(123)
- * .build())
- * .logRetentionRole(role)
- * .maxEventAge(Duration.minutes(30))
- * .memorySize(123)
- * .onFailure(destination)
- * .onSuccess(destination)
- * .paramsAndSecrets(paramsAndSecretsLayerVersion)
- * .profiling(false)
- * .profilingGroup(profilingGroup)
- * .reservedConcurrentExecutions(123)
- * .retryAttempts(123)
- * .role(role)
- * .runtimeManagementMode(runtimeManagementMode)
- * .securityGroups(List.of(securityGroup))
- * .timeout(Duration.minutes(30))
- * .tracing(Tracing.ACTIVE)
- * .vpc(vpc)
- * .vpcSubnets(SubnetSelection.builder()
- * .availabilityZones(List.of("availabilityZones"))
- * .onePerAz(false)
- * .subnetFilters(List.of(subnetFilter))
- * .subnetGroupName("subnetGroupName")
- * .subnets(List.of(subnet))
- * .subnetType(SubnetType.PRIVATE_ISOLATED)
- * .build())
+ * SingletonFunction fn = new SingletonFunction(this, "MyProvider", functionProps);
+ * CustomResource.Builder.create(this, "MyResource")
+ * .serviceToken(fn.getFunctionArn())
  * .build();
  * ```
  */
@@ -196,6 +100,9 @@ public class SingletonFunctionPropsDsl {
      * @param allowAllOutbound Whether to allow the Lambda to send all network traffic. If set to
      *   false, you must individually add traffic rules to allow the Lambda to connect to network
      *   targets.
+     *
+     * Do not specify this property if the `securityGroups` or `securityGroup` property is set.
+     * Instead, configure `allowAllOutbound` directly on the security group.
      */
     public fun allowAllOutbound(allowAllOutbound: Boolean) {
         cdkBuilder.allowAllOutbound(allowAllOutbound)
@@ -208,6 +115,11 @@ public class SingletonFunctionPropsDsl {
      */
     public fun allowPublicSubnet(allowPublicSubnet: Boolean) {
         cdkBuilder.allowPublicSubnet(allowPublicSubnet)
+    }
+
+    /** @param applicationLogLevel Sets the application log level for the function. */
+    public fun applicationLogLevel(applicationLogLevel: String) {
+        cdkBuilder.applicationLogLevel(applicationLogLevel)
     }
 
     /** @param architecture The system architectures compatible with this lambda function. */
@@ -364,6 +276,14 @@ public class SingletonFunctionPropsDsl {
     }
 
     /**
+     * @param ipv6AllowedForDualStack Allows outbound IPv6 traffic on VPC functions that are
+     *   connected to dual-stack subnets. Only used if 'vpc' is supplied.
+     */
+    public fun ipv6AllowedForDualStack(ipv6AllowedForDualStack: Boolean) {
+        cdkBuilder.ipv6AllowedForDualStack(ipv6AllowedForDualStack)
+    }
+
+    /**
      * @param lambdaPurpose A descriptive name for the purpose of this Lambda. If the Lambda does
      *   not have a physical name, this string will be reflected its generated name. The combination
      *   of lambdaPurpose and uuid must be unique.
@@ -392,10 +312,46 @@ public class SingletonFunctionPropsDsl {
         _layers.addAll(layers)
     }
 
+    /** @param logFormat Sets the logFormat for the function. */
+    public fun logFormat(logFormat: String) {
+        cdkBuilder.logFormat(logFormat)
+    }
+
+    /**
+     * @param logGroup The log group the function sends logs to. By default, Lambda functions send
+     *   logs to an automatically created default log group named /aws/lambda/<function name>.
+     *   However you cannot change the properties of this auto-created log group using the AWS CDK,
+     *   e.g. you cannot set a different log retention.
+     *
+     * Use the `logGroup` property to create a fully customizable LogGroup ahead of time, and
+     * instruct the Lambda function to send logs to it.
+     *
+     * Providing a user-controlled log group was rolled out to commercial regions on 2023-11-16. If
+     * you are deploying to another type of region, please check regional availability first.
+     */
+    public fun logGroup(logGroup: ILogGroup) {
+        cdkBuilder.logGroup(logGroup)
+    }
+
     /**
      * @param logRetention The number of days log events are kept in CloudWatch Logs. When updating
      *   this property, unsetting it doesn't remove the log retention policy. To remove the
      *   retention policy, set the value to `INFINITE`.
+     *
+     * This is a legacy API and we strongly recommend you move away from it if you can. Instead
+     * create a fully customizable log group with `logs.LogGroup` and use the `logGroup` property to
+     * instruct the Lambda function to send logs to it. Migrating from `logRetention` to `logGroup`
+     * will cause the name of the log group to change. Users and code and referencing the name
+     * verbatim will have to adjust.
+     *
+     * In AWS CDK code, you can access the log group name directly from the LogGroup construct:
+     * ```
+     * import software.amazon.awscdk.services.logs.*;
+     * *
+     * LogGroup myLogGroup;
+     * *
+     * myLogGroup.getLogGroupName();
+     * ```
      */
     public fun logRetention(logRetention: RetentionDays) {
         cdkBuilder.logRetention(logRetention)
@@ -405,6 +361,10 @@ public class SingletonFunctionPropsDsl {
      * @param logRetentionRetryOptions When log retention is specified, a custom resource attempts
      *   to create the CloudWatch log group. These options control the retry policy when interacting
      *   with CloudWatch APIs.
+     *
+     * This is a legacy API and we strongly recommend you migrate to `logGroup` if you can.
+     * `logGroup` allows you to create a fully customizable log group and instruct the Lambda
+     * function to send logs to it.
      */
     public fun logRetentionRetryOptions(
         logRetentionRetryOptions: LogRetentionRetryOptionsDsl.() -> Unit = {}
@@ -418,6 +378,10 @@ public class SingletonFunctionPropsDsl {
      * @param logRetentionRetryOptions When log retention is specified, a custom resource attempts
      *   to create the CloudWatch log group. These options control the retry policy when interacting
      *   with CloudWatch APIs.
+     *
+     * This is a legacy API and we strongly recommend you migrate to `logGroup` if you can.
+     * `logGroup` allows you to create a fully customizable log group and instruct the Lambda
+     * function to send logs to it.
      */
     public fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions) {
         cdkBuilder.logRetentionRetryOptions(logRetentionRetryOptions)
@@ -425,10 +389,17 @@ public class SingletonFunctionPropsDsl {
 
     /**
      * @param logRetentionRole The IAM role for the Lambda function associated with the custom
-     *   resource that sets the retention policy.
+     *   resource that sets the retention policy. This is a legacy API and we strongly recommend you
+     *   migrate to `logGroup` if you can. `logGroup` allows you to create a fully customizable log
+     *   group and instruct the Lambda function to send logs to it.
      */
     public fun logRetentionRole(logRetentionRole: IRole) {
         cdkBuilder.logRetentionRole(logRetentionRole)
+    }
+
+    /** @param loggingFormat Sets the loggingFormat for the function. */
+    public fun loggingFormat(loggingFormat: LoggingFormat) {
+        cdkBuilder.loggingFormat(loggingFormat)
     }
 
     /**
@@ -536,6 +507,19 @@ public class SingletonFunctionPropsDsl {
      */
     public fun securityGroups(securityGroups: Collection<ISecurityGroup>) {
         _securityGroups.addAll(securityGroups)
+    }
+
+    /**
+     * @param snapStart Enable SnapStart for Lambda Function. SnapStart is currently supported only
+     *   for Java 11, 17 runtime
+     */
+    public fun snapStart(snapStart: SnapStartConf) {
+        cdkBuilder.snapStart(snapStart)
+    }
+
+    /** @param systemLogLevel Sets the system log level for the function. */
+    public fun systemLogLevel(systemLogLevel: String) {
+        cdkBuilder.systemLogLevel(systemLogLevel)
     }
 
     /**

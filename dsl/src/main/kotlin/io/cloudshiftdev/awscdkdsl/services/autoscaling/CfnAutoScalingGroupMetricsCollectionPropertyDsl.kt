@@ -19,14 +19,14 @@ import software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup
 
 /**
  * `MetricsCollection` is a property of the
- * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html)
+ * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
  * resource that describes the group metrics that an Amazon EC2 Auto Scaling group sends to Amazon
  * CloudWatch. These metrics describe the group rather than any of its instances.
  *
  * For more information, see
  * [Monitor CloudWatch metrics for your Auto Scaling groups and instances](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-monitoring.html)
  * in the *Amazon EC2 Auto Scaling User Guide* . You can find a sample template snippet in the
- * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#aws-properties-as-group--examples)
+ * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#aws-resource-autoscaling-autoscalinggroup--examples)
  * section of the `AWS::AutoScaling::AutoScalingGroup` resource.
  *
  * Example:

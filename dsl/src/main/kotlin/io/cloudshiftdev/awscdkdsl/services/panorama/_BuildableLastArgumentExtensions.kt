@@ -33,7 +33,7 @@ public inline fun CfnApplicationInstance.setManifestPayload(
     return setManifestPayload(builder.build())
 }
 
-/**  */
+/** A storage location. */
 public inline fun CfnPackage.setStorageLocation(
     block: CfnPackageStorageLocationPropertyDsl.() -> Unit = {}
 ) {

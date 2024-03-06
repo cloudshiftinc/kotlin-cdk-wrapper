@@ -89,7 +89,9 @@ public class AsgCapacityProviderDsl(
      * The name of the capacity provider.
      *
      * If a name is specified, it cannot start with `aws`, `ecs`, or `fargate`. If no name is
-     * specified, a default name in the CFNStackName-CFNResourceName-RandomString format is used.
+     * specified, a default name in the CFNStackName-CFNResourceName-RandomString format is used. If
+     * the stack name starts with `aws`, `ecs`, or `fargate`, a unique resource name is generated
+     * that starts with `cp-`.
      *
      * Default: CloudFormation-generated name
      *
@@ -97,6 +99,22 @@ public class AsgCapacityProviderDsl(
      */
     public fun capacityProviderName(capacityProviderName: String) {
         cdkBuilder.capacityProviderName(capacityProviderName)
+    }
+
+    /**
+     * Managed instance draining facilitates graceful termination of Amazon ECS instances.
+     *
+     * This allows your service workloads to stop safely and be rescheduled to non-terminating
+     * instances. Infrastructure maintenance and updates are preformed without disruptions to
+     * workloads. To use managed instance draining, set enableManagedDraining to true.
+     *
+     * Default: true
+     *
+     * @param enableManagedDraining Managed instance draining facilitates graceful termination of
+     *   Amazon ECS instances.
+     */
+    public fun enableManagedDraining(enableManagedDraining: Boolean) {
+        cdkBuilder.enableManagedDraining(enableManagedDraining)
     }
 
     /**
@@ -137,6 +155,21 @@ public class AsgCapacityProviderDsl(
      */
     public fun enableManagedTerminationProtection(enableManagedTerminationProtection: Boolean) {
         cdkBuilder.enableManagedTerminationProtection(enableManagedTerminationProtection)
+    }
+
+    /**
+     * The period of time, in seconds, after a newly launched Amazon EC2 instance can contribute to
+     * CloudWatch metrics for Auto Scaling group.
+     *
+     * Must be between 0 and 10000.
+     *
+     * Default: 300
+     *
+     * @param instanceWarmupPeriod The period of time, in seconds, after a newly launched Amazon EC2
+     *   instance can contribute to CloudWatch metrics for Auto Scaling group.
+     */
+    public fun instanceWarmupPeriod(instanceWarmupPeriod: Number) {
+        cdkBuilder.instanceWarmupPeriod(instanceWarmupPeriod)
     }
 
     /**

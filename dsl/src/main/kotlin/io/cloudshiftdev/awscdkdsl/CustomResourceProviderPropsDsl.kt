@@ -31,7 +31,7 @@ import software.amazon.awscdk.Size
  * CustomResourceProvider provider = CustomResourceProvider.getOrCreateProvider(this,
  * "Custom::MyCustomResourceType", CustomResourceProviderProps.builder()
  * .codeDirectory(String.format("%s/my-handler", __dirname))
- * .runtime(CustomResourceProviderRuntime.NODEJS_14_X)
+ * .runtime(CustomResourceProviderRuntime.NODEJS_18_X)
  * .build());
  * provider.addToRolePolicy(Map.of(
  * "Effect", "Allow",

@@ -29,6 +29,7 @@ import software.amazon.awscdk.services.lakeformation.CfnResourceProps
  * .resourceArn("resourceArn")
  * .useServiceLinkedRole(false)
  * // the properties below are optional
+ * .hybridAccessEnabled(false)
  * .roleArn("roleArn")
  * .withFederation(false)
  * .build();
@@ -39,6 +40,24 @@ import software.amazon.awscdk.services.lakeformation.CfnResourceProps
 @CdkDslMarker
 public class CfnResourcePropsDsl {
     private val cdkBuilder: CfnResourceProps.Builder = CfnResourceProps.builder()
+
+    /**
+     * @param hybridAccessEnabled Indicates whether the data access of tables pointing to the
+     *   location can be managed by both Lake Formation permissions as well as Amazon S3 bucket
+     *   policies.
+     */
+    public fun hybridAccessEnabled(hybridAccessEnabled: Boolean) {
+        cdkBuilder.hybridAccessEnabled(hybridAccessEnabled)
+    }
+
+    /**
+     * @param hybridAccessEnabled Indicates whether the data access of tables pointing to the
+     *   location can be managed by both Lake Formation permissions as well as Amazon S3 bucket
+     *   policies.
+     */
+    public fun hybridAccessEnabled(hybridAccessEnabled: IResolvable) {
+        cdkBuilder.hybridAccessEnabled(hybridAccessEnabled)
+    }
 
     /** @param resourceArn The Amazon Resource Name (ARN) of the resource. */
     public fun resourceArn(resourceArn: String) {

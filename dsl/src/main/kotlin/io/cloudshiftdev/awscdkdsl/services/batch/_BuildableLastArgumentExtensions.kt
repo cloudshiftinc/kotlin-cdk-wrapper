@@ -15,6 +15,11 @@ import kotlin.Unit
 import software.amazon.awscdk.services.batch.CfnComputeEnvironment
 import software.amazon.awscdk.services.batch.CfnJobDefinition
 import software.amazon.awscdk.services.batch.CfnSchedulingPolicy
+import software.amazon.awscdk.services.batch.EcsEc2ContainerDefinition
+import software.amazon.awscdk.services.batch.FairshareSchedulingPolicy
+import software.amazon.awscdk.services.batch.IEcsEc2ContainerDefinition
+import software.amazon.awscdk.services.batch.LinuxParameters
+import software.amazon.awscdk.services.batch.MultiNodeJobDefinition
 
 /**
  * The ComputeResources property type specifies details of the compute resources managed by the
@@ -98,4 +103,75 @@ public inline fun CfnSchedulingPolicy.setFairsharePolicy(
     val builder = CfnSchedulingPolicyFairsharePolicyPropertyDsl()
     builder.apply(block)
     return setFairsharePolicy(builder.build())
+}
+
+/**
+ * Add a ulimit to this container.
+ *
+ * @param ulimit
+ */
+public inline fun EcsEc2ContainerDefinition.addUlimit(block: UlimitDsl.() -> Unit = {}) {
+    val builder = UlimitDsl()
+    builder.apply(block)
+    return addUlimit(builder.build())
+}
+
+/**
+ * Add a share this to this Fairshare SchedulingPolicy.
+ *
+ * @param share
+ */
+public inline fun FairshareSchedulingPolicy.addShare(block: ShareDsl.() -> Unit = {}) {
+    val builder = ShareDsl()
+    builder.apply(block)
+    return addShare(builder.build())
+}
+
+/**
+ * Add a ulimit to this container.
+ *
+ * @param ulimit
+ */
+public inline fun IEcsEc2ContainerDefinition.addUlimit(block: UlimitDsl.() -> Unit = {}) {
+    val builder = UlimitDsl()
+    builder.apply(block)
+    return addUlimit(builder.build())
+}
+
+/**
+ * Adds one or more host devices to a container.
+ *
+ * @param device
+ */
+public inline fun LinuxParameters.addDevices(block: DeviceDsl.() -> Unit = {}) {
+    val builder = DeviceDsl()
+    builder.apply(block)
+    return addDevices(builder.build())
+}
+
+/**
+ * Specifies the container path, mount options, and size (in MiB) of the tmpfs mount for a
+ * container.
+ *
+ * Only works with EC2 launch type.
+ *
+ * @param tmpfs
+ */
+public inline fun LinuxParameters.addTmpfs(block: TmpfsDsl.() -> Unit = {}) {
+    val builder = TmpfsDsl()
+    builder.apply(block)
+    return addTmpfs(builder.build())
+}
+
+/**
+ * Add a container to this multinode job.
+ *
+ * @param container
+ */
+public inline fun MultiNodeJobDefinition.addContainer(
+    block: MultiNodeContainerDsl.() -> Unit = {}
+) {
+    val builder = MultiNodeContainerDsl()
+    builder.apply(block)
+    return addContainer(builder.build())
 }

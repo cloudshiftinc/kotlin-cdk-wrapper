@@ -42,6 +42,7 @@ import software.amazon.awscdk.services.gamelift.CfnMatchmakingConfigurationProps
  * .acceptanceTimeoutSeconds(123)
  * .additionalPlayerCount(123)
  * .backfillMode("backfillMode")
+ * .creationTime("creationTime")
  * .customEventData("customEventData")
  * .description("description")
  * .flexMatchMode("flexMatchMode")
@@ -52,6 +53,7 @@ import software.amazon.awscdk.services.gamelift.CfnMatchmakingConfigurationProps
  * .gameSessionData("gameSessionData")
  * .gameSessionQueueArns(List.of("gameSessionQueueArns"))
  * .notificationTarget("notificationTarget")
+ * .ruleSetArn("ruleSetArn")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -122,6 +124,14 @@ public class CfnMatchmakingConfigurationPropsDsl {
      */
     public fun backfillMode(backfillMode: String) {
         cdkBuilder.backfillMode(backfillMode)
+    }
+
+    /**
+     * @param creationTime A time stamp indicating when this data object was created. Format is a
+     *   number expressed in Unix time as milliseconds (for example `"1469498468.057"` ).
+     */
+    public fun creationTime(creationTime: String) {
+        cdkBuilder.creationTime(creationTime)
     }
 
     /**
@@ -248,6 +258,15 @@ public class CfnMatchmakingConfigurationPropsDsl {
      */
     public fun requestTimeoutSeconds(requestTimeoutSeconds: Number) {
         cdkBuilder.requestTimeoutSeconds(requestTimeoutSeconds)
+    }
+
+    /**
+     * @param ruleSetArn The Amazon Resource Name (
+     *   [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) associated with
+     *   the GameLift matchmaking rule set resource that this configuration uses.
+     */
+    public fun ruleSetArn(ruleSetArn: String) {
+        cdkBuilder.ruleSetArn(ruleSetArn)
     }
 
     /**

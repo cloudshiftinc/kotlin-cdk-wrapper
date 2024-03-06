@@ -57,7 +57,7 @@ public class CfnMemberApprovalThresholdPolicyPropertyDsl {
 
     /**
      * @param thresholdComparator Determines whether the vote percentage must be greater than the
-     *   `ThresholdPercentage` or must be greater than or equal to the `ThreholdPercentage` to be
+     *   `ThresholdPercentage` or must be greater than or equal to the `ThresholdPercentage` to be
      *   approved.
      */
     public fun thresholdComparator(thresholdComparator: String) {

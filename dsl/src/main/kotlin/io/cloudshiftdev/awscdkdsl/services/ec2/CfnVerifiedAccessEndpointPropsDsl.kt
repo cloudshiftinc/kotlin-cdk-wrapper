@@ -55,6 +55,10 @@ import software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpointProps
  * .policyDocument("policyDocument")
  * .policyEnabled(false)
  * .securityGroupIds(List.of("securityGroupIds"))
+ * .sseSpecification(SseSpecificationProperty.builder()
+ * .customerManagedKeyEnabled(false)
+ * .kmsKeyArn("kmsKeyArn")
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -169,6 +173,18 @@ public class CfnVerifiedAccessEndpointPropsDsl {
     /** @param securityGroupIds The IDs of the security groups for the endpoint. */
     public fun securityGroupIds(securityGroupIds: Collection<String>) {
         _securityGroupIds.addAll(securityGroupIds)
+    }
+
+    /** @param sseSpecification The options for additional server side encryption. */
+    public fun sseSpecification(sseSpecification: IResolvable) {
+        cdkBuilder.sseSpecification(sseSpecification)
+    }
+
+    /** @param sseSpecification The options for additional server side encryption. */
+    public fun sseSpecification(
+        sseSpecification: CfnVerifiedAccessEndpoint.SseSpecificationProperty
+    ) {
+        cdkBuilder.sseSpecification(sseSpecification)
     }
 
     /** @param tags The tags. */

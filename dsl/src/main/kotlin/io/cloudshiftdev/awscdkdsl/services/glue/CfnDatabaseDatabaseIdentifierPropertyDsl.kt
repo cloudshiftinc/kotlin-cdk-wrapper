@@ -47,7 +47,7 @@ public class CfnDatabaseDatabaseIdentifierPropertyDsl {
         cdkBuilder.databaseName(databaseName)
     }
 
-    /** @param region the value to be set. */
+    /** @param region The Region of the database. */
     public fun region(region: String) {
         cdkBuilder.region(region)
     }

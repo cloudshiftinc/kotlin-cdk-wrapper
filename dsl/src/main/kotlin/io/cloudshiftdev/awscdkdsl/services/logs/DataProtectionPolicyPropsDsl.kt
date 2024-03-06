@@ -38,7 +38,9 @@ import software.amazon.awscdk.services.s3.IBucket
  * DataProtectionPolicy dataProtectionPolicy = DataProtectionPolicy.Builder.create()
  * .name("data protection policy")
  * .description("policy description")
- * .identifiers(List.of(DataIdentifier.DRIVERSLICENSE_US, new DataIdentifier("EmailAddress")))
+ * .identifiers(List.of(DataIdentifier.DRIVERSLICENSE_US,  // managed data identifier
+ * new DataIdentifier("EmailAddress"),  // forward compatibility for new managed data identifiers
+ * new CustomDataIdentifier("EmployeeId", "EmployeeId-\\d{9}"))) // custom data identifier
  * .logGroupAuditDestination(logGroupDestination)
  * .s3BucketAuditDestination(bucket)
  * .deliveryStreamNameAuditDestination(deliveryStream.getDeliveryStreamName())
@@ -69,16 +71,22 @@ public class DataProtectionPolicyPropsDsl {
     }
 
     /**
-     * @param identifiers List of data protection identifiers. Must be in the following list:
-     *   https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/protect-sensitive-log-data-types.html
+     * @param identifiers List of data protection identifiers. Managed data identifiers must be in
+     *   the following list:
+     *   https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL-managed-data-identifiers.html
+     *   Custom data identifiers must have a valid regex defined:
+     *   https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL-custom-data-identifiers.html#custom-data-identifiers-constraints
      */
     public fun identifiers(vararg identifiers: DataIdentifier) {
         _identifiers.addAll(listOf(*identifiers))
     }
 
     /**
-     * @param identifiers List of data protection identifiers. Must be in the following list:
-     *   https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/protect-sensitive-log-data-types.html
+     * @param identifiers List of data protection identifiers. Managed data identifiers must be in
+     *   the following list:
+     *   https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL-managed-data-identifiers.html
+     *   Custom data identifiers must have a valid regex defined:
+     *   https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL-custom-data-identifiers.html#custom-data-identifiers-constraints
      */
     public fun identifiers(identifiers: Collection<DataIdentifier>) {
         _identifiers.addAll(identifiers)

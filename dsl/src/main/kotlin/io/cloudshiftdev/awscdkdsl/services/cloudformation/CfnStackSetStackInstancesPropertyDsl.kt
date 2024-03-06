@@ -31,6 +31,7 @@ import software.amazon.awscdk.services.cloudformation.CfnStackSet
  * .deploymentTargets(DeploymentTargetsProperty.builder()
  * .accountFilterType("accountFilterType")
  * .accounts(List.of("accounts"))
+ * .accountsUrl("accountsUrl")
  * .organizationalUnitIds(List.of("organizationalUnitIds"))
  * .build())
  * .regions(List.of("regions"))

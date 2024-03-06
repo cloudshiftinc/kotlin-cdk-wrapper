@@ -58,6 +58,7 @@ import software.amazon.awscdk.services.apprunner.CfnService
  * .startCommand("startCommand")
  * .build())
  * .build())
+ * .sourceDirectory("sourceDirectory")
  * .build())
  * .imageRepository(ImageRepositoryProperty.builder()
  * .imageIdentifier("imageIdentifier")

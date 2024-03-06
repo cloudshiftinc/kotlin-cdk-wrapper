@@ -20,25 +20,15 @@ import software.amazon.awscdk.Environment
  *
  * Example:
  * ```
- * // Passing a replication bucket created in a different stack.
+ * import software.amazon.awscdk.*;
  * App app = new App();
- * Stack replicationStack = Stack.Builder.create(app, "ReplicationStack")
- * .env(Environment.builder()
- * .region("us-west-1")
- * .build())
+ * Stack stack = Stack.Builder.create(app,
+ * "Stack").env(Environment.builder().region("us-west-2").build()).build();
+ * TableV2 globalTable = TableV2.Builder.create(stack, "GlobalTable")
+ * .partitionKey(Attribute.builder().name("pk").type(AttributeType.STRING).build())
+ * .replicas(List.of(ReplicaTableProps.builder().region("us-east-1").build()))
  * .build();
- * Key key = new Key(replicationStack, "ReplicationKey");
- * Bucket replicationBucket = Bucket.Builder.create(replicationStack, "ReplicationBucket")
- * // like was said above - replication buckets need a set physical name
- * .bucketName(PhysicalName.GENERATE_IF_NEEDED)
- * .encryptionKey(key)
- * .build();
- * // later...
- * // later...
- * Pipeline.Builder.create(replicationStack, "Pipeline")
- * .crossRegionReplicationBuckets(Map.of(
- * "us-west-1", replicationBucket))
- * .build();
+ * globalTable.addReplica(ReplicaTableProps.builder().region("us-east-2").deletionProtection(true).build());
  * ```
  */
 @CdkDslMarker

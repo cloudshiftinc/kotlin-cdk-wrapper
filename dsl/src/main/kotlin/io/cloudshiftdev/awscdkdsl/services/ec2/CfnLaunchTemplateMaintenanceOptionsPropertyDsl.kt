@@ -25,6 +25,7 @@ import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
  * import software.amazon.awscdk.services.ec2.*;
  * MaintenanceOptionsProperty maintenanceOptionsProperty = MaintenanceOptionsProperty.builder()
  * .autoRecovery("autoRecovery")
+ * .rebootMigration("rebootMigration")
  * .build();
  * ```
  *
@@ -41,6 +42,11 @@ public class CfnLaunchTemplateMaintenanceOptionsPropertyDsl {
      */
     public fun autoRecovery(autoRecovery: String) {
         cdkBuilder.autoRecovery(autoRecovery)
+    }
+
+    /** @param rebootMigration the value to be set. */
+    public fun rebootMigration(rebootMigration: String) {
+        cdkBuilder.rebootMigration(rebootMigration)
     }
 
     public fun build(): CfnLaunchTemplate.MaintenanceOptionsProperty = cdkBuilder.build()

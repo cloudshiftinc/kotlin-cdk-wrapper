@@ -18,8 +18,6 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opsworks.CfnStack
 
 /**
- * Describes the Chef configuration.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.

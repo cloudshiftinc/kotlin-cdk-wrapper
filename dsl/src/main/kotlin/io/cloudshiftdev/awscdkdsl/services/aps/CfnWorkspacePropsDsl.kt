@@ -33,6 +33,7 @@ import software.amazon.awscdk.services.aps.CfnWorkspaceProps
  * CfnWorkspaceProps cfnWorkspaceProps = CfnWorkspaceProps.builder()
  * .alertManagerDefinition("alertManagerDefinition")
  * .alias("alias")
+ * .kmsKeyArn("kmsKeyArn")
  * .loggingConfiguration(LoggingConfigurationProperty.builder()
  * .logGroupArn("logGroupArn")
  * .build())
@@ -71,6 +72,11 @@ public class CfnWorkspacePropsDsl {
      */
     public fun alias(alias: String) {
         cdkBuilder.alias(alias)
+    }
+
+    /** @param kmsKeyArn KMS Key ARN used to encrypt and decrypt AMP workspace data. */
+    public fun kmsKeyArn(kmsKeyArn: String) {
+        cdkBuilder.kmsKeyArn(kmsKeyArn)
     }
 
     /**

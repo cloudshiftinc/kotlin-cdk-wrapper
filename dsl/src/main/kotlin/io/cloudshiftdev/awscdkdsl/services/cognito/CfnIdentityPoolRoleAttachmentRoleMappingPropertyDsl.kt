@@ -17,7 +17,7 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment
 
 /**
- * `RoleMapping` is a property of the
+ * One of a set of `RoleMappings` , a property of the
  * [AWS::Cognito::IdentityPoolRoleAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolroleattachment.html)
  * resource that defines the role-mapping attributes of an Amazon Cognito identity pool.
  *
@@ -50,12 +50,10 @@ public class CfnIdentityPoolRoleAttachmentRoleMappingPropertyDsl {
         CfnIdentityPoolRoleAttachment.RoleMappingProperty.builder()
 
     /**
-     * @param ambiguousRoleResolution Specifies the action to be taken if either no rules match the
-     *   claim value for the Rules type, or there is no `cognito:preferred_role` claim and there are
-     *   multiple `cognito:roles` matches for the Token type. If you specify Token or Rules as the
-     *   Type, AmbiguousRoleResolution is required.
-     *
-     * Valid values are `AuthenticatedRole` or `Deny` .
+     * @param ambiguousRoleResolution If you specify Token or Rules as the `Type` ,
+     *   `AmbiguousRoleResolution` is required. Specifies the action to be taken if either no rules
+     *   match the claim value for the `Rules` type, or there is no `cognito:preferred_role` claim
+     *   and there are multiple `cognito:roles` matches for the `Token` type.
      */
     public fun ambiguousRoleResolution(ambiguousRoleResolution: String) {
         cdkBuilder.ambiguousRoleResolution(ambiguousRoleResolution)
@@ -94,11 +92,9 @@ public class CfnIdentityPoolRoleAttachmentRoleMappingPropertyDsl {
     }
 
     /**
-     * @param type The role-mapping type. `Token` uses `cognito:roles` and `cognito:preferred_role`
-     *   claims from the Amazon Cognito identity provider token to map groups to roles. `Rules`
-     *   attempts to match claims from the token to map to a role.
-     *
-     * Valid values are `Token` or `Rules` .
+     * @param type The role mapping type. Token will use `cognito:roles` and
+     *   `cognito:preferred_role` claims from the Cognito identity provider token to map groups to
+     *   roles. Rules will attempt to match claims from the token to map to a role.
      */
     public fun type(type: String) {
         cdkBuilder.type(type)

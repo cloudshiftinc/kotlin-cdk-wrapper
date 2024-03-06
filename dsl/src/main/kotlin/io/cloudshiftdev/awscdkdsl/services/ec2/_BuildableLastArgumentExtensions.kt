@@ -15,18 +15,23 @@ import io.cloudshiftdev.awscdkdsl.services.cloudwatch.MetricOptionsDsl
 import io.cloudshiftdev.awscdkdsl.services.iam.PolicyStatementDsl
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 import software.amazon.awscdk.CfnResource
 import software.amazon.awscdk.services.cloudwatch.Metric
 import software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint
 import software.amazon.awscdk.services.ec2.CfnEC2Fleet
+import software.amazon.awscdk.services.ec2.CfnIPAMPool
 import software.amazon.awscdk.services.ec2.CfnInstance
 import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
 import software.amazon.awscdk.services.ec2.CfnNetworkAclEntry
 import software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath
+import software.amazon.awscdk.services.ec2.CfnNetworkInterface
 import software.amazon.awscdk.services.ec2.CfnSpotFleet
 import software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRule
 import software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect
+import software.amazon.awscdk.services.ec2.CfnVPCCidrBlock
 import software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint
+import software.amazon.awscdk.services.ec2.CfnVerifiedAccessGroup
 import software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance
 import software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider
 import software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRule
@@ -38,6 +43,7 @@ import software.amazon.awscdk.services.ec2.FlowLog
 import software.amazon.awscdk.services.ec2.GatewayVpcEndpoint
 import software.amazon.awscdk.services.ec2.IConnectable
 import software.amazon.awscdk.services.ec2.IIpAddresses
+import software.amazon.awscdk.services.ec2.IIpv6Addresses
 import software.amazon.awscdk.services.ec2.INetworkAcl
 import software.amazon.awscdk.services.ec2.IPeer
 import software.amazon.awscdk.services.ec2.ISecurityGroup
@@ -115,6 +121,15 @@ public inline fun CfnEC2Fleet.setTargetCapacitySpecification(
     val builder = CfnEC2FleetTargetCapacitySpecificationRequestPropertyDsl()
     builder.apply(block)
     return setTargetCapacitySpecification(builder.build())
+}
+
+/** The resource used to provision CIDRs to a resource planning pool. */
+public inline fun CfnIPAMPool.setSourceResource(
+    block: CfnIPAMPoolSourceResourcePropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnIPAMPoolSourceResourcePropertyDsl()
+    builder.apply(block)
+    return setSourceResource(builder.build())
 }
 
 /** The CPU options for the instance. */
@@ -216,6 +231,15 @@ public inline fun CfnNetworkInsightsPath.setFilterAtSource(
     return setFilterAtSource(builder.build())
 }
 
+/** A connection tracking specification for the network interface. */
+public inline fun CfnNetworkInterface.setConnectionTrackingSpecification(
+    block: CfnNetworkInterfaceConnectionTrackingSpecificationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnNetworkInterfaceConnectionTrackingSpecificationPropertyDsl()
+    builder.apply(block)
+    return setConnectionTrackingSpecification(builder.build())
+}
+
 /** Describes the configuration of a Spot Fleet request. */
 public inline fun CfnSpotFleet.setSpotFleetRequestConfigData(
     block: CfnSpotFleetSpotFleetRequestConfigDataPropertyDsl.() -> Unit = {}
@@ -272,7 +296,25 @@ public inline fun CfnVerifiedAccessEndpoint.setNetworkInterfaceOptions(
     return setNetworkInterfaceOptions(builder.build())
 }
 
-/** The current logging configuration for the Verified Access instances. */
+/** The options for additional server side encryption. */
+public inline fun CfnVerifiedAccessEndpoint.setSseSpecification(
+    block: CfnVerifiedAccessEndpointSseSpecificationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnVerifiedAccessEndpointSseSpecificationPropertyDsl()
+    builder.apply(block)
+    return setSseSpecification(builder.build())
+}
+
+/** The options for additional server side encryption. */
+public inline fun CfnVerifiedAccessGroup.setSseSpecification(
+    block: CfnVerifiedAccessGroupSseSpecificationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnVerifiedAccessGroupSseSpecificationPropertyDsl()
+    builder.apply(block)
+    return setSseSpecification(builder.build())
+}
+
+/** The logging configuration for the Verified Access instances. */
 public inline fun CfnVerifiedAccessInstance.setLoggingConfigurations(
     block: CfnVerifiedAccessInstanceVerifiedAccessLogsPropertyDsl.() -> Unit = {}
 ) {
@@ -297,6 +339,15 @@ public inline fun CfnVerifiedAccessTrustProvider.setOidcOptions(
     val builder = CfnVerifiedAccessTrustProviderOidcOptionsPropertyDsl()
     builder.apply(block)
     return setOidcOptions(builder.build())
+}
+
+/** The options for additional server side encryption. */
+public inline fun CfnVerifiedAccessTrustProvider.setSseSpecification(
+    block: CfnVerifiedAccessTrustProviderSseSpecificationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnVerifiedAccessTrustProviderSseSpecificationPropertyDsl()
+    builder.apply(block)
+    return setSseSpecification(builder.build())
 }
 
 /**
@@ -430,6 +481,51 @@ public inline fun IIpAddresses.allocateSubnetsCidr(
     val builder = AllocateCidrRequestDsl()
     builder.apply(block)
     return allocateSubnetsCidr(builder.build())
+}
+
+/**
+ * Allocates Subnets IPv6 CIDRs. Called by VPC when creating subnets with IPv6 enabled.
+ *
+ * Note this is specific to the IPv6 CIDR.
+ *
+ * @param input
+ */
+public inline fun IIpv6Addresses.allocateSubnetsIpv6Cidr(
+    block: AllocateIpv6CidrRequestDsl.() -> Unit = {}
+): SubnetIpamOptions {
+    val builder = AllocateIpv6CidrRequestDsl()
+    builder.apply(block)
+    return allocateSubnetsIpv6Cidr(builder.build())
+}
+
+/**
+ * Called by VPC to allocate IPv6 CIDR.
+ *
+ * Note this is specific to the IPv6 CIDR.
+ *
+ * @param input
+ */
+public inline fun IIpv6Addresses.allocateVpcIpv6Cidr(
+    block: AllocateVpcIpv6CidrRequestDsl.() -> Unit = {}
+): CfnVPCCidrBlock {
+    val builder = AllocateVpcIpv6CidrRequestDsl()
+    builder.apply(block)
+    return allocateVpcIpv6Cidr(builder.build())
+}
+
+/**
+ * Split IPv6 CIDR block up for subnets.
+ *
+ * Note this is specific to the IPv6 CIDR.
+ *
+ * @param input
+ */
+public inline fun IIpv6Addresses.createIpv6CidrBlocks(
+    block: CreateIpv6CidrBlocksRequestDsl.() -> Unit = {}
+): List<String> {
+    val builder = CreateIpv6CidrBlocksRequestDsl()
+    builder.apply(block)
+    return createIpv6CidrBlocks(builder.build())
 }
 
 /**

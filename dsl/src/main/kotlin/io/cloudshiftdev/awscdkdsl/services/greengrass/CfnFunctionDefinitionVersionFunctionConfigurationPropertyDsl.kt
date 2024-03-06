@@ -23,7 +23,7 @@ import software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion
  *
  * These settings configure the function's behavior in the Greengrass group. For more information,
  * see
- * [Controlling Execution of Greengrass Lambda Functions by Using Group-Specific Configuration](https://docs.aws.amazon.com/greengrass/latest/developerguide/lambda-group-config.html)
+ * [Controlling Execution of Greengrass Lambda Functions by Using Group-Specific Configuration](https://docs.aws.amazon.com/greengrass/v1/developerguide/lambda-group-config.html)
  * in the *Developer Guide* .
  *
  * In an AWS CloudFormation template, `FunctionConfiguration` is a property of the

@@ -55,6 +55,15 @@ public inline fun AwsAuth.addUserMapping(user: IUser, block: AwsAuthMappingDsl.(
     return addUserMapping(user, builder.build())
 }
 
+/** The access configuration for the cluster. */
+public inline fun CfnCluster.setAccessConfig(
+    block: CfnClusterAccessConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnClusterAccessConfigPropertyDsl()
+    builder.apply(block)
+    return setAccessConfig(builder.build())
+}
+
 /** The Kubernetes network configuration for the cluster. */
 public inline fun CfnCluster.setKubernetesNetworkConfig(
     block: CfnClusterKubernetesNetworkConfigPropertyDsl.() -> Unit = {}

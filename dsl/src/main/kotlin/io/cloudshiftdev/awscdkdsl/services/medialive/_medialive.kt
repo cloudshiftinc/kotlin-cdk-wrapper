@@ -19,6 +19,10 @@ import software.amazon.awscdk.services.medialive.CfnInput
 import software.amazon.awscdk.services.medialive.CfnInputProps
 import software.amazon.awscdk.services.medialive.CfnInputSecurityGroup
 import software.amazon.awscdk.services.medialive.CfnInputSecurityGroupProps
+import software.amazon.awscdk.services.medialive.CfnMultiplex
+import software.amazon.awscdk.services.medialive.CfnMultiplexProps
+import software.amazon.awscdk.services.medialive.CfnMultiplexprogram
+import software.amazon.awscdk.services.medialive.CfnMultiplexprogramProps
 import software.constructs.Construct
 
 public object medialive {
@@ -88,6 +92,7 @@ public object medialive {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.medialive.*;
      * Ac3SettingsProperty ac3SettingsProperty = Ac3SettingsProperty.builder()
+     * .attenuationControl("attenuationControl")
      * .bitrate(123)
      * .bitstreamMode("bitstreamMode")
      * .codingMode("codingMode")
@@ -399,10 +404,6 @@ public object medialive {
     }
 
     /**
-     * The configuration of ARIB captions in the output.
-     *
-     * The parent of this entity is CaptionDestinationSettings.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -423,10 +424,6 @@ public object medialive {
     }
 
     /**
-     * Information about the ARIB captions to extract from the input.
-     *
-     * The parent of this entity is CaptionSelectorSettings.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -498,6 +495,7 @@ public object medialive {
      * .vbrQuality("vbrQuality")
      * .build())
      * .ac3Settings(Ac3SettingsProperty.builder()
+     * .attenuationControl("attenuationControl")
      * .bitrate(123)
      * .bitstreamMode("bitstreamMode")
      * .codingMode("codingMode")
@@ -608,6 +606,7 @@ public object medialive {
      * .vbrQuality("vbrQuality")
      * .build())
      * .ac3Settings(Ac3SettingsProperty.builder()
+     * .attenuationControl("attenuationControl")
      * .bitrate(123)
      * .bitstreamMode("bitstreamMode")
      * .codingMode("codingMode")
@@ -1693,10 +1692,55 @@ public object medialive {
     }
 
     /**
-     * Passthrough applies no color space conversion to the output.
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.medialive.*;
+     * ColorCorrectionProperty colorCorrectionProperty = ColorCorrectionProperty.builder()
+     * .inputColorSpace("inputColorSpace")
+     * .outputColorSpace("outputColorSpace")
+     * .uri("uri")
+     * .build();
+     * ```
      *
-     * The parents of this entity are H264ColorSpaceSettings and H265ColorSpaceSettings.
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-colorcorrection.html)
+     */
+    public inline fun cfnChannelColorCorrectionProperty(
+        block: CfnChannelColorCorrectionPropertyDsl.() -> Unit = {}
+    ): CfnChannel.ColorCorrectionProperty {
+        val builder = CfnChannelColorCorrectionPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.medialive.*;
+     * ColorCorrectionSettingsProperty colorCorrectionSettingsProperty =
+     * ColorCorrectionSettingsProperty.builder()
+     * .globalColorCorrections(List.of(ColorCorrectionProperty.builder()
+     * .inputColorSpace("inputColorSpace")
+     * .outputColorSpace("outputColorSpace")
+     * .uri("uri")
+     * .build()))
+     * .build();
+     * ```
      *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-colorcorrectionsettings.html)
+     */
+    public inline fun cfnChannelColorCorrectionSettingsProperty(
+        block: CfnChannelColorCorrectionSettingsPropertyDsl.() -> Unit = {}
+    ): CfnChannel.ColorCorrectionSettingsProperty {
+        val builder = CfnChannelColorCorrectionSettingsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -1990,10 +2034,6 @@ public object medialive {
     }
 
     /**
-     * The configuration of embedded captions in the output.
-     *
-     * The parent of this entity is CaptionDestinationSettings.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -2014,10 +2054,6 @@ public object medialive {
     }
 
     /**
-     * The settings for embedded plus SCTE-20 captions in the output.
-     *
-     * The parent of this entity is CaptionDestinationSettings.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -2081,6 +2117,29 @@ public object medialive {
         block: CfnChannelEncoderSettingsPropertyDsl.() -> Unit = {}
     ): CfnChannel.EncoderSettingsProperty {
         val builder = CfnChannelEncoderSettingsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.medialive.*;
+     * EpochLockingSettingsProperty epochLockingSettingsProperty =
+     * EpochLockingSettingsProperty.builder()
+     * .customEpoch("customEpoch")
+     * .jamSyncTime("jamSyncTime")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-epochlockingsettings.html)
+     */
+    public inline fun cfnChannelEpochLockingSettingsProperty(
+        block: CfnChannelEpochLockingSettingsPropertyDsl.() -> Unit = {}
+    ): CfnChannel.EpochLockingSettingsProperty {
+        val builder = CfnChannelEpochLockingSettingsPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -2198,6 +2257,7 @@ public object medialive {
      * import software.amazon.awscdk.services.medialive.*;
      * FeatureActivationsProperty featureActivationsProperty = FeatureActivationsProperty.builder()
      * .inputPrepareScheduleActions("inputPrepareScheduleActions")
+     * .outputStaticImageOverlayScheduleActions("outputStaticImageOverlayScheduleActions")
      * .build();
      * ```
      *
@@ -2327,10 +2387,6 @@ public object medialive {
     }
 
     /**
-     * Settings for a frame capture output in an HLS output group.
-     *
-     * The parent of this entity is HlsSettings.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -2444,6 +2500,7 @@ public object medialive {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.medialive.*;
+     * Object pipelineLockingSettings;
      * GlobalConfigurationProperty globalConfigurationProperty = GlobalConfigurationProperty.builder()
      * .initialAudioGain(123)
      * .inputEndAction("inputEndAction")
@@ -2459,6 +2516,13 @@ public object medialive {
      * .repeatFrameMsec(123)
      * .build())
      * .outputLockingMode("outputLockingMode")
+     * .outputLockingSettings(OutputLockingSettingsProperty.builder()
+     * .epochLockingSettings(EpochLockingSettingsProperty.builder()
+     * .customEpoch("customEpoch")
+     * .jamSyncTime("jamSyncTime")
+     * .build())
+     * .pipelineLockingSettings(pipelineLockingSettings)
+     * .build())
      * .outputTimingSource("outputTimingSource")
      * .supportLowFramerateInputs("supportLowFramerateInputs")
      * .build();
@@ -3093,6 +3157,8 @@ public object medialive {
      * .audioFramesPerPes(123)
      * .audioPids("audioPids")
      * .ecmPid("ecmPid")
+     * .klvBehavior("klvBehavior")
+     * .klvDataPids("klvDataPids")
      * .nielsenId3Behavior("nielsenId3Behavior")
      * .patInterval(123)
      * .pcrControl("pcrControl")
@@ -3183,6 +3249,8 @@ public object medialive {
      * .audioFramesPerPes(123)
      * .audioPids("audioPids")
      * .ecmPid("ecmPid")
+     * .klvBehavior("klvBehavior")
+     * .klvDataPids("klvDataPids")
      * .nielsenId3Behavior("nielsenId3Behavior")
      * .patInterval(123)
      * .pcrControl("pcrControl")
@@ -3242,10 +3310,6 @@ public object medialive {
     }
 
     /**
-     * Settings to configure the motion graphics overlay to use an HTML asset.
-     *
-     * The parent of this entity is MotionGraphicsSetting.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -3801,6 +3865,8 @@ public object medialive {
      * .audioFramesPerPes(123)
      * .audioPids("audioPids")
      * .ecmPid("ecmPid")
+     * .klvBehavior("klvBehavior")
+     * .klvDataPids("klvDataPids")
      * .nielsenId3Behavior("nielsenId3Behavior")
      * .patInterval(123)
      * .pcrControl("pcrControl")
@@ -3930,10 +3996,6 @@ public object medialive {
     }
 
     /**
-     * The settings for a MediaPackage output.
-     *
-     * The parent of this entity is OutputSettings.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -4187,10 +4249,6 @@ public object medialive {
     }
 
     /**
-     * The settings for a Multiplex output group.
-     *
-     * The parent of this entity is OutputGroupSettings.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -4646,6 +4704,7 @@ public object medialive {
      * .cacheFullBehavior("cacheFullBehavior")
      * .cacheLength(123)
      * .captionData("captionData")
+     * .includeFillerNalUnits("includeFillerNalUnits")
      * .inputLossAction("inputLossAction")
      * .restartDelay(123)
      * .build())
@@ -4756,6 +4815,8 @@ public object medialive {
      * .audioFramesPerPes(123)
      * .audioPids("audioPids")
      * .ecmPid("ecmPid")
+     * .klvBehavior("klvBehavior")
+     * .klvDataPids("klvDataPids")
      * .nielsenId3Behavior("nielsenId3Behavior")
      * .patInterval(123)
      * .pcrControl("pcrControl")
@@ -5044,6 +5105,7 @@ public object medialive {
      * .cacheFullBehavior("cacheFullBehavior")
      * .cacheLength(123)
      * .captionData("captionData")
+     * .includeFillerNalUnits("includeFillerNalUnits")
      * .inputLossAction("inputLossAction")
      * .restartDelay(123)
      * .build())
@@ -5087,6 +5149,33 @@ public object medialive {
         block: CfnChannelOutputLocationRefPropertyDsl.() -> Unit = {}
     ): CfnChannel.OutputLocationRefProperty {
         val builder = CfnChannelOutputLocationRefPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.medialive.*;
+     * Object pipelineLockingSettings;
+     * OutputLockingSettingsProperty outputLockingSettingsProperty =
+     * OutputLockingSettingsProperty.builder()
+     * .epochLockingSettings(EpochLockingSettingsProperty.builder()
+     * .customEpoch("customEpoch")
+     * .jamSyncTime("jamSyncTime")
+     * .build())
+     * .pipelineLockingSettings(pipelineLockingSettings)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputlockingsettings.html)
+     */
+    public inline fun cfnChannelOutputLockingSettingsProperty(
+        block: CfnChannelOutputLockingSettingsPropertyDsl.() -> Unit = {}
+    ): CfnChannel.OutputLockingSettingsProperty {
+        val builder = CfnChannelOutputLockingSettingsPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -5202,6 +5291,8 @@ public object medialive {
      * .audioFramesPerPes(123)
      * .audioPids("audioPids")
      * .ecmPid("ecmPid")
+     * .klvBehavior("klvBehavior")
+     * .klvDataPids("klvDataPids")
      * .nielsenId3Behavior("nielsenId3Behavior")
      * .patInterval(123)
      * .pcrControl("pcrControl")
@@ -5436,6 +5527,8 @@ public object medialive {
      * .audioFramesPerPes(123)
      * .audioPids("audioPids")
      * .ecmPid("ecmPid")
+     * .klvBehavior("klvBehavior")
+     * .klvDataPids("klvDataPids")
      * .nielsenId3Behavior("nielsenId3Behavior")
      * .patInterval(123)
      * .pcrControl("pcrControl")
@@ -5562,10 +5655,6 @@ public object medialive {
     }
 
     /**
-     * The settings for passing through audio to the output.
-     *
-     * The parent of this entity is AudioCodecSettings.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -5601,10 +5690,6 @@ public object medialive {
     }
 
     /**
-     * The container for WAV audio in the output group.
-     *
-     * The parent of this entity is ArchiveContainerSettings.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -5624,10 +5709,6 @@ public object medialive {
     }
 
     /**
-     * Rec601 Settings.
-     *
-     * The parents of this entity are H264ColorSpaceSettings and H265ColorSpaceSettings.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -5647,10 +5728,6 @@ public object medialive {
     }
 
     /**
-     * Rec709 Settings.
-     *
-     * The parents of this entity are H264ColorSpaceSettings and H265ColorSpaceSettings.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -5703,10 +5780,6 @@ public object medialive {
     }
 
     /**
-     * The settings for RTMPCaptionInfo captions encode in the output.
-     *
-     * The parent of this entity is CaptionDestinationSettings.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -5742,6 +5815,7 @@ public object medialive {
      * .cacheFullBehavior("cacheFullBehavior")
      * .cacheLength(123)
      * .captionData("captionData")
+     * .includeFillerNalUnits("includeFillerNalUnits")
      * .inputLossAction("inputLossAction")
      * .restartDelay(123)
      * .build();
@@ -5788,10 +5862,6 @@ public object medialive {
     }
 
     /**
-     * The configuration of SCTE-20 plus embedded captions in the output.
-     *
-     * The parent of this entity is CaptionDestinationSettings.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -5839,10 +5909,6 @@ public object medialive {
     }
 
     /**
-     * The configuration of SCTE-27 captions in the output.
-     *
-     * The parent of this entity is CaptionDestinationSettings.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -5945,10 +6011,6 @@ public object medialive {
     }
 
     /**
-     * The setup of SMPTE-TT captions in the output.
-     *
-     * The parent of this entity is CaptionDestinationSettings.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -5984,6 +6046,8 @@ public object medialive {
      * .audioFramesPerPes(123)
      * .audioPids("audioPids")
      * .ecmPid("ecmPid")
+     * .klvBehavior("klvBehavior")
+     * .klvDataPids("klvDataPids")
      * .nielsenId3Behavior("nielsenId3Behavior")
      * .patInterval(123)
      * .pcrControl("pcrControl")
@@ -6043,10 +6107,6 @@ public object medialive {
     }
 
     /**
-     * The settings for a Teletext captions output encode.
-     *
-     * The parent of this entity is CaptionDestinationSettings.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -6122,6 +6182,28 @@ public object medialive {
         block: CfnChannelTemporalFilterSettingsPropertyDsl.() -> Unit = {}
     ): CfnChannel.TemporalFilterSettingsProperty {
         val builder = CfnChannelTemporalFilterSettingsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.medialive.*;
+     * ThumbnailConfigurationProperty thumbnailConfigurationProperty =
+     * ThumbnailConfigurationProperty.builder()
+     * .state("state")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-thumbnailconfiguration.html)
+     */
+    public inline fun cfnChannelThumbnailConfigurationProperty(
+        block: CfnChannelThumbnailConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnChannel.ThumbnailConfigurationProperty {
+        val builder = CfnChannelThumbnailConfigurationPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -7093,10 +7175,6 @@ public object medialive {
     }
 
     /**
-     * This entity is not used.
-     *
-     * Ignore it.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -7349,6 +7427,474 @@ public object medialive {
         block: CfnInputSecurityGroupPropsDsl.() -> Unit = {}
     ): CfnInputSecurityGroupProps {
         val builder = CfnInputSecurityGroupPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The multiplex object.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.medialive.*;
+     * CfnMultiplex cfnMultiplex = CfnMultiplex.Builder.create(this, "MyCfnMultiplex")
+     * .availabilityZones(List.of("availabilityZones"))
+     * .multiplexSettings(MultiplexSettingsProperty.builder()
+     * .transportStreamBitrate(123)
+     * .transportStreamId(123)
+     * // the properties below are optional
+     * .maximumVideoBufferDelayMilliseconds(123)
+     * .transportStreamReservedBitrate(123)
+     * .build())
+     * .name("name")
+     * // the properties below are optional
+     * .destinations(List.of(MultiplexOutputDestinationProperty.builder()
+     * .multiplexMediaConnectOutputDestinationSettings(MultiplexMediaConnectOutputDestinationSettingsProperty.builder()
+     * .entitlementArn("entitlementArn")
+     * .build())
+     * .build()))
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-multiplex.html)
+     */
+    public inline fun cfnMultiplex(
+        scope: Construct,
+        id: String,
+        block: CfnMultiplexDsl.() -> Unit = {},
+    ): CfnMultiplex {
+        val builder = CfnMultiplexDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Multiplex MediaConnect output destination settings.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.medialive.*;
+     * MultiplexMediaConnectOutputDestinationSettingsProperty
+     * multiplexMediaConnectOutputDestinationSettingsProperty =
+     * MultiplexMediaConnectOutputDestinationSettingsProperty.builder()
+     * .entitlementArn("entitlementArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplex-multiplexmediaconnectoutputdestinationsettings.html)
+     */
+    public inline fun cfnMultiplexMultiplexMediaConnectOutputDestinationSettingsProperty(
+        block: CfnMultiplexMultiplexMediaConnectOutputDestinationSettingsPropertyDsl.() -> Unit = {}
+    ): CfnMultiplex.MultiplexMediaConnectOutputDestinationSettingsProperty {
+        val builder = CfnMultiplexMultiplexMediaConnectOutputDestinationSettingsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Multiplex output destination settings.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.medialive.*;
+     * MultiplexOutputDestinationProperty multiplexOutputDestinationProperty =
+     * MultiplexOutputDestinationProperty.builder()
+     * .multiplexMediaConnectOutputDestinationSettings(MultiplexMediaConnectOutputDestinationSettingsProperty.builder()
+     * .entitlementArn("entitlementArn")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplex-multiplexoutputdestination.html)
+     */
+    public inline fun cfnMultiplexMultiplexOutputDestinationProperty(
+        block: CfnMultiplexMultiplexOutputDestinationPropertyDsl.() -> Unit = {}
+    ): CfnMultiplex.MultiplexOutputDestinationProperty {
+        val builder = CfnMultiplexMultiplexOutputDestinationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Contains configuration for a Multiplex event.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.medialive.*;
+     * MultiplexSettingsProperty multiplexSettingsProperty = MultiplexSettingsProperty.builder()
+     * .transportStreamBitrate(123)
+     * .transportStreamId(123)
+     * // the properties below are optional
+     * .maximumVideoBufferDelayMilliseconds(123)
+     * .transportStreamReservedBitrate(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplex-multiplexsettings.html)
+     */
+    public inline fun cfnMultiplexMultiplexSettingsProperty(
+        block: CfnMultiplexMultiplexSettingsPropertyDsl.() -> Unit = {}
+    ): CfnMultiplex.MultiplexSettingsProperty {
+        val builder = CfnMultiplexMultiplexSettingsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnMultiplex`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.medialive.*;
+     * CfnMultiplexProps cfnMultiplexProps = CfnMultiplexProps.builder()
+     * .availabilityZones(List.of("availabilityZones"))
+     * .multiplexSettings(MultiplexSettingsProperty.builder()
+     * .transportStreamBitrate(123)
+     * .transportStreamId(123)
+     * // the properties below are optional
+     * .maximumVideoBufferDelayMilliseconds(123)
+     * .transportStreamReservedBitrate(123)
+     * .build())
+     * .name("name")
+     * // the properties below are optional
+     * .destinations(List.of(MultiplexOutputDestinationProperty.builder()
+     * .multiplexMediaConnectOutputDestinationSettings(MultiplexMediaConnectOutputDestinationSettingsProperty.builder()
+     * .entitlementArn("entitlementArn")
+     * .build())
+     * .build()))
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-multiplex.html)
+     */
+    public inline fun cfnMultiplexProps(
+        block: CfnMultiplexPropsDsl.() -> Unit = {}
+    ): CfnMultiplexProps {
+        val builder = CfnMultiplexPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Resource schema for AWS::MediaLive::Multiplexprogram.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.medialive.*;
+     * CfnMultiplexprogram cfnMultiplexprogram = CfnMultiplexprogram.Builder.create(this,
+     * "MyCfnMultiplexprogram")
+     * .channelId("channelId")
+     * .multiplexId("multiplexId")
+     * .multiplexProgramSettings(MultiplexProgramSettingsProperty.builder()
+     * .programNumber(123)
+     * // the properties below are optional
+     * .preferredChannelPipeline("preferredChannelPipeline")
+     * .serviceDescriptor(MultiplexProgramServiceDescriptorProperty.builder()
+     * .providerName("providerName")
+     * .serviceName("serviceName")
+     * .build())
+     * .videoSettings(MultiplexVideoSettingsProperty.builder()
+     * .constantBitrate(123)
+     * .statmuxSettings(MultiplexStatmuxVideoSettingsProperty.builder()
+     * .maximumBitrate(123)
+     * .minimumBitrate(123)
+     * .priority(123)
+     * .build())
+     * .build())
+     * .build())
+     * .packetIdentifiersMap(MultiplexProgramPacketIdentifiersMapProperty.builder()
+     * .audioPids(List.of(123))
+     * .dvbSubPids(List.of(123))
+     * .dvbTeletextPid(123)
+     * .etvPlatformPid(123)
+     * .etvSignalPid(123)
+     * .klvDataPids(List.of(123))
+     * .pcrPid(123)
+     * .pmtPid(123)
+     * .privateMetadataPid(123)
+     * .scte27Pids(List.of(123))
+     * .scte35Pid(123)
+     * .timedMetadataPid(123)
+     * .videoPid(123)
+     * .build())
+     * .pipelineDetails(List.of(MultiplexProgramPipelineDetailProperty.builder()
+     * .activeChannelPipeline("activeChannelPipeline")
+     * .pipelineId("pipelineId")
+     * .build()))
+     * .preferredChannelPipeline("preferredChannelPipeline")
+     * .programName("programName")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-multiplexprogram.html)
+     */
+    public inline fun cfnMultiplexprogram(
+        scope: Construct,
+        id: String,
+        block: CfnMultiplexprogramDsl.() -> Unit = {},
+    ): CfnMultiplexprogram {
+        val builder = CfnMultiplexprogramDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Packet identifiers map for a given Multiplex program.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.medialive.*;
+     * MultiplexProgramPacketIdentifiersMapProperty multiplexProgramPacketIdentifiersMapProperty =
+     * MultiplexProgramPacketIdentifiersMapProperty.builder()
+     * .audioPids(List.of(123))
+     * .dvbSubPids(List.of(123))
+     * .dvbTeletextPid(123)
+     * .etvPlatformPid(123)
+     * .etvSignalPid(123)
+     * .klvDataPids(List.of(123))
+     * .pcrPid(123)
+     * .pmtPid(123)
+     * .privateMetadataPid(123)
+     * .scte27Pids(List.of(123))
+     * .scte35Pid(123)
+     * .timedMetadataPid(123)
+     * .videoPid(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexprogrampacketidentifiersmap.html)
+     */
+    public inline fun cfnMultiplexprogramMultiplexProgramPacketIdentifiersMapProperty(
+        block: CfnMultiplexprogramMultiplexProgramPacketIdentifiersMapPropertyDsl.() -> Unit = {}
+    ): CfnMultiplexprogram.MultiplexProgramPacketIdentifiersMapProperty {
+        val builder = CfnMultiplexprogramMultiplexProgramPacketIdentifiersMapPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The current source for one of the pipelines in the multiplex.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.medialive.*;
+     * MultiplexProgramPipelineDetailProperty multiplexProgramPipelineDetailProperty =
+     * MultiplexProgramPipelineDetailProperty.builder()
+     * .activeChannelPipeline("activeChannelPipeline")
+     * .pipelineId("pipelineId")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexprogrampipelinedetail.html)
+     */
+    public inline fun cfnMultiplexprogramMultiplexProgramPipelineDetailProperty(
+        block: CfnMultiplexprogramMultiplexProgramPipelineDetailPropertyDsl.() -> Unit = {}
+    ): CfnMultiplexprogram.MultiplexProgramPipelineDetailProperty {
+        val builder = CfnMultiplexprogramMultiplexProgramPipelineDetailPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Transport stream service descriptor configuration for the Multiplex program.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.medialive.*;
+     * MultiplexProgramServiceDescriptorProperty multiplexProgramServiceDescriptorProperty =
+     * MultiplexProgramServiceDescriptorProperty.builder()
+     * .providerName("providerName")
+     * .serviceName("serviceName")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexprogramservicedescriptor.html)
+     */
+    public inline fun cfnMultiplexprogramMultiplexProgramServiceDescriptorProperty(
+        block: CfnMultiplexprogramMultiplexProgramServiceDescriptorPropertyDsl.() -> Unit = {}
+    ): CfnMultiplexprogram.MultiplexProgramServiceDescriptorProperty {
+        val builder = CfnMultiplexprogramMultiplexProgramServiceDescriptorPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Multiplex Program settings configuration.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.medialive.*;
+     * MultiplexProgramSettingsProperty multiplexProgramSettingsProperty =
+     * MultiplexProgramSettingsProperty.builder()
+     * .programNumber(123)
+     * // the properties below are optional
+     * .preferredChannelPipeline("preferredChannelPipeline")
+     * .serviceDescriptor(MultiplexProgramServiceDescriptorProperty.builder()
+     * .providerName("providerName")
+     * .serviceName("serviceName")
+     * .build())
+     * .videoSettings(MultiplexVideoSettingsProperty.builder()
+     * .constantBitrate(123)
+     * .statmuxSettings(MultiplexStatmuxVideoSettingsProperty.builder()
+     * .maximumBitrate(123)
+     * .minimumBitrate(123)
+     * .priority(123)
+     * .build())
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexprogramsettings.html)
+     */
+    public inline fun cfnMultiplexprogramMultiplexProgramSettingsProperty(
+        block: CfnMultiplexprogramMultiplexProgramSettingsPropertyDsl.() -> Unit = {}
+    ): CfnMultiplexprogram.MultiplexProgramSettingsProperty {
+        val builder = CfnMultiplexprogramMultiplexProgramSettingsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Statmux rate control settings.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.medialive.*;
+     * MultiplexStatmuxVideoSettingsProperty multiplexStatmuxVideoSettingsProperty =
+     * MultiplexStatmuxVideoSettingsProperty.builder()
+     * .maximumBitrate(123)
+     * .minimumBitrate(123)
+     * .priority(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexstatmuxvideosettings.html)
+     */
+    public inline fun cfnMultiplexprogramMultiplexStatmuxVideoSettingsProperty(
+        block: CfnMultiplexprogramMultiplexStatmuxVideoSettingsPropertyDsl.() -> Unit = {}
+    ): CfnMultiplexprogram.MultiplexStatmuxVideoSettingsProperty {
+        val builder = CfnMultiplexprogramMultiplexStatmuxVideoSettingsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The video configuration for each program in a multiplex.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.medialive.*;
+     * MultiplexVideoSettingsProperty multiplexVideoSettingsProperty =
+     * MultiplexVideoSettingsProperty.builder()
+     * .constantBitrate(123)
+     * .statmuxSettings(MultiplexStatmuxVideoSettingsProperty.builder()
+     * .maximumBitrate(123)
+     * .minimumBitrate(123)
+     * .priority(123)
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexvideosettings.html)
+     */
+    public inline fun cfnMultiplexprogramMultiplexVideoSettingsProperty(
+        block: CfnMultiplexprogramMultiplexVideoSettingsPropertyDsl.() -> Unit = {}
+    ): CfnMultiplexprogram.MultiplexVideoSettingsProperty {
+        val builder = CfnMultiplexprogramMultiplexVideoSettingsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnMultiplexprogram`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.medialive.*;
+     * CfnMultiplexprogramProps cfnMultiplexprogramProps = CfnMultiplexprogramProps.builder()
+     * .channelId("channelId")
+     * .multiplexId("multiplexId")
+     * .multiplexProgramSettings(MultiplexProgramSettingsProperty.builder()
+     * .programNumber(123)
+     * // the properties below are optional
+     * .preferredChannelPipeline("preferredChannelPipeline")
+     * .serviceDescriptor(MultiplexProgramServiceDescriptorProperty.builder()
+     * .providerName("providerName")
+     * .serviceName("serviceName")
+     * .build())
+     * .videoSettings(MultiplexVideoSettingsProperty.builder()
+     * .constantBitrate(123)
+     * .statmuxSettings(MultiplexStatmuxVideoSettingsProperty.builder()
+     * .maximumBitrate(123)
+     * .minimumBitrate(123)
+     * .priority(123)
+     * .build())
+     * .build())
+     * .build())
+     * .packetIdentifiersMap(MultiplexProgramPacketIdentifiersMapProperty.builder()
+     * .audioPids(List.of(123))
+     * .dvbSubPids(List.of(123))
+     * .dvbTeletextPid(123)
+     * .etvPlatformPid(123)
+     * .etvSignalPid(123)
+     * .klvDataPids(List.of(123))
+     * .pcrPid(123)
+     * .pmtPid(123)
+     * .privateMetadataPid(123)
+     * .scte27Pids(List.of(123))
+     * .scte35Pid(123)
+     * .timedMetadataPid(123)
+     * .videoPid(123)
+     * .build())
+     * .pipelineDetails(List.of(MultiplexProgramPipelineDetailProperty.builder()
+     * .activeChannelPipeline("activeChannelPipeline")
+     * .pipelineId("pipelineId")
+     * .build()))
+     * .preferredChannelPipeline("preferredChannelPipeline")
+     * .programName("programName")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-multiplexprogram.html)
+     */
+    public inline fun cfnMultiplexprogramProps(
+        block: CfnMultiplexprogramPropsDsl.() -> Unit = {}
+    ): CfnMultiplexprogramProps {
+        val builder = CfnMultiplexprogramPropsDsl()
         builder.apply(block)
         return builder.build()
     }

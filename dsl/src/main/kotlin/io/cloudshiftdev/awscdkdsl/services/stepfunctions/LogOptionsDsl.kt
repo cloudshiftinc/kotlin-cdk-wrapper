@@ -24,8 +24,9 @@ import software.amazon.awscdk.services.stepfunctions.LogOptions
  * ```
  * import software.amazon.awscdk.services.logs.*;
  * LogGroup logGroup = new LogGroup(this, "MyLogGroup");
+ * Chain definition = Chain.start(new Pass(this, "Pass"));
  * StateMachine.Builder.create(this, "MyStateMachine")
- * .definition(Chain.start(new Pass(this, "Pass")))
+ * .definitionBody(DefinitionBody.fromChainable(definition))
  * .logs(LogOptions.builder()
  * .destination(logGroup)
  * .level(LogLevel.ALL)

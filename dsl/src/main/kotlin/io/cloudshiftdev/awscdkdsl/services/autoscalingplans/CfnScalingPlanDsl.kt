@@ -33,8 +33,7 @@ import software.constructs.Construct
  * * Amazon Aurora Replicas
  *
  * For more information, see the
- * [AWS Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/plans/userguide/what-is-aws-auto-scaling.html)
- * .
+ * [Scaling Plans User Guide](https://docs.aws.amazon.com/autoscaling/plans/userguide/what-is-a-scaling-plan.html)
  *
  * Example:
  * ```

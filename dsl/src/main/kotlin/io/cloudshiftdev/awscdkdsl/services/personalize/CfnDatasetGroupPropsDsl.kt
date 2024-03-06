@@ -56,7 +56,11 @@ public class CfnDatasetGroupPropsDsl {
         cdkBuilder.name(name)
     }
 
-    /** @param roleArn The ARN of the IAM role that has permissions to create the dataset group. */
+    /**
+     * @param roleArn The ARN of the AWS Identity and Access Management (IAM) role that has
+     *   permissions to access the AWS Key Management Service (KMS) key. Supplying an IAM role is
+     *   only valid when also specifying a KMS key.
+     */
     public fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
     }

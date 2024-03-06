@@ -22,7 +22,11 @@ import software.amazon.awscdk.services.s3.CfnBucket
 /**
  * A container for replication rules.
  *
- * You can add up to 1,000 rules. The maximum size of a replication configuration is 2 MB.
+ * You can add up to 1,000 rules. The maximum size of a replication configuration is 2 MB. The
+ * latest version of the replication configuration XML is V2. For more information about XML V2
+ * replication configurations, see
+ * [Replication configuration](https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication-add-config.html)
+ * in the *Amazon S3 User Guide* .
  *
  * Example:
  * ```

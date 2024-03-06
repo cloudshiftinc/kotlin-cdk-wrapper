@@ -27,8 +27,8 @@ import software.constructs.Construct
  * This resource requires some setup to be done in the AWS Chatbot console. To provide the required
  * Microsoft Teams team and tenant IDs, you must perform the initial authorization flow with
  * Microsoft Teams in the AWS Chatbot console, then copy and paste the IDs from the console. For
- * more details, see steps 1-4 in
- * [Setting Up AWS Chatbot with Microsoft Teams](https://docs.aws.amazon.com/chatbot/latest/adminguide/teams-setup.html#teams-client-setup)
+ * more details, see
+ * [Configure a Microsoft Teams client](https://docs.aws.amazon.com/chatbot/latest/adminguide/teams-setup.html#teams-client-setup)
  * in the *AWS Chatbot Administrator Guide* .
  *
  * Example:
@@ -176,15 +176,11 @@ public class CfnMicrosoftTeamsChannelConfigurationDsl(
     }
 
     /**
-     * The ID of the Microsoft Teams channel.
-     *
-     * To get the channel ID, open Microsoft Teams, right click on the channel name in the left
-     * pane, then choose Copy. An example of the channel ID syntax is:
-     * `19%3ab6ef35dc342d56ba5654e6fc6d25a071%40thread.tacv2` .
+     * The id of the Microsoft Teams channel.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html#cfn-chatbot-microsoftteamschannelconfiguration-teamschannelid)
      *
-     * @param teamsChannelId The ID of the Microsoft Teams channel.
+     * @param teamsChannelId The id of the Microsoft Teams channel.
      */
     public fun teamsChannelId(teamsChannelId: String) {
         cdkBuilder.teamsChannelId(teamsChannelId)

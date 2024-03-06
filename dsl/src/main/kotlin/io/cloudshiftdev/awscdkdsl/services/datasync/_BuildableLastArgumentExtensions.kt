@@ -158,3 +158,15 @@ public inline fun CfnTask.setSchedule(block: CfnTaskTaskSchedulePropertyDsl.() -
     builder.apply(block)
     return setSchedule(builder.build())
 }
+
+/**
+ * Specifies how you want to configure a task report, which provides detailed information about your
+ * DataSync transfer.
+ */
+public inline fun CfnTask.setTaskReportConfig(
+    block: CfnTaskTaskReportConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnTaskTaskReportConfigPropertyDsl()
+    builder.apply(block)
+    return setTaskReportConfig(builder.build())
+}

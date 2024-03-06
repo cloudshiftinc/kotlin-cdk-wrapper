@@ -37,6 +37,7 @@ import software.amazon.awscdk.services.sns.NumericConditions
  * "color", SubscriptionFilter.stringFilter(StringConditions.builder()
  * .allowlist(List.of("red", "orange"))
  * .matchPrefixes(List.of("bl"))
+ * .matchSuffixes(List.of("ue"))
  * .build()),
  * "size", SubscriptionFilter.stringFilter(StringConditions.builder()
  * .denylist(List.of("small", "medium"))

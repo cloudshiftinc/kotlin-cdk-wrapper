@@ -25,6 +25,10 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * import software.amazon.awscdk.services.quicksight.*;
  * TextFieldControlDisplayOptionsProperty textFieldControlDisplayOptionsProperty =
  * TextFieldControlDisplayOptionsProperty.builder()
+ * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+ * .infoIconText("infoIconText")
+ * .visibility("visibility")
+ * .build())
  * .placeholderOptions(TextControlPlaceholderOptionsProperty.builder()
  * .visibility("visibility")
  * .build())
@@ -52,6 +56,18 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
 public class CfnTemplateTextFieldControlDisplayOptionsPropertyDsl {
     private val cdkBuilder: CfnTemplate.TextFieldControlDisplayOptionsProperty.Builder =
         CfnTemplate.TextFieldControlDisplayOptionsProperty.builder()
+
+    /** @param infoIconLabelOptions The configuration of info icon label options. */
+    public fun infoIconLabelOptions(infoIconLabelOptions: IResolvable) {
+        cdkBuilder.infoIconLabelOptions(infoIconLabelOptions)
+    }
+
+    /** @param infoIconLabelOptions The configuration of info icon label options. */
+    public fun infoIconLabelOptions(
+        infoIconLabelOptions: CfnTemplate.SheetControlInfoIconLabelOptionsProperty
+    ) {
+        cdkBuilder.infoIconLabelOptions(infoIconLabelOptions)
+    }
 
     /**
      * @param placeholderOptions The configuration of the placeholder options in a text field

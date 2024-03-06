@@ -230,7 +230,7 @@ public object fsx {
      * You can create any of the following supported file system types:
      * * Amazon FSx for Lustre
      * * Amazon FSx for NetApp ONTAP
-     * * Amazon FSx for OpenZFS
+     * * FSx for OpenZFS
      * * Amazon FSx for Windows File Server
      *
      * Example:
@@ -270,9 +270,11 @@ public object fsx {
      * .build())
      * .endpointIpAddressRange("endpointIpAddressRange")
      * .fsxAdminPassword("fsxAdminPassword")
+     * .haPairs(123)
      * .preferredSubnetId("preferredSubnetId")
      * .routeTableIds(List.of("routeTableIds"))
      * .throughputCapacity(123)
+     * .throughputCapacityPerHaPair(123)
      * .weeklyMaintenanceStartTime("weeklyMaintenanceStartTime")
      * .build())
      * .openZfsConfiguration(OpenZFSConfigurationProperty.builder()
@@ -286,7 +288,9 @@ public object fsx {
      * .iops(123)
      * .mode("mode")
      * .build())
+     * .endpointIpAddressRange("endpointIpAddressRange")
      * .options(List.of("options"))
+     * .preferredSubnetId("preferredSubnetId")
      * .rootVolumeConfiguration(RootVolumeConfigurationProperty.builder()
      * .copyTagsToSnapshots(false)
      * .dataCompressionType("dataCompressionType")
@@ -304,6 +308,7 @@ public object fsx {
      * .type("type")
      * .build()))
      * .build())
+     * .routeTableIds(List.of("routeTableIds"))
      * .throughputCapacity(123)
      * .weeklyMaintenanceStartTime("weeklyMaintenanceStartTime")
      * .build())
@@ -329,6 +334,10 @@ public object fsx {
      * .copyTagsToBackups(false)
      * .dailyAutomaticBackupStartTime("dailyAutomaticBackupStartTime")
      * .deploymentType("deploymentType")
+     * .diskIopsConfiguration(DiskIopsConfigurationProperty.builder()
+     * .iops(123)
+     * .mode("mode")
+     * .build())
      * .preferredSubnetId("preferredSubnetId")
      * .selfManagedActiveDirectoryConfiguration(SelfManagedActiveDirectoryConfigurationProperty.builder()
      * .dnsIps(List.of("dnsIps"))
@@ -519,9 +528,11 @@ public object fsx {
      * .build())
      * .endpointIpAddressRange("endpointIpAddressRange")
      * .fsxAdminPassword("fsxAdminPassword")
+     * .haPairs(123)
      * .preferredSubnetId("preferredSubnetId")
      * .routeTableIds(List.of("routeTableIds"))
      * .throughputCapacity(123)
+     * .throughputCapacityPerHaPair(123)
      * .weeklyMaintenanceStartTime("weeklyMaintenanceStartTime")
      * .build();
      * ```
@@ -556,7 +567,9 @@ public object fsx {
      * .iops(123)
      * .mode("mode")
      * .build())
+     * .endpointIpAddressRange("endpointIpAddressRange")
      * .options(List.of("options"))
+     * .preferredSubnetId("preferredSubnetId")
      * .rootVolumeConfiguration(RootVolumeConfigurationProperty.builder()
      * .copyTagsToSnapshots(false)
      * .dataCompressionType("dataCompressionType")
@@ -574,6 +587,7 @@ public object fsx {
      * .type("type")
      * .build()))
      * .build())
+     * .routeTableIds(List.of("routeTableIds"))
      * .throughputCapacity(123)
      * .weeklyMaintenanceStartTime("weeklyMaintenanceStartTime")
      * .build();
@@ -629,9 +643,11 @@ public object fsx {
      * .build())
      * .endpointIpAddressRange("endpointIpAddressRange")
      * .fsxAdminPassword("fsxAdminPassword")
+     * .haPairs(123)
      * .preferredSubnetId("preferredSubnetId")
      * .routeTableIds(List.of("routeTableIds"))
      * .throughputCapacity(123)
+     * .throughputCapacityPerHaPair(123)
      * .weeklyMaintenanceStartTime("weeklyMaintenanceStartTime")
      * .build())
      * .openZfsConfiguration(OpenZFSConfigurationProperty.builder()
@@ -645,7 +661,9 @@ public object fsx {
      * .iops(123)
      * .mode("mode")
      * .build())
+     * .endpointIpAddressRange("endpointIpAddressRange")
      * .options(List.of("options"))
+     * .preferredSubnetId("preferredSubnetId")
      * .rootVolumeConfiguration(RootVolumeConfigurationProperty.builder()
      * .copyTagsToSnapshots(false)
      * .dataCompressionType("dataCompressionType")
@@ -663,6 +681,7 @@ public object fsx {
      * .type("type")
      * .build()))
      * .build())
+     * .routeTableIds(List.of("routeTableIds"))
      * .throughputCapacity(123)
      * .weeklyMaintenanceStartTime("weeklyMaintenanceStartTime")
      * .build())
@@ -688,6 +707,10 @@ public object fsx {
      * .copyTagsToBackups(false)
      * .dailyAutomaticBackupStartTime("dailyAutomaticBackupStartTime")
      * .deploymentType("deploymentType")
+     * .diskIopsConfiguration(DiskIopsConfigurationProperty.builder()
+     * .iops(123)
+     * .mode("mode")
+     * .build())
      * .preferredSubnetId("preferredSubnetId")
      * .selfManagedActiveDirectoryConfiguration(SelfManagedActiveDirectoryConfigurationProperty.builder()
      * .dnsIps(List.of("dnsIps"))
@@ -788,7 +811,12 @@ public object fsx {
     }
 
     /**
-     * The configuration for how much storage a user or group can use on the volume.
+     * Used to configure quotas that define how much storage a user or group can use on an FSx for
+     * OpenZFS volume.
+     *
+     * For more information, see
+     * [Volume properties](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-volumes.html#volume-properties)
+     * in the FSx for OpenZFS User Guide.
      *
      * Example:
      * ```
@@ -836,6 +864,10 @@ public object fsx {
      * .copyTagsToBackups(false)
      * .dailyAutomaticBackupStartTime("dailyAutomaticBackupStartTime")
      * .deploymentType("deploymentType")
+     * .diskIopsConfiguration(DiskIopsConfigurationProperty.builder()
+     * .iops(123)
+     * .mode("mode")
+     * .build())
      * .preferredSubnetId("preferredSubnetId")
      * .selfManagedActiveDirectoryConfiguration(SelfManagedActiveDirectoryConfigurationProperty.builder()
      * .dnsIps(List.of("dnsIps"))
@@ -968,7 +1000,7 @@ public object fsx {
      * Describes the self-managed Microsoft Active Directory to which you want to join the SVM.
      *
      * Joining an Active Directory provides user authentication and access control for SMB clients,
-     * including Microsoft Windows and macOS client accessing the file system.
+     * including Microsoft Windows and macOS clients accessing the file system.
      *
      * Example:
      * ```
@@ -1043,15 +1075,8 @@ public object fsx {
     }
 
     /**
-     * The configuration that Amazon FSx uses to join a FSx for Windows File Server file system or
-     * an FSx for ONTAP storage virtual machine (SVM) to a self-managed (including on-premises)
-     * Microsoft Active Directory (AD) directory.
-     *
-     * For more information, see
-     * [Using Amazon FSx for Windows with your self-managed Microsoft Active Directory](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html)
-     * or
-     * [Managing FSx for ONTAP SVMs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html)
-     * .
+     * The configuration that Amazon FSx uses to join the ONTAP storage virtual machine (SVM) to
+     * your self-managed (including on-premises) Microsoft Active Directory directory.
      *
      * Example:
      * ```
@@ -1094,13 +1119,18 @@ public object fsx {
      * // the properties below are optional
      * .backupId("backupId")
      * .ontapConfiguration(OntapConfigurationProperty.builder()
-     * .sizeInMegabytes("sizeInMegabytes")
      * .storageVirtualMachineId("storageVirtualMachineId")
      * // the properties below are optional
+     * .aggregateConfiguration(AggregateConfigurationProperty.builder()
+     * .aggregates(List.of("aggregates"))
+     * .constituentsPerAggregate(123)
+     * .build())
      * .copyTagsToBackups("copyTagsToBackups")
      * .junctionPath("junctionPath")
      * .ontapVolumeType("ontapVolumeType")
      * .securityStyle("securityStyle")
+     * .sizeInBytes("sizeInBytes")
+     * .sizeInMegabytes("sizeInMegabytes")
      * .snaplockConfiguration(SnaplockConfigurationProperty.builder()
      * .snaplockType("snaplockType")
      * // the properties below are optional
@@ -1136,6 +1166,7 @@ public object fsx {
      * .coolingPeriod(123)
      * .name("name")
      * .build())
+     * .volumeStyle("volumeStyle")
      * .build())
      * .openZfsConfiguration(OpenZFSConfigurationProperty.builder()
      * .parentVolumeId("parentVolumeId")
@@ -1179,6 +1210,31 @@ public object fsx {
         block: CfnVolumeDsl.() -> Unit = {},
     ): CfnVolume {
         val builder = CfnVolumeDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Use to specify configuration options for a volume’s storage aggregate or aggregates.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.fsx.*;
+     * AggregateConfigurationProperty aggregateConfigurationProperty =
+     * AggregateConfigurationProperty.builder()
+     * .aggregates(List.of("aggregates"))
+     * .constituentsPerAggregate(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-aggregateconfiguration.html)
+     */
+    public inline fun cfnVolumeAggregateConfigurationProperty(
+        block: CfnVolumeAggregateConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnVolume.AggregateConfigurationProperty {
+        val builder = CfnVolumeAggregateConfigurationPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -1275,13 +1331,18 @@ public object fsx {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.fsx.*;
      * OntapConfigurationProperty ontapConfigurationProperty = OntapConfigurationProperty.builder()
-     * .sizeInMegabytes("sizeInMegabytes")
      * .storageVirtualMachineId("storageVirtualMachineId")
      * // the properties below are optional
+     * .aggregateConfiguration(AggregateConfigurationProperty.builder()
+     * .aggregates(List.of("aggregates"))
+     * .constituentsPerAggregate(123)
+     * .build())
      * .copyTagsToBackups("copyTagsToBackups")
      * .junctionPath("junctionPath")
      * .ontapVolumeType("ontapVolumeType")
      * .securityStyle("securityStyle")
+     * .sizeInBytes("sizeInBytes")
+     * .sizeInMegabytes("sizeInMegabytes")
      * .snaplockConfiguration(SnaplockConfigurationProperty.builder()
      * .snaplockType("snaplockType")
      * // the properties below are optional
@@ -1317,6 +1378,7 @@ public object fsx {
      * .coolingPeriod(123)
      * .name("name")
      * .build())
+     * .volumeStyle("volumeStyle")
      * .build();
      * ```
      *
@@ -1415,13 +1477,18 @@ public object fsx {
      * // the properties below are optional
      * .backupId("backupId")
      * .ontapConfiguration(OntapConfigurationProperty.builder()
-     * .sizeInMegabytes("sizeInMegabytes")
      * .storageVirtualMachineId("storageVirtualMachineId")
      * // the properties below are optional
+     * .aggregateConfiguration(AggregateConfigurationProperty.builder()
+     * .aggregates(List.of("aggregates"))
+     * .constituentsPerAggregate(123)
+     * .build())
      * .copyTagsToBackups("copyTagsToBackups")
      * .junctionPath("junctionPath")
      * .ontapVolumeType("ontapVolumeType")
      * .securityStyle("securityStyle")
+     * .sizeInBytes("sizeInBytes")
+     * .sizeInMegabytes("sizeInMegabytes")
      * .snaplockConfiguration(SnaplockConfigurationProperty.builder()
      * .snaplockType("snaplockType")
      * // the properties below are optional
@@ -1457,6 +1524,7 @@ public object fsx {
      * .coolingPeriod(123)
      * .name("name")
      * .build())
+     * .volumeStyle("volumeStyle")
      * .build())
      * .openZfsConfiguration(OpenZFSConfigurationProperty.builder()
      * .parentVolumeId("parentVolumeId")
@@ -1663,7 +1731,7 @@ public object fsx {
     }
 
     /**
-     * An object specifying how much storage users or groups can use on the volume.
+     * Configures how much storage users and groups can use on the volume.
      *
      * Example:
      * ```

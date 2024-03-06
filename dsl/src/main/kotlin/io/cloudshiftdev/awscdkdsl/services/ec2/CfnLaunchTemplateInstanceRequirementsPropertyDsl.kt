@@ -89,6 +89,7 @@ import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
  * .instanceGenerations(List.of("instanceGenerations"))
  * .localStorage("localStorage")
  * .localStorageTypes(List.of("localStorageTypes"))
+ * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
  * .memoryGiBPerVCpu(MemoryGiBPerVCpuProperty.builder()
  * .max(123)
  * .min(123)
@@ -167,9 +168,10 @@ public class CfnLaunchTemplateInstanceRequirementsPropertyDsl {
     /**
      * @param acceleratorManufacturers Indicates whether instance types must have accelerators by
      *   specific manufacturers.
-     * * For instance types with NVIDIA devices, specify `nvidia` .
-     * * For instance types with AMD devices, specify `amd` .
      * * For instance types with AWS devices, specify `amazon-web-services` .
+     * * For instance types with AMD devices, specify `amd` .
+     * * For instance types with Habana devices, specify `habana` .
+     * * For instance types with NVIDIA devices, specify `nvidia` .
      * * For instance types with Xilinx devices, specify `xilinx` .
      *
      * Default: Any manufacturer
@@ -181,9 +183,10 @@ public class CfnLaunchTemplateInstanceRequirementsPropertyDsl {
     /**
      * @param acceleratorManufacturers Indicates whether instance types must have accelerators by
      *   specific manufacturers.
-     * * For instance types with NVIDIA devices, specify `nvidia` .
-     * * For instance types with AMD devices, specify `amd` .
      * * For instance types with AWS devices, specify `amazon-web-services` .
+     * * For instance types with AMD devices, specify `amd` .
+     * * For instance types with Habana devices, specify `habana` .
+     * * For instance types with NVIDIA devices, specify `nvidia` .
      * * For instance types with Xilinx devices, specify `xilinx` .
      *
      * Default: Any manufacturer
@@ -194,15 +197,18 @@ public class CfnLaunchTemplateInstanceRequirementsPropertyDsl {
 
     /**
      * @param acceleratorNames The accelerators that must be on the instance type.
+     * * For instance types with NVIDIA A10G GPUs, specify `a10g` .
      * * For instance types with NVIDIA A100 GPUs, specify `a100` .
-     * * For instance types with NVIDIA V100 GPUs, specify `v100` .
-     * * For instance types with NVIDIA K80 GPUs, specify `k80` .
-     * * For instance types with NVIDIA T4 GPUs, specify `t4` .
-     * * For instance types with NVIDIA M60 GPUs, specify `m60` .
-     * * For instance types with AMD Radeon Pro V520 GPUs, specify `radeon-pro-v520` .
-     * * For instance types with Xilinx VU9P FPGAs, specify `vu9p` .
+     * * For instance types with NVIDIA H100 GPUs, specify `h100` .
      * * For instance types with AWS Inferentia chips, specify `inferentia` .
      * * For instance types with NVIDIA GRID K520 GPUs, specify `k520` .
+     * * For instance types with NVIDIA K80 GPUs, specify `k80` .
+     * * For instance types with NVIDIA M60 GPUs, specify `m60` .
+     * * For instance types with AMD Radeon Pro V520 GPUs, specify `radeon-pro-v520` .
+     * * For instance types with NVIDIA T4 GPUs, specify `t4` .
+     * * For instance types with NVIDIA T4G GPUs, specify `t4g` .
+     * * For instance types with Xilinx VU9P FPGAs, specify `vu9p` .
+     * * For instance types with NVIDIA V100 GPUs, specify `v100` .
      *
      * Default: Any accelerator
      */
@@ -212,15 +218,18 @@ public class CfnLaunchTemplateInstanceRequirementsPropertyDsl {
 
     /**
      * @param acceleratorNames The accelerators that must be on the instance type.
+     * * For instance types with NVIDIA A10G GPUs, specify `a10g` .
      * * For instance types with NVIDIA A100 GPUs, specify `a100` .
-     * * For instance types with NVIDIA V100 GPUs, specify `v100` .
-     * * For instance types with NVIDIA K80 GPUs, specify `k80` .
-     * * For instance types with NVIDIA T4 GPUs, specify `t4` .
-     * * For instance types with NVIDIA M60 GPUs, specify `m60` .
-     * * For instance types with AMD Radeon Pro V520 GPUs, specify `radeon-pro-v520` .
-     * * For instance types with Xilinx VU9P FPGAs, specify `vu9p` .
+     * * For instance types with NVIDIA H100 GPUs, specify `h100` .
      * * For instance types with AWS Inferentia chips, specify `inferentia` .
      * * For instance types with NVIDIA GRID K520 GPUs, specify `k520` .
+     * * For instance types with NVIDIA K80 GPUs, specify `k80` .
+     * * For instance types with NVIDIA M60 GPUs, specify `m60` .
+     * * For instance types with AMD Radeon Pro V520 GPUs, specify `radeon-pro-v520` .
+     * * For instance types with NVIDIA T4 GPUs, specify `t4` .
+     * * For instance types with NVIDIA T4G GPUs, specify `t4g` .
+     * * For instance types with Xilinx VU9P FPGAs, specify `vu9p` .
+     * * For instance types with NVIDIA V100 GPUs, specify `v100` .
      *
      * Default: Any accelerator
      */
@@ -504,6 +513,36 @@ public class CfnLaunchTemplateInstanceRequirementsPropertyDsl {
     }
 
     /**
+     * @param maxSpotPriceAsPercentageOfOptimalOnDemandPrice [Price protection] The price protection
+     *   threshold for Spot Instances, as a percentage of an identified On-Demand price. The
+     *   identified On-Demand price is the price of the lowest priced current generation C, M, or R
+     *   instance type with your specified attributes. If no current generation C, M, or R instance
+     *   type matches your attributes, then the identified price is from the lowest priced current
+     *   generation instance types, and failing that, from the lowest priced previous generation
+     *   instance types that match your attributes. When Amazon EC2 selects instance types with your
+     *   attributes, it will exclude instance types whose price exceeds your specified threshold.
+     *
+     * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
+     *
+     * To indicate no price protection threshold, specify a high value, such as `999999` .
+     *
+     * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
+     * is based on the per vCPU or per memory price instead of the per instance price.
+     *
+     * Only one of `SpotMaxPricePercentageOverLowestPrice` or
+     * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
+     * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
+     * defaults to `100` .
+     */
+    public fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(
+        maxSpotPriceAsPercentageOfOptimalOnDemandPrice: Number
+    ) {
+        cdkBuilder.maxSpotPriceAsPercentageOfOptimalOnDemandPrice(
+            maxSpotPriceAsPercentageOfOptimalOnDemandPrice
+        )
+    }
+
+    /**
      * @param memoryGiBPerVCpu The minimum and maximum amount of memory per vCPU, in GiB. Default:
      *   No minimum or maximum limits
      */
@@ -566,11 +605,12 @@ public class CfnLaunchTemplateInstanceRequirementsPropertyDsl {
     }
 
     /**
-     * @param onDemandMaxPricePercentageOverLowestPrice The price protection threshold for On-Demand
-     *   Instances. This is the maximum you’ll pay for an On-Demand Instance, expressed as a
-     *   percentage above the least expensive current generation M, C, or R instance type with your
-     *   specified attributes. When Amazon EC2 selects instance types with your attributes, it
-     *   excludes instance types priced above your threshold.
+     * @param onDemandMaxPricePercentageOverLowestPrice [Price protection] The price protection
+     *   threshold for On-Demand Instances, as a percentage higher than an identified On-Demand
+     *   price. The identified On-Demand price is the price of the lowest priced current generation
+     *   C, M, or R instance type with your specified attributes. When Amazon EC2 selects instance
+     *   types with your attributes, it will exclude instance types whose price exceeds your
+     *   specified threshold.
      *
      * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
      *
@@ -621,15 +661,23 @@ public class CfnLaunchTemplateInstanceRequirementsPropertyDsl {
     }
 
     /**
-     * @param spotMaxPricePercentageOverLowestPrice The price protection threshold for Spot
-     *   Instances. This is the maximum you’ll pay for a Spot Instance, expressed as a percentage
-     *   above the least expensive current generation M, C, or R instance type with your specified
-     *   attributes. When Amazon EC2 selects instance types with your attributes, it excludes
-     *   instance types priced above your threshold.
+     * @param spotMaxPricePercentageOverLowestPrice [Price protection] The price protection
+     *   threshold for Spot Instances, as a percentage higher than an identified Spot price. The
+     *   identified Spot price is the Spot price of the lowest priced current generation C, M, or R
+     *   instance type with your specified attributes. If no current generation C, M, or R instance
+     *   type matches your attributes, then the identified Spot price is from the lowest priced
+     *   current generation instance types, and failing that, from the lowest priced previous
+     *   generation instance types that match your attributes. When Amazon EC2 selects instance
+     *   types with your attributes, it will exclude instance types whose Spot price exceeds your
+     *   specified threshold.
      *
      * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
      *
-     * To turn off price protection, specify a high value, such as `999999` .
+     * To indicate no price protection threshold, specify a high value, such as `999999` .
+     *
+     * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
+     * threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
+     * price.
      *
      * This parameter is not supported for
      * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
@@ -637,9 +685,10 @@ public class CfnLaunchTemplateInstanceRequirementsPropertyDsl {
      * [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)
      * .
      *
-     * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
-     * threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
-     * price.
+     * Only one of `SpotMaxPricePercentageOverLowestPrice` or
+     * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
+     * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
+     * defaults to `100` .
      *
      * Default: `100`
      */

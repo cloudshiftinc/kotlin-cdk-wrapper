@@ -17,8 +17,8 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
 
 /**
- * Specifies either the application code, or the location of the application code, for a Flink-based
- * Kinesis Data Analytics application.
+ * Specifies either the application code, or the location of the application code, for a Managed
+ * Service for Apache Flink application.
  *
  * Example:
  * ```
@@ -61,15 +61,14 @@ public class CfnApplicationCodeContentPropertyDsl {
     }
 
     /**
-     * @param textContent The text-format code for a Flink-based Kinesis Data Analytics application.
+     * @param textContent The text-format code for a Managed Service for Apache Flink application.
      */
     public fun textContent(textContent: String) {
         cdkBuilder.textContent(textContent)
     }
 
     /**
-     * @param zipFileContent The zip-format code for a Flink-based Kinesis Data Analytics
-     *   application.
+     * @param zipFileContent The zip-format code for a Managed Service for Apache Flink application.
      */
     public fun zipFileContent(zipFileContent: String) {
         cdkBuilder.zipFileContent(zipFileContent)

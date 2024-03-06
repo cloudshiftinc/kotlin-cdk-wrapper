@@ -28,7 +28,7 @@ public object resiliencehub {
      * provide an application name, resources from one or more AWS CloudFormation stacks, AWS
      * Resource Groups , Terraform state files, AppRegistry applications, and an appropriate
      * resiliency policy. In addition, you can also add resources that are located on Amazon Elastic
-     * Kubernetes Service ( Amazon EKS ) clusters as optional resources. For more information about
+     * Kubernetes Service (Amazon EKS) clusters as optional resources. For more information about
      * the number of resources supported per application, see
      * [Service quotas](https://docs.aws.amazon.com/general/latest/gr/resiliencehub.html#limits_resiliencehub)
      * .
@@ -65,6 +65,18 @@ public object resiliencehub {
      * // the properties below are optional
      * .appAssessmentSchedule("appAssessmentSchedule")
      * .description("description")
+     * .eventSubscriptions(List.of(EventSubscriptionProperty.builder()
+     * .eventType("eventType")
+     * .name("name")
+     * // the properties below are optional
+     * .snsTopicArn("snsTopicArn")
+     * .build()))
+     * .permissionModel(PermissionModelProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .crossAccountRoleArns(List.of("crossAccountRoleArns"))
+     * .invokerRoleName("invokerRoleName")
+     * .build())
      * .resiliencyPolicyArn("resiliencyPolicyArn")
      * .tags(Map.of(
      * "tagsKey", "tags"))
@@ -79,6 +91,62 @@ public object resiliencehub {
         block: CfnAppDsl.() -> Unit = {},
     ): CfnApp {
         val builder = CfnAppDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Indicates an event you would like to subscribe and get notification for.
+     *
+     * Currently, AWS Resilience Hub supports notifications only for *Drift detected* and *Scheduled
+     * assessment failure* events.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.resiliencehub.*;
+     * EventSubscriptionProperty eventSubscriptionProperty = EventSubscriptionProperty.builder()
+     * .eventType("eventType")
+     * .name("name")
+     * // the properties below are optional
+     * .snsTopicArn("snsTopicArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-eventsubscription.html)
+     */
+    public inline fun cfnAppEventSubscriptionProperty(
+        block: CfnAppEventSubscriptionPropertyDsl.() -> Unit = {}
+    ): CfnApp.EventSubscriptionProperty {
+        val builder = CfnAppEventSubscriptionPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Defines the roles and credentials that AWS Resilience Hub would use while creating the
+     * application, importing its resources, and running an assessment.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.resiliencehub.*;
+     * PermissionModelProperty permissionModelProperty = PermissionModelProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .crossAccountRoleArns(List.of("crossAccountRoleArns"))
+     * .invokerRoleName("invokerRoleName")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-permissionmodel.html)
+     */
+    public inline fun cfnAppPermissionModelProperty(
+        block: CfnAppPermissionModelPropertyDsl.() -> Unit = {}
+    ): CfnApp.PermissionModelProperty {
+        val builder = CfnAppPermissionModelPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -139,6 +207,18 @@ public object resiliencehub {
      * // the properties below are optional
      * .appAssessmentSchedule("appAssessmentSchedule")
      * .description("description")
+     * .eventSubscriptions(List.of(EventSubscriptionProperty.builder()
+     * .eventType("eventType")
+     * .name("name")
+     * // the properties below are optional
+     * .snsTopicArn("snsTopicArn")
+     * .build()))
+     * .permissionModel(PermissionModelProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .crossAccountRoleArns(List.of("crossAccountRoleArns"))
+     * .invokerRoleName("invokerRoleName")
+     * .build())
      * .resiliencyPolicyArn("resiliencyPolicyArn")
      * .tags(Map.of(
      * "tagsKey", "tags"))
@@ -190,6 +270,12 @@ public object resiliencehub {
 
     /**
      * Defines a resiliency policy.
+     *
+     * AWS Resilience Hub allows you to provide a value of zero for `rtoInSecs` and `rpoInSecs` of
+     * your resiliency policy. But, while assessing your application, the lowest possible assessment
+     * result is near zero. Hence, if you provide value zero for `rtoInSecs` and `rpoInSecs` , the
+     * estimated workload RTO and estimated workload RPO result will be near zero and the
+     * *Compliance status* for your application will be set to *Policy breached* .
      *
      * Example:
      * ```

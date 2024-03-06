@@ -26,6 +26,8 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * import software.amazon.awscdk.services.quicksight.*;
  * UniqueValuesComputationProperty uniqueValuesComputationProperty =
  * UniqueValuesComputationProperty.builder()
+ * .computationId("computationId")
+ * // the properties below are optional
  * .category(DimensionFieldProperty.builder()
  * .categoricalDimensionField(CategoricalDimensionFieldProperty.builder()
  * .column(ColumnIdentifierProperty.builder()
@@ -264,8 +266,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * .hierarchyId("hierarchyId")
  * .build())
  * .build())
- * .computationId("computationId")
- * // the properties below are optional
  * .name("name")
  * .build();
  * ```

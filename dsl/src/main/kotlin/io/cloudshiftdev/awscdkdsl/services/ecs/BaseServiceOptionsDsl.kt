@@ -28,6 +28,8 @@ import software.amazon.awscdk.services.ecs.DeploymentController
 import software.amazon.awscdk.services.ecs.ICluster
 import software.amazon.awscdk.services.ecs.PropagatedTagSource
 import software.amazon.awscdk.services.ecs.ServiceConnectProps
+import software.amazon.awscdk.services.ecs.ServiceManagedVolume
+import software.amazon.awscdk.services.ecs.TaskDefinitionRevision
 
 /**
  * The properties for the base Ec2Service or FargateService service.
@@ -43,6 +45,8 @@ import software.amazon.awscdk.services.ecs.ServiceConnectProps
  * ContainerDefinition containerDefinition;
  * LogDriver logDriver;
  * INamespace namespace;
+ * ServiceManagedVolume serviceManagedVolume;
+ * TaskDefinitionRevision taskDefinitionRevision;
  * BaseServiceOptions baseServiceOptions = BaseServiceOptions.builder()
  * .cluster(cluster)
  * // the properties below are optional
@@ -53,6 +57,7 @@ import software.amazon.awscdk.services.ecs.ServiceConnectProps
  * .weight(123)
  * .build()))
  * .circuitBreaker(DeploymentCircuitBreaker.builder()
+ * .enable(false)
  * .rollback(false)
  * .build())
  * .cloudMapOptions(CloudMapOptions.builder()
@@ -87,11 +92,15 @@ import software.amazon.awscdk.services.ecs.ServiceConnectProps
  * // the properties below are optional
  * .discoveryName("discoveryName")
  * .dnsName("dnsName")
+ * .idleTimeout(Duration.minutes(30))
  * .ingressPortOverride(123)
+ * .perRequestTimeout(Duration.minutes(30))
  * .port(123)
  * .build()))
  * .build())
  * .serviceName("serviceName")
+ * .taskDefinitionRevision(taskDefinitionRevision)
+ * .volumeConfigurations(List.of(serviceManagedVolume))
  * .build();
  * ```
  */
@@ -100,6 +109,8 @@ public class BaseServiceOptionsDsl {
     private val cdkBuilder: BaseServiceOptions.Builder = BaseServiceOptions.builder()
 
     private val _capacityProviderStrategies: MutableList<CapacityProviderStrategy> = mutableListOf()
+
+    private val _volumeConfigurations: MutableList<ServiceManagedVolume> = mutableListOf()
 
     /**
      * @param capacityProviderStrategies A list of Capacity Provider strategies used to place a
@@ -278,9 +289,35 @@ public class BaseServiceOptionsDsl {
         cdkBuilder.serviceName(serviceName)
     }
 
+    /**
+     * @param taskDefinitionRevision Revision number for the task definition or `latest` to use the
+     *   latest active task revision.
+     */
+    public fun taskDefinitionRevision(taskDefinitionRevision: TaskDefinitionRevision) {
+        cdkBuilder.taskDefinitionRevision(taskDefinitionRevision)
+    }
+
+    /**
+     * @param volumeConfigurations Configuration details for a volume used by the service. This
+     *   allows you to specify details about the EBS volume that can be attched to ECS tasks.
+     */
+    public fun volumeConfigurations(vararg volumeConfigurations: ServiceManagedVolume) {
+        _volumeConfigurations.addAll(listOf(*volumeConfigurations))
+    }
+
+    /**
+     * @param volumeConfigurations Configuration details for a volume used by the service. This
+     *   allows you to specify details about the EBS volume that can be attched to ECS tasks.
+     */
+    public fun volumeConfigurations(volumeConfigurations: Collection<ServiceManagedVolume>) {
+        _volumeConfigurations.addAll(volumeConfigurations)
+    }
+
     public fun build(): BaseServiceOptions {
         if (_capacityProviderStrategies.isNotEmpty())
             cdkBuilder.capacityProviderStrategies(_capacityProviderStrategies)
+        if (_volumeConfigurations.isNotEmpty())
+            cdkBuilder.volumeConfigurations(_volumeConfigurations)
         return cdkBuilder.build()
     }
 }

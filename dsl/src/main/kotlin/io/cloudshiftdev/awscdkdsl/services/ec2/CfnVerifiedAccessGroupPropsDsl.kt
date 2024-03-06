@@ -20,6 +20,7 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.ec2.CfnVerifiedAccessGroup
 import software.amazon.awscdk.services.ec2.CfnVerifiedAccessGroupProps
 
 /**
@@ -36,6 +37,10 @@ import software.amazon.awscdk.services.ec2.CfnVerifiedAccessGroupProps
  * .description("description")
  * .policyDocument("policyDocument")
  * .policyEnabled(false)
+ * .sseSpecification(SseSpecificationProperty.builder()
+ * .customerManagedKeyEnabled(false)
+ * .kmsKeyArn("kmsKeyArn")
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -70,6 +75,16 @@ public class CfnVerifiedAccessGroupPropsDsl {
     /** @param policyEnabled The status of the Verified Access policy. */
     public fun policyEnabled(policyEnabled: IResolvable) {
         cdkBuilder.policyEnabled(policyEnabled)
+    }
+
+    /** @param sseSpecification The options for additional server side encryption. */
+    public fun sseSpecification(sseSpecification: IResolvable) {
+        cdkBuilder.sseSpecification(sseSpecification)
+    }
+
+    /** @param sseSpecification The options for additional server side encryption. */
+    public fun sseSpecification(sseSpecification: CfnVerifiedAccessGroup.SseSpecificationProperty) {
+        cdkBuilder.sseSpecification(sseSpecification)
     }
 
     /** @param tags The tags. */

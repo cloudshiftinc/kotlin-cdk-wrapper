@@ -82,12 +82,12 @@ public class CognitoUserPoolsAuthorizerDsl(
      * The request header mapping expression for the bearer token.
      *
      * This is typically passed as part of the header, in which case this should be
-     * `method.request.header.Authorizer` where Authorizer is the header containing the bearer
+     * `method.request.header.Authorizer` where `Authorizer` is the header containing the bearer
      * token.
      *
      * Default: `IdentitySource.header('Authorization')`
      *
-     * [Documentation](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/authorizer-create/#identitySource)
+     * [Documentation](https://docs.aws.amazon.com/apigateway/latest/api/API_CreateAuthorizer.html#apigw-CreateAuthorizer-request-identitySource)
      *
      * @param identitySource The request header mapping expression for the bearer token.
      */

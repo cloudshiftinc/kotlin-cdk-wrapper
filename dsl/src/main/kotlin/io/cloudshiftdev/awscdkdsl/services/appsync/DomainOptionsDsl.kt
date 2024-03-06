@@ -32,7 +32,7 @@ import software.amazon.awscdk.services.certificatemanager.ICertificate
  * SchemaFile schema = SchemaFile.Builder.create().filePath("mySchemaFile").build();
  * GraphqlApi api = GraphqlApi.Builder.create(this, "api")
  * .name("myApi")
- * .schema(schema)
+ * .definition(Definition.fromSchema(schema))
  * .domainName(DomainOptions.builder()
  * .certificate(certificate)
  * .domainName(myDomainName)

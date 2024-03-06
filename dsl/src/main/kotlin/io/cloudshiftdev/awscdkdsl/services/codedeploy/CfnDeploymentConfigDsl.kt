@@ -22,8 +22,8 @@ import software.constructs.Construct
  * success conditions, and deployment failure conditions that AWS CodeDeploy uses during a
  * deployment.
  *
- * The deployment configuration specifies, through the use of a `MinimumHealthyHosts` value, the
- * number or percentage of instances that must remain available at any time during a deployment.
+ * The deployment configuration specifies the number or percentage of instances that must remain
+ * available at any time during a deployment.
  *
  * Example:
  * ```
@@ -49,6 +49,14 @@ import software.constructs.Construct
  * .linearInterval(123)
  * .linearPercentage(123)
  * .build())
+ * .build())
+ * .zonalConfig(ZonalConfigProperty.builder()
+ * .firstZoneMonitorDurationInSeconds(123)
+ * .minimumHealthyHostsPerZone(MinimumHealthyHostsPerZoneProperty.builder()
+ * .type("type")
+ * .value(123)
+ * .build())
+ * .monitorDurationInSeconds(123)
  * .build())
  * .build();
  * ```
@@ -185,6 +193,48 @@ public class CfnDeploymentConfigDsl(
         trafficRoutingConfig: CfnDeploymentConfig.TrafficRoutingConfigProperty
     ) {
         cdkBuilder.trafficRoutingConfig(trafficRoutingConfig)
+    }
+
+    /**
+     * Configure the `ZonalConfig` object if you want AWS CodeDeploy to deploy your application to
+     * one
+     * [Availability Zone](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-availability-zones)
+     * at a time, within an AWS Region.
+     *
+     * For more information about the zonal configuration feature, see
+     * [zonal configuration](https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-configurations-create.html#zonal-config)
+     * in the *CodeDeploy User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html#cfn-codedeploy-deploymentconfig-zonalconfig)
+     *
+     * @param zonalConfig Configure the `ZonalConfig` object if you want AWS CodeDeploy to deploy
+     *   your application to one
+     *   [Availability Zone](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-availability-zones)
+     *   at a time, within an AWS Region.
+     */
+    public fun zonalConfig(zonalConfig: IResolvable) {
+        cdkBuilder.zonalConfig(zonalConfig)
+    }
+
+    /**
+     * Configure the `ZonalConfig` object if you want AWS CodeDeploy to deploy your application to
+     * one
+     * [Availability Zone](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-availability-zones)
+     * at a time, within an AWS Region.
+     *
+     * For more information about the zonal configuration feature, see
+     * [zonal configuration](https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-configurations-create.html#zonal-config)
+     * in the *CodeDeploy User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html#cfn-codedeploy-deploymentconfig-zonalconfig)
+     *
+     * @param zonalConfig Configure the `ZonalConfig` object if you want AWS CodeDeploy to deploy
+     *   your application to one
+     *   [Availability Zone](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-availability-zones)
+     *   at a time, within an AWS Region.
+     */
+    public fun zonalConfig(zonalConfig: CfnDeploymentConfig.ZonalConfigProperty) {
+        cdkBuilder.zonalConfig(zonalConfig)
     }
 
     public fun build(): CfnDeploymentConfig = cdkBuilder.build()

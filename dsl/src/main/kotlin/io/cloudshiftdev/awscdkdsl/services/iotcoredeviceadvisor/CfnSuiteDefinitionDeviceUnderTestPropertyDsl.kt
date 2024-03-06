@@ -16,6 +16,10 @@ import kotlin.String
 import software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition
 
 /**
+ * Information of a test device.
+ *
+ * A thing ARN, certificate ARN or device role ARN is required.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -34,12 +38,12 @@ public class CfnSuiteDefinitionDeviceUnderTestPropertyDsl {
     private val cdkBuilder: CfnSuiteDefinition.DeviceUnderTestProperty.Builder =
         CfnSuiteDefinition.DeviceUnderTestProperty.builder()
 
-    /** @param certificateArn the value to be set. */
+    /** @param certificateArn Lists device's certificate ARN. */
     public fun certificateArn(certificateArn: String) {
         cdkBuilder.certificateArn(certificateArn)
     }
 
-    /** @param thingArn the value to be set. */
+    /** @param thingArn Lists device's thing ARN. */
     public fun thingArn(thingArn: String) {
         cdkBuilder.thingArn(thingArn)
     }

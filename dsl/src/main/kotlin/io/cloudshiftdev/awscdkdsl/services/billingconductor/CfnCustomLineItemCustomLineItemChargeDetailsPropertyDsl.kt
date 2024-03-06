@@ -12,7 +12,10 @@
 package io.cloudshiftdev.awscdkdsl.services.billingconductor
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Any
 import kotlin.String
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.billingconductor.CfnCustomLineItem
 
@@ -33,6 +36,11 @@ import software.amazon.awscdk.services.billingconductor.CfnCustomLineItem
  * .flat(CustomLineItemFlatChargeDetailsProperty.builder()
  * .chargeValue(123)
  * .build())
+ * .lineItemFilters(List.of(LineItemFilterProperty.builder()
+ * .attribute("attribute")
+ * .matchOption("matchOption")
+ * .values(List.of("values"))
+ * .build()))
  * .percentage(CustomLineItemPercentageChargeDetailsProperty.builder()
  * .percentageValue(123)
  * // the properties below are optional
@@ -48,6 +56,8 @@ public class CfnCustomLineItemCustomLineItemChargeDetailsPropertyDsl {
     private val cdkBuilder: CfnCustomLineItem.CustomLineItemChargeDetailsProperty.Builder =
         CfnCustomLineItem.CustomLineItemChargeDetailsProperty.builder()
 
+    private val _lineItemFilters: MutableList<Any> = mutableListOf()
+
     /**
      * @param flat A `CustomLineItemFlatChargeDetails` that describes the charge details of a flat
      *   custom line item.
@@ -62,6 +72,21 @@ public class CfnCustomLineItemCustomLineItemChargeDetailsPropertyDsl {
      */
     public fun flat(flat: CfnCustomLineItem.CustomLineItemFlatChargeDetailsProperty) {
         cdkBuilder.flat(flat)
+    }
+
+    /** @param lineItemFilters A representation of the line item filter. */
+    public fun lineItemFilters(vararg lineItemFilters: Any) {
+        _lineItemFilters.addAll(listOf(*lineItemFilters))
+    }
+
+    /** @param lineItemFilters A representation of the line item filter. */
+    public fun lineItemFilters(lineItemFilters: Collection<Any>) {
+        _lineItemFilters.addAll(lineItemFilters)
+    }
+
+    /** @param lineItemFilters A representation of the line item filter. */
+    public fun lineItemFilters(lineItemFilters: IResolvable) {
+        cdkBuilder.lineItemFilters(lineItemFilters)
     }
 
     /**
@@ -90,5 +115,8 @@ public class CfnCustomLineItemCustomLineItemChargeDetailsPropertyDsl {
         cdkBuilder.type(type)
     }
 
-    public fun build(): CfnCustomLineItem.CustomLineItemChargeDetailsProperty = cdkBuilder.build()
+    public fun build(): CfnCustomLineItem.CustomLineItemChargeDetailsProperty {
+        if (_lineItemFilters.isNotEmpty()) cdkBuilder.lineItemFilters(_lineItemFilters)
+        return cdkBuilder.build()
+    }
 }

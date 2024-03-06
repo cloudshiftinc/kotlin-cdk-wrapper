@@ -27,6 +27,10 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * DateTimePickerControlDisplayOptionsProperty dateTimePickerControlDisplayOptionsProperty =
  * DateTimePickerControlDisplayOptionsProperty.builder()
  * .dateTimeFormat("dateTimeFormat")
+ * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+ * .infoIconText("infoIconText")
+ * .visibility("visibility")
+ * .build())
  * .titleOptions(LabelOptionsProperty.builder()
  * .customLabel("customLabel")
  * .fontConfiguration(FontConfigurationProperty.builder()
@@ -55,6 +59,18 @@ public class CfnDashboardDateTimePickerControlDisplayOptionsPropertyDsl {
     /** @param dateTimeFormat Customize how dates are formatted in controls. */
     public fun dateTimeFormat(dateTimeFormat: String) {
         cdkBuilder.dateTimeFormat(dateTimeFormat)
+    }
+
+    /** @param infoIconLabelOptions The configuration of info icon label options. */
+    public fun infoIconLabelOptions(infoIconLabelOptions: IResolvable) {
+        cdkBuilder.infoIconLabelOptions(infoIconLabelOptions)
+    }
+
+    /** @param infoIconLabelOptions The configuration of info icon label options. */
+    public fun infoIconLabelOptions(
+        infoIconLabelOptions: CfnDashboard.SheetControlInfoIconLabelOptionsProperty
+    ) {
+        cdkBuilder.infoIconLabelOptions(infoIconLabelOptions)
     }
 
     /** @param titleOptions The options to configure the title visibility, name, and font size. */

@@ -64,13 +64,13 @@ public class UserPoolIdentityProviderAmazonPropsDsl {
         cdkBuilder.attributeMapping(attributeMapping)
     }
 
-    /** @param clientId The client id recognized by 'Login with Amazon' APIs. */
+    /** @param clientId The client id recognized by Login with Amazon APIs. */
     public fun clientId(clientId: String) {
         cdkBuilder.clientId(clientId)
     }
 
     /**
-     * @param clientSecret The client secret to be accompanied with clientId for 'Login with Amazon'
+     * @param clientSecret The client secret to be accompanied with clientId for Login with Amazon
      *   APIs to authenticate the client.
      */
     public fun clientSecret(clientSecret: String) {

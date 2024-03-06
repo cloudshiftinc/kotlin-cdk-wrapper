@@ -50,9 +50,18 @@ import software.constructs.Construct
  * CustomState custom = CustomState.Builder.create(this, "my custom task")
  * .stateJson(stateJson)
  * .build();
+ * // catch errors with addCatch
+ * Pass errorHandler = new Pass(this, "handle failure");
+ * custom.addCatch(errorHandler);
+ * // retry the task if something goes wrong
+ * custom.addRetry(RetryProps.builder()
+ * .errors(List.of(Errors.ALL))
+ * .interval(Duration.seconds(10))
+ * .maxAttempts(5)
+ * .build());
  * Chain chain = Chain.start(custom).next(finalStatus);
  * StateMachine sm = StateMachine.Builder.create(this, "StateMachine")
- * .definition(chain)
+ * .definitionBody(DefinitionBody.fromChainable(chain))
  * .timeout(Duration.seconds(30))
  * .comment("a super cool state machine")
  * .build();

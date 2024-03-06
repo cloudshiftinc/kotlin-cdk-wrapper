@@ -118,8 +118,9 @@ public object datasync {
     }
 
     /**
-     * Creates an endpoint for a Microsoft Azure Blob Storage container that AWS DataSync can use as
-     * a transfer source or destination.
+     * Creates a transfer *location* for a Microsoft Azure Blob Storage container.
+     *
+     * AWS DataSync can use this location as a transfer source or destination.
      *
      * Before you begin, make sure you know
      * [how DataSync accesses Azure Blob Storage](https://docs.aws.amazon.com/datasync/latest/userguide/creating-azure-blob-location.html#azure-blob-access)
@@ -1288,12 +1289,12 @@ public object datasync {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role used to
-     * access an Amazon S3 bucket.
+     * Specifies the Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role
+     * that DataSync uses to access your S3 bucket.
      *
-     * For detailed information about using such a role, see
-     * [Creating a Location for Amazon S3](https://docs.aws.amazon.com/datasync/latest/userguide/working-with-locations.html#create-s3-location)
-     * in the *AWS DataSync User Guide* .
+     * For more information, see
+     * [Accessing S3 buckets](https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#create-s3-location-access)
+     * .
      *
      * Example:
      * ```
@@ -1605,6 +1606,33 @@ public object datasync {
      * .key("key")
      * .value("value")
      * .build()))
+     * .taskReportConfig(TaskReportConfigProperty.builder()
+     * .destination(DestinationProperty.builder()
+     * .s3(S3Property.builder()
+     * .bucketAccessRoleArn("bucketAccessRoleArn")
+     * .s3BucketArn("s3BucketArn")
+     * .subdirectory("subdirectory")
+     * .build())
+     * .build())
+     * .outputType("outputType")
+     * // the properties below are optional
+     * .objectVersionIds("objectVersionIds")
+     * .overrides(OverridesProperty.builder()
+     * .deleted(DeletedProperty.builder()
+     * .reportLevel("reportLevel")
+     * .build())
+     * .skipped(SkippedProperty.builder()
+     * .reportLevel("reportLevel")
+     * .build())
+     * .transferred(TransferredProperty.builder()
+     * .reportLevel("reportLevel")
+     * .build())
+     * .verified(VerifiedProperty.builder()
+     * .reportLevel("reportLevel")
+     * .build())
+     * .build())
+     * .reportLevel("reportLevel")
+     * .build())
      * .build();
      * ```
      *
@@ -1616,6 +1644,57 @@ public object datasync {
         block: CfnTaskDsl.() -> Unit = {},
     ): CfnTask {
         val builder = CfnTaskDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The reporting level for the deleted section of your DataSync task report.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.datasync.*;
+     * DeletedProperty deletedProperty = DeletedProperty.builder()
+     * .reportLevel("reportLevel")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-deleted.html)
+     */
+    public inline fun cfnTaskDeletedProperty(
+        block: CfnTaskDeletedPropertyDsl.() -> Unit = {}
+    ): CfnTask.DeletedProperty {
+        val builder = CfnTaskDeletedPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies where DataSync uploads your
+     * [task report](https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html) .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.datasync.*;
+     * DestinationProperty destinationProperty = DestinationProperty.builder()
+     * .s3(S3Property.builder()
+     * .bucketAccessRoleArn("bucketAccessRoleArn")
+     * .s3BucketArn("s3BucketArn")
+     * .subdirectory("subdirectory")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-destination.html)
+     */
+    public inline fun cfnTaskDestinationProperty(
+        block: CfnTaskDestinationPropertyDsl.() -> Unit = {}
+    ): CfnTask.DestinationProperty {
+        val builder = CfnTaskDestinationPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -1694,6 +1773,44 @@ public object datasync {
     }
 
     /**
+     * Customizes the reporting level for aspects of your task report.
+     *
+     * For example, your report might generally only include errors, but you could specify that you
+     * want a list of successes and errors just for the files that DataSync attempted to delete in
+     * your destination location.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.datasync.*;
+     * OverridesProperty overridesProperty = OverridesProperty.builder()
+     * .deleted(DeletedProperty.builder()
+     * .reportLevel("reportLevel")
+     * .build())
+     * .skipped(SkippedProperty.builder()
+     * .reportLevel("reportLevel")
+     * .build())
+     * .transferred(TransferredProperty.builder()
+     * .reportLevel("reportLevel")
+     * .build())
+     * .verified(VerifiedProperty.builder()
+     * .reportLevel("reportLevel")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-overrides.html)
+     */
+    public inline fun cfnTaskOverridesProperty(
+        block: CfnTaskOverridesPropertyDsl.() -> Unit = {}
+    ): CfnTask.OverridesProperty {
+        val builder = CfnTaskOverridesPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Properties for defining a `CfnTask`.
      *
      * Example:
@@ -1739,6 +1856,33 @@ public object datasync {
      * .key("key")
      * .value("value")
      * .build()))
+     * .taskReportConfig(TaskReportConfigProperty.builder()
+     * .destination(DestinationProperty.builder()
+     * .s3(S3Property.builder()
+     * .bucketAccessRoleArn("bucketAccessRoleArn")
+     * .s3BucketArn("s3BucketArn")
+     * .subdirectory("subdirectory")
+     * .build())
+     * .build())
+     * .outputType("outputType")
+     * // the properties below are optional
+     * .objectVersionIds("objectVersionIds")
+     * .overrides(OverridesProperty.builder()
+     * .deleted(DeletedProperty.builder()
+     * .reportLevel("reportLevel")
+     * .build())
+     * .skipped(SkippedProperty.builder()
+     * .reportLevel("reportLevel")
+     * .build())
+     * .transferred(TransferredProperty.builder()
+     * .reportLevel("reportLevel")
+     * .build())
+     * .verified(VerifiedProperty.builder()
+     * .reportLevel("reportLevel")
+     * .build())
+     * .build())
+     * .reportLevel("reportLevel")
+     * .build())
      * .build();
      * ```
      *
@@ -1746,6 +1890,106 @@ public object datasync {
      */
     public inline fun cfnTaskProps(block: CfnTaskPropsDsl.() -> Unit = {}): CfnTaskProps {
         val builder = CfnTaskPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies the Amazon S3 bucket where DataSync uploads your
+     * [task report](https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html) .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.datasync.*;
+     * S3Property s3Property = S3Property.builder()
+     * .bucketAccessRoleArn("bucketAccessRoleArn")
+     * .s3BucketArn("s3BucketArn")
+     * .subdirectory("subdirectory")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-s3.html)
+     */
+    public inline fun cfnTaskS3Property(
+        block: CfnTaskS3PropertyDsl.() -> Unit = {}
+    ): CfnTask.S3Property {
+        val builder = CfnTaskS3PropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The reporting level for the skipped section of your DataSync task report.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.datasync.*;
+     * SkippedProperty skippedProperty = SkippedProperty.builder()
+     * .reportLevel("reportLevel")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-skipped.html)
+     */
+    public inline fun cfnTaskSkippedProperty(
+        block: CfnTaskSkippedPropertyDsl.() -> Unit = {}
+    ): CfnTask.SkippedProperty {
+        val builder = CfnTaskSkippedPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies how you want to configure a task report, which provides detailed information about
+     * for your AWS DataSync transfer.
+     *
+     * For more information, see
+     * [Task reports](https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html) .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.datasync.*;
+     * TaskReportConfigProperty taskReportConfigProperty = TaskReportConfigProperty.builder()
+     * .destination(DestinationProperty.builder()
+     * .s3(S3Property.builder()
+     * .bucketAccessRoleArn("bucketAccessRoleArn")
+     * .s3BucketArn("s3BucketArn")
+     * .subdirectory("subdirectory")
+     * .build())
+     * .build())
+     * .outputType("outputType")
+     * // the properties below are optional
+     * .objectVersionIds("objectVersionIds")
+     * .overrides(OverridesProperty.builder()
+     * .deleted(DeletedProperty.builder()
+     * .reportLevel("reportLevel")
+     * .build())
+     * .skipped(SkippedProperty.builder()
+     * .reportLevel("reportLevel")
+     * .build())
+     * .transferred(TransferredProperty.builder()
+     * .reportLevel("reportLevel")
+     * .build())
+     * .verified(VerifiedProperty.builder()
+     * .reportLevel("reportLevel")
+     * .build())
+     * .build())
+     * .reportLevel("reportLevel")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-taskreportconfig.html)
+     */
+    public inline fun cfnTaskTaskReportConfigProperty(
+        block: CfnTaskTaskReportConfigPropertyDsl.() -> Unit = {}
+    ): CfnTask.TaskReportConfigProperty {
+        val builder = CfnTaskTaskReportConfigPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -1773,6 +2017,52 @@ public object datasync {
         block: CfnTaskTaskSchedulePropertyDsl.() -> Unit = {}
     ): CfnTask.TaskScheduleProperty {
         val builder = CfnTaskTaskSchedulePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The reporting level for the transferred section of your DataSync task report.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.datasync.*;
+     * TransferredProperty transferredProperty = TransferredProperty.builder()
+     * .reportLevel("reportLevel")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-transferred.html)
+     */
+    public inline fun cfnTaskTransferredProperty(
+        block: CfnTaskTransferredPropertyDsl.() -> Unit = {}
+    ): CfnTask.TransferredProperty {
+        val builder = CfnTaskTransferredPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The reporting level for the verified section of your DataSync task report.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.datasync.*;
+     * VerifiedProperty verifiedProperty = VerifiedProperty.builder()
+     * .reportLevel("reportLevel")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-verified.html)
+     */
+    public inline fun cfnTaskVerifiedProperty(
+        block: CfnTaskVerifiedPropertyDsl.() -> Unit = {}
+    ): CfnTask.VerifiedProperty {
+        val builder = CfnTaskVerifiedPropertyDsl()
         builder.apply(block)
         return builder.build()
     }

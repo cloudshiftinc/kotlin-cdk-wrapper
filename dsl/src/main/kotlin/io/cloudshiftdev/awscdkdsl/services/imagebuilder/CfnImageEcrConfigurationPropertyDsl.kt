@@ -18,8 +18,8 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.imagebuilder.CfnImage
 
 /**
- * Settings for Image Builder to configure the ECR repository and output container images that are
- * scanned.
+ * Settings that Image Builder uses to configure the ECR repository and the output container images
+ * that Amazon Inspector scans.
  *
  * Example:
  * ```
@@ -42,16 +42,16 @@ public class CfnImageEcrConfigurationPropertyDsl {
     private val _containerTags: MutableList<String> = mutableListOf()
 
     /**
-     * @param containerTags Tags for Image Builder to apply the output container image that is
-     *   scanned. Tags can help you identify and manage your scanned images.
+     * @param containerTags Tags for Image Builder to apply to the output container image that
+     *   &amp;INS;. scans. Tags can help you identify and manage your scanned images.
      */
     public fun containerTags(vararg containerTags: String) {
         _containerTags.addAll(listOf(*containerTags))
     }
 
     /**
-     * @param containerTags Tags for Image Builder to apply the output container image that is
-     *   scanned. Tags can help you identify and manage your scanned images.
+     * @param containerTags Tags for Image Builder to apply to the output container image that
+     *   &amp;INS;. scans. Tags can help you identify and manage your scanned images.
      */
     public fun containerTags(containerTags: Collection<String>) {
         _containerTags.addAll(containerTags)
@@ -61,8 +61,8 @@ public class CfnImageEcrConfigurationPropertyDsl {
      * @param repositoryName The name of the container repository that Amazon Inspector scans to
      *   identify findings for your container images. The name includes the path for the repository
      *   location. If you don’t provide this information, Image Builder creates a repository in your
-     *   account named image-builder-image-scanning-repository to use for vulnerability scans for
-     *   your output container images.
+     *   account named `image-builder-image-scanning-repository` for vulnerability scans of your
+     *   output container images.
      */
     public fun repositoryName(repositoryName: String) {
         cdkBuilder.repositoryName(repositoryName)

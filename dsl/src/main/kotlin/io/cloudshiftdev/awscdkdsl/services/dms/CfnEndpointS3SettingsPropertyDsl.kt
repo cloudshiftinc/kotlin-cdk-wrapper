@@ -36,6 +36,7 @@ import software.amazon.awscdk.services.dms.CfnEndpoint
  * import software.amazon.awscdk.services.dms.*;
  * S3SettingsProperty s3SettingsProperty = S3SettingsProperty.builder()
  * .addColumnName(false)
+ * .addTrailingPaddingCharacter(false)
  * .bucketFolder("bucketFolder")
  * .bucketName("bucketName")
  * .cannedAclForObjects("cannedAclForObjects")
@@ -59,7 +60,9 @@ import software.amazon.awscdk.services.dms.CfnEndpoint
  * .enableStatistics(false)
  * .encodingType("encodingType")
  * .encryptionMode("encryptionMode")
+ * .expectedBucketOwner("expectedBucketOwner")
  * .externalTableDefinition("externalTableDefinition")
+ * .glueCatalogGeneration(false)
  * .ignoreHeaderRows(123)
  * .includeOpForFullLoad(false)
  * .maxFileSize(123)
@@ -99,6 +102,22 @@ public class CfnEndpointS3SettingsPropertyDsl {
      */
     public fun addColumnName(addColumnName: IResolvable) {
         cdkBuilder.addColumnName(addColumnName)
+    }
+
+    /**
+     * @param addTrailingPaddingCharacter Use the S3 target endpoint setting
+     *   `AddTrailingPaddingCharacter` to add padding on string data. The default value is `false` .
+     */
+    public fun addTrailingPaddingCharacter(addTrailingPaddingCharacter: Boolean) {
+        cdkBuilder.addTrailingPaddingCharacter(addTrailingPaddingCharacter)
+    }
+
+    /**
+     * @param addTrailingPaddingCharacter Use the S3 target endpoint setting
+     *   `AddTrailingPaddingCharacter` to add padding on string data. The default value is `false` .
+     */
+    public fun addTrailingPaddingCharacter(addTrailingPaddingCharacter: IResolvable) {
+        cdkBuilder.addTrailingPaddingCharacter(addTrailingPaddingCharacter)
     }
 
     /**
@@ -485,11 +504,39 @@ public class CfnEndpointS3SettingsPropertyDsl {
     }
 
     /**
+     * @param expectedBucketOwner To specify a bucket owner and prevent sniping, you can use the
+     *   `ExpectedBucketOwner` endpoint setting. Example: `--s3-settings='{"ExpectedBucketOwner": "
+     *   *AWS_Account_ID* "}'`
+     *
+     * When you make a request to test a connection or perform a migration, S3 checks the account ID
+     * of the bucket owner against the specified parameter.
+     */
+    public fun expectedBucketOwner(expectedBucketOwner: String) {
+        cdkBuilder.expectedBucketOwner(expectedBucketOwner)
+    }
+
+    /**
      * @param externalTableDefinition The external table definition. Conditional: If `S3` is used as
      *   a source then `ExternalTableDefinition` is required.
      */
     public fun externalTableDefinition(externalTableDefinition: String) {
         cdkBuilder.externalTableDefinition(externalTableDefinition)
+    }
+
+    /**
+     * @param glueCatalogGeneration When true, allows AWS Glue to catalog your S3 bucket. Creating
+     *   an AWS Glue catalog lets you use Athena to query your data.
+     */
+    public fun glueCatalogGeneration(glueCatalogGeneration: Boolean) {
+        cdkBuilder.glueCatalogGeneration(glueCatalogGeneration)
+    }
+
+    /**
+     * @param glueCatalogGeneration When true, allows AWS Glue to catalog your S3 bucket. Creating
+     *   an AWS Glue catalog lets you use Athena to query your data.
+     */
+    public fun glueCatalogGeneration(glueCatalogGeneration: IResolvable) {
+        cdkBuilder.glueCatalogGeneration(glueCatalogGeneration)
     }
 
     /**

@@ -91,6 +91,9 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * .verticalTextAlignment("verticalTextAlignment")
  * .visibility("visibility")
  * .build())
+ * .styleTargets(List.of(TableStyleTargetProperty.builder()
+ * .cellType("cellType")
+ * .build()))
  * .totalCellStyle(TableCellStyleProperty.builder()
  * .backgroundColor("backgroundColor")
  * .border(GlobalTableBorderOptionsProperty.builder()
@@ -220,6 +223,8 @@ public class CfnAnalysisSubtotalOptionsPropertyDsl {
 
     private val _fieldLevelOptions: MutableList<Any> = mutableListOf()
 
+    private val _styleTargets: MutableList<Any> = mutableListOf()
+
     /** @param customLabel The custom label string for the subtotal cells. */
     public fun customLabel(customLabel: String) {
         cdkBuilder.customLabel(customLabel)
@@ -255,6 +260,21 @@ public class CfnAnalysisSubtotalOptionsPropertyDsl {
         cdkBuilder.metricHeaderCellStyle(metricHeaderCellStyle)
     }
 
+    /** @param styleTargets The style targets options for subtotals. */
+    public fun styleTargets(vararg styleTargets: Any) {
+        _styleTargets.addAll(listOf(*styleTargets))
+    }
+
+    /** @param styleTargets The style targets options for subtotals. */
+    public fun styleTargets(styleTargets: Collection<Any>) {
+        _styleTargets.addAll(styleTargets)
+    }
+
+    /** @param styleTargets The style targets options for subtotals. */
+    public fun styleTargets(styleTargets: IResolvable) {
+        cdkBuilder.styleTargets(styleTargets)
+    }
+
     /** @param totalCellStyle The cell styling options for the subtotal cells. */
     public fun totalCellStyle(totalCellStyle: IResolvable) {
         cdkBuilder.totalCellStyle(totalCellStyle)
@@ -282,6 +302,7 @@ public class CfnAnalysisSubtotalOptionsPropertyDsl {
 
     public fun build(): CfnAnalysis.SubtotalOptionsProperty {
         if (_fieldLevelOptions.isNotEmpty()) cdkBuilder.fieldLevelOptions(_fieldLevelOptions)
+        if (_styleTargets.isNotEmpty()) cdkBuilder.styleTargets(_styleTargets)
         return cdkBuilder.build()
     }
 }

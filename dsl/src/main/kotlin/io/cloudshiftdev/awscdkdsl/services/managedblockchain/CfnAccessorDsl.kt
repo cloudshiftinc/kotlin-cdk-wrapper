@@ -22,9 +22,10 @@ import software.amazon.awscdk.services.managedblockchain.CfnAccessor
 import software.constructs.Construct
 
 /**
- * Creates a new accessor for use with Managed Blockchain Ethereum nodes.
+ * Creates a new accessor for use with Amazon Managed Blockchain service that supports token based
+ * access.
  *
- * An accessor contains information required for token based access to your Ethereum nodes.
+ * The accessor contains information required for token based access.
  *
  * Example:
  * ```
@@ -34,6 +35,7 @@ import software.constructs.Construct
  * CfnAccessor cfnAccessor = CfnAccessor.Builder.create(this, "MyCfnAccessor")
  * .accessorType("accessorType")
  * // the properties below are optional
+ * .networkType("networkType")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -63,6 +65,26 @@ public class CfnAccessorDsl(
      */
     public fun accessorType(accessorType: String) {
         cdkBuilder.accessorType(accessorType)
+    }
+
+    /**
+     * The blockchain network that the `Accessor` token is created for.
+     *
+     * We recommend using the appropriate `networkType` value for the blockchain network that you
+     * are creating the `Accessor` token for. You cannot use the value `ETHEREUM_MAINNET_AND_GOERLI`
+     * to specify a `networkType` for your Accessor token.
+     *
+     * The default value of `ETHEREUM_MAINNET_AND_GOERLI` is only applied:
+     * * when the `CreateAccessor` action does not set a `networkType` .
+     * * to all existing `Accessor` tokens that were created before the `networkType` property was
+     *   introduced.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-accessor.html#cfn-managedblockchain-accessor-networktype)
+     *
+     * @param networkType The blockchain network that the `Accessor` token is created for.
+     */
+    public fun networkType(networkType: String) {
+        cdkBuilder.networkType(networkType)
     }
 
     /**

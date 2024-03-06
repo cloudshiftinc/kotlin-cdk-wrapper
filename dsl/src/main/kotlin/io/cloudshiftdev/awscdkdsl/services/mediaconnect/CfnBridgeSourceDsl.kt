@@ -88,13 +88,13 @@ public class CfnBridgeSourceDsl(
     }
 
     /**
-     * The name of the network source.
+     * The name of the flow source.
      *
      * This name is used to reference the source and must be unique among sources in this bridge.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgesource.html#cfn-mediaconnect-bridgesource-name)
      *
-     * @param name The name of the network source.
+     * @param name The name of the flow source.
      */
     public fun name(name: String) {
         cdkBuilder.name(name)

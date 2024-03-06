@@ -38,10 +38,19 @@ import software.constructs.Construct
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.sns.*;
+ * Object archivePolicy;
  * Object dataProtectionPolicy;
  * CfnTopic cfnTopic = CfnTopic.Builder.create(this, "MyCfnTopic")
+ * .archivePolicy(archivePolicy)
  * .contentBasedDeduplication(false)
  * .dataProtectionPolicy(dataProtectionPolicy)
+ * .deliveryStatusLogging(List.of(LoggingConfigProperty.builder()
+ * .protocol("protocol")
+ * // the properties below are optional
+ * .failureFeedbackRoleArn("failureFeedbackRoleArn")
+ * .successFeedbackRoleArn("successFeedbackRoleArn")
+ * .successFeedbackSampleRate("successFeedbackSampleRate")
+ * .build()))
  * .displayName("displayName")
  * .fifoTopic(false)
  * .kmsMasterKeyId("kmsMasterKeyId")
@@ -68,9 +77,41 @@ public class CfnTopicDsl(
 ) {
     private val cdkBuilder: CfnTopic.Builder = CfnTopic.Builder.create(scope, id)
 
+    private val _deliveryStatusLogging: MutableList<Any> = mutableListOf()
+
     private val _subscription: MutableList<Any> = mutableListOf()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
+
+    /**
+     * The archive policy determines the number of days Amazon SNS retains messages.
+     *
+     * You can set a retention period from 1 to 365 days.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topic.html#cfn-sns-topic-archivepolicy)
+     *
+     * @param archivePolicy The archive policy determines the number of days Amazon SNS retains
+     *   messages.
+     */
+    public fun archivePolicy(archivePolicy: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(archivePolicy)
+        cdkBuilder.archivePolicy(builder.map)
+    }
+
+    /**
+     * The archive policy determines the number of days Amazon SNS retains messages.
+     *
+     * You can set a retention period from 1 to 365 days.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topic.html#cfn-sns-topic-archivepolicy)
+     *
+     * @param archivePolicy The archive policy determines the number of days Amazon SNS retains
+     *   messages.
+     */
+    public fun archivePolicy(archivePolicy: Any) {
+        cdkBuilder.archivePolicy(archivePolicy)
+    }
 
     /**
      * Enables content-based deduplication for FIFO topics.
@@ -148,6 +189,72 @@ public class CfnTopicDsl(
      */
     public fun dataProtectionPolicy(dataProtectionPolicy: Any) {
         cdkBuilder.dataProtectionPolicy(dataProtectionPolicy)
+    }
+
+    /**
+     * The `DeliveryStatusLogging` configuration enables you to log the delivery status of messages
+     * sent from your Amazon SNS topic to subscribed endpoints with the following supported delivery
+     * protocols:.
+     * * HTTP
+     * * Amazon Kinesis Data Firehose
+     * * AWS Lambda
+     * * Platform application endpoint
+     * * Amazon Simple Queue Service
+     *
+     * Once configured, log entries are sent to Amazon CloudWatch Logs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topic.html#cfn-sns-topic-deliverystatuslogging)
+     *
+     * @param deliveryStatusLogging The `DeliveryStatusLogging` configuration enables you to log the
+     *   delivery status of messages sent from your Amazon SNS topic to subscribed endpoints with
+     *   the following supported delivery protocols:.
+     */
+    public fun deliveryStatusLogging(vararg deliveryStatusLogging: Any) {
+        _deliveryStatusLogging.addAll(listOf(*deliveryStatusLogging))
+    }
+
+    /**
+     * The `DeliveryStatusLogging` configuration enables you to log the delivery status of messages
+     * sent from your Amazon SNS topic to subscribed endpoints with the following supported delivery
+     * protocols:.
+     * * HTTP
+     * * Amazon Kinesis Data Firehose
+     * * AWS Lambda
+     * * Platform application endpoint
+     * * Amazon Simple Queue Service
+     *
+     * Once configured, log entries are sent to Amazon CloudWatch Logs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topic.html#cfn-sns-topic-deliverystatuslogging)
+     *
+     * @param deliveryStatusLogging The `DeliveryStatusLogging` configuration enables you to log the
+     *   delivery status of messages sent from your Amazon SNS topic to subscribed endpoints with
+     *   the following supported delivery protocols:.
+     */
+    public fun deliveryStatusLogging(deliveryStatusLogging: Collection<Any>) {
+        _deliveryStatusLogging.addAll(deliveryStatusLogging)
+    }
+
+    /**
+     * The `DeliveryStatusLogging` configuration enables you to log the delivery status of messages
+     * sent from your Amazon SNS topic to subscribed endpoints with the following supported delivery
+     * protocols:.
+     * * HTTP
+     * * Amazon Kinesis Data Firehose
+     * * AWS Lambda
+     * * Platform application endpoint
+     * * Amazon Simple Queue Service
+     *
+     * Once configured, log entries are sent to Amazon CloudWatch Logs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topic.html#cfn-sns-topic-deliverystatuslogging)
+     *
+     * @param deliveryStatusLogging The `DeliveryStatusLogging` configuration enables you to log the
+     *   delivery status of messages sent from your Amazon SNS topic to subscribed endpoints with
+     *   the following supported delivery protocols:.
+     */
+    public fun deliveryStatusLogging(deliveryStatusLogging: IResolvable) {
+        cdkBuilder.deliveryStatusLogging(deliveryStatusLogging)
     }
 
     /**
@@ -328,7 +435,7 @@ public class CfnTopicDsl(
      * By default `TracingConfig` is set to `PassThrough` , and the topic passes through the tracing
      * header it receives from an Amazon SNS publisher to its subscriptions. If set to `Active` ,
      * Amazon SNS will vend X-Ray segment data to topic owner account if the sampled flag in the
-     * tracing header is true. Only supported on standard topics.
+     * tracing header is true.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topic.html#cfn-sns-topic-tracingconfig)
      *
@@ -339,6 +446,8 @@ public class CfnTopicDsl(
     }
 
     public fun build(): CfnTopic {
+        if (_deliveryStatusLogging.isNotEmpty())
+            cdkBuilder.deliveryStatusLogging(_deliveryStatusLogging)
         if (_subscription.isNotEmpty()) cdkBuilder.subscription(_subscription)
         if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
         return cdkBuilder.build()

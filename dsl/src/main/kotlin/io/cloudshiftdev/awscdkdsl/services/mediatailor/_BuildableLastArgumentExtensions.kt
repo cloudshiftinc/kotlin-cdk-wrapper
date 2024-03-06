@@ -16,7 +16,7 @@ import software.amazon.awscdk.services.mediatailor.CfnChannel
 import software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration
 import software.amazon.awscdk.services.mediatailor.CfnSourceLocation
 
-/** Slate VOD source configuration.</p>. */
+/** The slate used to fill gaps between programs in the schedule. */
 public inline fun CfnChannel.setFillerSlate(
     block: CfnChannelSlateSourcePropertyDsl.() -> Unit = {}
 ) {
@@ -25,13 +25,22 @@ public inline fun CfnChannel.setFillerSlate(
     return setFillerSlate(builder.build())
 }
 
-/** The log configuration for the channel.</p>. */
+/** The log configuration. */
 public inline fun CfnChannel.setLogConfiguration(
     block: CfnChannelLogConfigurationForChannelPropertyDsl.() -> Unit = {}
 ) {
     val builder = CfnChannelLogConfigurationForChannelPropertyDsl()
     builder.apply(block)
     return setLogConfiguration(builder.build())
+}
+
+/** The configuration for time-shifted viewing. */
+public inline fun CfnChannel.setTimeShiftConfiguration(
+    block: CfnChannelTimeShiftConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnChannelTimeShiftConfigurationPropertyDsl()
+    builder.apply(block)
+    return setTimeShiftConfiguration(builder.build())
 }
 
 /** The configuration for avail suppression, also known as ad suppression. */
@@ -64,7 +73,7 @@ public inline fun CfnPlaybackConfiguration.setCdnConfiguration(
     return setCdnConfiguration(builder.build())
 }
 
-/** The configuration for DASH PUT operations. */
+/** The configuration for a DASH source. */
 public inline fun CfnPlaybackConfiguration.setDashConfiguration(
     block: CfnPlaybackConfigurationDashConfigurationPropertyDsl.() -> Unit = {}
 ) {
@@ -100,7 +109,7 @@ public inline fun CfnPlaybackConfiguration.setManifestProcessingRules(
     return setManifestProcessingRules(builder.build())
 }
 
-/** Access configuration parameters.</p>. */
+/** The access configuration for the source location. */
 public inline fun CfnSourceLocation.setAccessConfiguration(
     block: CfnSourceLocationAccessConfigurationPropertyDsl.() -> Unit = {}
 ) {
@@ -109,7 +118,7 @@ public inline fun CfnSourceLocation.setAccessConfiguration(
     return setAccessConfiguration(builder.build())
 }
 
-/** The optional configuration for a server that serves segments. */
+/** The default segment delivery configuration. */
 public inline fun CfnSourceLocation.setDefaultSegmentDeliveryConfiguration(
     block: CfnSourceLocationDefaultSegmentDeliveryConfigurationPropertyDsl.() -> Unit = {}
 ) {
@@ -118,7 +127,7 @@ public inline fun CfnSourceLocation.setDefaultSegmentDeliveryConfiguration(
     return setDefaultSegmentDeliveryConfiguration(builder.build())
 }
 
-/** The HTTP configuration for the source location.</p>. */
+/** The HTTP configuration for the source location. */
 public inline fun CfnSourceLocation.setHttpConfiguration(
     block: CfnSourceLocationHttpConfigurationPropertyDsl.() -> Unit = {}
 ) {

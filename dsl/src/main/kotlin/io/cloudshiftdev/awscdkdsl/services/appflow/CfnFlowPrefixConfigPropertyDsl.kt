@@ -42,12 +42,32 @@ public class CfnFlowPrefixConfigPropertyDsl {
 
     private val _pathPrefixHierarchy: MutableList<String> = mutableListOf()
 
-    /** @param pathPrefixHierarchy the value to be set. */
+    /**
+     * @param pathPrefixHierarchy Specifies whether the destination file path includes either or
+     *   both of the following elements:.
+     * * **EXECUTION_ID** - The ID that Amazon AppFlow assigns to the flow run.
+     * * **SCHEMA_VERSION** - The version number of your data schema. Amazon AppFlow assigns this
+     *   version number. The version number increases by one when you change any of the following
+     *   settings in your flow configuration:
+     * * Source-to-destination field mappings
+     * * Field data types
+     * * Partition keys
+     */
     public fun pathPrefixHierarchy(vararg pathPrefixHierarchy: String) {
         _pathPrefixHierarchy.addAll(listOf(*pathPrefixHierarchy))
     }
 
-    /** @param pathPrefixHierarchy the value to be set. */
+    /**
+     * @param pathPrefixHierarchy Specifies whether the destination file path includes either or
+     *   both of the following elements:.
+     * * **EXECUTION_ID** - The ID that Amazon AppFlow assigns to the flow run.
+     * * **SCHEMA_VERSION** - The version number of your data schema. Amazon AppFlow assigns this
+     *   version number. The version number increases by one when you change any of the following
+     *   settings in your flow configuration:
+     * * Source-to-destination field mappings
+     * * Field data types
+     * * Partition keys
+     */
     public fun pathPrefixHierarchy(pathPrefixHierarchy: Collection<String>) {
         _pathPrefixHierarchy.addAll(pathPrefixHierarchy)
     }

@@ -201,12 +201,32 @@ public class QueueProcessingFargateServiceDsl(
     /**
      * Optional name for the container added.
      *
+     * This name is not used when `taskDefinition` is provided.
+     *
      * Default: - QueueProcessingContainer
      *
      * @param containerName Optional name for the container added.
      */
     public fun containerName(containerName: String) {
         cdkBuilder.containerName(containerName)
+    }
+
+    /**
+     * Grace period after scaling activity in seconds.
+     *
+     * Subsequent scale outs during the cooldown period are squashed so that only the biggest scale
+     * out happens.
+     *
+     * Subsequent scale ins during the cooldown period are ignored.
+     *
+     * Default: 300 seconds
+     *
+     * [Documentation](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_StepScalingPolicyConfiguration.html)
+     *
+     * @param cooldown Grace period after scaling activity in seconds.
+     */
+    public fun cooldown(cooldown: Duration) {
+        cdkBuilder.cooldown(cooldown)
     }
 
     /**
@@ -239,6 +259,18 @@ public class QueueProcessingFargateServiceDsl(
     }
 
     /**
+     * The target CPU utilization percentage for CPU based scaling strategy when enabled.
+     *
+     * Default: - 50
+     *
+     * @param cpuTargetUtilizationPercent The target CPU utilization percentage for CPU based
+     *   scaling strategy when enabled.
+     */
+    public fun cpuTargetUtilizationPercent(cpuTargetUtilizationPercent: Number) {
+        cdkBuilder.cpuTargetUtilizationPercent(cpuTargetUtilizationPercent)
+    }
+
+    /**
      * Specifies which deployment controller to use for the service.
      *
      * For more information, see
@@ -266,6 +298,17 @@ public class QueueProcessingFargateServiceDsl(
      */
     public fun deploymentController(deploymentController: DeploymentController) {
         cdkBuilder.deploymentController(deploymentController)
+    }
+
+    /**
+     * Flag to disable CPU based auto scaling strategy on the service.
+     *
+     * Default: - false
+     *
+     * @param disableCpuBasedScaling Flag to disable CPU based auto scaling strategy on the service.
+     */
+    public fun disableCpuBasedScaling(disableCpuBasedScaling: Boolean) {
+        cdkBuilder.disableCpuBasedScaling(disableCpuBasedScaling)
     }
 
     /**
@@ -319,6 +362,22 @@ public class QueueProcessingFargateServiceDsl(
     }
 
     /**
+     * The amount (in GiB) of ephemeral storage to be allocated to the task.
+     *
+     * The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
+     *
+     * Only supported in Fargate platform version 1.4.0 or later.
+     *
+     * Default: Undefined, in which case, the task will receive 20GiB ephemeral storage.
+     *
+     * @param ephemeralStorageGiB The amount (in GiB) of ephemeral storage to be allocated to the
+     *   task.
+     */
+    public fun ephemeralStorageGiB(ephemeralStorageGiB: Number) {
+        cdkBuilder.ephemeralStorageGiB(ephemeralStorageGiB)
+    }
+
+    /**
      * The name of a family that the task definition is registered to.
      *
      * A family groups multiple versions of a task definition.
@@ -359,6 +418,11 @@ public class QueueProcessingFargateServiceDsl(
 
     /**
      * The image used to start a container.
+     *
+     * For `QueueProcessingFargateService`, either `image` or `taskDefinition` must be specified,
+     * but not both. For `QueueProcessingEc2Service`, `image` is required.
+     *
+     * Default: - the image of the task definition is used for Fargate, required otherwise
      *
      * @param image The image used to start a container.
      */

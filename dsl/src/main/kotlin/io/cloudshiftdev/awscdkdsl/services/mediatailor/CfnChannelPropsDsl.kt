@@ -44,6 +44,7 @@ import software.amazon.awscdk.services.mediatailor.CfnChannelProps
  * .suggestedPresentationDelaySeconds(123)
  * .build())
  * .hlsPlaylistSettings(HlsPlaylistSettingsProperty.builder()
+ * .adMarkupType(List.of("adMarkupType"))
  * .manifestWindowSeconds(123)
  * .build())
  * .build()))
@@ -61,6 +62,9 @@ import software.amazon.awscdk.services.mediatailor.CfnChannelProps
  * .value("value")
  * .build()))
  * .tier("tier")
+ * .timeShiftConfiguration(TimeShiftConfigurationProperty.builder()
+ * .maxTimeDelaySeconds(123)
+ * .build())
  * .build();
  * ```
  *
@@ -74,64 +78,102 @@ public class CfnChannelPropsDsl {
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
-    /** @param channelName the value to be set. */
+    /** @param channelName The name of the channel. */
     public fun channelName(channelName: String) {
         cdkBuilder.channelName(channelName)
     }
 
-    /** @param fillerSlate Slate VOD source configuration.</p>. */
+    /**
+     * @param fillerSlate The slate used to fill gaps between programs in the schedule. You must
+     *   configure filler slate if your channel uses the `LINEAR` `PlaybackMode` . MediaTailor
+     *   doesn't support filler slate for channels using the `LOOP` `PlaybackMode` .
+     */
     public fun fillerSlate(fillerSlate: IResolvable) {
         cdkBuilder.fillerSlate(fillerSlate)
     }
 
-    /** @param fillerSlate Slate VOD source configuration.</p>. */
+    /**
+     * @param fillerSlate The slate used to fill gaps between programs in the schedule. You must
+     *   configure filler slate if your channel uses the `LINEAR` `PlaybackMode` . MediaTailor
+     *   doesn't support filler slate for channels using the `LOOP` `PlaybackMode` .
+     */
     public fun fillerSlate(fillerSlate: CfnChannel.SlateSourceProperty) {
         cdkBuilder.fillerSlate(fillerSlate)
     }
 
-    /** @param logConfiguration The log configuration for the channel.</p>. */
+    /** @param logConfiguration The log configuration. */
     public fun logConfiguration(logConfiguration: IResolvable) {
         cdkBuilder.logConfiguration(logConfiguration)
     }
 
-    /** @param logConfiguration The log configuration for the channel.</p>. */
+    /** @param logConfiguration The log configuration. */
     public fun logConfiguration(logConfiguration: CfnChannel.LogConfigurationForChannelProperty) {
         cdkBuilder.logConfiguration(logConfiguration)
     }
 
-    /** @param outputs The channel's output properties.</p>. */
+    /** @param outputs The channel's output properties. */
     public fun outputs(vararg outputs: Any) {
         _outputs.addAll(listOf(*outputs))
     }
 
-    /** @param outputs The channel's output properties.</p>. */
+    /** @param outputs The channel's output properties. */
     public fun outputs(outputs: Collection<Any>) {
         _outputs.addAll(outputs)
     }
 
-    /** @param outputs The channel's output properties.</p>. */
+    /** @param outputs The channel's output properties. */
     public fun outputs(outputs: IResolvable) {
         cdkBuilder.outputs(outputs)
     }
 
-    /** @param playbackMode the value to be set. */
+    /**
+     * @param playbackMode The type of playback mode for this channel. `LINEAR` - Programs play
+     *   back-to-back only once.
+     *
+     * `LOOP` - Programs play back-to-back in an endless loop. When the last program in the schedule
+     * plays, playback loops back to the first program in the schedule.
+     */
     public fun playbackMode(playbackMode: String) {
         cdkBuilder.playbackMode(playbackMode)
     }
 
-    /** @param tags The tags to assign to the channel. */
+    /**
+     * @param tags The tags to assign to the channel. Tags are key-value pairs that you can
+     *   associate with Amazon resources to help with organization, access control, and cost
+     *   tracking. For more information, see
+     *   [Tagging AWS Elemental MediaTailor Resources](https://docs.aws.amazon.com/mediatailor/latest/ug/tagging.html)
+     *   .
+     */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
-    /** @param tags The tags to assign to the channel. */
+    /**
+     * @param tags The tags to assign to the channel. Tags are key-value pairs that you can
+     *   associate with Amazon resources to help with organization, access control, and cost
+     *   tracking. For more information, see
+     *   [Tagging AWS Elemental MediaTailor Resources](https://docs.aws.amazon.com/mediatailor/latest/ug/tagging.html)
+     *   .
+     */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
     }
 
-    /** @param tier the value to be set. */
+    /** @param tier The tier for this channel. STANDARD tier channels can contain live programs. */
     public fun tier(tier: String) {
         cdkBuilder.tier(tier)
+    }
+
+    /** @param timeShiftConfiguration The configuration for time-shifted viewing. */
+    public fun timeShiftConfiguration(timeShiftConfiguration: IResolvable) {
+        cdkBuilder.timeShiftConfiguration(timeShiftConfiguration)
+    }
+
+    /** @param timeShiftConfiguration The configuration for time-shifted viewing. */
+    public fun timeShiftConfiguration(
+        timeShiftConfiguration: CfnChannel.TimeShiftConfigurationProperty
+    ) {
+        cdkBuilder.timeShiftConfiguration(timeShiftConfiguration)
     }
 
     public fun build(): CfnChannelProps {

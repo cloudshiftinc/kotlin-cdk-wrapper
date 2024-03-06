@@ -16,7 +16,7 @@ import kotlin.String
 import software.amazon.awscdk.services.mediatailor.CfnLiveSource
 
 /**
- * The HTTP package configuration properties for the requested VOD source.</p>.
+ * The HTTP package configuration properties for the requested VOD source.
  *
  * Example:
  * ```
@@ -40,7 +40,7 @@ public class CfnLiveSourceHttpPackageConfigurationPropertyDsl {
 
     /**
      * @param path The relative path to the URL for this VOD source. This is combined with
-     *   `SourceLocation::HttpConfiguration::BaseUrl` to form a valid URL.</p>
+     *   `SourceLocation::HttpConfiguration::BaseUrl` to form a valid URL.
      */
     public fun path(path: String) {
         cdkBuilder.path(path)
@@ -48,13 +48,16 @@ public class CfnLiveSourceHttpPackageConfigurationPropertyDsl {
 
     /**
      * @param sourceGroup The name of the source group. This has to match one of the
-     *   `Channel::Outputs::SourceGroup`.</p>
+     *   `Channel::Outputs::SourceGroup` .
      */
     public fun sourceGroup(sourceGroup: String) {
         cdkBuilder.sourceGroup(sourceGroup)
     }
 
-    /** @param type the value to be set. */
+    /**
+     * @param type The streaming protocol for this package configuration. Supported values are `HLS`
+     *   and `DASH` .
+     */
     public fun type(type: String) {
         cdkBuilder.type(type)
     }

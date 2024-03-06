@@ -34,6 +34,7 @@ import software.amazon.awscdk.services.opensearchservice.Domain
 import software.amazon.awscdk.services.opensearchservice.EbsOptions
 import software.amazon.awscdk.services.opensearchservice.EncryptionAtRestOptions
 import software.amazon.awscdk.services.opensearchservice.EngineVersion
+import software.amazon.awscdk.services.opensearchservice.IpAddressType
 import software.amazon.awscdk.services.opensearchservice.LoggingOptions
 import software.amazon.awscdk.services.opensearchservice.TLSSecurityPolicy
 import software.amazon.awscdk.services.opensearchservice.WindowStartTime
@@ -343,6 +344,22 @@ public class DomainDsl(
     }
 
     /**
+     * Specify either dual stack or IPv4 as your IP address type.
+     *
+     * Dual stack allows you to share domain resources across IPv4 and IPv6 address types, and is
+     * the recommended option.
+     *
+     * If you set your IP address type to dual stack, you can't change your address type later.
+     *
+     * Default: - IpAddressType.IPV4
+     *
+     * @param ipAddressType Specify either dual stack or IPv4 as your IP address type.
+     */
+    public fun ipAddressType(ipAddressType: IpAddressType) {
+        cdkBuilder.ipAddressType(ipAddressType)
+    }
+
+    /**
      * Configuration log publishing configuration options.
      *
      * Default: - No logs are published
@@ -476,6 +493,28 @@ public class DomainDsl(
      */
     public fun securityGroups(securityGroups: Collection<ISecurityGroup>) {
         _securityGroups.addAll(securityGroups)
+    }
+
+    /**
+     * Specify whether to create a CloudWatch Logs resource policy or not.
+     *
+     * When logging is enabled for the domain, a CloudWatch Logs resource policy is created by
+     * default. However, CloudWatch Logs supports only 10 resource policies per region. If you
+     * enable logging for several domains, it may hit the quota and cause an error. By setting this
+     * property to true, creating a resource policy is suppressed, allowing you to avoid this
+     * problem.
+     *
+     * If you set this option to true, you must create a resource policy before deployment.
+     *
+     * Default: - false
+     *
+     * [Documentation](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/createdomain-configure-slow-logs.html)
+     *
+     * @param suppressLogsResourcePolicy Specify whether to create a CloudWatch Logs resource policy
+     *   or not.
+     */
+    public fun suppressLogsResourcePolicy(suppressLogsResourcePolicy: Boolean) {
+        cdkBuilder.suppressLogsResourcePolicy(suppressLogsResourcePolicy)
     }
 
     /**

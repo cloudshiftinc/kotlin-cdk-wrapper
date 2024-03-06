@@ -17,6 +17,7 @@ import software.amazon.awscdk.services.imagebuilder.CfnImage
 import software.amazon.awscdk.services.imagebuilder.CfnImagePipeline
 import software.amazon.awscdk.services.imagebuilder.CfnImageRecipe
 import software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration
+import software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy
 
 /**
  * A group of options that can be used to configure an instance for building and testing container
@@ -39,7 +40,7 @@ public inline fun CfnContainerRecipe.setTargetRepository(
     return setTargetRepository(builder.build())
 }
 
-/** Contains settings for Image Builder image resource and container image scans. */
+/** Contains settings for vulnerability scans. */
 public inline fun CfnImage.setImageScanningConfiguration(
     block: CfnImageImageScanningConfigurationPropertyDsl.() -> Unit = {}
 ) {
@@ -48,10 +49,7 @@ public inline fun CfnImage.setImageScanningConfiguration(
     return setImageScanningConfiguration(builder.build())
 }
 
-/**
- * The configuration settings for your image test components, which includes a toggle that allows
- * you to turn off tests, and a timeout setting.
- */
+/** The image tests configuration of the image. */
 public inline fun CfnImage.setImageTestsConfiguration(
     block: CfnImageImageTestsConfigurationPropertyDsl.() -> Unit = {}
 ) {
@@ -60,7 +58,7 @@ public inline fun CfnImage.setImageTestsConfiguration(
     return setImageTestsConfiguration(builder.build())
 }
 
-/** Determines if tests should run after building the image. */
+/** Contains settings for vulnerability scans. */
 public inline fun CfnImagePipeline.setImageScanningConfiguration(
     block: CfnImagePipelineImageScanningConfigurationPropertyDsl.() -> Unit = {}
 ) {
@@ -118,4 +116,13 @@ public inline fun CfnInfrastructureConfiguration.setLogging(
     val builder = CfnInfrastructureConfigurationLoggingPropertyDsl()
     builder.apply(block)
     return setLogging(builder.build())
+}
+
+/** Selection criteria for the resources that the lifecycle policy applies to. */
+public inline fun CfnLifecyclePolicy.setResourceSelection(
+    block: CfnLifecyclePolicyResourceSelectionPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnLifecyclePolicyResourceSelectionPropertyDsl()
+    builder.apply(block)
+    return setResourceSelection(builder.build())
 }

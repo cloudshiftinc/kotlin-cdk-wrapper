@@ -18,11 +18,7 @@ import software.amazon.awscdk.services.cognito.CfnUserPoolGroup
 import software.constructs.Construct
 
 /**
- * Specifies a new group in the identified user pool.
- *
- * Calling this action requires developer credentials.
- *
- * If you don't specify a value for a parameter, Amazon Cognito sets it to a default value.
+ * A user pool group that you can add a user to.
  *
  * Example:
  * ```

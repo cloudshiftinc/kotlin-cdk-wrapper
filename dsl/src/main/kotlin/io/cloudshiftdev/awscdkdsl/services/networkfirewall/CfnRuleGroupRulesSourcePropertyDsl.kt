@@ -117,12 +117,15 @@ public class CfnRuleGroupRulesSourcePropertyDsl {
     }
 
     /**
-     * @param rulesString Stateful inspection criteria, provided in Suricata compatible intrusion
-     *   prevention system (IPS) rules. Suricata is an open-source network IPS that includes a
-     *   standard rule-based language for network traffic inspection.
+     * @param rulesString Stateful inspection criteria, provided in Suricata compatible rules.
+     *   Suricata is an open-source threat detection framework that includes a standard rule-based
+     *   language for network traffic inspection.
      *
      * These rules contain the inspection criteria and the action to take for traffic that matches
      * the criteria, so this type of rule group doesn't have a separate action setting.
+     *
+     * You can't use the `priority` keyword if the `RuleOrder` option in `StatefulRuleOptions` is
+     * set to `STRICT_ORDER` .
      */
     public fun rulesString(rulesString: String) {
         cdkBuilder.rulesString(rulesString)

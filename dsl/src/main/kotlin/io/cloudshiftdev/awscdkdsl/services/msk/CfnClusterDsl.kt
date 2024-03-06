@@ -185,22 +185,22 @@ public class CfnClusterDsl(
     }
 
     /**
-     * Includes all client authentication related information.
+     * VPC connection control settings for brokers.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-clientauthentication)
      *
-     * @param clientAuthentication Includes all client authentication related information.
+     * @param clientAuthentication VPC connection control settings for brokers.
      */
     public fun clientAuthentication(clientAuthentication: IResolvable) {
         cdkBuilder.clientAuthentication(clientAuthentication)
     }
 
     /**
-     * Includes all client authentication related information.
+     * VPC connection control settings for brokers.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-clientauthentication)
      *
-     * @param clientAuthentication Includes all client authentication related information.
+     * @param clientAuthentication VPC connection control settings for brokers.
      */
     public fun clientAuthentication(clientAuthentication: CfnCluster.ClientAuthenticationProperty) {
         cdkBuilder.clientAuthentication(clientAuthentication)

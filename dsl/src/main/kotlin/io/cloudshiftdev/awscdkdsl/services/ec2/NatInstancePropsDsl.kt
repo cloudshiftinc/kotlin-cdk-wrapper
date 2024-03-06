@@ -12,7 +12,10 @@
 package io.cloudshiftdev.awscdkdsl.services.ec2
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Deprecated
 import kotlin.String
+import software.amazon.awscdk.services.ec2.CpuCredits
+import software.amazon.awscdk.services.ec2.IKeyPair
 import software.amazon.awscdk.services.ec2.IMachineImage
 import software.amazon.awscdk.services.ec2.ISecurityGroup
 import software.amazon.awscdk.services.ec2.InstanceType
@@ -40,6 +43,15 @@ public class NatInstancePropsDsl {
     private val cdkBuilder: NatInstanceProps.Builder = NatInstanceProps.builder()
 
     /**
+     * @param creditSpecification Specifying the CPU credit type for burstable EC2 instance types
+     *   (T2, T3, T3a, etc). The unlimited CPU credit option is not supported for T3 instances with
+     *   dedicated host (`host`) tenancy.
+     */
+    public fun creditSpecification(creditSpecification: CpuCredits) {
+        cdkBuilder.creditSpecification(creditSpecification)
+    }
+
+    /**
      * @param defaultAllowedTraffic Direction to allow all traffic through the NAT instance by
      *   default. By default, inbound and outbound traffic is allowed.
      *
@@ -57,9 +69,19 @@ public class NatInstancePropsDsl {
         cdkBuilder.instanceType(instanceType)
     }
 
-    /** @param keyName Name of SSH keypair to grant access to instance. */
+    /**
+     * @param keyName Name of SSH keypair to grant access to instance.
+     * @deprecated - Use `keyPair` instead -
+     *   https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_ec2-readme.html#using-an-existing-ec2-key-pair
+     */
+    @Deprecated(message = "deprecated in CDK")
     public fun keyName(keyName: String) {
         cdkBuilder.keyName(keyName)
+    }
+
+    /** @param keyPair The SSH keypair to grant access to the instance. */
+    public fun keyPair(keyPair: IKeyPair) {
+        cdkBuilder.keyPair(keyPair)
     }
 
     /**

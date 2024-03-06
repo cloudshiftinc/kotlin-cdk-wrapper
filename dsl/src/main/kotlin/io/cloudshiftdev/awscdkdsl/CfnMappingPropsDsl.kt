@@ -27,8 +27,9 @@ import software.amazon.awscdk.CfnMappingProps
  * "regionName", "US East (N. Virginia)"),
  * "us-east-2", Map.of(
  * "regionName", "US East (Ohio)")))
+ * .lazy(true)
  * .build();
- * regionTable.findInMap(Aws.REGION, "regionName");
+ * regionTable.findInMap("us-east-2", "regionName");
  * ```
  */
 @CdkDslMarker

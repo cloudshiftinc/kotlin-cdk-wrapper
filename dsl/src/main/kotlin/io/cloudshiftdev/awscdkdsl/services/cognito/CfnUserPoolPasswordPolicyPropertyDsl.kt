@@ -117,7 +117,8 @@ public class CfnUserPoolPasswordPolicyPropertyDsl {
     /**
      * @param temporaryPasswordValidityDays The number of days a temporary password is valid in the
      *   password policy. If the user doesn't sign in during this time, an administrator must reset
-     *   their password.
+     *   their password. Defaults to `7` . If you submit a value of `0` , Amazon Cognito treats it
+     *   as a null value and sets `TemporaryPasswordValidityDays` to its default value.
      *
      * When you set `TemporaryPasswordValidityDays` for a user pool, you can no longer set a value
      * for the legacy `UnusedAccountValidityDays` parameter in that user pool.

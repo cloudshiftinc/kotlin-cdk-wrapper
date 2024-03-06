@@ -69,7 +69,7 @@ public class CfnEventSubscriptionDsl(
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
-     * A value that indicates whether to activate the subscription.
+     * Specifies whether to activate the subscription.
      *
      * If the event notification subscription isn't activated, the subscription is created but not
      * active.
@@ -78,14 +78,14 @@ public class CfnEventSubscriptionDsl(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-eventsubscription.html#cfn-rds-eventsubscription-enabled)
      *
-     * @param enabled A value that indicates whether to activate the subscription.
+     * @param enabled Specifies whether to activate the subscription.
      */
     public fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
     }
 
     /**
-     * A value that indicates whether to activate the subscription.
+     * Specifies whether to activate the subscription.
      *
      * If the event notification subscription isn't activated, the subscription is created but not
      * active.
@@ -94,7 +94,7 @@ public class CfnEventSubscriptionDsl(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-eventsubscription.html#cfn-rds-eventsubscription-enabled)
      *
-     * @param enabled A value that indicates whether to activate the subscription.
+     * @param enabled Specifies whether to activate the subscription.
      */
     public fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled)
@@ -143,7 +143,11 @@ public class CfnEventSubscriptionDsl(
     /**
      * The Amazon Resource Name (ARN) of the SNS topic created for event notification.
      *
-     * The ARN is created by Amazon SNS when you create a topic and subscribe to it.
+     * SNS automatically creates the ARN when you create a topic and subscribe to it.
+     *
+     * RDS doesn't support FIFO (first in, first out) topics. For more information, see
+     * [Message ordering and deduplication (FIFO topics)](https://docs.aws.amazon.com/sns/latest/dg/sns-fifo-topics.html)
+     * in the *Amazon Simple Notification Service Developer Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-eventsubscription.html#cfn-rds-eventsubscription-snstopicarn)
      *

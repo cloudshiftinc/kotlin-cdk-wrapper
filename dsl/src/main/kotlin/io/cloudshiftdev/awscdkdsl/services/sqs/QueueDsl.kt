@@ -24,6 +24,7 @@ import software.amazon.awscdk.services.sqs.DeduplicationScope
 import software.amazon.awscdk.services.sqs.FifoThroughputLimit
 import software.amazon.awscdk.services.sqs.Queue
 import software.amazon.awscdk.services.sqs.QueueEncryption
+import software.amazon.awscdk.services.sqs.RedriveAllowPolicy
 import software.constructs.Construct
 
 /**
@@ -31,15 +32,15 @@ import software.constructs.Construct
  *
  * Example:
  * ```
- * // An sqs queue for unsuccessful invocations of a lambda function
- * import software.amazon.awscdk.services.sqs.*;
- * Queue deadLetterQueue = new Queue(this, "DeadLetterQueue");
- * Function myFn = Function.Builder.create(this, "Fn")
- * .runtime(Runtime.NODEJS_14_X)
- * .handler("index.handler")
- * .code(Code.fromInline("// your code"))
- * // sqs queue for unsuccessful invocations
- * .onFailure(new SqsDestination(deadLetterQueue))
+ * Queue sourceQueue;
+ * Queue targetQueue;
+ * SqsTarget pipeTarget = SqsTarget.Builder.create(targetQueue)
+ * .inputTransformation(InputTransformation.fromObject(Map.of(
+ * "SomeKey", DynamicInput.fromEventPath("$.body"))))
+ * .build();
+ * Pipe pipe = Pipe.Builder.create(this, "Pipe")
+ * .source(new SomeSource(sourceQueue))
+ * .target(pipeTarget)
  * .build();
  * ```
  */
@@ -252,6 +253,36 @@ public class QueueDsl(
      */
     public fun receiveMessageWaitTime(receiveMessageWaitTime: Duration) {
         cdkBuilder.receiveMessageWaitTime(receiveMessageWaitTime)
+    }
+
+    /**
+     * The string that includes the parameters for the permissions for the dead-letter queue redrive
+     * permission and which source queues can specify dead-letter queues.
+     *
+     * Default: - All source queues can designate this queue as their dead-letter queue.
+     *
+     * @param redriveAllowPolicy The string that includes the parameters for the permissions for the
+     *   dead-letter queue redrive permission and which source queues can specify dead-letter
+     *   queues.
+     */
+    public fun redriveAllowPolicy(redriveAllowPolicy: RedriveAllowPolicyDsl.() -> Unit = {}) {
+        val builder = RedriveAllowPolicyDsl()
+        builder.apply(redriveAllowPolicy)
+        cdkBuilder.redriveAllowPolicy(builder.build())
+    }
+
+    /**
+     * The string that includes the parameters for the permissions for the dead-letter queue redrive
+     * permission and which source queues can specify dead-letter queues.
+     *
+     * Default: - All source queues can designate this queue as their dead-letter queue.
+     *
+     * @param redriveAllowPolicy The string that includes the parameters for the permissions for the
+     *   dead-letter queue redrive permission and which source queues can specify dead-letter
+     *   queues.
+     */
+    public fun redriveAllowPolicy(redriveAllowPolicy: RedriveAllowPolicy) {
+        cdkBuilder.redriveAllowPolicy(redriveAllowPolicy)
     }
 
     /**

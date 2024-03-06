@@ -18,10 +18,12 @@ import software.amazon.awscdk.services.events.Rule
 import software.amazon.awscdk.services.iam.AddToResourcePolicyResult
 import software.amazon.awscdk.services.s3.Bucket
 import software.amazon.awscdk.services.s3.BucketBase
+import software.amazon.awscdk.services.s3.CfnAccessGrant
 import software.amazon.awscdk.services.s3.CfnAccessPoint
 import software.amazon.awscdk.services.s3.CfnBucket
 import software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint
 import software.amazon.awscdk.services.s3.CfnStorageLens
+import software.amazon.awscdk.services.s3.CfnStorageLensGroup
 import software.amazon.awscdk.services.s3.EventType
 import software.amazon.awscdk.services.s3.IBucket
 import software.amazon.awscdk.services.s3.IBucketNotificationDestination
@@ -262,6 +264,24 @@ public inline fun BucketBase.virtualHostedUrlForObject(
     return virtualHostedUrlForObject(key, builder.build())
 }
 
+/** The configuration options of the grant location. */
+public inline fun CfnAccessGrant.setAccessGrantsLocationConfiguration(
+    block: CfnAccessGrantAccessGrantsLocationConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnAccessGrantAccessGrantsLocationConfigurationPropertyDsl()
+    builder.apply(block)
+    return setAccessGrantsLocationConfiguration(builder.build())
+}
+
+/** The user, group, or role to which you are granting access. */
+public inline fun CfnAccessGrant.setGrantee(
+    block: CfnAccessGrantGranteePropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnAccessGrantGranteePropertyDsl()
+    builder.apply(block)
+    return setGrantee(builder.build())
+}
+
 /** The PublicAccessBlock configuration that you want to apply to this Amazon S3 bucket. */
 public inline fun CfnAccessPoint.setPublicAccessBlockConfiguration(
     block: CfnAccessPointPublicAccessBlockConfigurationPropertyDsl.() -> Unit = {}
@@ -338,7 +358,7 @@ public inline fun CfnBucket.setNotificationConfiguration(
     return setNotificationConfiguration(builder.build())
 }
 
-/** Places an Object Lock configuration on the specified bucket. */
+/** This operation is not supported by directory buckets. */
 public inline fun CfnBucket.setObjectLockConfiguration(
     block: CfnBucketObjectLockConfigurationPropertyDsl.() -> Unit = {}
 ) {
@@ -408,6 +428,15 @@ public inline fun CfnStorageLens.setStorageLensConfiguration(
     val builder = CfnStorageLensStorageLensConfigurationPropertyDsl()
     builder.apply(block)
     return setStorageLensConfiguration(builder.build())
+}
+
+/** This property contains the criteria for the Storage Lens group data that is displayed. */
+public inline fun CfnStorageLensGroup.setFilter(
+    block: CfnStorageLensGroupFilterPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnStorageLensGroupFilterPropertyDsl()
+    builder.apply(block)
+    return setFilter(builder.build())
 }
 
 /**

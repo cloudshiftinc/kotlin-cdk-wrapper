@@ -53,8 +53,8 @@ public class CfnSequenceStorePropsDsl {
     }
 
     /**
-     * @param fallbackLocation An S3 URI representing the bucket and folder to store failed read set
-     *   uploads.
+     * @param fallbackLocation An S3 location that is used to store files that have failed a direct
+     *   upload.
      */
     public fun fallbackLocation(fallbackLocation: String) {
         cdkBuilder.fallbackLocation(fallbackLocation)

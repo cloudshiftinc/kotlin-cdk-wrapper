@@ -77,8 +77,11 @@ public class CfnTargetGroupTargetGroupAttributePropertyDsl {
      * The following attributes are supported only if the load balancer is an Application Load
      * Balancer and the target is an instance or an IP address:
      * * `load_balancing.algorithm.type` - The load balancing algorithm determines how the load
-     *   balancer selects targets when routing requests. The value is `round_robin` or
-     *   `least_outstanding_requests` . The default is `round_robin` .
+     *   balancer selects targets when routing requests. The value is `round_robin` ,
+     *   `least_outstanding_requests` , or `weighted_random` . The default is `round_robin` .
+     * * `load_balancing.algorithm.anomaly_mitigation` - Only available when
+     *   `load_balancing.algorithm.type` is `weighted_random` . Indicates whether anomaly mitigation
+     *   is enabled. The value is `on` or `off` . The default is `off` .
      * * `slow_start.duration_seconds` - The time period, in seconds, during which a newly
      *   registered target receives an increasing share of the traffic to the target group. After
      *   this time period ends, the target receives its full share of traffic. The range is 30-900
@@ -106,13 +109,24 @@ public class CfnTargetGroupTargetGroupAttributePropertyDsl {
      * The following attributes are supported only by Network Load Balancers:
      * * `deregistration_delay.connection_termination.enabled` - Indicates whether the load balancer
      *   terminates connections at the end of the deregistration timeout. The value is `true` or
-     *   `false` . The default is `false` .
+     *   `false` . For new UDP/TCP_UDP target groups the default is `true` . Otherwise, the default
+     *   is `false` .
      * * `preserve_client_ip.enabled` - Indicates whether client IP preservation is enabled. The
      *   value is `true` or `false` . The default is disabled if the target group type is IP address
      *   and the target group protocol is TCP or TLS. Otherwise, the default is enabled. Client IP
      *   preservation cannot be disabled for UDP and TCP_UDP target groups.
      * * `proxy_protocol_v2.enabled` - Indicates whether Proxy Protocol version 2 is enabled. The
      *   value is `true` or `false` . The default is `false` .
+     * * `target_health_state.unhealthy.connection_termination.enabled` - Indicates whether the load
+     *   balancer terminates connections to unhealthy targets. The value is `true` or `false` . The
+     *   default is `true` .
+     * * `target_health_state.unhealthy.draining_interval_seconds` - The amount of time for Elastic
+     *   Load Balancing to wait before changing the state of an unhealthy target from
+     *   `unhealthy.draining` to `unhealthy` . The range is 0-360000 seconds. The default value is 0
+     *   seconds.
+     *
+     * Note: This attribute can only be configured when
+     * `target_health_state.unhealthy.connection_termination.enabled` is `false` .
      *
      * The following attributes are supported only by Gateway Load Balancers:
      * * `target_failover.on_deregistration` - Indicates how the Gateway Load Balancer handles

@@ -84,32 +84,22 @@ public class CfnResourceSetPropsDsl {
         _resourceTypeList.addAll(resourceTypeList)
     }
 
-    /** @param resources The resources included in the resource set. */
+    /** @param resources the value to be set. */
     public fun resources(vararg resources: String) {
         _resources.addAll(listOf(*resources))
     }
 
-    /** @param resources The resources included in the resource set. */
+    /** @param resources the value to be set. */
     public fun resources(resources: Collection<String>) {
         _resources.addAll(resources)
     }
 
-    /**
-     * @param tags A collection of key:value pairs associated with a resource set. The key:value
-     *   pair can be anything you define. Typically, the tag key represents a category (such as
-     *   "environment") and the tag value represents a specific value within that category (such as
-     *   "test," "development," or "production"). You can add up to 50 tags to each AWS resource.
-     */
+    /** @param tags the value to be set. */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
-    /**
-     * @param tags A collection of key:value pairs associated with a resource set. The key:value
-     *   pair can be anything you define. Typically, the tag key represents a category (such as
-     *   "environment") and the tag value represents a specific value within that category (such as
-     *   "test," "development," or "production"). You can add up to 50 tags to each AWS resource.
-     */
+    /** @param tags the value to be set. */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
     }

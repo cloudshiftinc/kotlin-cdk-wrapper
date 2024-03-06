@@ -22,7 +22,7 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
 /**
- * The configuration of tags on a dataset to set row-level security.</p>.
+ * The element you can use to define tags for row-level security.
  *
  * Example:
  * ```
@@ -54,16 +54,17 @@ public class CfnDataSetRowLevelPermissionTagConfigurationPropertyDsl {
 
     private val _tagRules: MutableList<Any> = mutableListOf()
 
-    /** @param status the value to be set. */
+    /**
+     * @param status The status of row-level security tags. If enabled, the status is `ENABLED` . If
+     *   disabled, the status is `DISABLED` .
+     */
     public fun status(status: String) {
         cdkBuilder.status(status)
     }
 
     /**
-     * @param tagRuleConfigurations A list of tag configuration rules to apply to a dataset. All tag
-     *   configurations have the OR condition. Tags within each tile will be joined (AND). At least
-     *   one rule in this structure must have all tag values assigned to it to apply Row-level
-     *   security (RLS) to the dataset.</p>
+     * @param tagRuleConfigurations The configuration of tags on a dataset to set row-level
+     *   security.
      */
     public fun tagRuleConfigurations(tagRuleConfigurations: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
@@ -72,10 +73,8 @@ public class CfnDataSetRowLevelPermissionTagConfigurationPropertyDsl {
     }
 
     /**
-     * @param tagRuleConfigurations A list of tag configuration rules to apply to a dataset. All tag
-     *   configurations have the OR condition. Tags within each tile will be joined (AND). At least
-     *   one rule in this structure must have all tag values assigned to it to apply Row-level
-     *   security (RLS) to the dataset.</p>
+     * @param tagRuleConfigurations The configuration of tags on a dataset to set row-level
+     *   security.
      */
     public fun tagRuleConfigurations(tagRuleConfigurations: Any) {
         cdkBuilder.tagRuleConfigurations(tagRuleConfigurations)
@@ -83,7 +82,7 @@ public class CfnDataSetRowLevelPermissionTagConfigurationPropertyDsl {
 
     /**
      * @param tagRules A set of rules associated with row-level security, such as the tag names and
-     *   columns that they are assigned to.</p>.
+     *   columns that they are assigned to.
      */
     public fun tagRules(vararg tagRules: Any) {
         _tagRules.addAll(listOf(*tagRules))
@@ -91,7 +90,7 @@ public class CfnDataSetRowLevelPermissionTagConfigurationPropertyDsl {
 
     /**
      * @param tagRules A set of rules associated with row-level security, such as the tag names and
-     *   columns that they are assigned to.</p>.
+     *   columns that they are assigned to.
      */
     public fun tagRules(tagRules: Collection<Any>) {
         _tagRules.addAll(tagRules)
@@ -99,7 +98,7 @@ public class CfnDataSetRowLevelPermissionTagConfigurationPropertyDsl {
 
     /**
      * @param tagRules A set of rules associated with row-level security, such as the tag names and
-     *   columns that they are assigned to.</p>.
+     *   columns that they are assigned to.
      */
     public fun tagRules(tagRules: IResolvable) {
         cdkBuilder.tagRules(tagRules)

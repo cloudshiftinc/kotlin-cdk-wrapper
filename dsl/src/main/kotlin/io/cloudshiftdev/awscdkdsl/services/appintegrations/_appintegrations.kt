@@ -34,12 +34,6 @@ public object appintegrations {
      * "MyCfnDataIntegration")
      * .kmsKey("kmsKey")
      * .name("name")
-     * .scheduleConfig(ScheduleConfigProperty.builder()
-     * .scheduleExpression("scheduleExpression")
-     * // the properties below are optional
-     * .firstExecutionFrom("firstExecutionFrom")
-     * .object("object")
-     * .build())
      * .sourceUri("sourceUri")
      * // the properties below are optional
      * .description("description")
@@ -49,6 +43,12 @@ public object appintegrations {
      * .filters(filters)
      * .build())
      * .objectConfiguration(objectConfiguration)
+     * .scheduleConfig(ScheduleConfigProperty.builder()
+     * .scheduleExpression("scheduleExpression")
+     * // the properties below are optional
+     * .firstExecutionFrom("firstExecutionFrom")
+     * .object("object")
+     * .build())
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -107,12 +107,6 @@ public object appintegrations {
      * CfnDataIntegrationProps cfnDataIntegrationProps = CfnDataIntegrationProps.builder()
      * .kmsKey("kmsKey")
      * .name("name")
-     * .scheduleConfig(ScheduleConfigProperty.builder()
-     * .scheduleExpression("scheduleExpression")
-     * // the properties below are optional
-     * .firstExecutionFrom("firstExecutionFrom")
-     * .object("object")
-     * .build())
      * .sourceUri("sourceUri")
      * // the properties below are optional
      * .description("description")
@@ -122,6 +116,12 @@ public object appintegrations {
      * .filters(filters)
      * .build())
      * .objectConfiguration(objectConfiguration)
+     * .scheduleConfig(ScheduleConfigProperty.builder()
+     * .scheduleExpression("scheduleExpression")
+     * // the properties below are optional
+     * .firstExecutionFrom("firstExecutionFrom")
+     * .object("object")
+     * .build())
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")

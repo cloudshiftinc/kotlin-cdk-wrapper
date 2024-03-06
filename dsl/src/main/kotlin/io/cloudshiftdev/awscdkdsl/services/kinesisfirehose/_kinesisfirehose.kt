@@ -30,6 +30,23 @@ public object kinesisfirehose {
      *
      * Example:
      * ```
+     * Bucket destinationBucket = new Bucket(this, "Bucket");
+     * Role deliveryStreamRole = Role.Builder.create(this, "Role")
+     * .assumedBy(new ServicePrincipal("firehose.amazonaws.com"))
+     * .build();
+     * CfnDeliveryStream stream = CfnDeliveryStream.Builder.create(this, "MyStream")
+     * .deliveryStreamName("amazon-apigateway-delivery-stream")
+     * .s3DestinationConfiguration(S3DestinationConfigurationProperty.builder()
+     * .bucketArn(destinationBucket.getBucketArn())
+     * .roleArn(deliveryStreamRole.getRoleArn())
+     * .build())
+     * .build();
+     * RestApi api = RestApi.Builder.create(this, "books")
+     * .deployOptions(StageOptions.builder()
+     * .accessLogDestination(new FirehoseLogDestination(stream))
+     * .accessLogFormat(AccessLogFormat.jsonWithStandardFields())
+     * .build())
+     * .build();
      * ```
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html)
@@ -45,6 +62,9 @@ public object kinesisfirehose {
     }
 
     /**
+     * Describes the buffering to perform before delivering data to the Serverless offering for
+     * Amazon OpenSearch Service destination.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -69,6 +89,9 @@ public object kinesisfirehose {
     }
 
     /**
+     * Describes the configuration of a destination in the Serverless offering for Amazon OpenSearch
+     * Service.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -151,6 +174,9 @@ public object kinesisfirehose {
     }
 
     /**
+     * Configures retry behavior in case Firehose is unable to deliver documents to the Serverless
+     * offering for Amazon OpenSearch Service.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -307,6 +333,31 @@ public object kinesisfirehose {
         block: CfnDeliveryStreamAmazonopensearchserviceRetryOptionsPropertyDsl.() -> Unit = {}
     ): CfnDeliveryStream.AmazonopensearchserviceRetryOptionsProperty {
         val builder = CfnDeliveryStreamAmazonopensearchserviceRetryOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The authentication configuration of the Amazon MSK cluster.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.kinesisfirehose.*;
+     * AuthenticationConfigurationProperty authenticationConfigurationProperty =
+     * AuthenticationConfigurationProperty.builder()
+     * .connectivity("connectivity")
+     * .roleArn("roleArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-authenticationconfiguration.html)
+     */
+    public inline fun cfnDeliveryStreamAuthenticationConfigurationProperty(
+        block: CfnDeliveryStreamAuthenticationConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnDeliveryStream.AuthenticationConfigurationProperty {
+        val builder = CfnDeliveryStreamAuthenticationConfigurationPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -539,6 +590,11 @@ public object kinesisfirehose {
     }
 
     /**
+     * Indicates the method for setting up document ID.
+     *
+     * The supported methods are Firehose generated document ID and OpenSearch Service generated
+     * document ID.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -900,10 +956,10 @@ public object kinesisfirehose {
     /**
      * The native Hive / HCatalog JsonSerDe.
      *
-     * Used by Kinesis Data Firehose for deserializing data, which means converting it from the JSON
-     * format in preparation for serializing it to the Parquet or ORC format. This is one of two
-     * deserializers you can choose, depending on which one offers the functionality you need. The
-     * other option is the OpenX SerDe.
+     * Used by Firehose for deserializing data, which means converting it from the JSON format in
+     * preparation for serializing it to the Parquet or ORC format. This is one of two deserializers
+     * you can choose, depending on which one offers the functionality you need. The other option is
+     * the OpenX SerDe.
      *
      * Example:
      * ```
@@ -1190,12 +1246,41 @@ public object kinesisfirehose {
     }
 
     /**
+     * The configuration for the Amazon MSK cluster to be used as the source for a delivery stream.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.kinesisfirehose.*;
+     * MSKSourceConfigurationProperty mSKSourceConfigurationProperty =
+     * MSKSourceConfigurationProperty.builder()
+     * .authenticationConfiguration(AuthenticationConfigurationProperty.builder()
+     * .connectivity("connectivity")
+     * .roleArn("roleArn")
+     * .build())
+     * .mskClusterArn("mskClusterArn")
+     * .topicName("topicName")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-msksourceconfiguration.html)
+     */
+    public inline fun cfnDeliveryStreamMSKSourceConfigurationProperty(
+        block: CfnDeliveryStreamMSKSourceConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnDeliveryStream.MSKSourceConfigurationProperty {
+        val builder = CfnDeliveryStreamMSKSourceConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The OpenX SerDe.
      *
-     * Used by Kinesis Data Firehose for deserializing data, which means converting it from the JSON
-     * format in preparation for serializing it to the Parquet or ORC format. This is one of two
-     * deserializers you can choose, depending on which one offers the functionality you need. The
-     * other option is the native Hive / HCatalog JsonSerDe.
+     * Used by Firehose for deserializing data, which means converting it from the JSON format in
+     * preparation for serializing it to the Parquet or ORC format. This is one of two deserializers
+     * you can choose, depending on which one offers the functionality you need. The other option is
+     * the native Hive / HCatalog JsonSerDe.
      *
      * Example:
      * ```
@@ -1256,8 +1341,8 @@ public object kinesisfirehose {
     }
 
     /**
-     * Specifies the serializer that you want Kinesis Data Firehose to use to convert the format of
-     * your data before it writes it to Amazon S3.
+     * Specifies the serializer that you want Firehose to use to convert the format of your data
+     * before it writes it to Amazon S3.
      *
      * This parameter is required if `Enabled` is set to true.
      *
@@ -1427,6 +1512,23 @@ public object kinesisfirehose {
      *
      * Example:
      * ```
+     * Bucket destinationBucket = new Bucket(this, "Bucket");
+     * Role deliveryStreamRole = Role.Builder.create(this, "Role")
+     * .assumedBy(new ServicePrincipal("firehose.amazonaws.com"))
+     * .build();
+     * CfnDeliveryStream stream = CfnDeliveryStream.Builder.create(this, "MyStream")
+     * .deliveryStreamName("amazon-apigateway-delivery-stream")
+     * .s3DestinationConfiguration(S3DestinationConfigurationProperty.builder()
+     * .bucketArn(destinationBucket.getBucketArn())
+     * .roleArn(deliveryStreamRole.getRoleArn())
+     * .build())
+     * .build();
+     * RestApi api = RestApi.Builder.create(this, "books")
+     * .deployOptions(StageOptions.builder()
+     * .accessLogDestination(new FirehoseLogDestination(stream))
+     * .accessLogFormat(AccessLogFormat.jsonWithStandardFields())
+     * .build())
+     * .build();
      * ```
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html)
@@ -1541,8 +1643,7 @@ public object kinesisfirehose {
     }
 
     /**
-     * Configures retry behavior in case Kinesis Data Firehose is unable to deliver documents to
-     * Amazon Redshift.
+     * Configures retry behavior in case Firehose is unable to deliver documents to Amazon Redshift.
      *
      * Example:
      * ```
@@ -1640,8 +1741,8 @@ public object kinesisfirehose {
     }
 
     /**
-     * Specifies the schema to which you want Kinesis Data Firehose to configure your data before it
-     * writes it to Amazon S3.
+     * Specifies the schema to which you want Firehose to configure your data before it writes it to
+     * Amazon S3.
      *
      * This parameter is required if `Enabled` is set to true.
      *
@@ -1671,10 +1772,10 @@ public object kinesisfirehose {
     }
 
     /**
-     * The serializer that you want Kinesis Data Firehose to use to convert data to the target
-     * format before writing it to Amazon S3.
+     * The serializer that you want Firehose to use to convert data to the target format before
+     * writing it to Amazon S3.
      *
-     * Kinesis Data Firehose supports two types of serializers: the
+     * Firehose supports two types of serializers: the
      * [ORC SerDe](https://docs.aws.amazon.com/https://hive.apache.org/javadocs/r1.2.2/api/org/apache/hadoop/hive/ql/io/orc/OrcSerde.html)
      * and the
      * [Parquet SerDe](https://docs.aws.amazon.com/https://hive.apache.org/javadocs/r1.2.2/api/org/apache/hadoop/hive/ql/io/parquet/serde/ParquetHiveSerDe.html)
@@ -1720,6 +1821,206 @@ public object kinesisfirehose {
     }
 
     /**
+     * Configure Snowflake destination.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.kinesisfirehose.*;
+     * SnowflakeDestinationConfigurationProperty snowflakeDestinationConfigurationProperty =
+     * SnowflakeDestinationConfigurationProperty.builder()
+     * .accountUrl("accountUrl")
+     * .database("database")
+     * .privateKey("privateKey")
+     * .roleArn("roleArn")
+     * .s3Configuration(S3DestinationConfigurationProperty.builder()
+     * .bucketArn("bucketArn")
+     * .roleArn("roleArn")
+     * // the properties below are optional
+     * .bufferingHints(BufferingHintsProperty.builder()
+     * .intervalInSeconds(123)
+     * .sizeInMBs(123)
+     * .build())
+     * .cloudWatchLoggingOptions(CloudWatchLoggingOptionsProperty.builder()
+     * .enabled(false)
+     * .logGroupName("logGroupName")
+     * .logStreamName("logStreamName")
+     * .build())
+     * .compressionFormat("compressionFormat")
+     * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
+     * .kmsEncryptionConfig(KMSEncryptionConfigProperty.builder()
+     * .awskmsKeyArn("awskmsKeyArn")
+     * .build())
+     * .noEncryptionConfig("noEncryptionConfig")
+     * .build())
+     * .errorOutputPrefix("errorOutputPrefix")
+     * .prefix("prefix")
+     * .build())
+     * .schema("schema")
+     * .table("table")
+     * .user("user")
+     * // the properties below are optional
+     * .cloudWatchLoggingOptions(CloudWatchLoggingOptionsProperty.builder()
+     * .enabled(false)
+     * .logGroupName("logGroupName")
+     * .logStreamName("logStreamName")
+     * .build())
+     * .contentColumnName("contentColumnName")
+     * .dataLoadingOption("dataLoadingOption")
+     * .keyPassphrase("keyPassphrase")
+     * .metaDataColumnName("metaDataColumnName")
+     * .processingConfiguration(ProcessingConfigurationProperty.builder()
+     * .enabled(false)
+     * .processors(List.of(ProcessorProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .parameters(List.of(ProcessorParameterProperty.builder()
+     * .parameterName("parameterName")
+     * .parameterValue("parameterValue")
+     * .build()))
+     * .build()))
+     * .build())
+     * .retryOptions(SnowflakeRetryOptionsProperty.builder()
+     * .durationInSeconds(123)
+     * .build())
+     * .s3BackupMode("s3BackupMode")
+     * .snowflakeRoleConfiguration(SnowflakeRoleConfigurationProperty.builder()
+     * .enabled(false)
+     * .snowflakeRole("snowflakeRole")
+     * .build())
+     * .snowflakeVpcConfiguration(SnowflakeVpcConfigurationProperty.builder()
+     * .privateLinkVpceId("privateLinkVpceId")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-snowflakedestinationconfiguration.html)
+     */
+    public inline fun cfnDeliveryStreamSnowflakeDestinationConfigurationProperty(
+        block: CfnDeliveryStreamSnowflakeDestinationConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnDeliveryStream.SnowflakeDestinationConfigurationProperty {
+        val builder = CfnDeliveryStreamSnowflakeDestinationConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specify how long Firehose retries sending data to the New Relic HTTP endpoint.
+     *
+     * After sending data, Firehose first waits for an acknowledgment from the HTTP endpoint. If an
+     * error occurs or the acknowledgment doesn’t arrive within the acknowledgment timeout period,
+     * Firehose starts the retry duration counter. It keeps retrying until the retry duration
+     * expires. After that, Firehose considers it a data delivery failure and backs up the data to
+     * your Amazon S3 bucket. Every time that Firehose sends data to the HTTP endpoint (either the
+     * initial attempt or a retry), it restarts the acknowledgement timeout counter and waits for an
+     * acknowledgement from the HTTP endpoint. Even if the retry duration expires, Firehose still
+     * waits for the acknowledgment until it receives it or the acknowledgement timeout period is
+     * reached. If the acknowledgment times out, Firehose determines whether there's time left in
+     * the retry counter. If there is time left, it retries again and repeats the logic until it
+     * receives an acknowledgment or determines that the retry time has expired. If you don't want
+     * Firehose to retry sending data, set this value to 0.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.kinesisfirehose.*;
+     * SnowflakeRetryOptionsProperty snowflakeRetryOptionsProperty =
+     * SnowflakeRetryOptionsProperty.builder()
+     * .durationInSeconds(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-snowflakeretryoptions.html)
+     */
+    public inline fun cfnDeliveryStreamSnowflakeRetryOptionsProperty(
+        block: CfnDeliveryStreamSnowflakeRetryOptionsPropertyDsl.() -> Unit = {}
+    ): CfnDeliveryStream.SnowflakeRetryOptionsProperty {
+        val builder = CfnDeliveryStreamSnowflakeRetryOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Optionally configure a Snowflake role.
+     *
+     * Otherwise the default user role will be used.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.kinesisfirehose.*;
+     * SnowflakeRoleConfigurationProperty snowflakeRoleConfigurationProperty =
+     * SnowflakeRoleConfigurationProperty.builder()
+     * .enabled(false)
+     * .snowflakeRole("snowflakeRole")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-snowflakeroleconfiguration.html)
+     */
+    public inline fun cfnDeliveryStreamSnowflakeRoleConfigurationProperty(
+        block: CfnDeliveryStreamSnowflakeRoleConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnDeliveryStream.SnowflakeRoleConfigurationProperty {
+        val builder = CfnDeliveryStreamSnowflakeRoleConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Configure a Snowflake VPC.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.kinesisfirehose.*;
+     * SnowflakeVpcConfigurationProperty snowflakeVpcConfigurationProperty =
+     * SnowflakeVpcConfigurationProperty.builder()
+     * .privateLinkVpceId("privateLinkVpceId")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-snowflakevpcconfiguration.html)
+     */
+    public inline fun cfnDeliveryStreamSnowflakeVpcConfigurationProperty(
+        block: CfnDeliveryStreamSnowflakeVpcConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnDeliveryStream.SnowflakeVpcConfigurationProperty {
+        val builder = CfnDeliveryStreamSnowflakeVpcConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The buffering options.
+     *
+     * If no value is specified, the default values for Splunk are used.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.kinesisfirehose.*;
+     * SplunkBufferingHintsProperty splunkBufferingHintsProperty =
+     * SplunkBufferingHintsProperty.builder()
+     * .intervalInSeconds(123)
+     * .sizeInMBs(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkbufferinghints.html)
+     */
+    public inline fun cfnDeliveryStreamSplunkBufferingHintsProperty(
+        block: CfnDeliveryStreamSplunkBufferingHintsPropertyDsl.() -> Unit = {}
+    ): CfnDeliveryStream.SplunkBufferingHintsProperty {
+        val builder = CfnDeliveryStreamSplunkBufferingHintsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The `SplunkDestinationConfiguration` property type specifies the configuration of a
      * destination in Splunk for a Kinesis Data Firehose delivery stream.
      *
@@ -1757,6 +2058,10 @@ public object kinesisfirehose {
      * .prefix("prefix")
      * .build())
      * // the properties below are optional
+     * .bufferingHints(SplunkBufferingHintsProperty.builder()
+     * .intervalInSeconds(123)
+     * .sizeInMBs(123)
+     * .build())
      * .cloudWatchLoggingOptions(CloudWatchLoggingOptionsProperty.builder()
      * .enabled(false)
      * .logGroupName("logGroupName")

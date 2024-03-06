@@ -35,7 +35,7 @@ public inline fun CfnApplication.setAutoStopConfiguration(
     return setAutoStopConfiguration(builder.build())
 }
 
-/** The image configuration. */
+/** The image configuration applied to all worker types. */
 public inline fun CfnApplication.setImageConfiguration(
     block: CfnApplicationImageConfigurationInputPropertyDsl.() -> Unit = {}
 ) {
@@ -51,6 +51,15 @@ public inline fun CfnApplication.setMaximumCapacity(
     val builder = CfnApplicationMaximumAllowedResourcesPropertyDsl()
     builder.apply(block)
     return setMaximumCapacity(builder.build())
+}
+
+/** A configuration specification to be used when provisioning an application. */
+public inline fun CfnApplication.setMonitoringConfiguration(
+    block: CfnApplicationMonitoringConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnApplicationMonitoringConfigurationPropertyDsl()
+    builder.apply(block)
+    return setMonitoringConfiguration(builder.build())
 }
 
 /** The network configuration for customer VPC connectivity for the application. */

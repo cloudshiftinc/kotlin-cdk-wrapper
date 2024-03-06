@@ -13,6 +13,11 @@ package io.cloudshiftdev.awscdkdsl.services.apigatewayv2
 
 import kotlin.String
 import kotlin.Unit
+import software.amazon.awscdk.services.apigatewayv2.AddRoutesOptions
+import software.amazon.awscdk.services.apigatewayv2.ApiMapping
+import software.amazon.awscdk.services.apigatewayv2.ApiMappingAttributes
+import software.amazon.awscdk.services.apigatewayv2.ApiMappingProps
+import software.amazon.awscdk.services.apigatewayv2.BatchHttpRouteOptions
 import software.amazon.awscdk.services.apigatewayv2.CfnApi
 import software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides
 import software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverridesProps
@@ -39,9 +44,193 @@ import software.amazon.awscdk.services.apigatewayv2.CfnStage
 import software.amazon.awscdk.services.apigatewayv2.CfnStageProps
 import software.amazon.awscdk.services.apigatewayv2.CfnVpcLink
 import software.amazon.awscdk.services.apigatewayv2.CfnVpcLinkProps
+import software.amazon.awscdk.services.apigatewayv2.CorsPreflightOptions
+import software.amazon.awscdk.services.apigatewayv2.DomainMappingOptions
+import software.amazon.awscdk.services.apigatewayv2.DomainName
+import software.amazon.awscdk.services.apigatewayv2.DomainNameAttributes
+import software.amazon.awscdk.services.apigatewayv2.DomainNameProps
+import software.amazon.awscdk.services.apigatewayv2.EndpointOptions
+import software.amazon.awscdk.services.apigatewayv2.GrantInvokeOptions
+import software.amazon.awscdk.services.apigatewayv2.HttpApi
+import software.amazon.awscdk.services.apigatewayv2.HttpApiAttributes
+import software.amazon.awscdk.services.apigatewayv2.HttpApiProps
+import software.amazon.awscdk.services.apigatewayv2.HttpAuthorizer
+import software.amazon.awscdk.services.apigatewayv2.HttpAuthorizerAttributes
+import software.amazon.awscdk.services.apigatewayv2.HttpAuthorizerProps
+import software.amazon.awscdk.services.apigatewayv2.HttpIntegration
+import software.amazon.awscdk.services.apigatewayv2.HttpIntegrationProps
+import software.amazon.awscdk.services.apigatewayv2.HttpRoute
+import software.amazon.awscdk.services.apigatewayv2.HttpRouteAuthorizerBindOptions
+import software.amazon.awscdk.services.apigatewayv2.HttpRouteAuthorizerConfig
+import software.amazon.awscdk.services.apigatewayv2.HttpRouteIntegrationBindOptions
+import software.amazon.awscdk.services.apigatewayv2.HttpRouteIntegrationConfig
+import software.amazon.awscdk.services.apigatewayv2.HttpRouteProps
+import software.amazon.awscdk.services.apigatewayv2.HttpStage
+import software.amazon.awscdk.services.apigatewayv2.HttpStageAttributes
+import software.amazon.awscdk.services.apigatewayv2.HttpStageOptions
+import software.amazon.awscdk.services.apigatewayv2.HttpStageProps
+import software.amazon.awscdk.services.apigatewayv2.MTLSConfig
+import software.amazon.awscdk.services.apigatewayv2.StageAttributes
+import software.amazon.awscdk.services.apigatewayv2.StageOptions
+import software.amazon.awscdk.services.apigatewayv2.ThrottleSettings
+import software.amazon.awscdk.services.apigatewayv2.VpcLink
+import software.amazon.awscdk.services.apigatewayv2.VpcLinkAttributes
+import software.amazon.awscdk.services.apigatewayv2.VpcLinkProps
+import software.amazon.awscdk.services.apigatewayv2.WebSocketApi
+import software.amazon.awscdk.services.apigatewayv2.WebSocketApiAttributes
+import software.amazon.awscdk.services.apigatewayv2.WebSocketApiProps
+import software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizer
+import software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizerAttributes
+import software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizerProps
+import software.amazon.awscdk.services.apigatewayv2.WebSocketIntegration
+import software.amazon.awscdk.services.apigatewayv2.WebSocketIntegrationProps
+import software.amazon.awscdk.services.apigatewayv2.WebSocketRoute
+import software.amazon.awscdk.services.apigatewayv2.WebSocketRouteAuthorizerBindOptions
+import software.amazon.awscdk.services.apigatewayv2.WebSocketRouteAuthorizerConfig
+import software.amazon.awscdk.services.apigatewayv2.WebSocketRouteIntegrationBindOptions
+import software.amazon.awscdk.services.apigatewayv2.WebSocketRouteIntegrationConfig
+import software.amazon.awscdk.services.apigatewayv2.WebSocketRouteOptions
+import software.amazon.awscdk.services.apigatewayv2.WebSocketRouteProps
+import software.amazon.awscdk.services.apigatewayv2.WebSocketStage
+import software.amazon.awscdk.services.apigatewayv2.WebSocketStageAttributes
+import software.amazon.awscdk.services.apigatewayv2.WebSocketStageProps
 import software.constructs.Construct
 
 public object apigatewayv2 {
+    /**
+     * Options for the Route with Integration resource.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.aws_apigatewayv2_integrations.HttpUrlIntegration;
+     * import software.amazon.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegration;
+     * Function bookStoreDefaultFn;
+     * HttpUrlIntegration getBooksIntegration = new HttpUrlIntegration("GetBooksIntegration",
+     * "https://get-books-proxy.example.com");
+     * HttpLambdaIntegration bookStoreDefaultIntegration = new
+     * HttpLambdaIntegration("BooksIntegration", bookStoreDefaultFn);
+     * HttpApi httpApi = new HttpApi(this, "HttpApi");
+     * httpApi.addRoutes(AddRoutesOptions.builder()
+     * .path("/books")
+     * .methods(List.of(HttpMethod.GET))
+     * .integration(getBooksIntegration)
+     * .build());
+     * httpApi.addRoutes(AddRoutesOptions.builder()
+     * .path("/books")
+     * .methods(List.of(HttpMethod.ANY))
+     * .integration(bookStoreDefaultIntegration)
+     * .build());
+     * ```
+     */
+    public inline fun addRoutesOptions(
+        block: AddRoutesOptionsDsl.() -> Unit = {}
+    ): AddRoutesOptions {
+        val builder = AddRoutesOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Create a new API mapping for API Gateway API endpoint.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * IApi api;
+     * DomainName domainName;
+     * IStage stage;
+     * ApiMapping apiMapping = ApiMapping.Builder.create(this, "MyApiMapping")
+     * .api(api)
+     * .domainName(domainName)
+     * // the properties below are optional
+     * .apiMappingKey("apiMappingKey")
+     * .stage(stage)
+     * .build();
+     * ```
+     */
+    public inline fun apiMapping(
+        scope: Construct,
+        id: String,
+        block: ApiMappingDsl.() -> Unit = {},
+    ): ApiMapping {
+        val builder = ApiMappingDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The attributes used to import existing ApiMapping.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * ApiMappingAttributes apiMappingAttributes = ApiMappingAttributes.builder()
+     * .apiMappingId("apiMappingId")
+     * .build();
+     * ```
+     */
+    public inline fun apiMappingAttributes(
+        block: ApiMappingAttributesDsl.() -> Unit = {}
+    ): ApiMappingAttributes {
+        val builder = ApiMappingAttributesDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties used to create the ApiMapping resource.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * IApi api;
+     * DomainName domainName;
+     * IStage stage;
+     * ApiMappingProps apiMappingProps = ApiMappingProps.builder()
+     * .api(api)
+     * .domainName(domainName)
+     * // the properties below are optional
+     * .apiMappingKey("apiMappingKey")
+     * .stage(stage)
+     * .build();
+     * ```
+     */
+    public inline fun apiMappingProps(block: ApiMappingPropsDsl.() -> Unit = {}): ApiMappingProps {
+        val builder = ApiMappingPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Options used when configuring multiple routes, at once.
+     *
+     * The options here are the ones that would be configured for all being set up.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * HttpRouteIntegration httpRouteIntegration;
+     * BatchHttpRouteOptions batchHttpRouteOptions = BatchHttpRouteOptions.builder()
+     * .integration(httpRouteIntegration)
+     * .build();
+     * ```
+     */
+    public inline fun batchHttpRouteOptions(
+        block: BatchHttpRouteOptionsDsl.() -> Unit = {}
+    ): BatchHttpRouteOptions {
+        val builder = BatchHttpRouteOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
     /**
      * The `AWS::ApiGatewayV2::Api` resource creates an API.
      *
@@ -732,7 +921,6 @@ public object apigatewayv2 {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.apigatewayv2.*;
-     * Object tags;
      * CfnDomainName cfnDomainName = CfnDomainName.Builder.create(this, "MyCfnDomainName")
      * .domainName("domainName")
      * // the properties below are optional
@@ -747,7 +935,8 @@ public object apigatewayv2 {
      * .truststoreUri("truststoreUri")
      * .truststoreVersion("truststoreVersion")
      * .build())
-     * .tags(tags)
+     * .tags(Map.of(
+     * "tagsKey", "tags"))
      * .build();
      * ```
      *
@@ -764,7 +953,7 @@ public object apigatewayv2 {
     }
 
     /**
-     * The `DomainNameConfiguration` property type specifies the configuration for a an API's domain
+     * The `DomainNameConfiguration` property type specifies the configuration for an API's domain
      * name.
      *
      * `DomainNameConfiguration` is a property of the
@@ -831,7 +1020,6 @@ public object apigatewayv2 {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.apigatewayv2.*;
-     * Object tags;
      * CfnDomainNameProps cfnDomainNameProps = CfnDomainNameProps.builder()
      * .domainName("domainName")
      * // the properties below are optional
@@ -846,7 +1034,8 @@ public object apigatewayv2 {
      * .truststoreUri("truststoreUri")
      * .truststoreVersion("truststoreVersion")
      * .build())
-     * .tags(tags)
+     * .tags(Map.of(
+     * "tagsKey", "tags"))
      * .build();
      * ```
      *
@@ -995,8 +1184,6 @@ public object apigatewayv2 {
     }
 
     /**
-     * Specifies a list of response parameters for an HTTP API.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -1022,18 +1209,6 @@ public object apigatewayv2 {
     }
 
     /**
-     * Supported only for HTTP APIs.
-     *
-     * You use response parameters to transform the HTTP response from a backend integration before
-     * returning the response to clients. Specify a key-value map from a selection key to response
-     * parameters. The selection key must be a valid HTTP status code within the range of 200-599.
-     * Response parameters are a key-value map. The key must match the pattern
-     * `&lt;action&gt;:&lt;header&gt;.&lt;location&gt;` or `overwrite.statuscode` . The action can
-     * be `append` , `overwrite` or `remove` . The value can be a static value, or map to response
-     * data, stage variables, or context variables that are evaluated at runtime. To learn more, see
-     * [Transforming API requests and responses](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html)
-     * .
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -1577,6 +1752,1376 @@ public object apigatewayv2 {
      */
     public inline fun cfnVpcLinkProps(block: CfnVpcLinkPropsDsl.() -> Unit = {}): CfnVpcLinkProps {
         val builder = CfnVpcLinkPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Options for the CORS Configuration.
+     *
+     * Example:
+     * ```
+     * HttpApi.Builder.create(this, "HttpProxyApi")
+     * .corsPreflight(CorsPreflightOptions.builder()
+     * .allowHeaders(List.of("Authorization"))
+     * .allowMethods(List.of(CorsHttpMethod.GET, CorsHttpMethod.HEAD, CorsHttpMethod.OPTIONS,
+     * CorsHttpMethod.POST))
+     * .allowOrigins(List.of("*"))
+     * .maxAge(Duration.days(10))
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun corsPreflightOptions(
+        block: CorsPreflightOptionsDsl.() -> Unit = {}
+    ): CorsPreflightOptions {
+        val builder = CorsPreflightOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Options for DomainMapping.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegration;
+     * Function handler;
+     * DomainName dn;
+     * HttpApi apiDemo = HttpApi.Builder.create(this, "DemoApi")
+     * .defaultIntegration(new HttpLambdaIntegration("DefaultIntegration", handler))
+     * // https://${dn.domainName}/demo goes to apiDemo $default stage
+     * .defaultDomainMapping(DomainMappingOptions.builder()
+     * .domainName(dn)
+     * .mappingKey("demo")
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun domainMappingOptions(
+        block: DomainMappingOptionsDsl.() -> Unit = {}
+    ): DomainMappingOptions {
+        val builder = DomainMappingOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Custom domain resource for the API.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.services.certificatemanager.*;
+     * import software.amazon.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegration;
+     * Function handler;
+     * String certArn = "arn:aws:acm:us-east-1:111111111111:certificate";
+     * String domainName = "example.com";
+     * DomainName dn = DomainName.Builder.create(this, "DN")
+     * .domainName(domainName)
+     * .certificate(Certificate.fromCertificateArn(this, "cert", certArn))
+     * .build();
+     * HttpApi api = HttpApi.Builder.create(this, "HttpProxyProdApi")
+     * .defaultIntegration(new HttpLambdaIntegration("DefaultIntegration", handler))
+     * // https://${dn.domainName}/foo goes to prodApi $default stage
+     * .defaultDomainMapping(DomainMappingOptions.builder()
+     * .domainName(dn)
+     * .mappingKey("foo")
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun domainName(
+        scope: Construct,
+        id: String,
+        block: DomainNameDsl.() -> Unit = {},
+    ): DomainName {
+        val builder = DomainNameDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * custom domain name attributes.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * DomainNameAttributes domainNameAttributes = DomainNameAttributes.builder()
+     * .name("name")
+     * .regionalDomainName("regionalDomainName")
+     * .regionalHostedZoneId("regionalHostedZoneId")
+     * .build();
+     * ```
+     */
+    public inline fun domainNameAttributes(
+        block: DomainNameAttributesDsl.() -> Unit = {}
+    ): DomainNameAttributes {
+        val builder = DomainNameAttributesDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * properties used for creating the DomainName.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.services.certificatemanager.*;
+     * import software.amazon.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegration;
+     * Function handler;
+     * String certArn = "arn:aws:acm:us-east-1:111111111111:certificate";
+     * String domainName = "example.com";
+     * DomainName dn = DomainName.Builder.create(this, "DN")
+     * .domainName(domainName)
+     * .certificate(Certificate.fromCertificateArn(this, "cert", certArn))
+     * .build();
+     * HttpApi api = HttpApi.Builder.create(this, "HttpProxyProdApi")
+     * .defaultIntegration(new HttpLambdaIntegration("DefaultIntegration", handler))
+     * // https://${dn.domainName}/foo goes to prodApi $default stage
+     * .defaultDomainMapping(DomainMappingOptions.builder()
+     * .domainName(dn)
+     * .mappingKey("foo")
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun domainNameProps(block: DomainNamePropsDsl.() -> Unit = {}): DomainNameProps {
+        val builder = DomainNamePropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * properties for creating a domain name endpoint.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * import software.amazon.awscdk.services.certificatemanager.*;
+     * Certificate certificate;
+     * EndpointOptions endpointOptions = EndpointOptions.builder()
+     * .certificate(certificate)
+     * // the properties below are optional
+     * .certificateName("certificateName")
+     * .endpointType(EndpointType.EDGE)
+     * .ownershipCertificate(certificate)
+     * .securityPolicy(SecurityPolicy.TLS_1_0)
+     * .build();
+     * ```
+     */
+    public inline fun endpointOptions(block: EndpointOptionsDsl.() -> Unit = {}): EndpointOptions {
+        val builder = EndpointOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Options for granting invoke access.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * GrantInvokeOptions grantInvokeOptions = GrantInvokeOptions.builder()
+     * .httpMethods(List.of(HttpMethod.ANY))
+     * .build();
+     * ```
+     */
+    public inline fun grantInvokeOptions(
+        block: GrantInvokeOptionsDsl.() -> Unit = {}
+    ): GrantInvokeOptions {
+        val builder = GrantInvokeOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Create a new API Gateway HTTP API endpoint.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegration;
+     * Function booksDefaultFn;
+     * HttpLambdaIntegration booksIntegration = new HttpLambdaIntegration("BooksIntegration",
+     * booksDefaultFn);
+     * HttpApi httpApi = new HttpApi(this, "HttpApi");
+     * httpApi.addRoutes(AddRoutesOptions.builder()
+     * .path("/books")
+     * .methods(List.of(HttpMethod.GET))
+     * .integration(booksIntegration)
+     * .build());
+     * ```
+     */
+    public inline fun httpApi(
+        scope: Construct,
+        id: String,
+        block: HttpApiDsl.() -> Unit = {},
+    ): HttpApi {
+        val builder = HttpApiDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Attributes for importing an HttpApi into the CDK.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * HttpApiAttributes httpApiAttributes = HttpApiAttributes.builder()
+     * .httpApiId("httpApiId")
+     * // the properties below are optional
+     * .apiEndpoint("apiEndpoint")
+     * .build();
+     * ```
+     */
+    public inline fun httpApiAttributes(
+        block: HttpApiAttributesDsl.() -> Unit = {}
+    ): HttpApiAttributes {
+        val builder = HttpApiAttributesDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties to initialize an instance of `HttpApi`.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.aws_apigatewayv2_integrations.HttpAlbIntegration;
+     * ApplicationLoadBalancer lb;
+     * ApplicationListener listener = lb.addListener("listener",
+     * BaseApplicationListenerProps.builder().port(80).build());
+     * listener.addTargets("target", AddApplicationTargetsProps.builder()
+     * .port(80)
+     * .build());
+     * HttpApi httpEndpoint = HttpApi.Builder.create(this, "HttpProxyPrivateApi")
+     * .defaultIntegration(HttpAlbIntegration.Builder.create("DefaultIntegration", listener)
+     * .parameterMapping(new ParameterMapping().custom("myKey", "myValue"))
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun httpApiProps(block: HttpApiPropsDsl.() -> Unit = {}): HttpApiProps {
+        val builder = HttpApiPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * An authorizer for Http Apis.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.*;
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * HttpApi httpApi;
+     * HttpAuthorizer httpAuthorizer = HttpAuthorizer.Builder.create(this, "MyHttpAuthorizer")
+     * .httpApi(httpApi)
+     * .identitySource(List.of("identitySource"))
+     * .type(HttpAuthorizerType.IAM)
+     * // the properties below are optional
+     * .authorizerName("authorizerName")
+     * .authorizerUri("authorizerUri")
+     * .enableSimpleResponses(false)
+     * .jwtAudience(List.of("jwtAudience"))
+     * .jwtIssuer("jwtIssuer")
+     * .payloadFormatVersion(AuthorizerPayloadVersion.VERSION_1_0)
+     * .resultsCacheTtl(Duration.minutes(30))
+     * .build();
+     * ```
+     */
+    public inline fun httpAuthorizer(
+        scope: Construct,
+        id: String,
+        block: HttpAuthorizerDsl.() -> Unit = {},
+    ): HttpAuthorizer {
+        val builder = HttpAuthorizerDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Reference to an http authorizer.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * HttpAuthorizerAttributes httpAuthorizerAttributes = HttpAuthorizerAttributes.builder()
+     * .authorizerId("authorizerId")
+     * .authorizerType("authorizerType")
+     * .build();
+     * ```
+     */
+    public inline fun httpAuthorizerAttributes(
+        block: HttpAuthorizerAttributesDsl.() -> Unit = {}
+    ): HttpAuthorizerAttributes {
+        val builder = HttpAuthorizerAttributesDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties to initialize an instance of `HttpAuthorizer`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.*;
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * HttpApi httpApi;
+     * HttpAuthorizerProps httpAuthorizerProps = HttpAuthorizerProps.builder()
+     * .httpApi(httpApi)
+     * .identitySource(List.of("identitySource"))
+     * .type(HttpAuthorizerType.IAM)
+     * // the properties below are optional
+     * .authorizerName("authorizerName")
+     * .authorizerUri("authorizerUri")
+     * .enableSimpleResponses(false)
+     * .jwtAudience(List.of("jwtAudience"))
+     * .jwtIssuer("jwtIssuer")
+     * .payloadFormatVersion(AuthorizerPayloadVersion.VERSION_1_0)
+     * .resultsCacheTtl(Duration.minutes(30))
+     * .build();
+     * ```
+     */
+    public inline fun httpAuthorizerProps(
+        block: HttpAuthorizerPropsDsl.() -> Unit = {}
+    ): HttpAuthorizerProps {
+        val builder = HttpAuthorizerPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The integration for an API route.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * HttpApi httpApi;
+     * IntegrationCredentials integrationCredentials;
+     * ParameterMapping parameterMapping;
+     * PayloadFormatVersion payloadFormatVersion;
+     * HttpIntegration httpIntegration = HttpIntegration.Builder.create(this, "MyHttpIntegration")
+     * .httpApi(httpApi)
+     * .integrationType(HttpIntegrationType.HTTP_PROXY)
+     * // the properties below are optional
+     * .connectionId("connectionId")
+     * .connectionType(HttpConnectionType.VPC_LINK)
+     * .credentials(integrationCredentials)
+     * .integrationSubtype(HttpIntegrationSubtype.EVENTBRIDGE_PUT_EVENTS)
+     * .integrationUri("integrationUri")
+     * .method(HttpMethod.ANY)
+     * .parameterMapping(parameterMapping)
+     * .payloadFormatVersion(payloadFormatVersion)
+     * .secureServerName("secureServerName")
+     * .build();
+     * ```
+     */
+    public inline fun httpIntegration(
+        scope: Construct,
+        id: String,
+        block: HttpIntegrationDsl.() -> Unit = {},
+    ): HttpIntegration {
+        val builder = HttpIntegrationDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The integration properties.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * HttpApi httpApi;
+     * IntegrationCredentials integrationCredentials;
+     * ParameterMapping parameterMapping;
+     * PayloadFormatVersion payloadFormatVersion;
+     * HttpIntegrationProps httpIntegrationProps = HttpIntegrationProps.builder()
+     * .httpApi(httpApi)
+     * .integrationType(HttpIntegrationType.HTTP_PROXY)
+     * // the properties below are optional
+     * .connectionId("connectionId")
+     * .connectionType(HttpConnectionType.VPC_LINK)
+     * .credentials(integrationCredentials)
+     * .integrationSubtype(HttpIntegrationSubtype.EVENTBRIDGE_PUT_EVENTS)
+     * .integrationUri("integrationUri")
+     * .method(HttpMethod.ANY)
+     * .parameterMapping(parameterMapping)
+     * .payloadFormatVersion(payloadFormatVersion)
+     * .secureServerName("secureServerName")
+     * .build();
+     * ```
+     */
+    public inline fun httpIntegrationProps(
+        block: HttpIntegrationPropsDsl.() -> Unit = {}
+    ): HttpIntegrationProps {
+        val builder = HttpIntegrationPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Route class that creates the Route for API Gateway HTTP API.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * HttpApi httpApi;
+     * IHttpRouteAuthorizer httpRouteAuthorizer;
+     * HttpRouteIntegration httpRouteIntegration;
+     * HttpRouteKey httpRouteKey;
+     * HttpRoute httpRoute = HttpRoute.Builder.create(this, "MyHttpRoute")
+     * .httpApi(httpApi)
+     * .integration(httpRouteIntegration)
+     * .routeKey(httpRouteKey)
+     * // the properties below are optional
+     * .authorizationScopes(List.of("authorizationScopes"))
+     * .authorizer(httpRouteAuthorizer)
+     * .build();
+     * ```
+     */
+    public inline fun httpRoute(
+        scope: Construct,
+        id: String,
+        block: HttpRouteDsl.() -> Unit = {},
+    ): HttpRoute {
+        val builder = HttpRouteDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Input to the bind() operation, that binds an authorizer to a route.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * import software.constructs.*;
+     * Construct construct;
+     * HttpRoute httpRoute;
+     * HttpRouteAuthorizerBindOptions httpRouteAuthorizerBindOptions =
+     * HttpRouteAuthorizerBindOptions.builder()
+     * .route(httpRoute)
+     * .scope(construct)
+     * .build();
+     * ```
+     */
+    public inline fun httpRouteAuthorizerBindOptions(
+        block: HttpRouteAuthorizerBindOptionsDsl.() -> Unit = {}
+    ): HttpRouteAuthorizerBindOptions {
+        val builder = HttpRouteAuthorizerBindOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Results of binding an authorizer to an http route.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * HttpRouteAuthorizerConfig httpRouteAuthorizerConfig = HttpRouteAuthorizerConfig.builder()
+     * .authorizationType("authorizationType")
+     * // the properties below are optional
+     * .authorizationScopes(List.of("authorizationScopes"))
+     * .authorizerId("authorizerId")
+     * .build();
+     * ```
+     */
+    public inline fun httpRouteAuthorizerConfig(
+        block: HttpRouteAuthorizerConfigDsl.() -> Unit = {}
+    ): HttpRouteAuthorizerConfig {
+        val builder = HttpRouteAuthorizerConfigDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Options to the HttpRouteIntegration during its bind operation.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * import software.constructs.*;
+     * Construct construct;
+     * HttpRoute httpRoute;
+     * HttpRouteIntegrationBindOptions httpRouteIntegrationBindOptions =
+     * HttpRouteIntegrationBindOptions.builder()
+     * .route(httpRoute)
+     * .scope(construct)
+     * .build();
+     * ```
+     */
+    public inline fun httpRouteIntegrationBindOptions(
+        block: HttpRouteIntegrationBindOptionsDsl.() -> Unit = {}
+    ): HttpRouteIntegrationBindOptions {
+        val builder = HttpRouteIntegrationBindOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Config returned back as a result of the bind.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * IntegrationCredentials integrationCredentials;
+     * ParameterMapping parameterMapping;
+     * PayloadFormatVersion payloadFormatVersion;
+     * HttpRouteIntegrationConfig httpRouteIntegrationConfig = HttpRouteIntegrationConfig.builder()
+     * .payloadFormatVersion(payloadFormatVersion)
+     * .type(HttpIntegrationType.HTTP_PROXY)
+     * // the properties below are optional
+     * .connectionId("connectionId")
+     * .connectionType(HttpConnectionType.VPC_LINK)
+     * .credentials(integrationCredentials)
+     * .method(HttpMethod.ANY)
+     * .parameterMapping(parameterMapping)
+     * .secureServerName("secureServerName")
+     * .subtype(HttpIntegrationSubtype.EVENTBRIDGE_PUT_EVENTS)
+     * .uri("uri")
+     * .build();
+     * ```
+     */
+    public inline fun httpRouteIntegrationConfig(
+        block: HttpRouteIntegrationConfigDsl.() -> Unit = {}
+    ): HttpRouteIntegrationConfig {
+        val builder = HttpRouteIntegrationConfigDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties to initialize a new Route.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * HttpApi httpApi;
+     * IHttpRouteAuthorizer httpRouteAuthorizer;
+     * HttpRouteIntegration httpRouteIntegration;
+     * HttpRouteKey httpRouteKey;
+     * HttpRouteProps httpRouteProps = HttpRouteProps.builder()
+     * .httpApi(httpApi)
+     * .integration(httpRouteIntegration)
+     * .routeKey(httpRouteKey)
+     * // the properties below are optional
+     * .authorizationScopes(List.of("authorizationScopes"))
+     * .authorizer(httpRouteAuthorizer)
+     * .build();
+     * ```
+     */
+    public inline fun httpRouteProps(block: HttpRoutePropsDsl.() -> Unit = {}): HttpRouteProps {
+        val builder = HttpRoutePropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Represents a stage where an instance of the API is deployed.
+     *
+     * Example:
+     * ```
+     * HttpApi api;
+     * HttpStage.Builder.create(this, "Stage")
+     * .httpApi(api)
+     * .stageName("beta")
+     * .build();
+     * ```
+     */
+    public inline fun httpStage(
+        scope: Construct,
+        id: String,
+        block: HttpStageDsl.() -> Unit = {},
+    ): HttpStage {
+        val builder = HttpStageDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The attributes used to import existing HttpStage.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * HttpApi httpApi;
+     * HttpStageAttributes httpStageAttributes = HttpStageAttributes.builder()
+     * .api(httpApi)
+     * .stageName("stageName")
+     * .build();
+     * ```
+     */
+    public inline fun httpStageAttributes(
+        block: HttpStageAttributesDsl.() -> Unit = {}
+    ): HttpStageAttributes {
+        val builder = HttpStageAttributesDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The options to create a new Stage for an HTTP API.
+     *
+     * Example:
+     * ```
+     * HttpApi api;
+     * DomainName dn;
+     * api.addStage("beta", HttpStageOptions.builder()
+     * .stageName("beta")
+     * .autoDeploy(true)
+     * // https://${dn.domainName}/bar goes to the beta stage
+     * .domainMapping(DomainMappingOptions.builder()
+     * .domainName(dn)
+     * .mappingKey("bar")
+     * .build())
+     * .build());
+     * ```
+     */
+    public inline fun httpStageOptions(
+        block: HttpStageOptionsDsl.() -> Unit = {}
+    ): HttpStageOptions {
+        val builder = HttpStageOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties to initialize an instance of `HttpStage`.
+     *
+     * Example:
+     * ```
+     * HttpApi api;
+     * HttpStage.Builder.create(this, "Stage")
+     * .httpApi(api)
+     * .stageName("beta")
+     * .build();
+     * ```
+     */
+    public inline fun httpStageProps(block: HttpStagePropsDsl.() -> Unit = {}): HttpStageProps {
+        val builder = HttpStagePropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The mTLS authentication configuration for a custom domain name.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.services.s3.*;
+     * import software.amazon.awscdk.services.certificatemanager.*;
+     * Bucket bucket;
+     * String certArn = "arn:aws:acm:us-east-1:111111111111:certificate";
+     * String domainName = "example.com";
+     * DomainName.Builder.create(this, "DomainName")
+     * .domainName(domainName)
+     * .certificate(Certificate.fromCertificateArn(this, "cert", certArn))
+     * .mtls(MTLSConfig.builder()
+     * .bucket(bucket)
+     * .key("someca.pem")
+     * .version("version")
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun mTLSConfig(block: MTLSConfigDsl.() -> Unit = {}): MTLSConfig {
+        val builder = MTLSConfigDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The attributes used to import existing Stage.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * StageAttributes stageAttributes = StageAttributes.builder()
+     * .stageName("stageName")
+     * .build();
+     * ```
+     */
+    public inline fun stageAttributes(block: StageAttributesDsl.() -> Unit = {}): StageAttributes {
+        val builder = StageAttributesDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Options required to create a new stage.
+     *
+     * Options that are common between HTTP and Websocket APIs.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * DomainName domainName;
+     * StageOptions stageOptions = StageOptions.builder()
+     * .autoDeploy(false)
+     * .domainMapping(DomainMappingOptions.builder()
+     * .domainName(domainName)
+     * // the properties below are optional
+     * .mappingKey("mappingKey")
+     * .build())
+     * .throttle(ThrottleSettings.builder()
+     * .burstLimit(123)
+     * .rateLimit(123)
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun stageOptions(block: StageOptionsDsl.() -> Unit = {}): StageOptions {
+        val builder = StageOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Container for defining throttling parameters to API stages.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * ThrottleSettings throttleSettings = ThrottleSettings.builder()
+     * .burstLimit(123)
+     * .rateLimit(123)
+     * .build();
+     * ```
+     */
+    public inline fun throttleSettings(
+        block: ThrottleSettingsDsl.() -> Unit = {}
+    ): ThrottleSettings {
+        val builder = ThrottleSettingsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Define a new VPC Link Specifies an API Gateway VPC link for a HTTP API to access resources in
+     * an Amazon Virtual Private Cloud (VPC).
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.services.ec2.*;
+     * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+     * import software.amazon.awscdk.aws_apigatewayv2_integrations.HttpAlbIntegration;
+     * Vpc vpc = new Vpc(this, "VPC");
+     * ApplicationLoadBalancer alb = ApplicationLoadBalancer.Builder.create(this,
+     * "AppLoadBalancer").vpc(vpc).build();
+     * VpcLink vpcLink = VpcLink.Builder.create(this, "VpcLink").vpc(vpc).build();
+     * // Creating an HTTP ALB Integration:
+     * HttpAlbIntegration albIntegration = HttpAlbIntegration.Builder.create("ALBIntegration",
+     * alb.getListeners()[0]).build();
+     * ```
+     */
+    public inline fun vpcLink(
+        scope: Construct,
+        id: String,
+        block: VpcLinkDsl.() -> Unit = {},
+    ): VpcLink {
+        val builder = VpcLinkDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Attributes when importing a new VpcLink.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.services.ec2.*;
+     * Vpc vpc;
+     * IVpcLink awesomeLink = VpcLink.fromVpcLinkAttributes(this, "awesome-vpc-link",
+     * VpcLinkAttributes.builder()
+     * .vpcLinkId("us-east-1_oiuR12Abd")
+     * .vpc(vpc)
+     * .build());
+     * ```
+     */
+    public inline fun vpcLinkAttributes(
+        block: VpcLinkAttributesDsl.() -> Unit = {}
+    ): VpcLinkAttributes {
+        val builder = VpcLinkAttributesDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for a VpcLink.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.services.ec2.*;
+     * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+     * import software.amazon.awscdk.aws_apigatewayv2_integrations.HttpAlbIntegration;
+     * Vpc vpc = new Vpc(this, "VPC");
+     * ApplicationLoadBalancer alb = ApplicationLoadBalancer.Builder.create(this,
+     * "AppLoadBalancer").vpc(vpc).build();
+     * VpcLink vpcLink = VpcLink.Builder.create(this, "VpcLink").vpc(vpc).build();
+     * // Creating an HTTP ALB Integration:
+     * HttpAlbIntegration albIntegration = HttpAlbIntegration.Builder.create("ALBIntegration",
+     * alb.getListeners()[0]).build();
+     * ```
+     */
+    public inline fun vpcLinkProps(block: VpcLinkPropsDsl.() -> Unit = {}): VpcLinkProps {
+        val builder = VpcLinkPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Create a new API Gateway WebSocket API endpoint.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketLambdaIntegration;
+     * Function messageHandler;
+     * WebSocketApi webSocketApi = new WebSocketApi(this, "mywsapi");
+     * WebSocketStage.Builder.create(this, "mystage")
+     * .webSocketApi(webSocketApi)
+     * .stageName("dev")
+     * .autoDeploy(true)
+     * .build();
+     * webSocketApi.addRoute("sendMessage", WebSocketRouteOptions.builder()
+     * .integration(new WebSocketLambdaIntegration("SendMessageIntegration", messageHandler))
+     * .build());
+     * ```
+     */
+    public inline fun webSocketApi(
+        scope: Construct,
+        id: String,
+        block: WebSocketApiDsl.() -> Unit = {},
+    ): WebSocketApi {
+        val builder = WebSocketApiDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Attributes for importing a WebSocketApi into the CDK.
+     *
+     * Example:
+     * ```
+     * IWebSocketApi webSocketApi = WebSocketApi.fromWebSocketApiAttributes(this, "mywsapi",
+     * WebSocketApiAttributes.builder().webSocketId("api-1234").build());
+     * ```
+     */
+    public inline fun webSocketApiAttributes(
+        block: WebSocketApiAttributesDsl.() -> Unit = {}
+    ): WebSocketApiAttributes {
+        val builder = WebSocketApiAttributesDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Props for WebSocket API.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.aws_apigatewayv2_authorizers.WebSocketLambdaAuthorizer;
+     * import software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketLambdaIntegration;
+     * // This function handles your auth logic
+     * Function authHandler;
+     * // This function handles your WebSocket requests
+     * Function handler;
+     * WebSocketLambdaAuthorizer authorizer = new WebSocketLambdaAuthorizer("Authorizer",
+     * authHandler);
+     * WebSocketLambdaIntegration integration = new WebSocketLambdaIntegration("Integration",
+     * handler);
+     * WebSocketApi.Builder.create(this, "WebSocketApi")
+     * .connectRouteOptions(WebSocketRouteOptions.builder()
+     * .integration(integration)
+     * .authorizer(authorizer)
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun webSocketApiProps(
+        block: WebSocketApiPropsDsl.() -> Unit = {}
+    ): WebSocketApiProps {
+        val builder = WebSocketApiPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * An authorizer for WebSocket Apis.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * WebSocketApi webSocketApi;
+     * WebSocketAuthorizer webSocketAuthorizer = WebSocketAuthorizer.Builder.create(this,
+     * "MyWebSocketAuthorizer")
+     * .identitySource(List.of("identitySource"))
+     * .type(WebSocketAuthorizerType.LAMBDA)
+     * .webSocketApi(webSocketApi)
+     * // the properties below are optional
+     * .authorizerName("authorizerName")
+     * .authorizerUri("authorizerUri")
+     * .build();
+     * ```
+     */
+    public inline fun webSocketAuthorizer(
+        scope: Construct,
+        id: String,
+        block: WebSocketAuthorizerDsl.() -> Unit = {},
+    ): WebSocketAuthorizer {
+        val builder = WebSocketAuthorizerDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Reference to an WebSocket authorizer.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * WebSocketAuthorizerAttributes webSocketAuthorizerAttributes =
+     * WebSocketAuthorizerAttributes.builder()
+     * .authorizerId("authorizerId")
+     * .authorizerType("authorizerType")
+     * .build();
+     * ```
+     */
+    public inline fun webSocketAuthorizerAttributes(
+        block: WebSocketAuthorizerAttributesDsl.() -> Unit = {}
+    ): WebSocketAuthorizerAttributes {
+        val builder = WebSocketAuthorizerAttributesDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties to initialize an instance of `WebSocketAuthorizer`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * WebSocketApi webSocketApi;
+     * WebSocketAuthorizerProps webSocketAuthorizerProps = WebSocketAuthorizerProps.builder()
+     * .identitySource(List.of("identitySource"))
+     * .type(WebSocketAuthorizerType.LAMBDA)
+     * .webSocketApi(webSocketApi)
+     * // the properties below are optional
+     * .authorizerName("authorizerName")
+     * .authorizerUri("authorizerUri")
+     * .build();
+     * ```
+     */
+    public inline fun webSocketAuthorizerProps(
+        block: WebSocketAuthorizerPropsDsl.() -> Unit = {}
+    ): WebSocketAuthorizerProps {
+        val builder = WebSocketAuthorizerPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The integration for an API route.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * import software.amazon.awscdk.services.iam.*;
+     * Role role;
+     * WebSocketApi webSocketApi;
+     * WebSocketIntegration webSocketIntegration = WebSocketIntegration.Builder.create(this,
+     * "MyWebSocketIntegration")
+     * .integrationType(WebSocketIntegrationType.AWS_PROXY)
+     * .integrationUri("integrationUri")
+     * .webSocketApi(webSocketApi)
+     * // the properties below are optional
+     * .credentialsRole(role)
+     * .integrationMethod("integrationMethod")
+     * .passthroughBehavior(PassthroughBehavior.WHEN_NO_MATCH)
+     * .requestParameters(Map.of(
+     * "requestParametersKey", "requestParameters"))
+     * .requestTemplates(Map.of(
+     * "requestTemplatesKey", "requestTemplates"))
+     * .templateSelectionExpression("templateSelectionExpression")
+     * .build();
+     * ```
+     */
+    public inline fun webSocketIntegration(
+        scope: Construct,
+        id: String,
+        block: WebSocketIntegrationDsl.() -> Unit = {},
+    ): WebSocketIntegration {
+        val builder = WebSocketIntegrationDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The integration properties.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * import software.amazon.awscdk.services.iam.*;
+     * Role role;
+     * WebSocketApi webSocketApi;
+     * WebSocketIntegrationProps webSocketIntegrationProps = WebSocketIntegrationProps.builder()
+     * .integrationType(WebSocketIntegrationType.AWS_PROXY)
+     * .integrationUri("integrationUri")
+     * .webSocketApi(webSocketApi)
+     * // the properties below are optional
+     * .credentialsRole(role)
+     * .integrationMethod("integrationMethod")
+     * .passthroughBehavior(PassthroughBehavior.WHEN_NO_MATCH)
+     * .requestParameters(Map.of(
+     * "requestParametersKey", "requestParameters"))
+     * .requestTemplates(Map.of(
+     * "requestTemplatesKey", "requestTemplates"))
+     * .templateSelectionExpression("templateSelectionExpression")
+     * .build();
+     * ```
+     */
+    public inline fun webSocketIntegrationProps(
+        block: WebSocketIntegrationPropsDsl.() -> Unit = {}
+    ): WebSocketIntegrationProps {
+        val builder = WebSocketIntegrationPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Route class that creates the Route for API Gateway WebSocket API.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * WebSocketApi webSocketApi;
+     * IWebSocketRouteAuthorizer webSocketRouteAuthorizer;
+     * WebSocketRouteIntegration webSocketRouteIntegration;
+     * WebSocketRoute webSocketRoute = WebSocketRoute.Builder.create(this, "MyWebSocketRoute")
+     * .integration(webSocketRouteIntegration)
+     * .routeKey("routeKey")
+     * .webSocketApi(webSocketApi)
+     * // the properties below are optional
+     * .apiKeyRequired(false)
+     * .authorizer(webSocketRouteAuthorizer)
+     * .returnResponse(false)
+     * .build();
+     * ```
+     */
+    public inline fun webSocketRoute(
+        scope: Construct,
+        id: String,
+        block: WebSocketRouteDsl.() -> Unit = {},
+    ): WebSocketRoute {
+        val builder = WebSocketRouteDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Input to the bind() operation, that binds an authorizer to a route.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * import software.constructs.*;
+     * Construct construct;
+     * WebSocketRoute webSocketRoute;
+     * WebSocketRouteAuthorizerBindOptions webSocketRouteAuthorizerBindOptions =
+     * WebSocketRouteAuthorizerBindOptions.builder()
+     * .route(webSocketRoute)
+     * .scope(construct)
+     * .build();
+     * ```
+     */
+    public inline fun webSocketRouteAuthorizerBindOptions(
+        block: WebSocketRouteAuthorizerBindOptionsDsl.() -> Unit = {}
+    ): WebSocketRouteAuthorizerBindOptions {
+        val builder = WebSocketRouteAuthorizerBindOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Results of binding an authorizer to an WebSocket route.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * WebSocketRouteAuthorizerConfig webSocketRouteAuthorizerConfig =
+     * WebSocketRouteAuthorizerConfig.builder()
+     * .authorizationType("authorizationType")
+     * // the properties below are optional
+     * .authorizerId("authorizerId")
+     * .build();
+     * ```
+     */
+    public inline fun webSocketRouteAuthorizerConfig(
+        block: WebSocketRouteAuthorizerConfigDsl.() -> Unit = {}
+    ): WebSocketRouteAuthorizerConfig {
+        val builder = WebSocketRouteAuthorizerConfigDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Options to the WebSocketRouteIntegration during its bind operation.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * import software.constructs.*;
+     * Construct construct;
+     * WebSocketRoute webSocketRoute;
+     * WebSocketRouteIntegrationBindOptions webSocketRouteIntegrationBindOptions =
+     * WebSocketRouteIntegrationBindOptions.builder()
+     * .route(webSocketRoute)
+     * .scope(construct)
+     * .build();
+     * ```
+     */
+    public inline fun webSocketRouteIntegrationBindOptions(
+        block: WebSocketRouteIntegrationBindOptionsDsl.() -> Unit = {}
+    ): WebSocketRouteIntegrationBindOptions {
+        val builder = WebSocketRouteIntegrationBindOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Config returned back as a result of the bind.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * import software.amazon.awscdk.services.iam.*;
+     * Role role;
+     * WebSocketRouteIntegrationConfig webSocketRouteIntegrationConfig =
+     * WebSocketRouteIntegrationConfig.builder()
+     * .type(WebSocketIntegrationType.AWS_PROXY)
+     * .uri("uri")
+     * // the properties below are optional
+     * .credentialsRole(role)
+     * .method("method")
+     * .passthroughBehavior(PassthroughBehavior.WHEN_NO_MATCH)
+     * .requestParameters(Map.of(
+     * "requestParametersKey", "requestParameters"))
+     * .requestTemplates(Map.of(
+     * "requestTemplatesKey", "requestTemplates"))
+     * .templateSelectionExpression("templateSelectionExpression")
+     * .build();
+     * ```
+     */
+    public inline fun webSocketRouteIntegrationConfig(
+        block: WebSocketRouteIntegrationConfigDsl.() -> Unit = {}
+    ): WebSocketRouteIntegrationConfig {
+        val builder = WebSocketRouteIntegrationConfigDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Options used to add route to the API.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketLambdaIntegration;
+     * Function messageHandler;
+     * WebSocketApi webSocketApi = new WebSocketApi(this, "mywsapi");
+     * WebSocketStage.Builder.create(this, "mystage")
+     * .webSocketApi(webSocketApi)
+     * .stageName("dev")
+     * .autoDeploy(true)
+     * .build();
+     * webSocketApi.addRoute("sendMessage", WebSocketRouteOptions.builder()
+     * .integration(new WebSocketLambdaIntegration("SendMessageIntegration", messageHandler))
+     * .build());
+     * ```
+     */
+    public inline fun webSocketRouteOptions(
+        block: WebSocketRouteOptionsDsl.() -> Unit = {}
+    ): WebSocketRouteOptions {
+        val builder = WebSocketRouteOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties to initialize a new Route.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * WebSocketApi webSocketApi;
+     * IWebSocketRouteAuthorizer webSocketRouteAuthorizer;
+     * WebSocketRouteIntegration webSocketRouteIntegration;
+     * WebSocketRouteProps webSocketRouteProps = WebSocketRouteProps.builder()
+     * .integration(webSocketRouteIntegration)
+     * .routeKey("routeKey")
+     * .webSocketApi(webSocketApi)
+     * // the properties below are optional
+     * .apiKeyRequired(false)
+     * .authorizer(webSocketRouteAuthorizer)
+     * .returnResponse(false)
+     * .build();
+     * ```
+     */
+    public inline fun webSocketRouteProps(
+        block: WebSocketRoutePropsDsl.() -> Unit = {}
+    ): WebSocketRouteProps {
+        val builder = WebSocketRoutePropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Represents a stage where an instance of the API is deployed.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketLambdaIntegration;
+     * Function connectHandler;
+     * Function disconnectHandler;
+     * Function defaultHandler;
+     * WebSocketApi webSocketApi = WebSocketApi.Builder.create(this, "mywsapi")
+     * .connectRouteOptions(WebSocketRouteOptions.builder().integration(new
+     * WebSocketLambdaIntegration("ConnectIntegration", connectHandler)).build())
+     * .disconnectRouteOptions(WebSocketRouteOptions.builder().integration(new
+     * WebSocketLambdaIntegration("DisconnectIntegration", disconnectHandler)).build())
+     * .defaultRouteOptions(WebSocketRouteOptions.builder().integration(new
+     * WebSocketLambdaIntegration("DefaultIntegration", defaultHandler)).build())
+     * .build();
+     * WebSocketStage.Builder.create(this, "mystage")
+     * .webSocketApi(webSocketApi)
+     * .stageName("dev")
+     * .autoDeploy(true)
+     * .build();
+     * ```
+     */
+    public inline fun webSocketStage(
+        scope: Construct,
+        id: String,
+        block: WebSocketStageDsl.() -> Unit = {},
+    ): WebSocketStage {
+        val builder = WebSocketStageDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The attributes used to import existing WebSocketStage.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.apigatewayv2.*;
+     * WebSocketApi webSocketApi;
+     * WebSocketStageAttributes webSocketStageAttributes = WebSocketStageAttributes.builder()
+     * .api(webSocketApi)
+     * .stageName("stageName")
+     * .build();
+     * ```
+     */
+    public inline fun webSocketStageAttributes(
+        block: WebSocketStageAttributesDsl.() -> Unit = {}
+    ): WebSocketStageAttributes {
+        val builder = WebSocketStageAttributesDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties to initialize an instance of `WebSocketStage`.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketLambdaIntegration;
+     * Function connectHandler;
+     * Function disconnectHandler;
+     * Function defaultHandler;
+     * WebSocketApi webSocketApi = WebSocketApi.Builder.create(this, "mywsapi")
+     * .connectRouteOptions(WebSocketRouteOptions.builder().integration(new
+     * WebSocketLambdaIntegration("ConnectIntegration", connectHandler)).build())
+     * .disconnectRouteOptions(WebSocketRouteOptions.builder().integration(new
+     * WebSocketLambdaIntegration("DisconnectIntegration", disconnectHandler)).build())
+     * .defaultRouteOptions(WebSocketRouteOptions.builder().integration(new
+     * WebSocketLambdaIntegration("DefaultIntegration", defaultHandler)).build())
+     * .build();
+     * WebSocketStage.Builder.create(this, "mystage")
+     * .webSocketApi(webSocketApi)
+     * .stageName("dev")
+     * .autoDeploy(true)
+     * .build();
+     * ```
+     */
+    public inline fun webSocketStageProps(
+        block: WebSocketStagePropsDsl.() -> Unit = {}
+    ): WebSocketStageProps {
+        val builder = WebSocketStagePropsDsl()
         builder.apply(block)
         return builder.build()
     }

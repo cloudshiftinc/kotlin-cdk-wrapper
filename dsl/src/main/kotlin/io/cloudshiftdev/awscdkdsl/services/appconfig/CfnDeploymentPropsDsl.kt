@@ -86,8 +86,8 @@ public class CfnDeploymentPropsDsl {
     }
 
     /**
-     * @param kmsKeyIdentifier The AWS KMS key identifier (key ID, key alias, or key ARN). AWS
-     *   AppConfig uses this ID to encrypt the configuration data using a customer managed key.
+     * @param kmsKeyIdentifier The AWS Key Management Service key identifier (key ID, key alias, or
+     *   key ARN) provided when the resource was created or updated.
      */
     public fun kmsKeyIdentifier(kmsKeyIdentifier: String) {
         cdkBuilder.kmsKeyIdentifier(kmsKeyIdentifier)

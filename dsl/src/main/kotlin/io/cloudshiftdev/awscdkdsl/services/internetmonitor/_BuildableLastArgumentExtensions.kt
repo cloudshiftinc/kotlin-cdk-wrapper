@@ -14,7 +14,11 @@ package io.cloudshiftdev.awscdkdsl.services.internetmonitor
 import kotlin.Unit
 import software.amazon.awscdk.services.internetmonitor.CfnMonitor
 
-/**  */
+/**
+ * A complex type with the configuration information that determines the threshold and other
+ * conditions for when Internet Monitor creates a health event for an overall performance or
+ * availability issue, across an application's geographies.
+ */
 public inline fun CfnMonitor.setHealthEventsConfig(
     block: CfnMonitorHealthEventsConfigPropertyDsl.() -> Unit = {}
 ) {

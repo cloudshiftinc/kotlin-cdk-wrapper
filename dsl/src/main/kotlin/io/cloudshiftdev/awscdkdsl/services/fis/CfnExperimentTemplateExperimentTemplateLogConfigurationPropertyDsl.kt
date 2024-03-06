@@ -23,7 +23,7 @@ import software.amazon.awscdk.services.fis.CfnExperimentTemplate
  *
  * For more information, see
  * [Experiment logging](https://docs.aws.amazon.com/fis/latest/userguide/monitoring-logging.html) in
- * the *AWS Fault Injection Simulator User Guide* .
+ * the *AWS Fault Injection Service User Guide* .
  *
  * Example:
  * ```

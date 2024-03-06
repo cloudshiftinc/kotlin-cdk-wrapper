@@ -129,6 +129,8 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * .audioFramesPerPes(123)
  * .audioPids("audioPids")
  * .ecmPid("ecmPid")
+ * .klvBehavior("klvBehavior")
+ * .klvDataPids("klvDataPids")
  * .nielsenId3Behavior("nielsenId3Behavior")
  * .patInterval(123)
  * .pcrControl("pcrControl")

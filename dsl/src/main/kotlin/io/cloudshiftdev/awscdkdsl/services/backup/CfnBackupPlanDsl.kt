@@ -49,16 +49,19 @@ import software.constructs.Construct
  * .lifecycle(LifecycleResourceTypeProperty.builder()
  * .deleteAfterDays(123)
  * .moveToColdStorageAfterDays(123)
+ * .optInToArchiveForSupportedResources(false)
  * .build())
  * .build()))
  * .enableContinuousBackup(false)
  * .lifecycle(LifecycleResourceTypeProperty.builder()
  * .deleteAfterDays(123)
  * .moveToColdStorageAfterDays(123)
+ * .optInToArchiveForSupportedResources(false)
  * .build())
  * .recoveryPointTags(Map.of(
  * "recoveryPointTagsKey", "recoveryPointTags"))
  * .scheduleExpression("scheduleExpression")
+ * .scheduleExpressionTimezone("scheduleExpressionTimezone")
  * .startWindowMinutes(123)
  * .build()))
  * // the properties below are optional
@@ -119,22 +122,6 @@ public class CfnBackupPlanDsl(
      *   the resources that you create.
      */
     public fun backupPlanTags(backupPlanTags: Map<String, String>) {
-        cdkBuilder.backupPlanTags(backupPlanTags)
-    }
-
-    /**
-     * To help organize your resources, you can assign your own metadata to the resources that you
-     * create.
-     *
-     * Each tag is a key-value pair. The specified tags are assigned to all backups created with
-     * this plan.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupplan.html#cfn-backup-backupplan-backupplantags)
-     *
-     * @param backupPlanTags To help organize your resources, you can assign your own metadata to
-     *   the resources that you create.
-     */
-    public fun backupPlanTags(backupPlanTags: IResolvable) {
         cdkBuilder.backupPlanTags(backupPlanTags)
     }
 

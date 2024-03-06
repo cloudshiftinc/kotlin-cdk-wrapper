@@ -50,9 +50,9 @@ public object iotwireless {
      * .expression("expression")
      * .expressionType("expressionType")
      * .name("name")
-     * .roleArn("roleArn")
      * // the properties below are optional
      * .description("description")
+     * .roleArn("roleArn")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -84,9 +84,9 @@ public object iotwireless {
      * .expression("expression")
      * .expressionType("expressionType")
      * .name("name")
-     * .roleArn("roleArn")
      * // the properties below are optional
      * .description("description")
+     * .roleArn("roleArn")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -1381,8 +1381,6 @@ public object iotwireless {
     }
 
     /**
-     * OTAA device object for create APIs for v1.0.x.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -1493,7 +1491,7 @@ public object iotwireless {
     }
 
     /**
-     * LoRaWAN object for create APIs.
+     * Session keys for ABP v1.0.x.
      *
      * Example:
      * ```

@@ -87,7 +87,7 @@ public class CfnSafetyRulePropsDsl {
         cdkBuilder.assertionRule(assertionRule)
     }
 
-    /** @param controlPanelArn The Amazon Resource Name (ARN) for the control panel. */
+    /** @param controlPanelArn The Amazon Resource Name (ARN) of the control panel. */
     public fun controlPanelArn(controlPanelArn: String) {
         cdkBuilder.controlPanelArn(controlPanelArn)
     }
@@ -151,12 +151,12 @@ public class CfnSafetyRulePropsDsl {
         cdkBuilder.ruleConfig(ruleConfig)
     }
 
-    /** @param tags The value for a tag. */
+    /** @param tags The tags associated with the safety rule. */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
-    /** @param tags The value for a tag. */
+    /** @param tags The tags associated with the safety rule. */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
     }

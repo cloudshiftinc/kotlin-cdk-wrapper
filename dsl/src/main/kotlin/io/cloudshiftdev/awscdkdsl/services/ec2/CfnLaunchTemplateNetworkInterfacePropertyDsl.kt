@@ -36,9 +36,20 @@ import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
  * NetworkInterfaceProperty networkInterfaceProperty = NetworkInterfaceProperty.builder()
  * .associateCarrierIpAddress(false)
  * .associatePublicIpAddress(false)
+ * .connectionTrackingSpecification(ConnectionTrackingSpecificationProperty.builder()
+ * .tcpEstablishedTimeout(123)
+ * .udpStreamTimeout(123)
+ * .udpTimeout(123)
+ * .build())
  * .deleteOnTermination(false)
  * .description("description")
  * .deviceIndex(123)
+ * .enaSrdSpecification(EnaSrdSpecificationProperty.builder()
+ * .enaSrdEnabled(false)
+ * .enaSrdUdpSpecification(EnaSrdUdpSpecificationProperty.builder()
+ * .enaSrdUdpEnabled(false)
+ * .build())
+ * .build())
  * .groups(List.of("groups"))
  * .interfaceType("interfaceType")
  * .ipv4PrefixCount(123)
@@ -55,6 +66,7 @@ import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
  * .build()))
  * .networkCardIndex(123)
  * .networkInterfaceId("networkInterfaceId")
+ * .primaryIpv6(false)
  * .privateIpAddress("privateIpAddress")
  * .privateIpAddresses(List.of(PrivateIpAddProperty.builder()
  * .primary(false)
@@ -108,7 +120,10 @@ public class CfnLaunchTemplateNetworkInterfacePropertyDsl {
 
     /**
      * @param associatePublicIpAddress Associates a public IPv4 address with eth0 for a new network
-     *   interface.
+     *   interface. AWS charges for all public IPv4 addresses, including public IPv4 addresses
+     *   associated with running instances and Elastic IP addresses. For more information, see the
+     *   *Public IPv4 Address* tab on the
+     *   [Amazon VPC pricing page](https://docs.aws.amazon.com/vpc/pricing/) .
      */
     public fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
         cdkBuilder.associatePublicIpAddress(associatePublicIpAddress)
@@ -116,10 +131,31 @@ public class CfnLaunchTemplateNetworkInterfacePropertyDsl {
 
     /**
      * @param associatePublicIpAddress Associates a public IPv4 address with eth0 for a new network
-     *   interface.
+     *   interface. AWS charges for all public IPv4 addresses, including public IPv4 addresses
+     *   associated with running instances and Elastic IP addresses. For more information, see the
+     *   *Public IPv4 Address* tab on the
+     *   [Amazon VPC pricing page](https://docs.aws.amazon.com/vpc/pricing/) .
      */
     public fun associatePublicIpAddress(associatePublicIpAddress: IResolvable) {
         cdkBuilder.associatePublicIpAddress(associatePublicIpAddress)
+    }
+
+    /**
+     * @param connectionTrackingSpecification A connection tracking specification for the network
+     *   interface.
+     */
+    public fun connectionTrackingSpecification(connectionTrackingSpecification: IResolvable) {
+        cdkBuilder.connectionTrackingSpecification(connectionTrackingSpecification)
+    }
+
+    /**
+     * @param connectionTrackingSpecification A connection tracking specification for the network
+     *   interface.
+     */
+    public fun connectionTrackingSpecification(
+        connectionTrackingSpecification: CfnLaunchTemplate.ConnectionTrackingSpecificationProperty
+    ) {
+        cdkBuilder.connectionTrackingSpecification(connectionTrackingSpecification)
     }
 
     /**
@@ -146,6 +182,18 @@ public class CfnLaunchTemplateNetworkInterfacePropertyDsl {
     /** @param deviceIndex The device index for the network interface attachment. */
     public fun deviceIndex(deviceIndex: Number) {
         cdkBuilder.deviceIndex(deviceIndex)
+    }
+
+    /** @param enaSrdSpecification The ENA Express configuration for the network interface. */
+    public fun enaSrdSpecification(enaSrdSpecification: IResolvable) {
+        cdkBuilder.enaSrdSpecification(enaSrdSpecification)
+    }
+
+    /** @param enaSrdSpecification The ENA Express configuration for the network interface. */
+    public fun enaSrdSpecification(
+        enaSrdSpecification: CfnLaunchTemplate.EnaSrdSpecificationProperty
+    ) {
+        cdkBuilder.enaSrdSpecification(enaSrdSpecification)
     }
 
     /** @param groups The IDs of one or more security groups. */
@@ -281,6 +329,30 @@ public class CfnLaunchTemplateNetworkInterfacePropertyDsl {
     /** @param networkInterfaceId The ID of the network interface. */
     public fun networkInterfaceId(networkInterfaceId: String) {
         cdkBuilder.networkInterfaceId(networkInterfaceId)
+    }
+
+    /**
+     * @param primaryIpv6 The primary IPv6 address of the network interface. When you enable an IPv6
+     *   GUA address to be a primary IPv6, the first IPv6 GUA will be made the primary IPv6 address
+     *   until the instance is terminated or the network interface is detached. For more information
+     *   about primary IPv6 addresses, see
+     *   [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
+     *   .
+     */
+    public fun primaryIpv6(primaryIpv6: Boolean) {
+        cdkBuilder.primaryIpv6(primaryIpv6)
+    }
+
+    /**
+     * @param primaryIpv6 The primary IPv6 address of the network interface. When you enable an IPv6
+     *   GUA address to be a primary IPv6, the first IPv6 GUA will be made the primary IPv6 address
+     *   until the instance is terminated or the network interface is detached. For more information
+     *   about primary IPv6 addresses, see
+     *   [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
+     *   .
+     */
+    public fun primaryIpv6(primaryIpv6: IResolvable) {
+        cdkBuilder.primaryIpv6(primaryIpv6)
     }
 
     /** @param privateIpAddress The primary private IPv4 address of the network interface. */

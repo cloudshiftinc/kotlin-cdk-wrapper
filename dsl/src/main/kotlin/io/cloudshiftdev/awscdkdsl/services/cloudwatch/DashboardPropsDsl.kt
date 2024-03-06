@@ -60,7 +60,8 @@ public class DashboardPropsDsl {
 
     /**
      * @param defaultInterval Interval duration for metrics. You can specify defaultInterval with
-     *   the relative time(eg. cdk.Duration.days(7)).
+     *   the relative time(eg. cdk.Duration.days(7)). Both properties `defaultInterval` and `start`
+     *   cannot be set at once.
      */
     public fun defaultInterval(defaultInterval: Duration) {
         cdkBuilder.defaultInterval(defaultInterval)
@@ -93,6 +94,8 @@ public class DashboardPropsDsl {
      *   shows the last 8 hours and -P3M shows the last three months. You can also use start along
      *   with an end field, to specify an absolute time range. When specifying an absolute time
      *   range, use the ISO 8601 format. For example, 2018-12-17T06:00:00.000Z.
+     *
+     * Both properties `defaultInterval` and `start` cannot be set at once.
      */
     public fun start(start: String) {
         cdkBuilder.start(start)

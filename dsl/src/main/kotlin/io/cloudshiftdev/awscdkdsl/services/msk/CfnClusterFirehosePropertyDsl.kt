@@ -48,7 +48,7 @@ public class CfnClusterFirehosePropertyDsl {
     }
 
     /**
-     * @param enabled Specifies whether broker logs get send to the specified Kinesis Data Firehose
+     * @param enabled Specifies whether broker logs get sent to the specified Kinesis Data Firehose
      *   delivery stream.
      */
     public fun enabled(enabled: Boolean) {
@@ -56,7 +56,7 @@ public class CfnClusterFirehosePropertyDsl {
     }
 
     /**
-     * @param enabled Specifies whether broker logs get send to the specified Kinesis Data Firehose
+     * @param enabled Specifies whether broker logs get sent to the specified Kinesis Data Firehose
      *   delivery stream.
      */
     public fun enabled(enabled: IResolvable) {

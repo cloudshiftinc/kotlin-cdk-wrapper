@@ -24,7 +24,7 @@ import software.amazon.awscdk.services.cognito.UserPoolIdentityProviderSamlMetad
 import software.constructs.Construct
 
 /**
- * Represents a identity provider that integrates with SAML.
+ * Represents an identity provider that integrates with SAML.
  *
  * Example:
  * ```

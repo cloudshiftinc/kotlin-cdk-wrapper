@@ -27,6 +27,7 @@ import software.amazon.awscdk.services.events.CfnConnectionProps
  * import software.amazon.awscdk.services.events.*;
  * CfnConnectionProps cfnConnectionProps = CfnConnectionProps.builder()
  * .authorizationType("authorizationType")
+ * // the properties below are optional
  * .authParameters(AuthParametersProperty.builder()
  * .apiKeyAuthParameters(ApiKeyAuthParametersProperty.builder()
  * .apiKeyName("apiKeyName")
@@ -86,7 +87,6 @@ import software.amazon.awscdk.services.events.CfnConnectionProps
  * .build())
  * .build())
  * .build())
- * // the properties below are optional
  * .description("description")
  * .name("name")
  * .build();

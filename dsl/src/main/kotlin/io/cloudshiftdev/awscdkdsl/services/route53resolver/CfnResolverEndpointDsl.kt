@@ -52,6 +52,7 @@ import software.constructs.Construct
  * .name("name")
  * .outpostArn("outpostArn")
  * .preferredInstanceType("preferredInstanceType")
+ * .protocols(List.of("protocols"))
  * .resolverEndpointType("resolverEndpointType")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -71,6 +72,8 @@ public class CfnResolverEndpointDsl(
         CfnResolverEndpoint.Builder.create(scope, id)
 
     private val _ipAddresses: MutableList<Any> = mutableListOf()
+
+    private val _protocols: MutableList<String> = mutableListOf()
 
     private val _securityGroupIds: MutableList<String> = mutableListOf()
 
@@ -155,21 +158,77 @@ public class CfnResolverEndpointDsl(
     }
 
     /**
+     * The ARN (Amazon Resource Name) for the Outpost.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#cfn-route53resolver-resolverendpoint-outpostarn)
      *
-     * @param outpostArn
+     * @param outpostArn The ARN (Amazon Resource Name) for the Outpost.
      */
     public fun outpostArn(outpostArn: String) {
         cdkBuilder.outpostArn(outpostArn)
     }
 
     /**
+     * The Amazon EC2 instance type.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#cfn-route53resolver-resolverendpoint-preferredinstancetype)
      *
-     * @param preferredInstanceType
+     * @param preferredInstanceType The Amazon EC2 instance type.
      */
     public fun preferredInstanceType(preferredInstanceType: String) {
         cdkBuilder.preferredInstanceType(preferredInstanceType)
+    }
+
+    /**
+     * Protocols used for the endpoint. DoH-FIPS is applicable for inbound endpoints only.
+     *
+     * For an inbound endpoint you can apply the protocols as follows:
+     * * Do53 and DoH in combination.
+     * * Do53 and DoH-FIPS in combination.
+     * * Do53 alone.
+     * * DoH alone.
+     * * DoH-FIPS alone.
+     * * None, which is treated as Do53.
+     *
+     * For an outbound endpoint you can apply the protocols as follows:
+     * * Do53 and DoH in combination.
+     * * Do53 alone.
+     * * DoH alone.
+     * * None, which is treated as Do53.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#cfn-route53resolver-resolverendpoint-protocols)
+     *
+     * @param protocols Protocols used for the endpoint. DoH-FIPS is applicable for inbound
+     *   endpoints only.
+     */
+    public fun protocols(vararg protocols: String) {
+        _protocols.addAll(listOf(*protocols))
+    }
+
+    /**
+     * Protocols used for the endpoint. DoH-FIPS is applicable for inbound endpoints only.
+     *
+     * For an inbound endpoint you can apply the protocols as follows:
+     * * Do53 and DoH in combination.
+     * * Do53 and DoH-FIPS in combination.
+     * * Do53 alone.
+     * * DoH alone.
+     * * DoH-FIPS alone.
+     * * None, which is treated as Do53.
+     *
+     * For an outbound endpoint you can apply the protocols as follows:
+     * * Do53 and DoH in combination.
+     * * Do53 alone.
+     * * DoH alone.
+     * * None, which is treated as Do53.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#cfn-route53resolver-resolverendpoint-protocols)
+     *
+     * @param protocols Protocols used for the endpoint. DoH-FIPS is applicable for inbound
+     *   endpoints only.
+     */
+    public fun protocols(protocols: Collection<String>) {
+        _protocols.addAll(protocols)
     }
 
     /**
@@ -241,6 +300,7 @@ public class CfnResolverEndpointDsl(
 
     public fun build(): CfnResolverEndpoint {
         if (_ipAddresses.isNotEmpty()) cdkBuilder.ipAddresses(_ipAddresses)
+        if (_protocols.isNotEmpty()) cdkBuilder.protocols(_protocols)
         if (_securityGroupIds.isNotEmpty()) cdkBuilder.securityGroupIds(_securityGroupIds)
         if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
         return cdkBuilder.build()

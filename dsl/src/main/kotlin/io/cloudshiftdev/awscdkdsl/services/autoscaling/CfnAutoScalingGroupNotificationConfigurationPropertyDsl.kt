@@ -20,11 +20,11 @@ import software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup
 /**
  * A structure that specifies an Amazon SNS notification configuration for the
  * `NotificationConfigurations` property of the
- * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html)
+ * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
  * resource.
  *
  * For an example template snippet, see
- * [Auto scaling template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)
+ * [Configure Amazon EC2 Auto Scaling resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html)
  * .
  *
  * For more information, see

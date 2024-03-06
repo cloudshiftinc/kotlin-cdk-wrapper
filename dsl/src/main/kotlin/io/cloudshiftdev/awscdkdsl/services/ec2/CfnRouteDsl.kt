@@ -17,10 +17,12 @@ import software.amazon.awscdk.services.ec2.CfnRoute
 import software.constructs.Construct
 
 /**
- * Specifies a route in a route table.
+ * Specifies a route in a route table. For more information, see
+ * [Routes](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html#route-table-routes)
+ * in the *Amazon VPC User Guide* .
  *
- * You must specify either `DestinationCidrBlock` or `DestinationIpv6CidrBlock` , plus the ID of one
- * of the target resources.
+ * You must specify either a destination CIDR block or prefix list ID. You must also specify exactly
+ * one of the resources as the target.
  *
  * If you create a route that references a transit gateway in the same template where you create the
  * transit gateway, you must declare a dependency on the transit gateway attachment. The route table
@@ -38,8 +40,10 @@ import software.constructs.Construct
  * .routeTableId("routeTableId")
  * // the properties below are optional
  * .carrierGatewayId("carrierGatewayId")
+ * .coreNetworkArn("coreNetworkArn")
  * .destinationCidrBlock("destinationCidrBlock")
  * .destinationIpv6CidrBlock("destinationIpv6CidrBlock")
+ * .destinationPrefixListId("destinationPrefixListId")
  * .egressOnlyInternetGatewayId("egressOnlyInternetGatewayId")
  * .gatewayId("gatewayId")
  * .instanceId("instanceId")
@@ -76,6 +80,17 @@ public class CfnRouteDsl(
     }
 
     /**
+     * The Amazon Resource Name (ARN) of the core network.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-corenetworkarn)
+     *
+     * @param coreNetworkArn The Amazon Resource Name (ARN) of the core network.
+     */
+    public fun coreNetworkArn(coreNetworkArn: String) {
+        cdkBuilder.coreNetworkArn(coreNetworkArn)
+    }
+
+    /**
      * The IPv4 CIDR address block used for the destination match.
      *
      * Routing decisions are based on the most specific match. We modify the specified CIDR block to
@@ -101,6 +116,17 @@ public class CfnRouteDsl(
      */
     public fun destinationIpv6CidrBlock(destinationIpv6CidrBlock: String) {
         cdkBuilder.destinationIpv6CidrBlock(destinationIpv6CidrBlock)
+    }
+
+    /**
+     * The ID of a prefix list used for the destination match.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-destinationprefixlistid)
+     *
+     * @param destinationPrefixListId The ID of a prefix list used for the destination match.
+     */
+    public fun destinationPrefixListId(destinationPrefixListId: String) {
+        cdkBuilder.destinationPrefixListId(destinationPrefixListId)
     }
 
     /**

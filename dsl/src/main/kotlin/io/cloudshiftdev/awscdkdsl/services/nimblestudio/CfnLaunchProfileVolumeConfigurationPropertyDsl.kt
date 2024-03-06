@@ -16,8 +16,9 @@ import kotlin.Number
 import software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile
 
 /**
- * Custom volume configuration for the root volumes that are attached to streaming sessions.</p>
- * This parameter is only allowed when `sessionPersistenceMode` is `ACTIVATED`.</p>.
+ * Custom volume configuration for the root volumes that are attached to streaming sessions.
+ *
+ * This parameter is only allowed when `sessionPersistenceMode` is `ACTIVATED` .
  *
  * Example:
  * ```
@@ -40,7 +41,7 @@ public class CfnLaunchProfileVolumeConfigurationPropertyDsl {
 
     /**
      * @param iops The number of I/O operations per second for the root volume that is attached to
-     *   streaming session.</p>.
+     *   streaming session.
      */
     public fun iops(iops: Number) {
         cdkBuilder.iops(iops)
@@ -48,7 +49,7 @@ public class CfnLaunchProfileVolumeConfigurationPropertyDsl {
 
     /**
      * @param size The size of the root volume that is attached to the streaming session. The root
-     *   volume size is measured in GiBs.</p>
+     *   volume size is measured in GiBs.
      */
     public fun size(size: Number) {
         cdkBuilder.size(size)
@@ -56,7 +57,7 @@ public class CfnLaunchProfileVolumeConfigurationPropertyDsl {
 
     /**
      * @param throughput The throughput to provision for the root volume that is attached to the
-     *   streaming session. The throughput is measured in MiB/s.</p>
+     *   streaming session. The throughput is measured in MiB/s.
      */
     public fun throughput(throughput: Number) {
         cdkBuilder.throughput(throughput)

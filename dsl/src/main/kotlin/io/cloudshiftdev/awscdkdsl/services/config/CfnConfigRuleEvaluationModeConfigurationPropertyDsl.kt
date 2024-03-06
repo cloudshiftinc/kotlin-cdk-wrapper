@@ -16,7 +16,9 @@ import kotlin.String
 import software.amazon.awscdk.services.config.CfnConfigRule
 
 /**
- * Evaluation mode for the AWS Config rule.
+ * The configuration object for AWS Config rule evaluation mode.
+ *
+ * The supported valid values are Detective or Proactive.
  *
  * Example:
  * ```
@@ -36,7 +38,7 @@ public class CfnConfigRuleEvaluationModeConfigurationPropertyDsl {
     private val cdkBuilder: CfnConfigRule.EvaluationModeConfigurationProperty.Builder =
         CfnConfigRule.EvaluationModeConfigurationProperty.builder()
 
-    /** @param mode Mode of evaluation of AWS Config rule. */
+    /** @param mode The mode of an evaluation. The valid values are Detective or Proactive. */
     public fun mode(mode: String) {
         cdkBuilder.mode(mode)
     }

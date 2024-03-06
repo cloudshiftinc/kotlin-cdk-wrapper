@@ -12,6 +12,7 @@
 package io.cloudshiftdev.awscdkdsl.services.grafana
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Boolean
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
@@ -48,6 +49,7 @@ import software.constructs.Construct
  * .notificationDestinations(List.of("notificationDestinations"))
  * .organizationalUnits(List.of("organizationalUnits"))
  * .organizationRoleName("organizationRoleName")
+ * .pluginAdminEnabled(false)
  * .roleArn("roleArn")
  * .samlConfiguration(SamlConfigurationProperty.builder()
  * .idpMetadata(IdpMetadataProperty.builder()
@@ -113,17 +115,17 @@ public class CfnWorkspaceDsl(
     }
 
     /**
-     * Specifies whether this workspace uses SAML 2.0, AWS IAM Identity Center (successor to AWS
-     * Single Sign-On) , or both to authenticate users for using the Grafana console within a
-     * workspace. For more information, see
+     * Specifies whether this workspace uses SAML 2.0, AWS IAM Identity Center , or both to
+     * authenticate users for using the Grafana console within a workspace. For more information,
+     * see
      * [User authentication in Amazon Managed Grafana](https://docs.aws.amazon.com/grafana/latest/userguide/authentication-in-AMG.html)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-grafana-workspace.html#cfn-grafana-workspace-authenticationproviders)
      *
      * @param authenticationProviders Specifies whether this workspace uses SAML 2.0, AWS IAM
-     *   Identity Center (successor to AWS Single Sign-On) , or both to authenticate users for using
-     *   the Grafana console within a workspace. For more information, see
+     *   Identity Center , or both to authenticate users for using the Grafana console within a
+     *   workspace. For more information, see
      *   [User authentication in Amazon Managed Grafana](https://docs.aws.amazon.com/grafana/latest/userguide/authentication-in-AMG.html)
      *   .
      */
@@ -132,17 +134,17 @@ public class CfnWorkspaceDsl(
     }
 
     /**
-     * Specifies whether this workspace uses SAML 2.0, AWS IAM Identity Center (successor to AWS
-     * Single Sign-On) , or both to authenticate users for using the Grafana console within a
-     * workspace. For more information, see
+     * Specifies whether this workspace uses SAML 2.0, AWS IAM Identity Center , or both to
+     * authenticate users for using the Grafana console within a workspace. For more information,
+     * see
      * [User authentication in Amazon Managed Grafana](https://docs.aws.amazon.com/grafana/latest/userguide/authentication-in-AMG.html)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-grafana-workspace.html#cfn-grafana-workspace-authenticationproviders)
      *
      * @param authenticationProviders Specifies whether this workspace uses SAML 2.0, AWS IAM
-     *   Identity Center (successor to AWS Single Sign-On) , or both to authenticate users for using
-     *   the Grafana console within a workspace. For more information, see
+     *   Identity Center , or both to authenticate users for using the Grafana console within a
+     *   workspace. For more information, see
      *   [User authentication in Amazon Managed Grafana](https://docs.aws.amazon.com/grafana/latest/userguide/authentication-in-AMG.html)
      *   .
      */
@@ -206,13 +208,21 @@ public class CfnWorkspaceDsl(
     }
 
     /**
-     * Specifies the version of Grafana to support in the new workspace.
+     * Specifies the version of Grafana to support in the workspace.
      *
-     * To get a list of supported version, use the `ListVersions` operation.
+     * Defaults to the latest version on create (for example, 9.4), or the current version of the
+     * workspace on update.
+     *
+     * Can only be used to upgrade (for example, from 8.4 to 9.4), not downgrade (for example, from
+     * 9.4 to 8.4).
+     *
+     * To know what versions are available to upgrade to for a specific workspace, see the
+     * [ListVersions](https://docs.aws.amazon.com/grafana/latest/APIReference/API_ListVersions.html)
+     * operation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-grafana-workspace.html#cfn-grafana-workspace-grafanaversion)
      *
-     * @param grafanaVersion Specifies the version of Grafana to support in the new workspace.
+     * @param grafanaVersion Specifies the version of Grafana to support in the workspace.
      */
     public fun grafanaVersion(grafanaVersion: String) {
         cdkBuilder.grafanaVersion(grafanaVersion)
@@ -348,6 +358,38 @@ public class CfnWorkspaceDsl(
      */
     public fun permissionType(permissionType: String) {
         cdkBuilder.permissionType(permissionType)
+    }
+
+    /**
+     * Whether plugin administration is enabled in the workspace.
+     *
+     * Setting to `true` allows workspace admins to install, uninstall, and update plugins from
+     * within the Grafana workspace.
+     *
+     * This option is only valid for workspaces that support Grafana version 9 or newer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-grafana-workspace.html#cfn-grafana-workspace-pluginadminenabled)
+     *
+     * @param pluginAdminEnabled Whether plugin administration is enabled in the workspace.
+     */
+    public fun pluginAdminEnabled(pluginAdminEnabled: Boolean) {
+        cdkBuilder.pluginAdminEnabled(pluginAdminEnabled)
+    }
+
+    /**
+     * Whether plugin administration is enabled in the workspace.
+     *
+     * Setting to `true` allows workspace admins to install, uninstall, and update plugins from
+     * within the Grafana workspace.
+     *
+     * This option is only valid for workspaces that support Grafana version 9 or newer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-grafana-workspace.html#cfn-grafana-workspace-pluginadminenabled)
+     *
+     * @param pluginAdminEnabled Whether plugin administration is enabled in the workspace.
+     */
+    public fun pluginAdminEnabled(pluginAdminEnabled: IResolvable) {
+        cdkBuilder.pluginAdminEnabled(pluginAdminEnabled)
     }
 
     /**

@@ -21,7 +21,7 @@ import software.amazon.awscdk.services.efs.CfnAccessPoint
  *
  * The access point exposes the specified file system path as the root directory of your file system
  * to applications using the access point. NFS clients using the access point can only access data
- * in the access point's `RootDirectory` and it's subdirectories.
+ * in the access point's `RootDirectory` and its subdirectories.
  *
  * Example:
  * ```

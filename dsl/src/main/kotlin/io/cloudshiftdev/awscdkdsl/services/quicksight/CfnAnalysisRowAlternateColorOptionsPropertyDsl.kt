@@ -29,6 +29,7 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * RowAlternateColorOptionsProperty.builder()
  * .rowAlternateColors(List.of("rowAlternateColors"))
  * .status("status")
+ * .usePrimaryBackgroundColor("usePrimaryBackgroundColor")
  * .build();
  * ```
  *
@@ -54,6 +55,11 @@ public class CfnAnalysisRowAlternateColorOptionsPropertyDsl {
     /** @param status Determines the widget status. */
     public fun status(status: String) {
         cdkBuilder.status(status)
+    }
+
+    /** @param usePrimaryBackgroundColor The primary background color options for alternate rows. */
+    public fun usePrimaryBackgroundColor(usePrimaryBackgroundColor: String) {
+        cdkBuilder.usePrimaryBackgroundColor(usePrimaryBackgroundColor)
     }
 
     public fun build(): CfnAnalysis.RowAlternateColorOptionsProperty {

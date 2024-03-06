@@ -41,6 +41,7 @@ import software.amazon.awscdk.services.rds.CfnDBInstanceProps
  * .featureName("featureName")
  * .roleArn("roleArn")
  * .build()))
+ * .automaticBackupReplicationRegion("automaticBackupReplicationRegion")
  * .autoMinorVersionUpgrade(false)
  * .availabilityZone("availabilityZone")
  * .backupRetentionPeriod(123)
@@ -62,10 +63,15 @@ import software.amazon.awscdk.services.rds.CfnDBInstanceProps
  * .dbSecurityGroups(List.of("dbSecurityGroups"))
  * .dbSnapshotIdentifier("dbSnapshotIdentifier")
  * .dbSubnetGroupName("dbSubnetGroupName")
+ * .dedicatedLogVolume(false)
  * .deleteAutomatedBackups(false)
  * .deletionProtection(false)
  * .domain("domain")
+ * .domainAuthSecretArn("domainAuthSecretArn")
+ * .domainDnsIps(List.of("domainDnsIps"))
+ * .domainFqdn("domainFqdn")
  * .domainIamRoleName("domainIamRoleName")
+ * .domainOu("domainOu")
  * .enableCloudwatchLogsExports(List.of("enableCloudwatchLogsExports"))
  * .enableIamDatabaseAuthentication(false)
  * .enablePerformanceInsights(false)
@@ -137,6 +143,8 @@ public class CfnDBInstancePropsDsl {
 
     private val _dbSecurityGroups: MutableList<String> = mutableListOf()
 
+    private val _domainDnsIps: MutableList<String> = mutableListOf()
+
     private val _enableCloudwatchLogsExports: MutableList<String> = mutableListOf()
 
     private val _processorFeatures: MutableList<Any> = mutableListOf()
@@ -159,6 +167,12 @@ public class CfnDBInstancePropsDsl {
      * Not applicable. Aurora cluster volumes automatically grow as the amount of data in your
      * database increases, though you are only charged for the space that you use in an Aurora
      * cluster volume.
+     *
+     * *Db2*
+     *
+     * Constraints to the amount of storage for each storage type are the following:
+     * * General Purpose (SSD) storage (gp3): Must be an integer from 20 to 64000.
+     * * Provisioned IOPS storage (io1): Must be an integer from 100 to 64000.
      *
      * *MySQL*
      *
@@ -280,6 +294,16 @@ public class CfnDBInstancePropsDsl {
     }
 
     /**
+     * @param automaticBackupReplicationRegion The destination region for the backup replication of
+     *   the DB instance. For more info, see
+     *   [Replicating automated backups to another AWS Region](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReplicateBackups.html)
+     *   in the *Amazon RDS User Guide* .
+     */
+    public fun automaticBackupReplicationRegion(automaticBackupReplicationRegion: String) {
+        cdkBuilder.automaticBackupReplicationRegion(automaticBackupReplicationRegion)
+    }
+
+    /**
      * @param availabilityZone The Availability Zone (AZ) where the database will be created. For
      *   information on AWS Regions and Availability Zones, see
      *   [Regions and Availability Zones](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)
@@ -322,17 +346,12 @@ public class CfnDBInstancePropsDsl {
     }
 
     /**
-     * @param caCertificateIdentifier The identifier of the CA certificate for this DB instance.
-     *
-     * Specifying or updating this property triggers a reboot.
-     *
-     * For more information about CA certificate identifiers for RDS DB engines, see
-     * [Rotating Your SSL/TLS Certificate](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL-certificate-rotation.html)
-     * in the *Amazon RDS User Guide* .
-     *
-     * For more information about CA certificate identifiers for Aurora DB engines, see
-     * [Rotating Your SSL/TLS Certificate](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.SSL-certificate-rotation.html)
-     * in the *Amazon Aurora User Guide* .
+     * @param caCertificateIdentifier The identifier of the CA certificate for this DB instance. For
+     *   more information, see
+     *   [Using SSL/TLS to encrypt a connection to a DB instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html)
+     *   in the *Amazon RDS User Guide* and
+     *   [Using SSL/TLS to encrypt a connection to a DB cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.SSL.html)
+     *   in the *Amazon Aurora User Guide* .
      */
     public fun caCertificateIdentifier(caCertificateIdentifier: String) {
         cdkBuilder.caCertificateIdentifier(caCertificateIdentifier)
@@ -518,6 +537,17 @@ public class CfnDBInstancePropsDsl {
      * *Amazon Aurora*
      *
      * Not applicable. The database name is managed by the DB cluster.
+     *
+     * *Db2*
+     *
+     * The name of the database to create when the DB instance is created. If this parameter isn't
+     * specified, no database is created in the DB instance.
+     *
+     * Constraints:
+     * * Must contain 1 to 64 letters or numbers.
+     * * Must begin with a letter. Subsequent characters can be letters, underscores, or digits
+     *   (0-9).
+     * * Can't be a word reserved by the specified database engine.
      *
      * *MySQL*
      *
@@ -744,6 +774,22 @@ public class CfnDBInstancePropsDsl {
     }
 
     /**
+     * @param dedicatedLogVolume Indicates whether the DB instance has a dedicated log volume (DLV)
+     *   enabled.
+     */
+    public fun dedicatedLogVolume(dedicatedLogVolume: Boolean) {
+        cdkBuilder.dedicatedLogVolume(dedicatedLogVolume)
+    }
+
+    /**
+     * @param dedicatedLogVolume Indicates whether the DB instance has a dedicated log volume (DLV)
+     *   enabled.
+     */
+    public fun dedicatedLogVolume(dedicatedLogVolume: IResolvable) {
+        cdkBuilder.dedicatedLogVolume(dedicatedLogVolume)
+    }
+
+    /**
      * @param deleteAutomatedBackups A value that indicates whether to remove automated backups
      *   immediately after the DB instance is deleted. This parameter isn't case-sensitive. The
      *   default is to remove automated backups immediately after the DB instance is deleted.
@@ -809,8 +855,8 @@ public class CfnDBInstancePropsDsl {
 
     /**
      * @param domain The Active Directory directory ID to create the DB instance in. Currently, only
-     *   Microsoft SQL Server, Oracle, and PostgreSQL DB instances can be created in an Active
-     *   Directory Domain.
+     *   Db2, MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB instances can be created in an
+     *   Active Directory Domain.
      *
      * For more information, see
      * [Kerberos Authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/kerberos-authentication.html)
@@ -818,6 +864,50 @@ public class CfnDBInstancePropsDsl {
      */
     public fun domain(domain: String) {
         cdkBuilder.domain(domain)
+    }
+
+    /**
+     * @param domainAuthSecretArn The ARN for the Secrets Manager secret with the credentials for
+     *   the user joining the domain. Example:
+     *   `arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456`
+     */
+    public fun domainAuthSecretArn(domainAuthSecretArn: String) {
+        cdkBuilder.domainAuthSecretArn(domainAuthSecretArn)
+    }
+
+    /**
+     * @param domainDnsIps The IPv4 DNS IP addresses of your primary and secondary Active Directory
+     *   domain controllers. Constraints:
+     * * Two IP addresses must be provided. If there isn't a secondary domain controller, use the IP
+     *   address of the primary domain controller for both entries in the list.
+     *
+     * Example: `123.124.125.126,234.235.236.237`
+     */
+    public fun domainDnsIps(vararg domainDnsIps: String) {
+        _domainDnsIps.addAll(listOf(*domainDnsIps))
+    }
+
+    /**
+     * @param domainDnsIps The IPv4 DNS IP addresses of your primary and secondary Active Directory
+     *   domain controllers. Constraints:
+     * * Two IP addresses must be provided. If there isn't a secondary domain controller, use the IP
+     *   address of the primary domain controller for both entries in the list.
+     *
+     * Example: `123.124.125.126,234.235.236.237`
+     */
+    public fun domainDnsIps(domainDnsIps: Collection<String>) {
+        _domainDnsIps.addAll(domainDnsIps)
+    }
+
+    /**
+     * @param domainFqdn The fully qualified domain name (FQDN) of an Active Directory domain.
+     *   Constraints:
+     * * Can't be longer than 64 characters.
+     *
+     * Example: `mymanagedADtest.mymanagedAD.mydomain`
+     */
+    public fun domainFqdn(domainFqdn: String) {
+        cdkBuilder.domainFqdn(domainFqdn)
     }
 
     /**
@@ -831,6 +921,18 @@ public class CfnDBInstancePropsDsl {
     }
 
     /**
+     * @param domainOu The Active Directory organizational unit for your DB instance to join.
+     *   Constraints:
+     * * Must be in the distinguished name format.
+     * * Can't be longer than 64 characters.
+     *
+     * Example: `OU=mymanagedADtestOU,DC=mymanagedADtest,DC=mymanagedAD,DC=mydomain`
+     */
+    public fun domainOu(domainOu: String) {
+        cdkBuilder.domainOu(domainOu)
+    }
+
+    /**
      * @param enableCloudwatchLogsExports The list of log types that need to be enabled for
      *   exporting to CloudWatch Logs. The values in the list depend on the DB engine being used.
      *   For more information, see
@@ -840,6 +942,10 @@ public class CfnDBInstancePropsDsl {
      * *Amazon Aurora*
      *
      * Not applicable. CloudWatch Logs exports are managed by the DB cluster.
+     *
+     * *Db2*
+     *
+     * Valid values: `diag.log` , `notify.log`
      *
      * *MariaDB*
      *
@@ -875,6 +981,10 @@ public class CfnDBInstancePropsDsl {
      * *Amazon Aurora*
      *
      * Not applicable. CloudWatch Logs exports are managed by the DB cluster.
+     *
+     * *Db2*
+     *
+     * Valid values: `diag.log` , `notify.log`
      *
      * *MariaDB*
      *
@@ -979,7 +1089,8 @@ public class CfnDBInstancePropsDsl {
     }
 
     /**
-     * @param engine The name of the database engine that you want to use for this DB instance.
+     * @param engine The name of the database engine that you want to use for this DB instance. Not
+     *   every database engine is available in every AWS Region.
      *
      * When you are creating a DB instance, the `Engine` property is required.
      *
@@ -991,6 +1102,8 @@ public class CfnDBInstancePropsDsl {
      * * `custom-sqlserver-ee` (for RDS Custom for SQL Server DB instances)
      * * `custom-sqlserver-se` (for RDS Custom for SQL Server DB instances)
      * * `custom-sqlserver-web` (for RDS Custom for SQL Server DB instances)
+     * * `db2-ae`
+     * * `db2-se`
      * * `mariadb`
      * * `mysql`
      * * `oracle-ee`
@@ -1019,6 +1132,12 @@ public class CfnDBInstancePropsDsl {
      *
      * Not applicable. The version number of the database engine to be used by the DB instance is
      * managed by the DB cluster.
+     *
+     * *Db2*
+     *
+     * See
+     * [Amazon RDS for Db2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Db2.html#Db2.Concepts.VersionMgmt)
+     * in the *Amazon RDS User Guide.*
      *
      * *MariaDB*
      *
@@ -1068,6 +1187,12 @@ public class CfnDBInstancePropsDsl {
      *
      * If you specify `io1` for the `StorageType` property, then you must also specify the `Iops`
      * property.
+     *
+     * Constraints:
+     * * For RDS for Db2, MariaDB, MySQL, Oracle, and PostgreSQL - Must be a multiple between .5 and
+     *   50 of the storage amount for the DB instance.
+     * * For RDS for SQL Server - Must be a multiple between 1 and 50 of the storage amount for the
+     *   DB instance.
      */
     public fun iops(iops: Number) {
         cdkBuilder.iops(iops)
@@ -1106,14 +1231,17 @@ public class CfnDBInstancePropsDsl {
     }
 
     /**
-     * @param licenseModel License model information for this DB instance. Valid values:
+     * @param licenseModel License model information for this DB instance. Valid Values:
      * * Aurora MySQL - `general-public-license`
      * * Aurora PostgreSQL - `postgresql-license`
-     * * MariaDB - `general-public-license`
-     * * Microsoft SQL Server - `license-included`
-     * * MySQL - `general-public-license`
-     * * Oracle - `bring-your-own-license` or `license-included`
-     * * PostgreSQL - `postgresql-license`
+     * * RDS for Db2 - `bring-your-own-license` . For more information about RDS for Db2 licensing,
+     *   see [](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-licensing.html) in the
+     *   *Amazon RDS User Guide.*
+     * * RDS for MariaDB - `general-public-license`
+     * * RDS for Microsoft SQL Server - `license-included`
+     * * RDS for MySQL - `general-public-license`
+     * * RDS for Oracle - `bring-your-own-license` or `license-included`
+     * * RDS for PostgreSQL - `postgresql-license`
      *
      * If you've specified `DBSecurityGroups` and then you update the license model, AWS
      * CloudFormation replaces the underlying DB instance. This will incur some interruptions to
@@ -1157,23 +1285,27 @@ public class CfnDBInstancePropsDsl {
      *
      * Not applicable. The password for the master user is managed by the DB cluster.
      *
-     * *MariaDB*
+     * *RDS for Db2*
+     *
+     * Must contain from 8 to 255 characters.
+     *
+     * *RDS for MariaDB*
      *
      * Constraints: Must contain from 8 to 41 characters.
      *
-     * *Microsoft SQL Server*
+     * *RDS for Microsoft SQL Server*
      *
      * Constraints: Must contain from 8 to 128 characters.
      *
-     * *MySQL*
+     * *RDS for MySQL*
      *
      * Constraints: Must contain from 8 to 41 characters.
      *
-     * *Oracle*
+     * *RDS for Oracle*
      *
      * Constraints: Must contain from 8 to 30 characters.
      *
-     * *PostgreSQL*
+     * *RDS for PostgreSQL*
      *
      * Constraints: Must contain from 8 to 128 characters.
      */
@@ -1207,45 +1339,50 @@ public class CfnDBInstancePropsDsl {
      * If you specify the `SourceDBInstanceIdentifier` or `DBSnapshotIdentifier` property, don't
      * specify this property. The value is inherited from the source DB instance or snapshot.
      *
+     * When migrating a self-managed Db2 database, we recommend that you use the same master
+     * username as your self-managed Db2 instance name.
+     *
      * *Amazon Aurora*
      *
      * Not applicable. The name for the master user is managed by the DB cluster.
      *
-     * *MariaDB*
+     * *RDS for Db2*
      *
      * Constraints:
-     * * Required for MariaDB.
-     * * Must be 1 to 16 letters or numbers.
-     * * Can't be a reserved word for the chosen database engine.
-     *
-     * *Microsoft SQL Server*
-     *
-     * Constraints:
-     * * Required for SQL Server.
-     * * Must be 1 to 128 letters or numbers.
-     * * The first character must be a letter.
-     * * Can't be a reserved word for the chosen database engine.
-     *
-     * *MySQL*
-     *
-     * Constraints:
-     * * Required for MySQL.
      * * Must be 1 to 16 letters or numbers.
      * * First character must be a letter.
      * * Can't be a reserved word for the chosen database engine.
      *
-     * *Oracle*
+     * *RDS for MariaDB*
      *
      * Constraints:
-     * * Required for Oracle.
+     * * Must be 1 to 16 letters or numbers.
+     * * Can't be a reserved word for the chosen database engine.
+     *
+     * *RDS for Microsoft SQL Server*
+     *
+     * Constraints:
+     * * Must be 1 to 128 letters or numbers.
+     * * First character must be a letter.
+     * * Can't be a reserved word for the chosen database engine.
+     *
+     * *RDS for MySQL*
+     *
+     * Constraints:
+     * * Must be 1 to 16 letters or numbers.
+     * * First character must be a letter.
+     * * Can't be a reserved word for the chosen database engine.
+     *
+     * *RDS for Oracle*
+     *
+     * Constraints:
      * * Must be 1 to 30 letters or numbers.
      * * First character must be a letter.
      * * Can't be a reserved word for the chosen database engine.
      *
-     * *PostgreSQL*
+     * *RDS for PostgreSQL*
      *
      * Constraints:
-     * * Required for PostgreSQL.
      * * Must be 1 to 63 letters or numbers.
      * * First character must be a letter.
      * * Can't be a reserved word for the chosen database engine.
@@ -1410,6 +1547,10 @@ public class CfnDBInstancePropsDsl {
      * @param port The port number on which the database accepts connections. *Amazon Aurora*
      *
      * Not applicable. The port number is managed by the DB cluster.
+     *
+     * *Db2*
+     *
+     * Default value: `50000`
      */
     public fun port(port: String) {
         cdkBuilder.port(port)
@@ -1545,12 +1686,10 @@ public class CfnDBInstancePropsDsl {
     }
 
     /**
-     * @param restoreTime The date and time to restore from. Valid Values: Value must be a time in
-     *   Universal Coordinated Time (UTC) format
-     *
-     * Constraints:
-     * * Must be before the latest restorable time for the DB instance
-     * * Can't be specified if the `UseLatestRestorableTime` parameter is enabled
+     * @param restoreTime The date and time to restore from. Constraints:
+     * * Must be a time in Universal Coordinated Time (UTC) format.
+     * * Must be before the latest restorable time for the DB instance.
+     * * Can't be specified if the `UseLatestRestorableTime` parameter is enabled.
      *
      * Example: `2009-09-07T23:45:00Z`
      */
@@ -1577,7 +1716,7 @@ public class CfnDBInstancePropsDsl {
     /**
      * @param sourceDbInstanceAutomatedBackupsArn The Amazon Resource Name (ARN) of the replicated
      *   automated backups from which to restore, for example,
-     *   `arn:aws:rds:useast-1:123456789012:auto-backup:ab-L2IJCEXJP7XQ7HOJ4SIEXAMPLE` . This
+     *   `arn:aws:rds:us-east-1:123456789012:auto-backup:ab-L2IJCEXJP7XQ7HOJ4SIEXAMPLE` . This
      *   setting doesn't apply to RDS Custom.
      */
     public fun sourceDbInstanceAutomatedBackupsArn(sourceDbInstanceAutomatedBackupsArn: String) {
@@ -1733,8 +1872,7 @@ public class CfnDBInstancePropsDsl {
     }
 
     /**
-     * @param tdeCredentialArn The ARN from the key store with which to associate the instance for
-     *   TDE encryption.
+     * @param tdeCredentialArn the value to be set.
      * @deprecated this property has been deprecated
      */
     @Deprecated(message = "deprecated in CDK")
@@ -1743,8 +1881,7 @@ public class CfnDBInstancePropsDsl {
     }
 
     /**
-     * @param tdeCredentialPassword The password for the given ARN from the key store in order to
-     *   access the device.
+     * @param tdeCredentialPassword the value to be set.
      * @deprecated this property has been deprecated
      */
     @Deprecated(message = "deprecated in CDK")
@@ -1779,22 +1916,22 @@ public class CfnDBInstancePropsDsl {
     }
 
     /**
-     * @param useLatestRestorableTime A value that indicates whether the DB instance is restored
-     *   from the latest backup time. By default, the DB instance isn't restored from the latest
-     *   backup time.
+     * @param useLatestRestorableTime Specifies whether the DB instance is restored from the latest
+     *   backup time. By default, the DB instance isn't restored from the latest backup time.
      *
-     * Constraints: Can't be specified if the `RestoreTime` parameter is provided.
+     * Constraints:
+     * * Can't be specified if the `RestoreTime` parameter is provided.
      */
     public fun useLatestRestorableTime(useLatestRestorableTime: Boolean) {
         cdkBuilder.useLatestRestorableTime(useLatestRestorableTime)
     }
 
     /**
-     * @param useLatestRestorableTime A value that indicates whether the DB instance is restored
-     *   from the latest backup time. By default, the DB instance isn't restored from the latest
-     *   backup time.
+     * @param useLatestRestorableTime Specifies whether the DB instance is restored from the latest
+     *   backup time. By default, the DB instance isn't restored from the latest backup time.
      *
-     * Constraints: Can't be specified if the `RestoreTime` parameter is provided.
+     * Constraints:
+     * * Can't be specified if the `RestoreTime` parameter is provided.
      */
     public fun useLatestRestorableTime(useLatestRestorableTime: IResolvable) {
         cdkBuilder.useLatestRestorableTime(useLatestRestorableTime)
@@ -1881,6 +2018,7 @@ public class CfnDBInstancePropsDsl {
     public fun build(): CfnDBInstanceProps {
         if (_associatedRoles.isNotEmpty()) cdkBuilder.associatedRoles(_associatedRoles)
         if (_dbSecurityGroups.isNotEmpty()) cdkBuilder.dbSecurityGroups(_dbSecurityGroups)
+        if (_domainDnsIps.isNotEmpty()) cdkBuilder.domainDnsIps(_domainDnsIps)
         if (_enableCloudwatchLogsExports.isNotEmpty())
             cdkBuilder.enableCloudwatchLogsExports(_enableCloudwatchLogsExports)
         if (_processorFeatures.isNotEmpty()) cdkBuilder.processorFeatures(_processorFeatures)

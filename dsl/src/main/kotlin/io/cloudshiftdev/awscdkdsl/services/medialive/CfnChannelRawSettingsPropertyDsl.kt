@@ -15,10 +15,6 @@ import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import software.amazon.awscdk.services.medialive.CfnChannel
 
 /**
- * The container for WAV audio in the output group.
- *
- * The parent of this entity is ArchiveContainerSettings.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.

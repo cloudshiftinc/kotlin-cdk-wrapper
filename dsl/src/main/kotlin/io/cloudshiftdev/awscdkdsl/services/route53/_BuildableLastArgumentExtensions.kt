@@ -82,6 +82,18 @@ public inline fun CfnRecordSet.setGeoLocation(
 }
 
 /**
+ * *GeoproximityLocation resource record sets only:* A complex type that lets you control how
+ * Route 53 responds to DNS queries based on the geographic origin of the query and your resources.
+ */
+public inline fun CfnRecordSet.setGeoProximityLocation(
+    block: CfnRecordSetGeoProximityLocationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnRecordSetGeoProximityLocationPropertyDsl()
+    builder.apply(block)
+    return setGeoProximityLocation(builder.build())
+}
+
+/**
  * Adds a delegation from this zone to a designated zone.
  *
  * @param delegate the zone being delegated to.

@@ -36,7 +36,7 @@ import software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup
  * replacement instance to maintain the desired capacity for the group.
  *
  * `MixedInstancesPolicy` is a property of the
- * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html)
+ * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
  * resource.
  *
  * Example:
@@ -56,6 +56,15 @@ import software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup
  * // the properties below are optional
  * .overrides(List.of(LaunchTemplateOverridesProperty.builder()
  * .instanceRequirements(InstanceRequirementsProperty.builder()
+ * .memoryMiB(MemoryMiBRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .vCpuCount(VCpuCountRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * // the properties below are optional
  * .acceleratorCount(AcceleratorCountRequestProperty.builder()
  * .max(123)
  * .min(123)
@@ -79,11 +88,8 @@ import software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup
  * .instanceGenerations(List.of("instanceGenerations"))
  * .localStorage("localStorage")
  * .localStorageTypes(List.of("localStorageTypes"))
+ * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
  * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
- * .max(123)
- * .min(123)
- * .build())
- * .memoryMiB(MemoryMiBRequestProperty.builder()
  * .max(123)
  * .min(123)
  * .build())
@@ -99,10 +105,6 @@ import software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup
  * .requireHibernateSupport(false)
  * .spotMaxPricePercentageOverLowestPrice(123)
  * .totalLocalStorageGb(TotalLocalStorageGBRequestProperty.builder()
- * .max(123)
- * .min(123)
- * .build())
- * .vCpuCount(VCpuCountRequestProperty.builder()
  * .max(123)
  * .min(123)
  * .build())

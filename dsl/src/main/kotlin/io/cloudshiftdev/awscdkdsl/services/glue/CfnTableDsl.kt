@@ -141,18 +141,24 @@ public class CfnTableDsl(
     }
 
     /**
+     * Specifies an `OpenTableFormatInput` structure when creating an open format table.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-opentableformatinput)
      *
-     * @param openTableFormatInput
+     * @param openTableFormatInput Specifies an `OpenTableFormatInput` structure when creating an
+     *   open format table.
      */
     public fun openTableFormatInput(openTableFormatInput: IResolvable) {
         cdkBuilder.openTableFormatInput(openTableFormatInput)
     }
 
     /**
+     * Specifies an `OpenTableFormatInput` structure when creating an open format table.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-opentableformatinput)
      *
-     * @param openTableFormatInput
+     * @param openTableFormatInput Specifies an `OpenTableFormatInput` structure when creating an
+     *   open format table.
      */
     public fun openTableFormatInput(openTableFormatInput: CfnTable.OpenTableFormatInputProperty) {
         cdkBuilder.openTableFormatInput(openTableFormatInput)

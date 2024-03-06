@@ -83,31 +83,10 @@ public class CfnTrailDataResourcePropertyDsl {
      * * `AWS::Lambda::Function`
      * * `AWS::S3::Object`
      *
-     * The following resource types are also available through *advanced* event selectors. Basic
-     * event selector resource types are valid in advanced event selectors, but advanced event
-     * selector resource types are not valid in basic event selectors. For more information, see
+     * Additional resource types are available through *advanced* event selectors. For more
+     * information about these additional resource types, see
      * [AdvancedFieldSelector](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedFieldSelector.html)
      * .
-     * * `AWS::CloudTrail::Channel`
-     * * `AWS::CodeWhisperer::Profile`
-     * * `AWS::Cognito::IdentityPool`
-     * * `AWS::DynamoDB::Stream`
-     * * `AWS::EC2::Snapshot`
-     * * `AWS::EMRWAL::Workspace`
-     * * `AWS::FinSpace::Environment`
-     * * `AWS::Glue::Table`
-     * * `AWS::GuardDuty::Detector`
-     * * `AWS::KendraRanking::ExecutionPlan`
-     * * `AWS::ManagedBlockchain::Network`
-     * * `AWS::ManagedBlockchain::Node`
-     * * `AWS::MedicalImaging::Datastore`
-     * * `AWS::SageMaker::ExperimentTrialComponent`
-     * * `AWS::SageMaker::FeatureGroup`
-     * * `AWS::S3::AccessPoint`
-     * * `AWS::S3ObjectLambda::AccessPoint`
-     * * `AWS::S3Outposts::Object`
-     * * `AWS::SSMMessages::ControlChannel`
-     * * `AWS::VerifiedPermissions::PolicyStore`
      */
     public fun type(type: String) {
         cdkBuilder.type(type)

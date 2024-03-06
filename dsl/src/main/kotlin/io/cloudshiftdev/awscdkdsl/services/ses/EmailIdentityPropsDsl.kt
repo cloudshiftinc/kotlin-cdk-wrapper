@@ -25,11 +25,12 @@ import software.amazon.awscdk.services.ses.MailFromBehaviorOnMxFailure
  *
  * Example:
  * ```
- * IPublicHostedZone myHostedZone;
+ * import software.amazon.awscdk.services.iam.*;
+ * User user;
  * EmailIdentity identity = EmailIdentity.Builder.create(this, "Identity")
- * .identity(Identity.publicHostedZone(myHostedZone))
- * .mailFromDomain("mail.cdk.dev")
+ * .identity(Identity.domain("cdk.dev"))
  * .build();
+ * identity.grantSendEmail(user);
  * ```
  */
 @CdkDslMarker

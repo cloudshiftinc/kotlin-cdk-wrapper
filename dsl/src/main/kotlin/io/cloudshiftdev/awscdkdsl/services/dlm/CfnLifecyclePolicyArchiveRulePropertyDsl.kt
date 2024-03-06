@@ -16,6 +16,8 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dlm.CfnLifecyclePolicy
 
 /**
+ * *[Custom snapshot policies only]* Specifies a snapshot archiving rule for a schedule.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -39,12 +41,12 @@ public class CfnLifecyclePolicyArchiveRulePropertyDsl {
     private val cdkBuilder: CfnLifecyclePolicy.ArchiveRuleProperty.Builder =
         CfnLifecyclePolicy.ArchiveRuleProperty.builder()
 
-    /** @param retainRule the value to be set. */
+    /** @param retainRule Information about the retention period for the snapshot archiving rule. */
     public fun retainRule(retainRule: IResolvable) {
         cdkBuilder.retainRule(retainRule)
     }
 
-    /** @param retainRule the value to be set. */
+    /** @param retainRule Information about the retention period for the snapshot archiving rule. */
     public fun retainRule(retainRule: CfnLifecyclePolicy.ArchiveRetainRuleProperty) {
         cdkBuilder.retainRule(retainRule)
     }

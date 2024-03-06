@@ -43,7 +43,7 @@ import software.amazon.awscdk.services.lambda.ILayerVersion
  * Example:
  * ```
  * Cluster cluster = Cluster.Builder.create(this, "HelloEKS")
- * .version(KubernetesVersion.V1_27)
+ * .version(KubernetesVersion.V1_29)
  * .defaultCapacity(0)
  * .build();
  * cluster.addNodegroupCapacity("custom-node-group", NodegroupOptions.builder()
@@ -219,7 +219,7 @@ public class ClusterPropsDsl {
      * ```
      * LayerVersion layer = LayerVersion.Builder.create(this, "proxy-agent-layer")
      * .code(Code.fromAsset(String.format("%s/layer.zip", __dirname)))
-     * .compatibleRuntimes(List.of(Runtime.NODEJS_14_X))
+     * .compatibleRuntimes(List.of(Runtime.NODEJS_LATEST))
      * .build();
      * ```
      */
@@ -309,10 +309,8 @@ public class ClusterPropsDsl {
     }
 
     /**
-     * @param vpcSubnets Where to place EKS Control Plane ENIs. If you want to create public load
-     *   balancers, this must include public subnets.
-     *
-     * For example, to only select private subnets, supply the following:
+     * @param vpcSubnets Where to place EKS Control Plane ENIs. For example, to only select private
+     *   subnets, supply the following:
      *
      * `vpcSubnets: [{ subnetType: ec2.SubnetType.PRIVATE_WITH_EGRESS }]`
      */
@@ -321,10 +319,8 @@ public class ClusterPropsDsl {
     }
 
     /**
-     * @param vpcSubnets Where to place EKS Control Plane ENIs. If you want to create public load
-     *   balancers, this must include public subnets.
-     *
-     * For example, to only select private subnets, supply the following:
+     * @param vpcSubnets Where to place EKS Control Plane ENIs. For example, to only select private
+     *   subnets, supply the following:
      *
      * `vpcSubnets: [{ subnetType: ec2.SubnetType.PRIVATE_WITH_EGRESS }]`
      */

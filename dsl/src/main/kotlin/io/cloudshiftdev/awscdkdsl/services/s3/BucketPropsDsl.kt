@@ -13,6 +13,7 @@ package io.cloudshiftdev.awscdkdsl.services.s3
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Boolean
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -34,6 +35,7 @@ import software.amazon.awscdk.services.s3.ObjectLockRetention
 import software.amazon.awscdk.services.s3.ObjectOwnership
 import software.amazon.awscdk.services.s3.RedirectTarget
 import software.amazon.awscdk.services.s3.RoutingRule
+import software.amazon.awscdk.services.s3.TargetObjectKeyFormat
 
 /**
  * Example:
@@ -218,6 +220,14 @@ public class BucketPropsDsl {
         _metrics.addAll(metrics)
     }
 
+    /**
+     * @param minimumTlsVersion Enforces minimum TLS version for requests. Requires `enforceSSL` to
+     *   be enabled.
+     */
+    public fun minimumTlsVersion(minimumTlsVersion: Number) {
+        cdkBuilder.minimumTlsVersion(minimumTlsVersion)
+    }
+
     /** @param notificationsHandlerRole The role to be used by the notifications handler. */
     public fun notificationsHandlerRole(notificationsHandlerRole: IRole) {
         cdkBuilder.notificationsHandlerRole(notificationsHandlerRole)
@@ -270,6 +280,11 @@ public class BucketPropsDsl {
      */
     public fun serverAccessLogsPrefix(serverAccessLogsPrefix: String) {
         cdkBuilder.serverAccessLogsPrefix(serverAccessLogsPrefix)
+    }
+
+    /** @param targetObjectKeyFormat Optional key format for log objects. */
+    public fun targetObjectKeyFormat(targetObjectKeyFormat: TargetObjectKeyFormat) {
+        cdkBuilder.targetObjectKeyFormat(targetObjectKeyFormat)
     }
 
     /**

@@ -60,7 +60,7 @@ public class CfnLinkPropsDsl {
     /**
      * @param resourceTypes An array of strings that define which types of data that the source
      *   account shares with the monitoring account. Valid values are `AWS::CloudWatch::Metric |
-     *   AWS::Logs::LogGroup | AWS::XRay::Trace` .
+     *   AWS::Logs::LogGroup | AWS::XRay::Trace | AWS::ApplicationInsights::Application` .
      */
     public fun resourceTypes(vararg resourceTypes: String) {
         _resourceTypes.addAll(listOf(*resourceTypes))
@@ -69,7 +69,7 @@ public class CfnLinkPropsDsl {
     /**
      * @param resourceTypes An array of strings that define which types of data that the source
      *   account shares with the monitoring account. Valid values are `AWS::CloudWatch::Metric |
-     *   AWS::Logs::LogGroup | AWS::XRay::Trace` .
+     *   AWS::Logs::LogGroup | AWS::XRay::Trace | AWS::ApplicationInsights::Application` .
      */
     public fun resourceTypes(resourceTypes: Collection<String>) {
         _resourceTypes.addAll(resourceTypes)

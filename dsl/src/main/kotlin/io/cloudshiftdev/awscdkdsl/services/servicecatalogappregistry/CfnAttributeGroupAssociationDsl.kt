@@ -57,11 +57,12 @@ public class CfnAttributeGroupAssociationDsl(
     }
 
     /**
-     * The name or ID of the attribute group that holds the attributes to describe the application.
+     * The name or ID of the attribute group which holds the attributes that describe the
+     * application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-attributegroupassociation.html#cfn-servicecatalogappregistry-attributegroupassociation-attributegroup)
      *
-     * @param attributeGroup The name or ID of the attribute group that holds the attributes to
+     * @param attributeGroup The name or ID of the attribute group which holds the attributes that
      *   describe the application.
      */
     public fun attributeGroup(attributeGroup: String) {

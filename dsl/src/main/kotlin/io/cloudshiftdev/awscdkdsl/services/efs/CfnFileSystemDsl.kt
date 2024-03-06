@@ -46,17 +46,29 @@ import software.constructs.Construct
  * .bypassPolicyLockoutSafetyCheck(false)
  * .encrypted(false)
  * .fileSystemPolicy(fileSystemPolicy)
+ * .fileSystemProtection(FileSystemProtectionProperty.builder()
+ * .replicationOverwriteProtection("replicationOverwriteProtection")
+ * .build())
  * .fileSystemTags(List.of(ElasticFileSystemTagProperty.builder()
  * .key("key")
  * .value("value")
  * .build()))
  * .kmsKeyId("kmsKeyId")
  * .lifecyclePolicies(List.of(LifecyclePolicyProperty.builder()
+ * .transitionToArchive("transitionToArchive")
  * .transitionToIa("transitionToIa")
  * .transitionToPrimaryStorageClass("transitionToPrimaryStorageClass")
  * .build()))
  * .performanceMode("performanceMode")
  * .provisionedThroughputInMibps(123)
+ * .replicationConfiguration(ReplicationConfigurationProperty.builder()
+ * .destinations(List.of(ReplicationDestinationProperty.builder()
+ * .availabilityZoneName("availabilityZoneName")
+ * .fileSystemId("fileSystemId")
+ * .kmsKeyId("kmsKeyId")
+ * .region("region")
+ * .build()))
+ * .build())
  * .throughputMode("throughputMode")
  * .build();
  * ```
@@ -76,20 +88,21 @@ public class CfnFileSystemDsl(
     private val _lifecyclePolicies: MutableList<Any> = mutableListOf()
 
     /**
-     * Used to create a file system that uses One Zone storage classes.
+     * For One Zone file systems, specify the AWS Availability Zone in which to create the file
+     * system.
      *
-     * It specifies the AWS Availability Zone in which to create the file system. Use the format
-     * `us-east-1a` to specify the Availability Zone. For more information about One Zone storage
-     * classes, see
-     * [Using EFS storage classes](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html)
+     * Use the format `us-east-1a` to specify the Availability Zone. For more information about One
+     * Zone file systems, see
+     * [EFS file system types](https://docs.aws.amazon.com/efs/latest/ug/availability-durability.html#file-system-type)
      * in the *Amazon EFS User Guide* .
      *
-     * One Zone storage classes are not available in all Availability Zones in AWS Regions where
-     * Amazon EFS is available.
+     * One Zone file systems are not available in all Availability Zones in AWS Regions where Amazon
+     * EFS is available.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-availabilityzonename)
      *
-     * @param availabilityZoneName Used to create a file system that uses One Zone storage classes.
+     * @param availabilityZoneName For One Zone file systems, specify the AWS Availability Zone in
+     *   which to create the file system.
      */
     public fun availabilityZoneName(availabilityZoneName: String) {
         cdkBuilder.availabilityZoneName(availabilityZoneName)
@@ -224,6 +237,30 @@ public class CfnFileSystemDsl(
     }
 
     /**
+     * Describes the protection on the file system.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-filesystemprotection)
+     *
+     * @param fileSystemProtection Describes the protection on the file system.
+     */
+    public fun fileSystemProtection(fileSystemProtection: IResolvable) {
+        cdkBuilder.fileSystemProtection(fileSystemProtection)
+    }
+
+    /**
+     * Describes the protection on the file system.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-filesystemprotection)
+     *
+     * @param fileSystemProtection Describes the protection on the file system.
+     */
+    public fun fileSystemProtection(
+        fileSystemProtection: CfnFileSystem.FileSystemProtectionProperty
+    ) {
+        cdkBuilder.fileSystemProtection(fileSystemProtection)
+    }
+
+    /**
      * Use to create one or more tags associated with the file system.
      *
      * Each tag is a user-defined key-value pair. Name your file system on creation by including a
@@ -291,16 +328,17 @@ public class CfnFileSystemDsl(
      * An array of `LifecyclePolicy` objects that define the file system's `LifecycleConfiguration`
      * object.
      *
-     * A `LifecycleConfiguration` object informs EFS lifecycle management and intelligent tiering of
-     * the following:
-     * * When to move files in the file system from primary storage to the IA storage class.
-     * * When to move files that are in IA storage to primary storage.
+     * A `LifecycleConfiguration` object informs Lifecycle management of the following:
+     * * When to move files in the file system from primary storage to IA storage.
+     * * When to move files in the file system from primary storage or IA storage to Archive
+     *   storage.
+     * * When to move files that are in IA or Archive storage to primary storage.
      *
      * Amazon EFS requires that each `LifecyclePolicy` object have only a single transition. This
      * means that in a request body, `LifecyclePolicies` needs to be structured as an array of
      * `LifecyclePolicy` objects, one object for each transition, `TransitionToIA` ,
-     * `TransitionToPrimaryStorageClass` . See the example requests in the following section for
-     * more information.
+     * `TransitionToArchive` `TransitionToPrimaryStorageClass` . See the example requests in the
+     * following section for more information.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-lifecyclepolicies)
      *
@@ -315,16 +353,17 @@ public class CfnFileSystemDsl(
      * An array of `LifecyclePolicy` objects that define the file system's `LifecycleConfiguration`
      * object.
      *
-     * A `LifecycleConfiguration` object informs EFS lifecycle management and intelligent tiering of
-     * the following:
-     * * When to move files in the file system from primary storage to the IA storage class.
-     * * When to move files that are in IA storage to primary storage.
+     * A `LifecycleConfiguration` object informs Lifecycle management of the following:
+     * * When to move files in the file system from primary storage to IA storage.
+     * * When to move files in the file system from primary storage or IA storage to Archive
+     *   storage.
+     * * When to move files that are in IA or Archive storage to primary storage.
      *
      * Amazon EFS requires that each `LifecyclePolicy` object have only a single transition. This
      * means that in a request body, `LifecyclePolicies` needs to be structured as an array of
      * `LifecyclePolicy` objects, one object for each transition, `TransitionToIA` ,
-     * `TransitionToPrimaryStorageClass` . See the example requests in the following section for
-     * more information.
+     * `TransitionToArchive` `TransitionToPrimaryStorageClass` . See the example requests in the
+     * following section for more information.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-lifecyclepolicies)
      *
@@ -339,16 +378,17 @@ public class CfnFileSystemDsl(
      * An array of `LifecyclePolicy` objects that define the file system's `LifecycleConfiguration`
      * object.
      *
-     * A `LifecycleConfiguration` object informs EFS lifecycle management and intelligent tiering of
-     * the following:
-     * * When to move files in the file system from primary storage to the IA storage class.
-     * * When to move files that are in IA storage to primary storage.
+     * A `LifecycleConfiguration` object informs Lifecycle management of the following:
+     * * When to move files in the file system from primary storage to IA storage.
+     * * When to move files in the file system from primary storage or IA storage to Archive
+     *   storage.
+     * * When to move files that are in IA or Archive storage to primary storage.
      *
      * Amazon EFS requires that each `LifecyclePolicy` object have only a single transition. This
      * means that in a request body, `LifecyclePolicies` needs to be structured as an array of
      * `LifecyclePolicy` objects, one object for each transition, `TransitionToIA` ,
-     * `TransitionToPrimaryStorageClass` . See the example requests in the following section for
-     * more information.
+     * `TransitionToArchive` `TransitionToPrimaryStorageClass` . See the example requests in the
+     * following section for more information.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-lifecyclepolicies)
      *
@@ -362,12 +402,14 @@ public class CfnFileSystemDsl(
     /**
      * The performance mode of the file system.
      *
-     * We recommend `generalPurpose` performance mode for most file systems. File systems using the
+     * We recommend `generalPurpose` performance mode for all file systems. File systems using the
      * `maxIO` performance mode can scale to higher levels of aggregate throughput and operations
      * per second with a tradeoff of slightly higher latencies for most file operations. The
-     * performance mode can't be changed after the file system has been created.
+     * performance mode can't be changed after the file system has been created. The `maxIO` mode is
+     * not supported on One Zone file systems.
      *
-     * The `maxIO` mode is not supported on file systems using One Zone storage classes.
+     * Due to the higher per-operation latencies with Max I/O, we recommend using General Purpose
+     * performance mode for all file systems.
      *
      * Default is `generalPurpose` .
      *
@@ -399,17 +441,42 @@ public class CfnFileSystemDsl(
     }
 
     /**
+     * Describes the replication configuration for a specific file system.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-replicationconfiguration)
+     *
+     * @param replicationConfiguration Describes the replication configuration for a specific file
+     *   system.
+     */
+    public fun replicationConfiguration(replicationConfiguration: IResolvable) {
+        cdkBuilder.replicationConfiguration(replicationConfiguration)
+    }
+
+    /**
+     * Describes the replication configuration for a specific file system.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-replicationconfiguration)
+     *
+     * @param replicationConfiguration Describes the replication configuration for a specific file
+     *   system.
+     */
+    public fun replicationConfiguration(
+        replicationConfiguration: CfnFileSystem.ReplicationConfigurationProperty
+    ) {
+        cdkBuilder.replicationConfiguration(replicationConfiguration)
+    }
+
+    /**
      * Specifies the throughput mode for the file system.
      *
      * The mode can be `bursting` , `provisioned` , or `elastic` . If you set `ThroughputMode` to
      * `provisioned` , you must also set a value for `ProvisionedThroughputInMibps` . After you
-     * create the file system, you can decrease your file system's throughput in Provisioned
-     * Throughput mode or change between the throughput modes, with certain time restrictions. For
-     * more information, see
+     * create the file system, you can decrease your file system's Provisioned throughput or change
+     * between the throughput modes, with certain time restrictions. For more information, see
      * [Specifying throughput with provisioned mode](https://docs.aws.amazon.com/efs/latest/ug/performance.html#provisioned-throughput)
      * in the *Amazon EFS User Guide* .
      *
-     * Default is `elastic` .
+     * Default is `bursting` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-throughputmode)
      *

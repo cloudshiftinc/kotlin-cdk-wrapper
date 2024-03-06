@@ -25,7 +25,7 @@ import software.constructs.Construct
  * Creates a custom SageMaker image.
  *
  * A SageMaker image is a set of image versions. Each image version represents a container image
- * stored in Amazon Elastic Container Registry (ECR). For more information, see
+ * stored in Amazon ECR. For more information, see
  * [Bring your own SageMaker image](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-byoi.html)
  * .
  *
@@ -60,10 +60,6 @@ public class CfnImageDsl(
 
     /**
      * The description of the image.
-     *
-     * *Length Constraints* : Minimum length of 1. Maximum length of 512.
-     *
-     * *Pattern* : `.*`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-image.html#cfn-sagemaker-image-imagedescription)
      *

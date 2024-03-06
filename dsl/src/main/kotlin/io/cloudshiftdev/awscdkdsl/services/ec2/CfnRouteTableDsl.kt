@@ -27,8 +27,8 @@ import software.constructs.Construct
  * After you create a route table, you can add routes and associate the table with a subnet.
  *
  * For more information, see
- * [Route Tables](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html) in
- * the *Amazon VPC User Guide* .
+ * [Route tables](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html) in the
+ * *Amazon VPC User Guide* .
  *
  * Example:
  * ```

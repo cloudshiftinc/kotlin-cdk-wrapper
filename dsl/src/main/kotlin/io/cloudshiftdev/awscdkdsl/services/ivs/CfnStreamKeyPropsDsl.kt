@@ -53,7 +53,7 @@ public class CfnStreamKeyPropsDsl {
 
     /**
      * @param tags An array of key-value pairs to apply to this resource. For more information, see
-     *   [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     *   [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-streamkey-tag.html)
      *   .
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
@@ -62,7 +62,7 @@ public class CfnStreamKeyPropsDsl {
 
     /**
      * @param tags An array of key-value pairs to apply to this resource. For more information, see
-     *   [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     *   [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-streamkey-tag.html)
      *   .
      */
     public fun tags(tags: Collection<CfnTag>) {

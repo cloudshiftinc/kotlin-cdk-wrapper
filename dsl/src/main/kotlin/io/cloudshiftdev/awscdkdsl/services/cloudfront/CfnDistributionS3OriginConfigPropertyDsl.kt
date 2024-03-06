@@ -39,13 +39,18 @@ public class CfnDistributionS3OriginConfigPropertyDsl {
         CfnDistribution.S3OriginConfigProperty.builder()
 
     /**
-     * @param originAccessIdentity The CloudFront origin access identity to associate with the
-     *   origin. Use an origin access identity to configure the origin so that viewers can *only*
-     *   access objects in an Amazon S3 bucket through CloudFront. The format of the value is:
+     * @param originAccessIdentity If you're using origin access control (OAC) instead of origin
+     *   access identity, specify an empty `OriginAccessIdentity` element. For more information, see
+     *   [Restricting access to an AWS](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-origin.html)
+     *   in the *Amazon CloudFront Developer Guide* .
      *
-     * origin-access-identity/cloudfront/ *ID-of-origin-access-identity*
+     * The CloudFront origin access identity to associate with the origin. Use an origin access
+     * identity to configure the origin so that viewers can *only* access objects in an Amazon S3
+     * bucket through CloudFront. The format of the value is:
      *
-     * where `*ID-of-origin-access-identity*` is the value that CloudFront returned in the `ID`
+     * `origin-access-identity/cloudfront/ID-of-origin-access-identity`
+     *
+     * The `*ID-of-origin-access-identity*` is the value that CloudFront returned in the `ID`
      * element when you created the origin access identity.
      *
      * If you want viewers to be able to access objects using either the CloudFront URL or the

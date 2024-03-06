@@ -45,12 +45,18 @@ public class CfnFlowSourceGatewayBridgeSourcePropertyDsl {
         cdkBuilder.bridgeArn(bridgeArn)
     }
 
-    /** @param vpcInterfaceAttachment The settings for attaching a VPC interface to an resource. */
+    /**
+     * @param vpcInterfaceAttachment The name of the VPC interface attachment to use for this bridge
+     *   source.
+     */
     public fun vpcInterfaceAttachment(vpcInterfaceAttachment: IResolvable) {
         cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment)
     }
 
-    /** @param vpcInterfaceAttachment The settings for attaching a VPC interface to an resource. */
+    /**
+     * @param vpcInterfaceAttachment The name of the VPC interface attachment to use for this bridge
+     *   source.
+     */
     public fun vpcInterfaceAttachment(
         vpcInterfaceAttachment: CfnFlowSource.VpcInterfaceAttachmentProperty
     ) {

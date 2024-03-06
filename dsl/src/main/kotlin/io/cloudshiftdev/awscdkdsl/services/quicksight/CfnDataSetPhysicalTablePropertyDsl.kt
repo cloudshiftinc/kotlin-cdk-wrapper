@@ -32,6 +32,8 @@ import software.amazon.awscdk.services.quicksight.CfnDataSet
  * .columns(List.of(InputColumnProperty.builder()
  * .name("name")
  * .type("type")
+ * // the properties below are optional
+ * .subType("subType")
  * .build()))
  * .dataSourceArn("dataSourceArn")
  * .name("name")
@@ -42,6 +44,8 @@ import software.amazon.awscdk.services.quicksight.CfnDataSet
  * .inputColumns(List.of(InputColumnProperty.builder()
  * .name("name")
  * .type("type")
+ * // the properties below are optional
+ * .subType("subType")
  * .build()))
  * .name("name")
  * // the properties below are optional
@@ -53,6 +57,8 @@ import software.amazon.awscdk.services.quicksight.CfnDataSet
  * .inputColumns(List.of(InputColumnProperty.builder()
  * .name("name")
  * .type("type")
+ * // the properties below are optional
+ * .subType("subType")
  * .build()))
  * // the properties below are optional
  * .uploadSettings(UploadSettingsProperty.builder()

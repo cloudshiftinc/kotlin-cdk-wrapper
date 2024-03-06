@@ -84,7 +84,7 @@ import software.constructs.Construct
  *   [ReplaceComputeEnvironment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#cfn-batch-computeenvironment-replacecomputeenvironment)
  *   property to `false` .
  *
- * Set the `ReplaceComputeEnvironment` property to `false` if the compute environment uses the
+ * Set the `ReplaceComputeEnvironment` property to `true` if the compute environment uses the
  * `BEST_FIT` allocation strategy. &gt; If the `ReplaceComputeEnvironment` property is set to
  * `false` , you might receive an error message when you update the CFN template for a compute
  * environment. This issue occurs if the updated `desiredvcpus` value is less than the current

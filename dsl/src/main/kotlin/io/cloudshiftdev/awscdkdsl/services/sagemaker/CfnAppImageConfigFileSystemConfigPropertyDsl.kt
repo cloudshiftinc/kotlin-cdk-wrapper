@@ -17,7 +17,7 @@ import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnAppImageConfig
 
 /**
- * The Amazon Elastic File System (EFS) storage configuration for a SageMaker image.
+ * The Amazon Elastic File System storage configuration for a SageMaker image.
  *
  * Example:
  * ```

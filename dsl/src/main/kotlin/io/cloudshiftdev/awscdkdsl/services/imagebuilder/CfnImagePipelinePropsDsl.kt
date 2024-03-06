@@ -12,9 +12,12 @@
 package io.cloudshiftdev.awscdkdsl.services.imagebuilder
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
+import kotlin.collections.Collection
 import kotlin.collections.Map
+import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.imagebuilder.CfnImagePipeline
 import software.amazon.awscdk.services.imagebuilder.CfnImagePipelineProps
@@ -35,6 +38,7 @@ import software.amazon.awscdk.services.imagebuilder.CfnImagePipelineProps
  * .description("description")
  * .distributionConfigurationArn("distributionConfigurationArn")
  * .enhancedImageMetadataEnabled(false)
+ * .executionRole("executionRole")
  * .imageRecipeArn("imageRecipeArn")
  * .imageScanningConfiguration(ImageScanningConfigurationProperty.builder()
  * .ecrConfiguration(EcrConfigurationProperty.builder()
@@ -54,6 +58,15 @@ import software.amazon.awscdk.services.imagebuilder.CfnImagePipelineProps
  * .status("status")
  * .tags(Map.of(
  * "tagsKey", "tags"))
+ * .workflows(List.of(WorkflowConfigurationProperty.builder()
+ * .onFailure("onFailure")
+ * .parallelGroup("parallelGroup")
+ * .parameters(List.of(WorkflowParameterProperty.builder()
+ * .name("name")
+ * .value(List.of("value"))
+ * .build()))
+ * .workflowArn("workflowArn")
+ * .build()))
  * .build();
  * ```
  *
@@ -62,6 +75,8 @@ import software.amazon.awscdk.services.imagebuilder.CfnImagePipelineProps
 @CdkDslMarker
 public class CfnImagePipelinePropsDsl {
     private val cdkBuilder: CfnImagePipelineProps.Builder = CfnImagePipelineProps.builder()
+
+    private val _workflows: MutableList<Any> = mutableListOf()
 
     /**
      * @param containerRecipeArn The Amazon Resource Name (ARN) of the container recipe that is used
@@ -103,6 +118,14 @@ public class CfnImagePipelinePropsDsl {
     }
 
     /**
+     * @param executionRole The name or Amazon Resource Name (ARN) for the IAM role you create that
+     *   grants Image Builder access to perform workflow actions.
+     */
+    public fun executionRole(executionRole: String) {
+        cdkBuilder.executionRole(executionRole)
+    }
+
+    /**
      * @param imageRecipeArn The Amazon Resource Name (ARN) of the image recipe associated with this
      *   image pipeline.
      */
@@ -110,20 +133,12 @@ public class CfnImagePipelinePropsDsl {
         cdkBuilder.imageRecipeArn(imageRecipeArn)
     }
 
-    /**
-     * @param imageScanningConfiguration Determines if tests should run after building the image.
-     *   Image Builder defaults to enable tests to run following the image build, before image
-     *   distribution.
-     */
+    /** @param imageScanningConfiguration Contains settings for vulnerability scans. */
     public fun imageScanningConfiguration(imageScanningConfiguration: IResolvable) {
         cdkBuilder.imageScanningConfiguration(imageScanningConfiguration)
     }
 
-    /**
-     * @param imageScanningConfiguration Determines if tests should run after building the image.
-     *   Image Builder defaults to enable tests to run following the image build, before image
-     *   distribution.
-     */
+    /** @param imageScanningConfiguration Contains settings for vulnerability scans. */
     public fun imageScanningConfiguration(
         imageScanningConfiguration: CfnImagePipeline.ImageScanningConfigurationProperty
     ) {
@@ -187,5 +202,23 @@ public class CfnImagePipelinePropsDsl {
         cdkBuilder.tags(tags)
     }
 
-    public fun build(): CfnImagePipelineProps = cdkBuilder.build()
+    /** @param workflows Contains the workflows that run for the image pipeline. */
+    public fun workflows(vararg workflows: Any) {
+        _workflows.addAll(listOf(*workflows))
+    }
+
+    /** @param workflows Contains the workflows that run for the image pipeline. */
+    public fun workflows(workflows: Collection<Any>) {
+        _workflows.addAll(workflows)
+    }
+
+    /** @param workflows Contains the workflows that run for the image pipeline. */
+    public fun workflows(workflows: IResolvable) {
+        cdkBuilder.workflows(workflows)
+    }
+
+    public fun build(): CfnImagePipelineProps {
+        if (_workflows.isNotEmpty()) cdkBuilder.workflows(_workflows)
+        return cdkBuilder.build()
+    }
 }

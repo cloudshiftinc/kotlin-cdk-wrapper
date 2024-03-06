@@ -26,7 +26,7 @@ import software.amazon.awscdk.services.rds.CfnDBCluster
  * [Using Amazon Aurora Serverless](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html)
  * in the *Amazon Aurora User Guide* .
  *
- * This property is only supported for Aurora Serverless v1. For Aurora Serverless v2, use
+ * This property is only supported for Aurora Serverless v1. For Aurora Serverless v2, Use the
  * `ServerlessV2ScalingConfiguration` property.
  *
  * Valid for: Aurora DB clusters only
@@ -55,9 +55,9 @@ public class CfnDBClusterScalingConfigurationPropertyDsl {
         CfnDBCluster.ScalingConfigurationProperty.builder()
 
     /**
-     * @param autoPause A value that indicates whether to allow or disallow automatic pause for an
-     *   Aurora DB cluster in `serverless` DB engine mode. A DB cluster can be paused only when it's
-     *   idle (it has no connections).
+     * @param autoPause Indicates whether to allow or disallow automatic pause for an Aurora DB
+     *   cluster in `serverless` DB engine mode. A DB cluster can be paused only when it's idle (it
+     *   has no connections).
      *
      * If a DB cluster is paused for more than seven days, the DB cluster might be backed up with a
      * snapshot. In this case, the DB cluster is restored when there is a request to connect to it.
@@ -67,9 +67,9 @@ public class CfnDBClusterScalingConfigurationPropertyDsl {
     }
 
     /**
-     * @param autoPause A value that indicates whether to allow or disallow automatic pause for an
-     *   Aurora DB cluster in `serverless` DB engine mode. A DB cluster can be paused only when it's
-     *   idle (it has no connections).
+     * @param autoPause Indicates whether to allow or disallow automatic pause for an Aurora DB
+     *   cluster in `serverless` DB engine mode. A DB cluster can be paused only when it's idle (it
+     *   has no connections).
      *
      * If a DB cluster is paused for more than seven days, the DB cluster might be backed up with a
      * snapshot. In this case, the DB cluster is restored when there is a request to connect to it.

@@ -49,8 +49,9 @@ public class NetworkAclPropsDsl {
     private val cdkBuilder: NetworkAclProps.Builder = NetworkAclProps.builder()
 
     /**
-     * @param networkAclName The name of the NetworkAcl. It is not recommended to use an explicit
-     *   name.
+     * @param networkAclName The name of the NetworkAcl. Since the NetworkAcl resource doesn't
+     *   support providing a physical name, the value provided here will be recorded in the `Name`
+     *   tag.
      */
     public fun networkAclName(networkAclName: String) {
         cdkBuilder.networkAclName(networkAclName)

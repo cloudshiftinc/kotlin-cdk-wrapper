@@ -147,25 +147,18 @@ public object applicationautoscaling {
      *
      * Example:
      * ```
-     * import software.amazon.awscdk.services.lambda.*;
-     * Code code;
-     * Function handler = Function.Builder.create(this, "MyFunction")
-     * .runtime(Runtime.PYTHON_3_7)
-     * .handler("index.handler")
-     * .code(code)
-     * .reservedConcurrentExecutions(2)
+     * ScalableTarget shardsScalableTarget = ScalableTarget.Builder.create(this,
+     * "ElastiCacheRedisShardsScalableTarget")
+     * .serviceNamespace(ServiceNamespace.ELASTICACHE)
+     * .scalableDimension("elasticache:replication-group:NodeGroups")
+     * .minCapacity(2)
+     * .maxCapacity(10)
+     * .resourceId("replication-group/main-cluster")
      * .build();
-     * Version fnVer = handler.getCurrentVersion();
-     * ScalableTarget target = ScalableTarget.Builder.create(this, "ScalableTarget")
-     * .serviceNamespace(ServiceNamespace.LAMBDA)
-     * .maxCapacity(100)
-     * .minCapacity(10)
-     * .resourceId(String.format("function:%s:%s", handler.getFunctionName(), fnVer.getVersion()))
-     * .scalableDimension("lambda:function:ProvisionedConcurrency")
-     * .build();
-     * target.scaleToTrackMetric("PceTracking", BasicTargetTrackingScalingPolicyProps.builder()
-     * .targetValue(0.9)
-     * .predefinedMetric(PredefinedMetric.LAMBDA_PROVISIONED_CONCURRENCY_UTILIZATION)
+     * shardsScalableTarget.scaleToTrackMetric("ElastiCacheRedisShardsCPUUtilization",
+     * BasicTargetTrackingScalingPolicyProps.builder()
+     * .targetValue(20)
+     * .predefinedMetric(PredefinedMetric.ELASTICACHE_PRIMARY_ENGINE_CPU_UTILIZATION)
      * .build());
      * ```
      */
@@ -420,14 +413,31 @@ public object applicationautoscaling {
      * .targetValue(123)
      * // the properties below are optional
      * .customizedMetricSpecification(CustomizedMetricSpecificationProperty.builder()
-     * .metricName("metricName")
-     * .namespace("namespace")
-     * .statistic("statistic")
-     * // the properties below are optional
      * .dimensions(List.of(MetricDimensionProperty.builder()
      * .name("name")
      * .value("value")
      * .build()))
+     * .metricName("metricName")
+     * .metrics(List.of(TargetTrackingMetricDataQueryProperty.builder()
+     * .expression("expression")
+     * .id("id")
+     * .label("label")
+     * .metricStat(TargetTrackingMetricStatProperty.builder()
+     * .metric(TargetTrackingMetricProperty.builder()
+     * .dimensions(List.of(TargetTrackingMetricDimensionProperty.builder()
+     * .name("name")
+     * .value("value")
+     * .build()))
+     * .metricName("metricName")
+     * .namespace("namespace")
+     * .build())
+     * .stat("stat")
+     * .unit("unit")
+     * .build())
+     * .returnData(false)
+     * .build()))
+     * .namespace("namespace")
+     * .statistic("statistic")
      * .unit("unit")
      * .build())
      * .disableScaleIn(false)
@@ -494,14 +504,31 @@ public object applicationautoscaling {
      * import software.amazon.awscdk.services.applicationautoscaling.*;
      * CustomizedMetricSpecificationProperty customizedMetricSpecificationProperty =
      * CustomizedMetricSpecificationProperty.builder()
-     * .metricName("metricName")
-     * .namespace("namespace")
-     * .statistic("statistic")
-     * // the properties below are optional
      * .dimensions(List.of(MetricDimensionProperty.builder()
      * .name("name")
      * .value("value")
      * .build()))
+     * .metricName("metricName")
+     * .metrics(List.of(TargetTrackingMetricDataQueryProperty.builder()
+     * .expression("expression")
+     * .id("id")
+     * .label("label")
+     * .metricStat(TargetTrackingMetricStatProperty.builder()
+     * .metric(TargetTrackingMetricProperty.builder()
+     * .dimensions(List.of(TargetTrackingMetricDimensionProperty.builder()
+     * .name("name")
+     * .value("value")
+     * .build()))
+     * .metricName("metricName")
+     * .namespace("namespace")
+     * .build())
+     * .stat("stat")
+     * .unit("unit")
+     * .build())
+     * .returnData(false)
+     * .build()))
+     * .namespace("namespace")
+     * .statistic("statistic")
      * .unit("unit")
      * .build();
      * ```
@@ -606,14 +633,31 @@ public object applicationautoscaling {
      * .targetValue(123)
      * // the properties below are optional
      * .customizedMetricSpecification(CustomizedMetricSpecificationProperty.builder()
-     * .metricName("metricName")
-     * .namespace("namespace")
-     * .statistic("statistic")
-     * // the properties below are optional
      * .dimensions(List.of(MetricDimensionProperty.builder()
      * .name("name")
      * .value("value")
      * .build()))
+     * .metricName("metricName")
+     * .metrics(List.of(TargetTrackingMetricDataQueryProperty.builder()
+     * .expression("expression")
+     * .id("id")
+     * .label("label")
+     * .metricStat(TargetTrackingMetricStatProperty.builder()
+     * .metric(TargetTrackingMetricProperty.builder()
+     * .dimensions(List.of(TargetTrackingMetricDimensionProperty.builder()
+     * .name("name")
+     * .value("value")
+     * .build()))
+     * .metricName("metricName")
+     * .namespace("namespace")
+     * .build())
+     * .stat("stat")
+     * .unit("unit")
+     * .build())
+     * .returnData(false)
+     * .build()))
+     * .namespace("namespace")
+     * .statistic("statistic")
      * .unit("unit")
      * .build())
      * .disableScaleIn(false)
@@ -720,6 +764,165 @@ public object applicationautoscaling {
     }
 
     /**
+     * The metric data to return.
+     *
+     * Also defines whether this call is returning data for one metric only, or whether it is
+     * performing a math expression on the values of returned metric statistics to create a new time
+     * series. A time series is a series of data points, each of which is associated with a
+     * timestamp.
+     *
+     * You can call for a single metric or perform math expressions on multiple metrics. Any
+     * expressions used in a metric specification must eventually return a single time series.
+     *
+     * For more information and examples, see
+     * [Create a target tracking scaling policy for Application Auto Scaling using metric math](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-target-tracking-metric-math.html)
+     * in the *Application Auto Scaling User Guide* .
+     *
+     * `TargetTrackingMetricDataQuery` is a property of the
+     * [AWS::ApplicationAutoScaling::ScalingPolicy CustomizedMetricSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-customizedmetricspecification.html)
+     * property type.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.applicationautoscaling.*;
+     * TargetTrackingMetricDataQueryProperty targetTrackingMetricDataQueryProperty =
+     * TargetTrackingMetricDataQueryProperty.builder()
+     * .expression("expression")
+     * .id("id")
+     * .label("label")
+     * .metricStat(TargetTrackingMetricStatProperty.builder()
+     * .metric(TargetTrackingMetricProperty.builder()
+     * .dimensions(List.of(TargetTrackingMetricDimensionProperty.builder()
+     * .name("name")
+     * .value("value")
+     * .build()))
+     * .metricName("metricName")
+     * .namespace("namespace")
+     * .build())
+     * .stat("stat")
+     * .unit("unit")
+     * .build())
+     * .returnData(false)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-targettrackingmetricdataquery.html)
+     */
+    public inline fun cfnScalingPolicyTargetTrackingMetricDataQueryProperty(
+        block: CfnScalingPolicyTargetTrackingMetricDataQueryPropertyDsl.() -> Unit = {}
+    ): CfnScalingPolicy.TargetTrackingMetricDataQueryProperty {
+        val builder = CfnScalingPolicyTargetTrackingMetricDataQueryPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * `TargetTrackingMetricDimension` specifies a name/value pair that is part of the identity of a
+     * CloudWatch metric for the `Dimensions` property of the
+     * [AWS::ApplicationAutoScaling::ScalingPolicy TargetTrackingMetric](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-targettrackingmetric.html)
+     * property type. Duplicate dimensions are not allowed.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.applicationautoscaling.*;
+     * TargetTrackingMetricDimensionProperty targetTrackingMetricDimensionProperty =
+     * TargetTrackingMetricDimensionProperty.builder()
+     * .name("name")
+     * .value("value")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-targettrackingmetricdimension.html)
+     */
+    public inline fun cfnScalingPolicyTargetTrackingMetricDimensionProperty(
+        block: CfnScalingPolicyTargetTrackingMetricDimensionPropertyDsl.() -> Unit = {}
+    ): CfnScalingPolicy.TargetTrackingMetricDimensionProperty {
+        val builder = CfnScalingPolicyTargetTrackingMetricDimensionPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Represents a specific metric for a target tracking scaling policy for Application Auto
+     * Scaling.
+     *
+     * Metric is a property of the
+     * [AWS::ApplicationAutoScaling::ScalingPolicy TargetTrackingMetricStat](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-targettrackingmetricstat.html)
+     * property type.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.applicationautoscaling.*;
+     * TargetTrackingMetricProperty targetTrackingMetricProperty =
+     * TargetTrackingMetricProperty.builder()
+     * .dimensions(List.of(TargetTrackingMetricDimensionProperty.builder()
+     * .name("name")
+     * .value("value")
+     * .build()))
+     * .metricName("metricName")
+     * .namespace("namespace")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-targettrackingmetric.html)
+     */
+    public inline fun cfnScalingPolicyTargetTrackingMetricProperty(
+        block: CfnScalingPolicyTargetTrackingMetricPropertyDsl.() -> Unit = {}
+    ): CfnScalingPolicy.TargetTrackingMetricProperty {
+        val builder = CfnScalingPolicyTargetTrackingMetricPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * This structure defines the CloudWatch metric to return, along with the statistic, period, and
+     * unit.
+     *
+     * `TargetTrackingMetricStat` is a property of the
+     * [AWS::ApplicationAutoScaling::ScalingPolicy TargetTrackingMetricDataQuery](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-targettrackingmetricdataquery.html)
+     * property type.
+     *
+     * For more information about the CloudWatch terminology below, see
+     * [Amazon CloudWatch concepts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html)
+     * in the *Amazon CloudWatch User Guide* .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.applicationautoscaling.*;
+     * TargetTrackingMetricStatProperty targetTrackingMetricStatProperty =
+     * TargetTrackingMetricStatProperty.builder()
+     * .metric(TargetTrackingMetricProperty.builder()
+     * .dimensions(List.of(TargetTrackingMetricDimensionProperty.builder()
+     * .name("name")
+     * .value("value")
+     * .build()))
+     * .metricName("metricName")
+     * .namespace("namespace")
+     * .build())
+     * .stat("stat")
+     * .unit("unit")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-targettrackingmetricstat.html)
+     */
+    public inline fun cfnScalingPolicyTargetTrackingMetricStatProperty(
+        block: CfnScalingPolicyTargetTrackingMetricStatPropertyDsl.() -> Unit = {}
+    ): CfnScalingPolicy.TargetTrackingMetricStatProperty {
+        val builder = CfnScalingPolicyTargetTrackingMetricStatPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * `TargetTrackingScalingPolicyConfiguration` is a property of the
      * [AWS::ApplicationAutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html)
      * resource that specifies a target tracking scaling policy configuration for Application Auto
@@ -742,14 +945,31 @@ public object applicationautoscaling {
      * .targetValue(123)
      * // the properties below are optional
      * .customizedMetricSpecification(CustomizedMetricSpecificationProperty.builder()
-     * .metricName("metricName")
-     * .namespace("namespace")
-     * .statistic("statistic")
-     * // the properties below are optional
      * .dimensions(List.of(MetricDimensionProperty.builder()
      * .name("name")
      * .value("value")
      * .build()))
+     * .metricName("metricName")
+     * .metrics(List.of(TargetTrackingMetricDataQueryProperty.builder()
+     * .expression("expression")
+     * .id("id")
+     * .label("label")
+     * .metricStat(TargetTrackingMetricStatProperty.builder()
+     * .metric(TargetTrackingMetricProperty.builder()
+     * .dimensions(List.of(TargetTrackingMetricDimensionProperty.builder()
+     * .name("name")
+     * .value("value")
+     * .build()))
+     * .metricName("metricName")
+     * .namespace("namespace")
+     * .build())
+     * .stat("stat")
+     * .unit("unit")
+     * .build())
+     * .returnData(false)
+     * .build()))
+     * .namespace("namespace")
+     * .statistic("statistic")
      * .unit("unit")
      * .build())
      * .disableScaleIn(false)
@@ -858,25 +1078,18 @@ public object applicationautoscaling {
      *
      * Example:
      * ```
-     * import software.amazon.awscdk.services.lambda.*;
-     * Code code;
-     * Function handler = Function.Builder.create(this, "MyFunction")
-     * .runtime(Runtime.PYTHON_3_7)
-     * .handler("index.handler")
-     * .code(code)
-     * .reservedConcurrentExecutions(2)
+     * ScalableTarget shardsScalableTarget = ScalableTarget.Builder.create(this,
+     * "ElastiCacheRedisShardsScalableTarget")
+     * .serviceNamespace(ServiceNamespace.ELASTICACHE)
+     * .scalableDimension("elasticache:replication-group:NodeGroups")
+     * .minCapacity(2)
+     * .maxCapacity(10)
+     * .resourceId("replication-group/main-cluster")
      * .build();
-     * Version fnVer = handler.getCurrentVersion();
-     * ScalableTarget target = ScalableTarget.Builder.create(this, "ScalableTarget")
-     * .serviceNamespace(ServiceNamespace.LAMBDA)
-     * .maxCapacity(100)
-     * .minCapacity(10)
-     * .resourceId(String.format("function:%s:%s", handler.getFunctionName(), fnVer.getVersion()))
-     * .scalableDimension("lambda:function:ProvisionedConcurrency")
-     * .build();
-     * target.scaleToTrackMetric("PceTracking", BasicTargetTrackingScalingPolicyProps.builder()
-     * .targetValue(0.9)
-     * .predefinedMetric(PredefinedMetric.LAMBDA_PROVISIONED_CONCURRENCY_UTILIZATION)
+     * shardsScalableTarget.scaleToTrackMetric("ElastiCacheRedisShardsCPUUtilization",
+     * BasicTargetTrackingScalingPolicyProps.builder()
+     * .targetValue(20)
+     * .predefinedMetric(PredefinedMetric.ELASTICACHE_PRIMARY_ENGINE_CPU_UTILIZATION)
      * .build());
      * ```
      */
@@ -895,25 +1108,18 @@ public object applicationautoscaling {
      *
      * Example:
      * ```
-     * import software.amazon.awscdk.services.lambda.*;
-     * Code code;
-     * Function handler = Function.Builder.create(this, "MyFunction")
-     * .runtime(Runtime.PYTHON_3_7)
-     * .handler("index.handler")
-     * .code(code)
-     * .reservedConcurrentExecutions(2)
+     * ScalableTarget shardsScalableTarget = ScalableTarget.Builder.create(this,
+     * "ElastiCacheRedisShardsScalableTarget")
+     * .serviceNamespace(ServiceNamespace.ELASTICACHE)
+     * .scalableDimension("elasticache:replication-group:NodeGroups")
+     * .minCapacity(2)
+     * .maxCapacity(10)
+     * .resourceId("replication-group/main-cluster")
      * .build();
-     * Version fnVer = handler.getCurrentVersion();
-     * ScalableTarget target = ScalableTarget.Builder.create(this, "ScalableTarget")
-     * .serviceNamespace(ServiceNamespace.LAMBDA)
-     * .maxCapacity(100)
-     * .minCapacity(10)
-     * .resourceId(String.format("function:%s:%s", handler.getFunctionName(), fnVer.getVersion()))
-     * .scalableDimension("lambda:function:ProvisionedConcurrency")
-     * .build();
-     * target.scaleToTrackMetric("PceTracking", BasicTargetTrackingScalingPolicyProps.builder()
-     * .targetValue(0.9)
-     * .predefinedMetric(PredefinedMetric.LAMBDA_PROVISIONED_CONCURRENCY_UTILIZATION)
+     * shardsScalableTarget.scaleToTrackMetric("ElastiCacheRedisShardsCPUUtilization",
+     * BasicTargetTrackingScalingPolicyProps.builder()
+     * .targetValue(20)
+     * .predefinedMetric(PredefinedMetric.ELASTICACHE_PRIMARY_ENGINE_CPU_UTILIZATION)
      * .build());
      * ```
      */

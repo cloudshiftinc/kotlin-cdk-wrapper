@@ -19,8 +19,8 @@ import software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration
  * The configuration for bumpers.
  *
  * Bumpers are short audio or video clips that play at the start or before the end of an ad break.
- * To learn more about bumpers, see Bumpers
- * (https://docs.aws.amazon.com/mediatailor/latest/ug/bumpers.html).
+ * To learn more about bumpers, see
+ * [Bumpers](https://docs.aws.amazon.com/mediatailor/latest/ug/bumpers.html) .
  *
  * Example:
  * ```

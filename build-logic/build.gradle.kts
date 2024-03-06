@@ -14,6 +14,7 @@ dependencies {
 
     // for convention plugins
     implementation(plugin(libs.plugins.kotlin.jvm))
+    implementation(plugin(libs.plugins.ktfmt))
 
     // for generating Kotlin DSL
     implementation(libs.guava)

@@ -25,7 +25,7 @@ import software.amazon.awscdk.services.sam.CfnFunction
 import software.constructs.Construct
 
 /**
- * Definition of AWS::Serverless::Function.
+ * https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction.
  *
  * Example:
  * ```
@@ -59,6 +59,9 @@ import software.constructs.Construct
  * .variables(Map.of(
  * "variablesKey", "variables"))
  * .build())
+ * .ephemeralStorage(EphemeralStorageProperty.builder()
+ * .size(123)
+ * .build())
  * .eventInvokeConfig(EventInvokeConfigProperty.builder()
  * .destinationConfig(EventInvokeDestinationConfigProperty.builder()
  * .onFailure(DestinationProperty.builder()
@@ -87,6 +90,12 @@ import software.constructs.Construct
  * .localMountPath("localMountPath")
  * .build()))
  * .functionName("functionName")
+ * .functionUrlConfig(FunctionUrlConfigProperty.builder()
+ * .authType("authType")
+ * // the properties below are optional
+ * .cors("cors")
+ * .invokeMode("invokeMode")
+ * .build())
  * .handler("handler")
  * .imageConfig(ImageConfigProperty.builder()
  * .command(List.of("command"))
@@ -294,6 +303,24 @@ public class CfnFunctionDsl(
     }
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-function.html#cfn-serverless-function-ephemeralstorage)
+     *
+     * @param ephemeralStorage
+     */
+    public fun ephemeralStorage(ephemeralStorage: IResolvable) {
+        cdkBuilder.ephemeralStorage(ephemeralStorage)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-function.html#cfn-serverless-function-ephemeralstorage)
+     *
+     * @param ephemeralStorage
+     */
+    public fun ephemeralStorage(ephemeralStorage: CfnFunction.EphemeralStorageProperty) {
+        cdkBuilder.ephemeralStorage(ephemeralStorage)
+    }
+
+    /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-function.html#cfn-serverless-function-eventinvokeconfig)
      *
      * @param eventInvokeConfig
@@ -374,6 +401,24 @@ public class CfnFunctionDsl(
      */
     public fun functionName(functionName: String) {
         cdkBuilder.functionName(functionName)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-function.html#cfn-serverless-function-functionurlconfig)
+     *
+     * @param functionUrlConfig
+     */
+    public fun functionUrlConfig(functionUrlConfig: IResolvable) {
+        cdkBuilder.functionUrlConfig(functionUrlConfig)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-function.html#cfn-serverless-function-functionurlconfig)
+     *
+     * @param functionUrlConfig
+     */
+    public fun functionUrlConfig(functionUrlConfig: CfnFunction.FunctionUrlConfigProperty) {
+        cdkBuilder.functionUrlConfig(functionUrlConfig)
     }
 
     /**

@@ -34,11 +34,11 @@ import software.constructs.Construct
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.guardduty.*;
  * CfnMember cfnMember = CfnMember.Builder.create(this, "MyCfnMember")
- * .detectorId("detectorId")
  * .email("email")
- * .memberId("memberId")
  * // the properties below are optional
+ * .detectorId("detectorId")
  * .disableEmailNotification(false)
+ * .memberId("memberId")
  * .message("message")
  * .status("status")
  * .build();

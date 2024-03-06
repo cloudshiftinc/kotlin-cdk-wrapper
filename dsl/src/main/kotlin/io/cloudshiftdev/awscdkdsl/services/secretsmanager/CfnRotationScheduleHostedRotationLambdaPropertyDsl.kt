@@ -119,6 +119,12 @@ public class CfnRotationScheduleHostedRotationLambdaPropertyDsl {
     /**
      * @param rotationType The rotation template to base the rotation function on, one of the
      *   following:.
+     * * `Db2SingleUser` to use the template
+     *   [SecretsManagerRDSDb2RotationSingleUser](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html#sar-template-db2-singleuser)
+     *   .
+     * * `Db2MultiUser` to use the template
+     *   [SecretsManagerRDSDb2RotationMultiUser](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html#sar-template-db2-multiuser)
+     *   .
      * * `MySQLSingleUser` to use the template
      *   [SecretsManagerRDSMySQLRotationSingleUser](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html#sar-template-mysql-singleuser)
      *   .

@@ -40,6 +40,9 @@ import software.constructs.Construct
  * .domainConfigurationStatus("domainConfigurationStatus")
  * .domainName("domainName")
  * .serverCertificateArns(List.of("serverCertificateArns"))
+ * .serverCertificateConfig(ServerCertificateConfigProperty.builder()
+ * .enableOcspCheck(false)
+ * .build())
  * .serviceType("serviceType")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -154,6 +157,38 @@ public class CfnDomainConfigurationDsl(
      */
     public fun serverCertificateArns(serverCertificateArns: Collection<String>) {
         _serverCertificateArns.addAll(serverCertificateArns)
+    }
+
+    /**
+     * The server certificate configuration.
+     *
+     * For more information, see
+     * [Configurable endpoints](https://docs.aws.amazon.com//iot/latest/developerguide/iot-custom-endpoints-configurable.html)
+     * from the AWS IoT Core Developer Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-servercertificateconfig)
+     *
+     * @param serverCertificateConfig The server certificate configuration.
+     */
+    public fun serverCertificateConfig(serverCertificateConfig: IResolvable) {
+        cdkBuilder.serverCertificateConfig(serverCertificateConfig)
+    }
+
+    /**
+     * The server certificate configuration.
+     *
+     * For more information, see
+     * [Configurable endpoints](https://docs.aws.amazon.com//iot/latest/developerguide/iot-custom-endpoints-configurable.html)
+     * from the AWS IoT Core Developer Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-servercertificateconfig)
+     *
+     * @param serverCertificateConfig The server certificate configuration.
+     */
+    public fun serverCertificateConfig(
+        serverCertificateConfig: CfnDomainConfiguration.ServerCertificateConfigProperty
+    ) {
+        cdkBuilder.serverCertificateConfig(serverCertificateConfig)
     }
 
     /**

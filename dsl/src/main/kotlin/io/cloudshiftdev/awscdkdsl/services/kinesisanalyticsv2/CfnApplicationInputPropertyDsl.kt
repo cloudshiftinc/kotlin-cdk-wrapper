@@ -17,9 +17,9 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
 
 /**
- * When you configure the application input for a SQL-based Kinesis Data Analytics application, you
- * specify the streaming source, the in-application stream name that is created, and the mapping
- * between the two.
+ * When you configure the application input for a SQL-based Managed Service for Apache Flink
+ * application, you specify the streaming source, the in-application stream name that is created,
+ * and the mapping between the two.
  *
  * Example:
  * ```
@@ -88,11 +88,11 @@ public class CfnApplicationInputPropertyDsl {
 
     /**
      * @param inputProcessingConfiguration The
-     *   [InputProcessingConfiguration](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_InputProcessingConfiguration.html)
+     *   [InputProcessingConfiguration](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_InputProcessingConfiguration.html)
      *   for the input. An input processor transforms records as they are received from the stream,
      *   before the application's SQL code executes. Currently, the only input processing
      *   configuration available is
-     *   [InputLambdaProcessor](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_InputLambdaProcessor.html)
+     *   [InputLambdaProcessor](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_InputLambdaProcessor.html)
      *   .
      */
     public fun inputProcessingConfiguration(inputProcessingConfiguration: IResolvable) {
@@ -101,11 +101,11 @@ public class CfnApplicationInputPropertyDsl {
 
     /**
      * @param inputProcessingConfiguration The
-     *   [InputProcessingConfiguration](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_InputProcessingConfiguration.html)
+     *   [InputProcessingConfiguration](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_InputProcessingConfiguration.html)
      *   for the input. An input processor transforms records as they are received from the stream,
      *   before the application's SQL code executes. Currently, the only input processing
      *   configuration available is
-     *   [InputLambdaProcessor](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_InputLambdaProcessor.html)
+     *   [InputLambdaProcessor](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_InputLambdaProcessor.html)
      *   .
      */
     public fun inputProcessingConfiguration(
@@ -170,9 +170,10 @@ public class CfnApplicationInputPropertyDsl {
 
     /**
      * @param namePrefix The name prefix to use when creating an in-application stream. Suppose that
-     *   you specify a prefix " `MyInApplicationStream` ." Kinesis Data Analytics then creates one
-     *   or more (as per the `InputParallelism` count you specified) in-application streams with the
-     *   names " `MyInApplicationStream_001` ," " `MyInApplicationStream_002` ," and so on.
+     *   you specify a prefix " `MyInApplicationStream` ." Managed Service for Apache Flink then
+     *   creates one or more (as per the `InputParallelism` count you specified) in-application
+     *   streams with the names " `MyInApplicationStream_001` ," " `MyInApplicationStream_002` ,"
+     *   and so on.
      */
     public fun namePrefix(namePrefix: String) {
         cdkBuilder.namePrefix(namePrefix)

@@ -13,6 +13,7 @@ package io.cloudshiftdev.awscdkdsl.services.rolesanywhere
 
 import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -24,14 +25,7 @@ import software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor
 import software.constructs.Construct
 
 /**
- * Creates a trust anchor to establish trust between IAM Roles Anywhere and your certificate
- * authority (CA).
- *
- * You can define a trust anchor as a reference to an AWS Private Certificate Authority ( AWS
- * Private CA ) or by uploading a CA certificate. Your AWS workloads can authenticate with the trust
- * anchor using certificates issued by the CA in exchange for temporary AWS credentials.
- *
- * *Required permissions:* `rolesanywhere:CreateTrustAnchor` .
+ * Creates a TrustAnchor.
  *
  * Example:
  * ```
@@ -49,6 +43,13 @@ import software.constructs.Construct
  * .build())
  * // the properties below are optional
  * .enabled(false)
+ * .notificationSettings(List.of(NotificationSettingProperty.builder()
+ * .enabled(false)
+ * .event("event")
+ * // the properties below are optional
+ * .channel("channel")
+ * .threshold(123)
+ * .build()))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -64,6 +65,8 @@ public class CfnTrustAnchorDsl(
     id: String,
 ) {
     private val cdkBuilder: CfnTrustAnchor.Builder = CfnTrustAnchor.Builder.create(scope, id)
+
+    private val _notificationSettings: MutableList<Any> = mutableListOf()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
@@ -98,6 +101,42 @@ public class CfnTrustAnchorDsl(
      */
     public fun name(name: String) {
         cdkBuilder.name(name)
+    }
+
+    /**
+     * A list of notification settings to be associated to the trust anchor.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-trustanchor.html#cfn-rolesanywhere-trustanchor-notificationsettings)
+     *
+     * @param notificationSettings A list of notification settings to be associated to the trust
+     *   anchor.
+     */
+    public fun notificationSettings(vararg notificationSettings: Any) {
+        _notificationSettings.addAll(listOf(*notificationSettings))
+    }
+
+    /**
+     * A list of notification settings to be associated to the trust anchor.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-trustanchor.html#cfn-rolesanywhere-trustanchor-notificationsettings)
+     *
+     * @param notificationSettings A list of notification settings to be associated to the trust
+     *   anchor.
+     */
+    public fun notificationSettings(notificationSettings: Collection<Any>) {
+        _notificationSettings.addAll(notificationSettings)
+    }
+
+    /**
+     * A list of notification settings to be associated to the trust anchor.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-trustanchor.html#cfn-rolesanywhere-trustanchor-notificationsettings)
+     *
+     * @param notificationSettings A list of notification settings to be associated to the trust
+     *   anchor.
+     */
+    public fun notificationSettings(notificationSettings: IResolvable) {
+        cdkBuilder.notificationSettings(notificationSettings)
     }
 
     /**
@@ -145,6 +184,8 @@ public class CfnTrustAnchorDsl(
     }
 
     public fun build(): CfnTrustAnchor {
+        if (_notificationSettings.isNotEmpty())
+            cdkBuilder.notificationSettings(_notificationSettings)
         if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
         return cdkBuilder.build()
     }

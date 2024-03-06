@@ -39,6 +39,7 @@ import software.amazon.awscdk.services.iam.IRole
  * // the properties below are optional
  * .allowRestores(false)
  * .backupSelectionName("backupSelectionName")
+ * .disableDefaultBackupPolicy(false)
  * .role(role)
  * .build();
  * ```
@@ -69,6 +70,15 @@ public class BackupSelectionPropsDsl {
     }
 
     /**
+     * @param disableDefaultBackupPolicy Whether to disable automatically assigning default backup
+     *   permissions to the role that AWS Backup uses. If `false`, the
+     *   `AWSBackupServiceRolePolicyForBackup` managed policy will be attached to the role.
+     */
+    public fun disableDefaultBackupPolicy(disableDefaultBackupPolicy: Boolean) {
+        cdkBuilder.disableDefaultBackupPolicy(disableDefaultBackupPolicy)
+    }
+
+    /**
      * @param resources The resources to backup. Use the helper static methods defined on
      *   `BackupResource`.
      */
@@ -87,7 +97,7 @@ public class BackupSelectionPropsDsl {
     /**
      * @param role The role that AWS Backup uses to authenticate when backuping or restoring the
      *   resources. The `AWSBackupServiceRolePolicyForBackup` managed policy will be attached to
-     *   this role.
+     *   this role unless `disableDefaultBackupPolicy` is set to `true`.
      */
     public fun role(role: IRole) {
         cdkBuilder.role(role)

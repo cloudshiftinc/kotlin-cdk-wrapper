@@ -50,6 +50,7 @@ public class CfnNotificationRuleTargetPropertyDsl {
      *   Chatbot client.
      * * Amazon Simple Notification Service topics are specified as `SNS` .
      * * AWS Chatbot clients are specified as `AWSChatbotSlack` .
+     * * AWS Chatbot clients for Microsoft Teams are specified as `AWSChatbotMicrosoftTeams` .
      */
     public fun targetType(targetType: String) {
         cdkBuilder.targetType(targetType)

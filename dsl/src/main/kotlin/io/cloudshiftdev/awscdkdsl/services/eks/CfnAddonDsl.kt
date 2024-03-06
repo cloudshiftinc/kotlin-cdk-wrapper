@@ -86,11 +86,11 @@ public class CfnAddonDsl(
     }
 
     /**
-     * The name of the cluster.
+     * The name of your cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html#cfn-eks-addon-clustername)
      *
-     * @param clusterName The name of the cluster.
+     * @param clusterName The name of your cluster.
      */
     public fun clusterName(clusterName: String) {
         cdkBuilder.clusterName(clusterName)

@@ -183,8 +183,7 @@ public class CfnListenerRuleRuleConditionPropertyDsl {
      * single host name (for example, my.example.com). A host name is case insensitive, can be up to
      * 128 characters in length, and can contain any of the following characters.
      * * A-Z, a-z, 0-9 *
-     * * .
-     * *
+     * * . *
      * * (matches 0 or more characters)
      * * ? (matches exactly 1 character)
      *
@@ -210,8 +209,7 @@ public class CfnListenerRuleRuleConditionPropertyDsl {
      * single host name (for example, my.example.com). A host name is case insensitive, can be up to
      * 128 characters in length, and can contain any of the following characters.
      * * A-Z, a-z, 0-9 *
-     * * .
-     * *
+     * * . *
      * * (matches 0 or more characters)
      * * ? (matches exactly 1 character)
      *

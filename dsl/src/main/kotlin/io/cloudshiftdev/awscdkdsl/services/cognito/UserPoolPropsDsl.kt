@@ -217,8 +217,8 @@ public class UserPoolPropsDsl {
     }
 
     /**
-     * @param selfSignUpEnabled Whether self sign up should be enabled. This can be further
-     *   configured via the `selfSignUp` property.
+     * @param selfSignUpEnabled Whether self sign-up should be enabled. To configure self sign-up
+     *   configuration use the `userVerification` property.
      */
     public fun selfSignUpEnabled(selfSignUpEnabled: Boolean) {
         cdkBuilder.selfSignUpEnabled(selfSignUpEnabled)
@@ -286,7 +286,7 @@ public class UserPoolPropsDsl {
 
     /**
      * @param snsRegion The region to integrate with SNS to send SMS messages. This property will do
-     *   nothing if SMS configuration is not configured
+     *   nothing if SMS configuration is not configured.
      */
     public fun snsRegion(snsRegion: String) {
         cdkBuilder.snsRegion(snsRegion)

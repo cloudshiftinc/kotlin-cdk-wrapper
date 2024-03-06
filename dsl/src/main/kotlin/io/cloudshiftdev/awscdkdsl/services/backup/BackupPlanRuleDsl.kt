@@ -58,7 +58,7 @@ public class BackupPlanRuleDsl {
      * The duration after a backup job is successfully started before it must be completed or it is
      * canceled by AWS Backup.
      *
-     * Default: - 8 hours
+     * Default: - 7 days
      *
      * @param completionWindow The duration after a backup job is successfully started before it
      *   must be completed or it is canceled by AWS Backup.

@@ -32,6 +32,9 @@ import software.amazon.awscdk.services.opensearchservice.CfnDomain
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.opensearchservice.*;
  * ClusterConfigProperty clusterConfigProperty = ClusterConfigProperty.builder()
+ * .coldStorageOptions(ColdStorageOptionsProperty.builder()
+ * .enabled(false)
+ * .build())
  * .dedicatedMasterCount(123)
  * .dedicatedMasterEnabled(false)
  * .dedicatedMasterType("dedicatedMasterType")
@@ -54,6 +57,16 @@ import software.amazon.awscdk.services.opensearchservice.CfnDomain
 public class CfnDomainClusterConfigPropertyDsl {
     private val cdkBuilder: CfnDomain.ClusterConfigProperty.Builder =
         CfnDomain.ClusterConfigProperty.builder()
+
+    /** @param coldStorageOptions Container for cold storage configuration options. */
+    public fun coldStorageOptions(coldStorageOptions: IResolvable) {
+        cdkBuilder.coldStorageOptions(coldStorageOptions)
+    }
+
+    /** @param coldStorageOptions Container for cold storage configuration options. */
+    public fun coldStorageOptions(coldStorageOptions: CfnDomain.ColdStorageOptionsProperty) {
+        cdkBuilder.coldStorageOptions(coldStorageOptions)
+    }
 
     /**
      * @param dedicatedMasterCount The number of instances to use for the master node. If you

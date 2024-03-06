@@ -29,35 +29,69 @@ import software.constructs.Construct
  *
  * Example:
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import software.amazon.awscdk.services.lakeformation.*;
- * Object parameters;
- * CfnDataLakeSettings cfnDataLakeSettings = CfnDataLakeSettings.Builder.create(this,
- * "MyCfnDataLakeSettings")
- * .admins(List.of(DataLakePrincipalProperty.builder()
- * .dataLakePrincipalIdentifier("dataLakePrincipalIdentifier")
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.glue.alpha.S3Table;
+ * import software.amazon.awscdk.services.glue.alpha.Database;
+ * import software.amazon.awscdk.services.glue.alpha.DataFormat;
+ * import software.amazon.awscdk.services.glue.alpha.Schema;
+ * import software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings;
+ * import software.amazon.awscdk.services.lakeformation.CfnTag;
+ * import software.amazon.awscdk.services.lakeformation.CfnTagAssociation;
+ * Stack stack;
+ * String accountId;
+ * String tagKey = "aws";
+ * String[] tagValues = List.of("dev");
+ * Database database = new Database(this, "Database");
+ * S3Table table = S3Table.Builder.create(this, "Table")
+ * .database(database)
+ * .columns(List.of(Column.builder()
+ * .name("col1")
+ * .type(Schema.STRING)
+ * .build(), Column.builder()
+ * .name("col2")
+ * .type(Schema.STRING)
  * .build()))
- * .allowExternalDataFiltering(false)
- * .authorizedSessionTagValueList(List.of("authorizedSessionTagValueList"))
- * .createDatabaseDefaultPermissions(List.of(PrincipalPermissionsProperty.builder()
- * .permissions(List.of("permissions"))
- * .principal(DataLakePrincipalProperty.builder()
- * .dataLakePrincipalIdentifier("dataLakePrincipalIdentifier")
- * .build())
- * .build()))
- * .createTableDefaultPermissions(List.of(PrincipalPermissionsProperty.builder()
- * .permissions(List.of("permissions"))
- * .principal(DataLakePrincipalProperty.builder()
- * .dataLakePrincipalIdentifier("dataLakePrincipalIdentifier")
- * .build())
- * .build()))
- * .externalDataFilteringAllowList(List.of(DataLakePrincipalProperty.builder()
- * .dataLakePrincipalIdentifier("dataLakePrincipalIdentifier")
- * .build()))
- * .parameters(parameters)
- * .trustedResourceOwners(List.of("trustedResourceOwners"))
+ * .dataFormat(DataFormat.CSV)
  * .build();
+ * DefaultStackSynthesizer synthesizer = (DefaultStackSynthesizer)stack.getSynthesizer();
+ * CfnDataLakeSettings.Builder.create(this, "DataLakeSettings")
+ * .admins(List.of(DataLakePrincipalProperty.builder()
+ * .dataLakePrincipalIdentifier(stack.formatArn(ArnComponents.builder()
+ * .service("iam")
+ * .resource("role")
+ * .region("")
+ * .account(accountId)
+ * .resourceName("Admin")
+ * .build()))
+ * .build(), DataLakePrincipalProperty.builder()
+ * // The CDK cloudformation execution role.
+ * .dataLakePrincipalIdentifier(synthesizer.cloudFormationExecutionRoleArn.replace("${AWS::Partition}",
+ * "aws"))
+ * .build()))
+ * .build();
+ * CfnTag tag = CfnTag.Builder.create(this, "Tag")
+ * .catalogId(accountId)
+ * .tagKey(tagKey)
+ * .tagValues(tagValues)
+ * .build();
+ * LFTagPairProperty lfTagPairProperty = LFTagPairProperty.builder()
+ * .catalogId(accountId)
+ * .tagKey(tagKey)
+ * .tagValues(tagValues)
+ * .build();
+ * CfnTagAssociation tagAssociation = CfnTagAssociation.Builder.create(this, "TagAssociation")
+ * .lfTags(List.of(lfTagPairProperty))
+ * .resource(ResourceProperty.builder()
+ * .tableWithColumns(TableWithColumnsResourceProperty.builder()
+ * .databaseName(database.getDatabaseName())
+ * .columnNames(List.of("col1", "col2"))
+ * .catalogId(accountId)
+ * .name(table.getTableName())
+ * .build())
+ * .build())
+ * .build();
+ * tagAssociation.node.addDependency(tag);
+ * tagAssociation.node.addDependency(table);
  * ```
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datalakesettings.html)
@@ -159,6 +193,44 @@ public class CfnDataLakeSettingsDsl(
      */
     public fun allowExternalDataFiltering(allowExternalDataFiltering: IResolvable) {
         cdkBuilder.allowExternalDataFiltering(allowExternalDataFiltering)
+    }
+
+    /**
+     * Specifies whether query engines and applications can get credentials without IAM session tags
+     * if the user has full table access.
+     *
+     * It provides query engines and applications performance benefits as well as simplifies data
+     * access. Amazon EMR on Amazon EC2 is able to leverage this setting.
+     *
+     * For more information, see
+     * [](https://docs.aws.amazon.com/lake-formation/latest/dg/using-cred-vending.html)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datalakesettings.html#cfn-lakeformation-datalakesettings-allowfulltableexternaldataaccess)
+     *
+     * @param allowFullTableExternalDataAccess Specifies whether query engines and applications can
+     *   get credentials without IAM session tags if the user has full table access.
+     */
+    public fun allowFullTableExternalDataAccess(allowFullTableExternalDataAccess: Boolean) {
+        cdkBuilder.allowFullTableExternalDataAccess(allowFullTableExternalDataAccess)
+    }
+
+    /**
+     * Specifies whether query engines and applications can get credentials without IAM session tags
+     * if the user has full table access.
+     *
+     * It provides query engines and applications performance benefits as well as simplifies data
+     * access. Amazon EMR on Amazon EC2 is able to leverage this setting.
+     *
+     * For more information, see
+     * [](https://docs.aws.amazon.com/lake-formation/latest/dg/using-cred-vending.html)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datalakesettings.html#cfn-lakeformation-datalakesettings-allowfulltableexternaldataaccess)
+     *
+     * @param allowFullTableExternalDataAccess Specifies whether query engines and applications can
+     *   get credentials without IAM session tags if the user has full table access.
+     */
+    public fun allowFullTableExternalDataAccess(allowFullTableExternalDataAccess: IResolvable) {
+        cdkBuilder.allowFullTableExternalDataAccess(allowFullTableExternalDataAccess)
     }
 
     /**
@@ -390,6 +462,23 @@ public class CfnDataLakeSettingsDsl(
      */
     public fun externalDataFilteringAllowList(externalDataFilteringAllowList: IResolvable) {
         cdkBuilder.externalDataFilteringAllowList(externalDataFilteringAllowList)
+    }
+
+    /**
+     * Specifies whether the data lake settings are updated by adding new values to the current
+     * settings ( `APPEND` ) or by replacing the current settings with new settings ( `REPLACE` ).
+     *
+     * If you choose `REPLACE` , your current data lake settings will be replaced with the new
+     * values in your template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datalakesettings.html#cfn-lakeformation-datalakesettings-mutationtype)
+     *
+     * @param mutationType Specifies whether the data lake settings are updated by adding new values
+     *   to the current settings ( `APPEND` ) or by replacing the current settings with new settings
+     *   ( `REPLACE` ).
+     */
+    public fun mutationType(mutationType: String) {
+        cdkBuilder.mutationType(mutationType)
     }
 
     /**

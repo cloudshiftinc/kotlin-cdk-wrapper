@@ -21,10 +21,20 @@ import software.amazon.awscdk.services.dynamodb.SchemaOptions
  *
  * Example:
  * ```
- * Table table;
- * SchemaOptions schema = table.schema();
- * Attribute partitionKey = schema.getPartitionKey();
- * Attribute sortKey = schema.getSortKey();
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * SchemaOptions schemaOptions = SchemaOptions.builder()
+ * .partitionKey(Attribute.builder()
+ * .name("name")
+ * .type(AttributeType.BINARY)
+ * .build())
+ * // the properties below are optional
+ * .sortKey(Attribute.builder()
+ * .name("name")
+ * .type(AttributeType.BINARY)
+ * .build())
+ * .build();
  * ```
  */
 @CdkDslMarker

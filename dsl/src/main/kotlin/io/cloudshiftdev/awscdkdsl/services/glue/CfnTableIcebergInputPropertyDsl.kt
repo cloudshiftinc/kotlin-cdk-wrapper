@@ -16,6 +16,8 @@ import kotlin.String
 import software.amazon.awscdk.services.glue.CfnTable
 
 /**
+ * Specifies an input structure that defines an Apache Iceberg metadata table.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -34,12 +36,12 @@ public class CfnTableIcebergInputPropertyDsl {
     private val cdkBuilder: CfnTable.IcebergInputProperty.Builder =
         CfnTable.IcebergInputProperty.builder()
 
-    /** @param metadataOperation the value to be set. */
+    /** @param metadataOperation A required metadata operation. Can only be set to CREATE. */
     public fun metadataOperation(metadataOperation: String) {
         cdkBuilder.metadataOperation(metadataOperation)
     }
 
-    /** @param version the value to be set. */
+    /** @param version The table version for the Iceberg table. Defaults to 2. */
     public fun version(version: String) {
         cdkBuilder.version(version)
     }

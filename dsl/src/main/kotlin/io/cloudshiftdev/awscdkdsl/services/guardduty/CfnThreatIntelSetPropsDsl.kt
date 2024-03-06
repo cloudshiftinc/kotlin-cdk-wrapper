@@ -31,11 +31,11 @@ import software.amazon.awscdk.services.guardduty.CfnThreatIntelSetProps
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.guardduty.*;
  * CfnThreatIntelSetProps cfnThreatIntelSetProps = CfnThreatIntelSetProps.builder()
- * .activate(false)
- * .detectorId("detectorId")
  * .format("format")
  * .location("location")
  * // the properties below are optional
+ * .activate(false)
+ * .detectorId("detectorId")
  * .name("name")
  * .tags(List.of(CfnTag.builder()
  * .key("key")

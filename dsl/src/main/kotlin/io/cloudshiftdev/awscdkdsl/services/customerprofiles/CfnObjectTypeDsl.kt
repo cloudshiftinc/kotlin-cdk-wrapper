@@ -34,10 +34,11 @@ import software.constructs.Construct
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.customerprofiles.*;
  * CfnObjectType cfnObjectType = CfnObjectType.Builder.create(this, "MyCfnObjectType")
+ * .description("description")
  * .domainName("domainName")
+ * .objectTypeName("objectTypeName")
  * // the properties below are optional
  * .allowProfileCreation(false)
- * .description("description")
  * .encryptionKey("encryptionKey")
  * .expirationDays(123)
  * .fields(List.of(FieldMapProperty.builder()
@@ -55,7 +56,7 @@ import software.constructs.Construct
  * .standardIdentifiers(List.of("standardIdentifiers"))
  * .build()))
  * .build()))
- * .objectTypeName("objectTypeName")
+ * .sourceLastUpdatedTimestampFormat("sourceLastUpdatedTimestampFormat")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -239,6 +240,18 @@ public class CfnObjectTypeDsl(
      */
     public fun objectTypeName(objectTypeName: String) {
         cdkBuilder.objectTypeName(objectTypeName)
+    }
+
+    /**
+     * The format of your sourceLastUpdatedTimestamp that was previously set up.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-objecttype.html#cfn-customerprofiles-objecttype-sourcelastupdatedtimestampformat)
+     *
+     * @param sourceLastUpdatedTimestampFormat The format of your sourceLastUpdatedTimestamp that
+     *   was previously set up.
+     */
+    public fun sourceLastUpdatedTimestampFormat(sourceLastUpdatedTimestampFormat: String) {
+        cdkBuilder.sourceLastUpdatedTimestampFormat(sourceLastUpdatedTimestampFormat)
     }
 
     /**

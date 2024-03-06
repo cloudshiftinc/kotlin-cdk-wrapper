@@ -17,6 +17,7 @@ import kotlin.Number
 import kotlin.String
 import kotlin.collections.Map
 import software.amazon.awscdk.services.kms.IKey
+import software.amazon.awscdk.services.rds.CaCertificate
 import software.amazon.awscdk.services.rds.ClusterInstanceProps
 import software.amazon.awscdk.services.rds.ClusterInstanceType
 import software.amazon.awscdk.services.rds.IParameterGroup
@@ -31,6 +32,7 @@ import software.amazon.awscdk.services.rds.PerformanceInsightRetention
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.kms.*;
  * import software.amazon.awscdk.services.rds.*;
+ * CaCertificate caCertificate;
  * ClusterInstanceType clusterInstanceType;
  * Key key;
  * ParameterGroup parameterGroup;
@@ -39,6 +41,7 @@ import software.amazon.awscdk.services.rds.PerformanceInsightRetention
  * // the properties below are optional
  * .allowMajorVersionUpgrade(false)
  * .autoMinorVersionUpgrade(false)
+ * .caCertificate(caCertificate)
  * .enablePerformanceInsights(false)
  * .instanceIdentifier("instanceIdentifier")
  * .isFromLegacyInstanceProps(false)
@@ -70,6 +73,16 @@ public class ClusterInstancePropsDsl {
      */
     public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
         cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade)
+    }
+
+    /**
+     * @param caCertificate The identifier of the CA certificate for this DB cluster's instances.
+     *   Specifying or updating this property triggers a reboot.
+     *
+     * For RDS DB engines:
+     */
+    public fun caCertificate(caCertificate: CaCertificate) {
+        cdkBuilder.caCertificate(caCertificate)
     }
 
     /**
@@ -150,6 +163,8 @@ public class ClusterInstancePropsDsl {
 
     /**
      * @param publiclyAccessible Indicates whether the DB instance is an internet-facing instance.
+     *   If not specified, the cluster's vpcSubnets will be used to determine if the instance is
+     *   internet-facing or not.
      */
     public fun publiclyAccessible(publiclyAccessible: Boolean) {
         cdkBuilder.publiclyAccessible(publiclyAccessible)

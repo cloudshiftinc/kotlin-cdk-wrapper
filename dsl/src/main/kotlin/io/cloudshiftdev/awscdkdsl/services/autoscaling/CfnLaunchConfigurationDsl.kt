@@ -31,17 +31,18 @@ import software.constructs.Construct
  * `AWS::AutoScaling::LaunchConfiguration` resource, you can specify an
  * [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html)
  * for the group. You can find sample update policies for rolling updates in
- * [Auto scaling template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)
+ * [Configure Amazon EC2 Auto Scaling resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html)
  * .
  *
  * Amazon EC2 Auto Scaling configures instances launched as part of an Auto Scaling group using
  * either a
  * [launch template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)
- * or a launch configuration. We strongly recommend that you do not use launch configurations. They
- * do not provide full functionality for Amazon EC2 Auto Scaling or Amazon EC2. For more
- * information, see
+ * or a launch configuration. We strongly recommend that you do not use launch configurations. For
+ * more information, see
  * [Launch configurations](https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-configurations.html)
- * and
+ * in the *Amazon EC2 Auto Scaling User Guide* .
+ *
+ * For help migrating from launch configurations to launch templates, see
  * [Migrate AWS CloudFormation stacks from launch configurations to launch templates](https://docs.aws.amazon.com/autoscaling/ec2/userguide/migrate-launch-configurations-with-cloudformation.html)
  * in the *Amazon EC2 Auto Scaling User Guide* .
  *

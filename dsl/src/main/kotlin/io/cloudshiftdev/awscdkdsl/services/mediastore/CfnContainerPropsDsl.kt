@@ -178,12 +178,32 @@ public class CfnContainerPropsDsl {
         cdkBuilder.lifecyclePolicy(lifecyclePolicy)
     }
 
-    /** @param metricPolicy the value to be set. */
+    /**
+     * @param metricPolicy The metric policy that is associated with the container. A metric policy
+     *   allows AWS Elemental MediaStore to send metrics to Amazon CloudWatch. In the policy, you
+     *   must indicate whether you want MediaStore to send container-level metrics. You can also
+     *   include rules to define groups of objects that you want MediaStore to send object-level
+     *   metrics for.
+     *
+     * To view examples of how to construct a metric policy for your use case, see
+     * [Example Metric Policies](https://docs.aws.amazon.com/mediastore/latest/ug/policies-metric-examples.html)
+     * .
+     */
     public fun metricPolicy(metricPolicy: IResolvable) {
         cdkBuilder.metricPolicy(metricPolicy)
     }
 
-    /** @param metricPolicy the value to be set. */
+    /**
+     * @param metricPolicy The metric policy that is associated with the container. A metric policy
+     *   allows AWS Elemental MediaStore to send metrics to Amazon CloudWatch. In the policy, you
+     *   must indicate whether you want MediaStore to send container-level metrics. You can also
+     *   include rules to define groups of objects that you want MediaStore to send object-level
+     *   metrics for.
+     *
+     * To view examples of how to construct a metric policy for your use case, see
+     * [Example Metric Policies](https://docs.aws.amazon.com/mediastore/latest/ug/policies-metric-examples.html)
+     * .
+     */
     public fun metricPolicy(metricPolicy: CfnContainer.MetricPolicyProperty) {
         cdkBuilder.metricPolicy(metricPolicy)
     }

@@ -25,8 +25,10 @@ import software.amazon.awscdk.services.acmpca.CfnCertificateAuthority
  * enable CRLs for your new or an existing private CA by setting the *Enabled* parameter to `true` .
  * Your private CA writes CRLs to an S3 bucket that you specify in the *S3BucketName* parameter. You
  * can hide the name of your bucket by specifying a value for the *CustomCname* parameter. Your
- * private CA copies the CNAME or the S3 bucket name to the *CRL Distribution Points* extension of
- * each certificate it issues. Your S3 bucket policy must give write permission to AWS Private CA.
+ * private CA by default copies the CNAME or the S3 bucket name to the *CRL Distribution Points*
+ * extension of each certificate it issues. If you want to configure this default behavior to be
+ * something different, you can set the *CrlDistributionPointExtensionConfiguration* parameter. Your
+ * S3 bucket policy must give write permission to AWS Private CA.
  *
  * AWS Private CA assets that are stored in Amazon S3 can be protected with encryption. For more
  * information, see
@@ -76,6 +78,9 @@ import software.amazon.awscdk.services.acmpca.CfnCertificateAuthority
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.acmpca.*;
  * CrlConfigurationProperty crlConfigurationProperty = CrlConfigurationProperty.builder()
+ * .crlDistributionPointExtensionConfiguration(CrlDistributionPointExtensionConfigurationProperty.builder()
+ * .omitExtension(false)
+ * .build())
  * .customCname("customCname")
  * .enabled(false)
  * .expirationInDays(123)
@@ -90,6 +95,35 @@ import software.amazon.awscdk.services.acmpca.CfnCertificateAuthority
 public class CfnCertificateAuthorityCrlConfigurationPropertyDsl {
     private val cdkBuilder: CfnCertificateAuthority.CrlConfigurationProperty.Builder =
         CfnCertificateAuthority.CrlConfigurationProperty.builder()
+
+    /**
+     * @param crlDistributionPointExtensionConfiguration Configures the default behavior of the CRL
+     *   Distribution Point extension for certificates issued by your CA. If this field is not
+     *   provided, then the CRL Distribution Point extension will be present and contain the default
+     *   CRL URL.
+     */
+    public fun crlDistributionPointExtensionConfiguration(
+        crlDistributionPointExtensionConfiguration: IResolvable
+    ) {
+        cdkBuilder.crlDistributionPointExtensionConfiguration(
+            crlDistributionPointExtensionConfiguration
+        )
+    }
+
+    /**
+     * @param crlDistributionPointExtensionConfiguration Configures the default behavior of the CRL
+     *   Distribution Point extension for certificates issued by your CA. If this field is not
+     *   provided, then the CRL Distribution Point extension will be present and contain the default
+     *   CRL URL.
+     */
+    public fun crlDistributionPointExtensionConfiguration(
+        crlDistributionPointExtensionConfiguration:
+            CfnCertificateAuthority.CrlDistributionPointExtensionConfigurationProperty
+    ) {
+        cdkBuilder.crlDistributionPointExtensionConfiguration(
+            crlDistributionPointExtensionConfiguration
+        )
+    }
 
     /**
      * @param customCname Name inserted into the certificate *CRL Distribution Points* extension

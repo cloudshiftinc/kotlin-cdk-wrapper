@@ -26,8 +26,9 @@ public object codestarnotifications {
     /**
      * Creates a notification rule for a resource.
      *
-     * The rule specifies the events you want notifications about and the targets (such as AWS
-     * Chatbot topics or AWS Chatbot clients configured for Slack) where you want to receive them.
+     * The rule specifies the events you want notifications about and the targets (such as Amazon
+     * Simple Notification Service topics or AWS Chatbot clients configured for Slack) where you
+     * want to receive them.
      *
      * Example:
      * ```

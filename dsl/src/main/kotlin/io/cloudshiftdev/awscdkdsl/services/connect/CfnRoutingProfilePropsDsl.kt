@@ -44,6 +44,7 @@ import software.amazon.awscdk.services.connect.CfnRoutingProfileProps
  * .build()))
  * .name("name")
  * // the properties below are optional
+ * .agentAvailabilityTimer("agentAvailabilityTimer")
  * .queueConfigs(List.of(RoutingProfileQueueConfigProperty.builder()
  * .delay(123)
  * .priority(123)
@@ -70,6 +71,15 @@ public class CfnRoutingProfilePropsDsl {
     private val _queueConfigs: MutableList<Any> = mutableListOf()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
+
+    /**
+     * @param agentAvailabilityTimer Whether agents with this routing profile will have their
+     *   routing order calculated based on *time since their last inbound contact* or *longest idle
+     *   time* .
+     */
+    public fun agentAvailabilityTimer(agentAvailabilityTimer: String) {
+        cdkBuilder.agentAvailabilityTimer(agentAvailabilityTimer)
+    }
 
     /**
      * @param defaultOutboundQueueArn The Amazon Resource Name (ARN) of the default outbound queue
@@ -144,7 +154,7 @@ public class CfnRoutingProfilePropsDsl {
 
     /**
      * @param tags The tags used to organize, track, or control access for this resource. For
-     *   example, { "tags": {"key1":"value1", "key2":"value2"} }.
+     *   example, { "Tags": {"key1":"value1", "key2":"value2"} }.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
@@ -152,7 +162,7 @@ public class CfnRoutingProfilePropsDsl {
 
     /**
      * @param tags The tags used to organize, track, or control access for this resource. For
-     *   example, { "tags": {"key1":"value1", "key2":"value2"} }.
+     *   example, { "Tags": {"key1":"value1", "key2":"value2"} }.
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)

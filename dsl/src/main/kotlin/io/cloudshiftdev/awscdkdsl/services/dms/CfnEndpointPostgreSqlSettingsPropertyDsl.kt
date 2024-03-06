@@ -36,7 +36,9 @@ import software.amazon.awscdk.services.dms.CfnEndpoint
  * import software.amazon.awscdk.services.dms.*;
  * PostgreSqlSettingsProperty postgreSqlSettingsProperty = PostgreSqlSettingsProperty.builder()
  * .afterConnectScript("afterConnectScript")
+ * .babelfishDatabaseName("babelfishDatabaseName")
  * .captureDdls(false)
+ * .databaseMode("databaseMode")
  * .ddlArtifactsSchema("ddlArtifactsSchema")
  * .executeTimeout(123)
  * .failTasksOnLobTruncation(false)
@@ -69,6 +71,14 @@ public class CfnEndpointPostgreSqlSettingsPropertyDsl {
     }
 
     /**
+     * @param babelfishDatabaseName The Babelfish for Aurora PostgreSQL database name for the
+     *   endpoint.
+     */
+    public fun babelfishDatabaseName(babelfishDatabaseName: String) {
+        cdkBuilder.babelfishDatabaseName(babelfishDatabaseName)
+    }
+
+    /**
      * @param captureDdls To capture DDL events, AWS DMS creates various artifacts in the PostgreSQL
      *   database when the task starts. You can later remove these artifacts.
      *
@@ -88,6 +98,15 @@ public class CfnEndpointPostgreSqlSettingsPropertyDsl {
      */
     public fun captureDdls(captureDdls: IResolvable) {
         cdkBuilder.captureDdls(captureDdls)
+    }
+
+    /**
+     * @param databaseMode Specifies the default behavior of the replication's handling of
+     *   PostgreSQL- compatible endpoints that require some additional configuration, such as
+     *   Babelfish endpoints.
+     */
+    public fun databaseMode(databaseMode: String) {
+        cdkBuilder.databaseMode(databaseMode)
     }
 
     /**

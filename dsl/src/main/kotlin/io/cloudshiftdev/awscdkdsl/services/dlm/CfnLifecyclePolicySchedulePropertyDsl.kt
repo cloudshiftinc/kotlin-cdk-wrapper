@@ -21,7 +21,8 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dlm.CfnLifecyclePolicy
 
 /**
- * *[Snapshot and AMI policies only]* Specifies a schedule for a snapshot or AMI lifecycle policy.
+ * *[Custom snapshot and AMI policies only]* Specifies a schedule for a snapshot or AMI lifecycle
+ * policy.
  *
  * Example:
  * ```
@@ -44,6 +45,14 @@ import software.amazon.awscdk.services.dlm.CfnLifecyclePolicy
  * .interval(123)
  * .intervalUnit("intervalUnit")
  * .location("location")
+ * .scripts(List.of(ScriptProperty.builder()
+ * .executeOperationOnScriptFailure(false)
+ * .executionHandler("executionHandler")
+ * .executionHandlerService("executionHandlerService")
+ * .executionTimeout(123)
+ * .maximumRetryCount(123)
+ * .stages(List.of("stages"))
+ * .build()))
  * .times(List.of("times"))
  * .build())
  * .crossRegionCopyRules(List.of(CrossRegionCopyRuleProperty.builder()
@@ -110,12 +119,32 @@ public class CfnLifecyclePolicySchedulePropertyDsl {
 
     private val _variableTags: MutableList<Any> = mutableListOf()
 
-    /** @param archiveRule the value to be set. */
+    /**
+     * @param archiveRule *[Custom snapshot policies that target volumes only]* The snapshot
+     *   archiving rule for the schedule. When you specify an archiving rule, snapshots are
+     *   automatically moved from the standard tier to the archive tier once the schedule's
+     *   retention threshold is met. Snapshots are then retained in the archive tier for the archive
+     *   retention period that you specify.
+     *
+     * For more information about using snapshot archiving, see
+     * [Considerations for snapshot lifecycle policies](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-ami-policy.html#dlm-archive)
+     * .
+     */
     public fun archiveRule(archiveRule: IResolvable) {
         cdkBuilder.archiveRule(archiveRule)
     }
 
-    /** @param archiveRule the value to be set. */
+    /**
+     * @param archiveRule *[Custom snapshot policies that target volumes only]* The snapshot
+     *   archiving rule for the schedule. When you specify an archiving rule, snapshots are
+     *   automatically moved from the standard tier to the archive tier once the schedule's
+     *   retention threshold is met. Snapshots are then retained in the archive tier for the archive
+     *   retention period that you specify.
+     *
+     * For more information about using snapshot archiving, see
+     * [Considerations for snapshot lifecycle policies](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-ami-policy.html#dlm-archive)
+     * .
+     */
     public fun archiveRule(archiveRule: CfnLifecyclePolicy.ArchiveRuleProperty) {
         cdkBuilder.archiveRule(archiveRule)
     }
@@ -179,18 +208,22 @@ public class CfnLifecyclePolicySchedulePropertyDsl {
         cdkBuilder.crossRegionCopyRules(crossRegionCopyRules)
     }
 
-    /** @param deprecateRule the value to be set. */
+    /**
+     * @param deprecateRule *[Custom AMI policies only]* The AMI deprecation rule for the schedule.
+     */
     public fun deprecateRule(deprecateRule: IResolvable) {
         cdkBuilder.deprecateRule(deprecateRule)
     }
 
-    /** @param deprecateRule the value to be set. */
+    /**
+     * @param deprecateRule *[Custom AMI policies only]* The AMI deprecation rule for the schedule.
+     */
     public fun deprecateRule(deprecateRule: CfnLifecyclePolicy.DeprecateRuleProperty) {
         cdkBuilder.deprecateRule(deprecateRule)
     }
 
     /**
-     * @param fastRestoreRule *[Snapshot policies only]* The rule for enabling fast snapshot
+     * @param fastRestoreRule *[Custom snapshot policies only]* The rule for enabling fast snapshot
      *   restore.
      */
     public fun fastRestoreRule(fastRestoreRule: IResolvable) {
@@ -198,7 +231,7 @@ public class CfnLifecyclePolicySchedulePropertyDsl {
     }
 
     /**
-     * @param fastRestoreRule *[Snapshot policies only]* The rule for enabling fast snapshot
+     * @param fastRestoreRule *[Custom snapshot policies only]* The rule for enabling fast snapshot
      *   restore.
      */
     public fun fastRestoreRule(fastRestoreRule: CfnLifecyclePolicy.FastRestoreRuleProperty) {
@@ -221,24 +254,24 @@ public class CfnLifecyclePolicySchedulePropertyDsl {
     }
 
     /**
-     * @param shareRules *[Snapshot policies only]* The rule for sharing snapshots with other AWS
-     *   accounts .
+     * @param shareRules *[Custom snapshot policies only]* The rule for sharing snapshots with other
+     *   AWS accounts .
      */
     public fun shareRules(vararg shareRules: Any) {
         _shareRules.addAll(listOf(*shareRules))
     }
 
     /**
-     * @param shareRules *[Snapshot policies only]* The rule for sharing snapshots with other AWS
-     *   accounts .
+     * @param shareRules *[Custom snapshot policies only]* The rule for sharing snapshots with other
+     *   AWS accounts .
      */
     public fun shareRules(shareRules: Collection<Any>) {
         _shareRules.addAll(shareRules)
     }
 
     /**
-     * @param shareRules *[Snapshot policies only]* The rule for sharing snapshots with other AWS
-     *   accounts .
+     * @param shareRules *[Custom snapshot policies only]* The rule for sharing snapshots with other
+     *   AWS accounts .
      */
     public fun shareRules(shareRules: IResolvable) {
         cdkBuilder.shareRules(shareRules)

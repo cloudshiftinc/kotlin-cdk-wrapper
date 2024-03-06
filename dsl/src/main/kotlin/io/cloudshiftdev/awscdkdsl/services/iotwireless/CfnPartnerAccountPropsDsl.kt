@@ -91,24 +91,24 @@ public class CfnPartnerAccountPropsDsl {
         cdkBuilder.sidewalk(sidewalk)
     }
 
-    /** @param sidewalkResponse the value to be set. */
+    /** @param sidewalkResponse Information about a Sidewalk account. */
     public fun sidewalkResponse(sidewalkResponse: IResolvable) {
         cdkBuilder.sidewalkResponse(sidewalkResponse)
     }
 
-    /** @param sidewalkResponse the value to be set. */
+    /** @param sidewalkResponse Information about a Sidewalk account. */
     public fun sidewalkResponse(
         sidewalkResponse: CfnPartnerAccount.SidewalkAccountInfoWithFingerprintProperty
     ) {
         cdkBuilder.sidewalkResponse(sidewalkResponse)
     }
 
-    /** @param sidewalkUpdate the value to be set. */
+    /** @param sidewalkUpdate Sidewalk update. */
     public fun sidewalkUpdate(sidewalkUpdate: IResolvable) {
         cdkBuilder.sidewalkUpdate(sidewalkUpdate)
     }
 
-    /** @param sidewalkUpdate the value to be set. */
+    /** @param sidewalkUpdate Sidewalk update. */
     public fun sidewalkUpdate(sidewalkUpdate: CfnPartnerAccount.SidewalkUpdateAccountProperty) {
         cdkBuilder.sidewalkUpdate(sidewalkUpdate)
     }

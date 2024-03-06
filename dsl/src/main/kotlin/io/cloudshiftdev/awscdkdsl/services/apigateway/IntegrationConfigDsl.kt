@@ -78,7 +78,10 @@ public class IntegrationConfigDsl {
         cdkBuilder.deploymentToken(deploymentToken)
     }
 
-    /** @param integrationHttpMethod The integration's HTTP method type. */
+    /**
+     * @param integrationHttpMethod The integration's HTTP method type. Required unless you use a
+     *   MOCK integration.
+     */
     public fun integrationHttpMethod(integrationHttpMethod: String) {
         cdkBuilder.integrationHttpMethod(integrationHttpMethod)
     }

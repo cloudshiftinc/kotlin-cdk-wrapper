@@ -37,6 +37,7 @@ import software.amazon.awscdk.services.stepfunctions.SingleStateOptions
  * .resultSelector(Map.of(
  * "resultSelectorKey", resultSelector))
  * .stateId("stateId")
+ * .stateName("stateName")
  * .build();
  * ```
  */
@@ -104,6 +105,11 @@ public class SingleStateOptionsDsl {
     /** @param stateId ID of newly created containing state. */
     public fun stateId(stateId: String) {
         cdkBuilder.stateId(stateId)
+    }
+
+    /** @param stateName Optional name for this state. */
+    public fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
     }
 
     public fun build(): SingleStateOptions = cdkBuilder.build()

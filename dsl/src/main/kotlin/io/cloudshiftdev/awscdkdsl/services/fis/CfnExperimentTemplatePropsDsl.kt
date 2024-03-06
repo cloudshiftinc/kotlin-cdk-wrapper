@@ -68,6 +68,10 @@ import software.amazon.awscdk.services.fis.CfnExperimentTemplateProps
  * .targets(Map.of(
  * "targetsKey", "targets"))
  * .build()))
+ * .experimentOptions(ExperimentTemplateExperimentOptionsProperty.builder()
+ * .accountTargeting("accountTargeting")
+ * .emptyTargetResolutionMode("emptyTargetResolutionMode")
+ * .build())
  * .logConfiguration(ExperimentTemplateLogConfigurationProperty.builder()
  * .logSchemaVersion(123)
  * // the properties below are optional
@@ -105,9 +109,21 @@ public class CfnExperimentTemplatePropsDsl {
         cdkBuilder.actions(actions)
     }
 
-    /** @param description A description for the experiment template. */
+    /** @param description The description for the experiment template. */
     public fun description(description: String) {
         cdkBuilder.description(description)
+    }
+
+    /** @param experimentOptions The experiment options for an experiment template. */
+    public fun experimentOptions(experimentOptions: IResolvable) {
+        cdkBuilder.experimentOptions(experimentOptions)
+    }
+
+    /** @param experimentOptions The experiment options for an experiment template. */
+    public fun experimentOptions(
+        experimentOptions: CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty
+    ) {
+        cdkBuilder.experimentOptions(experimentOptions)
     }
 
     /** @param logConfiguration The configuration for experiment logging. */
@@ -122,30 +138,27 @@ public class CfnExperimentTemplatePropsDsl {
         cdkBuilder.logConfiguration(logConfiguration)
     }
 
-    /**
-     * @param roleArn The Amazon Resource Name (ARN) of an IAM role that grants the AWS FIS service
-     *   permission to perform service actions on your behalf.
-     */
+    /** @param roleArn The Amazon Resource Name (ARN) of an IAM role. */
     public fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
     }
 
-    /** @param stopConditions The stop conditions. */
+    /** @param stopConditions The stop conditions for the experiment. */
     public fun stopConditions(vararg stopConditions: Any) {
         _stopConditions.addAll(listOf(*stopConditions))
     }
 
-    /** @param stopConditions The stop conditions. */
+    /** @param stopConditions The stop conditions for the experiment. */
     public fun stopConditions(stopConditions: Collection<Any>) {
         _stopConditions.addAll(stopConditions)
     }
 
-    /** @param stopConditions The stop conditions. */
+    /** @param stopConditions The stop conditions for the experiment. */
     public fun stopConditions(stopConditions: IResolvable) {
         cdkBuilder.stopConditions(stopConditions)
     }
 
-    /** @param tags The tags to apply to the experiment template. */
+    /** @param tags The tags for the experiment template. */
     public fun tags(tags: Map<String, String>) {
         cdkBuilder.tags(tags)
     }

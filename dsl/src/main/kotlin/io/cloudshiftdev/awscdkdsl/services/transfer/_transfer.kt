@@ -187,7 +187,7 @@ public object transfer {
      * For AS2, the connector is required for sending files to an externally hosted AS2 server. For
      * SFTP, the connector is required when sending files to an SFTP server or receiving files from
      * an SFTP server. For more details about connectors, see
-     * [Create AS2 connectors](https://docs.aws.amazon.com/transfer/latest/userguide/create-b2b-server.html#configure-as2-connector)
+     * [Configure AS2 connectors](https://docs.aws.amazon.com/transfer/latest/userguide/configure-as2-connector.html)
      * and
      * [Create SFTP connectors](https://docs.aws.amazon.com/transfer/latest/userguide/configure-sftp-connector.html)
      * .
@@ -423,6 +423,9 @@ public object transfer {
      * .tlsSessionResumptionMode("tlsSessionResumptionMode")
      * .build())
      * .protocols(List.of("protocols"))
+     * .s3StorageOptions(S3StorageOptionsProperty.builder()
+     * .directoryListingOptimization("directoryListingOptimization")
+     * .build())
      * .securityPolicyName("securityPolicyName")
      * .structuredLogDestinations(List.of("structuredLogDestinations"))
      * .tags(List.of(CfnTag.builder()
@@ -556,6 +559,9 @@ public object transfer {
      * .tlsSessionResumptionMode("tlsSessionResumptionMode")
      * .build())
      * .protocols(List.of("protocols"))
+     * .s3StorageOptions(S3StorageOptionsProperty.builder()
+     * .directoryListingOptimization("directoryListingOptimization")
+     * .build())
      * .securityPolicyName("securityPolicyName")
      * .structuredLogDestinations(List.of("structuredLogDestinations"))
      * .tags(List.of(CfnTag.builder()
@@ -585,6 +591,20 @@ public object transfer {
 
     /**
      * The protocol settings that are configured for your server.
+     * * To indicate passive mode (for FTP and FTPS protocols), use the `PassiveIp` parameter. Enter
+     *   a single dotted-quad IPv4 address, such as the external IP address of a firewall, router,
+     *   or load balancer.
+     * * To ignore the error that is generated when the client attempts to use the `SETSTAT` command
+     *   on a file that you are uploading to an Amazon S3 bucket, use the `SetStatOption` parameter.
+     *   To have the AWS Transfer Family server ignore the `SETSTAT` command and upload files
+     *   without needing to make any changes to your SFTP client, set the value to `ENABLE_NO_OP` .
+     *   If you set the `SetStatOption` parameter to `ENABLE_NO_OP` , Transfer Family generates a
+     *   log entry to Amazon CloudWatch Logs, so that you can determine when the client is making a
+     *   `SETSTAT` call.
+     * * To determine whether your AWS Transfer Family server resumes recent, negotiated sessions
+     *   through a unique session ID, use the `TlsSessionResumptionMode` parameter.
+     * * `As2Transports` indicates the transport method for the AS2 messages. Currently, only HTTP
+     *   is supported.
      *
      * Example:
      * ```
@@ -610,74 +630,24 @@ public object transfer {
     }
 
     /**
-     * Specifies the file transfer protocol or protocols over which your file transfer protocol
-     * client can connect to your server's endpoint.
-     *
-     * The available protocols are:
-     * * `SFTP` (Secure Shell (SSH) File Transfer Protocol): File transfer over SSH
-     * * `FTPS` (File Transfer Protocol Secure): File transfer with TLS encryption
-     * * `FTP` (File Transfer Protocol): Unencrypted file transfer
-     * * `AS2` (Applicability Statement 2): used for transporting structured business-to-business
-     *   data
-     * * If you select `FTPS` , you must choose a certificate stored in AWS Certificate Manager
-     *   (ACM) which is used to identify your server when clients connect to it over FTPS.
-     * * If `Protocol` includes either `FTP` or `FTPS` , then the `EndpointType` must be `VPC` and
-     *   the `IdentityProviderType` must be either `AWS_DIRECTORY_SERVICE` , `AWS_LAMBDA` , or
-     *   `API_GATEWAY` .
-     * * If `Protocol` includes `FTP` , then `AddressAllocationIds` cannot be associated.
-     * * If `Protocol` is set only to `SFTP` , the `EndpointType` can be set to `PUBLIC` and the
-     *   `IdentityProviderType` can be set any of the supported identity types: `SERVICE_MANAGED` ,
-     *   `AWS_DIRECTORY_SERVICE` , `AWS_LAMBDA` , or `API_GATEWAY` .
-     * * If `Protocol` includes `AS2` , then the `EndpointType` must be `VPC` , and domain must be
-     *   Amazon S3.
-     *
-     * The `Protocols` parameter is an array of `Protocol` strings.
-     *
-     * *Required* : No
-     *
-     * *Type* : String
-     *
-     * *Allowed values* : One or more of `SFTP` , `FTPS` , `FTP` , `AS2`
-     *
-     * Update requires:
-     * [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+     * The Amazon S3 storage options that are configured for your server.
      *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.transfer.*;
-     * ProtocolProperty protocolProperty = ProtocolProperty.builder().build();
+     * S3StorageOptionsProperty s3StorageOptionsProperty = S3StorageOptionsProperty.builder()
+     * .directoryListingOptimization("directoryListingOptimization")
+     * .build();
      * ```
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-protocol.html)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-s3storageoptions.html)
      */
-    public inline fun cfnServerProtocolProperty(
-        block: CfnServerProtocolPropertyDsl.() -> Unit = {}
-    ): CfnServer.ProtocolProperty {
-        val builder = CfnServerProtocolPropertyDsl()
-        builder.apply(block)
-        return builder.build()
-    }
-
-    /**
-     * Specifies a log group to which your server logs are sent.
-     *
-     * Example:
-     * ```
-     * // The code below shows an example of how to instantiate this type.
-     * // The values are placeholders you should change.
-     * import software.amazon.awscdk.services.transfer.*;
-     * StructuredLogDestinationProperty structuredLogDestinationProperty =
-     * StructuredLogDestinationProperty.builder().build();
-     * ```
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-structuredlogdestination.html)
-     */
-    public inline fun cfnServerStructuredLogDestinationProperty(
-        block: CfnServerStructuredLogDestinationPropertyDsl.() -> Unit = {}
-    ): CfnServer.StructuredLogDestinationProperty {
-        val builder = CfnServerStructuredLogDestinationPropertyDsl()
+    public inline fun cfnServerS3StorageOptionsProperty(
+        block: CfnServerS3StorageOptionsPropertyDsl.() -> Unit = {}
+    ): CfnServer.S3StorageOptionsProperty {
+        val builder = CfnServerS3StorageOptionsPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -767,6 +737,8 @@ public object transfer {
      * .homeDirectoryMappings(List.of(HomeDirectoryMapEntryProperty.builder()
      * .entry("entry")
      * .target("target")
+     * // the properties below are optional
+     * .type("type")
      * .build()))
      * .homeDirectoryType("homeDirectoryType")
      * .policy("policy")
@@ -808,6 +780,8 @@ public object transfer {
      * HomeDirectoryMapEntryProperty.builder()
      * .entry("entry")
      * .target("target")
+     * // the properties below are optional
+     * .type("type")
      * .build();
      * ```
      *
@@ -870,6 +844,8 @@ public object transfer {
      * .homeDirectoryMappings(List.of(HomeDirectoryMapEntryProperty.builder()
      * .entry("entry")
      * .target("target")
+     * // the properties below are optional
+     * .type("type")
      * .build()))
      * .homeDirectoryType("homeDirectoryType")
      * .policy("policy")
@@ -891,45 +867,6 @@ public object transfer {
      */
     public inline fun cfnUserProps(block: CfnUserPropsDsl.() -> Unit = {}): CfnUserProps {
         val builder = CfnUserPropsDsl()
-        builder.apply(block)
-        return builder.build()
-    }
-
-    /**
-     * Provides information about the public Secure Shell (SSH) key that is associated with a
-     * Transfer Family user account for the specific file transfer protocol-enabled server (as
-     * identified by `ServerId` ).
-     *
-     * The information returned includes the date the key was imported, the public key contents, and
-     * the public key ID. A user can store more than one SSH public key associated with their user
-     * name on a specific server.
-     *
-     * *SshPublicKeyBody*
-     *
-     * Specifies the content of the SSH public key as specified by the `PublicKeyId` .
-     *
-     * AWS Transfer Family accepts RSA, ECDSA, and ED25519 keys.
-     *
-     * Type: String
-     *
-     * Length Constraints: Maximum length of 2048.
-     *
-     * Required: Yes
-     *
-     * Example:
-     * ```
-     * // The code below shows an example of how to instantiate this type.
-     * // The values are placeholders you should change.
-     * import software.amazon.awscdk.services.transfer.*;
-     * SshPublicKeyProperty sshPublicKeyProperty = SshPublicKeyProperty.builder().build();
-     * ```
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-sshpublickey.html)
-     */
-    public inline fun cfnUserSshPublicKeyProperty(
-        block: CfnUserSshPublicKeyPropertyDsl.() -> Unit = {}
-    ): CfnUser.SshPublicKeyProperty {
-        val builder = CfnUserSshPublicKeyPropertyDsl()
         builder.apply(block)
         return builder.build()
     }

@@ -19,7 +19,7 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.vpclattice.CfnTargetGroup
 
 /**
- * The health check configuration of a target group.
+ * Describes the health check configuration of a target group.
  *
  * Health check configurations aren't used for target groups of type `LAMBDA` or `ALB` .
  *
@@ -85,18 +85,12 @@ public class CfnTargetGroupHealthCheckConfigPropertyDsl {
         cdkBuilder.healthyThresholdCount(healthyThresholdCount)
     }
 
-    /**
-     * @param matcher The codes to use when checking for a successful response from a target. These
-     *   are called *Success codes* in the console.
-     */
+    /** @param matcher The codes to use when checking for a successful response from a target. */
     public fun matcher(matcher: IResolvable) {
         cdkBuilder.matcher(matcher)
     }
 
-    /**
-     * @param matcher The codes to use when checking for a successful response from a target. These
-     *   are called *Success codes* in the console.
-     */
+    /** @param matcher The codes to use when checking for a successful response from a target. */
     public fun matcher(matcher: CfnTargetGroup.MatcherProperty) {
         cdkBuilder.matcher(matcher)
     }

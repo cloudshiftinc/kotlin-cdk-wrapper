@@ -56,6 +56,19 @@ public inline fun CfnServer.setProtocolDetails(
 }
 
 /**
+ * Specifies whether or not performance for your Amazon S3 directories is optimized.
+ *
+ * This is disabled by default.
+ */
+public inline fun CfnServer.setS3StorageOptions(
+    block: CfnServerS3StorageOptionsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnServerS3StorageOptionsPropertyDsl()
+    builder.apply(block)
+    return setS3StorageOptions(builder.build())
+}
+
+/**
  * Specifies the workflow ID for the workflow to assign and the execution role that's used for
  * executing the workflow.
  */

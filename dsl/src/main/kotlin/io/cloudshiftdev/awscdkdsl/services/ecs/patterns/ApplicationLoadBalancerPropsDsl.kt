@@ -72,7 +72,10 @@ public class ApplicationLoadBalancerPropsDsl {
         cdkBuilder.domainZone(domainZone)
     }
 
-    /** @param idleTimeout The load balancer idle timeout, in seconds. */
+    /**
+     * @param idleTimeout The load balancer idle timeout, in seconds. Can be between 1 and 4000
+     *   seconds.
+     */
     public fun idleTimeout(idleTimeout: Duration) {
         cdkBuilder.idleTimeout(idleTimeout)
     }

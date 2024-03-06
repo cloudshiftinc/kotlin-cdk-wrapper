@@ -23,10 +23,10 @@ import software.amazon.awscdk.services.s3.NotificationKeyFilter
 /**
  * Example:
  * ```
- * import software.amazon.awscdk.services.lambda.eventsources.*;
  * import software.amazon.awscdk.services.s3.*;
+ * import software.amazon.awscdk.services.lambda.eventsources.S3EventSource;
  * Function fn;
- * Bucket bucket = new Bucket(this, "Bucket");
+ * Bucket bucket = new Bucket(this, "mybucket");
  * fn.addEventSource(S3EventSource.Builder.create(bucket)
  * .events(List.of(EventType.OBJECT_CREATED, EventType.OBJECT_REMOVED))
  * .filters(List.of(NotificationKeyFilter.builder().prefix("subdir/").build()))

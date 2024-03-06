@@ -32,7 +32,7 @@ import software.constructs.Construct
  * EvaluateExpression createMessage = EvaluateExpression.Builder.create(this, "Create message")
  * // Note: this is a string inside a string.
  * .expression("`Now waiting ${$.waitSeconds} seconds...`")
- * .runtime(Runtime.NODEJS_16_X)
+ * .runtime(Runtime.NODEJS_LATEST)
  * .resultPath("$.message")
  * .build();
  * SnsPublish publishMessage = SnsPublish.Builder.create(this, "Publish message")
@@ -64,6 +64,17 @@ public class WaitDsl(
      */
     public fun comment(comment: String) {
         cdkBuilder.comment(comment)
+    }
+
+    /**
+     * Optional name for this state.
+     *
+     * Default: - The construct ID will be used as state name
+     *
+     * @param stateName Optional name for this state.
+     */
+    public fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
     }
 
     /**

@@ -27,6 +27,7 @@ import software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule
  * .endpointName("endpointName")
  * .localPath("localPath")
  * // the properties below are optional
+ * .excludeFeaturesAttribute("excludeFeaturesAttribute")
  * .s3DataDistributionType("s3DataDistributionType")
  * .s3InputMode("s3InputMode")
  * .build();
@@ -48,6 +49,14 @@ public class CfnMonitoringScheduleEndpointInputPropertyDsl {
     }
 
     /**
+     * @param excludeFeaturesAttribute The attributes of the input data to exclude from the
+     *   analysis.
+     */
+    public fun excludeFeaturesAttribute(excludeFeaturesAttribute: String) {
+        cdkBuilder.excludeFeaturesAttribute(excludeFeaturesAttribute)
+    }
+
+    /**
      * @param localPath Path to the filesystem where the endpoint data is available to the
      *   container.
      */
@@ -57,7 +66,7 @@ public class CfnMonitoringScheduleEndpointInputPropertyDsl {
 
     /**
      * @param s3DataDistributionType Whether input data distributed in Amazon S3 is fully replicated
-     *   or sharded by an S3 key. Defaults to `FullyReplicated`
+     *   or sharded by an Amazon S3 key. Defaults to `FullyReplicated`
      */
     public fun s3DataDistributionType(s3DataDistributionType: String) {
         cdkBuilder.s3DataDistributionType(s3DataDistributionType)

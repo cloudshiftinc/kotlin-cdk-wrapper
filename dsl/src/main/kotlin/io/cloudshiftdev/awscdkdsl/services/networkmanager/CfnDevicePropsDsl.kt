@@ -63,12 +63,12 @@ public class CfnDevicePropsDsl {
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
-    /** @param awsLocation The Amazon Web Services location of the device, if applicable. */
+    /** @param awsLocation The AWS location of the device. */
     public fun awsLocation(awsLocation: IResolvable) {
         cdkBuilder.awsLocation(awsLocation)
     }
 
-    /** @param awsLocation The Amazon Web Services location of the device, if applicable. */
+    /** @param awsLocation The AWS location of the device. */
     public fun awsLocation(awsLocation: CfnDevice.AWSLocationProperty) {
         cdkBuilder.awsLocation(awsLocation)
     }

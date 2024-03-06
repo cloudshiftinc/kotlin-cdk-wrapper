@@ -115,6 +115,7 @@ import software.constructs.Construct
  * .domain("domain")
  * .domainIamRoleName("domainIamRoleName")
  * .enableCloudwatchLogsExports(List.of("enableCloudwatchLogsExports"))
+ * .enableGlobalWriteForwarding(false)
  * .enableHttpEndpoint(false)
  * .enableIamDatabaseAuthentication(false)
  * .engine("engine")
@@ -665,6 +666,54 @@ public class CfnDBClusterDsl(
     }
 
     /**
+     * Specifies whether to enable this DB cluster to forward write operations to the primary
+     * cluster of a global cluster (Aurora global database).
+     *
+     * By default, write operations are not allowed on Aurora DB clusters that are secondary
+     * clusters in an Aurora global database.
+     *
+     * You can set this value only on Aurora DB clusters that are members of an Aurora global
+     * database. With this parameter enabled, a secondary cluster can forward writes to the current
+     * primary cluster, and the resulting changes are replicated back to this cluster. For the
+     * primary DB cluster of an Aurora global database, this value is used immediately if the
+     * primary is demoted by a global cluster API operation, but it does nothing until then.
+     *
+     * Valid for Cluster Type: Aurora DB clusters only
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-enableglobalwriteforwarding)
+     *
+     * @param enableGlobalWriteForwarding Specifies whether to enable this DB cluster to forward
+     *   write operations to the primary cluster of a global cluster (Aurora global database).
+     */
+    public fun enableGlobalWriteForwarding(enableGlobalWriteForwarding: Boolean) {
+        cdkBuilder.enableGlobalWriteForwarding(enableGlobalWriteForwarding)
+    }
+
+    /**
+     * Specifies whether to enable this DB cluster to forward write operations to the primary
+     * cluster of a global cluster (Aurora global database).
+     *
+     * By default, write operations are not allowed on Aurora DB clusters that are secondary
+     * clusters in an Aurora global database.
+     *
+     * You can set this value only on Aurora DB clusters that are members of an Aurora global
+     * database. With this parameter enabled, a secondary cluster can forward writes to the current
+     * primary cluster, and the resulting changes are replicated back to this cluster. For the
+     * primary DB cluster of an Aurora global database, this value is used immediately if the
+     * primary is demoted by a global cluster API operation, but it does nothing until then.
+     *
+     * Valid for Cluster Type: Aurora DB clusters only
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-enableglobalwriteforwarding)
+     *
+     * @param enableGlobalWriteForwarding Specifies whether to enable this DB cluster to forward
+     *   write operations to the primary cluster of a global cluster (Aurora global database).
+     */
+    public fun enableGlobalWriteForwarding(enableGlobalWriteForwarding: IResolvable) {
+        cdkBuilder.enableGlobalWriteForwarding(enableGlobalWriteForwarding)
+    }
+
+    /**
      * A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless DB
      * cluster.
      *
@@ -931,6 +980,10 @@ public class CfnDBClusterDsl(
      * If you specify the `SnapshotIdentifier` property, the `StorageEncrypted` property value is
      * inherited from the snapshot, and if the DB cluster is encrypted, the specified `KmsKeyId`
      * property is used.
+     *
+     * If you create a read replica of an encrypted DB cluster in another AWS Region, make sure to
+     * set `KmsKeyId` to a KMS key identifier that is valid in the destination AWS Region. This KMS
+     * key is used to encrypt the read replica in that AWS Region.
      *
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      *
@@ -1393,6 +1446,9 @@ public class CfnDBClusterDsl(
      * * Can't be specified if the `UseLatestRestorableTime` parameter is enabled
      * * Can't be specified if the `RestoreType` parameter is `copy-on-write`
      *
+     * This property must be used with `SourceDBClusterIdentifier` property. The resulting cluster
+     * will have the identifier that matches the value of the `DBclusterIdentifier` property.
+     *
      * Example: `2015-03-07T23:45:00Z`
      *
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -1430,7 +1486,7 @@ public class CfnDBClusterDsl(
      * The `ScalingConfiguration` property type specifies the scaling configuration of an Aurora
      * Serverless DB cluster.
      *
-     * This property is only supported for Aurora Serverless v1. For Aurora Serverless v2, use
+     * This property is only supported for Aurora Serverless v1. For Aurora Serverless v2, Use the
      * `ServerlessV2ScalingConfiguration` property.
      *
      * Valid for: Aurora DB clusters only
@@ -1448,7 +1504,7 @@ public class CfnDBClusterDsl(
      * The `ScalingConfiguration` property type specifies the scaling configuration of an Aurora
      * Serverless DB cluster.
      *
-     * This property is only supported for Aurora Serverless v1. For Aurora Serverless v2, use
+     * This property is only supported for Aurora Serverless v1. For Aurora Serverless v2, Use the
      * `ServerlessV2ScalingConfiguration` property.
      *
      * Valid for: Aurora DB clusters only
@@ -1468,7 +1524,7 @@ public class CfnDBClusterDsl(
      * The `ServerlessV2ScalingConfiguration` property type specifies the scaling configuration of
      * an Aurora Serverless V2 DB cluster.
      *
-     * This property is only supported for Aurora Serverless v2. For Aurora Serverless v1, use
+     * This property is only supported for Aurora Serverless v2. For Aurora Serverless v1, Use the
      * `ScalingConfiguration` property.
      *
      * Valid for: Aurora DB clusters only
@@ -1486,7 +1542,7 @@ public class CfnDBClusterDsl(
      * The `ServerlessV2ScalingConfiguration` property type specifies the scaling configuration of
      * an Aurora Serverless V2 DB cluster.
      *
-     * This property is only supported for Aurora Serverless v2. For Aurora Serverless v1, use
+     * This property is only supported for Aurora Serverless v2. For Aurora Serverless v1, Use the
      * `ScalingConfiguration` property.
      *
      * Valid for: Aurora DB clusters only
@@ -1654,6 +1710,10 @@ public class CfnDBClusterDsl(
      * Default:
      * * Aurora DB clusters - `aurora`
      * * Multi-AZ DB clusters - `io1`
+     *
+     * When you create an Aurora DB cluster with the storage type set to `aurora-iopt1` , the
+     * storage type is returned in the response. The storage type isn't returned when you set it to
+     * `aurora` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-storagetype)
      *

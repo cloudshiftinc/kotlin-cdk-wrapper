@@ -42,10 +42,7 @@ public class CfnBucketOwnershipControlsRulePropertyDsl {
     private val cdkBuilder: CfnBucket.OwnershipControlsRuleProperty.Builder =
         CfnBucket.OwnershipControlsRuleProperty.builder()
 
-    /**
-     * @param objectOwnership Specifies an Object Ownership rule. *Allowed values* :
-     *   `BucketOwnerEnforced` | `ObjectWriter` | `BucketOwnerPreferred`
-     */
+    /** @param objectOwnership Specifies an object ownership rule. */
     public fun objectOwnership(objectOwnership: String) {
         cdkBuilder.objectOwnership(objectOwnership)
     }

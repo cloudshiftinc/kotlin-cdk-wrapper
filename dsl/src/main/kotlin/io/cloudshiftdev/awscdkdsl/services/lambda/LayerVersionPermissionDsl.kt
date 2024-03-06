@@ -22,7 +22,7 @@ import software.amazon.awscdk.services.lambda.LayerVersionPermission
  * ```
  * LayerVersion layer = LayerVersion.Builder.create(stack, "MyLayer")
  * .code(Code.fromAsset(join(__dirname, "layer-code")))
- * .compatibleRuntimes(List.of(Runtime.NODEJS_14_X))
+ * .compatibleRuntimes(List.of(Runtime.NODEJS_LATEST))
  * .license("Apache-2.0")
  * .description("A layer to test the L2 construct")
  * .build();
@@ -36,7 +36,7 @@ import software.amazon.awscdk.services.lambda.LayerVersionPermission
  * Function.Builder.create(stack, "MyLayeredLambda")
  * .code(new InlineCode("foo"))
  * .handler("index.handler")
- * .runtime(Runtime.NODEJS_14_X)
+ * .runtime(Runtime.NODEJS_LATEST)
  * .layers(List.of(layer))
  * .build();
  * ```

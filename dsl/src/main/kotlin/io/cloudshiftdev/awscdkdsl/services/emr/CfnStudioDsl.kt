@@ -13,11 +13,13 @@ package io.cloudshiftdev.awscdkdsl.services.emr
 
 import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.emr.CfnStudio
 import software.constructs.Construct
 
@@ -45,12 +47,16 @@ import software.constructs.Construct
  * .workspaceSecurityGroupId("workspaceSecurityGroupId")
  * // the properties below are optional
  * .description("description")
+ * .encryptionKeyArn("encryptionKeyArn")
+ * .idcInstanceArn("idcInstanceArn")
+ * .idcUserAssignment("idcUserAssignment")
  * .idpAuthUrl("idpAuthUrl")
  * .idpRelayStateParameterName("idpRelayStateParameterName")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
  * .build()))
+ * .trustedIdentityPropagationEnabled(false)
  * .userRole("userRole")
  * .build();
  * ```
@@ -104,6 +110,19 @@ public class CfnStudioDsl(
     }
 
     /**
+     * The AWS KMS key identifier (ARN) used to encrypt Amazon EMR Studio workspace and notebook
+     * files when backed up to Amazon S3.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-studio.html#cfn-emr-studio-encryptionkeyarn)
+     *
+     * @param encryptionKeyArn The AWS KMS key identifier (ARN) used to encrypt Amazon EMR Studio
+     *   workspace and notebook files when backed up to Amazon S3.
+     */
+    public fun encryptionKeyArn(encryptionKeyArn: String) {
+        cdkBuilder.encryptionKeyArn(encryptionKeyArn)
+    }
+
+    /**
      * The ID of the Amazon EMR Studio Engine security group.
      *
      * The Engine security group allows inbound network traffic from the Workspace security group,
@@ -115,6 +134,34 @@ public class CfnStudioDsl(
      */
     public fun engineSecurityGroupId(engineSecurityGroupId: String) {
         cdkBuilder.engineSecurityGroupId(engineSecurityGroupId)
+    }
+
+    /**
+     * The ARN of the IAM Identity Center instance the Studio application belongs to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-studio.html#cfn-emr-studio-idcinstancearn)
+     *
+     * @param idcInstanceArn The ARN of the IAM Identity Center instance the Studio application
+     *   belongs to.
+     */
+    public fun idcInstanceArn(idcInstanceArn: String) {
+        cdkBuilder.idcInstanceArn(idcInstanceArn)
+    }
+
+    /**
+     * Indicates whether the Studio has `REQUIRED` or `OPTIONAL` IAM Identity Center user
+     * assignment.
+     *
+     * If the value is set to `REQUIRED` , users must be explicitly assigned to the Studio
+     * application to access the Studio.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-studio.html#cfn-emr-studio-idcuserassignment)
+     *
+     * @param idcUserAssignment Indicates whether the Studio has `REQUIRED` or `OPTIONAL` IAM
+     *   Identity Center user assignment.
+     */
+    public fun idcUserAssignment(idcUserAssignment: String) {
+        cdkBuilder.idcUserAssignment(idcUserAssignment)
     }
 
     /**
@@ -225,6 +272,34 @@ public class CfnStudioDsl(
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
+    }
+
+    /**
+     * Indicates whether the Studio has Trusted identity propagation enabled.
+     *
+     * The default value is `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-studio.html#cfn-emr-studio-trustedidentitypropagationenabled)
+     *
+     * @param trustedIdentityPropagationEnabled Indicates whether the Studio has Trusted identity
+     *   propagation enabled.
+     */
+    public fun trustedIdentityPropagationEnabled(trustedIdentityPropagationEnabled: Boolean) {
+        cdkBuilder.trustedIdentityPropagationEnabled(trustedIdentityPropagationEnabled)
+    }
+
+    /**
+     * Indicates whether the Studio has Trusted identity propagation enabled.
+     *
+     * The default value is `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-studio.html#cfn-emr-studio-trustedidentitypropagationenabled)
+     *
+     * @param trustedIdentityPropagationEnabled Indicates whether the Studio has Trusted identity
+     *   propagation enabled.
+     */
+    public fun trustedIdentityPropagationEnabled(trustedIdentityPropagationEnabled: IResolvable) {
+        cdkBuilder.trustedIdentityPropagationEnabled(trustedIdentityPropagationEnabled)
     }
 
     /**

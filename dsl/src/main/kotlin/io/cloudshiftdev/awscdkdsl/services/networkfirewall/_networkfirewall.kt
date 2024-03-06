@@ -21,6 +21,8 @@ import software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration
 import software.amazon.awscdk.services.networkfirewall.CfnLoggingConfigurationProps
 import software.amazon.awscdk.services.networkfirewall.CfnRuleGroup
 import software.amazon.awscdk.services.networkfirewall.CfnRuleGroupProps
+import software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration
+import software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfigurationProps
 import software.constructs.Construct
 
 public object networkfirewall {
@@ -119,6 +121,7 @@ public object networkfirewall {
      * .priority(123)
      * .resourceArn("resourceArn")
      * .build()))
+     * .tlsInspectionConfigurationArn("tlsInspectionConfigurationArn")
      * .build())
      * .firewallPolicyName("firewallPolicyName")
      * // the properties below are optional
@@ -294,6 +297,7 @@ public object networkfirewall {
      * .priority(123)
      * .resourceArn("resourceArn")
      * .build()))
+     * .tlsInspectionConfigurationArn("tlsInspectionConfigurationArn")
      * .build();
      * ```
      *
@@ -402,6 +406,7 @@ public object networkfirewall {
      * .priority(123)
      * .resourceArn("resourceArn")
      * .build()))
+     * .tlsInspectionConfigurationArn("tlsInspectionConfigurationArn")
      * .build())
      * .firewallPolicyName("firewallPolicyName")
      * // the properties below are optional
@@ -1927,6 +1932,424 @@ public object networkfirewall {
         block: CfnRuleGroupTCPFlagFieldPropertyDsl.() -> Unit = {}
     ): CfnRuleGroup.TCPFlagFieldProperty {
         val builder = CfnRuleGroupTCPFlagFieldPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The object that defines a TLS inspection configuration.
+     *
+     * AWS Network Firewall uses a TLS inspection configuration to decrypt traffic. Network Firewall
+     * re-encrypts the traffic before sending it to its destination.
+     *
+     * To use a TLS inspection configuration, you add it to a new Network Firewall firewall policy,
+     * then you apply the firewall policy to a firewall. Network Firewall acts as a proxy service to
+     * decrypt and inspect the traffic traveling through your firewalls. You can reference a TLS
+     * inspection configuration from more than one firewall policy, and you can use a firewall
+     * policy in more than one firewall. For more information about using TLS inspection
+     * configurations, see
+     * [Inspecting SSL/TLS traffic with TLS inspection configurations](https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection.html)
+     * in the *AWS Network Firewall Developer Guide* .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.networkfirewall.*;
+     * CfnTLSInspectionConfiguration cfnTLSInspectionConfiguration =
+     * CfnTLSInspectionConfiguration.Builder.create(this, "MyCfnTLSInspectionConfiguration")
+     * .tlsInspectionConfiguration(TLSInspectionConfigurationProperty.builder()
+     * .serverCertificateConfigurations(List.of(ServerCertificateConfigurationProperty.builder()
+     * .certificateAuthorityArn("certificateAuthorityArn")
+     * .checkCertificateRevocationStatus(CheckCertificateRevocationStatusProperty.builder()
+     * .revokedStatusAction("revokedStatusAction")
+     * .unknownStatusAction("unknownStatusAction")
+     * .build())
+     * .scopes(List.of(ServerCertificateScopeProperty.builder()
+     * .destinationPorts(List.of(PortRangeProperty.builder()
+     * .fromPort(123)
+     * .toPort(123)
+     * .build()))
+     * .destinations(List.of(AddressProperty.builder()
+     * .addressDefinition("addressDefinition")
+     * .build()))
+     * .protocols(List.of(123))
+     * .sourcePorts(List.of(PortRangeProperty.builder()
+     * .fromPort(123)
+     * .toPort(123)
+     * .build()))
+     * .sources(List.of(AddressProperty.builder()
+     * .addressDefinition("addressDefinition")
+     * .build()))
+     * .build()))
+     * .serverCertificates(List.of(ServerCertificateProperty.builder()
+     * .resourceArn("resourceArn")
+     * .build()))
+     * .build()))
+     * .build())
+     * .tlsInspectionConfigurationName("tlsInspectionConfigurationName")
+     * // the properties below are optional
+     * .description("description")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-tlsinspectionconfiguration.html)
+     */
+    public inline fun cfnTLSInspectionConfiguration(
+        scope: Construct,
+        id: String,
+        block: CfnTLSInspectionConfigurationDsl.() -> Unit = {},
+    ): CfnTLSInspectionConfiguration {
+        val builder = CfnTLSInspectionConfigurationDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A single IP address specification.
+     *
+     * This is used in the
+     * [MatchAttributes](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-matchattributes.html)
+     * source and destination settings.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.networkfirewall.*;
+     * AddressProperty addressProperty = AddressProperty.builder()
+     * .addressDefinition("addressDefinition")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-address.html)
+     */
+    public inline fun cfnTLSInspectionConfigurationAddressProperty(
+        block: CfnTLSInspectionConfigurationAddressPropertyDsl.() -> Unit = {}
+    ): CfnTLSInspectionConfiguration.AddressProperty {
+        val builder = CfnTLSInspectionConfigurationAddressPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * When enabled, Network Firewall checks if the server certificate presented by the server in
+     * the SSL/TLS connection has a revoked or unkown status.
+     *
+     * If the certificate has an unknown or revoked status, you must specify the actions that
+     * Network Firewall takes on outbound traffic. To check the certificate revocation status, you
+     * must also specify a `CertificateAuthorityArn` in
+     * [ServerCertificateConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-servercertificateconfiguration.html)
+     * .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.networkfirewall.*;
+     * CheckCertificateRevocationStatusProperty checkCertificateRevocationStatusProperty =
+     * CheckCertificateRevocationStatusProperty.builder()
+     * .revokedStatusAction("revokedStatusAction")
+     * .unknownStatusAction("unknownStatusAction")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-checkcertificaterevocationstatus.html)
+     */
+    public inline fun cfnTLSInspectionConfigurationCheckCertificateRevocationStatusProperty(
+        block: CfnTLSInspectionConfigurationCheckCertificateRevocationStatusPropertyDsl.() -> Unit =
+            {}
+    ): CfnTLSInspectionConfiguration.CheckCertificateRevocationStatusProperty {
+        val builder = CfnTLSInspectionConfigurationCheckCertificateRevocationStatusPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A single port range specification.
+     *
+     * This is used for source and destination port ranges in the stateless rule
+     * [MatchAttributes](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-matchattributes.html)
+     * , `SourcePorts` , and `DestinationPorts` settings.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.networkfirewall.*;
+     * PortRangeProperty portRangeProperty = PortRangeProperty.builder()
+     * .fromPort(123)
+     * .toPort(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-portrange.html)
+     */
+    public inline fun cfnTLSInspectionConfigurationPortRangeProperty(
+        block: CfnTLSInspectionConfigurationPortRangePropertyDsl.() -> Unit = {}
+    ): CfnTLSInspectionConfiguration.PortRangeProperty {
+        val builder = CfnTLSInspectionConfigurationPortRangePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnTLSInspectionConfiguration`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.networkfirewall.*;
+     * CfnTLSInspectionConfigurationProps cfnTLSInspectionConfigurationProps =
+     * CfnTLSInspectionConfigurationProps.builder()
+     * .tlsInspectionConfiguration(TLSInspectionConfigurationProperty.builder()
+     * .serverCertificateConfigurations(List.of(ServerCertificateConfigurationProperty.builder()
+     * .certificateAuthorityArn("certificateAuthorityArn")
+     * .checkCertificateRevocationStatus(CheckCertificateRevocationStatusProperty.builder()
+     * .revokedStatusAction("revokedStatusAction")
+     * .unknownStatusAction("unknownStatusAction")
+     * .build())
+     * .scopes(List.of(ServerCertificateScopeProperty.builder()
+     * .destinationPorts(List.of(PortRangeProperty.builder()
+     * .fromPort(123)
+     * .toPort(123)
+     * .build()))
+     * .destinations(List.of(AddressProperty.builder()
+     * .addressDefinition("addressDefinition")
+     * .build()))
+     * .protocols(List.of(123))
+     * .sourcePorts(List.of(PortRangeProperty.builder()
+     * .fromPort(123)
+     * .toPort(123)
+     * .build()))
+     * .sources(List.of(AddressProperty.builder()
+     * .addressDefinition("addressDefinition")
+     * .build()))
+     * .build()))
+     * .serverCertificates(List.of(ServerCertificateProperty.builder()
+     * .resourceArn("resourceArn")
+     * .build()))
+     * .build()))
+     * .build())
+     * .tlsInspectionConfigurationName("tlsInspectionConfigurationName")
+     * // the properties below are optional
+     * .description("description")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-tlsinspectionconfiguration.html)
+     */
+    public inline fun cfnTLSInspectionConfigurationProps(
+        block: CfnTLSInspectionConfigurationPropsDsl.() -> Unit = {}
+    ): CfnTLSInspectionConfigurationProps {
+        val builder = CfnTLSInspectionConfigurationPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Configures the AWS Certificate Manager certificates and scope that Network Firewall uses to
+     * decrypt and re-encrypt traffic using a
+     * [TLSInspectionConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-tlsinspectionconfiguration.html)
+     * . You can configure `ServerCertificates` for inbound SSL/TLS inspection, a
+     * `CertificateAuthorityArn` for outbound SSL/TLS inspection, or both. For information about
+     * working with certificates for TLS inspection, see
+     * [Using SSL/TLS server certficiates with TLS inspection configurations](https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-certificate-requirements.html)
+     * in the *AWS Network Firewall Developer Guide* .
+     *
+     * If a server certificate that's associated with your
+     * [TLSInspectionConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-tlsinspectionconfiguration.html)
+     * is revoked, deleted, or expired it can result in client-side TLS errors.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.networkfirewall.*;
+     * ServerCertificateConfigurationProperty serverCertificateConfigurationProperty =
+     * ServerCertificateConfigurationProperty.builder()
+     * .certificateAuthorityArn("certificateAuthorityArn")
+     * .checkCertificateRevocationStatus(CheckCertificateRevocationStatusProperty.builder()
+     * .revokedStatusAction("revokedStatusAction")
+     * .unknownStatusAction("unknownStatusAction")
+     * .build())
+     * .scopes(List.of(ServerCertificateScopeProperty.builder()
+     * .destinationPorts(List.of(PortRangeProperty.builder()
+     * .fromPort(123)
+     * .toPort(123)
+     * .build()))
+     * .destinations(List.of(AddressProperty.builder()
+     * .addressDefinition("addressDefinition")
+     * .build()))
+     * .protocols(List.of(123))
+     * .sourcePorts(List.of(PortRangeProperty.builder()
+     * .fromPort(123)
+     * .toPort(123)
+     * .build()))
+     * .sources(List.of(AddressProperty.builder()
+     * .addressDefinition("addressDefinition")
+     * .build()))
+     * .build()))
+     * .serverCertificates(List.of(ServerCertificateProperty.builder()
+     * .resourceArn("resourceArn")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration.html)
+     */
+    public inline fun cfnTLSInspectionConfigurationServerCertificateConfigurationProperty(
+        block: CfnTLSInspectionConfigurationServerCertificateConfigurationPropertyDsl.() -> Unit =
+            {}
+    ): CfnTLSInspectionConfiguration.ServerCertificateConfigurationProperty {
+        val builder = CfnTLSInspectionConfigurationServerCertificateConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Any AWS Certificate Manager (ACM) Secure Sockets Layer/Transport Layer Security (SSL/TLS)
+     * server certificate that's associated with a
+     * [ServerCertificateConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration.html)
+     * . Used in a
+     * [TLSInspectionConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-tlsinspectionconfiguration.html)
+     * for inspection of inbound traffic to your firewall. You must request or import a SSL/TLS
+     * certificate into ACM for each domain Network Firewall needs to decrypt and inspect. AWS
+     * Network Firewall uses the SSL/TLS certificates to decrypt specified inbound SSL/TLS traffic
+     * going to your firewall. For information about working with certificates in AWS Certificate
+     * Manager , see
+     * [Request a public certificate](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-public.html)
+     * or
+     * [Importing certificates](https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html)
+     * in the *AWS Certificate Manager User Guide* .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.networkfirewall.*;
+     * ServerCertificateProperty serverCertificateProperty = ServerCertificateProperty.builder()
+     * .resourceArn("resourceArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificate.html)
+     */
+    public inline fun cfnTLSInspectionConfigurationServerCertificateProperty(
+        block: CfnTLSInspectionConfigurationServerCertificatePropertyDsl.() -> Unit = {}
+    ): CfnTLSInspectionConfiguration.ServerCertificateProperty {
+        val builder = CfnTLSInspectionConfigurationServerCertificatePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Settings that define the Secure Sockets Layer/Transport Layer Security (SSL/TLS) traffic that
+     * Network Firewall should decrypt for inspection by the stateful rule engine.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.networkfirewall.*;
+     * ServerCertificateScopeProperty serverCertificateScopeProperty =
+     * ServerCertificateScopeProperty.builder()
+     * .destinationPorts(List.of(PortRangeProperty.builder()
+     * .fromPort(123)
+     * .toPort(123)
+     * .build()))
+     * .destinations(List.of(AddressProperty.builder()
+     * .addressDefinition("addressDefinition")
+     * .build()))
+     * .protocols(List.of(123))
+     * .sourcePorts(List.of(PortRangeProperty.builder()
+     * .fromPort(123)
+     * .toPort(123)
+     * .build()))
+     * .sources(List.of(AddressProperty.builder()
+     * .addressDefinition("addressDefinition")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificatescope.html)
+     */
+    public inline fun cfnTLSInspectionConfigurationServerCertificateScopeProperty(
+        block: CfnTLSInspectionConfigurationServerCertificateScopePropertyDsl.() -> Unit = {}
+    ): CfnTLSInspectionConfiguration.ServerCertificateScopeProperty {
+        val builder = CfnTLSInspectionConfigurationServerCertificateScopePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The object that defines a TLS inspection configuration. This defines the TLS inspection
+     * configuration.
+     *
+     * AWS Network Firewall uses a TLS inspection configuration to decrypt traffic. Network Firewall
+     * re-encrypts the traffic before sending it to its destination.
+     *
+     * To use a TLS inspection configuration, you add it to a new Network Firewall firewall policy,
+     * then you apply the firewall policy to a firewall. Network Firewall acts as a proxy service to
+     * decrypt and inspect the traffic traveling through your firewalls. You can reference a TLS
+     * inspection configuration from more than one firewall policy, and you can use a firewall
+     * policy in more than one firewall. For more information about using TLS inspection
+     * configurations, see
+     * [Inspecting SSL/TLS traffic with TLS inspection configurations](https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection.html)
+     * in the *AWS Network Firewall Developer Guide* .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.networkfirewall.*;
+     * TLSInspectionConfigurationProperty tLSInspectionConfigurationProperty =
+     * TLSInspectionConfigurationProperty.builder()
+     * .serverCertificateConfigurations(List.of(ServerCertificateConfigurationProperty.builder()
+     * .certificateAuthorityArn("certificateAuthorityArn")
+     * .checkCertificateRevocationStatus(CheckCertificateRevocationStatusProperty.builder()
+     * .revokedStatusAction("revokedStatusAction")
+     * .unknownStatusAction("unknownStatusAction")
+     * .build())
+     * .scopes(List.of(ServerCertificateScopeProperty.builder()
+     * .destinationPorts(List.of(PortRangeProperty.builder()
+     * .fromPort(123)
+     * .toPort(123)
+     * .build()))
+     * .destinations(List.of(AddressProperty.builder()
+     * .addressDefinition("addressDefinition")
+     * .build()))
+     * .protocols(List.of(123))
+     * .sourcePorts(List.of(PortRangeProperty.builder()
+     * .fromPort(123)
+     * .toPort(123)
+     * .build()))
+     * .sources(List.of(AddressProperty.builder()
+     * .addressDefinition("addressDefinition")
+     * .build()))
+     * .build()))
+     * .serverCertificates(List.of(ServerCertificateProperty.builder()
+     * .resourceArn("resourceArn")
+     * .build()))
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-tlsinspectionconfiguration.html)
+     */
+    public inline fun cfnTLSInspectionConfigurationTLSInspectionConfigurationProperty(
+        block: CfnTLSInspectionConfigurationTLSInspectionConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnTLSInspectionConfiguration.TLSInspectionConfigurationProperty {
+        val builder = CfnTLSInspectionConfigurationTLSInspectionConfigurationPropertyDsl()
         builder.apply(block)
         return builder.build()
     }

@@ -24,7 +24,7 @@ import software.amazon.awscdk.services.redshift.CfnEventSubscription
 import software.constructs.Construct
 
 /**
- * The `AWS::Redshift::EventSubscription` resource creates an Amazon Redshift Event Subscription.
+ * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-eventsubscription.html.
  *
  * Example:
  * ```

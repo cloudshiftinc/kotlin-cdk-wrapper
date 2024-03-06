@@ -48,6 +48,7 @@ import software.amazon.awscdk.services.iot.CfnSecurityProfile
  * .strings(List.of("strings"))
  * .build())
  * .build())
+ * .exportMetric(false)
  * .metric("metric")
  * .metricDimension(MetricDimensionProperty.builder()
  * .dimensionName("dimensionName")
@@ -85,6 +86,22 @@ public class CfnSecurityProfileBehaviorPropertyDsl {
      */
     public fun criteria(criteria: CfnSecurityProfile.BehaviorCriteriaProperty) {
         cdkBuilder.criteria(criteria)
+    }
+
+    /**
+     * @param exportMetric Value indicates exporting metrics related to the behavior when it is
+     *   true.
+     */
+    public fun exportMetric(exportMetric: Boolean) {
+        cdkBuilder.exportMetric(exportMetric)
+    }
+
+    /**
+     * @param exportMetric Value indicates exporting metrics related to the behavior when it is
+     *   true.
+     */
+    public fun exportMetric(exportMetric: IResolvable) {
+        cdkBuilder.exportMetric(exportMetric)
     }
 
     /** @param metric What is measured by the behavior. */

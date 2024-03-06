@@ -99,12 +99,12 @@ public class CfnTaskDefinitionPropsDsl {
         cdkBuilder.autoCreateTasks(autoCreateTasks)
     }
 
-    /** @param loRaWanUpdateGatewayTaskEntry the value to be set. */
+    /** @param loRaWanUpdateGatewayTaskEntry LoRaWANUpdateGatewayTaskEntry object. */
     public fun loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry: IResolvable) {
         cdkBuilder.loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry)
     }
 
-    /** @param loRaWanUpdateGatewayTaskEntry the value to be set. */
+    /** @param loRaWanUpdateGatewayTaskEntry LoRaWANUpdateGatewayTaskEntry object. */
     public fun loRaWanUpdateGatewayTaskEntry(
         loRaWanUpdateGatewayTaskEntry: CfnTaskDefinition.LoRaWANUpdateGatewayTaskEntryProperty
     ) {

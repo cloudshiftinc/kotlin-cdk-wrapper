@@ -13,11 +13,305 @@ package io.cloudshiftdev.awscdkdsl.services.inspectorv2
 
 import kotlin.String
 import kotlin.Unit
+import software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration
+import software.amazon.awscdk.services.inspectorv2.CfnCisScanConfigurationProps
 import software.amazon.awscdk.services.inspectorv2.CfnFilter
 import software.amazon.awscdk.services.inspectorv2.CfnFilterProps
 import software.constructs.Construct
 
 public object inspectorv2 {
+    /**
+     * The CIS scan configuration.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.inspectorv2.*;
+     * Object oneTime;
+     * CfnCisScanConfiguration cfnCisScanConfiguration = CfnCisScanConfiguration.Builder.create(this,
+     * "MyCfnCisScanConfiguration")
+     * .scanName("scanName")
+     * .schedule(ScheduleProperty.builder()
+     * .daily(DailyScheduleProperty.builder()
+     * .startTime(TimeProperty.builder()
+     * .timeOfDay("timeOfDay")
+     * .timeZone("timeZone")
+     * .build())
+     * .build())
+     * .monthly(MonthlyScheduleProperty.builder()
+     * .day("day")
+     * .startTime(TimeProperty.builder()
+     * .timeOfDay("timeOfDay")
+     * .timeZone("timeZone")
+     * .build())
+     * .build())
+     * .oneTime(oneTime)
+     * .weekly(WeeklyScheduleProperty.builder()
+     * .days(List.of("days"))
+     * .startTime(TimeProperty.builder()
+     * .timeOfDay("timeOfDay")
+     * .timeZone("timeZone")
+     * .build())
+     * .build())
+     * .build())
+     * .securityLevel("securityLevel")
+     * .tags(Map.of(
+     * "tagsKey", "tags"))
+     * .targets(CisTargetsProperty.builder()
+     * .accountIds(List.of("accountIds"))
+     * // the properties below are optional
+     * .targetResourceTags(Map.of(
+     * "targetResourceTagsKey", List.of("targetResourceTags")))
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspectorv2-cisscanconfiguration.html)
+     */
+    public inline fun cfnCisScanConfiguration(
+        scope: Construct,
+        id: String,
+        block: CfnCisScanConfigurationDsl.() -> Unit = {},
+    ): CfnCisScanConfiguration {
+        val builder = CfnCisScanConfigurationDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The CIS targets.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.inspectorv2.*;
+     * CisTargetsProperty cisTargetsProperty = CisTargetsProperty.builder()
+     * .accountIds(List.of("accountIds"))
+     * // the properties below are optional
+     * .targetResourceTags(Map.of(
+     * "targetResourceTagsKey", List.of("targetResourceTags")))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-cistargets.html)
+     */
+    public inline fun cfnCisScanConfigurationCisTargetsProperty(
+        block: CfnCisScanConfigurationCisTargetsPropertyDsl.() -> Unit = {}
+    ): CfnCisScanConfiguration.CisTargetsProperty {
+        val builder = CfnCisScanConfigurationCisTargetsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A daily schedule.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.inspectorv2.*;
+     * DailyScheduleProperty dailyScheduleProperty = DailyScheduleProperty.builder()
+     * .startTime(TimeProperty.builder()
+     * .timeOfDay("timeOfDay")
+     * .timeZone("timeZone")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-dailyschedule.html)
+     */
+    public inline fun cfnCisScanConfigurationDailyScheduleProperty(
+        block: CfnCisScanConfigurationDailySchedulePropertyDsl.() -> Unit = {}
+    ): CfnCisScanConfiguration.DailyScheduleProperty {
+        val builder = CfnCisScanConfigurationDailySchedulePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A monthly schedule.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.inspectorv2.*;
+     * MonthlyScheduleProperty monthlyScheduleProperty = MonthlyScheduleProperty.builder()
+     * .day("day")
+     * .startTime(TimeProperty.builder()
+     * .timeOfDay("timeOfDay")
+     * .timeZone("timeZone")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-monthlyschedule.html)
+     */
+    public inline fun cfnCisScanConfigurationMonthlyScheduleProperty(
+        block: CfnCisScanConfigurationMonthlySchedulePropertyDsl.() -> Unit = {}
+    ): CfnCisScanConfiguration.MonthlyScheduleProperty {
+        val builder = CfnCisScanConfigurationMonthlySchedulePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnCisScanConfiguration`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.inspectorv2.*;
+     * Object oneTime;
+     * CfnCisScanConfigurationProps cfnCisScanConfigurationProps =
+     * CfnCisScanConfigurationProps.builder()
+     * .scanName("scanName")
+     * .schedule(ScheduleProperty.builder()
+     * .daily(DailyScheduleProperty.builder()
+     * .startTime(TimeProperty.builder()
+     * .timeOfDay("timeOfDay")
+     * .timeZone("timeZone")
+     * .build())
+     * .build())
+     * .monthly(MonthlyScheduleProperty.builder()
+     * .day("day")
+     * .startTime(TimeProperty.builder()
+     * .timeOfDay("timeOfDay")
+     * .timeZone("timeZone")
+     * .build())
+     * .build())
+     * .oneTime(oneTime)
+     * .weekly(WeeklyScheduleProperty.builder()
+     * .days(List.of("days"))
+     * .startTime(TimeProperty.builder()
+     * .timeOfDay("timeOfDay")
+     * .timeZone("timeZone")
+     * .build())
+     * .build())
+     * .build())
+     * .securityLevel("securityLevel")
+     * .tags(Map.of(
+     * "tagsKey", "tags"))
+     * .targets(CisTargetsProperty.builder()
+     * .accountIds(List.of("accountIds"))
+     * // the properties below are optional
+     * .targetResourceTags(Map.of(
+     * "targetResourceTagsKey", List.of("targetResourceTags")))
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspectorv2-cisscanconfiguration.html)
+     */
+    public inline fun cfnCisScanConfigurationProps(
+        block: CfnCisScanConfigurationPropsDsl.() -> Unit = {}
+    ): CfnCisScanConfigurationProps {
+        val builder = CfnCisScanConfigurationPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The schedule the CIS scan configuration runs on.
+     *
+     * Each CIS scan configuration has exactly one type of schedule.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.inspectorv2.*;
+     * Object oneTime;
+     * ScheduleProperty scheduleProperty = ScheduleProperty.builder()
+     * .daily(DailyScheduleProperty.builder()
+     * .startTime(TimeProperty.builder()
+     * .timeOfDay("timeOfDay")
+     * .timeZone("timeZone")
+     * .build())
+     * .build())
+     * .monthly(MonthlyScheduleProperty.builder()
+     * .day("day")
+     * .startTime(TimeProperty.builder()
+     * .timeOfDay("timeOfDay")
+     * .timeZone("timeZone")
+     * .build())
+     * .build())
+     * .oneTime(oneTime)
+     * .weekly(WeeklyScheduleProperty.builder()
+     * .days(List.of("days"))
+     * .startTime(TimeProperty.builder()
+     * .timeOfDay("timeOfDay")
+     * .timeZone("timeZone")
+     * .build())
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-schedule.html)
+     */
+    public inline fun cfnCisScanConfigurationScheduleProperty(
+        block: CfnCisScanConfigurationSchedulePropertyDsl.() -> Unit = {}
+    ): CfnCisScanConfiguration.ScheduleProperty {
+        val builder = CfnCisScanConfigurationSchedulePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The time.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.inspectorv2.*;
+     * TimeProperty timeProperty = TimeProperty.builder()
+     * .timeOfDay("timeOfDay")
+     * .timeZone("timeZone")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-time.html)
+     */
+    public inline fun cfnCisScanConfigurationTimeProperty(
+        block: CfnCisScanConfigurationTimePropertyDsl.() -> Unit = {}
+    ): CfnCisScanConfiguration.TimeProperty {
+        val builder = CfnCisScanConfigurationTimePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A weekly schedule.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.inspectorv2.*;
+     * WeeklyScheduleProperty weeklyScheduleProperty = WeeklyScheduleProperty.builder()
+     * .days(List.of("days"))
+     * .startTime(TimeProperty.builder()
+     * .timeOfDay("timeOfDay")
+     * .timeZone("timeZone")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-weeklyschedule.html)
+     */
+    public inline fun cfnCisScanConfigurationWeeklyScheduleProperty(
+        block: CfnCisScanConfigurationWeeklySchedulePropertyDsl.() -> Unit = {}
+    ): CfnCisScanConfiguration.WeeklyScheduleProperty {
+        val builder = CfnCisScanConfigurationWeeklySchedulePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
     /**
      * Details about a filter.
      *

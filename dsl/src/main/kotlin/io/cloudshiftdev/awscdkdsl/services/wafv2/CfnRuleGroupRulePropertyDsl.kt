@@ -22,7 +22,7 @@ import software.amazon.awscdk.services.wafv2.CfnRuleGroup
 
 /**
  * A single rule, which you can use in a `WebACL` or `RuleGroup` to identify web requests that you
- * want to allow, block, or count.
+ * want to manage in some way.
  *
  * Each rule includes one top-level `Statement` that AWS WAF uses to identify matching web requests,
  * and parameters that govern how AWS WAF handles them.

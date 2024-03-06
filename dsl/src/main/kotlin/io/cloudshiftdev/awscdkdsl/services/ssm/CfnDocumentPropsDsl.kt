@@ -127,11 +127,7 @@ public class CfnDocumentPropsDsl {
         cdkBuilder.documentFormat(documentFormat)
     }
 
-    /**
-     * @param documentType The type of document to create. *Allowed Values* :
-     *   `ApplicationConfigurationSchema` | `Automation` | `Automation.ChangeTemplate` | `Command` |
-     *   `DeploymentStrategy` | `Package` | `Policy` | `Session`
-     */
+    /** @param documentType The type of document to create. */
     public fun documentType(documentType: String) {
         cdkBuilder.documentType(documentType)
     }

@@ -61,6 +61,12 @@ import software.amazon.awscdk.services.s3.CfnStorageLens
  * .detailedStatusCodesMetrics(DetailedStatusCodesMetricsProperty.builder()
  * .isEnabled(false)
  * .build())
+ * .storageLensGroupLevel(StorageLensGroupLevelProperty.builder()
+ * .storageLensGroupSelectionCriteria(StorageLensGroupSelectionCriteriaProperty.builder()
+ * .exclude(List.of("exclude"))
+ * .include(List.of("include"))
+ * .build())
+ * .build())
  * .build();
  * ```
  *
@@ -155,6 +161,24 @@ public class CfnStorageLensAccountLevelPropertyDsl {
         detailedStatusCodesMetrics: CfnStorageLens.DetailedStatusCodesMetricsProperty
     ) {
         cdkBuilder.detailedStatusCodesMetrics(detailedStatusCodesMetrics)
+    }
+
+    /**
+     * @param storageLensGroupLevel This property determines the scope of Storage Lens group data
+     *   that is displayed in the Storage Lens dashboard.
+     */
+    public fun storageLensGroupLevel(storageLensGroupLevel: IResolvable) {
+        cdkBuilder.storageLensGroupLevel(storageLensGroupLevel)
+    }
+
+    /**
+     * @param storageLensGroupLevel This property determines the scope of Storage Lens group data
+     *   that is displayed in the Storage Lens dashboard.
+     */
+    public fun storageLensGroupLevel(
+        storageLensGroupLevel: CfnStorageLens.StorageLensGroupLevelProperty
+    ) {
+        cdkBuilder.storageLensGroupLevel(storageLensGroupLevel)
     }
 
     public fun build(): CfnStorageLens.AccountLevelProperty = cdkBuilder.build()

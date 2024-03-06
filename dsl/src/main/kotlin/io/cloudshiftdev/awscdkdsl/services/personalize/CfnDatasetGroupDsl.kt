@@ -17,7 +17,8 @@ import software.amazon.awscdk.services.personalize.CfnDatasetGroup
 import software.constructs.Construct
 
 /**
- * A dataset group is a collection of related datasets (Interactions, User, and Item).
+ * A dataset group is a collection of related datasets (Item interactions, Users, Items, Actions,
+ * Action interactions).
  *
  * You create a dataset group by calling
  * [CreateDatasetGroup](https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDatasetGroup.html)
@@ -88,11 +89,15 @@ public class CfnDatasetGroupDsl(
     }
 
     /**
-     * The ARN of the IAM role that has permissions to create the dataset group.
+     * The ARN of the AWS Identity and Access Management (IAM) role that has permissions to access
+     * the AWS Key Management Service (KMS) key.
+     *
+     * Supplying an IAM role is only valid when also specifying a KMS key.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-personalize-datasetgroup.html#cfn-personalize-datasetgroup-rolearn)
      *
-     * @param roleArn The ARN of the IAM role that has permissions to create the dataset group.
+     * @param roleArn The ARN of the AWS Identity and Access Management (IAM) role that has
+     *   permissions to access the AWS Key Management Service (KMS) key.
      */
     public fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)

@@ -143,10 +143,12 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * .visibility("visibility")
  * .build())
  * .columnNamesVisibility("columnNamesVisibility")
+ * .defaultCellWidth("defaultCellWidth")
  * .metricPlacement("metricPlacement")
  * .rowAlternateColorOptions(RowAlternateColorOptionsProperty.builder()
  * .rowAlternateColors(List.of("rowAlternateColors"))
  * .status("status")
+ * .usePrimaryBackgroundColor("usePrimaryBackgroundColor")
  * .build())
  * .rowFieldNamesStyle(TableCellStyleProperty.builder()
  * .backgroundColor("backgroundColor")
@@ -264,6 +266,11 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * .verticalTextAlignment("verticalTextAlignment")
  * .visibility("visibility")
  * .build())
+ * .rowsLabelOptions(PivotTableRowsLabelOptionsProperty.builder()
+ * .customLabel("customLabel")
+ * .visibility("visibility")
+ * .build())
+ * .rowsLayout("rowsLayout")
  * .singleMetricVisibility("singleMetricVisibility")
  * .toggleButtonsVisibility("toggleButtonsVisibility")
  * .build();
@@ -310,6 +317,11 @@ public class CfnAnalysisPivotTableOptionsPropertyDsl {
         cdkBuilder.columnNamesVisibility(columnNamesVisibility)
     }
 
+    /** @param defaultCellWidth The default cell width of the pivot table. */
+    public fun defaultCellWidth(defaultCellWidth: String) {
+        cdkBuilder.defaultCellWidth(defaultCellWidth)
+    }
+
     /** @param metricPlacement The metric placement (row, column) options. */
     public fun metricPlacement(metricPlacement: String) {
         cdkBuilder.metricPlacement(metricPlacement)
@@ -351,6 +363,33 @@ public class CfnAnalysisPivotTableOptionsPropertyDsl {
     /** @param rowHeaderStyle The table cell style of the row headers. */
     public fun rowHeaderStyle(rowHeaderStyle: CfnAnalysis.TableCellStyleProperty) {
         cdkBuilder.rowHeaderStyle(rowHeaderStyle)
+    }
+
+    /**
+     * @param rowsLabelOptions The options for the label that is located above the row headers. This
+     *   option is only applicable when `RowsLayout` is set to `HIERARCHY` .
+     */
+    public fun rowsLabelOptions(rowsLabelOptions: IResolvable) {
+        cdkBuilder.rowsLabelOptions(rowsLabelOptions)
+    }
+
+    /**
+     * @param rowsLabelOptions The options for the label that is located above the row headers. This
+     *   option is only applicable when `RowsLayout` is set to `HIERARCHY` .
+     */
+    public fun rowsLabelOptions(rowsLabelOptions: CfnAnalysis.PivotTableRowsLabelOptionsProperty) {
+        cdkBuilder.rowsLabelOptions(rowsLabelOptions)
+    }
+
+    /**
+     * @param rowsLayout The layout for the row dimension headers of a pivot table. Choose one of
+     *   the following options.
+     * * `TABULAR` : (Default) Each row field is displayed in a separate column.
+     * * `HIERARCHY` : All row fields are displayed in a single column. Indentation is used to
+     *   differentiate row headers of different fields.
+     */
+    public fun rowsLayout(rowsLayout: String) {
+        cdkBuilder.rowsLayout(rowsLayout)
     }
 
     /** @param singleMetricVisibility The visibility of the single metric options. */

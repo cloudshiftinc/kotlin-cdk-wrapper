@@ -25,6 +25,8 @@ import software.amazon.awscdk.services.elasticache.CfnSecurityGroup
 import software.amazon.awscdk.services.elasticache.CfnSecurityGroupIngress
 import software.amazon.awscdk.services.elasticache.CfnSecurityGroupIngressProps
 import software.amazon.awscdk.services.elasticache.CfnSecurityGroupProps
+import software.amazon.awscdk.services.elasticache.CfnServerlessCache
+import software.amazon.awscdk.services.elasticache.CfnServerlessCacheProps
 import software.amazon.awscdk.services.elasticache.CfnSubnetGroup
 import software.amazon.awscdk.services.elasticache.CfnSubnetGroupProps
 import software.amazon.awscdk.services.elasticache.CfnUser
@@ -35,7 +37,7 @@ import software.constructs.Construct
 
 public object elasticache {
     /**
-     * The AWS::ElastiCache::CacheCluster type creates an Amazon ElastiCache cache cluster.
+     * The `AWS::ElastiCache::CacheCluster` type creates an Amazon ElastiCache cache cluster.
      *
      * Example:
      * ```
@@ -990,6 +992,224 @@ public object elasticache {
         block: CfnSecurityGroupPropsDsl.() -> Unit = {}
     ): CfnSecurityGroupProps {
         val builder = CfnSecurityGroupPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The resource representing a serverless cache.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.elasticache.*;
+     * CfnServerlessCache cfnServerlessCache = CfnServerlessCache.Builder.create(this,
+     * "MyCfnServerlessCache")
+     * .engine("engine")
+     * .serverlessCacheName("serverlessCacheName")
+     * // the properties below are optional
+     * .cacheUsageLimits(CacheUsageLimitsProperty.builder()
+     * .dataStorage(DataStorageProperty.builder()
+     * .maximum(123)
+     * .unit("unit")
+     * .build())
+     * .ecpuPerSecond(ECPUPerSecondProperty.builder()
+     * .maximum(123)
+     * .build())
+     * .build())
+     * .dailySnapshotTime("dailySnapshotTime")
+     * .description("description")
+     * .endpoint(EndpointProperty.builder()
+     * .address("address")
+     * .port("port")
+     * .build())
+     * .finalSnapshotName("finalSnapshotName")
+     * .kmsKeyId("kmsKeyId")
+     * .majorEngineVersion("majorEngineVersion")
+     * .readerEndpoint(EndpointProperty.builder()
+     * .address("address")
+     * .port("port")
+     * .build())
+     * .securityGroupIds(List.of("securityGroupIds"))
+     * .snapshotArnsToRestore(List.of("snapshotArnsToRestore"))
+     * .snapshotRetentionLimit(123)
+     * .subnetIds(List.of("subnetIds"))
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .userGroupId("userGroupId")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-serverlesscache.html)
+     */
+    public inline fun cfnServerlessCache(
+        scope: Construct,
+        id: String,
+        block: CfnServerlessCacheDsl.() -> Unit = {},
+    ): CfnServerlessCache {
+        val builder = CfnServerlessCacheDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The usage limits for storage and ElastiCache Processing Units for the cache.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.elasticache.*;
+     * CacheUsageLimitsProperty cacheUsageLimitsProperty = CacheUsageLimitsProperty.builder()
+     * .dataStorage(DataStorageProperty.builder()
+     * .maximum(123)
+     * .unit("unit")
+     * .build())
+     * .ecpuPerSecond(ECPUPerSecondProperty.builder()
+     * .maximum(123)
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-serverlesscache-cacheusagelimits.html)
+     */
+    public inline fun cfnServerlessCacheCacheUsageLimitsProperty(
+        block: CfnServerlessCacheCacheUsageLimitsPropertyDsl.() -> Unit = {}
+    ): CfnServerlessCache.CacheUsageLimitsProperty {
+        val builder = CfnServerlessCacheCacheUsageLimitsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The data storage limit.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.elasticache.*;
+     * DataStorageProperty dataStorageProperty = DataStorageProperty.builder()
+     * .maximum(123)
+     * .unit("unit")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-serverlesscache-datastorage.html)
+     */
+    public inline fun cfnServerlessCacheDataStorageProperty(
+        block: CfnServerlessCacheDataStoragePropertyDsl.() -> Unit = {}
+    ): CfnServerlessCache.DataStorageProperty {
+        val builder = CfnServerlessCacheDataStoragePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The configuration for the number of ElastiCache Processing Units (ECPU) the cache can consume
+     * per second.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.elasticache.*;
+     * ECPUPerSecondProperty eCPUPerSecondProperty = ECPUPerSecondProperty.builder()
+     * .maximum(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-serverlesscache-ecpupersecond.html)
+     */
+    public inline fun cfnServerlessCacheECPUPerSecondProperty(
+        block: CfnServerlessCacheECPUPerSecondPropertyDsl.() -> Unit = {}
+    ): CfnServerlessCache.ECPUPerSecondProperty {
+        val builder = CfnServerlessCacheECPUPerSecondPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Represents the information required for client programs to connect to a cache node.
+     *
+     * This value is read-only.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.elasticache.*;
+     * EndpointProperty endpointProperty = EndpointProperty.builder()
+     * .address("address")
+     * .port("port")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-serverlesscache-endpoint.html)
+     */
+    public inline fun cfnServerlessCacheEndpointProperty(
+        block: CfnServerlessCacheEndpointPropertyDsl.() -> Unit = {}
+    ): CfnServerlessCache.EndpointProperty {
+        val builder = CfnServerlessCacheEndpointPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnServerlessCache`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.elasticache.*;
+     * CfnServerlessCacheProps cfnServerlessCacheProps = CfnServerlessCacheProps.builder()
+     * .engine("engine")
+     * .serverlessCacheName("serverlessCacheName")
+     * // the properties below are optional
+     * .cacheUsageLimits(CacheUsageLimitsProperty.builder()
+     * .dataStorage(DataStorageProperty.builder()
+     * .maximum(123)
+     * .unit("unit")
+     * .build())
+     * .ecpuPerSecond(ECPUPerSecondProperty.builder()
+     * .maximum(123)
+     * .build())
+     * .build())
+     * .dailySnapshotTime("dailySnapshotTime")
+     * .description("description")
+     * .endpoint(EndpointProperty.builder()
+     * .address("address")
+     * .port("port")
+     * .build())
+     * .finalSnapshotName("finalSnapshotName")
+     * .kmsKeyId("kmsKeyId")
+     * .majorEngineVersion("majorEngineVersion")
+     * .readerEndpoint(EndpointProperty.builder()
+     * .address("address")
+     * .port("port")
+     * .build())
+     * .securityGroupIds(List.of("securityGroupIds"))
+     * .snapshotArnsToRestore(List.of("snapshotArnsToRestore"))
+     * .snapshotRetentionLimit(123)
+     * .subnetIds(List.of("subnetIds"))
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .userGroupId("userGroupId")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-serverlesscache.html)
+     */
+    public inline fun cfnServerlessCacheProps(
+        block: CfnServerlessCachePropsDsl.() -> Unit = {}
+    ): CfnServerlessCacheProps {
+        val builder = CfnServerlessCachePropsDsl()
         builder.apply(block)
         return builder.build()
     }

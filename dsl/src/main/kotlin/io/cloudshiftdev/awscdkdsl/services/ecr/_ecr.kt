@@ -136,10 +136,10 @@ public object ecr {
     }
 
     /**
-     * Creates a pull through cache rule.
+     * The `AWS::ECR::PullThroughCacheRule` resource creates or updates a pull through cache rule.
      *
-     * A pull through cache rule provides a way to cache images from an external public registry in
-     * your Amazon ECR private registry.
+     * A pull through cache rule provides a way to cache images from an upstream registry in your
+     * Amazon ECR private registry.
      *
      * Example:
      * ```
@@ -148,7 +148,9 @@ public object ecr {
      * import software.amazon.awscdk.services.ecr.*;
      * CfnPullThroughCacheRule cfnPullThroughCacheRule = CfnPullThroughCacheRule.Builder.create(this,
      * "MyCfnPullThroughCacheRule")
+     * .credentialArn("credentialArn")
      * .ecrRepositoryPrefix("ecrRepositoryPrefix")
+     * .upstreamRegistry("upstreamRegistry")
      * .upstreamRegistryUrl("upstreamRegistryUrl")
      * .build();
      * ```
@@ -175,7 +177,9 @@ public object ecr {
      * import software.amazon.awscdk.services.ecr.*;
      * CfnPullThroughCacheRuleProps cfnPullThroughCacheRuleProps =
      * CfnPullThroughCacheRuleProps.builder()
+     * .credentialArn("credentialArn")
      * .ecrRepositoryPrefix("ecrRepositoryPrefix")
+     * .upstreamRegistry("upstreamRegistry")
      * .upstreamRegistryUrl("upstreamRegistryUrl")
      * .build();
      * ```

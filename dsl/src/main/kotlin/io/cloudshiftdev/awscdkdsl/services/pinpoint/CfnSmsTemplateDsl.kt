@@ -123,11 +123,13 @@ public class CfnSmsTemplateDsl(
     }
 
     /**
-     * The name of the message template.
+     * The name of the message template to use for the message.
+     *
+     * If specified, this value must match the name of an existing message template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-smstemplate.html#cfn-pinpoint-smstemplate-templatename)
      *
-     * @param templateName The name of the message template.
+     * @param templateName The name of the message template to use for the message.
      */
     public fun templateName(templateName: String) {
         cdkBuilder.templateName(templateName)

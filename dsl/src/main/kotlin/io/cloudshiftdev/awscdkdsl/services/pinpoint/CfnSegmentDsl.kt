@@ -175,22 +175,22 @@ public class CfnSegmentDsl(
     }
 
     /**
-     * The criteria that define the dimensions for the segment.
+     * An array that defines the dimensions for the segment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-segment.html#cfn-pinpoint-segment-dimensions)
      *
-     * @param dimensions The criteria that define the dimensions for the segment.
+     * @param dimensions An array that defines the dimensions for the segment.
      */
     public fun dimensions(dimensions: IResolvable) {
         cdkBuilder.dimensions(dimensions)
     }
 
     /**
-     * The criteria that define the dimensions for the segment.
+     * An array that defines the dimensions for the segment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-segment.html#cfn-pinpoint-segment-dimensions)
      *
-     * @param dimensions The criteria that define the dimensions for the segment.
+     * @param dimensions An array that defines the dimensions for the segment.
      */
     public fun dimensions(dimensions: CfnSegment.SegmentDimensionsProperty) {
         cdkBuilder.dimensions(dimensions)

@@ -26,6 +26,7 @@ import software.amazon.awscdk.services.cloudfront.IDistribution
 import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.iam.IRole
+import software.amazon.awscdk.services.logs.ILogGroup
 import software.amazon.awscdk.services.logs.RetentionDays
 import software.amazon.awscdk.services.s3.BucketAccessControl
 import software.amazon.awscdk.services.s3.IBucket
@@ -342,7 +343,26 @@ public class BucketDeploymentDsl(
     }
 
     /**
+     * The Log Group used for logging of events emitted by the custom resource's lambda function.
+     *
+     * Providing a user-controlled log group was rolled out to commercial regions on 2023-11-16. If
+     * you are deploying to another type of region, please check regional availability first.
+     *
+     * Default: - a default log group created by AWS Lambda
+     *
+     * @param logGroup The Log Group used for logging of events emitted by the custom resource's
+     *   lambda function.
+     */
+    public fun logGroup(logGroup: ILogGroup) {
+        cdkBuilder.logGroup(logGroup)
+    }
+
+    /**
      * The number of days that the lambda function's log events are kept in CloudWatch Logs.
+     *
+     * This is a legacy API and we strongly recommend you migrate to `logGroup` if you can.
+     * `logGroup` allows you to create a fully customizable log group and instruct the Lambda
+     * function to send logs to it.
      *
      * Default: logs.RetentionDays.INFINITE
      *

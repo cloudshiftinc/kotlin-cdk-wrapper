@@ -125,7 +125,9 @@ public class DynamoPutItemPropsDsl {
 
     /**
      * @param integrationPattern AWS Step Functions integrates with services directly in the Amazon
-     *   States Language. You can control these AWS services using service integration patterns
+     *   States Language. You can control these AWS services using service integration patterns.
+     *
+     * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      */
     public fun integrationPattern(integrationPattern: IntegrationPattern) {
         cdkBuilder.integrationPattern(integrationPattern)
@@ -201,6 +203,11 @@ public class DynamoPutItemPropsDsl {
      */
     public fun returnValues(returnValues: DynamoReturnValues) {
         cdkBuilder.returnValues(returnValues)
+    }
+
+    /** @param stateName Optional name for this state. */
+    public fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
     }
 
     /** @param table The name of the table where the item should be written . */

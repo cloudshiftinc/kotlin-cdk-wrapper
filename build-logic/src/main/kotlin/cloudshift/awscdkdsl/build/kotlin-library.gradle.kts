@@ -9,6 +9,11 @@ plugins {
     `java-library`
     kotlin("jvm")
     id("cloudshift.awscdkdsl.build.base")
+    id("com.ncorti.ktfmt.gradle")
+}
+
+ktfmt {
+    kotlinLangStyle()
 }
 
 tasks.withType<AbstractArchiveTask>().configureEach {

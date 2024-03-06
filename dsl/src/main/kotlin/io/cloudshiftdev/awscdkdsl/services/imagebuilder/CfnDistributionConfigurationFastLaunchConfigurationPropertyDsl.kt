@@ -19,7 +19,7 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration
 
 /**
- * The Windows faster-launching configuration to use for AMI distribution.
+ * Define and configure faster launching for output Windows AMIs.
  *
  * Example:
  * ```
@@ -56,8 +56,8 @@ public class CfnDistributionConfigurationFastLaunchConfigurationPropertyDsl {
 
     /**
      * @param enabled A Boolean that represents the current state of faster launching for the
-     *   Windows AMI. Set to true to start using Windows faster launching, or false to stop using
-     *   it.
+     *   Windows AMI. Set to `true` to start using Windows faster launching, or `false` to stop
+     *   using it.
      */
     public fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
@@ -65,8 +65,8 @@ public class CfnDistributionConfigurationFastLaunchConfigurationPropertyDsl {
 
     /**
      * @param enabled A Boolean that represents the current state of faster launching for the
-     *   Windows AMI. Set to true to start using Windows faster launching, or false to stop using
-     *   it.
+     *   Windows AMI. Set to `true` to start using Windows faster launching, or `false` to stop
+     *   using it.
      */
     public fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled)

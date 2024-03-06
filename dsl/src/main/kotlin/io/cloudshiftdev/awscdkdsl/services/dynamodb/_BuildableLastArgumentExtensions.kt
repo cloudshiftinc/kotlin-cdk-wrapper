@@ -22,6 +22,9 @@ import software.amazon.awscdk.services.dynamodb.CfnTable
 import software.amazon.awscdk.services.dynamodb.IScalableTableAttribute
 import software.amazon.awscdk.services.dynamodb.ITable
 import software.amazon.awscdk.services.dynamodb.Table
+import software.amazon.awscdk.services.dynamodb.TableBase
+import software.amazon.awscdk.services.dynamodb.TableBaseV2
+import software.amazon.awscdk.services.dynamodb.TableV2
 
 /** Specifies the settings to enable server-side encryption. */
 public inline fun CfnGlobalTable.setSseSpecification(
@@ -372,7 +375,7 @@ public inline fun Table.autoScaleWriteCapacity(
  * @param metricName
  * @param props
  */
-public inline fun Table.metric(
+public inline fun TableBase.metric(
     metricName: String,
     block: MetricOptionsDsl.() -> Unit = {}
 ): Metric {
@@ -389,7 +392,7 @@ public inline fun Table.metric(
  *
  * @param props
  */
-public inline fun Table.metricConditionalCheckFailedRequests(
+public inline fun TableBase.metricConditionalCheckFailedRequests(
     block: MetricOptionsDsl.() -> Unit = {}
 ): Metric {
     val builder = MetricOptionsDsl()
@@ -405,7 +408,7 @@ public inline fun Table.metricConditionalCheckFailedRequests(
  *
  * @param props
  */
-public inline fun Table.metricConsumedReadCapacityUnits(
+public inline fun TableBase.metricConsumedReadCapacityUnits(
     block: MetricOptionsDsl.() -> Unit = {}
 ): Metric {
     val builder = MetricOptionsDsl()
@@ -421,7 +424,7 @@ public inline fun Table.metricConsumedReadCapacityUnits(
  *
  * @param props
  */
-public inline fun Table.metricConsumedWriteCapacityUnits(
+public inline fun TableBase.metricConsumedWriteCapacityUnits(
     block: MetricOptionsDsl.() -> Unit = {}
 ): Metric {
     val builder = MetricOptionsDsl()
@@ -437,12 +440,24 @@ public inline fun Table.metricConsumedWriteCapacityUnits(
  *
  * @param props
  */
-public inline fun Table.metricSuccessfulRequestLatency(
+public inline fun TableBase.metricSuccessfulRequestLatency(
     block: MetricOptionsDsl.() -> Unit = {}
 ): Metric {
     val builder = MetricOptionsDsl()
     builder.apply(block)
     return metricSuccessfulRequestLatency(builder.build())
+}
+
+/**
+ * (deprecated) Metric for the system errors this table.
+ *
+ * @param props
+ * @deprecated use `metricSystemErrorsForOperations`.
+ */
+public inline fun TableBase.metricSystemErrors(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricSystemErrors(builder.build())
 }
 
 /**
@@ -454,7 +469,7 @@ public inline fun Table.metricSuccessfulRequestLatency(
  *
  * @param props
  */
-public inline fun Table.metricSystemErrorsForOperations(
+public inline fun TableBase.metricSystemErrorsForOperations(
     block: SystemErrorsForOperationsMetricOptionsDsl.() -> Unit = {}
 ): IMetric {
     val builder = SystemErrorsForOperationsMetricOptionsDsl()
@@ -471,7 +486,9 @@ public inline fun Table.metricSystemErrorsForOperations(
  * @deprecated Do not use this function. It returns an invalid metric. Use
  *   `metricThrottledRequestsForOperation` instead.
  */
-public inline fun Table.metricThrottledRequests(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+public inline fun TableBase.metricThrottledRequests(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
     val builder = MetricOptionsDsl()
     builder.apply(block)
     return metricThrottledRequests(builder.build())
@@ -485,7 +502,7 @@ public inline fun Table.metricThrottledRequests(block: MetricOptionsDsl.() -> Un
  * @param operation
  * @param props
  */
-public inline fun Table.metricThrottledRequestsForOperation(
+public inline fun TableBase.metricThrottledRequestsForOperation(
     operation: String,
     block: MetricOptionsDsl.() -> Unit = {}
 ): Metric {
@@ -503,7 +520,7 @@ public inline fun Table.metricThrottledRequestsForOperation(
  *
  * @param props
  */
-public inline fun Table.metricThrottledRequestsForOperations(
+public inline fun TableBase.metricThrottledRequestsForOperations(
     block: OperationsMetricOptionsDsl.() -> Unit = {}
 ): IMetric {
     val builder = OperationsMetricOptionsDsl()
@@ -522,8 +539,231 @@ public inline fun Table.metricThrottledRequestsForOperations(
  *
  * @param props
  */
-public inline fun Table.metricUserErrors(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+public inline fun TableBase.metricUserErrors(block: MetricOptionsDsl.() -> Unit = {}): Metric {
     val builder = MetricOptionsDsl()
     builder.apply(block)
     return metricUserErrors(builder.build())
+}
+
+/**
+ * Return the given named metric for this table.
+ *
+ * By default, the metric will be calculated as a sum over a period of 5 minutes. You can customize
+ * this by using the `statistic` and `period` properties.
+ *
+ * @param metricName
+ * @param props
+ */
+public inline fun TableBaseV2.metric(
+    metricName: String,
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metric(metricName, builder.build())
+}
+
+/**
+ * Metric for the conditional check failed requests for this table.
+ *
+ * By default, the metric will be calculated as a sum over a period of 5 minutes. You can customize
+ * this by using the `statistic` and `period` properties.
+ *
+ * @param props
+ */
+public inline fun TableBaseV2.metricConditionalCheckFailedRequests(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricConditionalCheckFailedRequests(builder.build())
+}
+
+/**
+ * Metric for the consumed read capacity units for this table.
+ *
+ * By default, the metric will be calculated as a sum over a period of 5 minutes. You can customize
+ * this by using the `statistic` and `period` properties.
+ *
+ * @param props
+ */
+public inline fun TableBaseV2.metricConsumedReadCapacityUnits(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricConsumedReadCapacityUnits(builder.build())
+}
+
+/**
+ * Metric for the consumed write capacity units for this table.
+ *
+ * By default, the metric will be calculated as a sum over a period of 5 minutes. You can customize
+ * this by using the `statistic` and `period` properties.
+ *
+ * @param props
+ */
+public inline fun TableBaseV2.metricConsumedWriteCapacityUnits(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricConsumedWriteCapacityUnits(builder.build())
+}
+
+/**
+ * Metric for the successful request latency for this table.
+ *
+ * By default, the metric will be calculated as an average over a period of 5 minutes. You can
+ * customize this by using the `statistic` and `period` properties.
+ *
+ * @param props
+ */
+public inline fun TableBaseV2.metricSuccessfulRequestLatency(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricSuccessfulRequestLatency(builder.build())
+}
+
+/**
+ * (deprecated) Metric for the system errors this table.
+ *
+ * @param props
+ * @deprecated use `metricSystemErrorsForOperations`.
+ */
+public inline fun TableBaseV2.metricSystemErrors(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricSystemErrors(builder.build())
+}
+
+/**
+ * Metric for the system errors for this table. This will sum errors across all possible operations.
+ *
+ * By default, each individual metric will be calculated as a sum over a period of 5 minutes. You
+ * can customize this by using the `statistic` and `period` properties.
+ *
+ * @param props
+ */
+public inline fun TableBaseV2.metricSystemErrorsForOperations(
+    block: SystemErrorsForOperationsMetricOptionsDsl.() -> Unit = {}
+): IMetric {
+    val builder = SystemErrorsForOperationsMetricOptionsDsl()
+    builder.apply(block)
+    return metricSystemErrorsForOperations(builder.build())
+}
+
+/**
+ * (deprecated) How many requests are throttled on this table.
+ *
+ * By default, each individual metric will be calculated as a sum over a period of 5 minutes. You
+ * can customize this by using the `statistic` and `period` properties.
+ *
+ * @param props
+ * @deprecated Do not use this function. It returns an invalid metric. Use
+ *   `metricThrottledRequestsForOperation` instead.
+ */
+public inline fun TableBaseV2.metricThrottledRequests(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricThrottledRequests(builder.build())
+}
+
+/**
+ * How many requests are throttled on this table for the given operation.
+ *
+ * By default, the metric will be calculated as an average over a period of 5 minutes. You can
+ * customize this by using the `statistic` and `period` properties.
+ *
+ * @param operation
+ * @param props
+ */
+public inline fun TableBaseV2.metricThrottledRequestsForOperation(
+    operation: String,
+    block: OperationsMetricOptionsDsl.() -> Unit = {}
+): IMetric {
+    val builder = OperationsMetricOptionsDsl()
+    builder.apply(block)
+    return metricThrottledRequestsForOperation(operation, builder.build())
+}
+
+/**
+ * How many requests are throttled on this table. This will sum errors across all possible
+ * operations.
+ *
+ * By default, each individual metric will be calculated as a sum over a period of 5 minutes. You
+ * can customize this by using the `statistic` and `period` properties.
+ *
+ * @param props
+ */
+public inline fun TableBaseV2.metricThrottledRequestsForOperations(
+    block: OperationsMetricOptionsDsl.() -> Unit = {}
+): IMetric {
+    val builder = OperationsMetricOptionsDsl()
+    builder.apply(block)
+    return metricThrottledRequestsForOperations(builder.build())
+}
+
+/**
+ * Metric for the user errors for this table.
+ *
+ * Note: This metric reports user errors across all the tables in the account and region the table
+ * resides in.
+ *
+ * By default, the metric will be calculated as a sum over a period of 5 minutes. You can customize
+ * this by using the `statistic` and `period` properties.
+ *
+ * @param props
+ */
+public inline fun TableBaseV2.metricUserErrors(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricUserErrors(builder.build())
+}
+
+/**
+ * Add a global secondary index to the table.
+ *
+ * Note: Global secondary indexes will be inherited by all replica tables.
+ *
+ * @param props the properties of the global secondary index.
+ */
+public inline fun TableV2.addGlobalSecondaryIndex(
+    block: GlobalSecondaryIndexPropsV2Dsl.() -> Unit = {}
+) {
+    val builder = GlobalSecondaryIndexPropsV2Dsl()
+    builder.apply(block)
+    return addGlobalSecondaryIndex(builder.build())
+}
+
+/**
+ * Add a local secondary index to the table.
+ *
+ * Note: Local secondary indexes will be inherited by all replica tables.
+ *
+ * @param props the properties of the local secondary index.
+ */
+public inline fun TableV2.addLocalSecondaryIndex(
+    block: LocalSecondaryIndexPropsDsl.() -> Unit = {}
+) {
+    val builder = LocalSecondaryIndexPropsDsl()
+    builder.apply(block)
+    return addLocalSecondaryIndex(builder.build())
+}
+
+/**
+ * Add a replica table.
+ *
+ * Note: Adding a replica table will allow you to use your table as a global table.
+ *
+ * @param props the properties of the replica table to add.
+ */
+public inline fun TableV2.addReplica(block: ReplicaTablePropsDsl.() -> Unit = {}) {
+    val builder = ReplicaTablePropsDsl()
+    builder.apply(block)
+    return addReplica(builder.build())
 }

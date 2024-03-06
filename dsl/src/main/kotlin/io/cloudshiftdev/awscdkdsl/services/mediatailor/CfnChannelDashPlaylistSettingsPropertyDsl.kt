@@ -16,7 +16,7 @@ import kotlin.Number
 import software.amazon.awscdk.services.mediatailor.CfnChannel
 
 /**
- * Dash manifest configuration parameters.</p>.
+ * Dash manifest configuration parameters.
  *
  * Example:
  * ```
@@ -41,7 +41,7 @@ public class CfnChannelDashPlaylistSettingsPropertyDsl {
 
     /**
      * @param manifestWindowSeconds The total duration (in seconds) of each manifest. Minimum value:
-     *   `30` seconds. Maximum value: `3600` seconds.</p>
+     *   `30` seconds. Maximum value: `3600` seconds.
      */
     public fun manifestWindowSeconds(manifestWindowSeconds: Number) {
         cdkBuilder.manifestWindowSeconds(manifestWindowSeconds)
@@ -49,8 +49,7 @@ public class CfnChannelDashPlaylistSettingsPropertyDsl {
 
     /**
      * @param minBufferTimeSeconds Minimum amount of content (measured in seconds) that a player
-     *   must keep available in the buffer. Minimum value: `2` seconds. Maximum value: `60`
-     *   seconds.</p>
+     *   must keep available in the buffer. Minimum value: `2` seconds. Maximum value: `60` seconds.
      */
     public fun minBufferTimeSeconds(minBufferTimeSeconds: Number) {
         cdkBuilder.minBufferTimeSeconds(minBufferTimeSeconds)
@@ -59,7 +58,7 @@ public class CfnChannelDashPlaylistSettingsPropertyDsl {
     /**
      * @param minUpdatePeriodSeconds Minimum amount of time (in seconds) that the player should wait
      *   before requesting updates to the manifest. Minimum value: `2` seconds. Maximum value: `60`
-     *   seconds.</p>
+     *   seconds.
      */
     public fun minUpdatePeriodSeconds(minUpdatePeriodSeconds: Number) {
         cdkBuilder.minUpdatePeriodSeconds(minUpdatePeriodSeconds)
@@ -68,7 +67,7 @@ public class CfnChannelDashPlaylistSettingsPropertyDsl {
     /**
      * @param suggestedPresentationDelaySeconds Amount of time (in seconds) that the player should
      *   be from the live point at the end of the manifest. Minimum value: `2` seconds. Maximum
-     *   value: `60` seconds.</p>
+     *   value: `60` seconds.
      */
     public fun suggestedPresentationDelaySeconds(suggestedPresentationDelaySeconds: Number) {
         cdkBuilder.suggestedPresentationDelaySeconds(suggestedPresentationDelaySeconds)

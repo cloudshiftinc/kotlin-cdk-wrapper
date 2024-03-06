@@ -16,8 +16,8 @@ import kotlin.String
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2
 
 /**
- * For a SQL-based Kinesis Data Analytics application, provides additional mapping information when
- * JSON is the record format on the streaming source.
+ * For a SQL-based Managed Service for Apache Flink application, provides additional mapping
+ * information when JSON is the record format on the streaming source.
  *
  * Example:
  * ```

@@ -36,6 +36,10 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * .title("title")
  * // the properties below are optional
  * .displayOptions(SliderControlDisplayOptionsProperty.builder()
+ * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+ * .infoIconText("infoIconText")
+ * .visibility("visibility")
+ * .build())
  * .titleOptions(LabelOptionsProperty.builder()
  * .customLabel("customLabel")
  * .fontConfiguration(FontConfigurationProperty.builder()

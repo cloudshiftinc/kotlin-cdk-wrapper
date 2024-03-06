@@ -11,9 +11,14 @@
 
 package io.cloudshiftdev.awscdkdsl.services.location
 
+import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Deprecated
 import kotlin.String
+import kotlin.Unit
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.location.CfnGeofenceCollection
 import software.constructs.Construct
 
@@ -34,6 +39,10 @@ import software.constructs.Construct
  * .kmsKeyId("kmsKeyId")
  * .pricingPlan("pricingPlan")
  * .pricingPlanDataSource("pricingPlanDataSource")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -46,6 +55,8 @@ public class CfnGeofenceCollectionDsl(
 ) {
     private val cdkBuilder: CfnGeofenceCollection.Builder =
         CfnGeofenceCollection.Builder.create(scope, id)
+
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
      * A custom name for the geofence collection.
@@ -112,5 +123,56 @@ public class CfnGeofenceCollectionDsl(
         cdkBuilder.pricingPlanDataSource(pricingPlanDataSource)
     }
 
-    public fun build(): CfnGeofenceCollection = cdkBuilder.build()
+    /**
+     * Applies one or more tags to the geofence collection.
+     *
+     * A tag is a key-value pair helps manage, identify, search, and filter your resources by
+     * labelling them.
+     *
+     * Format: `"key" : "value"`
+     *
+     * Restrictions:
+     * * Maximum 50 tags per resource
+     * * Each resource tag must be unique with a maximum of one value.
+     * * Maximum key length: 128 Unicode characters in UTF-8
+     * * Maximum value length: 256 Unicode characters in UTF-8
+     * * Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ :
+     *   /
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-geofencecollection.html#cfn-location-geofencecollection-tags)
+     *
+     * @param tags Applies one or more tags to the geofence collection.
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
+
+    /**
+     * Applies one or more tags to the geofence collection.
+     *
+     * A tag is a key-value pair helps manage, identify, search, and filter your resources by
+     * labelling them.
+     *
+     * Format: `"key" : "value"`
+     *
+     * Restrictions:
+     * * Maximum 50 tags per resource
+     * * Each resource tag must be unique with a maximum of one value.
+     * * Maximum key length: 128 Unicode characters in UTF-8
+     * * Maximum value length: 256 Unicode characters in UTF-8
+     * * Can use alphanumeric characters (A–Z, a–z, 0–9), and the following characters: + - = . _ :
+     *   /
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-geofencecollection.html#cfn-location-geofencecollection-tags)
+     *
+     * @param tags Applies one or more tags to the geofence collection.
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
+
+    public fun build(): CfnGeofenceCollection {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

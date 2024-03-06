@@ -17,7 +17,7 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.emrserverless.CfnApplication
 
 /**
- * The conﬁguration for an application to automatically start on job submission.
+ * Configuration for Auto Start of Application.
  *
  * Example:
  * ```
@@ -38,16 +38,14 @@ public class CfnApplicationAutoStartConfigurationPropertyDsl {
         CfnApplication.AutoStartConfigurationProperty.builder()
 
     /**
-     * @param enabled Enables the application to automatically start on job submission. Defaults to
-     *   true.
+     * @param enabled If set to true, the Application will automatically start. Defaults to true.
      */
     public fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
     }
 
     /**
-     * @param enabled Enables the application to automatically start on job submission. Defaults to
-     *   true.
+     * @param enabled If set to true, the Application will automatically start. Defaults to true.
      */
     public fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled)

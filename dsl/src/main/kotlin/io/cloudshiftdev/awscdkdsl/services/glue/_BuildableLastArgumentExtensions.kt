@@ -25,6 +25,7 @@ import software.amazon.awscdk.services.glue.CfnSchema
 import software.amazon.awscdk.services.glue.CfnSchemaVersion
 import software.amazon.awscdk.services.glue.CfnSecurityConfiguration
 import software.amazon.awscdk.services.glue.CfnTable
+import software.amazon.awscdk.services.glue.CfnTableOptimizer
 import software.amazon.awscdk.services.glue.CfnTrigger
 
 /** A classifier for comma-separated values (CSV). */
@@ -236,7 +237,7 @@ public inline fun CfnSecurityConfiguration.setEncryptionConfiguration(
     return setEncryptionConfiguration(builder.build())
 }
 
-/**  */
+/** Specifies an `OpenTableFormatInput` structure when creating an open format table. */
 public inline fun CfnTable.setOpenTableFormatInput(
     block: CfnTableOpenTableFormatInputPropertyDsl.() -> Unit = {}
 ) {
@@ -250,6 +251,15 @@ public inline fun CfnTable.setTableInput(block: CfnTableTableInputPropertyDsl.()
     val builder = CfnTableTableInputPropertyDsl()
     builder.apply(block)
     return setTableInput(builder.build())
+}
+
+/**  */
+public inline fun CfnTableOptimizer.setTableOptimizerConfiguration(
+    block: CfnTableOptimizerTableOptimizerConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnTableOptimizerTableOptimizerConfigurationPropertyDsl()
+    builder.apply(block)
+    return setTableOptimizerConfiguration(builder.build())
 }
 
 /**

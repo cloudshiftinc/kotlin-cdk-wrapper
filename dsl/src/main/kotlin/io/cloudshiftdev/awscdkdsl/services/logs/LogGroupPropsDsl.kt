@@ -17,6 +17,7 @@ import kotlin.Unit
 import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.logs.DataProtectionPolicy
+import software.amazon.awscdk.services.logs.LogGroupClass
 import software.amazon.awscdk.services.logs.LogGroupProps
 import software.amazon.awscdk.services.logs.RetentionDays
 
@@ -25,27 +26,29 @@ import software.amazon.awscdk.services.logs.RetentionDays
  *
  * Example:
  * ```
- * import software.amazon.awscdk.services.kinesisfirehose.alpha.*;
- * import software.amazon.awscdk.services.kinesisfirehose.destinations.alpha.*;
- * LogGroup logGroupDestination = LogGroup.Builder.create(this, "LogGroupLambdaAudit")
- * .logGroupName("auditDestinationForCDK")
+ * Vpc vpc;
+ * Key kmsKey = new Key(this, "KmsKey");
+ * // Pass the KMS key in the `encryptionKey` field to associate the key to the log group
+ * LogGroup logGroup = LogGroup.Builder.create(this, "LogGroup")
+ * .encryptionKey(kmsKey)
  * .build();
- * Bucket bucket = new Bucket(this, "audit-bucket");
- * S3Bucket s3Destination = new S3Bucket(bucket);
- * DeliveryStream deliveryStream = DeliveryStream.Builder.create(this, "Delivery Stream")
- * .destinations(List.of(s3Destination))
+ * // Pass the KMS key in the `encryptionKey` field to associate the key to the S3 bucket
+ * Bucket execBucket = Bucket.Builder.create(this, "EcsExecBucket")
+ * .encryptionKey(kmsKey)
  * .build();
- * DataProtectionPolicy dataProtectionPolicy = DataProtectionPolicy.Builder.create()
- * .name("data protection policy")
- * .description("policy description")
- * .identifiers(List.of(DataIdentifier.DRIVERSLICENSE_US, new DataIdentifier("EmailAddress")))
- * .logGroupAuditDestination(logGroupDestination)
- * .s3BucketAuditDestination(bucket)
- * .deliveryStreamNameAuditDestination(deliveryStream.getDeliveryStreamName())
- * .build();
- * LogGroup.Builder.create(this, "LogGroupLambda")
- * .logGroupName("cdkIntegLogGroup")
- * .dataProtectionPolicy(dataProtectionPolicy)
+ * Cluster cluster = Cluster.Builder.create(this, "Cluster")
+ * .vpc(vpc)
+ * .executeCommandConfiguration(ExecuteCommandConfiguration.builder()
+ * .kmsKey(kmsKey)
+ * .logConfiguration(ExecuteCommandLogConfiguration.builder()
+ * .cloudWatchLogGroup(logGroup)
+ * .cloudWatchEncryptionEnabled(true)
+ * .s3Bucket(execBucket)
+ * .s3EncryptionEnabled(true)
+ * .s3KeyPrefix("exec-command-output")
+ * .build())
+ * .logging(ExecuteCommandLogging.OVERRIDE)
+ * .build())
  * .build();
  * ```
  */
@@ -68,6 +71,16 @@ public class LogGroupPropsDsl {
     /** @param encryptionKey The KMS customer managed key to encrypt the log group with. */
     public fun encryptionKey(encryptionKey: IKey) {
         cdkBuilder.encryptionKey(encryptionKey)
+    }
+
+    /**
+     * @param logGroupClass The class of the log group. Possible values are: STANDARD and
+     *   INFREQUENT_ACCESS. INFREQUENT_ACCESS class provides customers a cost-effective way to
+     *   consolidate logs which supports querying using Logs Insights. The logGroupClass property
+     *   cannot be changed once the log group is created.
+     */
+    public fun logGroupClass(logGroupClass: LogGroupClass) {
+        cdkBuilder.logGroupClass(logGroupClass)
     }
 
     /** @param logGroupName Name of the log group. */

@@ -166,12 +166,12 @@ public class CfnSegmentPropsDsl {
         cdkBuilder.applicationId(applicationId)
     }
 
-    /** @param dimensions The criteria that define the dimensions for the segment. */
+    /** @param dimensions An array that defines the dimensions for the segment. */
     public fun dimensions(dimensions: IResolvable) {
         cdkBuilder.dimensions(dimensions)
     }
 
-    /** @param dimensions The criteria that define the dimensions for the segment. */
+    /** @param dimensions An array that defines the dimensions for the segment. */
     public fun dimensions(dimensions: CfnSegment.SegmentDimensionsProperty) {
         cdkBuilder.dimensions(dimensions)
     }

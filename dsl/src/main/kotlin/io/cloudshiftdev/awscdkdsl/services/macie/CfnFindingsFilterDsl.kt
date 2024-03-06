@@ -11,9 +11,14 @@
 
 package io.cloudshiftdev.awscdkdsl.services.macie
 
+import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Number
 import kotlin.String
+import kotlin.Unit
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.macie.CfnFindingsFilter
 import software.constructs.Construct
@@ -59,6 +64,10 @@ import software.constructs.Construct
  * .action("action")
  * .description("description")
  * .position(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -70,6 +79,8 @@ public class CfnFindingsFilterDsl(
     id: String,
 ) {
     private val cdkBuilder: CfnFindingsFilter.Builder = CfnFindingsFilter.Builder.create(scope, id)
+
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
      * The action to perform on findings that match the filter criteria ( `FindingCriteria` ). Valid
@@ -138,19 +149,53 @@ public class CfnFindingsFilterDsl(
     }
 
     /**
-     * The position of the findings filter in the list of saved filters on the Amazon Macie console.
+     * The position of the findings filter in the list of saved filter rules on the Amazon Macie
+     * console.
      *
      * This value also determines the order in which the filter is applied to findings, relative to
      * other filters that are also applied to findings.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-findingsfilter.html#cfn-macie-findingsfilter-position)
      *
-     * @param position The position of the findings filter in the list of saved filters on the
+     * @param position The position of the findings filter in the list of saved filter rules on the
      *   Amazon Macie console.
      */
     public fun position(position: Number) {
         cdkBuilder.position(position)
     }
 
-    public fun build(): CfnFindingsFilter = cdkBuilder.build()
+    /**
+     * An array of key-value pairs to apply to the findings filter.
+     *
+     * For more information, see
+     * [Resource tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-findingsfilter.html#cfn-macie-findingsfilter-tags)
+     *
+     * @param tags An array of key-value pairs to apply to the findings filter.
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
+
+    /**
+     * An array of key-value pairs to apply to the findings filter.
+     *
+     * For more information, see
+     * [Resource tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-findingsfilter.html#cfn-macie-findingsfilter-tags)
+     *
+     * @param tags An array of key-value pairs to apply to the findings filter.
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
+
+    public fun build(): CfnFindingsFilter {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

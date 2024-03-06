@@ -28,14 +28,9 @@ import software.constructs.Construct
  *
  * Example:
  * ```
- * Vpc vpc;
- * LogGroup logGroup = new LogGroup(this, "MyCustomLogGroup");
- * Role role = Role.Builder.create(this, "MyCustomRole")
- * .assumedBy(new ServicePrincipal("vpc-flow-logs.amazonaws.com"))
- * .build();
- * FlowLog.Builder.create(this, "FlowLog")
- * .resourceType(FlowLogResourceType.fromVpc(vpc))
- * .destination(FlowLogDestination.toCloudWatchLogs(logGroup, role))
+ * CfnTransitGateway tgw;
+ * FlowLog.Builder.create(this, "TransitGatewayFlowLog")
+ * .resourceType(FlowLogResourceType.fromTransitGatewayId(tgw.getRef()))
  * .build();
  * ```
  */
@@ -114,7 +109,13 @@ public class FlowLogDsl(
      * The maximum interval of time during which a flow of packets is captured and aggregated into a
      * flow log record.
      *
-     * Default: FlowLogMaxAggregationInterval.TEN_MINUTES
+     * When creating flow logs for a Transit Gateway or Transit Gateway Attachment, this property
+     * must be ONE_MINUTES.
+     *
+     * Default: - FlowLogMaxAggregationInterval.ONE_MINUTES if creating flow logs for Transit
+     * Gateway, otherwise FlowLogMaxAggregationInterval.TEN_MINUTES.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html#cfn-ec2-flowlog-maxaggregationinterval)
      *
      * @param maxAggregationInterval The maximum interval of time during which a flow of packets is
      *   captured and aggregated into a flow log record.
@@ -135,9 +136,13 @@ public class FlowLogDsl(
     /**
      * The type of traffic to log.
      *
-     * You can log traffic that the resource accepts or rejects, or all traffic.
+     * You can log traffic that the resource accepts or rejects, or all traffic. When the target is
+     * either `TransitGateway` or `TransitGatewayAttachment`, setting the traffic type is not
+     * possible.
      *
      * Default: ALL
+     *
+     * [Documentation](https://docs.aws.amazon.com/vpc/latest/tgw/working-with-flow-logs.html)
      *
      * @param trafficType The type of traffic to log.
      */

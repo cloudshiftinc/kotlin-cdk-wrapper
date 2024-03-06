@@ -20,7 +20,7 @@ import software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration
 /**
  * `BlockDeviceMapping` specifies a block device mapping for the `BlockDeviceMappings` property of
  * the
- * [AWS::AutoScaling::LaunchConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html)
+ * [AWS::AutoScaling::LaunchConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html)
  * resource.
  *
  * Each instance that is launched has an associated root device volume, either an Amazon EBS volume

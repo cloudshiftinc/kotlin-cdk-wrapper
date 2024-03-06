@@ -38,6 +38,7 @@ import software.constructs.Construct
  * .build())
  * .encryptionAtRest(EncryptionAtRestProperty.builder()
  * .catalogEncryptionMode("catalogEncryptionMode")
+ * .catalogEncryptionServiceRole("catalogEncryptionServiceRole")
  * .sseAwsKmsKeyId("sseAwsKmsKeyId")
  * .build())
  * .build())

@@ -75,11 +75,12 @@ public class CfnDomainDsl(
     }
 
     /**
-     * The key used to encrypt the domain.
+     * The ARN of an AWS Key Management Service (AWS KMS) key associated with a domain.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-domain.html#cfn-codeartifact-domain-encryptionkey)
      *
-     * @param encryptionKey The key used to encrypt the domain.
+     * @param encryptionKey The ARN of an AWS Key Management Service (AWS KMS) key associated with a
+     *   domain.
      */
     public fun encryptionKey(encryptionKey: String) {
         cdkBuilder.encryptionKey(encryptionKey)

@@ -22,12 +22,13 @@ import software.constructs.Construct
 /**
  * Associates a CIDR block with your VPC.
  *
- * You can only associate a single IPv6 CIDR block with your VPC. The IPv6 CIDR block size is fixed
- * at /56.
+ * You can optionally request an IPv6 CIDR block for the VPC. You can request an Amazon-provided
+ * IPv6 CIDR block from Amazon's pool of IPv6 addresses, or an IPv6 CIDR block from an IPv6 address
+ * pool that you provisioned through bring your own IP addresses (BYOIP).
  *
- * For more information about associating CIDR blocks with your VPC and applicable restrictions, see
- * [VPC and Subnet Sizing](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html#VPC_Sizing)
- * in the *Amazon VPC User Guide* .
+ * For more information, see
+ * [VPC CIDR blocks](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-cidr-blocks.html) in the
+ * *Amazon VPC User Guide* .
  *
  * Example:
  * ```
@@ -53,7 +54,7 @@ import software.constructs.Construct
  * subnetcount = subnetcount + 1;
  * }
  * Cluster cluster = Cluster.Builder.create(this, "hello-eks")
- * .version(KubernetesVersion.V1_27)
+ * .version(KubernetesVersion.V1_29)
  * .vpc(vpc)
  * .ipFamily(IpFamily.IP_V6)
  * .vpcSubnets(List.of(SubnetSelection.builder().subnets(vpc.getPublicSubnets()).build()))
@@ -72,7 +73,7 @@ public class CfnVPCCidrBlockDsl(
     /**
      * Requests an Amazon-provided IPv6 CIDR block with a /56 prefix length for the VPC.
      *
-     * You cannot specify the range of IPv6 addresses, or the size of the CIDR block.
+     * You cannot specify the range of IPv6 addresses or the size of the CIDR block.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-amazonprovidedipv6cidrblock)
      *
@@ -86,7 +87,7 @@ public class CfnVPCCidrBlockDsl(
     /**
      * Requests an Amazon-provided IPv6 CIDR block with a /56 prefix length for the VPC.
      *
-     * You cannot specify the range of IPv6 addresses, or the size of the CIDR block.
+     * You cannot specify the range of IPv6 addresses or the size of the CIDR block.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-amazonprovidedipv6cidrblock)
      *

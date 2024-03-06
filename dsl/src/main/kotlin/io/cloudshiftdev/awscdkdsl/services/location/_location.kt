@@ -13,6 +13,8 @@ package io.cloudshiftdev.awscdkdsl.services.location
 
 import kotlin.String
 import kotlin.Unit
+import software.amazon.awscdk.services.location.CfnAPIKey
+import software.amazon.awscdk.services.location.CfnAPIKeyProps
 import software.amazon.awscdk.services.location.CfnGeofenceCollection
 import software.amazon.awscdk.services.location.CfnGeofenceCollectionProps
 import software.amazon.awscdk.services.location.CfnMap
@@ -28,6 +30,111 @@ import software.amazon.awscdk.services.location.CfnTrackerProps
 import software.constructs.Construct
 
 public object location {
+    /**
+     * The API key resource in your AWS account, which lets you grant actions for Amazon Location
+     * resources to the API key bearer.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.location.*;
+     * CfnAPIKey cfnAPIKey = CfnAPIKey.Builder.create(this, "MyCfnAPIKey")
+     * .keyName("keyName")
+     * .restrictions(ApiKeyRestrictionsProperty.builder()
+     * .allowActions(List.of("allowActions"))
+     * .allowResources(List.of("allowResources"))
+     * // the properties below are optional
+     * .allowReferers(List.of("allowReferers"))
+     * .build())
+     * // the properties below are optional
+     * .description("description")
+     * .expireTime("expireTime")
+     * .forceDelete(false)
+     * .forceUpdate(false)
+     * .noExpiry(false)
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-apikey.html)
+     */
+    public inline fun cfnAPIKey(
+        scope: Construct,
+        id: String,
+        block: CfnAPIKeyDsl.() -> Unit = {},
+    ): CfnAPIKey {
+        val builder = CfnAPIKeyDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * API Restrictions on the allowed actions, resources, and referers for an API key resource.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.location.*;
+     * ApiKeyRestrictionsProperty apiKeyRestrictionsProperty = ApiKeyRestrictionsProperty.builder()
+     * .allowActions(List.of("allowActions"))
+     * .allowResources(List.of("allowResources"))
+     * // the properties below are optional
+     * .allowReferers(List.of("allowReferers"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-location-apikey-apikeyrestrictions.html)
+     */
+    public inline fun cfnAPIKeyApiKeyRestrictionsProperty(
+        block: CfnAPIKeyApiKeyRestrictionsPropertyDsl.() -> Unit = {}
+    ): CfnAPIKey.ApiKeyRestrictionsProperty {
+        val builder = CfnAPIKeyApiKeyRestrictionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnAPIKey`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.location.*;
+     * CfnAPIKeyProps cfnAPIKeyProps = CfnAPIKeyProps.builder()
+     * .keyName("keyName")
+     * .restrictions(ApiKeyRestrictionsProperty.builder()
+     * .allowActions(List.of("allowActions"))
+     * .allowResources(List.of("allowResources"))
+     * // the properties below are optional
+     * .allowReferers(List.of("allowReferers"))
+     * .build())
+     * // the properties below are optional
+     * .description("description")
+     * .expireTime("expireTime")
+     * .forceDelete(false)
+     * .forceUpdate(false)
+     * .noExpiry(false)
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-apikey.html)
+     */
+    public inline fun cfnAPIKeyProps(block: CfnAPIKeyPropsDsl.() -> Unit = {}): CfnAPIKeyProps {
+        val builder = CfnAPIKeyPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
     /**
      * The `AWS::Location::GeofenceCollection` resource specifies the ability to detect and act when
      * a tracked device enters or exits a defined geographical boundary known as a geofence.
@@ -45,6 +152,10 @@ public object location {
      * .kmsKeyId("kmsKeyId")
      * .pricingPlan("pricingPlan")
      * .pricingPlanDataSource("pricingPlanDataSource")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .build();
      * ```
      *
@@ -75,6 +186,10 @@ public object location {
      * .kmsKeyId("kmsKeyId")
      * .pricingPlan("pricingPlan")
      * .pricingPlanDataSource("pricingPlanDataSource")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .build();
      * ```
      *
@@ -100,11 +215,18 @@ public object location {
      * CfnMap cfnMap = CfnMap.Builder.create(this, "MyCfnMap")
      * .configuration(MapConfigurationProperty.builder()
      * .style("style")
+     * // the properties below are optional
+     * .customLayers(List.of("customLayers"))
+     * .politicalView("politicalView")
      * .build())
      * .mapName("mapName")
      * // the properties below are optional
      * .description("description")
      * .pricingPlan("pricingPlan")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .build();
      * ```
      *
@@ -130,6 +252,9 @@ public object location {
      * import software.amazon.awscdk.services.location.*;
      * MapConfigurationProperty mapConfigurationProperty = MapConfigurationProperty.builder()
      * .style("style")
+     * // the properties below are optional
+     * .customLayers(List.of("customLayers"))
+     * .politicalView("politicalView")
      * .build();
      * ```
      *
@@ -154,11 +279,18 @@ public object location {
      * CfnMapProps cfnMapProps = CfnMapProps.builder()
      * .configuration(MapConfigurationProperty.builder()
      * .style("style")
+     * // the properties below are optional
+     * .customLayers(List.of("customLayers"))
+     * .politicalView("politicalView")
      * .build())
      * .mapName("mapName")
      * // the properties below are optional
      * .description("description")
      * .pricingPlan("pricingPlan")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .build();
      * ```
      *
@@ -196,6 +328,10 @@ public object location {
      * .build())
      * .description("description")
      * .pricingPlan("pricingPlan")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .build();
      * ```
      *
@@ -252,6 +388,10 @@ public object location {
      * .build())
      * .description("description")
      * .pricingPlan("pricingPlan")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .build();
      * ```
      *
@@ -288,6 +428,10 @@ public object location {
      * // the properties below are optional
      * .description("description")
      * .pricingPlan("pricingPlan")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .build();
      * ```
      *
@@ -317,6 +461,10 @@ public object location {
      * // the properties below are optional
      * .description("description")
      * .pricingPlan("pricingPlan")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .build();
      * ```
      *
@@ -343,10 +491,16 @@ public object location {
      * .trackerName("trackerName")
      * // the properties below are optional
      * .description("description")
+     * .eventBridgeEnabled(false)
+     * .kmsKeyEnableGeospatialQueries(false)
      * .kmsKeyId("kmsKeyId")
      * .positionFiltering("positionFiltering")
      * .pricingPlan("pricingPlan")
      * .pricingPlanDataSource("pricingPlanDataSource")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .build();
      * ```
      *
@@ -432,10 +586,16 @@ public object location {
      * .trackerName("trackerName")
      * // the properties below are optional
      * .description("description")
+     * .eventBridgeEnabled(false)
+     * .kmsKeyEnableGeospatialQueries(false)
      * .kmsKeyId("kmsKeyId")
      * .positionFiltering("positionFiltering")
      * .pricingPlan("pricingPlan")
      * .pricingPlanDataSource("pricingPlanDataSource")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .build();
      * ```
      *

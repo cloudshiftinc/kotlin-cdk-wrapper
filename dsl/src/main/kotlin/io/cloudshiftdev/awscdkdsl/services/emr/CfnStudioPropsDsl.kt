@@ -13,11 +13,13 @@ package io.cloudshiftdev.awscdkdsl.services.emr
 
 import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.emr.CfnStudioProps
 
 /**
@@ -39,12 +41,16 @@ import software.amazon.awscdk.services.emr.CfnStudioProps
  * .workspaceSecurityGroupId("workspaceSecurityGroupId")
  * // the properties below are optional
  * .description("description")
+ * .encryptionKeyArn("encryptionKeyArn")
+ * .idcInstanceArn("idcInstanceArn")
+ * .idcUserAssignment("idcUserAssignment")
  * .idpAuthUrl("idpAuthUrl")
  * .idpRelayStateParameterName("idpRelayStateParameterName")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
  * .build()))
+ * .trustedIdentityPropagationEnabled(false)
  * .userRole("userRole")
  * .build();
  * ```
@@ -81,12 +87,37 @@ public class CfnStudioPropsDsl {
     }
 
     /**
+     * @param encryptionKeyArn The AWS KMS key identifier (ARN) used to encrypt Amazon EMR Studio
+     *   workspace and notebook files when backed up to Amazon S3.
+     */
+    public fun encryptionKeyArn(encryptionKeyArn: String) {
+        cdkBuilder.encryptionKeyArn(encryptionKeyArn)
+    }
+
+    /**
      * @param engineSecurityGroupId The ID of the Amazon EMR Studio Engine security group. The
      *   Engine security group allows inbound network traffic from the Workspace security group, and
      *   it must be in the same VPC specified by `VpcId` .
      */
     public fun engineSecurityGroupId(engineSecurityGroupId: String) {
         cdkBuilder.engineSecurityGroupId(engineSecurityGroupId)
+    }
+
+    /**
+     * @param idcInstanceArn The ARN of the IAM Identity Center instance the Studio application
+     *   belongs to.
+     */
+    public fun idcInstanceArn(idcInstanceArn: String) {
+        cdkBuilder.idcInstanceArn(idcInstanceArn)
+    }
+
+    /**
+     * @param idcUserAssignment Indicates whether the Studio has `REQUIRED` or `OPTIONAL` IAM
+     *   Identity Center user assignment. If the value is set to `REQUIRED` , users must be
+     *   explicitly assigned to the Studio application to access the Studio.
+     */
+    public fun idcUserAssignment(idcUserAssignment: String) {
+        cdkBuilder.idcUserAssignment(idcUserAssignment)
     }
 
     /**
@@ -154,6 +185,22 @@ public class CfnStudioPropsDsl {
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
+    }
+
+    /**
+     * @param trustedIdentityPropagationEnabled Indicates whether the Studio has Trusted identity
+     *   propagation enabled. The default value is `false` .
+     */
+    public fun trustedIdentityPropagationEnabled(trustedIdentityPropagationEnabled: Boolean) {
+        cdkBuilder.trustedIdentityPropagationEnabled(trustedIdentityPropagationEnabled)
+    }
+
+    /**
+     * @param trustedIdentityPropagationEnabled Indicates whether the Studio has Trusted identity
+     *   propagation enabled. The default value is `false` .
+     */
+    public fun trustedIdentityPropagationEnabled(trustedIdentityPropagationEnabled: IResolvable) {
+        cdkBuilder.trustedIdentityPropagationEnabled(trustedIdentityPropagationEnabled)
     }
 
     /**

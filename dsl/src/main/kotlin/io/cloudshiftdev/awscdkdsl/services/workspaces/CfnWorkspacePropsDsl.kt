@@ -102,6 +102,8 @@ public class CfnWorkspacePropsDsl {
     /**
      * @param userName The user name of the user for the WorkSpace. This user name must exist in the
      *   AWS Directory Service directory for the WorkSpace.
+     *
+     * The reserved keyword, `[UNDEFINED]` , is used when creating user-decoupled WorkSpaces.
      */
     public fun userName(userName: String) {
         cdkBuilder.userName(userName)

@@ -41,6 +41,7 @@ import software.constructs.Construct
  * .jobTemplateId("jobTemplateId")
  * // the properties below are optional
  * .abortConfig(abortConfig)
+ * .destinationPackageVersions(List.of("destinationPackageVersions"))
  * .document("document")
  * .documentSource("documentSource")
  * .jobArn("jobArn")
@@ -72,6 +73,8 @@ public class CfnJobTemplateDsl(
     id: String,
 ) {
     private val cdkBuilder: CfnJobTemplate.Builder = CfnJobTemplate.Builder.create(scope, id)
+
+    private val _destinationPackageVersions: MutableList<String> = mutableListOf()
 
     private val _maintenanceWindows: MutableList<Any> = mutableListOf()
 
@@ -110,6 +113,38 @@ public class CfnJobTemplateDsl(
      */
     public fun description(description: String) {
         cdkBuilder.description(description)
+    }
+
+    /**
+     * The package version Amazon Resource Names (ARNs) that are installed on the device’s reserved
+     * named shadow ( `$package` ) when the job successfully completes.
+     *
+     * *Note:* Up to 25 package version ARNS are allowed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-jobtemplate.html#cfn-iot-jobtemplate-destinationpackageversions)
+     *
+     * @param destinationPackageVersions The package version Amazon Resource Names (ARNs) that are
+     *   installed on the device’s reserved named shadow ( `$package` ) when the job successfully
+     *   completes.
+     */
+    public fun destinationPackageVersions(vararg destinationPackageVersions: String) {
+        _destinationPackageVersions.addAll(listOf(*destinationPackageVersions))
+    }
+
+    /**
+     * The package version Amazon Resource Names (ARNs) that are installed on the device’s reserved
+     * named shadow ( `$package` ) when the job successfully completes.
+     *
+     * *Note:* Up to 25 package version ARNS are allowed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-jobtemplate.html#cfn-iot-jobtemplate-destinationpackageversions)
+     *
+     * @param destinationPackageVersions The package version Amazon Resource Names (ARNs) that are
+     *   installed on the device’s reserved named shadow ( `$package` ) when the job successfully
+     *   completes.
+     */
+    public fun destinationPackageVersions(destinationPackageVersions: Collection<String>) {
+        _destinationPackageVersions.addAll(destinationPackageVersions)
     }
 
     /**
@@ -344,6 +379,8 @@ public class CfnJobTemplateDsl(
     }
 
     public fun build(): CfnJobTemplate {
+        if (_destinationPackageVersions.isNotEmpty())
+            cdkBuilder.destinationPackageVersions(_destinationPackageVersions)
         if (_maintenanceWindows.isNotEmpty()) cdkBuilder.maintenanceWindows(_maintenanceWindows)
         if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
         return cdkBuilder.build()

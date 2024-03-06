@@ -33,30 +33,18 @@ import software.amazon.awscdk.services.ec2.UserData
  *
  * Example:
  * ```
- * ISecurityGroup sg = SecurityGroup.fromSecurityGroupId(this, "FsxSecurityGroup",
- * "{SECURITY-GROUP-ID}");
- * IFileSystem fs = LustreFileSystem.fromLustreFileSystemAttributes(this, "FsxLustreFileSystem",
- * FileSystemAttributes.builder()
- * .dnsName("{FILE-SYSTEM-DNS-NAME}")
- * .fileSystemId("{FILE-SYSTEM-ID}")
- * .securityGroup(sg)
- * .build());
- * IVpc vpc = Vpc.fromVpcAttributes(this, "Vpc", VpcAttributes.builder()
- * .availabilityZones(List.of("us-west-2a", "us-west-2b"))
- * .publicSubnetIds(List.of("{US-WEST-2A-SUBNET-ID}", "{US-WEST-2B-SUBNET-ID}"))
- * .vpcId("{VPC-ID}")
- * .build());
- * Instance inst = Instance.Builder.create(this, "inst")
- * .instanceType(InstanceType.of(InstanceClass.T2, InstanceSize.LARGE))
- * .machineImage(AmazonLinuxImage.Builder.create()
- * .generation(AmazonLinuxGeneration.AMAZON_LINUX_2)
- * .build())
+ * IVpc vpc;
+ * LoadBalancer lb = LoadBalancer.Builder.create(this, "LB")
  * .vpc(vpc)
- * .vpcSubnets(SubnetSelection.builder()
- * .subnetType(SubnetType.PUBLIC)
- * .build())
+ * .internetFacing(true)
  * .build();
- * fs.connections.allowDefaultPortFrom(inst);
+ * // instance to add as the target for load balancer.
+ * Instance instance = Instance.Builder.create(this, "targetInstance")
+ * .vpc(vpc)
+ * .instanceType(InstanceType.of(InstanceClass.BURSTABLE2, InstanceSize.MICRO))
+ * .machineImage(AmazonLinuxImage.Builder.create().generation(AmazonLinuxGeneration.AMAZON_LINUX_2).build())
+ * .build();
+ * lb.addTarget(new InstanceTarget(instance));
  * ```
  */
 @CdkDslMarker

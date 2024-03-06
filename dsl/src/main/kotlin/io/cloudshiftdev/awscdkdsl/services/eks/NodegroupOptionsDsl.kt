@@ -35,15 +35,14 @@ import software.amazon.awscdk.services.iam.IRole
  *
  * Example:
  * ```
- * Cluster cluster = Cluster.Builder.create(this, "HelloEKS")
- * .version(KubernetesVersion.V1_27)
- * .defaultCapacity(0)
- * .build();
- * cluster.addNodegroupCapacity("custom-node-group", NodegroupOptions.builder()
- * .instanceTypes(List.of(new InstanceType("m5.large")))
- * .minSize(4)
- * .diskSize(100)
- * .amiType(NodegroupAmiType.AL2_X86_64_GPU)
+ * Cluster cluster;
+ * cluster.addNodegroupCapacity("extra-ng-spot", NodegroupOptions.builder()
+ * .instanceTypes(List.of(
+ * new InstanceType("c5.large"),
+ * new InstanceType("c5a.large"),
+ * new InstanceType("c5d.large")))
+ * .minSize(3)
+ * .capacityType(CapacityType.SPOT)
  * .build());
  * ```
  */
@@ -128,6 +127,28 @@ public class NodegroupOptionsDsl {
      */
     public fun maxSize(maxSize: Number) {
         cdkBuilder.maxSize(maxSize)
+    }
+
+    /**
+     * @param maxUnavailable The maximum number of nodes unavailable at once during a version
+     *   update. Nodes will be updated in parallel. The maximum number is 100.
+     *
+     * This value or `maxUnavailablePercentage` is required to have a value for custom update
+     * configurations to be applied.
+     */
+    public fun maxUnavailable(maxUnavailable: Number) {
+        cdkBuilder.maxUnavailable(maxUnavailable)
+    }
+
+    /**
+     * @param maxUnavailablePercentage The maximum percentage of nodes unavailable during a version
+     *   update. This percentage of nodes will be updated in parallel, up to 100 nodes at once.
+     *
+     * This value or `maxUnavailable` is required to have a value for custom update configurations
+     * to be applied.
+     */
+    public fun maxUnavailablePercentage(maxUnavailablePercentage: Number) {
+        cdkBuilder.maxUnavailablePercentage(maxUnavailablePercentage)
     }
 
     /**

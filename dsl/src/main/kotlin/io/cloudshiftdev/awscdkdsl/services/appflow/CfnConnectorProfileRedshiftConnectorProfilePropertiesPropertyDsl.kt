@@ -60,17 +60,23 @@ public class CfnConnectorProfileRedshiftConnectorProfilePropertiesPropertyDsl {
         cdkBuilder.bucketPrefix(bucketPrefix)
     }
 
-    /** @param clusterIdentifier the value to be set. */
+    /** @param clusterIdentifier The unique ID that's assigned to an Amazon Redshift cluster. */
     public fun clusterIdentifier(clusterIdentifier: String) {
         cdkBuilder.clusterIdentifier(clusterIdentifier)
     }
 
-    /** @param dataApiRoleArn the value to be set. */
+    /**
+     * @param dataApiRoleArn The Amazon Resource Name (ARN) of an IAM role that permits Amazon
+     *   AppFlow to access your Amazon Redshift database through the Data API. For more information,
+     *   and for the polices that you attach to this role, see
+     *   [Allow Amazon AppFlow to access Amazon Redshift databases with the Data API](https://docs.aws.amazon.com/appflow/latest/userguide/security_iam_service-role-policies.html#access-redshift)
+     *   .
+     */
     public fun dataApiRoleArn(dataApiRoleArn: String) {
         cdkBuilder.dataApiRoleArn(dataApiRoleArn)
     }
 
-    /** @param databaseName the value to be set. */
+    /** @param databaseName The name of an Amazon Redshift database. */
     public fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
     }
@@ -81,16 +87,16 @@ public class CfnConnectorProfileRedshiftConnectorProfilePropertiesPropertyDsl {
     }
 
     /**
-     * @param isRedshiftServerless If Amazon AppFlow will connect to Amazon Redshift Serverless or
-     *   Amazon Redshift cluster.
+     * @param isRedshiftServerless Indicates whether the connector profile defines a connection to
+     *   an Amazon Redshift Serverless data warehouse.
      */
     public fun isRedshiftServerless(isRedshiftServerless: Boolean) {
         cdkBuilder.isRedshiftServerless(isRedshiftServerless)
     }
 
     /**
-     * @param isRedshiftServerless If Amazon AppFlow will connect to Amazon Redshift Serverless or
-     *   Amazon Redshift cluster.
+     * @param isRedshiftServerless Indicates whether the connector profile defines a connection to
+     *   an Amazon Redshift Serverless data warehouse.
      */
     public fun isRedshiftServerless(isRedshiftServerless: IResolvable) {
         cdkBuilder.isRedshiftServerless(isRedshiftServerless)
@@ -107,7 +113,7 @@ public class CfnConnectorProfileRedshiftConnectorProfilePropertiesPropertyDsl {
         cdkBuilder.roleArn(roleArn)
     }
 
-    /** @param workgroupName the value to be set. */
+    /** @param workgroupName The name of an Amazon Redshift workgroup. */
     public fun workgroupName(workgroupName: String) {
         cdkBuilder.workgroupName(workgroupName)
     }

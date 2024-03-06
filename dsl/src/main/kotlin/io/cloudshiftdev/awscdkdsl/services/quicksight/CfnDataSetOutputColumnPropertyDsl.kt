@@ -26,6 +26,7 @@ import software.amazon.awscdk.services.quicksight.CfnDataSet
  * OutputColumnProperty outputColumnProperty = OutputColumnProperty.builder()
  * .description("description")
  * .name("name")
+ * .subType("subType")
  * .type("type")
  * .build();
  * ```
@@ -42,12 +43,17 @@ public class CfnDataSetOutputColumnPropertyDsl {
         cdkBuilder.description(description)
     }
 
-    /** @param name A display name for the dataset. */
+    /** @param name The display name of the column.. */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }
 
-    /** @param type The type. */
+    /** @param subType The sub data type of the column. */
+    public fun subType(subType: String) {
+        cdkBuilder.subType(subType)
+    }
+
+    /** @param type The data type of the column. */
     public fun type(type: String) {
         cdkBuilder.type(type)
     }

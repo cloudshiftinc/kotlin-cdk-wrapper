@@ -22,7 +22,7 @@ import software.amazon.awscdk.services.autoscaling.CfnScalingPolicy
 
 /**
  * `PredictiveScalingConfiguration` is a property of the
- * [AWS::AutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html)
+ * [AWS::AutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-scalingpolicy.html)
  * resource that specifies a predictive scaling policy for Amazon EC2 Auto Scaling.
  *
  * For more information, see

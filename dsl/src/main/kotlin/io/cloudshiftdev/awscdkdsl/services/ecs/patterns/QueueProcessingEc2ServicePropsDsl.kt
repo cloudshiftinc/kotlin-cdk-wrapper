@@ -146,6 +146,16 @@ public class QueueProcessingEc2ServicePropsDsl {
     }
 
     /**
+     * @param cooldown Grace period after scaling activity in seconds. Subsequent scale outs during
+     *   the cooldown period are squashed so that only the biggest scale out happens.
+     *
+     * Subsequent scale ins during the cooldown period are ignored.
+     */
+    public fun cooldown(cooldown: Duration) {
+        cdkBuilder.cooldown(cooldown)
+    }
+
+    /**
      * @param cpu The number of cpu units used by the task. Valid values, which determines your
      *   range of valid values for the memory parameter:
      *
@@ -166,6 +176,14 @@ public class QueueProcessingEc2ServicePropsDsl {
     }
 
     /**
+     * @param cpuTargetUtilizationPercent The target CPU utilization percentage for CPU based
+     *   scaling strategy when enabled.
+     */
+    public fun cpuTargetUtilizationPercent(cpuTargetUtilizationPercent: Number) {
+        cdkBuilder.cpuTargetUtilizationPercent(cpuTargetUtilizationPercent)
+    }
+
+    /**
      * @param deploymentController Specifies which deployment controller to use for the service. For
      *   more information, see
      *   [Amazon ECS Deployment Types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html)
@@ -183,6 +201,13 @@ public class QueueProcessingEc2ServicePropsDsl {
      */
     public fun deploymentController(deploymentController: DeploymentController) {
         cdkBuilder.deploymentController(deploymentController)
+    }
+
+    /**
+     * @param disableCpuBasedScaling Flag to disable CPU based auto scaling strategy on the service.
+     */
+    public fun disableCpuBasedScaling(disableCpuBasedScaling: Boolean) {
+        cdkBuilder.disableCpuBasedScaling(disableCpuBasedScaling)
     }
 
     /**
@@ -228,7 +253,11 @@ public class QueueProcessingEc2ServicePropsDsl {
         cdkBuilder.gpuCount(gpuCount)
     }
 
-    /** @param image The image used to start a container. */
+    /**
+     * @param image The image used to start a container. For `QueueProcessingFargateService`, either
+     *   `image` or `taskDefinition` must be specified, but not both. For
+     *   `QueueProcessingEc2Service`, `image` is required.
+     */
     public fun image(image: ContainerImage) {
         cdkBuilder.image(image)
     }

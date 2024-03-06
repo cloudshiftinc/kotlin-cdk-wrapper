@@ -273,17 +273,26 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     private val _workflowStatus: MutableList<Any> = mutableListOf()
 
-    /** @param awsAccountId The AWS account ID in which a finding was generated. */
+    /**
+     * @param awsAccountId The AWS account ID in which a finding was generated. Array Members:
+     *   Minimum number of 1 item. Maximum number of 100 items.
+     */
     public fun awsAccountId(vararg awsAccountId: Any) {
         _awsAccountId.addAll(listOf(*awsAccountId))
     }
 
-    /** @param awsAccountId The AWS account ID in which a finding was generated. */
+    /**
+     * @param awsAccountId The AWS account ID in which a finding was generated. Array Members:
+     *   Minimum number of 1 item. Maximum number of 100 items.
+     */
     public fun awsAccountId(awsAccountId: Collection<Any>) {
         _awsAccountId.addAll(awsAccountId)
     }
 
-    /** @param awsAccountId The AWS account ID in which a finding was generated. */
+    /**
+     * @param awsAccountId The AWS account ID in which a finding was generated. Array Members:
+     *   Minimum number of 1 item. Maximum number of 100 items.
+     */
     public fun awsAccountId(awsAccountId: IResolvable) {
         cdkBuilder.awsAccountId(awsAccountId)
     }
@@ -291,6 +300,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
     /**
      * @param companyName The name of the company for the product that generated the finding. For
      *   control-based findings, the company is AWS .
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun companyName(vararg companyName: Any) {
         _companyName.addAll(listOf(*companyName))
@@ -299,6 +310,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
     /**
      * @param companyName The name of the company for the product that generated the finding. For
      *   control-based findings, the company is AWS .
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun companyName(companyName: Collection<Any>) {
         _companyName.addAll(companyName)
@@ -307,6 +320,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
     /**
      * @param companyName The name of the company for the product that generated the finding. For
      *   control-based findings, the company is AWS .
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun companyName(companyName: IResolvable) {
         cdkBuilder.companyName(companyName)
@@ -318,6 +333,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   returned for a standard in the
      *   [DescribeStandards](https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DescribeStandards.html)
      *   API response.
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun complianceAssociatedStandardsId(vararg complianceAssociatedStandardsId: Any) {
         _complianceAssociatedStandardsId.addAll(listOf(*complianceAssociatedStandardsId))
@@ -329,6 +346,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   returned for a standard in the
      *   [DescribeStandards](https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DescribeStandards.html)
      *   API response.
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun complianceAssociatedStandardsId(complianceAssociatedStandardsId: Collection<Any>) {
         _complianceAssociatedStandardsId.addAll(complianceAssociatedStandardsId)
@@ -340,6 +359,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   returned for a standard in the
      *   [DescribeStandards](https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DescribeStandards.html)
      *   API response.
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun complianceAssociatedStandardsId(complianceAssociatedStandardsId: IResolvable) {
         cdkBuilder.complianceAssociatedStandardsId(complianceAssociatedStandardsId)
@@ -347,7 +368,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param complianceSecurityControlId The security control ID for which a finding was generated.
-     *   Security control IDs are the same across standards.
+     *   Security control IDs are the same across standards. Array Members: Minimum number of 1
+     *   item. Maximum number of 20 items.
      */
     public fun complianceSecurityControlId(vararg complianceSecurityControlId: Any) {
         _complianceSecurityControlId.addAll(listOf(*complianceSecurityControlId))
@@ -355,7 +377,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param complianceSecurityControlId The security control ID for which a finding was generated.
-     *   Security control IDs are the same across standards.
+     *   Security control IDs are the same across standards. Array Members: Minimum number of 1
+     *   item. Maximum number of 20 items.
      */
     public fun complianceSecurityControlId(complianceSecurityControlId: Collection<Any>) {
         _complianceSecurityControlId.addAll(complianceSecurityControlId)
@@ -363,7 +386,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param complianceSecurityControlId The security control ID for which a finding was generated.
-     *   Security control IDs are the same across standards.
+     *   Security control IDs are the same across standards. Array Members: Minimum number of 1
+     *   item. Maximum number of 20 items.
      */
     public fun complianceSecurityControlId(complianceSecurityControlId: IResolvable) {
         cdkBuilder.complianceSecurityControlId(complianceSecurityControlId)
@@ -371,7 +395,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param complianceStatus The result of a security check. This field is only used for findings
-     *   generated from controls.
+     *   generated from controls. Array Members: Minimum number of 1 item. Maximum number of 20
+     *   items.
      */
     public fun complianceStatus(vararg complianceStatus: Any) {
         _complianceStatus.addAll(listOf(*complianceStatus))
@@ -379,7 +404,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param complianceStatus The result of a security check. This field is only used for findings
-     *   generated from controls.
+     *   generated from controls. Array Members: Minimum number of 1 item. Maximum number of 20
+     *   items.
      */
     public fun complianceStatus(complianceStatus: Collection<Any>) {
         _complianceStatus.addAll(complianceStatus)
@@ -387,7 +413,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param complianceStatus The result of a security check. This field is only used for findings
-     *   generated from controls.
+     *   generated from controls. Array Members: Minimum number of 1 item. Maximum number of 20
+     *   items.
      */
     public fun complianceStatus(complianceStatus: IResolvable) {
         cdkBuilder.complianceStatus(complianceStatus)
@@ -402,6 +429,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   more information, see
      *   [Confidence](https://docs.aws.amazon.com/securityhub/latest/userguide/asff-top-level-attributes.html#asff-confidence)
      *   in the *AWS Security Hub User Guide* .
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun confidence(vararg confidence: Any) {
         _confidence.addAll(listOf(*confidence))
@@ -416,6 +445,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   more information, see
      *   [Confidence](https://docs.aws.amazon.com/securityhub/latest/userguide/asff-top-level-attributes.html#asff-confidence)
      *   in the *AWS Security Hub User Guide* .
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun confidence(confidence: Collection<Any>) {
         _confidence.addAll(confidence)
@@ -430,6 +461,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   more information, see
      *   [Confidence](https://docs.aws.amazon.com/securityhub/latest/userguide/asff-top-level-attributes.html#asff-confidence)
      *   in the *AWS Security Hub User Guide* .
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun confidence(confidence: IResolvable) {
         cdkBuilder.confidence(confidence)
@@ -440,6 +473,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   `date-time` format specified in
      *   [RFC 3339 section 5.6, Internet Date/Time Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6)
      *   . The value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun createdAt(vararg createdAt: Any) {
         _createdAt.addAll(listOf(*createdAt))
@@ -450,6 +485,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   `date-time` format specified in
      *   [RFC 3339 section 5.6, Internet Date/Time Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6)
      *   . The value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun createdAt(createdAt: Collection<Any>) {
         _createdAt.addAll(createdAt)
@@ -460,6 +497,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   `date-time` format specified in
      *   [RFC 3339 section 5.6, Internet Date/Time Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6)
      *   . The value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun createdAt(createdAt: IResolvable) {
         cdkBuilder.createdAt(createdAt)
@@ -473,6 +512,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   information, see
      *   [Criticality](https://docs.aws.amazon.com/securityhub/latest/userguide/asff-top-level-attributes.html#asff-criticality)
      *   in the *AWS Security Hub User Guide* .
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun criticality(vararg criticality: Any) {
         _criticality.addAll(listOf(*criticality))
@@ -486,6 +527,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   information, see
      *   [Criticality](https://docs.aws.amazon.com/securityhub/latest/userguide/asff-top-level-attributes.html#asff-criticality)
      *   in the *AWS Security Hub User Guide* .
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun criticality(criticality: Collection<Any>) {
         _criticality.addAll(criticality)
@@ -499,22 +542,33 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   information, see
      *   [Criticality](https://docs.aws.amazon.com/securityhub/latest/userguide/asff-top-level-attributes.html#asff-criticality)
      *   in the *AWS Security Hub User Guide* .
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun criticality(criticality: IResolvable) {
         cdkBuilder.criticality(criticality)
     }
 
-    /** @param description A finding's description. */
+    /**
+     * @param description A finding's description. Array Members: Minimum number of 1 item. Maximum
+     *   number of 20 items.
+     */
     public fun description(vararg description: Any) {
         _description.addAll(listOf(*description))
     }
 
-    /** @param description A finding's description. */
+    /**
+     * @param description A finding's description. Array Members: Minimum number of 1 item. Maximum
+     *   number of 20 items.
+     */
     public fun description(description: Collection<Any>) {
         _description.addAll(description)
     }
 
-    /** @param description A finding's description. */
+    /**
+     * @param description A finding's description. Array Members: Minimum number of 1 item. Maximum
+     *   number of 20 items.
+     */
     public fun description(description: IResolvable) {
         cdkBuilder.description(description)
     }
@@ -525,6 +579,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   format specified in
      *   [RFC 3339 section 5.6, Internet Date/Time Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6)
      *   . The value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun firstObservedAt(vararg firstObservedAt: Any) {
         _firstObservedAt.addAll(listOf(*firstObservedAt))
@@ -536,6 +592,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   format specified in
      *   [RFC 3339 section 5.6, Internet Date/Time Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6)
      *   . The value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun firstObservedAt(firstObservedAt: Collection<Any>) {
         _firstObservedAt.addAll(firstObservedAt)
@@ -547,6 +605,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   format specified in
      *   [RFC 3339 section 5.6, Internet Date/Time Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6)
      *   . The value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun firstObservedAt(firstObservedAt: IResolvable) {
         cdkBuilder.firstObservedAt(firstObservedAt)
@@ -554,7 +614,7 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param generatorId The identifier for the solution-specific component that generated a
-     *   finding.
+     *   finding. Array Members: Minimum number of 1 item. Maximum number of 100 items.
      */
     public fun generatorId(vararg generatorId: Any) {
         _generatorId.addAll(listOf(*generatorId))
@@ -562,7 +622,7 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param generatorId The identifier for the solution-specific component that generated a
-     *   finding.
+     *   finding. Array Members: Minimum number of 1 item. Maximum number of 100 items.
      */
     public fun generatorId(generatorId: Collection<Any>) {
         _generatorId.addAll(generatorId)
@@ -570,23 +630,32 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param generatorId The identifier for the solution-specific component that generated a
-     *   finding.
+     *   finding. Array Members: Minimum number of 1 item. Maximum number of 100 items.
      */
     public fun generatorId(generatorId: IResolvable) {
         cdkBuilder.generatorId(generatorId)
     }
 
-    /** @param id The product-specific identifier for a finding. */
+    /**
+     * @param id The product-specific identifier for a finding. Array Members: Minimum number of 1
+     *   item. Maximum number of 20 items.
+     */
     public fun id(vararg id: Any) {
         _id.addAll(listOf(*id))
     }
 
-    /** @param id The product-specific identifier for a finding. */
+    /**
+     * @param id The product-specific identifier for a finding. Array Members: Minimum number of 1
+     *   item. Maximum number of 20 items.
+     */
     public fun id(id: Collection<Any>) {
         _id.addAll(id)
     }
 
-    /** @param id The product-specific identifier for a finding. */
+    /**
+     * @param id The product-specific identifier for a finding. Array Members: Minimum number of 1
+     *   item. Maximum number of 20 items.
+     */
     public fun id(id: IResolvable) {
         cdkBuilder.id(id)
     }
@@ -597,6 +666,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   `date-time` format specified in
      *   [RFC 3339 section 5.6, Internet Date/Time Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6)
      *   . The value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun lastObservedAt(vararg lastObservedAt: Any) {
         _lastObservedAt.addAll(listOf(*lastObservedAt))
@@ -608,6 +679,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   `date-time` format specified in
      *   [RFC 3339 section 5.6, Internet Date/Time Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6)
      *   . The value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun lastObservedAt(lastObservedAt: Collection<Any>) {
         _lastObservedAt.addAll(lastObservedAt)
@@ -619,22 +692,33 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   `date-time` format specified in
      *   [RFC 3339 section 5.6, Internet Date/Time Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6)
      *   . The value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun lastObservedAt(lastObservedAt: IResolvable) {
         cdkBuilder.lastObservedAt(lastObservedAt)
     }
 
-    /** @param noteText The text of a user-defined note that's added to a finding. */
+    /**
+     * @param noteText The text of a user-defined note that's added to a finding. Array Members:
+     *   Minimum number of 1 item. Maximum number of 20 items.
+     */
     public fun noteText(vararg noteText: Any) {
         _noteText.addAll(listOf(*noteText))
     }
 
-    /** @param noteText The text of a user-defined note that's added to a finding. */
+    /**
+     * @param noteText The text of a user-defined note that's added to a finding. Array Members:
+     *   Minimum number of 1 item. Maximum number of 20 items.
+     */
     public fun noteText(noteText: Collection<Any>) {
         _noteText.addAll(noteText)
     }
 
-    /** @param noteText The text of a user-defined note that's added to a finding. */
+    /**
+     * @param noteText The text of a user-defined note that's added to a finding. Array Members:
+     *   Minimum number of 1 item. Maximum number of 20 items.
+     */
     public fun noteText(noteText: IResolvable) {
         cdkBuilder.noteText(noteText)
     }
@@ -644,6 +728,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   specified in
      *   [RFC 3339 section 5.6, Internet Date/Time Format](https://docs.aws.amazon.com/https://www.rfc-editor.org/rfc/rfc3339#section-5.6)
      *   . The value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun noteUpdatedAt(vararg noteUpdatedAt: Any) {
         _noteUpdatedAt.addAll(listOf(*noteUpdatedAt))
@@ -654,6 +740,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   specified in
      *   [RFC 3339 section 5.6, Internet Date/Time Format](https://docs.aws.amazon.com/https://www.rfc-editor.org/rfc/rfc3339#section-5.6)
      *   . The value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun noteUpdatedAt(noteUpdatedAt: Collection<Any>) {
         _noteUpdatedAt.addAll(noteUpdatedAt)
@@ -664,29 +752,41 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   specified in
      *   [RFC 3339 section 5.6, Internet Date/Time Format](https://docs.aws.amazon.com/https://www.rfc-editor.org/rfc/rfc3339#section-5.6)
      *   . The value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun noteUpdatedAt(noteUpdatedAt: IResolvable) {
         cdkBuilder.noteUpdatedAt(noteUpdatedAt)
     }
 
-    /** @param noteUpdatedBy The principal that created a note. */
+    /**
+     * @param noteUpdatedBy The principal that created a note. Array Members: Minimum number of 1
+     *   item. Maximum number of 20 items.
+     */
     public fun noteUpdatedBy(vararg noteUpdatedBy: Any) {
         _noteUpdatedBy.addAll(listOf(*noteUpdatedBy))
     }
 
-    /** @param noteUpdatedBy The principal that created a note. */
+    /**
+     * @param noteUpdatedBy The principal that created a note. Array Members: Minimum number of 1
+     *   item. Maximum number of 20 items.
+     */
     public fun noteUpdatedBy(noteUpdatedBy: Collection<Any>) {
         _noteUpdatedBy.addAll(noteUpdatedBy)
     }
 
-    /** @param noteUpdatedBy The principal that created a note. */
+    /**
+     * @param noteUpdatedBy The principal that created a note. Array Members: Minimum number of 1
+     *   item. Maximum number of 20 items.
+     */
     public fun noteUpdatedBy(noteUpdatedBy: IResolvable) {
         cdkBuilder.noteUpdatedBy(noteUpdatedBy)
     }
 
     /**
      * @param productArn The Amazon Resource Name (ARN) for a third-party product that generated a
-     *   finding in Security Hub.
+     *   finding in Security Hub. Array Members: Minimum number of 1 item. Maximum number of 20
+     *   items.
      */
     public fun productArn(vararg productArn: Any) {
         _productArn.addAll(listOf(*productArn))
@@ -694,7 +794,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param productArn The Amazon Resource Name (ARN) for a third-party product that generated a
-     *   finding in Security Hub.
+     *   finding in Security Hub. Array Members: Minimum number of 1 item. Maximum number of 20
+     *   items.
      */
     public fun productArn(productArn: Collection<Any>) {
         _productArn.addAll(productArn)
@@ -702,7 +803,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param productArn The Amazon Resource Name (ARN) for a third-party product that generated a
-     *   finding in Security Hub.
+     *   finding in Security Hub. Array Members: Minimum number of 1 item. Maximum number of 20
+     *   items.
      */
     public fun productArn(productArn: IResolvable) {
         cdkBuilder.productArn(productArn)
@@ -710,7 +812,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param productName Provides the name of the product that generated the finding. For
-     *   control-based findings, the product name is Security Hub.
+     *   control-based findings, the product name is Security Hub. Array Members: Minimum number of
+     *   1 item. Maximum number of 20 items.
      */
     public fun productName(vararg productName: Any) {
         _productName.addAll(listOf(*productName))
@@ -718,7 +821,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param productName Provides the name of the product that generated the finding. For
-     *   control-based findings, the product name is Security Hub.
+     *   control-based findings, the product name is Security Hub. Array Members: Minimum number of
+     *   1 item. Maximum number of 20 items.
      */
     public fun productName(productName: Collection<Any>) {
         _productName.addAll(productName)
@@ -726,44 +830,64 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param productName Provides the name of the product that generated the finding. For
-     *   control-based findings, the product name is Security Hub.
+     *   control-based findings, the product name is Security Hub. Array Members: Minimum number of
+     *   1 item. Maximum number of 20 items.
      */
     public fun productName(productName: IResolvable) {
         cdkBuilder.productName(productName)
     }
 
-    /** @param recordState Provides the current state of a finding. */
+    /**
+     * @param recordState Provides the current state of a finding. Array Members: Minimum number of
+     *   1 item. Maximum number of 20 items.
+     */
     public fun recordState(vararg recordState: Any) {
         _recordState.addAll(listOf(*recordState))
     }
 
-    /** @param recordState Provides the current state of a finding. */
+    /**
+     * @param recordState Provides the current state of a finding. Array Members: Minimum number of
+     *   1 item. Maximum number of 20 items.
+     */
     public fun recordState(recordState: Collection<Any>) {
         _recordState.addAll(recordState)
     }
 
-    /** @param recordState Provides the current state of a finding. */
+    /**
+     * @param recordState Provides the current state of a finding. Array Members: Minimum number of
+     *   1 item. Maximum number of 20 items.
+     */
     public fun recordState(recordState: IResolvable) {
         cdkBuilder.recordState(recordState)
     }
 
-    /** @param relatedFindingsId The product-generated identifier for a related finding. */
+    /**
+     * @param relatedFindingsId The product-generated identifier for a related finding. Array
+     *   Members: Minimum number of 1 item. Maximum number of 20 items.
+     */
     public fun relatedFindingsId(vararg relatedFindingsId: Any) {
         _relatedFindingsId.addAll(listOf(*relatedFindingsId))
     }
 
-    /** @param relatedFindingsId The product-generated identifier for a related finding. */
+    /**
+     * @param relatedFindingsId The product-generated identifier for a related finding. Array
+     *   Members: Minimum number of 1 item. Maximum number of 20 items.
+     */
     public fun relatedFindingsId(relatedFindingsId: Collection<Any>) {
         _relatedFindingsId.addAll(relatedFindingsId)
     }
 
-    /** @param relatedFindingsId The product-generated identifier for a related finding. */
+    /**
+     * @param relatedFindingsId The product-generated identifier for a related finding. Array
+     *   Members: Minimum number of 1 item. Maximum number of 20 items.
+     */
     public fun relatedFindingsId(relatedFindingsId: IResolvable) {
         cdkBuilder.relatedFindingsId(relatedFindingsId)
     }
 
     /**
      * @param relatedFindingsProductArn The ARN for the product that generated a related finding.
+     *   Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun relatedFindingsProductArn(vararg relatedFindingsProductArn: Any) {
         _relatedFindingsProductArn.addAll(listOf(*relatedFindingsProductArn))
@@ -771,6 +895,7 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param relatedFindingsProductArn The ARN for the product that generated a related finding.
+     *   Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun relatedFindingsProductArn(relatedFindingsProductArn: Collection<Any>) {
         _relatedFindingsProductArn.addAll(relatedFindingsProductArn)
@@ -778,6 +903,7 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param relatedFindingsProductArn The ARN for the product that generated a related finding.
+     *   Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun relatedFindingsProductArn(relatedFindingsProductArn: IResolvable) {
         cdkBuilder.relatedFindingsProductArn(relatedFindingsProductArn)
@@ -785,7 +911,7 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param resourceDetailsOther Custom fields and values about the resource that a finding
-     *   pertains to.
+     *   pertains to. Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun resourceDetailsOther(vararg resourceDetailsOther: Any) {
         _resourceDetailsOther.addAll(listOf(*resourceDetailsOther))
@@ -793,7 +919,7 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param resourceDetailsOther Custom fields and values about the resource that a finding
-     *   pertains to.
+     *   pertains to. Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun resourceDetailsOther(resourceDetailsOther: Collection<Any>) {
         _resourceDetailsOther.addAll(resourceDetailsOther)
@@ -801,7 +927,7 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param resourceDetailsOther Custom fields and values about the resource that a finding
-     *   pertains to.
+     *   pertains to. Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun resourceDetailsOther(resourceDetailsOther: IResolvable) {
         cdkBuilder.resourceDetailsOther(resourceDetailsOther)
@@ -812,6 +938,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   identified by Amazon Resource Names (ARNs), this is the ARN. For AWS resources that lack
      *   ARNs, this is the identifier as defined by the AWS service that created the resource. For
      *   non- AWS resources, this is a unique identifier that is associated with the resource.
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 100 items.
      */
     public fun resourceId(vararg resourceId: Any) {
         _resourceId.addAll(listOf(*resourceId))
@@ -822,6 +950,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   identified by Amazon Resource Names (ARNs), this is the ARN. For AWS resources that lack
      *   ARNs, this is the identifier as defined by the AWS service that created the resource. For
      *   non- AWS resources, this is a unique identifier that is associated with the resource.
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 100 items.
      */
     public fun resourceId(resourceId: Collection<Any>) {
         _resourceId.addAll(resourceId)
@@ -832,6 +962,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   identified by Amazon Resource Names (ARNs), this is the ARN. For AWS resources that lack
      *   ARNs, this is the identifier as defined by the AWS service that created the resource. For
      *   non- AWS resources, this is a unique identifier that is associated with the resource.
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 100 items.
      */
     public fun resourceId(resourceId: IResolvable) {
         cdkBuilder.resourceId(resourceId)
@@ -841,6 +973,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      * @param resourcePartition The partition in which the resource that the finding pertains to is
      *   located. A partition is a group of AWS Regions . Each AWS account is scoped to one
      *   partition.
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun resourcePartition(vararg resourcePartition: Any) {
         _resourcePartition.addAll(listOf(*resourcePartition))
@@ -850,6 +984,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      * @param resourcePartition The partition in which the resource that the finding pertains to is
      *   located. A partition is a group of AWS Regions . Each AWS account is scoped to one
      *   partition.
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun resourcePartition(resourcePartition: Collection<Any>) {
         _resourcePartition.addAll(resourcePartition)
@@ -859,6 +995,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      * @param resourcePartition The partition in which the resource that the finding pertains to is
      *   located. A partition is a group of AWS Regions . Each AWS account is scoped to one
      *   partition.
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun resourcePartition(resourcePartition: IResolvable) {
         cdkBuilder.resourcePartition(resourcePartition)
@@ -866,7 +1004,7 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param resourceRegion The AWS Region where the resource that a finding pertains to is
-     *   located.
+     *   located. Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun resourceRegion(vararg resourceRegion: Any) {
         _resourceRegion.addAll(listOf(*resourceRegion))
@@ -874,7 +1012,7 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param resourceRegion The AWS Region where the resource that a finding pertains to is
-     *   located.
+     *   located. Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun resourceRegion(resourceRegion: Collection<Any>) {
         _resourceRegion.addAll(resourceRegion)
@@ -882,7 +1020,7 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param resourceRegion The AWS Region where the resource that a finding pertains to is
-     *   located.
+     *   located. Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun resourceRegion(resourceRegion: IResolvable) {
         cdkBuilder.resourceRegion(resourceRegion)
@@ -890,7 +1028,7 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param resourceTags A list of AWS tags associated with a resource at the time the finding was
-     *   processed.
+     *   processed. Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun resourceTags(vararg resourceTags: Any) {
         _resourceTags.addAll(listOf(*resourceTags))
@@ -898,7 +1036,7 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param resourceTags A list of AWS tags associated with a resource at the time the finding was
-     *   processed.
+     *   processed. Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun resourceTags(resourceTags: Collection<Any>) {
         _resourceTags.addAll(resourceTags)
@@ -906,45 +1044,63 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param resourceTags A list of AWS tags associated with a resource at the time the finding was
-     *   processed.
+     *   processed. Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun resourceTags(resourceTags: IResolvable) {
         cdkBuilder.resourceTags(resourceTags)
     }
 
-    /** @param resourceType A finding's title. */
+    /**
+     * @param resourceType A finding's title. Array Members: Minimum number of 1 item. Maximum
+     *   number of 100 items.
+     */
     public fun resourceType(vararg resourceType: Any) {
         _resourceType.addAll(listOf(*resourceType))
     }
 
-    /** @param resourceType A finding's title. */
+    /**
+     * @param resourceType A finding's title. Array Members: Minimum number of 1 item. Maximum
+     *   number of 100 items.
+     */
     public fun resourceType(resourceType: Collection<Any>) {
         _resourceType.addAll(resourceType)
     }
 
-    /** @param resourceType A finding's title. */
+    /**
+     * @param resourceType A finding's title. Array Members: Minimum number of 1 item. Maximum
+     *   number of 100 items.
+     */
     public fun resourceType(resourceType: IResolvable) {
         cdkBuilder.resourceType(resourceType)
     }
 
-    /** @param severityLabel The severity value of the finding. */
+    /**
+     * @param severityLabel The severity value of the finding. Array Members: Minimum number of 1
+     *   item. Maximum number of 20 items.
+     */
     public fun severityLabel(vararg severityLabel: Any) {
         _severityLabel.addAll(listOf(*severityLabel))
     }
 
-    /** @param severityLabel The severity value of the finding. */
+    /**
+     * @param severityLabel The severity value of the finding. Array Members: Minimum number of 1
+     *   item. Maximum number of 20 items.
+     */
     public fun severityLabel(severityLabel: Collection<Any>) {
         _severityLabel.addAll(severityLabel)
     }
 
-    /** @param severityLabel The severity value of the finding. */
+    /**
+     * @param severityLabel The severity value of the finding. Array Members: Minimum number of 1
+     *   item. Maximum number of 20 items.
+     */
     public fun severityLabel(severityLabel: IResolvable) {
         cdkBuilder.severityLabel(severityLabel)
     }
 
     /**
      * @param sourceUrl Provides a URL that links to a page about the current finding in the finding
-     *   product.
+     *   product. Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun sourceUrl(vararg sourceUrl: Any) {
         _sourceUrl.addAll(listOf(*sourceUrl))
@@ -952,7 +1108,7 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param sourceUrl Provides a URL that links to a page about the current finding in the finding
-     *   product.
+     *   product. Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun sourceUrl(sourceUrl: Collection<Any>) {
         _sourceUrl.addAll(sourceUrl)
@@ -960,23 +1116,32 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param sourceUrl Provides a URL that links to a page about the current finding in the finding
-     *   product.
+     *   product. Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun sourceUrl(sourceUrl: IResolvable) {
         cdkBuilder.sourceUrl(sourceUrl)
     }
 
-    /** @param title A finding's title. */
+    /**
+     * @param title A finding's title. Array Members: Minimum number of 1 item. Maximum number of
+     *   100 items.
+     */
     public fun title(vararg title: Any) {
         _title.addAll(listOf(*title))
     }
 
-    /** @param title A finding's title. */
+    /**
+     * @param title A finding's title. Array Members: Minimum number of 1 item. Maximum number of
+     *   100 items.
+     */
     public fun title(title: Collection<Any>) {
         _title.addAll(title)
     }
 
-    /** @param title A finding's title. */
+    /**
+     * @param title A finding's title. Array Members: Minimum number of 1 item. Maximum number of
+     *   100 items.
+     */
     public fun title(title: IResolvable) {
         cdkBuilder.title(title)
     }
@@ -986,6 +1151,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   classify a finding. For a list of namespaces, classifiers, and categories, see
      *   [Types taxonomy for ASFF](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html)
      *   in the *AWS Security Hub User Guide* .
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun type(vararg type: Any) {
         _type.addAll(listOf(*type))
@@ -996,6 +1163,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   classify a finding. For a list of namespaces, classifiers, and categories, see
      *   [Types taxonomy for ASFF](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html)
      *   in the *AWS Security Hub User Guide* .
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun type(type: Collection<Any>) {
         _type.addAll(type)
@@ -1006,6 +1175,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   classify a finding. For a list of namespaces, classifiers, and categories, see
      *   [Types taxonomy for ASFF](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html)
      *   in the *AWS Security Hub User Guide* .
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun type(type: IResolvable) {
         cdkBuilder.type(type)
@@ -1016,6 +1187,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   updated. Uses the `date-time` format specified in
      *   [RFC 3339 section 5.6, Internet Date/Time Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6)
      *   . The value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun updatedAt(vararg updatedAt: Any) {
         _updatedAt.addAll(listOf(*updatedAt))
@@ -1026,6 +1199,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   updated. Uses the `date-time` format specified in
      *   [RFC 3339 section 5.6, Internet Date/Time Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6)
      *   . The value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun updatedAt(updatedAt: Collection<Any>) {
         _updatedAt.addAll(updatedAt)
@@ -1036,6 +1211,8 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
      *   updated. Uses the `date-time` format specified in
      *   [RFC 3339 section 5.6, Internet Date/Time Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6)
      *   . The value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+     *
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun updatedAt(updatedAt: IResolvable) {
         cdkBuilder.updatedAt(updatedAt)
@@ -1043,7 +1220,7 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param userDefinedFields A list of user-defined name and value string pairs added to a
-     *   finding.
+     *   finding. Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun userDefinedFields(vararg userDefinedFields: Any) {
         _userDefinedFields.addAll(listOf(*userDefinedFields))
@@ -1051,7 +1228,7 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param userDefinedFields A list of user-defined name and value string pairs added to a
-     *   finding.
+     *   finding. Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun userDefinedFields(userDefinedFields: Collection<Any>) {
         _userDefinedFields.addAll(userDefinedFields)
@@ -1059,30 +1236,39 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param userDefinedFields A list of user-defined name and value string pairs added to a
-     *   finding.
+     *   finding. Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun userDefinedFields(userDefinedFields: IResolvable) {
         cdkBuilder.userDefinedFields(userDefinedFields)
     }
 
-    /** @param verificationState Provides the veracity of a finding. */
+    /**
+     * @param verificationState Provides the veracity of a finding. Array Members: Minimum number of
+     *   1 item. Maximum number of 20 items.
+     */
     public fun verificationState(vararg verificationState: Any) {
         _verificationState.addAll(listOf(*verificationState))
     }
 
-    /** @param verificationState Provides the veracity of a finding. */
+    /**
+     * @param verificationState Provides the veracity of a finding. Array Members: Minimum number of
+     *   1 item. Maximum number of 20 items.
+     */
     public fun verificationState(verificationState: Collection<Any>) {
         _verificationState.addAll(verificationState)
     }
 
-    /** @param verificationState Provides the veracity of a finding. */
+    /**
+     * @param verificationState Provides the veracity of a finding. Array Members: Minimum number of
+     *   1 item. Maximum number of 20 items.
+     */
     public fun verificationState(verificationState: IResolvable) {
         cdkBuilder.verificationState(verificationState)
     }
 
     /**
      * @param workflowStatus Provides information about the status of the investigation into a
-     *   finding.
+     *   finding. Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun workflowStatus(vararg workflowStatus: Any) {
         _workflowStatus.addAll(listOf(*workflowStatus))
@@ -1090,7 +1276,7 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param workflowStatus Provides information about the status of the investigation into a
-     *   finding.
+     *   finding. Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun workflowStatus(workflowStatus: Collection<Any>) {
         _workflowStatus.addAll(workflowStatus)
@@ -1098,7 +1284,7 @@ public class CfnAutomationRuleAutomationRulesFindingFiltersPropertyDsl {
 
     /**
      * @param workflowStatus Provides information about the status of the investigation into a
-     *   finding.
+     *   finding. Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
     public fun workflowStatus(workflowStatus: IResolvable) {
         cdkBuilder.workflowStatus(workflowStatus)

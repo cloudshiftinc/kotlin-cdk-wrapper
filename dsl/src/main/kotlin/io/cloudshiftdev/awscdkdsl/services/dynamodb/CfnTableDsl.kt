@@ -102,6 +102,8 @@ import software.constructs.Construct
  * .build())
  * .kinesisStreamSpecification(KinesisStreamSpecificationProperty.builder()
  * .streamArn("streamArn")
+ * // the properties below are optional
+ * .approximateCreationDateTimePrecision("approximateCreationDateTimePrecision")
  * .build())
  * .localSecondaryIndexes(List.of(LocalSecondaryIndexProperty.builder()
  * .indexName("indexName")

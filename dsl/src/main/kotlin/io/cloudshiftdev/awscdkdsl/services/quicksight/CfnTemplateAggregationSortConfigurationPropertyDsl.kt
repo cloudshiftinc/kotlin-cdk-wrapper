@@ -33,6 +33,10 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * .sortDirection("sortDirection")
  * // the properties below are optional
  * .aggregationFunction(AggregationFunctionProperty.builder()
+ * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+ * .simpleAttributeAggregation("simpleAttributeAggregation")
+ * .valueForMultipleValues("valueForMultipleValues")
+ * .build())
  * .categoricalAggregationFunction("categoricalAggregationFunction")
  * .dateAggregationFunction("dateAggregationFunction")
  * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()

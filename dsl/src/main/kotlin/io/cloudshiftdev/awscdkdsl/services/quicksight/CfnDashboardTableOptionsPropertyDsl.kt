@@ -145,6 +145,7 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * .rowAlternateColorOptions(RowAlternateColorOptionsProperty.builder()
  * .rowAlternateColors(List.of("rowAlternateColors"))
  * .status("status")
+ * .usePrimaryBackgroundColor("usePrimaryBackgroundColor")
  * .build())
  * .build();
  * ```

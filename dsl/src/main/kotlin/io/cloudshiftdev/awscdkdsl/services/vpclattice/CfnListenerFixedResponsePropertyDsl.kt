@@ -16,7 +16,7 @@ import kotlin.Number
 import software.amazon.awscdk.services.vpclattice.CfnListener
 
 /**
- * Information about an action that returns a custom HTTP response.
+ * Describes an action that returns a custom HTTP response.
  *
  * Example:
  * ```

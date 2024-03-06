@@ -25,6 +25,7 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.ec2.ISecurityGroup
 import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.ec2.SubnetSelection
+import software.amazon.awscdk.services.lambda.IEventSourceDlq
 import software.amazon.awscdk.services.lambda.StartingPosition
 import software.amazon.awscdk.services.lambda.eventsources.AuthenticationMethod
 import software.amazon.awscdk.services.lambda.eventsources.SelfManagedKafkaEventSourceProps
@@ -138,6 +139,13 @@ public class SelfManagedKafkaEventSourcePropsDsl {
      */
     public fun maxBatchingWindow(maxBatchingWindow: Duration) {
         cdkBuilder.maxBatchingWindow(maxBatchingWindow)
+    }
+
+    /**
+     * @param onFailure Add an on Failure Destination for this Kafka event. SNS/SQS/S3 are supported
+     */
+    public fun onFailure(onFailure: IEventSourceDlq) {
+        cdkBuilder.onFailure(onFailure)
     }
 
     /**

@@ -27,22 +27,39 @@ import software.amazon.awscdk.services.stepfunctions.CfnStateMachineVersion
 import software.amazon.awscdk.services.stepfunctions.CfnStateMachineVersionProps
 import software.amazon.awscdk.services.stepfunctions.Choice
 import software.amazon.awscdk.services.stepfunctions.ChoiceProps
+import software.amazon.awscdk.services.stepfunctions.ChoiceTransitionOptions
 import software.amazon.awscdk.services.stepfunctions.Credentials
 import software.amazon.awscdk.services.stepfunctions.CustomState
 import software.amazon.awscdk.services.stepfunctions.CustomStateProps
 import software.amazon.awscdk.services.stepfunctions.DefinitionConfig
+import software.amazon.awscdk.services.stepfunctions.DistributedMap
+import software.amazon.awscdk.services.stepfunctions.DistributedMapProps
 import software.amazon.awscdk.services.stepfunctions.Fail
 import software.amazon.awscdk.services.stepfunctions.FailProps
 import software.amazon.awscdk.services.stepfunctions.FileDefinitionBody
 import software.amazon.awscdk.services.stepfunctions.FindStateOptions
+import software.amazon.awscdk.services.stepfunctions.ItemBatcher
+import software.amazon.awscdk.services.stepfunctions.ItemBatcherProps
+import software.amazon.awscdk.services.stepfunctions.ItemReaderProps
 import software.amazon.awscdk.services.stepfunctions.LogOptions
 import software.amazon.awscdk.services.stepfunctions.Map
+import software.amazon.awscdk.services.stepfunctions.MapBaseProps
 import software.amazon.awscdk.services.stepfunctions.MapProps
 import software.amazon.awscdk.services.stepfunctions.Parallel
 import software.amazon.awscdk.services.stepfunctions.ParallelProps
 import software.amazon.awscdk.services.stepfunctions.Pass
 import software.amazon.awscdk.services.stepfunctions.PassProps
+import software.amazon.awscdk.services.stepfunctions.ProcessorConfig
+import software.amazon.awscdk.services.stepfunctions.ResultWriter
+import software.amazon.awscdk.services.stepfunctions.ResultWriterProps
 import software.amazon.awscdk.services.stepfunctions.RetryProps
+import software.amazon.awscdk.services.stepfunctions.S3CsvItemReader
+import software.amazon.awscdk.services.stepfunctions.S3CsvItemReaderProps
+import software.amazon.awscdk.services.stepfunctions.S3FileItemReaderProps
+import software.amazon.awscdk.services.stepfunctions.S3JsonItemReader
+import software.amazon.awscdk.services.stepfunctions.S3ManifestItemReader
+import software.amazon.awscdk.services.stepfunctions.S3ObjectsItemReader
+import software.amazon.awscdk.services.stepfunctions.S3ObjectsItemReaderProps
 import software.amazon.awscdk.services.stepfunctions.SingleStateOptions
 import software.amazon.awscdk.services.stepfunctions.StateMachine
 import software.amazon.awscdk.services.stepfunctions.StateMachineProps
@@ -458,25 +475,6 @@ public object stepfunctions {
     }
 
     /**
-     * Example:
-     * ```
-     * // The code below shows an example of how to instantiate this type.
-     * // The values are placeholders you should change.
-     * import software.amazon.awscdk.services.stepfunctions.*;
-     * DefinitionProperty definitionProperty = DefinitionProperty.builder().build();
-     * ```
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-definition.html)
-     */
-    public inline fun cfnStateMachineDefinitionProperty(
-        block: CfnStateMachineDefinitionPropertyDsl.() -> Unit = {}
-    ): CfnStateMachine.DefinitionProperty {
-        val builder = CfnStateMachineDefinitionPropertyDsl()
-        builder.apply(block)
-        return builder.build()
-    }
-
-    /**
      * Defines a destination for `LoggingConfiguration` .
      *
      * For more information on logging with `EXPRESS` workflows, see
@@ -745,42 +743,23 @@ public object stepfunctions {
      *
      * Example:
      * ```
-     * import software.amazon.awscdk.services.lambda.*;
-     * Function submitLambda;
-     * Function getStatusLambda;
-     * LambdaInvoke submitJob = LambdaInvoke.Builder.create(this, "Submit Job")
-     * .lambdaFunction(submitLambda)
-     * // Lambda's result is in the attribute `guid`
-     * .outputPath("$.guid")
+     * Map map = Map.Builder.create(this, "Map State")
+     * .maxConcurrency(1)
+     * .itemsPath(JsonPath.stringAt("$.inputForMap"))
+     * .itemSelector(Map.of(
+     * "item", JsonPath.stringAt("$.Map.Item.Value")))
+     * .resultPath("$.mapOutput")
      * .build();
-     * Wait waitX = Wait.Builder.create(this, "Wait X Seconds")
-     * .time(WaitTime.secondsPath("$.waitSeconds"))
-     * .build();
-     * LambdaInvoke getStatus = LambdaInvoke.Builder.create(this, "Get Job Status")
-     * .lambdaFunction(getStatusLambda)
-     * // Pass just the field named "guid" into the Lambda, put the
-     * // Lambda's result in a field called "status" in the response
-     * .inputPath("$.guid")
-     * .outputPath("$.status")
-     * .build();
-     * Fail jobFailed = Fail.Builder.create(this, "Job Failed")
-     * .cause("AWS Batch Job Failed")
-     * .error("DescribeJob returned FAILED")
-     * .build();
-     * LambdaInvoke finalStatus = LambdaInvoke.Builder.create(this, "Get Final Job Status")
-     * .lambdaFunction(getStatusLambda)
-     * // Use "guid" field as input
-     * .inputPath("$.guid")
-     * .outputPath("$.Payload")
-     * .build();
-     * Chain definition = submitJob.next(waitX).next(getStatus).next(new Choice(this, "Job
-     * Complete?").when(Condition.stringEquals("$.status", "FAILED"),
-     * jobFailed).when(Condition.stringEquals("$.status", "SUCCEEDED"), finalStatus).otherwise(waitX));
-     * StateMachine.Builder.create(this, "StateMachine")
-     * .definition(definition)
-     * .timeout(Duration.minutes(5))
-     * .comment("a super cool state machine")
-     * .build();
+     * // The Map iterator can contain a IChainable, which can be an individual or multiple steps
+     * chained together.
+     * // Below example is with a Choice and Pass step
+     * Choice choice = new Choice(this, "Choice");
+     * Condition condition1 = Condition.stringEquals("$.item.status", "SUCCESS");
+     * Pass step1 = new Pass(this, "Step1");
+     * Pass step2 = new Pass(this, "Step2");
+     * Pass finish = new Pass(this, "Finish");
+     * Chain definition = choice.when(condition1, step1).otherwise(step2).afterwards().next(finish);
+     * map.itemProcessor(definition);
      * ```
      */
     public inline fun choice(
@@ -798,18 +777,45 @@ public object stepfunctions {
      *
      * Example:
      * ```
-     * // The code below shows an example of how to instantiate this type.
-     * // The values are placeholders you should change.
-     * import software.amazon.awscdk.services.stepfunctions.*;
-     * ChoiceProps choiceProps = ChoiceProps.builder()
-     * .comment("comment")
-     * .inputPath("inputPath")
-     * .outputPath("outputPath")
+     * Choice choice = Choice.Builder.create(this, "What color is it?")
+     * .comment("color comment")
      * .build();
+     * Pass handleBlueItem = new Pass(this, "HandleBlueItem");
+     * Pass handleOtherItemColor = new Pass(this, "HanldeOtherItemColor");
+     * choice.when(Condition.stringEquals("$.color", "BLUE"), handleBlueItem,
+     * ChoiceTransitionOptions.builder()
+     * .comment("blue item comment")
+     * .build());
+     * choice.otherwise(handleOtherItemColor);
      * ```
      */
     public inline fun choiceProps(block: ChoicePropsDsl.() -> Unit = {}): ChoiceProps {
         val builder = ChoicePropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Options for Choice Transition.
+     *
+     * Example:
+     * ```
+     * Choice choice = Choice.Builder.create(this, "What color is it?")
+     * .comment("color comment")
+     * .build();
+     * Pass handleBlueItem = new Pass(this, "HandleBlueItem");
+     * Pass handleOtherItemColor = new Pass(this, "HanldeOtherItemColor");
+     * choice.when(Condition.stringEquals("$.color", "BLUE"), handleBlueItem,
+     * ChoiceTransitionOptions.builder()
+     * .comment("blue item comment")
+     * .build());
+     * choice.otherwise(handleOtherItemColor);
+     * ```
+     */
+    public inline fun choiceTransitionOptions(
+        block: ChoiceTransitionOptionsDsl.() -> Unit = {}
+    ): ChoiceTransitionOptions {
+        val builder = ChoiceTransitionOptionsDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -873,9 +879,18 @@ public object stepfunctions {
      * CustomState custom = CustomState.Builder.create(this, "my custom task")
      * .stateJson(stateJson)
      * .build();
+     * // catch errors with addCatch
+     * Pass errorHandler = new Pass(this, "handle failure");
+     * custom.addCatch(errorHandler);
+     * // retry the task if something goes wrong
+     * custom.addRetry(RetryProps.builder()
+     * .errors(List.of(Errors.ALL))
+     * .interval(Duration.seconds(10))
+     * .maxAttempts(5)
+     * .build());
      * Chain chain = Chain.start(custom).next(finalStatus);
      * StateMachine sm = StateMachine.Builder.create(this, "StateMachine")
-     * .definition(chain)
+     * .definitionBody(DefinitionBody.fromChainable(chain))
      * .timeout(Duration.seconds(30))
      * .comment("a super cool state machine")
      * .build();
@@ -923,9 +938,18 @@ public object stepfunctions {
      * CustomState custom = CustomState.Builder.create(this, "my custom task")
      * .stateJson(stateJson)
      * .build();
+     * // catch errors with addCatch
+     * Pass errorHandler = new Pass(this, "handle failure");
+     * custom.addCatch(errorHandler);
+     * // retry the task if something goes wrong
+     * custom.addRetry(RetryProps.builder()
+     * .errors(List.of(Errors.ALL))
+     * .interval(Duration.seconds(10))
+     * .maxAttempts(5)
+     * .build());
      * Chain chain = Chain.start(custom).next(finalStatus);
      * StateMachine sm = StateMachine.Builder.create(this, "StateMachine")
-     * .definition(chain)
+     * .definitionBody(DefinitionBody.fromChainable(chain))
      * .timeout(Duration.seconds(30))
      * .comment("a super cool state machine")
      * .build();
@@ -972,47 +996,69 @@ public object stepfunctions {
     }
 
     /**
+     * Define a Distributed Mode Map state in the state machine.
+     *
+     * A `Map` state can be used to run a set of steps for each element of an input array. A Map
+     * state will execute the same steps for multiple entries of an array in the state input.
+     *
+     * While the Parallel state executes multiple branches of steps using the same input, a Map
+     * state will execute the same steps for multiple entries of an array in the state input.
+     *
+     * A `Map` state in `Distributed` mode will execute a child workflow for each iteration of the
+     * Map state. This serves to increase concurrency and allows for larger workloads to be run in a
+     * single state machine.
+     *
+     * Example:
+     * ```
+     * DistributedMap distributedMap = DistributedMap.Builder.create(this, "Distributed Map State")
+     * .maxConcurrency(1)
+     * .itemsPath(JsonPath.stringAt("$.inputForMap"))
+     * .build();
+     * distributedMap.itemProcessor(new Pass(this, "Pass State"));
+     * ```
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-asl-use-map-state-distributed.html)
+     */
+    public inline fun distributedMap(
+        scope: Construct,
+        id: String,
+        block: DistributedMapDsl.() -> Unit = {},
+    ): DistributedMap {
+        val builder = DistributedMapDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for configuring a Distribute Map state.
+     *
+     * Example:
+     * ```
+     * DistributedMap distributedMap = DistributedMap.Builder.create(this, "Distributed Map State")
+     * .maxConcurrency(1)
+     * .itemsPath(JsonPath.stringAt("$.inputForMap"))
+     * .build();
+     * distributedMap.itemProcessor(new Pass(this, "Pass State"));
+     * ```
+     */
+    public inline fun distributedMapProps(
+        block: DistributedMapPropsDsl.() -> Unit = {}
+    ): DistributedMapProps {
+        val builder = DistributedMapPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Define a Fail state in the state machine.
      *
      * Reaching a Fail state terminates the state execution in failure.
      *
      * Example:
      * ```
-     * import software.amazon.awscdk.services.lambda.*;
-     * Function submitLambda;
-     * Function getStatusLambda;
-     * LambdaInvoke submitJob = LambdaInvoke.Builder.create(this, "Submit Job")
-     * .lambdaFunction(submitLambda)
-     * // Lambda's result is in the attribute `guid`
-     * .outputPath("$.guid")
-     * .build();
-     * Wait waitX = Wait.Builder.create(this, "Wait X Seconds")
-     * .time(WaitTime.secondsPath("$.waitSeconds"))
-     * .build();
-     * LambdaInvoke getStatus = LambdaInvoke.Builder.create(this, "Get Job Status")
-     * .lambdaFunction(getStatusLambda)
-     * // Pass just the field named "guid" into the Lambda, put the
-     * // Lambda's result in a field called "status" in the response
-     * .inputPath("$.guid")
-     * .outputPath("$.status")
-     * .build();
-     * Fail jobFailed = Fail.Builder.create(this, "Job Failed")
-     * .cause("AWS Batch Job Failed")
-     * .error("DescribeJob returned FAILED")
-     * .build();
-     * LambdaInvoke finalStatus = LambdaInvoke.Builder.create(this, "Get Final Job Status")
-     * .lambdaFunction(getStatusLambda)
-     * // Use "guid" field as input
-     * .inputPath("$.guid")
-     * .outputPath("$.Payload")
-     * .build();
-     * Chain definition = submitJob.next(waitX).next(getStatus).next(new Choice(this, "Job
-     * Complete?").when(Condition.stringEquals("$.status", "FAILED"),
-     * jobFailed).when(Condition.stringEquals("$.status", "SUCCEEDED"), finalStatus).otherwise(waitX));
-     * StateMachine.Builder.create(this, "StateMachine")
-     * .definition(definition)
-     * .timeout(Duration.minutes(5))
-     * .comment("a super cool state machine")
+     * Fail fail = Fail.Builder.create(this, "Fail")
+     * .errorPath(JsonPath.stringAt("$.someError"))
+     * .causePath(JsonPath.stringAt("$.someCause"))
      * .build();
      * ```
      */
@@ -1031,41 +1077,9 @@ public object stepfunctions {
      *
      * Example:
      * ```
-     * import software.amazon.awscdk.services.lambda.*;
-     * Function submitLambda;
-     * Function getStatusLambda;
-     * LambdaInvoke submitJob = LambdaInvoke.Builder.create(this, "Submit Job")
-     * .lambdaFunction(submitLambda)
-     * // Lambda's result is in the attribute `guid`
-     * .outputPath("$.guid")
-     * .build();
-     * Wait waitX = Wait.Builder.create(this, "Wait X Seconds")
-     * .time(WaitTime.secondsPath("$.waitSeconds"))
-     * .build();
-     * LambdaInvoke getStatus = LambdaInvoke.Builder.create(this, "Get Job Status")
-     * .lambdaFunction(getStatusLambda)
-     * // Pass just the field named "guid" into the Lambda, put the
-     * // Lambda's result in a field called "status" in the response
-     * .inputPath("$.guid")
-     * .outputPath("$.status")
-     * .build();
-     * Fail jobFailed = Fail.Builder.create(this, "Job Failed")
-     * .cause("AWS Batch Job Failed")
-     * .error("DescribeJob returned FAILED")
-     * .build();
-     * LambdaInvoke finalStatus = LambdaInvoke.Builder.create(this, "Get Final Job Status")
-     * .lambdaFunction(getStatusLambda)
-     * // Use "guid" field as input
-     * .inputPath("$.guid")
-     * .outputPath("$.Payload")
-     * .build();
-     * Chain definition = submitJob.next(waitX).next(getStatus).next(new Choice(this, "Job
-     * Complete?").when(Condition.stringEquals("$.status", "FAILED"),
-     * jobFailed).when(Condition.stringEquals("$.status", "SUCCEEDED"), finalStatus).otherwise(waitX));
-     * StateMachine.Builder.create(this, "StateMachine")
-     * .definition(definition)
-     * .timeout(Duration.minutes(5))
-     * .comment("a super cool state machine")
+     * Fail fail = Fail.Builder.create(this, "Fail")
+     * .errorPath(JsonPath.stringAt("$.someError"))
+     * .causePath(JsonPath.stringAt("$.someCause"))
      * .build();
      * ```
      */
@@ -1116,14 +1130,88 @@ public object stepfunctions {
     }
 
     /**
+     * Configuration for processing a group of items in a single child workflow execution.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.stepfunctions.*;
+     * Object batchInput;
+     * ItemBatcher itemBatcher = ItemBatcher.Builder.create()
+     * .batchInput(batchInput)
+     * .maxInputBytesPerBatch(123)
+     * .maxInputBytesPerBatchPath("maxInputBytesPerBatchPath")
+     * .maxItemsPerBatch(123)
+     * .maxItemsPerBatchPath("maxItemsPerBatchPath")
+     * .build();
+     * ```
+     */
+    public inline fun itemBatcher(block: ItemBatcherDsl.() -> Unit = {}): ItemBatcher {
+        val builder = ItemBatcherDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Interface for ItemBatcher configuration properties.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.stepfunctions.*;
+     * Object batchInput;
+     * ItemBatcherProps itemBatcherProps = ItemBatcherProps.builder()
+     * .batchInput(batchInput)
+     * .maxInputBytesPerBatch(123)
+     * .maxInputBytesPerBatchPath("maxInputBytesPerBatchPath")
+     * .maxItemsPerBatch(123)
+     * .maxItemsPerBatchPath("maxItemsPerBatchPath")
+     * .build();
+     * ```
+     */
+    public inline fun itemBatcherProps(
+        block: ItemBatcherPropsDsl.() -> Unit = {}
+    ): ItemBatcherProps {
+        val builder = ItemBatcherPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Base interface for Item Reader configuration properties.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.s3.*;
+     * import software.amazon.awscdk.services.stepfunctions.*;
+     * Bucket bucket;
+     * ItemReaderProps itemReaderProps = ItemReaderProps.builder()
+     * .bucket(bucket)
+     * // the properties below are optional
+     * .maxItems(123)
+     * .build();
+     * ```
+     */
+    public inline fun itemReaderProps(block: ItemReaderPropsDsl.() -> Unit = {}): ItemReaderProps {
+        val builder = ItemReaderPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Defines what execution history events are logged and where they are logged.
      *
      * Example:
      * ```
      * import software.amazon.awscdk.services.logs.*;
      * LogGroup logGroup = new LogGroup(this, "MyLogGroup");
+     * Chain definition = Chain.start(new Pass(this, "Pass"));
      * StateMachine.Builder.create(this, "MyStateMachine")
-     * .definition(Chain.start(new Pass(this, "Pass")))
+     * .definitionBody(DefinitionBody.fromChainable(definition))
      * .logs(LogOptions.builder()
      * .destination(logGroup)
      * .level(LogLevel.ALL)
@@ -1151,8 +1239,20 @@ public object stepfunctions {
      * Map map = Map.Builder.create(this, "Map State")
      * .maxConcurrency(1)
      * .itemsPath(JsonPath.stringAt("$.inputForMap"))
+     * .itemSelector(Map.of(
+     * "item", JsonPath.stringAt("$.Map.Item.Value")))
+     * .resultPath("$.mapOutput")
      * .build();
-     * map.iterator(new Pass(this, "Pass State"));
+     * // The Map iterator can contain a IChainable, which can be an individual or multiple steps
+     * chained together.
+     * // Below example is with a Choice and Pass step
+     * Choice choice = new Choice(this, "Choice");
+     * Condition condition1 = Condition.stringEquals("$.item.status", "SUCCESS");
+     * Pass step1 = new Pass(this, "Step1");
+     * Pass step2 = new Pass(this, "Step2");
+     * Pass finish = new Pass(this, "Finish");
+     * Chain definition = choice.when(condition1, step1).otherwise(step2).afterwards().next(finish);
+     * map.itemProcessor(definition);
      * ```
      *
      * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-map-state.html)
@@ -1172,11 +1272,54 @@ public object stepfunctions {
      *
      * Example:
      * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.stepfunctions.*;
+     * Object itemSelector;
+     * Object resultSelector;
+     * MapBaseProps mapBaseProps = MapBaseProps.builder()
+     * .comment("comment")
+     * .inputPath("inputPath")
+     * .itemSelector(Map.of(
+     * "itemSelectorKey", itemSelector))
+     * .itemsPath("itemsPath")
+     * .maxConcurrency(123)
+     * .outputPath("outputPath")
+     * .resultPath("resultPath")
+     * .resultSelector(Map.of(
+     * "resultSelectorKey", resultSelector))
+     * .stateName("stateName")
+     * .build();
+     * ```
+     */
+    public inline fun mapBaseProps(block: MapBasePropsDsl.() -> Unit = {}): MapBaseProps {
+        val builder = MapBasePropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a Map state.
+     *
+     * Example:
+     * ```
      * Map map = Map.Builder.create(this, "Map State")
      * .maxConcurrency(1)
      * .itemsPath(JsonPath.stringAt("$.inputForMap"))
+     * .itemSelector(Map.of(
+     * "item", JsonPath.stringAt("$.Map.Item.Value")))
+     * .resultPath("$.mapOutput")
      * .build();
-     * map.iterator(new Pass(this, "Pass State"));
+     * // The Map iterator can contain a IChainable, which can be an individual or multiple steps
+     * chained together.
+     * // Below example is with a Choice and Pass step
+     * Choice choice = new Choice(this, "Choice");
+     * Condition condition1 = Condition.stringEquals("$.item.status", "SUCCESS");
+     * Pass step1 = new Pass(this, "Step1");
+     * Pass step2 = new Pass(this, "Step2");
+     * Pass finish = new Pass(this, "Finish");
+     * Chain definition = choice.when(condition1, step1).otherwise(step2).afterwards().next(finish);
+     * map.itemProcessor(definition);
      * ```
      */
     public inline fun mapProps(block: MapPropsDsl.() -> Unit = {}): MapProps {
@@ -1229,7 +1372,7 @@ public object stepfunctions {
      * MyJobProps().jobFlavor("medium")).prefixStates()).branch(new MyJob(this, "Slow", new
      * MyJobProps().jobFlavor("slow")).prefixStates());
      * StateMachine.Builder.create(this, "MyStateMachine")
-     * .definition(parallel)
+     * .definitionBody(DefinitionBody.fromChainable(parallel))
      * .build();
      * }
      * }
@@ -1261,6 +1404,7 @@ public object stepfunctions {
      * .resultPath("resultPath")
      * .resultSelector(Map.of(
      * "resultSelectorKey", resultSelector))
+     * .stateName("stateName")
      * .build();
      * ```
      */
@@ -1320,6 +1464,86 @@ public object stepfunctions {
     }
 
     /**
+     * Specifies the configuration for the processor Map state.
+     *
+     * Example:
+     * ```
+     * Map map = Map.Builder.create(this, "Map State")
+     * .maxConcurrency(1)
+     * .itemsPath(JsonPath.stringAt("$.inputForMap"))
+     * .itemSelector(Map.of(
+     * "item", JsonPath.stringAt("$.Map.Item.Value")))
+     * .resultPath("$.mapOutput")
+     * .build();
+     * map.itemProcessor(new Pass(this, "Pass State"), ProcessorConfig.builder()
+     * .mode(ProcessorMode.DISTRIBUTED)
+     * .executionType(ProcessorType.STANDARD)
+     * .build());
+     * ```
+     */
+    public inline fun processorConfig(block: ProcessorConfigDsl.() -> Unit = {}): ProcessorConfig {
+        val builder = ProcessorConfigDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Configuration for writing Distributed Map state results to S3.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.services.s3.*;
+     * // create a bucket
+     * Bucket bucket = new Bucket(this, "Bucket");
+     * DistributedMap distributedMap = DistributedMap.Builder.create(this, "Distributed Map State")
+     * .itemReader(S3JsonItemReader.Builder.create()
+     * .bucket(bucket)
+     * .key("my-key.json")
+     * .build())
+     * .resultWriter(ResultWriter.Builder.create()
+     * .bucket(bucket)
+     * .prefix("my-prefix")
+     * .build())
+     * .build();
+     * distributedMap.itemProcessor(new Pass(this, "Pass State"));
+     * ```
+     */
+    public inline fun resultWriter(block: ResultWriterDsl.() -> Unit = {}): ResultWriter {
+        val builder = ResultWriterDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Interface for Result Writer configuration properties.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.services.s3.*;
+     * // create a bucket
+     * Bucket bucket = new Bucket(this, "Bucket");
+     * DistributedMap distributedMap = DistributedMap.Builder.create(this, "Distributed Map State")
+     * .itemReader(S3JsonItemReader.Builder.create()
+     * .bucket(bucket)
+     * .key("my-key.json")
+     * .build())
+     * .resultWriter(ResultWriter.Builder.create()
+     * .bucket(bucket)
+     * .prefix("my-prefix")
+     * .build())
+     * .build();
+     * distributedMap.itemProcessor(new Pass(this, "Pass State"));
+     * ```
+     */
+    public inline fun resultWriterProps(
+        block: ResultWriterPropsDsl.() -> Unit = {}
+    ): ResultWriterProps {
+        val builder = ResultWriterPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Retry details.
      *
      * Example:
@@ -1332,8 +1556,12 @@ public object stepfunctions {
      * parallel.branch(shipItem);
      * parallel.branch(sendInvoice);
      * parallel.branch(restock);
-     * // Retry the whole workflow if something goes wrong
-     * parallel.addRetry(RetryProps.builder().maxAttempts(1).build());
+     * // Retry the whole workflow if something goes wrong with exponential backoff
+     * parallel.addRetry(RetryProps.builder()
+     * .maxAttempts(1)
+     * .maxDelay(Duration.seconds(5))
+     * .jitterStrategy(JitterType.FULL)
+     * .build());
      * // How to recover from errors
      * Pass sendFailureNotification = new Pass(this, "SendFailureNotification");
      * parallel.addCatch(sendFailureNotification);
@@ -1344,6 +1572,198 @@ public object stepfunctions {
      */
     public inline fun retryProps(block: RetryPropsDsl.() -> Unit = {}): RetryProps {
         val builder = RetryPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Item Reader configuration for iterating over items in a CSV file stored in S3.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.s3.*;
+     * import software.amazon.awscdk.services.stepfunctions.*;
+     * Bucket bucket;
+     * CsvHeaders csvHeaders;
+     * S3CsvItemReader s3CsvItemReader = S3CsvItemReader.Builder.create()
+     * .bucket(bucket)
+     * .key("key")
+     * // the properties below are optional
+     * .csvHeaders(csvHeaders)
+     * .maxItems(123)
+     * .build();
+     * ```
+     */
+    public inline fun s3CsvItemReader(block: S3CsvItemReaderDsl.() -> Unit = {}): S3CsvItemReader {
+        val builder = S3CsvItemReaderDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for configuring an Item Reader that iterates over items in a CSV file in S3.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.s3.*;
+     * import software.amazon.awscdk.services.stepfunctions.*;
+     * Bucket bucket;
+     * CsvHeaders csvHeaders;
+     * S3CsvItemReaderProps s3CsvItemReaderProps = S3CsvItemReaderProps.builder()
+     * .bucket(bucket)
+     * .key("key")
+     * // the properties below are optional
+     * .csvHeaders(csvHeaders)
+     * .maxItems(123)
+     * .build();
+     * ```
+     */
+    public inline fun s3CsvItemReaderProps(
+        block: S3CsvItemReaderPropsDsl.() -> Unit = {}
+    ): S3CsvItemReaderProps {
+        val builder = S3CsvItemReaderPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Base interface for Item Reader configuration properties the iterate over entries in a S3
+     * file.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.services.s3.*;
+     * // create a bucket
+     * Bucket bucket = new Bucket(this, "Bucket");
+     * DistributedMap distributedMap = DistributedMap.Builder.create(this, "Distributed Map State")
+     * .itemReader(S3JsonItemReader.Builder.create()
+     * .bucket(bucket)
+     * .key("my-key.json")
+     * .build())
+     * .resultWriter(ResultWriter.Builder.create()
+     * .bucket(bucket)
+     * .prefix("my-prefix")
+     * .build())
+     * .build();
+     * distributedMap.itemProcessor(new Pass(this, "Pass State"));
+     * ```
+     */
+    public inline fun s3FileItemReaderProps(
+        block: S3FileItemReaderPropsDsl.() -> Unit = {}
+    ): S3FileItemReaderProps {
+        val builder = S3FileItemReaderPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Item Reader configuration for iterating over items in a JSON array stored in a S3 file.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.services.s3.*;
+     * // create a bucket
+     * Bucket bucket = new Bucket(this, "Bucket");
+     * DistributedMap distributedMap = DistributedMap.Builder.create(this, "Distributed Map State")
+     * .itemReader(S3JsonItemReader.Builder.create()
+     * .bucket(bucket)
+     * .key("my-key.json")
+     * .build())
+     * .resultWriter(ResultWriter.Builder.create()
+     * .bucket(bucket)
+     * .prefix("my-prefix")
+     * .build())
+     * .build();
+     * distributedMap.itemProcessor(new Pass(this, "Pass State"));
+     * ```
+     */
+    public inline fun s3JsonItemReader(
+        block: S3JsonItemReaderDsl.() -> Unit = {}
+    ): S3JsonItemReader {
+        val builder = S3JsonItemReaderDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Item Reader configuration for iterating over items in a S3 inventory manifest file stored in
+     * S3.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.s3.*;
+     * import software.amazon.awscdk.services.stepfunctions.*;
+     * Bucket bucket;
+     * S3ManifestItemReader s3ManifestItemReader = S3ManifestItemReader.Builder.create()
+     * .bucket(bucket)
+     * .key("key")
+     * // the properties below are optional
+     * .maxItems(123)
+     * .build();
+     * ```
+     */
+    public inline fun s3ManifestItemReader(
+        block: S3ManifestItemReaderDsl.() -> Unit = {}
+    ): S3ManifestItemReader {
+        val builder = S3ManifestItemReaderDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Item Reader configuration for iterating over objects in an S3 bucket.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.s3.*;
+     * import software.amazon.awscdk.services.stepfunctions.*;
+     * Bucket bucket;
+     * S3ObjectsItemReader s3ObjectsItemReader = S3ObjectsItemReader.Builder.create()
+     * .bucket(bucket)
+     * // the properties below are optional
+     * .maxItems(123)
+     * .prefix("prefix")
+     * .build();
+     * ```
+     */
+    public inline fun s3ObjectsItemReader(
+        block: S3ObjectsItemReaderDsl.() -> Unit = {}
+    ): S3ObjectsItemReader {
+        val builder = S3ObjectsItemReaderDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for configuring an Item Reader that iterates over objects in an S3 bucket.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.s3.*;
+     * import software.amazon.awscdk.services.stepfunctions.*;
+     * Bucket bucket;
+     * S3ObjectsItemReaderProps s3ObjectsItemReaderProps = S3ObjectsItemReaderProps.builder()
+     * .bucket(bucket)
+     * // the properties below are optional
+     * .maxItems(123)
+     * .prefix("prefix")
+     * .build();
+     * ```
+     */
+    public inline fun s3ObjectsItemReaderProps(
+        block: S3ObjectsItemReaderPropsDsl.() -> Unit = {}
+    ): S3ObjectsItemReaderProps {
+        val builder = S3ObjectsItemReaderPropsDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -1366,6 +1786,7 @@ public object stepfunctions {
      * .resultSelector(Map.of(
      * "resultSelectorKey", resultSelector))
      * .stateId("stateId")
+     * .stateName("stateName")
      * .build();
      * ```
      */
@@ -1460,6 +1881,7 @@ public object stepfunctions {
      * .resultPath("resultPath")
      * .resultSelector(Map.of(
      * "resultSelectorKey", resultSelector))
+     * .stateName("stateName")
      * .build();
      * ```
      */
@@ -1501,6 +1923,7 @@ public object stepfunctions {
      * .comment("comment")
      * .inputPath("inputPath")
      * .outputPath("outputPath")
+     * .stateName("stateName")
      * .build();
      * ```
      */
@@ -1560,6 +1983,7 @@ public object stepfunctions {
      * .resultPath("resultPath")
      * .resultSelector(Map.of(
      * "resultSelectorKey", resultSelector))
+     * .stateName("stateName")
      * .taskTimeout(timeout)
      * .timeout(Duration.minutes(30))
      * .build();
@@ -1588,7 +2012,7 @@ public object stepfunctions {
      * EvaluateExpression createMessage = EvaluateExpression.Builder.create(this, "Create message")
      * // Note: this is a string inside a string.
      * .expression("`Now waiting ${$.waitSeconds} seconds...`")
-     * .runtime(Runtime.NODEJS_16_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .resultPath("$.message")
      * .build();
      * SnsPublish publishMessage = SnsPublish.Builder.create(this, "Publish message")
@@ -1627,7 +2051,7 @@ public object stepfunctions {
      * EvaluateExpression createMessage = EvaluateExpression.Builder.create(this, "Create message")
      * // Note: this is a string inside a string.
      * .expression("`Now waiting ${$.waitSeconds} seconds...`")
-     * .runtime(Runtime.NODEJS_16_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .resultPath("$.message")
      * .build();
      * SnsPublish publishMessage = SnsPublish.Builder.create(this, "Publish message")

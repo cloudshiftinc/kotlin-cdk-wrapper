@@ -111,7 +111,7 @@ internal class BuildableLastArgumentExtensionGenerator {
         builder.addStatement("val builder = %T()", builderClass.className.dslClassName())
         codeBlockBuilder
             .addStatement("builder.apply(block)")
-            .addStatement("return %L(%L)", method.name, args.joinToString(", "))
+            .addStatement("return %N(%L)", method.name, args.joinToString(", "))
         builder.addCode(codeBlockBuilder.build())
 
         return builder.build()

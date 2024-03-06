@@ -387,7 +387,13 @@ public class CfnHealthCheckHealthCheckConfigPropertyDsl {
         cdkBuilder.resourcePath(resourcePath)
     }
 
-    /** @param routingControlArn the value to be set. */
+    /**
+     * @param routingControlArn The Amazon Resource Name (ARN) for the Route 53 Application Recovery
+     *   Controller routing control. For more information about Route 53 Application Recovery
+     *   Controller, see
+     *   [Route 53 Application Recovery Controller Developer Guide.](https://docs.aws.amazon.com/r53recovery/latest/dg/what-is-route-53-recovery.html)
+     *   .
+     */
     public fun routingControlArn(routingControlArn: String) {
         cdkBuilder.routingControlArn(routingControlArn)
     }

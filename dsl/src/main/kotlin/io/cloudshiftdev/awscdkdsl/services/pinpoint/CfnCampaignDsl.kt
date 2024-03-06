@@ -660,22 +660,22 @@ public class CfnCampaignDsl(
     }
 
     /**
-     * The message configuration settings for the campaign.
+     * The message configuration settings for the treatment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-messageconfiguration)
      *
-     * @param messageConfiguration The message configuration settings for the campaign.
+     * @param messageConfiguration The message configuration settings for the treatment.
      */
     public fun messageConfiguration(messageConfiguration: IResolvable) {
         cdkBuilder.messageConfiguration(messageConfiguration)
     }
 
     /**
-     * The message configuration settings for the campaign.
+     * The message configuration settings for the treatment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-messageconfiguration)
      *
-     * @param messageConfiguration The message configuration settings for the campaign.
+     * @param messageConfiguration The message configuration settings for the treatment.
      */
     public fun messageConfiguration(
         messageConfiguration: CfnCampaign.MessageConfigurationProperty
@@ -711,22 +711,22 @@ public class CfnCampaignDsl(
     }
 
     /**
-     * The schedule settings for the campaign.
+     * The schedule settings for the treatment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-schedule)
      *
-     * @param schedule The schedule settings for the campaign.
+     * @param schedule The schedule settings for the treatment.
      */
     public fun schedule(schedule: IResolvable) {
         cdkBuilder.schedule(schedule)
     }
 
     /**
-     * The schedule settings for the campaign.
+     * The schedule settings for the treatment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-schedule)
      *
-     * @param schedule The schedule settings for the campaign.
+     * @param schedule The schedule settings for the treatment.
      */
     public fun schedule(schedule: CfnCampaign.ScheduleProperty) {
         cdkBuilder.schedule(schedule)
@@ -811,26 +811,22 @@ public class CfnCampaignDsl(
     }
 
     /**
-     * A custom description of the default treatment for the campaign.
+     * A custom description of the treatment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-treatmentdescription)
      *
-     * @param treatmentDescription A custom description of the default treatment for the campaign.
+     * @param treatmentDescription A custom description of the treatment.
      */
     public fun treatmentDescription(treatmentDescription: String) {
         cdkBuilder.treatmentDescription(treatmentDescription)
     }
 
     /**
-     * A custom name of the default treatment for the campaign, if the campaign has multiple
-     * treatments.
-     *
-     * A *treatment* is a variation of a campaign that's used for A/B testing.
+     * A custom name for the treatment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-treatmentname)
      *
-     * @param treatmentName A custom name of the default treatment for the campaign, if the campaign
-     *   has multiple treatments.
+     * @param treatmentName A custom name for the treatment.
      */
     public fun treatmentName(treatmentName: String) {
         cdkBuilder.treatmentName(treatmentName)

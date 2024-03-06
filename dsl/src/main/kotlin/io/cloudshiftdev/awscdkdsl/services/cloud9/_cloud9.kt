@@ -33,12 +33,12 @@ public object cloud9 {
      * import software.amazon.awscdk.services.cloud9.*;
      * CfnEnvironmentEC2 cfnEnvironmentEC2 = CfnEnvironmentEC2.Builder.create(this,
      * "MyCfnEnvironmentEC2")
+     * .imageId("imageId")
      * .instanceType("instanceType")
      * // the properties below are optional
      * .automaticStopTimeMinutes(123)
      * .connectionType("connectionType")
      * .description("description")
-     * .imageId("imageId")
      * .name("name")
      * .ownerArn("ownerArn")
      * .repositories(List.of(RepositoryProperty.builder()
@@ -74,12 +74,12 @@ public object cloud9 {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.cloud9.*;
      * CfnEnvironmentEC2Props cfnEnvironmentEC2Props = CfnEnvironmentEC2Props.builder()
+     * .imageId("imageId")
      * .instanceType("instanceType")
      * // the properties below are optional
      * .automaticStopTimeMinutes(123)
      * .connectionType("connectionType")
      * .description("description")
-     * .imageId("imageId")
      * .name("name")
      * .ownerArn("ownerArn")
      * .repositories(List.of(RepositoryProperty.builder()

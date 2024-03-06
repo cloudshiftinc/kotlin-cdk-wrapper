@@ -15,10 +15,6 @@ import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import software.amazon.awscdk.services.medialive.CfnChannel
 
 /**
- * The configuration of embedded captions in the output.
- *
- * The parent of this entity is CaptionDestinationSettings.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.

@@ -17,7 +17,7 @@ import kotlin.String
 import software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile
 
 /**
- * Configures how streaming sessions are backed up when launched from this launch profile.</p>.
+ * Configures how streaming sessions are backed up when launched from this launch profile.
  *
  * Example:
  * ```
@@ -40,13 +40,17 @@ public class CfnLaunchProfileStreamConfigurationSessionBackupPropertyDsl {
 
     /**
      * @param maxBackupsToRetain The maximum number of backups that each streaming session created
-     *   from this launch profile can have.</p>.
+     *   from this launch profile can have.
      */
     public fun maxBackupsToRetain(maxBackupsToRetain: Number) {
         cdkBuilder.maxBackupsToRetain(maxBackupsToRetain)
     }
 
-    /** @param mode the value to be set. */
+    /**
+     * @param mode Specifies how artists sessions are backed up. Configures backups for streaming
+     *   sessions launched with this launch profile. The default value is `DEACTIVATED` , which
+     *   means that backups are deactivated. To allow backups, set this value to `AUTOMATIC` .
+     */
     public fun mode(mode: String) {
         cdkBuilder.mode(mode)
     }

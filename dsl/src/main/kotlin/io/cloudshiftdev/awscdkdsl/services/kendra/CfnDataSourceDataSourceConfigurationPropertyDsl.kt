@@ -421,6 +421,19 @@ public class CfnDataSourceDataSourceConfigurationPropertyDsl {
     /**
      * @param s3Configuration Provides the configuration information to connect to an Amazon S3
      *   bucket as your data source.
+     *
+     * Amazon Kendra now supports an upgraded Amazon S3 connector.
+     *
+     * You must now use the
+     * [TemplateConfiguration](https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html)
+     * object instead of the `S3DataSourceConfiguration` object to configure your connector.
+     *
+     * Connectors configured using the older console and API architecture will continue to function
+     * as configured. However, you won't be able to edit or update them. If you want to edit or
+     * update your connector configuration, you must create a new connector.
+     *
+     * We recommended migrating your connector workflow to the upgraded version. Support for
+     * connectors configured using the older architecture is scheduled to end by June 2024.
      */
     public fun s3Configuration(s3Configuration: IResolvable) {
         cdkBuilder.s3Configuration(s3Configuration)
@@ -429,6 +442,19 @@ public class CfnDataSourceDataSourceConfigurationPropertyDsl {
     /**
      * @param s3Configuration Provides the configuration information to connect to an Amazon S3
      *   bucket as your data source.
+     *
+     * Amazon Kendra now supports an upgraded Amazon S3 connector.
+     *
+     * You must now use the
+     * [TemplateConfiguration](https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html)
+     * object instead of the `S3DataSourceConfiguration` object to configure your connector.
+     *
+     * Connectors configured using the older console and API architecture will continue to function
+     * as configured. However, you won't be able to edit or update them. If you want to edit or
+     * update your connector configuration, you must create a new connector.
+     *
+     * We recommended migrating your connector workflow to the upgraded version. Support for
+     * connectors configured using the older architecture is scheduled to end by June 2024.
      */
     public fun s3Configuration(s3Configuration: CfnDataSource.S3DataSourceConfigurationProperty) {
         cdkBuilder.s3Configuration(s3Configuration)

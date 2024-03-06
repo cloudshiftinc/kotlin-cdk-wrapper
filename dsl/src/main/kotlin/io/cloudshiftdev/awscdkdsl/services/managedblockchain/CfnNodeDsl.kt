@@ -66,7 +66,6 @@ public class CfnNodeDsl(
      * Ethereum public networks have the following `NetworkId` s:
      * * `n-ethereum-mainnet`
      * * `n-ethereum-goerli`
-     * * `n-ethereum-rinkeby`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-node.html#cfn-managedblockchain-node-networkid)
      *

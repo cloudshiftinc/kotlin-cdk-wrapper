@@ -229,8 +229,8 @@ public class CfnLoadBalancerDsl(
      * shifts traffic away from a deregistered or unhealthy instance.
      *
      * For more information, see
-     * [Configure Connection Draining](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/config-conn-drain.html)
-     * in the *Classic Load Balancers Guide* .
+     * [Configure connection draining](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/config-conn-drain.html)
+     * in the *User Guide for Classic Load Balancers* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancing-loadbalancer.html#cfn-elasticloadbalancing-loadbalancer-connectiondrainingpolicy)
      *
@@ -247,8 +247,8 @@ public class CfnLoadBalancerDsl(
      * shifts traffic away from a deregistered or unhealthy instance.
      *
      * For more information, see
-     * [Configure Connection Draining](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/config-conn-drain.html)
-     * in the *Classic Load Balancers Guide* .
+     * [Configure connection draining](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/config-conn-drain.html)
+     * in the *User Guide for Classic Load Balancers* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancing-loadbalancer.html#cfn-elasticloadbalancing-loadbalancer-connectiondrainingpolicy)
      *
@@ -268,8 +268,8 @@ public class CfnLoadBalancerDsl(
      *
      * By default, Elastic Load Balancing maintains a 60-second idle connection timeout for both
      * front-end and back-end connections of your load balancer. For more information, see
-     * [Configure Idle Connection Timeout](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/config-idle-timeout.html)
-     * in the *Classic Load Balancers Guide* .
+     * [Configure idle connection timeout](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/config-idle-timeout.html)
+     * in the *User Guide for Classic Load Balancers* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancing-loadbalancer.html#cfn-elasticloadbalancing-loadbalancer-connectionsettings)
      *
@@ -286,8 +286,8 @@ public class CfnLoadBalancerDsl(
      *
      * By default, Elastic Load Balancing maintains a 60-second idle connection timeout for both
      * front-end and back-end connections of your load balancer. For more information, see
-     * [Configure Idle Connection Timeout](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/config-idle-timeout.html)
-     * in the *Classic Load Balancers Guide* .
+     * [Configure idle connection timeout](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/config-idle-timeout.html)
+     * in the *User Guide for Classic Load Balancers* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancing-loadbalancer.html#cfn-elasticloadbalancing-loadbalancer-connectionsettings)
      *
@@ -303,8 +303,8 @@ public class CfnLoadBalancerDsl(
      * regardless of the Availability Zones.
      *
      * For more information, see
-     * [Configure Cross-Zone Load Balancing](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-disable-crosszone-lb.html)
-     * in the *Classic Load Balancers Guide* .
+     * [Configure cross-zone load balancing](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-disable-crosszone-lb.html)
+     * in the *User Guide for Classic Load Balancers* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancing-loadbalancer.html#cfn-elasticloadbalancing-loadbalancer-crosszone)
      *
@@ -320,8 +320,8 @@ public class CfnLoadBalancerDsl(
      * regardless of the Availability Zones.
      *
      * For more information, see
-     * [Configure Cross-Zone Load Balancing](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-disable-crosszone-lb.html)
-     * in the *Classic Load Balancers Guide* .
+     * [Configure cross-zone load balancing](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-disable-crosszone-lb.html)
+     * in the *User Guide for Classic Load Balancers* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancing-loadbalancer.html#cfn-elasticloadbalancing-loadbalancer-crosszone)
      *

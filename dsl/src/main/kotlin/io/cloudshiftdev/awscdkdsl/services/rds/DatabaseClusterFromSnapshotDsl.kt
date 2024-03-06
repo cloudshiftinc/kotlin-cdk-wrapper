@@ -244,6 +244,36 @@ public class DatabaseClusterFromSnapshotDsl(
     }
 
     /**
+     * Directory ID for associating the DB cluster with a specific Active Directory.
+     *
+     * Necessary for enabling Kerberos authentication. If specified, the DB cluster joins the given
+     * Active Directory, enabling Kerberos authentication. If not specified, the DB cluster will not
+     * be associated with any Active Directory, and Kerberos authentication will not be enabled.
+     *
+     * Default: - DB cluster is not associated with an Active Directory; Kerberos authentication is
+     * not enabled.
+     *
+     * @param domain Directory ID for associating the DB cluster with a specific Active Directory.
+     */
+    public fun domain(domain: String) {
+        cdkBuilder.domain(domain)
+    }
+
+    /**
+     * The IAM role to be used when making API calls to the Directory Service.
+     *
+     * The role needs the AWS-managed policy `AmazonRDSDirectoryServiceAccess` or equivalent.
+     *
+     * Default: - If `DatabaseClusterBaseProps.domain` is specified, a role with the
+     * `AmazonRDSDirectoryServiceAccess` policy is automatically created.
+     *
+     * @param domainRole The IAM role to be used when making API calls to the Directory Service.
+     */
+    public fun domainRole(domainRole: IRole) {
+        cdkBuilder.domainRole(domainRole)
+    }
+
+    /**
      * What kind of database to start.
      *
      * @param engine What kind of database to start.

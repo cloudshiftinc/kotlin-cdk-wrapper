@@ -14,6 +14,7 @@ package io.cloudshiftdev.awscdkdsl.services.events.targets
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import io.cloudshiftdev.awscdkdsl.common.MapBuilder
 import kotlin.Any
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.events.targets.AwsApiInput
@@ -46,7 +47,12 @@ public class AwsApiInputDsl {
         cdkBuilder.action(action)
     }
 
-    /** @param apiVersion API version to use for the service. */
+    /**
+     * @param apiVersion API version to use for the service.
+     * @deprecated the handler code was migrated to AWS SDK for JavaScript v3, which does not
+     *   support this feature anymore
+     */
+    @Deprecated(message = "deprecated in CDK")
     public fun apiVersion(apiVersion: String) {
         cdkBuilder.apiVersion(apiVersion)
     }

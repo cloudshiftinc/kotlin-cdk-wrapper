@@ -117,12 +117,30 @@ public inline fun CfnFunction.setEnvironment(
 }
 
 /**  */
+public inline fun CfnFunction.setEphemeralStorage(
+    block: CfnFunctionEphemeralStoragePropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnFunctionEphemeralStoragePropertyDsl()
+    builder.apply(block)
+    return setEphemeralStorage(builder.build())
+}
+
+/**  */
 public inline fun CfnFunction.setEventInvokeConfig(
     block: CfnFunctionEventInvokeConfigPropertyDsl.() -> Unit = {}
 ) {
     val builder = CfnFunctionEventInvokeConfigPropertyDsl()
     builder.apply(block)
     return setEventInvokeConfig(builder.build())
+}
+
+/**  */
+public inline fun CfnFunction.setFunctionUrlConfig(
+    block: CfnFunctionFunctionUrlConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnFunctionFunctionUrlConfigPropertyDsl()
+    builder.apply(block)
+    return setFunctionUrlConfig(builder.build())
 }
 
 /**  */

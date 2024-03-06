@@ -15,6 +15,7 @@ import kotlin.Unit
 import software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy
 import software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration
 import software.amazon.awscdk.services.networkfirewall.CfnRuleGroup
+import software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration
 
 /**
  * The traffic filtering behavior of a firewall policy, defined in a collection of stateless and
@@ -44,4 +45,13 @@ public inline fun CfnRuleGroup.setRuleGroup(
     val builder = CfnRuleGroupRuleGroupPropertyDsl()
     builder.apply(block)
     return setRuleGroup(builder.build())
+}
+
+/** The object that defines a TLS inspection configuration. */
+public inline fun CfnTLSInspectionConfiguration.setTlsInspectionConfiguration(
+    block: CfnTLSInspectionConfigurationTLSInspectionConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnTLSInspectionConfigurationTLSInspectionConfigurationPropertyDsl()
+    builder.apply(block)
+    return setTlsInspectionConfiguration(builder.build())
 }

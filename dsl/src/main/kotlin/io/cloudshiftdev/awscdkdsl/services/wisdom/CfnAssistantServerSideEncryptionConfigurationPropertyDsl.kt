@@ -16,7 +16,7 @@ import kotlin.String
 import software.amazon.awscdk.services.wisdom.CfnAssistant
 
 /**
- * The KMS key used for encryption.
+ * The configuration information for the customer managed key used for encryption.
  *
  * Example:
  * ```
@@ -37,7 +37,14 @@ public class CfnAssistantServerSideEncryptionConfigurationPropertyDsl {
         CfnAssistant.ServerSideEncryptionConfigurationProperty.builder()
 
     /**
-     * @param kmsKeyId The KMS key . For information about valid ID values, see
+     * @param kmsKeyId The customer managed key used for encryption. The customer managed key must
+     *   have a policy that allows `kms:CreateGrant` and `kms:DescribeKey` permissions to the IAM
+     *   identity using the key to invoke Wisdom. To use Wisdom with chat, the key policy must also
+     *   allow `kms:Decrypt` , `kms:GenerateDataKey*` , and `kms:DescribeKey` permissions to the
+     *   `connect.amazonaws.com` service principal. For more information about setting up a customer
+     *   managed key for Wisdom, see
+     *   [Enable Amazon Connect Wisdom for your instance](https://docs.aws.amazon.com/connect/latest/adminguide/enable-wisdom.html)
+     *   . For information about valid ID values, see
      *   [Key identifiers (KeyId)](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id)
      *   in the *AWS Key Management Service Developer Guide* .
      */

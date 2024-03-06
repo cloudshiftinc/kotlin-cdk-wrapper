@@ -90,7 +90,9 @@ public class CfnApplicationPropsDsl {
         cdkBuilder.name(name)
     }
 
-    /** @param roleArn the value to be set. */
+    /**
+     * @param roleArn The Amazon Resource Name (ARN) of the role associated with the application.
+     */
     public fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
     }

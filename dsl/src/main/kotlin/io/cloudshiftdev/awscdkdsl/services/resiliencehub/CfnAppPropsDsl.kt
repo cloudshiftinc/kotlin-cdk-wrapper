@@ -18,6 +18,7 @@ import kotlin.collections.Collection
 import kotlin.collections.Map
 import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.resiliencehub.CfnApp
 import software.amazon.awscdk.services.resiliencehub.CfnAppProps
 
 /**
@@ -49,6 +50,18 @@ import software.amazon.awscdk.services.resiliencehub.CfnAppProps
  * // the properties below are optional
  * .appAssessmentSchedule("appAssessmentSchedule")
  * .description("description")
+ * .eventSubscriptions(List.of(EventSubscriptionProperty.builder()
+ * .eventType("eventType")
+ * .name("name")
+ * // the properties below are optional
+ * .snsTopicArn("snsTopicArn")
+ * .build()))
+ * .permissionModel(PermissionModelProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .crossAccountRoleArns(List.of("crossAccountRoleArns"))
+ * .invokerRoleName("invokerRoleName")
+ * .build())
  * .resiliencyPolicyArn("resiliencyPolicyArn")
  * .tags(Map.of(
  * "tagsKey", "tags"))
@@ -61,6 +74,8 @@ import software.amazon.awscdk.services.resiliencehub.CfnAppProps
 public class CfnAppPropsDsl {
     private val cdkBuilder: CfnAppProps.Builder = CfnAppProps.builder()
 
+    private val _eventSubscriptions: MutableList<Any> = mutableListOf()
+
     private val _resourceMappings: MutableList<Any> = mutableListOf()
 
     /**
@@ -72,8 +87,9 @@ public class CfnAppPropsDsl {
 
     /**
      * @param appTemplateBody A JSON string that provides information about your application
-     *   structure. To learn more about the `appTemplateBody` template, see the sample template
-     *   provided in the *Examples* section.
+     *   structure. To learn more about the `appTemplateBody` template, see the sample template in
+     *   [Sample appTemplateBody template](https://docs.aws.amazon.com//resilience-hub/latest/APIReference/API_PutDraftAppVersionTemplate.html#API_PutDraftAppVersionTemplate_Examples)
+     *   .
      *
      * The `appTemplateBody` JSON string has the following structure:
      * * *`resources`*
@@ -95,28 +111,27 @@ public class CfnAppPropsDsl {
      * Each `logicalResourceId` object includes the following fields:
      * * `identifier`
      *
-     * The identifier of the resource.
+     * Identifier of the resource.
      *
      * Type: String
      * * `logicalStackName`
      *
-     * The name of the AWS CloudFormation stack this resource belongs to.
+     * Name of the AWS CloudFormation stack this resource belongs to.
      *
      * Type: String
      * * `resourceGroupName`
      *
-     * The name of the resource group this resource belongs to.
+     * Name of the resource group this resource belongs to.
      *
      * Type: String
      * * `terraformSourceName`
      *
-     * The name of the Terraform S3 state file this resource belongs to.
+     * Name of the Terraform S3 state file this resource belongs to.
      *
      * Type: String
      * * `eksSourceName`
      *
-     * The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs
-     * to.
+     * Name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.
      *
      * This parameter accepts values in "eks-cluster/namespace" format.
      *
@@ -128,7 +143,7 @@ public class CfnAppPropsDsl {
      * Type: string
      * * *`name`*
      *
-     * The name of the resource.
+     * Name of the resource.
      *
      * Type: String
      * * `additionalInfo`
@@ -155,7 +170,7 @@ public class CfnAppPropsDsl {
      * Each `appComponents` array item includes the following fields:
      * * `name`
      *
-     * The name of the AppComponent.
+     * Name of the AppComponent.
      *
      * Type: String
      * * `type`
@@ -213,23 +228,22 @@ public class CfnAppPropsDsl {
      * Type: String
      * * `logicalStackName`
      *
-     * The name of the AWS CloudFormation stack this resource belongs to.
+     * Name of the AWS CloudFormation stack this resource belongs to.
      *
      * Type: String
      * * `resourceGroupName`
      *
-     * The name of the resource group this resource belongs to.
+     * Name of the resource group this resource belongs to.
      *
      * Type: String
      * * `terraformSourceName`
      *
-     * The name of the Terraform S3 state file this resource belongs to.
+     * Name of the Terraform S3 state file this resource belongs to.
      *
      * Type: String
      * * `eksSourceName`
      *
-     * The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs
-     * to.
+     * Name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.
      *
      * This parameter accepts values in "eks-cluster/namespace" format.
      *
@@ -261,9 +275,52 @@ public class CfnAppPropsDsl {
         cdkBuilder.description(description)
     }
 
+    /**
+     * @param eventSubscriptions The list of events you would like to subscribe and get notification
+     *   for. Currently, AWS Resilience Hub supports notifications only for *Drift detected* and
+     *   *Scheduled assessment failure* events.
+     */
+    public fun eventSubscriptions(vararg eventSubscriptions: Any) {
+        _eventSubscriptions.addAll(listOf(*eventSubscriptions))
+    }
+
+    /**
+     * @param eventSubscriptions The list of events you would like to subscribe and get notification
+     *   for. Currently, AWS Resilience Hub supports notifications only for *Drift detected* and
+     *   *Scheduled assessment failure* events.
+     */
+    public fun eventSubscriptions(eventSubscriptions: Collection<Any>) {
+        _eventSubscriptions.addAll(eventSubscriptions)
+    }
+
+    /**
+     * @param eventSubscriptions The list of events you would like to subscribe and get notification
+     *   for. Currently, AWS Resilience Hub supports notifications only for *Drift detected* and
+     *   *Scheduled assessment failure* events.
+     */
+    public fun eventSubscriptions(eventSubscriptions: IResolvable) {
+        cdkBuilder.eventSubscriptions(eventSubscriptions)
+    }
+
     /** @param name Name for the application. */
     public fun name(name: String) {
         cdkBuilder.name(name)
+    }
+
+    /**
+     * @param permissionModel Defines the roles and credentials that AWS Resilience Hub would use
+     *   while creating the application, importing its resources, and running an assessment.
+     */
+    public fun permissionModel(permissionModel: IResolvable) {
+        cdkBuilder.permissionModel(permissionModel)
+    }
+
+    /**
+     * @param permissionModel Defines the roles and credentials that AWS Resilience Hub would use
+     *   while creating the application, importing its resources, and running an assessment.
+     */
+    public fun permissionModel(permissionModel: CfnApp.PermissionModelProperty) {
+        cdkBuilder.permissionModel(permissionModel)
     }
 
     /** @param resiliencyPolicyArn The Amazon Resource Name (ARN) of the resiliency policy. */
@@ -271,17 +328,17 @@ public class CfnAppPropsDsl {
         cdkBuilder.resiliencyPolicyArn(resiliencyPolicyArn)
     }
 
-    /** @param resourceMappings An array of ResourceMapping objects. */
+    /** @param resourceMappings An array of `ResourceMapping` objects. */
     public fun resourceMappings(vararg resourceMappings: Any) {
         _resourceMappings.addAll(listOf(*resourceMappings))
     }
 
-    /** @param resourceMappings An array of ResourceMapping objects. */
+    /** @param resourceMappings An array of `ResourceMapping` objects. */
     public fun resourceMappings(resourceMappings: Collection<Any>) {
         _resourceMappings.addAll(resourceMappings)
     }
 
-    /** @param resourceMappings An array of ResourceMapping objects. */
+    /** @param resourceMappings An array of `ResourceMapping` objects. */
     public fun resourceMappings(resourceMappings: IResolvable) {
         cdkBuilder.resourceMappings(resourceMappings)
     }
@@ -295,6 +352,7 @@ public class CfnAppPropsDsl {
     }
 
     public fun build(): CfnAppProps {
+        if (_eventSubscriptions.isNotEmpty()) cdkBuilder.eventSubscriptions(_eventSubscriptions)
         if (_resourceMappings.isNotEmpty()) cdkBuilder.resourceMappings(_resourceMappings)
         return cdkBuilder.build()
     }

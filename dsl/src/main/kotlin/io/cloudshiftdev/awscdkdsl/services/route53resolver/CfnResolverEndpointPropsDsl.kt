@@ -43,6 +43,7 @@ import software.amazon.awscdk.services.route53resolver.CfnResolverEndpointProps
  * .name("name")
  * .outpostArn("outpostArn")
  * .preferredInstanceType("preferredInstanceType")
+ * .protocols(List.of("protocols"))
  * .resolverEndpointType("resolverEndpointType")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -58,6 +59,8 @@ public class CfnResolverEndpointPropsDsl {
     private val cdkBuilder: CfnResolverEndpointProps.Builder = CfnResolverEndpointProps.builder()
 
     private val _ipAddresses: MutableList<Any> = mutableListOf()
+
+    private val _protocols: MutableList<String> = mutableListOf()
 
     private val _securityGroupIds: MutableList<String> = mutableListOf()
 
@@ -114,14 +117,54 @@ public class CfnResolverEndpointPropsDsl {
         cdkBuilder.name(name)
     }
 
-    /** @param outpostArn the value to be set. */
+    /** @param outpostArn The ARN (Amazon Resource Name) for the Outpost. */
     public fun outpostArn(outpostArn: String) {
         cdkBuilder.outpostArn(outpostArn)
     }
 
-    /** @param preferredInstanceType the value to be set. */
+    /** @param preferredInstanceType The Amazon EC2 instance type. */
     public fun preferredInstanceType(preferredInstanceType: String) {
         cdkBuilder.preferredInstanceType(preferredInstanceType)
+    }
+
+    /**
+     * @param protocols Protocols used for the endpoint. DoH-FIPS is applicable for inbound
+     *   endpoints only. For an inbound endpoint you can apply the protocols as follows:
+     * * Do53 and DoH in combination.
+     * * Do53 and DoH-FIPS in combination.
+     * * Do53 alone.
+     * * DoH alone.
+     * * DoH-FIPS alone.
+     * * None, which is treated as Do53.
+     *
+     * For an outbound endpoint you can apply the protocols as follows:
+     * * Do53 and DoH in combination.
+     * * Do53 alone.
+     * * DoH alone.
+     * * None, which is treated as Do53.
+     */
+    public fun protocols(vararg protocols: String) {
+        _protocols.addAll(listOf(*protocols))
+    }
+
+    /**
+     * @param protocols Protocols used for the endpoint. DoH-FIPS is applicable for inbound
+     *   endpoints only. For an inbound endpoint you can apply the protocols as follows:
+     * * Do53 and DoH in combination.
+     * * Do53 and DoH-FIPS in combination.
+     * * Do53 alone.
+     * * DoH alone.
+     * * DoH-FIPS alone.
+     * * None, which is treated as Do53.
+     *
+     * For an outbound endpoint you can apply the protocols as follows:
+     * * Do53 and DoH in combination.
+     * * Do53 alone.
+     * * DoH alone.
+     * * None, which is treated as Do53.
+     */
+    public fun protocols(protocols: Collection<String>) {
+        _protocols.addAll(protocols)
     }
 
     /** @param resolverEndpointType The Resolver endpoint IP address type. */
@@ -163,6 +206,7 @@ public class CfnResolverEndpointPropsDsl {
 
     public fun build(): CfnResolverEndpointProps {
         if (_ipAddresses.isNotEmpty()) cdkBuilder.ipAddresses(_ipAddresses)
+        if (_protocols.isNotEmpty()) cdkBuilder.protocols(_protocols)
         if (_securityGroupIds.isNotEmpty()) cdkBuilder.securityGroupIds(_securityGroupIds)
         if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
         return cdkBuilder.build()

@@ -30,7 +30,7 @@ import software.constructs.Construct
  * import software.amazon.awscdk.triggers.*;
  * Function func = Function.Builder.create(this, "MyFunction")
  * .handler("index.handler")
- * .runtime(Runtime.NODEJS_14_X)
+ * .runtime(Runtime.NODEJS_18_X)
  * .code(Code.fromInline("foo"))
  * .build();
  * Trigger.Builder.create(this, "MyTrigger")

@@ -315,6 +315,12 @@ public object lightsail {
      * .build())
      * .build())
      * .isDisabled(false)
+     * .privateRegistryAccess(PrivateRegistryAccessProperty.builder()
+     * .ecrImagePullerRole(EcrImagePullerRoleProperty.builder()
+     * .isActive(false)
+     * .principalArn("principalArn")
+     * .build())
+     * .build())
      * .publicDomainNames(List.of(PublicDomainNameProperty.builder()
      * .certificateName("certificateName")
      * .domainNames(List.of("domainNames"))
@@ -428,6 +434,31 @@ public object lightsail {
     }
 
     /**
+     * Describes the IAM role that you can use to grant a Lightsail container service access to
+     * Amazon ECR private repositories.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.lightsail.*;
+     * EcrImagePullerRoleProperty ecrImagePullerRoleProperty = EcrImagePullerRoleProperty.builder()
+     * .isActive(false)
+     * .principalArn("principalArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-ecrimagepullerrole.html)
+     */
+    public inline fun cfnContainerEcrImagePullerRoleProperty(
+        block: CfnContainerEcrImagePullerRolePropertyDsl.() -> Unit = {}
+    ): CfnContainer.EcrImagePullerRoleProperty {
+        val builder = CfnContainerEcrImagePullerRolePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * `EnvironmentVariable` is a property of the
      * [Container](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-container.html)
      * property. It describes the environment variables of a container on a container service which
@@ -514,6 +545,39 @@ public object lightsail {
     }
 
     /**
+     * Describes the configuration for an Amazon Lightsail container service to access private
+     * container image repositories, such as Amazon Elastic Container Registry ( Amazon ECR )
+     * private repositories.
+     *
+     * For more information, see
+     * [Configuring access to an Amazon ECR private repository for an Amazon Lightsail container service](https://docs.aws.amazon.com/lightsail/latest/userguide/amazon-lightsail-container-service-ecr-private-repo-access)
+     * in the *Amazon Lightsail Developer Guide* .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.lightsail.*;
+     * PrivateRegistryAccessProperty privateRegistryAccessProperty =
+     * PrivateRegistryAccessProperty.builder()
+     * .ecrImagePullerRole(EcrImagePullerRoleProperty.builder()
+     * .isActive(false)
+     * .principalArn("principalArn")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-privateregistryaccess.html)
+     */
+    public inline fun cfnContainerPrivateRegistryAccessProperty(
+        block: CfnContainerPrivateRegistryAccessPropertyDsl.() -> Unit = {}
+    ): CfnContainer.PrivateRegistryAccessProperty {
+        val builder = CfnContainerPrivateRegistryAccessPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Properties for defining a `CfnContainer`.
      *
      * Example:
@@ -554,6 +618,12 @@ public object lightsail {
      * .build())
      * .build())
      * .isDisabled(false)
+     * .privateRegistryAccess(PrivateRegistryAccessProperty.builder()
+     * .ecrImagePullerRole(EcrImagePullerRoleProperty.builder()
+     * .isActive(false)
+     * .principalArn("principalArn")
+     * .build())
+     * .build())
      * .publicDomainNames(List.of(PublicDomainNameProperty.builder()
      * .certificateName("certificateName")
      * .domainNames(List.of("domainNames"))
@@ -874,7 +944,7 @@ public object lightsail {
     }
 
     /**
-     * Location of a resource.
+     * The AWS Region and Availability Zone where the disk is located.
      *
      * Example:
      * ```
@@ -1357,7 +1427,9 @@ public object lightsail {
      * .toPort(123)
      * .build()))
      * // the properties below are optional
-     * .monthlyTransfer(123)
+     * .monthlyTransfer(MonthlyTransferProperty.builder()
+     * .gbPerMonthAllocated("gbPerMonthAllocated")
+     * .build())
      * .build())
      * .state(StateProperty.builder()
      * .code(123)
@@ -1583,7 +1655,9 @@ public object lightsail {
      * .toPort(123)
      * .build()))
      * // the properties below are optional
-     * .monthlyTransfer(123)
+     * .monthlyTransfer(MonthlyTransferProperty.builder()
+     * .gbPerMonthAllocated("gbPerMonthAllocated")
+     * .build())
      * .build();
      * ```
      *
@@ -1686,7 +1760,9 @@ public object lightsail {
      * .toPort(123)
      * .build()))
      * // the properties below are optional
-     * .monthlyTransfer(123)
+     * .monthlyTransfer(MonthlyTransferProperty.builder()
+     * .gbPerMonthAllocated("gbPerMonthAllocated")
+     * .build())
      * .build())
      * .state(StateProperty.builder()
      * .code(123)

@@ -13,6 +13,8 @@ package io.cloudshiftdev.awscdkdsl.services.redshift
 
 import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import io.cloudshiftdev.awscdkdsl.common.MapBuilder
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -32,11 +34,11 @@ import software.amazon.awscdk.services.redshift.CfnClusterProps
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.redshift.*;
+ * Object namespaceResourcePolicy;
  * CfnClusterProps cfnClusterProps = CfnClusterProps.builder()
  * .clusterType("clusterType")
  * .dbName("dbName")
  * .masterUsername("masterUsername")
- * .masterUserPassword("masterUserPassword")
  * .nodeType("nodeType")
  * // the properties below are optional
  * .allowVersionUpgrade(false)
@@ -69,11 +71,15 @@ import software.amazon.awscdk.services.redshift.CfnClusterProps
  * .kmsKeyId("kmsKeyId")
  * .loggingProperties(LoggingPropertiesProperty.builder()
  * .bucketName("bucketName")
- * // the properties below are optional
  * .s3KeyPrefix("s3KeyPrefix")
  * .build())
  * .maintenanceTrackName("maintenanceTrackName")
+ * .manageMasterPassword(false)
  * .manualSnapshotRetentionPeriod(123)
+ * .masterPasswordSecretKmsKeyId("masterPasswordSecretKmsKeyId")
+ * .masterUserPassword("masterUserPassword")
+ * .multiAz(false)
+ * .namespaceResourcePolicy(namespaceResourcePolicy)
  * .numberOfNodes(123)
  * .ownerAccount("ownerAccount")
  * .port(123)
@@ -511,6 +517,26 @@ public class CfnClusterPropsDsl {
     }
 
     /**
+     * @param manageMasterPassword If `true` , Amazon Redshift uses AWS Secrets Manager to manage
+     *   this cluster's admin credentials. You can't use `MasterUserPassword` if
+     *   `ManageMasterPassword` is true. If `ManageMasterPassword` is false or not set, Amazon
+     *   Redshift uses `MasterUserPassword` for the admin user account's password.
+     */
+    public fun manageMasterPassword(manageMasterPassword: Boolean) {
+        cdkBuilder.manageMasterPassword(manageMasterPassword)
+    }
+
+    /**
+     * @param manageMasterPassword If `true` , Amazon Redshift uses AWS Secrets Manager to manage
+     *   this cluster's admin credentials. You can't use `MasterUserPassword` if
+     *   `ManageMasterPassword` is true. If `ManageMasterPassword` is false or not set, Amazon
+     *   Redshift uses `MasterUserPassword` for the admin user account's password.
+     */
+    public fun manageMasterPassword(manageMasterPassword: IResolvable) {
+        cdkBuilder.manageMasterPassword(manageMasterPassword)
+    }
+
+    /**
      * @param manualSnapshotRetentionPeriod The default number of days to retain a manual snapshot.
      *   If the value is -1, the snapshot is retained indefinitely. This setting doesn't change the
      *   retention period of existing snapshots.
@@ -522,8 +548,20 @@ public class CfnClusterPropsDsl {
     }
 
     /**
+     * @param masterPasswordSecretKmsKeyId The ID of the AWS Key Management Service (KMS) key used
+     *   to encrypt and store the cluster's admin credentials secret. You can only use this
+     *   parameter if `ManageMasterPassword` is true.
+     */
+    public fun masterPasswordSecretKmsKeyId(masterPasswordSecretKmsKeyId: String) {
+        cdkBuilder.masterPasswordSecretKmsKeyId(masterPasswordSecretKmsKeyId)
+    }
+
+    /**
      * @param masterUserPassword The password associated with the admin user account for the cluster
-     *   that is being created. Constraints:
+     *   that is being created. You can't use `MasterUserPassword` if `ManageMasterPassword` is
+     *   `true` .
+     *
+     * Constraints:
      * * Must be between 8 and 64 characters in length.
      * * Must contain at least one uppercase letter.
      * * Must contain at least one lowercase letter.
@@ -549,6 +587,34 @@ public class CfnClusterPropsDsl {
      */
     public fun masterUsername(masterUsername: String) {
         cdkBuilder.masterUsername(masterUsername)
+    }
+
+    /**
+     * @param multiAz A boolean indicating whether Amazon Redshift should deploy the cluster in two
+     *   Availability Zones. The default is false.
+     */
+    public fun multiAz(multiAz: Boolean) {
+        cdkBuilder.multiAz(multiAz)
+    }
+
+    /**
+     * @param multiAz A boolean indicating whether Amazon Redshift should deploy the cluster in two
+     *   Availability Zones. The default is false.
+     */
+    public fun multiAz(multiAz: IResolvable) {
+        cdkBuilder.multiAz(multiAz)
+    }
+
+    /** @param namespaceResourcePolicy The policy that is attached to a resource. */
+    public fun namespaceResourcePolicy(namespaceResourcePolicy: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(namespaceResourcePolicy)
+        cdkBuilder.namespaceResourcePolicy(builder.map)
+    }
+
+    /** @param namespaceResourcePolicy The policy that is attached to a resource. */
+    public fun namespaceResourcePolicy(namespaceResourcePolicy: Any) {
+        cdkBuilder.namespaceResourcePolicy(namespaceResourcePolicy)
     }
 
     /**
@@ -634,7 +700,7 @@ public class CfnClusterPropsDsl {
 
     /**
      * @param resourceAction The Amazon Redshift operation to be performed. Supported operations are
-     *   `pause-cluster` and `resume-cluster` .
+     *   `pause-cluster` , `resume-cluster` , and `failover-primary-compute` .
      */
     public fun resourceAction(resourceAction: String) {
         cdkBuilder.resourceAction(resourceAction)

@@ -12,18 +12,22 @@
 package io.cloudshiftdev.awscdkdsl.services.imagebuilder
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
+import kotlin.collections.Collection
 import kotlin.collections.Map
+import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.imagebuilder.CfnImage
 import software.constructs.Construct
 
 /**
- * An image build version.
+ * Creates a new image.
  *
- * An image is a customized, secure, and up-to-date “golden” server image that is pre-installed and
- * pre-configured with software and settings to meet specific IT standards.
+ * This request will create a new image along with all of the configured output resources defined in
+ * the distribution configuration. You must specify exactly one recipe for your image, using either
+ * a ContainerRecipeArn or an ImageRecipeArn.
  *
  * Example:
  * ```
@@ -36,6 +40,7 @@ import software.constructs.Construct
  * .containerRecipeArn("containerRecipeArn")
  * .distributionConfigurationArn("distributionConfigurationArn")
  * .enhancedImageMetadataEnabled(false)
+ * .executionRole("executionRole")
  * .imageRecipeArn("imageRecipeArn")
  * .imageScanningConfiguration(ImageScanningConfigurationProperty.builder()
  * .ecrConfiguration(EcrConfigurationProperty.builder()
@@ -50,6 +55,15 @@ import software.constructs.Construct
  * .build())
  * .tags(Map.of(
  * "tagsKey", "tags"))
+ * .workflows(List.of(WorkflowConfigurationProperty.builder()
+ * .onFailure("onFailure")
+ * .parallelGroup("parallelGroup")
+ * .parameters(List.of(WorkflowParameterProperty.builder()
+ * .name("name")
+ * .value(List.of("value"))
+ * .build()))
+ * .workflowArn("workflowArn")
+ * .build()))
  * .build();
  * ```
  *
@@ -62,86 +76,109 @@ public class CfnImageDsl(
 ) {
     private val cdkBuilder: CfnImage.Builder = CfnImage.Builder.create(scope, id)
 
+    private val _workflows: MutableList<Any> = mutableListOf()
+
     /**
-     * The Amazon Resource Name (ARN) of the container recipe that is used for this pipeline.
+     * The Amazon Resource Name (ARN) of the container recipe that defines how images are configured
+     * and tested.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-containerrecipearn)
      *
-     * @param containerRecipeArn The Amazon Resource Name (ARN) of the container recipe that is used
-     *   for this pipeline.
+     * @param containerRecipeArn The Amazon Resource Name (ARN) of the container recipe that defines
+     *   how images are configured and tested.
      */
     public fun containerRecipeArn(containerRecipeArn: String) {
         cdkBuilder.containerRecipeArn(containerRecipeArn)
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the distribution configuration.
+     * The Amazon Resource Name (ARN) of the distribution configuration that defines and configures
+     * the outputs of your pipeline.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-distributionconfigurationarn)
      *
      * @param distributionConfigurationArn The Amazon Resource Name (ARN) of the distribution
-     *   configuration.
+     *   configuration that defines and configures the outputs of your pipeline.
      */
     public fun distributionConfigurationArn(distributionConfigurationArn: String) {
         cdkBuilder.distributionConfigurationArn(distributionConfigurationArn)
     }
 
     /**
-     * Indicates whether Image Builder collects additional information about the image, such as the
-     * operating system (OS) version and package list.
+     * Collects additional information about the image being created, including the operating system
+     * (OS) version and package list.
+     *
+     * This information is used to enhance the overall experience of using EC2 Image Builder.
+     * Enabled by default.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-enhancedimagemetadataenabled)
      *
-     * @param enhancedImageMetadataEnabled Indicates whether Image Builder collects additional
-     *   information about the image, such as the operating system (OS) version and package list.
+     * @param enhancedImageMetadataEnabled Collects additional information about the image being
+     *   created, including the operating system (OS) version and package list.
      */
     public fun enhancedImageMetadataEnabled(enhancedImageMetadataEnabled: Boolean) {
         cdkBuilder.enhancedImageMetadataEnabled(enhancedImageMetadataEnabled)
     }
 
     /**
-     * Indicates whether Image Builder collects additional information about the image, such as the
-     * operating system (OS) version and package list.
+     * Collects additional information about the image being created, including the operating system
+     * (OS) version and package list.
+     *
+     * This information is used to enhance the overall experience of using EC2 Image Builder.
+     * Enabled by default.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-enhancedimagemetadataenabled)
      *
-     * @param enhancedImageMetadataEnabled Indicates whether Image Builder collects additional
-     *   information about the image, such as the operating system (OS) version and package list.
+     * @param enhancedImageMetadataEnabled Collects additional information about the image being
+     *   created, including the operating system (OS) version and package list.
      */
     public fun enhancedImageMetadataEnabled(enhancedImageMetadataEnabled: IResolvable) {
         cdkBuilder.enhancedImageMetadataEnabled(enhancedImageMetadataEnabled)
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the image recipe.
+     * The name or Amazon Resource Name (ARN) for the IAM role you create that grants Image Builder
+     * access to perform workflow actions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-executionrole)
+     *
+     * @param executionRole The name or Amazon Resource Name (ARN) for the IAM role you create that
+     *   grants Image Builder access to perform workflow actions.
+     */
+    public fun executionRole(executionRole: String) {
+        cdkBuilder.executionRole(executionRole)
+    }
+
+    /**
+     * The Amazon Resource Name (ARN) of the image recipe that defines how images are configured,
+     * tested, and assessed.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-imagerecipearn)
      *
-     * @param imageRecipeArn The Amazon Resource Name (ARN) of the image recipe.
+     * @param imageRecipeArn The Amazon Resource Name (ARN) of the image recipe that defines how
+     *   images are configured, tested, and assessed.
      */
     public fun imageRecipeArn(imageRecipeArn: String) {
         cdkBuilder.imageRecipeArn(imageRecipeArn)
     }
 
     /**
-     * Contains settings for Image Builder image resource and container image scans.
+     * Contains settings for vulnerability scans.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-imagescanningconfiguration)
      *
-     * @param imageScanningConfiguration Contains settings for Image Builder image resource and
-     *   container image scans.
+     * @param imageScanningConfiguration Contains settings for vulnerability scans.
      */
     public fun imageScanningConfiguration(imageScanningConfiguration: IResolvable) {
         cdkBuilder.imageScanningConfiguration(imageScanningConfiguration)
     }
 
     /**
-     * Contains settings for Image Builder image resource and container image scans.
+     * Contains settings for vulnerability scans.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-imagescanningconfiguration)
      *
-     * @param imageScanningConfiguration Contains settings for Image Builder image resource and
-     *   container image scans.
+     * @param imageScanningConfiguration Contains settings for vulnerability scans.
      */
     public fun imageScanningConfiguration(
         imageScanningConfiguration: CfnImage.ImageScanningConfigurationProperty
@@ -150,26 +187,22 @@ public class CfnImageDsl(
     }
 
     /**
-     * The configuration settings for your image test components, which includes a toggle that
-     * allows you to turn off tests, and a timeout setting.
+     * The image tests configuration of the image.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-imagetestsconfiguration)
      *
-     * @param imageTestsConfiguration The configuration settings for your image test components,
-     *   which includes a toggle that allows you to turn off tests, and a timeout setting.
+     * @param imageTestsConfiguration The image tests configuration of the image.
      */
     public fun imageTestsConfiguration(imageTestsConfiguration: IResolvable) {
         cdkBuilder.imageTestsConfiguration(imageTestsConfiguration)
     }
 
     /**
-     * The configuration settings for your image test components, which includes a toggle that
-     * allows you to turn off tests, and a timeout setting.
+     * The image tests configuration of the image.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-imagetestsconfiguration)
      *
-     * @param imageTestsConfiguration The configuration settings for your image test components,
-     *   which includes a toggle that allows you to turn off tests, and a timeout setting.
+     * @param imageTestsConfiguration The image tests configuration of the image.
      */
     public fun imageTestsConfiguration(
         imageTestsConfiguration: CfnImage.ImageTestsConfigurationProperty
@@ -178,13 +211,13 @@ public class CfnImageDsl(
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the infrastructure configuration associated with this image
-     * pipeline.
+     * The Amazon Resource Name (ARN) of the infrastructure configuration that defines the
+     * environment in which your image will be built and tested.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-infrastructureconfigurationarn)
      *
      * @param infrastructureConfigurationArn The Amazon Resource Name (ARN) of the infrastructure
-     *   configuration associated with this image pipeline.
+     *   configuration that defines the environment in which your image will be built and tested.
      */
     public fun infrastructureConfigurationArn(infrastructureConfigurationArn: String) {
         cdkBuilder.infrastructureConfigurationArn(infrastructureConfigurationArn)
@@ -201,5 +234,41 @@ public class CfnImageDsl(
         cdkBuilder.tags(tags)
     }
 
-    public fun build(): CfnImage = cdkBuilder.build()
+    /**
+     * Contains an array of workflow configuration objects.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-workflows)
+     *
+     * @param workflows Contains an array of workflow configuration objects.
+     */
+    public fun workflows(vararg workflows: Any) {
+        _workflows.addAll(listOf(*workflows))
+    }
+
+    /**
+     * Contains an array of workflow configuration objects.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-workflows)
+     *
+     * @param workflows Contains an array of workflow configuration objects.
+     */
+    public fun workflows(workflows: Collection<Any>) {
+        _workflows.addAll(workflows)
+    }
+
+    /**
+     * Contains an array of workflow configuration objects.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-workflows)
+     *
+     * @param workflows Contains an array of workflow configuration objects.
+     */
+    public fun workflows(workflows: IResolvable) {
+        cdkBuilder.workflows(workflows)
+    }
+
+    public fun build(): CfnImage {
+        if (_workflows.isNotEmpty()) cdkBuilder.workflows(_workflows)
+        return cdkBuilder.build()
+    }
 }

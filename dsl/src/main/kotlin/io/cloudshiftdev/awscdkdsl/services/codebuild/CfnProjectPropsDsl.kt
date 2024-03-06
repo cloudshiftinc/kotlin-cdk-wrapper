@@ -58,6 +58,9 @@ import software.amazon.awscdk.services.codebuild.CfnProjectProps
  * // the properties below are optional
  * .type("type")
  * .build()))
+ * .fleet(ProjectFleetProperty.builder()
+ * .fleetArn("fleetArn")
+ * .build())
  * .imagePullCredentialsType("imagePullCredentialsType")
  * .privilegedMode(false)
  * .registryCredential(RegistryCredentialProperty.builder()

@@ -57,23 +57,23 @@ public class CfnDeliveryStreamOrcSerDePropertyDsl {
     /**
      * @param blockSizeBytes The Hadoop Distributed File System (HDFS) block size. This is useful if
      *   you intend to copy the data from Amazon S3 to HDFS before querying. The default is 256 MiB
-     *   and the minimum is 64 MiB. Kinesis Data Firehose uses this value for padding calculations.
+     *   and the minimum is 64 MiB. Firehose uses this value for padding calculations.
      */
     public fun blockSizeBytes(blockSizeBytes: Number) {
         cdkBuilder.blockSizeBytes(blockSizeBytes)
     }
 
     /**
-     * @param bloomFilterColumns The column names for which you want Kinesis Data Firehose to create
-     *   bloom filters. The default is `null` .
+     * @param bloomFilterColumns The column names for which you want Firehose to create bloom
+     *   filters. The default is `null` .
      */
     public fun bloomFilterColumns(vararg bloomFilterColumns: String) {
         _bloomFilterColumns.addAll(listOf(*bloomFilterColumns))
     }
 
     /**
-     * @param bloomFilterColumns The column names for which you want Kinesis Data Firehose to create
-     *   bloom filters. The default is `null` .
+     * @param bloomFilterColumns The column names for which you want Firehose to create bloom
+     *   filters. The default is `null` .
      */
     public fun bloomFilterColumns(bloomFilterColumns: Collection<String>) {
         _bloomFilterColumns.addAll(bloomFilterColumns)

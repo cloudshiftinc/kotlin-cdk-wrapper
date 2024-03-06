@@ -24,7 +24,7 @@ import software.amazon.awscdk.services.rds.AuroraMysqlEngineVersion
  * ```
  * Vpc vpc;
  * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
- * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_2_08_1).build()))
+ * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_3_01_0).build()))
  * .writer(ClusterInstance.provisioned("writer", ProvisionedClusterInstanceProps.builder()
  * .instanceType(InstanceType.of(InstanceClass.R6G, InstanceSize.XLARGE4))
  * .build()))

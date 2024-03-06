@@ -52,6 +52,7 @@ import software.amazon.awscdk.services.docdb.CfnDBClusterProps
  * .snapshotIdentifier("snapshotIdentifier")
  * .sourceDbClusterIdentifier("sourceDbClusterIdentifier")
  * .storageEncrypted(false)
+ * .storageType("storageType")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -268,12 +269,34 @@ public class CfnDBClusterPropsDsl {
         cdkBuilder.preferredMaintenanceWindow(preferredMaintenanceWindow)
     }
 
-    /** @param restoreToTime the value to be set. */
+    /**
+     * @param restoreToTime The date and time to restore the cluster to. Valid values: A time in
+     *   Universal Coordinated Time (UTC) format.
+     *
+     * Constraints:
+     * * Must be before the latest restorable time for the instance.
+     * * Must be specified if the `UseLatestRestorableTime` parameter is not provided.
+     * * Cannot be specified if the `UseLatestRestorableTime` parameter is `true` .
+     * * Cannot be specified if the `RestoreType` parameter is `copy-on-write` .
+     *
+     * Example: `2015-03-07T23:45:00Z`
+     */
     public fun restoreToTime(restoreToTime: String) {
         cdkBuilder.restoreToTime(restoreToTime)
     }
 
-    /** @param restoreType the value to be set. */
+    /**
+     * @param restoreType The type of restore to be performed. You can specify one of the following
+     *   values:.
+     * * `full-copy` - The new DB cluster is restored as a full copy of the source DB cluster.
+     * * `copy-on-write` - The new DB cluster is restored as a clone of the source DB cluster.
+     *
+     * Constraints: You can't specify `copy-on-write` if the engine version of the source DB cluster
+     * is earlier than 1.11.
+     *
+     * If you don't specify a `RestoreType` value, then the new DB cluster is restored as a full
+     * copy of the source DB cluster.
+     */
     public fun restoreType(restoreType: String) {
         cdkBuilder.restoreType(restoreType)
     }
@@ -290,7 +313,11 @@ public class CfnDBClusterPropsDsl {
         cdkBuilder.snapshotIdentifier(snapshotIdentifier)
     }
 
-    /** @param sourceDbClusterIdentifier the value to be set. */
+    /**
+     * @param sourceDbClusterIdentifier The identifier of the source cluster from which to restore.
+     *   Constraints:
+     * * Must match the identifier of an existing `DBCluster` .
+     */
     public fun sourceDbClusterIdentifier(sourceDbClusterIdentifier: String) {
         cdkBuilder.sourceDbClusterIdentifier(sourceDbClusterIdentifier)
     }
@@ -305,6 +332,23 @@ public class CfnDBClusterPropsDsl {
         cdkBuilder.storageEncrypted(storageEncrypted)
     }
 
+    /**
+     * @param storageType The storage type to associate with the DB cluster. For information on
+     *   storage types for Amazon DocumentDB clusters, see Cluster storage configurations in the
+     *   *Amazon DocumentDB Developer Guide* .
+     *
+     * Valid values for storage type - `standard | iopt1`
+     *
+     * Default value is `standard`
+     *
+     * When you create a DocumentDB DB cluster with the storage type set to `iopt1` , the storage
+     * type is returned in the response. The storage type isn't returned when you set it to
+     * `standard` .
+     */
+    public fun storageType(storageType: String) {
+        cdkBuilder.storageType(storageType)
+    }
+
     /** @param tags The tags to be assigned to the cluster. */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
@@ -315,12 +359,22 @@ public class CfnDBClusterPropsDsl {
         _tags.addAll(tags)
     }
 
-    /** @param useLatestRestorableTime the value to be set. */
+    /**
+     * @param useLatestRestorableTime A value that is set to `true` to restore the cluster to the
+     *   latest restorable backup time, and `false` otherwise. Default: `false`
+     *
+     * Constraints: Cannot be specified if the `RestoreToTime` parameter is provided.
+     */
     public fun useLatestRestorableTime(useLatestRestorableTime: Boolean) {
         cdkBuilder.useLatestRestorableTime(useLatestRestorableTime)
     }
 
-    /** @param useLatestRestorableTime the value to be set. */
+    /**
+     * @param useLatestRestorableTime A value that is set to `true` to restore the cluster to the
+     *   latest restorable backup time, and `false` otherwise. Default: `false`
+     *
+     * Constraints: Cannot be specified if the `RestoreToTime` parameter is provided.
+     */
     public fun useLatestRestorableTime(useLatestRestorableTime: IResolvable) {
         cdkBuilder.useLatestRestorableTime(useLatestRestorableTime)
     }

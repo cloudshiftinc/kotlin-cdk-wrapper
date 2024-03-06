@@ -37,7 +37,6 @@ import software.constructs.Construct
  * import software.amazon.awscdk.services.ec2.*;
  * CfnPrefixList cfnPrefixList = CfnPrefixList.Builder.create(this, "MyCfnPrefixList")
  * .addressFamily("addressFamily")
- * .maxEntries(123)
  * .prefixListName("prefixListName")
  * // the properties below are optional
  * .entries(List.of(EntryProperty.builder()
@@ -45,6 +44,7 @@ import software.constructs.Construct
  * // the properties below are optional
  * .description("description")
  * .build()))
+ * .maxEntries(123)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")

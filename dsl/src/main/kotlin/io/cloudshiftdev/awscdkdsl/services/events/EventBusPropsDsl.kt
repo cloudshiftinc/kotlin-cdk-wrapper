@@ -21,17 +21,18 @@ import software.amazon.awscdk.services.events.EventBusProps
  * Example:
  * ```
  * import software.amazon.awscdk.services.events.*;
- * EventBus myEventBus = EventBus.Builder.create(this, "EventBus")
- * .eventBusName("MyEventBus1")
+ * EventBus eventBus = EventBus.Builder.create(this, "EventBus")
+ * .eventBusName("DomainEvents")
  * .build();
- * EventBridgePutEvents.Builder.create(this, "Send an event to EventBridge")
- * .entries(List.of(EventBridgePutEventsEntry.builder()
- * .detail(TaskInput.fromObject(Map.of(
- * "Message", "Hello from Step Functions!")))
- * .eventBus(myEventBus)
- * .detailType("MessageFromStepFunctions")
- * .source("step.functions")
- * .build()))
+ * EventBridgePutEventsEntry eventEntry = EventBridgePutEventsEntry.builder()
+ * .eventBus(eventBus)
+ * .source("PetService")
+ * .detail(ScheduleTargetInput.fromObject(Map.of("Name", "Fluffy")))
+ * .detailType("🐶")
+ * .build();
+ * Schedule.Builder.create(this, "Schedule")
+ * .schedule(ScheduleExpression.rate(Duration.hours(1)))
+ * .target(EventBridgePutEvents.Builder.create(eventEntry).build())
  * .build();
  * ```
  */

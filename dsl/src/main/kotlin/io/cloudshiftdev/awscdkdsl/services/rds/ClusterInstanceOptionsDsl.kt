@@ -16,6 +16,7 @@ import kotlin.Boolean
 import kotlin.String
 import kotlin.collections.Map
 import software.amazon.awscdk.services.kms.IKey
+import software.amazon.awscdk.services.rds.CaCertificate
 import software.amazon.awscdk.services.rds.ClusterInstanceOptions
 import software.amazon.awscdk.services.rds.IParameterGroup
 import software.amazon.awscdk.services.rds.PerformanceInsightRetention
@@ -29,11 +30,13 @@ import software.amazon.awscdk.services.rds.PerformanceInsightRetention
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.kms.*;
  * import software.amazon.awscdk.services.rds.*;
+ * CaCertificate caCertificate;
  * Key key;
  * ParameterGroup parameterGroup;
  * ClusterInstanceOptions clusterInstanceOptions = ClusterInstanceOptions.builder()
  * .allowMajorVersionUpgrade(false)
  * .autoMinorVersionUpgrade(false)
+ * .caCertificate(caCertificate)
  * .enablePerformanceInsights(false)
  * .instanceIdentifier("instanceIdentifier")
  * .isFromLegacyInstanceProps(false)
@@ -64,6 +67,16 @@ public class ClusterInstanceOptionsDsl {
      */
     public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
         cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade)
+    }
+
+    /**
+     * @param caCertificate The identifier of the CA certificate for this DB cluster's instances.
+     *   Specifying or updating this property triggers a reboot.
+     *
+     * For RDS DB engines:
+     */
+    public fun caCertificate(caCertificate: CaCertificate) {
+        cdkBuilder.caCertificate(caCertificate)
     }
 
     /**
@@ -124,6 +137,8 @@ public class ClusterInstanceOptionsDsl {
 
     /**
      * @param publiclyAccessible Indicates whether the DB instance is an internet-facing instance.
+     *   If not specified, the cluster's vpcSubnets will be used to determine if the instance is
+     *   internet-facing or not.
      */
     public fun publiclyAccessible(publiclyAccessible: Boolean) {
         cdkBuilder.publiclyAccessible(publiclyAccessible)

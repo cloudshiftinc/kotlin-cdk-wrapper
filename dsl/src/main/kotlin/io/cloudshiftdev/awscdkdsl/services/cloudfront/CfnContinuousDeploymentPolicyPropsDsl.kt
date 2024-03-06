@@ -30,6 +30,18 @@ import software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicyP
  * .enabled(false)
  * .stagingDistributionDnsNames(List.of("stagingDistributionDnsNames"))
  * // the properties below are optional
+ * .singleHeaderPolicyConfig(SingleHeaderPolicyConfigProperty.builder()
+ * .header("header")
+ * .value("value")
+ * .build())
+ * .singleWeightPolicyConfig(SingleWeightPolicyConfigProperty.builder()
+ * .weight(123)
+ * // the properties below are optional
+ * .sessionStickinessConfig(SessionStickinessConfigProperty.builder()
+ * .idleTtl(123)
+ * .maximumTtl(123)
+ * .build())
+ * .build())
  * .trafficConfig(TrafficConfigProperty.builder()
  * .type("type")
  * // the properties below are optional
@@ -46,6 +58,7 @@ import software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicyP
  * .build())
  * .build())
  * .build())
+ * .type("type")
  * .build())
  * .build();
  * ```

@@ -14,6 +14,7 @@ package io.cloudshiftdev.awscdkdsl.services.ec2
 import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -24,7 +25,8 @@ import software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance
 import software.constructs.Construct
 
 /**
- * Describes a Verified Access instance.
+ * An AWS Verified Access instance is a regional entity that evaluates application requests and
+ * grants access only when your security requirements are met.
  *
  * Example:
  * ```
@@ -34,6 +36,7 @@ import software.constructs.Construct
  * CfnVerifiedAccessInstance cfnVerifiedAccessInstance =
  * CfnVerifiedAccessInstance.Builder.create(this, "MyCfnVerifiedAccessInstance")
  * .description("description")
+ * .fipsEnabled(false)
  * .loggingConfigurations(VerifiedAccessLogsProperty.builder()
  * .cloudWatchLogs(CloudWatchLogsProperty.builder()
  * .enabled(false)
@@ -95,24 +98,48 @@ public class CfnVerifiedAccessInstanceDsl(
     }
 
     /**
-     * The current logging configuration for the Verified Access instances.
+     * Indicates whether support for Federal Information Processing Standards (FIPS) is enabled on
+     * the instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessinstance.html#cfn-ec2-verifiedaccessinstance-fipsenabled)
+     *
+     * @param fipsEnabled Indicates whether support for Federal Information Processing Standards
+     *   (FIPS) is enabled on the instance.
+     */
+    public fun fipsEnabled(fipsEnabled: Boolean) {
+        cdkBuilder.fipsEnabled(fipsEnabled)
+    }
+
+    /**
+     * Indicates whether support for Federal Information Processing Standards (FIPS) is enabled on
+     * the instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessinstance.html#cfn-ec2-verifiedaccessinstance-fipsenabled)
+     *
+     * @param fipsEnabled Indicates whether support for Federal Information Processing Standards
+     *   (FIPS) is enabled on the instance.
+     */
+    public fun fipsEnabled(fipsEnabled: IResolvable) {
+        cdkBuilder.fipsEnabled(fipsEnabled)
+    }
+
+    /**
+     * The logging configuration for the Verified Access instances.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessinstance.html#cfn-ec2-verifiedaccessinstance-loggingconfigurations)
      *
-     * @param loggingConfigurations The current logging configuration for the Verified Access
-     *   instances.
+     * @param loggingConfigurations The logging configuration for the Verified Access instances.
      */
     public fun loggingConfigurations(loggingConfigurations: IResolvable) {
         cdkBuilder.loggingConfigurations(loggingConfigurations)
     }
 
     /**
-     * The current logging configuration for the Verified Access instances.
+     * The logging configuration for the Verified Access instances.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessinstance.html#cfn-ec2-verifiedaccessinstance-loggingconfigurations)
      *
-     * @param loggingConfigurations The current logging configuration for the Verified Access
-     *   instances.
+     * @param loggingConfigurations The logging configuration for the Verified Access instances.
      */
     public fun loggingConfigurations(
         loggingConfigurations: CfnVerifiedAccessInstance.VerifiedAccessLogsProperty

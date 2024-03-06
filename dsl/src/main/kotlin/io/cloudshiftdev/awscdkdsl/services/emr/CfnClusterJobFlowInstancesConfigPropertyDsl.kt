@@ -390,6 +390,7 @@ import software.amazon.awscdk.services.emr.CfnCluster
  * .name("name")
  * .build()))
  * .terminationProtected(false)
+ * .unhealthyNodeReplacement(false)
  * .build();
  * ```
  *
@@ -737,6 +738,16 @@ public class CfnClusterJobFlowInstancesConfigPropertyDsl {
      */
     public fun terminationProtected(terminationProtected: IResolvable) {
         cdkBuilder.terminationProtected(terminationProtected)
+    }
+
+    /** @param unhealthyNodeReplacement the value to be set. */
+    public fun unhealthyNodeReplacement(unhealthyNodeReplacement: Boolean) {
+        cdkBuilder.unhealthyNodeReplacement(unhealthyNodeReplacement)
+    }
+
+    /** @param unhealthyNodeReplacement the value to be set. */
+    public fun unhealthyNodeReplacement(unhealthyNodeReplacement: IResolvable) {
+        cdkBuilder.unhealthyNodeReplacement(unhealthyNodeReplacement)
     }
 
     public fun build(): CfnCluster.JobFlowInstancesConfigProperty {

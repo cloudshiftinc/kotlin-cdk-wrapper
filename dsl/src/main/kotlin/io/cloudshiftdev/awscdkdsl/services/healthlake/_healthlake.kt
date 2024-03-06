@@ -96,7 +96,7 @@ public object healthlake {
     }
 
     /**
-     * The identity provider configuration for the datastore.
+     * The identity provider configuration that you gave when the data store was created.
      *
      * Example:
      * ```

@@ -13,12 +13,16 @@ package io.cloudshiftdev.awscdkdsl.services.redshiftserverless
 
 import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import io.cloudshiftdev.awscdkdsl.common.MapBuilder
+import kotlin.Any
+import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.redshiftserverless.CfnNamespace
 import software.constructs.Construct
 
@@ -30,9 +34,11 @@ import software.constructs.Construct
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.redshiftserverless.*;
+ * Object namespaceResourcePolicy;
  * CfnNamespace cfnNamespace = CfnNamespace.Builder.create(this, "MyCfnNamespace")
  * .namespaceName("namespaceName")
  * // the properties below are optional
+ * .adminPasswordSecretKmsKeyId("adminPasswordSecretKmsKeyId")
  * .adminUsername("adminUsername")
  * .adminUserPassword("adminUserPassword")
  * .dbName("dbName")
@@ -42,6 +48,9 @@ import software.constructs.Construct
  * .iamRoles(List.of("iamRoles"))
  * .kmsKeyId("kmsKeyId")
  * .logExports(List.of("logExports"))
+ * .manageAdminPassword(false)
+ * .namespaceResourcePolicy(namespaceResourcePolicy)
+ * .redshiftIdcApplicationArn("redshiftIdcApplicationArn")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -63,6 +72,21 @@ public class CfnNamespaceDsl(
     private val _logExports: MutableList<String> = mutableListOf()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
+
+    /**
+     * The ID of the AWS Key Management Service (KMS) key used to encrypt and store the namespace's
+     * admin credentials secret.
+     *
+     * You can only use this parameter if `ManageAdminPassword` is `true` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-namespace.html#cfn-redshiftserverless-namespace-adminpasswordsecretkmskeyid)
+     *
+     * @param adminPasswordSecretKmsKeyId The ID of the AWS Key Management Service (KMS) key used to
+     *   encrypt and store the namespace's admin credentials secret.
+     */
+    public fun adminPasswordSecretKmsKeyId(adminPasswordSecretKmsKeyId: String) {
+        cdkBuilder.adminPasswordSecretKmsKeyId(adminPasswordSecretKmsKeyId)
+    }
 
     /**
      * The password of the administrator for the primary database created in the namespace.
@@ -194,6 +218,40 @@ public class CfnNamespaceDsl(
     }
 
     /**
+     * If true, Amazon Redshift uses AWS Secrets Manager to manage the namespace's admin
+     * credentials.
+     *
+     * You can't use `AdminUserPassword` if `ManageAdminPassword` is true. If `ManageAdminPassword`
+     * is `false` or not set, Amazon Redshift uses `AdminUserPassword` for the admin user account's
+     * password.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-namespace.html#cfn-redshiftserverless-namespace-manageadminpassword)
+     *
+     * @param manageAdminPassword If true, Amazon Redshift uses AWS Secrets Manager to manage the
+     *   namespace's admin credentials.
+     */
+    public fun manageAdminPassword(manageAdminPassword: Boolean) {
+        cdkBuilder.manageAdminPassword(manageAdminPassword)
+    }
+
+    /**
+     * If true, Amazon Redshift uses AWS Secrets Manager to manage the namespace's admin
+     * credentials.
+     *
+     * You can't use `AdminUserPassword` if `ManageAdminPassword` is true. If `ManageAdminPassword`
+     * is `false` or not set, Amazon Redshift uses `AdminUserPassword` for the admin user account's
+     * password.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-namespace.html#cfn-redshiftserverless-namespace-manageadminpassword)
+     *
+     * @param manageAdminPassword If true, Amazon Redshift uses AWS Secrets Manager to manage the
+     *   namespace's admin credentials.
+     */
+    public fun manageAdminPassword(manageAdminPassword: IResolvable) {
+        cdkBuilder.manageAdminPassword(manageAdminPassword)
+    }
+
+    /**
      * The name of the namespace.
      *
      * Must be between 3-64 alphanumeric characters in lowercase, and it cannot be a reserved word.
@@ -207,6 +265,42 @@ public class CfnNamespaceDsl(
      */
     public fun namespaceName(namespaceName: String) {
         cdkBuilder.namespaceName(namespaceName)
+    }
+
+    /**
+     * The resource policy that will be attached to the namespace.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-namespace.html#cfn-redshiftserverless-namespace-namespaceresourcepolicy)
+     *
+     * @param namespaceResourcePolicy The resource policy that will be attached to the namespace.
+     */
+    public fun namespaceResourcePolicy(namespaceResourcePolicy: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(namespaceResourcePolicy)
+        cdkBuilder.namespaceResourcePolicy(builder.map)
+    }
+
+    /**
+     * The resource policy that will be attached to the namespace.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-namespace.html#cfn-redshiftserverless-namespace-namespaceresourcepolicy)
+     *
+     * @param namespaceResourcePolicy The resource policy that will be attached to the namespace.
+     */
+    public fun namespaceResourcePolicy(namespaceResourcePolicy: Any) {
+        cdkBuilder.namespaceResourcePolicy(namespaceResourcePolicy)
+    }
+
+    /**
+     * The ARN for the Redshift application that integrates with IAM Identity Center.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-namespace.html#cfn-redshiftserverless-namespace-redshiftidcapplicationarn)
+     *
+     * @param redshiftIdcApplicationArn The ARN for the Redshift application that integrates with
+     *   IAM Identity Center.
+     */
+    public fun redshiftIdcApplicationArn(redshiftIdcApplicationArn: String) {
+        cdkBuilder.redshiftIdcApplicationArn(redshiftIdcApplicationArn)
     }
 
     /**

@@ -97,7 +97,7 @@ public class RequestAuthorizerDsl(
      *
      * Supported parameter types are Header, Query String, Stage Variable, and Context. For
      * instance, extracting an authorization token from a header would use the identity source
-     * `IdentitySource.header('Authorizer')`.
+     * `IdentitySource.header('Authorization')`.
      *
      * Note: API Gateway uses the specified identity sources as the request authorizer caching key.
      * When caching is enabled, API Gateway calls the authorizer's Lambda function only after
@@ -105,7 +105,7 @@ public class RequestAuthorizerDsl(
      * specified identify source is missing, null, or empty, API Gateway returns a 401 Unauthorized
      * response without calling the authorizer Lambda function.
      *
-     * [Documentation](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/authorizer-create/#identitySource)
+     * [Documentation](https://docs.aws.amazon.com/apigateway/latest/api/API_CreateAuthorizer.html#apigw-CreateAuthorizer-request-identitySource)
      *
      * @param identitySources An array of request header mapping expressions for identities.
      */
@@ -118,7 +118,7 @@ public class RequestAuthorizerDsl(
      *
      * Supported parameter types are Header, Query String, Stage Variable, and Context. For
      * instance, extracting an authorization token from a header would use the identity source
-     * `IdentitySource.header('Authorizer')`.
+     * `IdentitySource.header('Authorization')`.
      *
      * Note: API Gateway uses the specified identity sources as the request authorizer caching key.
      * When caching is enabled, API Gateway calls the authorizer's Lambda function only after
@@ -126,7 +126,7 @@ public class RequestAuthorizerDsl(
      * specified identify source is missing, null, or empty, API Gateway returns a 401 Unauthorized
      * response without calling the authorizer Lambda function.
      *
-     * [Documentation](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/authorizer-create/#identitySource)
+     * [Documentation](https://docs.aws.amazon.com/apigateway/latest/api/API_CreateAuthorizer.html#apigw-CreateAuthorizer-request-identitySource)
      *
      * @param identitySources An array of request header mapping expressions for identities.
      */
@@ -139,7 +139,7 @@ public class RequestAuthorizerDsl(
      *
      * Max 1 hour. Disable caching by setting this to 0.
      *
-     * Default: Duration.minutes(5)
+     * Default: - Duration.minutes(5)
      *
      * @param resultsCacheTtl How long APIGateway should cache the results.
      */

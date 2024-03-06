@@ -71,6 +71,7 @@ import software.amazon.awscdk.services.route53.IHostedZone
  * .weight(123)
  * .build()))
  * .circuitBreaker(DeploymentCircuitBreaker.builder()
+ * .enable(false)
  * .rollback(false)
  * .build())
  * .cloudMapOptions(CloudMapOptions.builder()

@@ -30,16 +30,24 @@ import software.amazon.awscdk.services.sagemaker.CfnEndpointConfig
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.sagemaker.*;
  * ProductionVariantProperty productionVariantProperty = ProductionVariantProperty.builder()
- * .initialVariantWeight(123)
- * .modelName("modelName")
  * .variantName("variantName")
  * // the properties below are optional
  * .acceleratorType("acceleratorType")
  * .containerStartupHealthCheckTimeoutInSeconds(123)
  * .enableSsmAccess(false)
  * .initialInstanceCount(123)
+ * .initialVariantWeight(123)
  * .instanceType("instanceType")
+ * .managedInstanceScaling(ManagedInstanceScalingProperty.builder()
+ * .maxInstanceCount(123)
+ * .minInstanceCount(123)
+ * .status("status")
+ * .build())
  * .modelDataDownloadTimeoutInSeconds(123)
+ * .modelName("modelName")
+ * .routingConfig(RoutingConfigProperty.builder()
+ * .routingStrategy("routingStrategy")
+ * .build())
  * .serverlessConfig(ServerlessConfigProperty.builder()
  * .maxConcurrency(123)
  * .memorySizeInMb(123)
@@ -70,7 +78,13 @@ public class CfnEndpointConfigProductionVariantPropertyDsl {
         cdkBuilder.acceleratorType(acceleratorType)
     }
 
-    /** @param containerStartupHealthCheckTimeoutInSeconds the value to be set. */
+    /**
+     * @param containerStartupHealthCheckTimeoutInSeconds The timeout value, in seconds, for your
+     *   inference container to pass health check by SageMaker Hosting. For more information about
+     *   health check, see
+     *   [How Your Container Should Respond to Health Check (Ping) Requests](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-inference-code.html#your-algorithms-inference-algo-ping-requests)
+     *   .
+     */
     public fun containerStartupHealthCheckTimeoutInSeconds(
         containerStartupHealthCheckTimeoutInSeconds: Number
     ) {
@@ -121,7 +135,23 @@ public class CfnEndpointConfigProductionVariantPropertyDsl {
         cdkBuilder.instanceType(instanceType)
     }
 
-    /** @param modelDataDownloadTimeoutInSeconds the value to be set. */
+    /** @param managedInstanceScaling the value to be set. */
+    public fun managedInstanceScaling(managedInstanceScaling: IResolvable) {
+        cdkBuilder.managedInstanceScaling(managedInstanceScaling)
+    }
+
+    /** @param managedInstanceScaling the value to be set. */
+    public fun managedInstanceScaling(
+        managedInstanceScaling: CfnEndpointConfig.ManagedInstanceScalingProperty
+    ) {
+        cdkBuilder.managedInstanceScaling(managedInstanceScaling)
+    }
+
+    /**
+     * @param modelDataDownloadTimeoutInSeconds The timeout value, in seconds, to download and
+     *   extract the model that you want to host from Amazon S3 to the individual inference instance
+     *   associated with this production variant.
+     */
     public fun modelDataDownloadTimeoutInSeconds(modelDataDownloadTimeoutInSeconds: Number) {
         cdkBuilder.modelDataDownloadTimeoutInSeconds(modelDataDownloadTimeoutInSeconds)
     }
@@ -132,6 +162,16 @@ public class CfnEndpointConfigProductionVariantPropertyDsl {
      */
     public fun modelName(modelName: String) {
         cdkBuilder.modelName(modelName)
+    }
+
+    /** @param routingConfig the value to be set. */
+    public fun routingConfig(routingConfig: IResolvable) {
+        cdkBuilder.routingConfig(routingConfig)
+    }
+
+    /** @param routingConfig the value to be set. */
+    public fun routingConfig(routingConfig: CfnEndpointConfig.RoutingConfigProperty) {
+        cdkBuilder.routingConfig(routingConfig)
     }
 
     /**
@@ -155,7 +195,11 @@ public class CfnEndpointConfigProductionVariantPropertyDsl {
         cdkBuilder.variantName(variantName)
     }
 
-    /** @param volumeSizeInGb the value to be set. */
+    /**
+     * @param volumeSizeInGb The size, in GB, of the ML storage volume attached to individual
+     *   inference instance associated with the production variant. Currently only Amazon EBS gp2
+     *   storage volumes are supported.
+     */
     public fun volumeSizeInGb(volumeSizeInGb: Number) {
         cdkBuilder.volumeSizeInGb(volumeSizeInGb)
     }

@@ -109,7 +109,7 @@ public class StepScalingPolicyDsl(
      *
      * Only has meaning if `evaluationPeriods != 1`.
      *
-     * Default: `evaluationPeriods`
+     * Default: - Same as `evaluationPeriods`
      *
      * @param datapointsToAlarm The number of data points out of the evaluation periods that must be
      *   breaching to trigger a scaling action.

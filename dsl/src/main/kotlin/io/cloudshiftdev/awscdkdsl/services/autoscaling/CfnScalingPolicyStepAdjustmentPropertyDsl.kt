@@ -17,7 +17,7 @@ import software.amazon.awscdk.services.autoscaling.CfnScalingPolicy
 
 /**
  * `StepAdjustment` specifies a step adjustment for the `StepAdjustments` property of the
- * [AWS::AutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html)
+ * [AWS::AutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-scalingpolicy.html)
  * resource.
  *
  * For the following examples, suppose that you have an alarm with a breach threshold of 50:
@@ -39,7 +39,7 @@ import software.amazon.awscdk.services.autoscaling.CfnScalingPolicy
  * in the *Amazon EC2 Auto Scaling User Guide* .
  *
  * You can find a sample template snippet in the
- * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#aws-properties-as-policy--examples)
+ * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-scalingpolicy.html#aws-resource-autoscaling-scalingpolicy--examples)
  * section of the `AWS::AutoScaling::ScalingPolicy` resource.
  *
  * Example:

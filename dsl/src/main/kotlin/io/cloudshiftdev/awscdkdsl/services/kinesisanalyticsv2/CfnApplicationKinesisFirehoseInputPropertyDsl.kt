@@ -16,8 +16,8 @@ import kotlin.String
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
 
 /**
- * For a SQL-based Kinesis Data Analytics application, identifies a Kinesis Data Firehose delivery
- * stream as the streaming source.
+ * For a SQL-based Managed Service for Apache Flink application, identifies a Kinesis Data Firehose
+ * delivery stream as the streaming source.
  *
  * You provide the delivery stream's Amazon Resource Name (ARN).
  *

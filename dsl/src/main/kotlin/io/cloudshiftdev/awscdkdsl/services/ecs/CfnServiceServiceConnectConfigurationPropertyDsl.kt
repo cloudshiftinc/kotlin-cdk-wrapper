@@ -62,6 +62,18 @@ import software.amazon.awscdk.services.ecs.CfnService
  * .build()))
  * .discoveryName("discoveryName")
  * .ingressPortOverride(123)
+ * .timeout(TimeoutConfigurationProperty.builder()
+ * .idleTimeoutSeconds(123)
+ * .perRequestTimeoutSeconds(123)
+ * .build())
+ * .tls(ServiceConnectTlsConfigurationProperty.builder()
+ * .issuerCertificateAuthority(ServiceConnectTlsCertificateAuthorityProperty.builder()
+ * .awsPcaAuthorityArn("awsPcaAuthorityArn")
+ * .build())
+ * // the properties below are optional
+ * .kmsKey("kmsKey")
+ * .roleArn("roleArn")
+ * .build())
  * .build()))
  * .build();
  * ```

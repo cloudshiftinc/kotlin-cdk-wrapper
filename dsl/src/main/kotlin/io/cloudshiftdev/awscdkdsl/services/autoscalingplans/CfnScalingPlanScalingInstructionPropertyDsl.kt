@@ -42,8 +42,8 @@ import software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan
  * We recommend waiting a minimum of 24 hours after creating an Auto Scaling group to configure
  * predictive scaling. At minimum, there must be 24 hours of historical data to generate a forecast.
  * For more information, see
- * [Best Practices for AWS Auto Scaling](https://docs.aws.amazon.com/autoscaling/plans/userguide/gs-best-practices.html)
- * in the *AWS Auto Scaling User Guide* .
+ * [Best practices for scaling plans](https://docs.aws.amazon.com/autoscaling/plans/userguide/gs-best-practices.html)
+ * in the *Scaling Plans User Guide* .
  *
  * Example:
  * ```
@@ -136,9 +136,9 @@ public class CfnScalingPlanScalingInstructionPropertyDsl {
     }
 
     /**
-     * @param disableDynamicScaling Controls whether dynamic scaling by AWS Auto Scaling is
-     *   disabled. When dynamic scaling is enabled, AWS Auto Scaling creates target tracking scaling
-     *   policies based on the specified target tracking configurations.
+     * @param disableDynamicScaling Controls whether dynamic scaling is disabled. When dynamic
+     *   scaling is enabled, AWS Auto Scaling creates target tracking scaling policies based on the
+     *   specified target tracking configurations.
      *
      * The default is enabled ( `false` ).
      */
@@ -147,9 +147,9 @@ public class CfnScalingPlanScalingInstructionPropertyDsl {
     }
 
     /**
-     * @param disableDynamicScaling Controls whether dynamic scaling by AWS Auto Scaling is
-     *   disabled. When dynamic scaling is enabled, AWS Auto Scaling creates target tracking scaling
-     *   policies based on the specified target tracking configurations.
+     * @param disableDynamicScaling Controls whether dynamic scaling is disabled. When dynamic
+     *   scaling is enabled, AWS Auto Scaling creates target tracking scaling policies based on the
+     *   specified target tracking configurations.
      *
      * The default is enabled ( `false` ).
      */
@@ -277,9 +277,9 @@ public class CfnScalingPlanScalingInstructionPropertyDsl {
     }
 
     /**
-     * @param scalingPolicyUpdateBehavior Controls whether your scaling policies that are external
-     *   to AWS Auto Scaling are deleted and new target tracking scaling policies created. The
-     *   default value is `KeepExternalPolicies` .
+     * @param scalingPolicyUpdateBehavior Controls whether a resource's externally created scaling
+     *   policies are deleted and new target tracking scaling policies created. The default value is
+     *   `KeepExternalPolicies` .
      *
      * Valid only when configuring dynamic scaling.
      */

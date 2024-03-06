@@ -14,7 +14,10 @@ package io.cloudshiftdev.awscdkdsl.services.kinesisfirehose
 import kotlin.Unit
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
-/**  */
+/**
+ * Describes the configuration of a destination in the Serverless offering for Amazon OpenSearch
+ * Service.
+ */
 public inline fun CfnDeliveryStream.setAmazonOpenSearchServerlessDestinationConfiguration(
     block:
         CfnDeliveryStreamAmazonOpenSearchServerlessDestinationConfigurationPropertyDsl.() -> Unit =
@@ -87,6 +90,15 @@ public inline fun CfnDeliveryStream.setKinesisStreamSourceConfiguration(
     return setKinesisStreamSourceConfiguration(builder.build())
 }
 
+/** The configuration for the Amazon MSK cluster to be used as the source for a delivery stream. */
+public inline fun CfnDeliveryStream.setMskSourceConfiguration(
+    block: CfnDeliveryStreamMSKSourceConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnDeliveryStreamMSKSourceConfigurationPropertyDsl()
+    builder.apply(block)
+    return setMskSourceConfiguration(builder.build())
+}
+
 /** An Amazon Redshift destination for the delivery stream. */
 public inline fun CfnDeliveryStream.setRedshiftDestinationConfiguration(
     block: CfnDeliveryStreamRedshiftDestinationConfigurationPropertyDsl.() -> Unit = {}
@@ -106,6 +118,15 @@ public inline fun CfnDeliveryStream.setS3DestinationConfiguration(
     val builder = CfnDeliveryStreamS3DestinationConfigurationPropertyDsl()
     builder.apply(block)
     return setS3DestinationConfiguration(builder.build())
+}
+
+/** Configure Snowflake destination. */
+public inline fun CfnDeliveryStream.setSnowflakeDestinationConfiguration(
+    block: CfnDeliveryStreamSnowflakeDestinationConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnDeliveryStreamSnowflakeDestinationConfigurationPropertyDsl()
+    builder.apply(block)
+    return setSnowflakeDestinationConfiguration(builder.build())
 }
 
 /** The configuration of a destination in Splunk for the delivery stream. */

@@ -39,7 +39,7 @@ import software.amazon.awscdk.services.stepfunctions.tasks.EvaluateExpressionPro
  * EvaluateExpression createMessage = EvaluateExpression.Builder.create(this, "Create message")
  * // Note: this is a string inside a string.
  * .expression("`Now waiting ${$.waitSeconds} seconds...`")
- * .runtime(Runtime.NODEJS_16_X)
+ * .runtime(Runtime.NODEJS_LATEST)
  * .resultPath("$.message")
  * .build();
  * SnsPublish publishMessage = SnsPublish.Builder.create(this, "Publish message")
@@ -118,7 +118,9 @@ public class EvaluateExpressionPropsDsl {
 
     /**
      * @param integrationPattern AWS Step Functions integrates with services directly in the Amazon
-     *   States Language. You can control these AWS services using service integration patterns
+     *   States Language. You can control these AWS services using service integration patterns.
+     *
+     * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      */
     public fun integrationPattern(integrationPattern: IntegrationPattern) {
         cdkBuilder.integrationPattern(integrationPattern)
@@ -165,6 +167,11 @@ public class EvaluateExpressionPropsDsl {
     /** @param runtime The runtime language to use to evaluate the expression. */
     public fun runtime(runtime: Runtime) {
         cdkBuilder.runtime(runtime)
+    }
+
+    /** @param stateName Optional name for this state. */
+    public fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
     }
 
     /**

@@ -49,11 +49,11 @@ public object redshift {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.redshift.*;
+     * Object namespaceResourcePolicy;
      * CfnCluster cfnCluster = CfnCluster.Builder.create(this, "MyCfnCluster")
      * .clusterType("clusterType")
      * .dbName("dbName")
      * .masterUsername("masterUsername")
-     * .masterUserPassword("masterUserPassword")
      * .nodeType("nodeType")
      * // the properties below are optional
      * .allowVersionUpgrade(false)
@@ -86,11 +86,15 @@ public object redshift {
      * .kmsKeyId("kmsKeyId")
      * .loggingProperties(LoggingPropertiesProperty.builder()
      * .bucketName("bucketName")
-     * // the properties below are optional
      * .s3KeyPrefix("s3KeyPrefix")
      * .build())
      * .maintenanceTrackName("maintenanceTrackName")
+     * .manageMasterPassword(false)
      * .manualSnapshotRetentionPeriod(123)
+     * .masterPasswordSecretKmsKeyId("masterPasswordSecretKmsKeyId")
+     * .masterUserPassword("masterUserPassword")
+     * .multiAz(false)
+     * .namespaceResourcePolicy(namespaceResourcePolicy)
      * .numberOfNodes(123)
      * .ownerAccount("ownerAccount")
      * .port(123)
@@ -159,7 +163,6 @@ public object redshift {
      * import software.amazon.awscdk.services.redshift.*;
      * LoggingPropertiesProperty loggingPropertiesProperty = LoggingPropertiesProperty.builder()
      * .bucketName("bucketName")
-     * // the properties below are optional
      * .s3KeyPrefix("s3KeyPrefix")
      * .build();
      * ```
@@ -278,11 +281,11 @@ public object redshift {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.redshift.*;
+     * Object namespaceResourcePolicy;
      * CfnClusterProps cfnClusterProps = CfnClusterProps.builder()
      * .clusterType("clusterType")
      * .dbName("dbName")
      * .masterUsername("masterUsername")
-     * .masterUserPassword("masterUserPassword")
      * .nodeType("nodeType")
      * // the properties below are optional
      * .allowVersionUpgrade(false)
@@ -315,11 +318,15 @@ public object redshift {
      * .kmsKeyId("kmsKeyId")
      * .loggingProperties(LoggingPropertiesProperty.builder()
      * .bucketName("bucketName")
-     * // the properties below are optional
      * .s3KeyPrefix("s3KeyPrefix")
      * .build())
      * .maintenanceTrackName("maintenanceTrackName")
+     * .manageMasterPassword(false)
      * .manualSnapshotRetentionPeriod(123)
+     * .masterPasswordSecretKmsKeyId("masterPasswordSecretKmsKeyId")
+     * .masterUserPassword("masterUserPassword")
+     * .multiAz(false)
+     * .namespaceResourcePolicy(namespaceResourcePolicy)
      * .numberOfNodes(123)
      * .ownerAccount("ownerAccount")
      * .port(123)
@@ -759,8 +766,7 @@ public object redshift {
     }
 
     /**
-     * The `AWS::Redshift::EventSubscription` resource creates an Amazon Redshift Event
-     * Subscription.
+     * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-eventsubscription.html.
      *
      * Example:
      * ```

@@ -19,7 +19,7 @@ import software.amazon.awscdk.services.sam.CfnSimpleTable
 import software.constructs.Construct
 
 /**
- * Definition of AWS::Serverless::SimpleTable.
+ * https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlesssimpletable.
  *
  * Example:
  * ```

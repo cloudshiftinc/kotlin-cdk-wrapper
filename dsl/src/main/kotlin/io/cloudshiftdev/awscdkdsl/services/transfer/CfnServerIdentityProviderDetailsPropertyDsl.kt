@@ -46,8 +46,8 @@ public class CfnServerIdentityProviderDetailsPropertyDsl {
         CfnServer.IdentityProviderDetailsProperty.builder()
 
     /**
-     * @param directoryId The identifier of the AWS Directory Service directory that you want to
-     *   stop sharing.
+     * @param directoryId The identifier of the AWS Directory Service directory that you want to use
+     *   as your identity provider.
      */
     public fun directoryId(directoryId: String) {
         cdkBuilder.directoryId(directoryId)

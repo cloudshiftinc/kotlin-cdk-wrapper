@@ -131,7 +131,7 @@ public class CfnWorkteamPropsDsl {
         _tags.addAll(tags)
     }
 
-    /** @param workforceName the value to be set. */
+    /** @param workforceName The name of the workforce. */
     public fun workforceName(workforceName: String) {
         cdkBuilder.workforceName(workforceName)
     }

@@ -34,6 +34,8 @@ import software.amazon.awscdk.services.ecr.TagStatus
 public class LifecycleRuleDsl {
     private val cdkBuilder: LifecycleRule.Builder = LifecycleRule.builder()
 
+    private val _tagPatternList: MutableList<String> = mutableListOf()
+
     private val _tagPrefixList: MutableList<String> = mutableListOf()
 
     /** @param description Describes the purpose of the rule. */
@@ -73,16 +75,46 @@ public class LifecycleRuleDsl {
     }
 
     /**
-     * @param tagPrefixList Select images that have ALL the given prefixes in their tag. Only if
-     *   tagStatus == TagStatus.Tagged
+     * @param tagPatternList Select images that have ALL the given patterns in their tag. There is a
+     *   maximum limit of four wildcards (*) per string. For example, ["*test*1*2*3", "test*1*2*3*"]
+     *   is valid but ["test*1*2*3*4*5*6"] is invalid.
+     *
+     * Both tagPrefixList and tagPatternList cannot be specified together in a rule.
+     *
+     * Only if tagStatus == TagStatus.Tagged
+     */
+    public fun tagPatternList(vararg tagPatternList: String) {
+        _tagPatternList.addAll(listOf(*tagPatternList))
+    }
+
+    /**
+     * @param tagPatternList Select images that have ALL the given patterns in their tag. There is a
+     *   maximum limit of four wildcards (*) per string. For example, ["*test*1*2*3", "test*1*2*3*"]
+     *   is valid but ["test*1*2*3*4*5*6"] is invalid.
+     *
+     * Both tagPrefixList and tagPatternList cannot be specified together in a rule.
+     *
+     * Only if tagStatus == TagStatus.Tagged
+     */
+    public fun tagPatternList(tagPatternList: Collection<String>) {
+        _tagPatternList.addAll(tagPatternList)
+    }
+
+    /**
+     * @param tagPrefixList Select images that have ALL the given prefixes in their tag. Both
+     *   tagPrefixList and tagPatternList cannot be specified together in a rule.
+     *
+     * Only if tagStatus == TagStatus.Tagged
      */
     public fun tagPrefixList(vararg tagPrefixList: String) {
         _tagPrefixList.addAll(listOf(*tagPrefixList))
     }
 
     /**
-     * @param tagPrefixList Select images that have ALL the given prefixes in their tag. Only if
-     *   tagStatus == TagStatus.Tagged
+     * @param tagPrefixList Select images that have ALL the given prefixes in their tag. Both
+     *   tagPrefixList and tagPatternList cannot be specified together in a rule.
+     *
+     * Only if tagStatus == TagStatus.Tagged
      */
     public fun tagPrefixList(tagPrefixList: Collection<String>) {
         _tagPrefixList.addAll(tagPrefixList)
@@ -97,6 +129,7 @@ public class LifecycleRuleDsl {
     }
 
     public fun build(): LifecycleRule {
+        if (_tagPatternList.isNotEmpty()) cdkBuilder.tagPatternList(_tagPatternList)
         if (_tagPrefixList.isNotEmpty()) cdkBuilder.tagPrefixList(_tagPrefixList)
         return cdkBuilder.build()
     }

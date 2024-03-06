@@ -178,6 +178,9 @@ public class CfnSecretPropsDsl {
      * Secrets Manager tag key names are case sensitive. A tag with the key "ABC" is a different tag
      * from one with key "abc".
      *
+     * Stack-level tags, tags you apply to the CloudFormation stack, are also attached to the
+     * secret.
+     *
      * If you check tags in permissions policies as part of your security strategy, then adding or
      * removing a tag can change permissions. If the completion of this operation would result in
      * you losing your permissions for this secret, then Secrets Manager blocks the operation and
@@ -217,6 +220,9 @@ public class CfnSecretPropsDsl {
      *
      * Secrets Manager tag key names are case sensitive. A tag with the key "ABC" is a different tag
      * from one with key "abc".
+     *
+     * Stack-level tags, tags you apply to the CloudFormation stack, are also attached to the
+     * secret.
      *
      * If you check tags in permissions policies as part of your security strategy, then adding or
      * removing a tag can change permissions. If the completion of this operation would result in

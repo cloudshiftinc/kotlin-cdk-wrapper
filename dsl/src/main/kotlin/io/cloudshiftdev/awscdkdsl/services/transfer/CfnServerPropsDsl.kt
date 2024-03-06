@@ -59,6 +59,9 @@ import software.amazon.awscdk.services.transfer.CfnServerProps
  * .tlsSessionResumptionMode("tlsSessionResumptionMode")
  * .build())
  * .protocols(List.of("protocols"))
+ * .s3StorageOptions(S3StorageOptionsProperty.builder()
+ * .directoryListingOptimization("directoryListingOptimization")
+ * .build())
  * .securityPolicyName("securityPolicyName")
  * .structuredLogDestinations(List.of("structuredLogDestinations"))
  * .tags(List.of(CfnTag.builder()
@@ -153,6 +156,20 @@ public class CfnServerPropsDsl {
      *   an endpoint that is hosted in a VPC, you can restrict access to your server and resources
      *   only within your VPC or choose to make it internet facing by attaching Elastic IP addresses
      *   directly to it.
+     *
+     * After May 19, 2021, you won't be able to create a server using `EndpointType=VPC_ENDPOINT` in
+     * your AWS account if your account hasn't already done so before May 19, 2021. If you have
+     * already created servers with `EndpointType=VPC_ENDPOINT` in your AWS account on or before May
+     * 19, 2021, you will not be affected. After this date, use `EndpointType` = `VPC` .
+     *
+     * For more information, see
+     * [Discontinuing the use of VPC_ENDPOINT](https://docs.aws.amazon.com//transfer/latest/userguide/create-server-in-vpc.html#deprecate-vpc-endpoint)
+     * .
+     *
+     * It is recommended that you use `VPC` as the `EndpointType` . With this endpoint type, you
+     * have the option to directly associate up to three Elastic IPv4 addresses (BYO IP included)
+     * with your server's endpoint and use VPC security groups to restrict traffic by the client's
+     * public IP address. This is not possible with `EndpointType` set to `VPC_ENDPOINT` .
      */
     public fun endpointType(endpointType: String) {
         cdkBuilder.endpointType(endpointType)
@@ -342,6 +359,26 @@ public class CfnServerPropsDsl {
      */
     public fun protocols(protocols: Collection<String>) {
         _protocols.addAll(protocols)
+    }
+
+    /**
+     * @param s3StorageOptions Specifies whether or not performance for your Amazon S3 directories
+     *   is optimized. This is disabled by default. By default, home directory mappings have a
+     *   `TYPE` of `DIRECTORY` . If you enable this option, you would then need to explicitly set
+     *   the `HomeDirectoryMapEntry` `Type` to `FILE` if you want a mapping to have a file target.
+     */
+    public fun s3StorageOptions(s3StorageOptions: IResolvable) {
+        cdkBuilder.s3StorageOptions(s3StorageOptions)
+    }
+
+    /**
+     * @param s3StorageOptions Specifies whether or not performance for your Amazon S3 directories
+     *   is optimized. This is disabled by default. By default, home directory mappings have a
+     *   `TYPE` of `DIRECTORY` . If you enable this option, you would then need to explicitly set
+     *   the `HomeDirectoryMapEntry` `Type` to `FILE` if you want a mapping to have a file target.
+     */
+    public fun s3StorageOptions(s3StorageOptions: CfnServer.S3StorageOptionsProperty) {
+        cdkBuilder.s3StorageOptions(s3StorageOptions)
     }
 
     /**

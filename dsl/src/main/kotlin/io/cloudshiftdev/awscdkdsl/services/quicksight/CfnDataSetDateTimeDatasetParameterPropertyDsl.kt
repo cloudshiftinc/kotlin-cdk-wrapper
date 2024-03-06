@@ -17,7 +17,7 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
 /**
- * A parameter created in the dataset of date time data type.</p>.
+ * A date time parameter that is created in the dataset.
  *
  * Example:
  * ```
@@ -45,16 +45,16 @@ public class CfnDataSetDateTimeDatasetParameterPropertyDsl {
         CfnDataSet.DateTimeDatasetParameterProperty.builder()
 
     /**
-     * @param defaultValues List of default values defined for a given string date time parameter
-     *   type. Currently only static values are supported.</p>
+     * @param defaultValues A list of default values for a given date time parameter. This structure
+     *   only accepts static values.
      */
     public fun defaultValues(defaultValues: IResolvable) {
         cdkBuilder.defaultValues(defaultValues)
     }
 
     /**
-     * @param defaultValues List of default values defined for a given string date time parameter
-     *   type. Currently only static values are supported.</p>
+     * @param defaultValues A list of default values for a given date time parameter. This structure
+     *   only accepts static values.
      */
     public fun defaultValues(
         defaultValues: CfnDataSet.DateTimeDatasetParameterDefaultValuesProperty
@@ -62,24 +62,24 @@ public class CfnDataSetDateTimeDatasetParameterPropertyDsl {
         cdkBuilder.defaultValues(defaultValues)
     }
 
-    /** @param id Identifier of the parameter created in the dataset.</p>. */
+    /** @param id An identifier for the parameter that is created in the dataset. */
     public fun id(id: String) {
         cdkBuilder.id(id)
     }
 
-    /** @param name Name of the parameter created in the dataset.</p>. */
+    /** @param name The name of the date time parameter that is created in the dataset. */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }
 
-    /** @param timeGranularity the value to be set. */
+    /** @param timeGranularity The time granularity of the date time parameter. */
     public fun timeGranularity(timeGranularity: String) {
         cdkBuilder.timeGranularity(timeGranularity)
     }
 
     /**
-     * @param valueType Every parameter value could be either a single value or multi value which
-     *   helps to validate before evaluation.</p>.
+     * @param valueType The value type of the dataset parameter. Valid values are `single value` or
+     *   `multi value` .
      */
     public fun valueType(valueType: String) {
         cdkBuilder.valueType(valueType)

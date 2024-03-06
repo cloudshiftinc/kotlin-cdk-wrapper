@@ -157,6 +157,16 @@ public class NetworkMultipleTargetGroupsFargateServicePropsDsl {
     }
 
     /**
+     * @param ephemeralStorageGiB The amount (in GiB) of ephemeral storage to be allocated to the
+     *   task. The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
+     *
+     * Only supported in Fargate platform version 1.4.0 or later.
+     */
+    public fun ephemeralStorageGiB(ephemeralStorageGiB: Number) {
+        cdkBuilder.ephemeralStorageGiB(ephemeralStorageGiB)
+    }
+
+    /**
      * @param healthCheckGracePeriod The period of time, in seconds, that the Amazon ECS service
      *   scheduler ignores unhealthy Elastic Load Balancing target health checks after a task has
      *   first started.

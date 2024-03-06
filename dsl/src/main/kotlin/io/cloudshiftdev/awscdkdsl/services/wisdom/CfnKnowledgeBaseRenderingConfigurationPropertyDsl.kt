@@ -47,7 +47,8 @@ public class CfnKnowledgeBaseRenderingConfigurationPropertyDsl {
      * * Zendesk: `id` , `title` , `updated_at` , or `draft`
      *
      * The variable is replaced with the actual value for a piece of content when calling
-     * [GetContent](https://docs.aws.amazon.com/wisdom/latest/APIReference/API_GetContent.html) .
+     * [GetContent](https://docs.aws.amazon.com/amazon-q-connect/latest/APIReference/API_GetContent.html)
+     * .
      */
     public fun templateUri(templateUri: String) {
         cdkBuilder.templateUri(templateUri)

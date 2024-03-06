@@ -186,8 +186,8 @@ public class CfnLoadBalancerPropsDsl {
      * @param connectionDrainingPolicy If enabled, the load balancer allows existing requests to
      *   complete before the load balancer shifts traffic away from a deregistered or unhealthy
      *   instance. For more information, see
-     *   [Configure Connection Draining](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/config-conn-drain.html)
-     *   in the *Classic Load Balancers Guide* .
+     *   [Configure connection draining](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/config-conn-drain.html)
+     *   in the *User Guide for Classic Load Balancers* .
      */
     public fun connectionDrainingPolicy(connectionDrainingPolicy: IResolvable) {
         cdkBuilder.connectionDrainingPolicy(connectionDrainingPolicy)
@@ -197,8 +197,8 @@ public class CfnLoadBalancerPropsDsl {
      * @param connectionDrainingPolicy If enabled, the load balancer allows existing requests to
      *   complete before the load balancer shifts traffic away from a deregistered or unhealthy
      *   instance. For more information, see
-     *   [Configure Connection Draining](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/config-conn-drain.html)
-     *   in the *Classic Load Balancers Guide* .
+     *   [Configure connection draining](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/config-conn-drain.html)
+     *   in the *User Guide for Classic Load Balancers* .
      */
     public fun connectionDrainingPolicy(
         connectionDrainingPolicy: CfnLoadBalancer.ConnectionDrainingPolicyProperty
@@ -211,8 +211,8 @@ public class CfnLoadBalancerPropsDsl {
      *   (no data is sent over the connection) for the specified duration. By default, Elastic Load
      *   Balancing maintains a 60-second idle connection timeout for both front-end and back-end
      *   connections of your load balancer. For more information, see
-     *   [Configure Idle Connection Timeout](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/config-idle-timeout.html)
-     *   in the *Classic Load Balancers Guide* .
+     *   [Configure idle connection timeout](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/config-idle-timeout.html)
+     *   in the *User Guide for Classic Load Balancers* .
      */
     public fun connectionSettings(connectionSettings: IResolvable) {
         cdkBuilder.connectionSettings(connectionSettings)
@@ -223,8 +223,8 @@ public class CfnLoadBalancerPropsDsl {
      *   (no data is sent over the connection) for the specified duration. By default, Elastic Load
      *   Balancing maintains a 60-second idle connection timeout for both front-end and back-end
      *   connections of your load balancer. For more information, see
-     *   [Configure Idle Connection Timeout](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/config-idle-timeout.html)
-     *   in the *Classic Load Balancers Guide* .
+     *   [Configure idle connection timeout](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/config-idle-timeout.html)
+     *   in the *User Guide for Classic Load Balancers* .
      */
     public fun connectionSettings(connectionSettings: CfnLoadBalancer.ConnectionSettingsProperty) {
         cdkBuilder.connectionSettings(connectionSettings)
@@ -233,8 +233,8 @@ public class CfnLoadBalancerPropsDsl {
     /**
      * @param crossZone If enabled, the load balancer routes the request traffic evenly across all
      *   instances regardless of the Availability Zones. For more information, see
-     *   [Configure Cross-Zone Load Balancing](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-disable-crosszone-lb.html)
-     *   in the *Classic Load Balancers Guide* .
+     *   [Configure cross-zone load balancing](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-disable-crosszone-lb.html)
+     *   in the *User Guide for Classic Load Balancers* .
      */
     public fun crossZone(crossZone: Boolean) {
         cdkBuilder.crossZone(crossZone)
@@ -243,8 +243,8 @@ public class CfnLoadBalancerPropsDsl {
     /**
      * @param crossZone If enabled, the load balancer routes the request traffic evenly across all
      *   instances regardless of the Availability Zones. For more information, see
-     *   [Configure Cross-Zone Load Balancing](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-disable-crosszone-lb.html)
-     *   in the *Classic Load Balancers Guide* .
+     *   [Configure cross-zone load balancing](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-disable-crosszone-lb.html)
+     *   in the *User Guide for Classic Load Balancers* .
      */
     public fun crossZone(crossZone: IResolvable) {
         cdkBuilder.crossZone(crossZone)

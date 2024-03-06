@@ -20,7 +20,7 @@ import software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration
 
 /**
  * `BlockDevice` is a property of the `EBS` property of the
- * [AWS::AutoScaling::LaunchConfiguration BlockDeviceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html)
+ * [AWS::AutoScaling::LaunchConfiguration BlockDeviceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-launchconfiguration-blockdevicemapping.html)
  * property type that describes an Amazon EBS volume.
  *
  * Example:

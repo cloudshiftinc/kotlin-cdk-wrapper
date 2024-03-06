@@ -14,6 +14,7 @@ package io.cloudshiftdev.awscdkdsl.services.sagemaker
 import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -33,16 +34,24 @@ import software.amazon.awscdk.services.sagemaker.CfnEndpointConfigProps
  * import software.amazon.awscdk.services.sagemaker.*;
  * CfnEndpointConfigProps cfnEndpointConfigProps = CfnEndpointConfigProps.builder()
  * .productionVariants(List.of(ProductionVariantProperty.builder()
- * .initialVariantWeight(123)
- * .modelName("modelName")
  * .variantName("variantName")
  * // the properties below are optional
  * .acceleratorType("acceleratorType")
  * .containerStartupHealthCheckTimeoutInSeconds(123)
  * .enableSsmAccess(false)
  * .initialInstanceCount(123)
+ * .initialVariantWeight(123)
  * .instanceType("instanceType")
+ * .managedInstanceScaling(ManagedInstanceScalingProperty.builder()
+ * .maxInstanceCount(123)
+ * .minInstanceCount(123)
+ * .status("status")
+ * .build())
  * .modelDataDownloadTimeoutInSeconds(123)
+ * .modelName("modelName")
+ * .routingConfig(RoutingConfigProperty.builder()
+ * .routingStrategy("routingStrategy")
+ * .build())
  * .serverlessConfig(ServerlessConfigProperty.builder()
  * .maxConcurrency(123)
  * .memorySizeInMb(123)
@@ -82,7 +91,9 @@ import software.amazon.awscdk.services.sagemaker.CfnEndpointConfigProps
  * .enableCapture(false)
  * .kmsKeyId("kmsKeyId")
  * .build())
+ * .enableNetworkIsolation(false)
  * .endpointConfigName("endpointConfigName")
+ * .executionRoleArn("executionRoleArn")
  * .explainerConfig(ExplainerConfigProperty.builder()
  * .clarifyExplainerConfig(ClarifyExplainerConfigProperty.builder()
  * .shapConfig(ClarifyShapConfigProperty.builder()
@@ -119,16 +130,24 @@ import software.amazon.awscdk.services.sagemaker.CfnEndpointConfigProps
  * .build())
  * .kmsKeyId("kmsKeyId")
  * .shadowProductionVariants(List.of(ProductionVariantProperty.builder()
- * .initialVariantWeight(123)
- * .modelName("modelName")
  * .variantName("variantName")
  * // the properties below are optional
  * .acceleratorType("acceleratorType")
  * .containerStartupHealthCheckTimeoutInSeconds(123)
  * .enableSsmAccess(false)
  * .initialInstanceCount(123)
+ * .initialVariantWeight(123)
  * .instanceType("instanceType")
+ * .managedInstanceScaling(ManagedInstanceScalingProperty.builder()
+ * .maxInstanceCount(123)
+ * .minInstanceCount(123)
+ * .status("status")
+ * .build())
  * .modelDataDownloadTimeoutInSeconds(123)
+ * .modelName("modelName")
+ * .routingConfig(RoutingConfigProperty.builder()
+ * .routingStrategy("routingStrategy")
+ * .build())
  * .serverlessConfig(ServerlessConfigProperty.builder()
  * .maxConcurrency(123)
  * .memorySizeInMb(123)
@@ -141,6 +160,10 @@ import software.amazon.awscdk.services.sagemaker.CfnEndpointConfigProps
  * .key("key")
  * .value("value")
  * .build()))
+ * .vpcConfig(VpcConfigProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnets(List.of("subnets"))
+ * .build())
  * .build();
  * ```
  *
@@ -190,17 +213,32 @@ public class CfnEndpointConfigPropsDsl {
         cdkBuilder.dataCaptureConfig(dataCaptureConfig)
     }
 
+    /** @param enableNetworkIsolation the value to be set. */
+    public fun enableNetworkIsolation(enableNetworkIsolation: Boolean) {
+        cdkBuilder.enableNetworkIsolation(enableNetworkIsolation)
+    }
+
+    /** @param enableNetworkIsolation the value to be set. */
+    public fun enableNetworkIsolation(enableNetworkIsolation: IResolvable) {
+        cdkBuilder.enableNetworkIsolation(enableNetworkIsolation)
+    }
+
     /** @param endpointConfigName The name of the endpoint configuration. */
     public fun endpointConfigName(endpointConfigName: String) {
         cdkBuilder.endpointConfigName(endpointConfigName)
     }
 
-    /** @param explainerConfig the value to be set. */
+    /** @param executionRoleArn the value to be set. */
+    public fun executionRoleArn(executionRoleArn: String) {
+        cdkBuilder.executionRoleArn(executionRoleArn)
+    }
+
+    /** @param explainerConfig A parameter to activate explainers. */
     public fun explainerConfig(explainerConfig: IResolvable) {
         cdkBuilder.explainerConfig(explainerConfig)
     }
 
-    /** @param explainerConfig the value to be set. */
+    /** @param explainerConfig A parameter to activate explainers. */
     public fun explainerConfig(explainerConfig: CfnEndpointConfig.ExplainerConfigProperty) {
         cdkBuilder.explainerConfig(explainerConfig)
     }
@@ -316,6 +354,16 @@ public class CfnEndpointConfigPropsDsl {
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
+    }
+
+    /** @param vpcConfig the value to be set. */
+    public fun vpcConfig(vpcConfig: IResolvable) {
+        cdkBuilder.vpcConfig(vpcConfig)
+    }
+
+    /** @param vpcConfig the value to be set. */
+    public fun vpcConfig(vpcConfig: CfnEndpointConfig.VpcConfigProperty) {
+        cdkBuilder.vpcConfig(vpcConfig)
     }
 
     public fun build(): CfnEndpointConfigProps {

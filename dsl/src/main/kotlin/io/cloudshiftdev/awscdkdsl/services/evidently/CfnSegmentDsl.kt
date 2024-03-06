@@ -33,7 +33,7 @@ import software.constructs.Construct
  * splits for the different audience segments.
  *
  * For more information about segment pattern syntax, see
- * [Segment rule pattern syntax](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments-syntax.html)
+ * [Segment rule pattern syntax](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html#CloudWatch-Evidently-segments-syntax)
  * .
  *
  * The pattern that you define for a segment is matched against the value of `evaluationContext` ,
@@ -95,7 +95,7 @@ public class CfnSegmentDsl(
      * The pattern to use for the segment.
      *
      * For more information about pattern syntax, see
-     * [Segment rule pattern syntax](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments-syntax.html)
+     * [Segment rule pattern syntax](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html#CloudWatch-Evidently-segments-syntax)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-segment.html#cfn-evidently-segment-pattern)

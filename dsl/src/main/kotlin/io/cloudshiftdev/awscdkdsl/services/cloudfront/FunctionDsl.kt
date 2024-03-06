@@ -15,6 +15,8 @@ import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cloudfront.Function
 import software.amazon.awscdk.services.cloudfront.FunctionCode
+import software.amazon.awscdk.services.cloudfront.FunctionRuntime
+import software.amazon.awscdk.services.cloudfront.IKeyValueStore
 import software.constructs.Construct
 
 /**
@@ -26,6 +28,7 @@ import software.constructs.Construct
  * // Add a cloudfront Function to a Distribution
  * Function cfFunction = Function.Builder.create(this, "Function")
  * .code(FunctionCode.fromInline("function handler(event) { return event.request }"))
+ * .runtime(FunctionRuntime.JS_2_0)
  * .build();
  * Distribution.Builder.create(this, "distro")
  * .defaultBehavior(BehaviorOptions.builder()
@@ -74,6 +77,31 @@ public class FunctionDsl(
      */
     public fun functionName(functionName: String) {
         cdkBuilder.functionName(functionName)
+    }
+
+    /**
+     * The Key Value Store to associate with this function.
+     *
+     * In order to associate a Key Value Store, the `runtime` must be `cloudfront-js-2.0` or newer.
+     *
+     * Default: - no key value store is associated
+     *
+     * @param keyValueStore The Key Value Store to associate with this function.
+     */
+    public fun keyValueStore(keyValueStore: IKeyValueStore) {
+        cdkBuilder.keyValueStore(keyValueStore)
+    }
+
+    /**
+     * The runtime environment for the function.
+     *
+     * Default: FunctionRuntime.JS_1_0 (unless `keyValueStore` is specified, then
+     * `FunctionRuntime.JS_2_0`)
+     *
+     * @param runtime The runtime environment for the function.
+     */
+    public fun runtime(runtime: FunctionRuntime) {
+        cdkBuilder.runtime(runtime)
     }
 
     public fun build(): Function = cdkBuilder.build()

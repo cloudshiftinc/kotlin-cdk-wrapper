@@ -63,9 +63,11 @@ import software.amazon.awscdk.services.fsx.CfnFileSystemProps
  * .build())
  * .endpointIpAddressRange("endpointIpAddressRange")
  * .fsxAdminPassword("fsxAdminPassword")
+ * .haPairs(123)
  * .preferredSubnetId("preferredSubnetId")
  * .routeTableIds(List.of("routeTableIds"))
  * .throughputCapacity(123)
+ * .throughputCapacityPerHaPair(123)
  * .weeklyMaintenanceStartTime("weeklyMaintenanceStartTime")
  * .build())
  * .openZfsConfiguration(OpenZFSConfigurationProperty.builder()
@@ -79,7 +81,9 @@ import software.amazon.awscdk.services.fsx.CfnFileSystemProps
  * .iops(123)
  * .mode("mode")
  * .build())
+ * .endpointIpAddressRange("endpointIpAddressRange")
  * .options(List.of("options"))
+ * .preferredSubnetId("preferredSubnetId")
  * .rootVolumeConfiguration(RootVolumeConfigurationProperty.builder()
  * .copyTagsToSnapshots(false)
  * .dataCompressionType("dataCompressionType")
@@ -97,6 +101,7 @@ import software.amazon.awscdk.services.fsx.CfnFileSystemProps
  * .type("type")
  * .build()))
  * .build())
+ * .routeTableIds(List.of("routeTableIds"))
  * .throughputCapacity(123)
  * .weeklyMaintenanceStartTime("weeklyMaintenanceStartTime")
  * .build())
@@ -122,6 +127,10 @@ import software.amazon.awscdk.services.fsx.CfnFileSystemProps
  * .copyTagsToBackups(false)
  * .dailyAutomaticBackupStartTime("dailyAutomaticBackupStartTime")
  * .deploymentType("deploymentType")
+ * .diskIopsConfiguration(DiskIopsConfigurationProperty.builder()
+ * .iops(123)
+ * .mode("mode")
+ * .build())
  * .preferredSubnetId("preferredSubnetId")
  * .selfManagedActiveDirectoryConfiguration(SelfManagedActiveDirectoryConfigurationProperty.builder()
  * .dnsIps(List.of("dnsIps"))
@@ -168,10 +177,11 @@ public class CfnFileSystemPropsDsl {
 
     /**
      * @param fileSystemTypeVersion (Optional) For FSx for Lustre file systems, sets the Lustre
-     *   version for the file system that you're creating. Valid values are `2.10` and `2.12` :
+     *   version for the file system that you're creating. Valid values are `2.10` , `2.12` , and
+     *   `2.15` :
      * * 2.10 is supported by the Scratch and Persistent_1 Lustre deployment types.
-     * * 2.12 is supported by all Lustre deployment types. `2.12` is required when setting FSx for
-     *   Lustre `DeploymentType` to `PERSISTENT_2` .
+     * * 2.12 and 2.15 are supported by all Lustre deployment types. `2.12` or `2.15` is required
+     *   when setting FSx for Lustre `DeploymentType` to `PERSISTENT_2` .
      *
      * Default value = `2.10` , except when `DeploymentType` is set to `PERSISTENT_2` , then the
      * default is `2.12` .
@@ -201,8 +211,8 @@ public class CfnFileSystemPropsDsl {
     /**
      * @param lustreConfiguration The Lustre configuration for the file system being created.
      *
-     * The following parameters are not supported for file systems with a data repository
-     * association.
+     * The following parameters are not supported when creating Lustre file systems with a data
+     * repository association.
      * * `AutoImportPolicy`
      * * `ExportPath`
      * * `ImportedChunkSize`
@@ -215,8 +225,8 @@ public class CfnFileSystemPropsDsl {
     /**
      * @param lustreConfiguration The Lustre configuration for the file system being created.
      *
-     * The following parameters are not supported for file systems with a data repository
-     * association.
+     * The following parameters are not supported when creating Lustre file systems with a data
+     * repository association.
      * * `AutoImportPolicy`
      * * `ExportPath`
      * * `ImportedChunkSize`
@@ -264,6 +274,9 @@ public class CfnFileSystemPropsDsl {
      * @param securityGroupIds A list of IDs specifying the security groups to apply to all network
      *   interfaces created for file system access. This list isn't returned in later requests to
      *   describe the file system.
+     *
+     * You must specify a security group if you are creating a Multi-AZ FSx for ONTAP file system in
+     * a VPC subnet that has been shared with you.
      */
     public fun securityGroupIds(vararg securityGroupIds: String) {
         _securityGroupIds.addAll(listOf(*securityGroupIds))
@@ -273,6 +286,9 @@ public class CfnFileSystemPropsDsl {
      * @param securityGroupIds A list of IDs specifying the security groups to apply to all network
      *   interfaces created for file system access. This list isn't returned in later requests to
      *   describe the file system.
+     *
+     * You must specify a security group if you are creating a Multi-AZ FSx for ONTAP file system in
+     * a VPC subnet that has been shared with you.
      */
     public fun securityGroupIds(securityGroupIds: Collection<String>) {
         _securityGroupIds.addAll(securityGroupIds)
@@ -280,7 +296,8 @@ public class CfnFileSystemPropsDsl {
 
     /**
      * @param storageCapacity Sets the storage capacity of the file system that you're creating.
-     *   `StorageCapacity` is required if you are creating a new file system.
+     *   `StorageCapacity` is required if you are creating a new file system. It is not required if
+     *   you are creating a file system by restoring a backup.
      *
      * *FSx for Lustre file systems* - The amount of storage capacity that you can configure depends
      * on the value that you set for `StorageType` and the Lustre `DeploymentType` , as follows:
@@ -370,18 +387,18 @@ public class CfnFileSystemPropsDsl {
     }
 
     /**
-     * @param tags An array of key-value pairs to apply to this resource. For more information, see
-     *   [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     *   .
+     * @param tags The tags to associate with the file system. For more information, see
+     *   [Tagging your Amazon FSx resources](https://docs.aws.amazon.com/fsx/latest/LustreGuide/tag-resources.html)
+     *   in the *Amazon FSx for Lustre User Guide* .
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
     /**
-     * @param tags An array of key-value pairs to apply to this resource. For more information, see
-     *   [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     *   .
+     * @param tags The tags to associate with the file system. For more information, see
+     *   [Tagging your Amazon FSx resources](https://docs.aws.amazon.com/fsx/latest/LustreGuide/tag-resources.html)
+     *   in the *Amazon FSx for Lustre User Guide* .
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)

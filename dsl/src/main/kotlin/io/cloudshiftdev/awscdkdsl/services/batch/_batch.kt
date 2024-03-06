@@ -21,6 +21,58 @@ import software.amazon.awscdk.services.batch.CfnJobQueue
 import software.amazon.awscdk.services.batch.CfnJobQueueProps
 import software.amazon.awscdk.services.batch.CfnSchedulingPolicy
 import software.amazon.awscdk.services.batch.CfnSchedulingPolicyProps
+import software.amazon.awscdk.services.batch.ComputeEnvironmentProps
+import software.amazon.awscdk.services.batch.CustomReason
+import software.amazon.awscdk.services.batch.Device
+import software.amazon.awscdk.services.batch.EcsContainerDefinitionProps
+import software.amazon.awscdk.services.batch.EcsEc2ContainerDefinition
+import software.amazon.awscdk.services.batch.EcsEc2ContainerDefinitionProps
+import software.amazon.awscdk.services.batch.EcsFargateContainerDefinition
+import software.amazon.awscdk.services.batch.EcsFargateContainerDefinitionProps
+import software.amazon.awscdk.services.batch.EcsJobDefinition
+import software.amazon.awscdk.services.batch.EcsJobDefinitionProps
+import software.amazon.awscdk.services.batch.EcsMachineImage
+import software.amazon.awscdk.services.batch.EcsVolumeOptions
+import software.amazon.awscdk.services.batch.EfsVolume
+import software.amazon.awscdk.services.batch.EfsVolumeOptions
+import software.amazon.awscdk.services.batch.EksContainerDefinition
+import software.amazon.awscdk.services.batch.EksContainerDefinitionProps
+import software.amazon.awscdk.services.batch.EksJobDefinition
+import software.amazon.awscdk.services.batch.EksJobDefinitionProps
+import software.amazon.awscdk.services.batch.EksMachineImage
+import software.amazon.awscdk.services.batch.EksVolumeOptions
+import software.amazon.awscdk.services.batch.EmptyDirVolume
+import software.amazon.awscdk.services.batch.EmptyDirVolumeOptions
+import software.amazon.awscdk.services.batch.FairshareSchedulingPolicy
+import software.amazon.awscdk.services.batch.FairshareSchedulingPolicyProps
+import software.amazon.awscdk.services.batch.FargateComputeEnvironment
+import software.amazon.awscdk.services.batch.FargateComputeEnvironmentProps
+import software.amazon.awscdk.services.batch.HostPathVolume
+import software.amazon.awscdk.services.batch.HostPathVolumeOptions
+import software.amazon.awscdk.services.batch.HostVolume
+import software.amazon.awscdk.services.batch.HostVolumeOptions
+import software.amazon.awscdk.services.batch.JobDefinitionProps
+import software.amazon.awscdk.services.batch.JobQueue
+import software.amazon.awscdk.services.batch.JobQueueProps
+import software.amazon.awscdk.services.batch.LinuxParameters
+import software.amazon.awscdk.services.batch.LinuxParametersProps
+import software.amazon.awscdk.services.batch.ManagedComputeEnvironmentProps
+import software.amazon.awscdk.services.batch.ManagedEc2EcsComputeEnvironment
+import software.amazon.awscdk.services.batch.ManagedEc2EcsComputeEnvironmentProps
+import software.amazon.awscdk.services.batch.ManagedEc2EksComputeEnvironment
+import software.amazon.awscdk.services.batch.ManagedEc2EksComputeEnvironmentProps
+import software.amazon.awscdk.services.batch.MultiNodeContainer
+import software.amazon.awscdk.services.batch.MultiNodeJobDefinition
+import software.amazon.awscdk.services.batch.MultiNodeJobDefinitionProps
+import software.amazon.awscdk.services.batch.OrderedComputeEnvironment
+import software.amazon.awscdk.services.batch.SecretPathVolume
+import software.amazon.awscdk.services.batch.SecretPathVolumeOptions
+import software.amazon.awscdk.services.batch.SecretVersionInfo
+import software.amazon.awscdk.services.batch.Share
+import software.amazon.awscdk.services.batch.Tmpfs
+import software.amazon.awscdk.services.batch.Ulimit
+import software.amazon.awscdk.services.batch.UnmanagedComputeEnvironment
+import software.amazon.awscdk.services.batch.UnmanagedComputeEnvironmentProps
 import software.constructs.Construct
 
 public object batch {
@@ -89,7 +141,7 @@ public object batch {
      *   [ReplaceComputeEnvironment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#cfn-batch-computeenvironment-replacecomputeenvironment)
      *   property to `false` .
      *
-     * Set the `ReplaceComputeEnvironment` property to `false` if the compute environment uses the
+     * Set the `ReplaceComputeEnvironment` property to `true` if the compute environment uses the
      * `BEST_FIT` allocation strategy. &gt; If the `ReplaceComputeEnvironment` property is set to
      * `false` , you might receive an error message when you update the CFN template for a compute
      * environment. This issue occurs if the updated `desiredvcpus` value is less than the current
@@ -517,6 +569,9 @@ public object batch {
      * .build())
      * .privileged(false)
      * .readonlyRootFilesystem(false)
+     * .repositoryCredentials(RepositoryCredentialsProperty.builder()
+     * .credentialsParameter("credentialsParameter")
+     * .build())
      * .resourceRequirements(List.of(ResourceRequirementProperty.builder()
      * .type("type")
      * .value("value")
@@ -669,6 +724,9 @@ public object batch {
      * .build())
      * .privileged(false)
      * .readonlyRootFilesystem(false)
+     * .repositoryCredentials(RepositoryCredentialsProperty.builder()
+     * .credentialsParameter("credentialsParameter")
+     * .build())
      * .resourceRequirements(List.of(ResourceRequirementProperty.builder()
      * .type("type")
      * .value("value")
@@ -831,6 +889,9 @@ public object batch {
      * .build())
      * .privileged(false)
      * .readonlyRootFilesystem(false)
+     * .repositoryCredentials(RepositoryCredentialsProperty.builder()
+     * .credentialsParameter("credentialsParameter")
+     * .build())
      * .resourceRequirements(List.of(ResourceRequirementProperty.builder()
      * .type("type")
      * .value("value")
@@ -1416,6 +1477,12 @@ public object batch {
     }
 
     /**
+     * Metadata about the Kubernetes pod.
+     *
+     * For more information, see
+     * [Understanding Kubernetes Objects](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/)
+     * in the *Kubernetes documentation* .
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -1441,7 +1508,7 @@ public object batch {
      * Details for a Docker volume mount point that's used in a job's container properties.
      *
      * This parameter maps to `Volumes` in the
-     * [Create a container](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/api/docker_remote_api_v1.19/#create-a-container)
+     * [Create a container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.43/#tag/Container/operation/ContainerCreate)
      * section of the *Docker Remote API* and the `--volume` option to docker run.
      *
      * Example:
@@ -1562,6 +1629,9 @@ public object batch {
      * .build())
      * .privileged(false)
      * .readonlyRootFilesystem(false)
+     * .repositoryCredentials(RepositoryCredentialsProperty.builder()
+     * .credentialsParameter("credentialsParameter")
+     * .build())
      * .resourceRequirements(List.of(ResourceRequirementProperty.builder()
      * .type("type")
      * .value("value")
@@ -1680,6 +1750,9 @@ public object batch {
      * .build())
      * .privileged(false)
      * .readonlyRootFilesystem(false)
+     * .repositoryCredentials(RepositoryCredentialsProperty.builder()
+     * .credentialsParameter("credentialsParameter")
+     * .build())
      * .resourceRequirements(List.of(ResourceRequirementProperty.builder()
      * .type("type")
      * .value("value")
@@ -1877,6 +1950,9 @@ public object batch {
      * .build())
      * .privileged(false)
      * .readonlyRootFilesystem(false)
+     * .repositoryCredentials(RepositoryCredentialsProperty.builder()
+     * .credentialsParameter("credentialsParameter")
+     * .build())
      * .resourceRequirements(List.of(ResourceRequirementProperty.builder()
      * .type("type")
      * .value("value")
@@ -2029,6 +2105,9 @@ public object batch {
      * .build())
      * .privileged(false)
      * .readonlyRootFilesystem(false)
+     * .repositoryCredentials(RepositoryCredentialsProperty.builder()
+     * .credentialsParameter("credentialsParameter")
+     * .build())
      * .resourceRequirements(List.of(ResourceRequirementProperty.builder()
      * .type("type")
      * .value("value")
@@ -2096,6 +2175,30 @@ public object batch {
         block: CfnJobDefinitionPropsDsl.() -> Unit = {}
     ): CfnJobDefinitionProps {
         val builder = CfnJobDefinitionPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The repository credentials for private registry authentication.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.batch.*;
+     * RepositoryCredentialsProperty repositoryCredentialsProperty =
+     * RepositoryCredentialsProperty.builder()
+     * .credentialsParameter("credentialsParameter")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-repositorycredentials.html)
+     */
+    public inline fun cfnJobDefinitionRepositoryCredentialsProperty(
+        block: CfnJobDefinitionRepositoryCredentialsPropertyDsl.() -> Unit = {}
+    ): CfnJobDefinition.RepositoryCredentialsProperty {
+        val builder = CfnJobDefinitionRepositoryCredentialsPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -2319,7 +2422,8 @@ public object batch {
     }
 
     /**
-     * The `ulimit` settings to pass to the container.
+     * The `ulimit` settings to pass to the container. For more information, see
+     * [Ulimit](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_Ulimit.html) .
      *
      * This object isn't applicable to jobs that are running on Fargate resources.
      *
@@ -2642,6 +2746,1632 @@ public object batch {
         block: CfnSchedulingPolicyShareAttributesPropertyDsl.() -> Unit = {}
     ): CfnSchedulingPolicy.ShareAttributesProperty {
         val builder = CfnSchedulingPolicyShareAttributesPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Props common to all ComputeEnvironments.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.batch.*;
+     * import software.amazon.awscdk.services.iam.*;
+     * Role role;
+     * ComputeEnvironmentProps computeEnvironmentProps = ComputeEnvironmentProps.builder()
+     * .computeEnvironmentName("computeEnvironmentName")
+     * .enabled(false)
+     * .serviceRole(role)
+     * .build();
+     * ```
+     */
+    public inline fun computeEnvironmentProps(
+        block: ComputeEnvironmentPropsDsl.() -> Unit = {}
+    ): ComputeEnvironmentProps {
+        val builder = ComputeEnvironmentPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The corresponding Action will only be taken if *all* of the conditions specified here are
+     * met.
+     *
+     * Example:
+     * ```
+     * EcsJobDefinition jobDefn = EcsJobDefinition.Builder.create(this, "JobDefn")
+     * .container(EcsEc2ContainerDefinition.Builder.create(this, "containerDefn")
+     * .image(ContainerImage.fromRegistry("public.ecr.aws/amazonlinux/amazonlinux:latest"))
+     * .memory(Size.mebibytes(2048))
+     * .cpu(256)
+     * .build())
+     * .retryAttempts(5)
+     * .retryStrategies(List.of(RetryStrategy.of(Action.EXIT, Reason.CANNOT_PULL_CONTAINER)))
+     * .build();
+     * jobDefn.addRetryStrategy(RetryStrategy.of(Action.EXIT, Reason.SPOT_INSTANCE_RECLAIMED));
+     * jobDefn.addRetryStrategy(RetryStrategy.of(Action.EXIT, Reason.CANNOT_PULL_CONTAINER));
+     * jobDefn.addRetryStrategy(RetryStrategy.of(Action.EXIT, Reason.custom(CustomReason.builder()
+     * .onExitCode("40*")
+     * .onReason("some reason")
+     * .build())));
+     * ```
+     */
+    public inline fun customReason(block: CustomReasonDsl.() -> Unit = {}): CustomReason {
+        val builder = CustomReasonDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A container instance host device.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.batch.*;
+     * Device device = Device.builder()
+     * .hostPath("hostPath")
+     * // the properties below are optional
+     * .containerPath("containerPath")
+     * .permissions(List.of(DevicePermission.READ))
+     * .build();
+     * ```
+     */
+    public inline fun device(block: DeviceDsl.() -> Unit = {}): Device {
+        val builder = DeviceDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Props to configure an EcsContainerDefinition.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.*;
+     * import software.amazon.awscdk.services.batch.*;
+     * import software.amazon.awscdk.services.ecs.*;
+     * import software.amazon.awscdk.services.iam.*;
+     * ContainerImage containerImage;
+     * EcsVolume ecsVolume;
+     * LinuxParameters linuxParameters;
+     * LogDriver logDriver;
+     * Role role;
+     * Secret secret;
+     * Size size;
+     * EcsContainerDefinitionProps ecsContainerDefinitionProps = EcsContainerDefinitionProps.builder()
+     * .cpu(123)
+     * .image(containerImage)
+     * .memory(size)
+     * // the properties below are optional
+     * .command(List.of("command"))
+     * .environment(Map.of(
+     * "environmentKey", "environment"))
+     * .executionRole(role)
+     * .jobRole(role)
+     * .linuxParameters(linuxParameters)
+     * .logging(logDriver)
+     * .readonlyRootFilesystem(false)
+     * .secrets(Map.of(
+     * "secretsKey", secret))
+     * .user("user")
+     * .volumes(List.of(ecsVolume))
+     * .build();
+     * ```
+     */
+    public inline fun ecsContainerDefinitionProps(
+        block: EcsContainerDefinitionPropsDsl.() -> Unit = {}
+    ): EcsContainerDefinitionProps {
+        val builder = EcsContainerDefinitionPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A container orchestrated by ECS that uses EC2 resources.
+     *
+     * Example:
+     * ```
+     * IVpc vpc;
+     * EcsJobDefinition ecsJob = EcsJobDefinition.Builder.create(this, "JobDefn")
+     * .container(EcsEc2ContainerDefinition.Builder.create(this, "containerDefn")
+     * .image(ContainerImage.fromRegistry("public.ecr.aws/amazonlinux/amazonlinux:latest"))
+     * .memory(Size.mebibytes(2048))
+     * .cpu(256)
+     * .build())
+     * .build();
+     * JobQueue queue = JobQueue.Builder.create(this, "JobQueue")
+     * .computeEnvironments(List.of(OrderedComputeEnvironment.builder()
+     * .computeEnvironment(ManagedEc2EcsComputeEnvironment.Builder.create(this, "managedEc2CE")
+     * .vpc(vpc)
+     * .build())
+     * .order(1)
+     * .build()))
+     * .priority(10)
+     * .build();
+     * User user = new User(this, "MyUser");
+     * ecsJob.grantSubmitJob(user, queue);
+     * ```
+     */
+    public inline fun ecsEc2ContainerDefinition(
+        scope: Construct,
+        id: String,
+        block: EcsEc2ContainerDefinitionDsl.() -> Unit = {},
+    ): EcsEc2ContainerDefinition {
+        val builder = EcsEc2ContainerDefinitionDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Props to configure an EcsEc2ContainerDefinition.
+     *
+     * Example:
+     * ```
+     * IVpc vpc;
+     * EcsJobDefinition ecsJob = EcsJobDefinition.Builder.create(this, "JobDefn")
+     * .container(EcsEc2ContainerDefinition.Builder.create(this, "containerDefn")
+     * .image(ContainerImage.fromRegistry("public.ecr.aws/amazonlinux/amazonlinux:latest"))
+     * .memory(Size.mebibytes(2048))
+     * .cpu(256)
+     * .build())
+     * .build();
+     * JobQueue queue = JobQueue.Builder.create(this, "JobQueue")
+     * .computeEnvironments(List.of(OrderedComputeEnvironment.builder()
+     * .computeEnvironment(ManagedEc2EcsComputeEnvironment.Builder.create(this, "managedEc2CE")
+     * .vpc(vpc)
+     * .build())
+     * .order(1)
+     * .build()))
+     * .priority(10)
+     * .build();
+     * User user = new User(this, "MyUser");
+     * ecsJob.grantSubmitJob(user, queue);
+     * ```
+     */
+    public inline fun ecsEc2ContainerDefinitionProps(
+        block: EcsEc2ContainerDefinitionPropsDsl.() -> Unit = {}
+    ): EcsEc2ContainerDefinitionProps {
+        val builder = EcsEc2ContainerDefinitionPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A container orchestrated by ECS that uses Fargate resources.
+     *
+     * Example:
+     * ```
+     * EcsJobDefinition jobDefn = EcsJobDefinition.Builder.create(this, "JobDefn")
+     * .container(EcsFargateContainerDefinition.Builder.create(this, "myFargateContainer")
+     * .image(ContainerImage.fromRegistry("public.ecr.aws/amazonlinux/amazonlinux:latest"))
+     * .memory(Size.mebibytes(2048))
+     * .cpu(256)
+     * .ephemeralStorageSize(Size.gibibytes(100))
+     * .fargateCpuArchitecture(CpuArchitecture.ARM64)
+     * .fargateOperatingSystemFamily(OperatingSystemFamily.LINUX)
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun ecsFargateContainerDefinition(
+        scope: Construct,
+        id: String,
+        block: EcsFargateContainerDefinitionDsl.() -> Unit = {},
+    ): EcsFargateContainerDefinition {
+        val builder = EcsFargateContainerDefinitionDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Props to configure an EcsFargateContainerDefinition.
+     *
+     * Example:
+     * ```
+     * EcsJobDefinition jobDefn = EcsJobDefinition.Builder.create(this, "JobDefn")
+     * .container(EcsFargateContainerDefinition.Builder.create(this, "myFargateContainer")
+     * .image(ContainerImage.fromRegistry("public.ecr.aws/amazonlinux/amazonlinux:latest"))
+     * .memory(Size.mebibytes(2048))
+     * .cpu(256)
+     * .ephemeralStorageSize(Size.gibibytes(100))
+     * .fargateCpuArchitecture(CpuArchitecture.ARM64)
+     * .fargateOperatingSystemFamily(OperatingSystemFamily.LINUX)
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun ecsFargateContainerDefinitionProps(
+        block: EcsFargateContainerDefinitionPropsDsl.() -> Unit = {}
+    ): EcsFargateContainerDefinitionProps {
+        val builder = EcsFargateContainerDefinitionPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A JobDefinition that uses ECS orchestration.
+     *
+     * Example:
+     * ```
+     * IVpc vpc;
+     * EcsJobDefinition ecsJob = EcsJobDefinition.Builder.create(this, "JobDefn")
+     * .container(EcsEc2ContainerDefinition.Builder.create(this, "containerDefn")
+     * .image(ContainerImage.fromRegistry("public.ecr.aws/amazonlinux/amazonlinux:latest"))
+     * .memory(Size.mebibytes(2048))
+     * .cpu(256)
+     * .build())
+     * .build();
+     * JobQueue queue = JobQueue.Builder.create(this, "JobQueue")
+     * .computeEnvironments(List.of(OrderedComputeEnvironment.builder()
+     * .computeEnvironment(ManagedEc2EcsComputeEnvironment.Builder.create(this, "managedEc2CE")
+     * .vpc(vpc)
+     * .build())
+     * .order(1)
+     * .build()))
+     * .priority(10)
+     * .build();
+     * User user = new User(this, "MyUser");
+     * ecsJob.grantSubmitJob(user, queue);
+     * ```
+     */
+    public inline fun ecsJobDefinition(
+        scope: Construct,
+        id: String,
+        block: EcsJobDefinitionDsl.() -> Unit = {},
+    ): EcsJobDefinition {
+        val builder = EcsJobDefinitionDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Props for EcsJobDefinition.
+     *
+     * Example:
+     * ```
+     * IVpc vpc;
+     * EcsJobDefinition ecsJob = EcsJobDefinition.Builder.create(this, "JobDefn")
+     * .container(EcsEc2ContainerDefinition.Builder.create(this, "containerDefn")
+     * .image(ContainerImage.fromRegistry("public.ecr.aws/amazonlinux/amazonlinux:latest"))
+     * .memory(Size.mebibytes(2048))
+     * .cpu(256)
+     * .build())
+     * .build();
+     * JobQueue queue = JobQueue.Builder.create(this, "JobQueue")
+     * .computeEnvironments(List.of(OrderedComputeEnvironment.builder()
+     * .computeEnvironment(ManagedEc2EcsComputeEnvironment.Builder.create(this, "managedEc2CE")
+     * .vpc(vpc)
+     * .build())
+     * .order(1)
+     * .build()))
+     * .priority(10)
+     * .build();
+     * User user = new User(this, "MyUser");
+     * ecsJob.grantSubmitJob(user, queue);
+     * ```
+     */
+    public inline fun ecsJobDefinitionProps(
+        block: EcsJobDefinitionPropsDsl.() -> Unit = {}
+    ): EcsJobDefinitionProps {
+        val builder = EcsJobDefinitionPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A Batch MachineImage that is compatible with ECS.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.batch.*;
+     * import software.amazon.awscdk.services.ec2.*;
+     * IMachineImage machineImage;
+     * EcsMachineImage ecsMachineImage = EcsMachineImage.builder()
+     * .image(machineImage)
+     * .imageType(EcsMachineImageType.ECS_AL2)
+     * .build();
+     * ```
+     */
+    public inline fun ecsMachineImage(block: EcsMachineImageDsl.() -> Unit = {}): EcsMachineImage {
+        val builder = EcsMachineImageDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Options to configure an EcsVolume.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.batch.*;
+     * EcsVolumeOptions ecsVolumeOptions = EcsVolumeOptions.builder()
+     * .containerPath("containerPath")
+     * .name("name")
+     * // the properties below are optional
+     * .readonly(false)
+     * .build();
+     * ```
+     */
+    public inline fun ecsVolumeOptions(
+        block: EcsVolumeOptionsDsl.() -> Unit = {}
+    ): EcsVolumeOptions {
+        val builder = EcsVolumeOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A Volume that uses an AWS Elastic File System (EFS);
+     *
+     * this volume can grow and shrink as needed
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.batch.*;
+     * import software.amazon.awscdk.services.efs.*;
+     * FileSystem fileSystem;
+     * EfsVolume efsVolume = EfsVolume.Builder.create()
+     * .containerPath("containerPath")
+     * .fileSystem(fileSystem)
+     * .name("name")
+     * // the properties below are optional
+     * .accessPointId("accessPointId")
+     * .enableTransitEncryption(false)
+     * .readonly(false)
+     * .rootDirectory("rootDirectory")
+     * .transitEncryptionPort(123)
+     * .useJobRole(false)
+     * .build();
+     * ```
+     */
+    public inline fun efsVolume(block: EfsVolumeDsl.() -> Unit = {}): EfsVolume {
+        val builder = EfsVolumeDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Options for configuring an EfsVolume.
+     *
+     * Example:
+     * ```
+     * IFileSystem myFileSystem;
+     * Role myJobRole;
+     * myFileSystem.grantRead(myJobRole);
+     * EcsJobDefinition jobDefn = EcsJobDefinition.Builder.create(this, "JobDefn")
+     * .container(EcsEc2ContainerDefinition.Builder.create(this, "containerDefn")
+     * .image(ContainerImage.fromRegistry("public.ecr.aws/amazonlinux/amazonlinux:latest"))
+     * .memory(Size.mebibytes(2048))
+     * .cpu(256)
+     * .volumes(List.of(EcsVolume.efs(EfsVolumeOptions.builder()
+     * .name("myVolume")
+     * .fileSystem(myFileSystem)
+     * .containerPath("/Volumes/myVolume")
+     * .useJobRole(true)
+     * .build())))
+     * .jobRole(myJobRole)
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun efsVolumeOptions(
+        block: EfsVolumeOptionsDsl.() -> Unit = {}
+    ): EfsVolumeOptions {
+        val builder = EfsVolumeOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A container that can be run with EKS orchestration on EC2 resources.
+     *
+     * Example:
+     * ```
+     * EksJobDefinition jobDefn = EksJobDefinition.Builder.create(this, "eksf2")
+     * .container(EksContainerDefinition.Builder.create(this, "container")
+     * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+     * .volumes(List.of(EksVolume.emptyDir(EmptyDirVolumeOptions.builder()
+     * .name("myEmptyDirVolume")
+     * .mountPath("/mount/path")
+     * .medium(EmptyDirMediumType.MEMORY)
+     * .readonly(true)
+     * .sizeLimit(Size.mebibytes(2048))
+     * .build())))
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun eksContainerDefinition(
+        scope: Construct,
+        id: String,
+        block: EksContainerDefinitionDsl.() -> Unit = {},
+    ): EksContainerDefinition {
+        val builder = EksContainerDefinitionDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Props to configure an EksContainerDefinition.
+     *
+     * Example:
+     * ```
+     * EksJobDefinition jobDefn = EksJobDefinition.Builder.create(this, "eksf2")
+     * .container(EksContainerDefinition.Builder.create(this, "container")
+     * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+     * .volumes(List.of(EksVolume.emptyDir(EmptyDirVolumeOptions.builder()
+     * .name("myEmptyDirVolume")
+     * .mountPath("/mount/path")
+     * .medium(EmptyDirMediumType.MEMORY)
+     * .readonly(true)
+     * .sizeLimit(Size.mebibytes(2048))
+     * .build())))
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun eksContainerDefinitionProps(
+        block: EksContainerDefinitionPropsDsl.() -> Unit = {}
+    ): EksContainerDefinitionProps {
+        val builder = EksContainerDefinitionPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A JobDefinition that uses Eks orchestration.
+     *
+     * Example:
+     * ```
+     * EksJobDefinition jobDefn = EksJobDefinition.Builder.create(this, "eksf2")
+     * .container(EksContainerDefinition.Builder.create(this, "container")
+     * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+     * .volumes(List.of(EksVolume.emptyDir(EmptyDirVolumeOptions.builder()
+     * .name("myEmptyDirVolume")
+     * .mountPath("/mount/path")
+     * .medium(EmptyDirMediumType.MEMORY)
+     * .readonly(true)
+     * .sizeLimit(Size.mebibytes(2048))
+     * .build())))
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun eksJobDefinition(
+        scope: Construct,
+        id: String,
+        block: EksJobDefinitionDsl.() -> Unit = {},
+    ): EksJobDefinition {
+        val builder = EksJobDefinitionDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Props for EksJobDefinition.
+     *
+     * Example:
+     * ```
+     * EksJobDefinition jobDefn = EksJobDefinition.Builder.create(this, "eksf2")
+     * .container(EksContainerDefinition.Builder.create(this, "container")
+     * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+     * .volumes(List.of(EksVolume.emptyDir(EmptyDirVolumeOptions.builder()
+     * .name("myEmptyDirVolume")
+     * .mountPath("/mount/path")
+     * .medium(EmptyDirMediumType.MEMORY)
+     * .readonly(true)
+     * .sizeLimit(Size.mebibytes(2048))
+     * .build())))
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun eksJobDefinitionProps(
+        block: EksJobDefinitionPropsDsl.() -> Unit = {}
+    ): EksJobDefinitionProps {
+        val builder = EksJobDefinitionPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A Batch MachineImage that is compatible with EKS.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.batch.*;
+     * import software.amazon.awscdk.services.ec2.*;
+     * IMachineImage machineImage;
+     * EksMachineImage eksMachineImage = EksMachineImage.builder()
+     * .image(machineImage)
+     * .imageType(EksMachineImageType.EKS_AL2)
+     * .build();
+     * ```
+     */
+    public inline fun eksMachineImage(block: EksMachineImageDsl.() -> Unit = {}): EksMachineImage {
+        val builder = EksMachineImageDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Options to configure an EksVolume.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.batch.*;
+     * EksVolumeOptions eksVolumeOptions = EksVolumeOptions.builder()
+     * .name("name")
+     * // the properties below are optional
+     * .mountPath("mountPath")
+     * .readonly(false)
+     * .build();
+     * ```
+     */
+    public inline fun eksVolumeOptions(
+        block: EksVolumeOptionsDsl.() -> Unit = {}
+    ): EksVolumeOptions {
+        val builder = EksVolumeOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A Kubernetes EmptyDir volume.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.*;
+     * import software.amazon.awscdk.services.batch.*;
+     * Size size;
+     * EmptyDirVolume emptyDirVolume = EmptyDirVolume.Builder.create()
+     * .name("name")
+     * // the properties below are optional
+     * .medium(EmptyDirMediumType.DISK)
+     * .mountPath("mountPath")
+     * .readonly(false)
+     * .sizeLimit(size)
+     * .build();
+     * ```
+     *
+     * [Documentation](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir)
+     */
+    public inline fun emptyDirVolume(block: EmptyDirVolumeDsl.() -> Unit = {}): EmptyDirVolume {
+        val builder = EmptyDirVolumeDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Options for a Kubernetes EmptyDir volume.
+     *
+     * Example:
+     * ```
+     * EksJobDefinition jobDefn = EksJobDefinition.Builder.create(this, "eksf2")
+     * .container(EksContainerDefinition.Builder.create(this, "container")
+     * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+     * .volumes(List.of(EksVolume.emptyDir(EmptyDirVolumeOptions.builder()
+     * .name("myEmptyDirVolume")
+     * .mountPath("/mount/path")
+     * .medium(EmptyDirMediumType.MEMORY)
+     * .readonly(true)
+     * .sizeLimit(Size.mebibytes(2048))
+     * .build())))
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir)
+     */
+    public inline fun emptyDirVolumeOptions(
+        block: EmptyDirVolumeOptionsDsl.() -> Unit = {}
+    ): EmptyDirVolumeOptions {
+        val builder = EmptyDirVolumeOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Represents a Fairshare Scheduling Policy. Instructs the scheduler to allocate
+     * ComputeEnvironment vCPUs based on Job shareIdentifiers.
+     *
+     * The Faireshare Scheduling Policy ensures that each share gets a certain amount of vCPUs. The
+     * scheduler does this by deciding how many Jobs of each share to schedule *relative to how many
+     * jobs of each share are currently being executed by the ComputeEnvironment*. The weight
+     * factors associated with each share determine the ratio of vCPUs allocated; see the readme for
+     * a more in-depth discussion of fairshare policies.
+     *
+     * Example:
+     * ```
+     * FairshareSchedulingPolicy fairsharePolicy = new FairshareSchedulingPolicy(this,
+     * "myFairsharePolicy");
+     * fairsharePolicy.addShare(Share.builder()
+     * .shareIdentifier("A")
+     * .weightFactor(1)
+     * .build());
+     * fairsharePolicy.addShare(Share.builder()
+     * .shareIdentifier("B")
+     * .weightFactor(1)
+     * .build());
+     * JobQueue.Builder.create(this, "JobQueue")
+     * .schedulingPolicy(fairsharePolicy)
+     * .build();
+     * ```
+     */
+    public inline fun fairshareSchedulingPolicy(
+        scope: Construct,
+        id: String,
+        block: FairshareSchedulingPolicyDsl.() -> Unit = {},
+    ): FairshareSchedulingPolicy {
+        val builder = FairshareSchedulingPolicyDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Fairshare SchedulingPolicy configuration.
+     *
+     * Example:
+     * ```
+     * FairshareSchedulingPolicy fairsharePolicy = FairshareSchedulingPolicy.Builder.create(this,
+     * "myFairsharePolicy")
+     * .shareDecay(Duration.minutes(5))
+     * .build();
+     * ```
+     */
+    public inline fun fairshareSchedulingPolicyProps(
+        block: FairshareSchedulingPolicyPropsDsl.() -> Unit = {}
+    ): FairshareSchedulingPolicyProps {
+        val builder = FairshareSchedulingPolicyPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A ManagedComputeEnvironment that uses ECS orchestration on Fargate instances.
+     *
+     * Example:
+     * ```
+     * IVpc vpc;
+     * FargateComputeEnvironment sharedComputeEnv = FargateComputeEnvironment.Builder.create(this,
+     * "spotEnv")
+     * .vpc(vpc)
+     * .spot(true)
+     * .build();
+     * JobQueue lowPriorityQueue = JobQueue.Builder.create(this, "JobQueue")
+     * .priority(1)
+     * .build();
+     * JobQueue highPriorityQueue = JobQueue.Builder.create(this, "JobQueue")
+     * .priority(10)
+     * .build();
+     * lowPriorityQueue.addComputeEnvironment(sharedComputeEnv, 1);
+     * highPriorityQueue.addComputeEnvironment(sharedComputeEnv, 1);
+     * ```
+     */
+    public inline fun fargateComputeEnvironment(
+        scope: Construct,
+        id: String,
+        block: FargateComputeEnvironmentDsl.() -> Unit = {},
+    ): FargateComputeEnvironment {
+        val builder = FargateComputeEnvironmentDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Props for a FargateComputeEnvironment.
+     *
+     * Example:
+     * ```
+     * IVpc vpc;
+     * FargateComputeEnvironment sharedComputeEnv = FargateComputeEnvironment.Builder.create(this,
+     * "spotEnv")
+     * .vpc(vpc)
+     * .spot(true)
+     * .build();
+     * JobQueue lowPriorityQueue = JobQueue.Builder.create(this, "JobQueue")
+     * .priority(1)
+     * .build();
+     * JobQueue highPriorityQueue = JobQueue.Builder.create(this, "JobQueue")
+     * .priority(10)
+     * .build();
+     * lowPriorityQueue.addComputeEnvironment(sharedComputeEnv, 1);
+     * highPriorityQueue.addComputeEnvironment(sharedComputeEnv, 1);
+     * ```
+     */
+    public inline fun fargateComputeEnvironmentProps(
+        block: FargateComputeEnvironmentPropsDsl.() -> Unit = {}
+    ): FargateComputeEnvironmentProps {
+        val builder = FargateComputeEnvironmentPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A Kubernetes HostPath volume.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.batch.*;
+     * HostPathVolume hostPathVolume = HostPathVolume.Builder.create()
+     * .hostPath("hostPath")
+     * .name("name")
+     * // the properties below are optional
+     * .mountPath("mountPath")
+     * .readonly(false)
+     * .build();
+     * ```
+     *
+     * [Documentation](https://kubernetes.io/docs/concepts/storage/volumes/#hostpath)
+     */
+    public inline fun hostPathVolume(block: HostPathVolumeDsl.() -> Unit = {}): HostPathVolume {
+        val builder = HostPathVolumeDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Options for a kubernetes HostPath volume.
+     *
+     * Example:
+     * ```
+     * EksJobDefinition jobDefn;
+     * jobDefn.container.addVolume(EksVolume.emptyDir(EmptyDirVolumeOptions.builder()
+     * .name("emptyDir")
+     * .mountPath("/Volumes/emptyDir")
+     * .build()));
+     * jobDefn.container.addVolume(EksVolume.hostPath(HostPathVolumeOptions.builder()
+     * .name("hostPath")
+     * .hostPath("/sys")
+     * .mountPath("/Volumes/hostPath")
+     * .build()));
+     * jobDefn.container.addVolume(EksVolume.secret(SecretPathVolumeOptions.builder()
+     * .name("secret")
+     * .optional(true)
+     * .mountPath("/Volumes/secret")
+     * .secretName("mySecret")
+     * .build()));
+     * ```
+     *
+     * [Documentation](https://kubernetes.io/docs/concepts/storage/volumes/#hostpath)
+     */
+    public inline fun hostPathVolumeOptions(
+        block: HostPathVolumeOptionsDsl.() -> Unit = {}
+    ): HostPathVolumeOptions {
+        val builder = HostPathVolumeOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Creates a Host volume.
+     *
+     * This volume will persist on the host at the specified `hostPath`. If the `hostPath` is not
+     * specified, Docker will choose the host path. In this case, the data may not persist after the
+     * containers that use it stop running.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.batch.*;
+     * HostVolume hostVolume = HostVolume.Builder.create()
+     * .containerPath("containerPath")
+     * .name("name")
+     * // the properties below are optional
+     * .hostPath("hostPath")
+     * .readonly(false)
+     * .build();
+     * ```
+     */
+    public inline fun hostVolume(block: HostVolumeDsl.() -> Unit = {}): HostVolume {
+        val builder = HostVolumeDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Options for configuring an ECS HostVolume.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.batch.*;
+     * HostVolumeOptions hostVolumeOptions = HostVolumeOptions.builder()
+     * .containerPath("containerPath")
+     * .name("name")
+     * // the properties below are optional
+     * .hostPath("hostPath")
+     * .readonly(false)
+     * .build();
+     * ```
+     */
+    public inline fun hostVolumeOptions(
+        block: HostVolumeOptionsDsl.() -> Unit = {}
+    ): HostVolumeOptions {
+        val builder = HostVolumeOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Props common to all JobDefinitions.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.*;
+     * import software.amazon.awscdk.services.batch.*;
+     * Object parameters;
+     * RetryStrategy retryStrategy;
+     * JobDefinitionProps jobDefinitionProps = JobDefinitionProps.builder()
+     * .jobDefinitionName("jobDefinitionName")
+     * .parameters(Map.of(
+     * "parametersKey", parameters))
+     * .retryAttempts(123)
+     * .retryStrategies(List.of(retryStrategy))
+     * .schedulingPriority(123)
+     * .timeout(Duration.minutes(30))
+     * .build();
+     * ```
+     */
+    public inline fun jobDefinitionProps(
+        block: JobDefinitionPropsDsl.() -> Unit = {}
+    ): JobDefinitionProps {
+        val builder = JobDefinitionPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * JobQueues can receive Jobs, which are removed from the queue when sent to the linked
+     * ComputeEnvironment(s) to be executed.
+     *
+     * Jobs exit the queue in FIFO order unless a `SchedulingPolicy` is linked.
+     *
+     * Example:
+     * ```
+     * IVpc vpc;
+     * EcsJobDefinition ecsJob = EcsJobDefinition.Builder.create(this, "JobDefn")
+     * .container(EcsEc2ContainerDefinition.Builder.create(this, "containerDefn")
+     * .image(ContainerImage.fromRegistry("public.ecr.aws/amazonlinux/amazonlinux:latest"))
+     * .memory(Size.mebibytes(2048))
+     * .cpu(256)
+     * .build())
+     * .build();
+     * JobQueue queue = JobQueue.Builder.create(this, "JobQueue")
+     * .computeEnvironments(List.of(OrderedComputeEnvironment.builder()
+     * .computeEnvironment(ManagedEc2EcsComputeEnvironment.Builder.create(this, "managedEc2CE")
+     * .vpc(vpc)
+     * .build())
+     * .order(1)
+     * .build()))
+     * .priority(10)
+     * .build();
+     * User user = new User(this, "MyUser");
+     * ecsJob.grantSubmitJob(user, queue);
+     * ```
+     */
+    public inline fun jobQueue(
+        scope: Construct,
+        id: String,
+        block: JobQueueDsl.() -> Unit = {},
+    ): JobQueue {
+        val builder = JobQueueDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Props to configure a JobQueue.
+     *
+     * Example:
+     * ```
+     * IVpc vpc;
+     * EcsJobDefinition ecsJob = EcsJobDefinition.Builder.create(this, "JobDefn")
+     * .container(EcsEc2ContainerDefinition.Builder.create(this, "containerDefn")
+     * .image(ContainerImage.fromRegistry("public.ecr.aws/amazonlinux/amazonlinux:latest"))
+     * .memory(Size.mebibytes(2048))
+     * .cpu(256)
+     * .build())
+     * .build();
+     * JobQueue queue = JobQueue.Builder.create(this, "JobQueue")
+     * .computeEnvironments(List.of(OrderedComputeEnvironment.builder()
+     * .computeEnvironment(ManagedEc2EcsComputeEnvironment.Builder.create(this, "managedEc2CE")
+     * .vpc(vpc)
+     * .build())
+     * .order(1)
+     * .build()))
+     * .priority(10)
+     * .build();
+     * User user = new User(this, "MyUser");
+     * ecsJob.grantSubmitJob(user, queue);
+     * ```
+     */
+    public inline fun jobQueueProps(block: JobQueuePropsDsl.() -> Unit = {}): JobQueueProps {
+        val builder = JobQueuePropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Linux-specific options that are applied to the container.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.*;
+     * import software.amazon.awscdk.services.batch.*;
+     * Size size;
+     * LinuxParameters linuxParameters = LinuxParameters.Builder.create(this, "MyLinuxParameters")
+     * .initProcessEnabled(false)
+     * .maxSwap(size)
+     * .sharedMemorySize(size)
+     * .swappiness(123)
+     * .build();
+     * ```
+     */
+    public inline fun linuxParameters(
+        scope: Construct,
+        id: String,
+        block: LinuxParametersDsl.() -> Unit = {},
+    ): LinuxParameters {
+        val builder = LinuxParametersDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The properties for defining Linux-specific options that are applied to the container.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.*;
+     * import software.amazon.awscdk.services.batch.*;
+     * Size size;
+     * LinuxParametersProps linuxParametersProps = LinuxParametersProps.builder()
+     * .initProcessEnabled(false)
+     * .maxSwap(size)
+     * .sharedMemorySize(size)
+     * .swappiness(123)
+     * .build();
+     * ```
+     */
+    public inline fun linuxParametersProps(
+        block: LinuxParametersPropsDsl.() -> Unit = {}
+    ): LinuxParametersProps {
+        val builder = LinuxParametersPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Props for a ManagedComputeEnvironment.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.*;
+     * import software.amazon.awscdk.services.batch.*;
+     * import software.amazon.awscdk.services.ec2.*;
+     * import software.amazon.awscdk.services.iam.*;
+     * Role role;
+     * SecurityGroup securityGroup;
+     * Subnet subnet;
+     * SubnetFilter subnetFilter;
+     * Vpc vpc;
+     * ManagedComputeEnvironmentProps managedComputeEnvironmentProps =
+     * ManagedComputeEnvironmentProps.builder()
+     * .vpc(vpc)
+     * // the properties below are optional
+     * .computeEnvironmentName("computeEnvironmentName")
+     * .enabled(false)
+     * .maxvCpus(123)
+     * .replaceComputeEnvironment(false)
+     * .securityGroups(List.of(securityGroup))
+     * .serviceRole(role)
+     * .spot(false)
+     * .terminateOnUpdate(false)
+     * .updateTimeout(Duration.minutes(30))
+     * .updateToLatestImageVersion(false)
+     * .vpcSubnets(SubnetSelection.builder()
+     * .availabilityZones(List.of("availabilityZones"))
+     * .onePerAz(false)
+     * .subnetFilters(List.of(subnetFilter))
+     * .subnetGroupName("subnetGroupName")
+     * .subnets(List.of(subnet))
+     * .subnetType(SubnetType.PRIVATE_ISOLATED)
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun managedComputeEnvironmentProps(
+        block: ManagedComputeEnvironmentPropsDsl.() -> Unit = {}
+    ): ManagedComputeEnvironmentProps {
+        val builder = ManagedComputeEnvironmentPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A ManagedComputeEnvironment that uses ECS orchestration on EC2 instances.
+     *
+     * Example:
+     * ```
+     * IManagedEc2EcsComputeEnvironment computeEnv;
+     * Vpc vpc = new Vpc(this, "VPC");
+     * computeEnv.addInstanceClass(InstanceClass.M5AD);
+     * // Or, specify it on the constructor:
+     * // Or, specify it on the constructor:
+     * ManagedEc2EcsComputeEnvironment.Builder.create(this, "myEc2ComputeEnv")
+     * .vpc(vpc)
+     * .instanceClasses(List.of(InstanceClass.R4))
+     * .build();
+     * ```
+     */
+    public inline fun managedEc2EcsComputeEnvironment(
+        scope: Construct,
+        id: String,
+        block: ManagedEc2EcsComputeEnvironmentDsl.() -> Unit = {},
+    ): ManagedEc2EcsComputeEnvironment {
+        val builder = ManagedEc2EcsComputeEnvironmentDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Props for a ManagedEc2EcsComputeEnvironment.
+     *
+     * Example:
+     * ```
+     * IManagedEc2EcsComputeEnvironment computeEnv;
+     * Vpc vpc = new Vpc(this, "VPC");
+     * computeEnv.addInstanceClass(InstanceClass.M5AD);
+     * // Or, specify it on the constructor:
+     * // Or, specify it on the constructor:
+     * ManagedEc2EcsComputeEnvironment.Builder.create(this, "myEc2ComputeEnv")
+     * .vpc(vpc)
+     * .instanceClasses(List.of(InstanceClass.R4))
+     * .build();
+     * ```
+     */
+    public inline fun managedEc2EcsComputeEnvironmentProps(
+        block: ManagedEc2EcsComputeEnvironmentPropsDsl.() -> Unit = {}
+    ): ManagedEc2EcsComputeEnvironmentProps {
+        val builder = ManagedEc2EcsComputeEnvironmentPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A ManagedComputeEnvironment that uses ECS orchestration on EC2 instances.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.*;
+     * import software.amazon.awscdk.services.batch.*;
+     * import software.amazon.awscdk.services.ec2.*;
+     * import software.amazon.awscdk.services.eks.*;
+     * import software.amazon.awscdk.services.iam.*;
+     * Cluster cluster;
+     * InstanceType instanceType;
+     * LaunchTemplate launchTemplate;
+     * IMachineImage machineImage;
+     * PlacementGroup placementGroup;
+     * Role role;
+     * SecurityGroup securityGroup;
+     * Subnet subnet;
+     * SubnetFilter subnetFilter;
+     * Vpc vpc;
+     * ManagedEc2EksComputeEnvironment managedEc2EksComputeEnvironment =
+     * ManagedEc2EksComputeEnvironment.Builder.create(this, "MyManagedEc2EksComputeEnvironment")
+     * .eksCluster(cluster)
+     * .kubernetesNamespace("kubernetesNamespace")
+     * .vpc(vpc)
+     * // the properties below are optional
+     * .allocationStrategy(AllocationStrategy.BEST_FIT)
+     * .computeEnvironmentName("computeEnvironmentName")
+     * .enabled(false)
+     * .images(List.of(EksMachineImage.builder()
+     * .image(machineImage)
+     * .imageType(EksMachineImageType.EKS_AL2)
+     * .build()))
+     * .instanceClasses(List.of(InstanceClass.STANDARD3))
+     * .instanceRole(role)
+     * .instanceTypes(List.of(instanceType))
+     * .launchTemplate(launchTemplate)
+     * .maxvCpus(123)
+     * .minvCpus(123)
+     * .placementGroup(placementGroup)
+     * .replaceComputeEnvironment(false)
+     * .securityGroups(List.of(securityGroup))
+     * .serviceRole(role)
+     * .spot(false)
+     * .spotBidPercentage(123)
+     * .terminateOnUpdate(false)
+     * .updateTimeout(Duration.minutes(30))
+     * .updateToLatestImageVersion(false)
+     * .useOptimalInstanceClasses(false)
+     * .vpcSubnets(SubnetSelection.builder()
+     * .availabilityZones(List.of("availabilityZones"))
+     * .onePerAz(false)
+     * .subnetFilters(List.of(subnetFilter))
+     * .subnetGroupName("subnetGroupName")
+     * .subnets(List.of(subnet))
+     * .subnetType(SubnetType.PRIVATE_ISOLATED)
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun managedEc2EksComputeEnvironment(
+        scope: Construct,
+        id: String,
+        block: ManagedEc2EksComputeEnvironmentDsl.() -> Unit = {},
+    ): ManagedEc2EksComputeEnvironment {
+        val builder = ManagedEc2EksComputeEnvironmentDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Props for a ManagedEc2EksComputeEnvironment.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.*;
+     * import software.amazon.awscdk.services.batch.*;
+     * import software.amazon.awscdk.services.ec2.*;
+     * import software.amazon.awscdk.services.eks.*;
+     * import software.amazon.awscdk.services.iam.*;
+     * Cluster cluster;
+     * InstanceType instanceType;
+     * LaunchTemplate launchTemplate;
+     * IMachineImage machineImage;
+     * PlacementGroup placementGroup;
+     * Role role;
+     * SecurityGroup securityGroup;
+     * Subnet subnet;
+     * SubnetFilter subnetFilter;
+     * Vpc vpc;
+     * ManagedEc2EksComputeEnvironmentProps managedEc2EksComputeEnvironmentProps =
+     * ManagedEc2EksComputeEnvironmentProps.builder()
+     * .eksCluster(cluster)
+     * .kubernetesNamespace("kubernetesNamespace")
+     * .vpc(vpc)
+     * // the properties below are optional
+     * .allocationStrategy(AllocationStrategy.BEST_FIT)
+     * .computeEnvironmentName("computeEnvironmentName")
+     * .enabled(false)
+     * .images(List.of(EksMachineImage.builder()
+     * .image(machineImage)
+     * .imageType(EksMachineImageType.EKS_AL2)
+     * .build()))
+     * .instanceClasses(List.of(InstanceClass.STANDARD3))
+     * .instanceRole(role)
+     * .instanceTypes(List.of(instanceType))
+     * .launchTemplate(launchTemplate)
+     * .maxvCpus(123)
+     * .minvCpus(123)
+     * .placementGroup(placementGroup)
+     * .replaceComputeEnvironment(false)
+     * .securityGroups(List.of(securityGroup))
+     * .serviceRole(role)
+     * .spot(false)
+     * .spotBidPercentage(123)
+     * .terminateOnUpdate(false)
+     * .updateTimeout(Duration.minutes(30))
+     * .updateToLatestImageVersion(false)
+     * .useOptimalInstanceClasses(false)
+     * .vpcSubnets(SubnetSelection.builder()
+     * .availabilityZones(List.of("availabilityZones"))
+     * .onePerAz(false)
+     * .subnetFilters(List.of(subnetFilter))
+     * .subnetGroupName("subnetGroupName")
+     * .subnets(List.of(subnet))
+     * .subnetType(SubnetType.PRIVATE_ISOLATED)
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun managedEc2EksComputeEnvironmentProps(
+        block: ManagedEc2EksComputeEnvironmentPropsDsl.() -> Unit = {}
+    ): ManagedEc2EksComputeEnvironmentProps {
+        val builder = ManagedEc2EksComputeEnvironmentPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Runs the container on nodes [startNode, endNode].
+     *
+     * Example:
+     * ```
+     * MultiNodeJobDefinition multiNodeJob = MultiNodeJobDefinition.Builder.create(this,
+     * "JobDefinition")
+     * .instanceType(InstanceType.of(InstanceClass.R4, InstanceSize.LARGE)) // optional, omit to let
+     * Batch choose the type for you
+     * .containers(List.of(MultiNodeContainer.builder()
+     * .container(EcsEc2ContainerDefinition.Builder.create(this, "mainMPIContainer")
+     * .image(ContainerImage.fromRegistry("yourregsitry.com/yourMPIImage:latest"))
+     * .cpu(256)
+     * .memory(Size.mebibytes(2048))
+     * .build())
+     * .startNode(0)
+     * .endNode(5)
+     * .build()))
+     * .build();
+     * // convenience method
+     * multiNodeJob.addContainer(MultiNodeContainer.builder()
+     * .startNode(6)
+     * .endNode(10)
+     * .container(EcsEc2ContainerDefinition.Builder.create(this, "multiContainer")
+     * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+     * .cpu(256)
+     * .memory(Size.mebibytes(2048))
+     * .build())
+     * .build());
+     * ```
+     */
+    public inline fun multiNodeContainer(
+        block: MultiNodeContainerDsl.() -> Unit = {}
+    ): MultiNodeContainer {
+        val builder = MultiNodeContainerDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A JobDefinition that uses Ecs orchestration to run multiple containers.
+     *
+     * Example:
+     * ```
+     * MultiNodeJobDefinition multiNodeJob = MultiNodeJobDefinition.Builder.create(this,
+     * "JobDefinition")
+     * .instanceType(InstanceType.of(InstanceClass.R4, InstanceSize.LARGE)) // optional, omit to let
+     * Batch choose the type for you
+     * .containers(List.of(MultiNodeContainer.builder()
+     * .container(EcsEc2ContainerDefinition.Builder.create(this, "mainMPIContainer")
+     * .image(ContainerImage.fromRegistry("yourregsitry.com/yourMPIImage:latest"))
+     * .cpu(256)
+     * .memory(Size.mebibytes(2048))
+     * .build())
+     * .startNode(0)
+     * .endNode(5)
+     * .build()))
+     * .build();
+     * // convenience method
+     * multiNodeJob.addContainer(MultiNodeContainer.builder()
+     * .startNode(6)
+     * .endNode(10)
+     * .container(EcsEc2ContainerDefinition.Builder.create(this, "multiContainer")
+     * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+     * .cpu(256)
+     * .memory(Size.mebibytes(2048))
+     * .build())
+     * .build());
+     * ```
+     */
+    public inline fun multiNodeJobDefinition(
+        scope: Construct,
+        id: String,
+        block: MultiNodeJobDefinitionDsl.() -> Unit = {},
+    ): MultiNodeJobDefinition {
+        val builder = MultiNodeJobDefinitionDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Props to configure a MultiNodeJobDefinition.
+     *
+     * Example:
+     * ```
+     * MultiNodeJobDefinition multiNodeJob = MultiNodeJobDefinition.Builder.create(this,
+     * "JobDefinition")
+     * .instanceType(InstanceType.of(InstanceClass.R4, InstanceSize.LARGE)) // optional, omit to let
+     * Batch choose the type for you
+     * .containers(List.of(MultiNodeContainer.builder()
+     * .container(EcsEc2ContainerDefinition.Builder.create(this, "mainMPIContainer")
+     * .image(ContainerImage.fromRegistry("yourregsitry.com/yourMPIImage:latest"))
+     * .cpu(256)
+     * .memory(Size.mebibytes(2048))
+     * .build())
+     * .startNode(0)
+     * .endNode(5)
+     * .build()))
+     * .build();
+     * // convenience method
+     * multiNodeJob.addContainer(MultiNodeContainer.builder()
+     * .startNode(6)
+     * .endNode(10)
+     * .container(EcsEc2ContainerDefinition.Builder.create(this, "multiContainer")
+     * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+     * .cpu(256)
+     * .memory(Size.mebibytes(2048))
+     * .build())
+     * .build());
+     * ```
+     */
+    public inline fun multiNodeJobDefinitionProps(
+        block: MultiNodeJobDefinitionPropsDsl.() -> Unit = {}
+    ): MultiNodeJobDefinitionProps {
+        val builder = MultiNodeJobDefinitionPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Assigns an order to a ComputeEnvironment.
+     *
+     * The JobQueue will prioritize the lowest-order ComputeEnvironment.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.batch.*;
+     * IComputeEnvironment computeEnvironment;
+     * OrderedComputeEnvironment orderedComputeEnvironment = OrderedComputeEnvironment.builder()
+     * .computeEnvironment(computeEnvironment)
+     * .order(123)
+     * .build();
+     * ```
+     */
+    public inline fun orderedComputeEnvironment(
+        block: OrderedComputeEnvironmentDsl.() -> Unit = {}
+    ): OrderedComputeEnvironment {
+        val builder = OrderedComputeEnvironmentDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies the configuration of a Kubernetes secret volume.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.batch.*;
+     * SecretPathVolume secretPathVolume = SecretPathVolume.Builder.create()
+     * .name("name")
+     * .secretName("secretName")
+     * // the properties below are optional
+     * .mountPath("mountPath")
+     * .optional(false)
+     * .readonly(false)
+     * .build();
+     * ```
+     *
+     * [Documentation](https://kubernetes.io/docs/concepts/storage/volumes/#secret)
+     */
+    public inline fun secretPathVolume(
+        block: SecretPathVolumeDsl.() -> Unit = {}
+    ): SecretPathVolume {
+        val builder = SecretPathVolumeDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Options for a Kubernetes SecretPath Volume.
+     *
+     * Example:
+     * ```
+     * EksJobDefinition jobDefn;
+     * jobDefn.container.addVolume(EksVolume.emptyDir(EmptyDirVolumeOptions.builder()
+     * .name("emptyDir")
+     * .mountPath("/Volumes/emptyDir")
+     * .build()));
+     * jobDefn.container.addVolume(EksVolume.hostPath(HostPathVolumeOptions.builder()
+     * .name("hostPath")
+     * .hostPath("/sys")
+     * .mountPath("/Volumes/hostPath")
+     * .build()));
+     * jobDefn.container.addVolume(EksVolume.secret(SecretPathVolumeOptions.builder()
+     * .name("secret")
+     * .optional(true)
+     * .mountPath("/Volumes/secret")
+     * .secretName("mySecret")
+     * .build()));
+     * ```
+     *
+     * [Documentation](https://kubernetes.io/docs/concepts/storage/volumes/#secret)
+     */
+    public inline fun secretPathVolumeOptions(
+        block: SecretPathVolumeOptionsDsl.() -> Unit = {}
+    ): SecretPathVolumeOptions {
+        val builder = SecretPathVolumeOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specify the secret's version id or version stage.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.batch.*;
+     * SecretVersionInfo secretVersionInfo = SecretVersionInfo.builder()
+     * .versionId("versionId")
+     * .versionStage("versionStage")
+     * .build();
+     * ```
+     */
+    public inline fun secretVersionInfo(
+        block: SecretVersionInfoDsl.() -> Unit = {}
+    ): SecretVersionInfo {
+        val builder = SecretVersionInfoDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Represents a group of Job Definitions.
+     *
+     * All Job Definitions that declare a share identifier will be considered members of the Share
+     * defined by that share identifier.
+     *
+     * The Scheduler divides the maximum available vCPUs of the ComputeEnvironment among Jobs in the
+     * Queue based on their shareIdentifier and the weightFactor associated with that
+     * shareIdentifier.
+     *
+     * Example:
+     * ```
+     * FairshareSchedulingPolicy fairsharePolicy = new FairshareSchedulingPolicy(this,
+     * "myFairsharePolicy");
+     * fairsharePolicy.addShare(Share.builder()
+     * .shareIdentifier("A")
+     * .weightFactor(1)
+     * .build());
+     * fairsharePolicy.addShare(Share.builder()
+     * .shareIdentifier("B")
+     * .weightFactor(1)
+     * .build());
+     * JobQueue.Builder.create(this, "JobQueue")
+     * .schedulingPolicy(fairsharePolicy)
+     * .build();
+     * ```
+     */
+    public inline fun share(block: ShareDsl.() -> Unit = {}): Share {
+        val builder = ShareDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The details of a tmpfs mount for a container.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.*;
+     * import software.amazon.awscdk.services.batch.*;
+     * Size size;
+     * Tmpfs tmpfs = Tmpfs.builder()
+     * .containerPath("containerPath")
+     * .size(size)
+     * // the properties below are optional
+     * .mountOptions(List.of(TmpfsMountOption.DEFAULTS))
+     * .build();
+     * ```
+     */
+    public inline fun tmpfs(block: TmpfsDsl.() -> Unit = {}): Tmpfs {
+        val builder = TmpfsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Sets limits for a resource with `ulimit` on linux systems.
+     *
+     * Used by the Docker daemon.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.batch.*;
+     * Ulimit ulimit = Ulimit.builder()
+     * .hardLimit(123)
+     * .name(UlimitName.CORE)
+     * .softLimit(123)
+     * .build();
+     * ```
+     */
+    public inline fun ulimit(block: UlimitDsl.() -> Unit = {}): Ulimit {
+        val builder = UlimitDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Unmanaged ComputeEnvironments do not provision or manage EC2 instances on your behalf.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.batch.*;
+     * import software.amazon.awscdk.services.iam.*;
+     * Role role;
+     * UnmanagedComputeEnvironment unmanagedComputeEnvironment =
+     * UnmanagedComputeEnvironment.Builder.create(this, "MyUnmanagedComputeEnvironment")
+     * .computeEnvironmentName("computeEnvironmentName")
+     * .enabled(false)
+     * .serviceRole(role)
+     * .unmanagedvCpus(123)
+     * .build();
+     * ```
+     */
+    public inline fun unmanagedComputeEnvironment(
+        scope: Construct,
+        id: String,
+        block: UnmanagedComputeEnvironmentDsl.() -> Unit = {},
+    ): UnmanagedComputeEnvironment {
+        val builder = UnmanagedComputeEnvironmentDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Represents an UnmanagedComputeEnvironment.
+     *
+     * Batch will not provision instances on your behalf in this ComputeEvironment.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.batch.*;
+     * import software.amazon.awscdk.services.iam.*;
+     * Role role;
+     * UnmanagedComputeEnvironmentProps unmanagedComputeEnvironmentProps =
+     * UnmanagedComputeEnvironmentProps.builder()
+     * .computeEnvironmentName("computeEnvironmentName")
+     * .enabled(false)
+     * .serviceRole(role)
+     * .unmanagedvCpus(123)
+     * .build();
+     * ```
+     */
+    public inline fun unmanagedComputeEnvironmentProps(
+        block: UnmanagedComputeEnvironmentPropsDsl.() -> Unit = {}
+    ): UnmanagedComputeEnvironmentProps {
+        val builder = UnmanagedComputeEnvironmentPropsDsl()
         builder.apply(block)
         return builder.build()
     }

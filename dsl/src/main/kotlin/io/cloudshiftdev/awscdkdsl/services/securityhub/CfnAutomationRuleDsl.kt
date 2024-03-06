@@ -420,11 +420,11 @@ public class CfnAutomationRuleDsl(
     }
 
     /**
-     * User-defined tags that help you label the purpose of a rule.
+     * User-defined tags associated with an automation rule.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-automationrule.html#cfn-securityhub-automationrule-tags)
      *
-     * @param tags User-defined tags that help you label the purpose of a rule.
+     * @param tags User-defined tags associated with an automation rule.
      */
     public fun tags(tags: Map<String, String>) {
         cdkBuilder.tags(tags)

@@ -38,6 +38,7 @@ import software.amazon.awscdk.services.stepfunctions.tasks.ResultConfiguration
  * .objectKey("folder")
  * .build())
  * .build())
+ * .executionParameters(List.of("param1", "param2"))
  * .build();
  * ```
  *

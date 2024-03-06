@@ -87,20 +87,12 @@ public class CfnRulePropsDsl {
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
-    /**
-     * @param action Describes the action for a rule. Each rule must include exactly one of the
-     *   following types of actions: `forward` or `fixed-response` , and it must be the last action
-     *   to be performed.
-     */
+    /** @param action Describes the action for a rule. */
     public fun action(action: IResolvable) {
         cdkBuilder.action(action)
     }
 
-    /**
-     * @param action Describes the action for a rule. Each rule must include exactly one of the
-     *   following types of actions: `forward` or `fixed-response` , and it must be the last action
-     *   to be performed.
-     */
+    /** @param action Describes the action for a rule. */
     public fun action(action: CfnRule.ActionProperty) {
         cdkBuilder.action(action)
     }

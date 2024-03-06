@@ -30,15 +30,45 @@ import software.constructs.Construct
  *
  * Example:
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.emr.*;
- * Object securityConfiguration;
  * CfnSecurityConfiguration cfnSecurityConfiguration = CfnSecurityConfiguration.Builder.create(this,
- * "MyCfnSecurityConfiguration")
- * .securityConfiguration(securityConfiguration)
- * // the properties below are optional
- * .name("name")
+ * "EmrSecurityConfiguration")
+ * .name("AddStepRuntimeRoleSecConfig")
+ * .securityConfiguration(JSON.parse("\n    {\n      \"AuthorizationConfiguration\": {\n
+ * \"IAMConfiguration\": {\n              \"EnableApplicationScopedIAMRole\": true,\n
+ * \"ApplicationScopedIAMRoleConfiguration\":\n                  {\n
+ * \"PropagateSourceIdentity\": true\n                  }\n          },\n
+ * \"LakeFormationConfiguration\": {\n              \"AuthorizedSessionTagValue\": \"Amazon EMR\"\n
+ *      }\n      }\n    }"))
+ * .build();
+ * EmrCreateCluster task = EmrCreateCluster.Builder.create(this, "Create Cluster")
+ * .instances(InstancesConfigProperty.builder().build())
+ * .name(TaskInput.fromJsonPathAt("$.ClusterName").getValue())
+ * .securityConfiguration(cfnSecurityConfiguration.getName())
+ * .build();
+ * Role executionRole = Role.Builder.create(this, "Role")
+ * .assumedBy(new ArnPrincipal(task.getClusterRole().getRoleArn()))
+ * .build();
+ * executionRole.assumeRolePolicy.addStatements(
+ * PolicyStatement.Builder.create()
+ * .effect(Effect.ALLOW)
+ * .principals(List.of(task.getClusterRole()))
+ * .actions(List.of("sts:SetSourceIdentity"))
+ * .build(),
+ * PolicyStatement.Builder.create()
+ * .effect(Effect.ALLOW)
+ * .principals(List.of(task.getClusterRole()))
+ * .actions(List.of("sts:TagSession"))
+ * .conditions(Map.of(
+ * "StringEquals", Map.of(
+ * "aws:RequestTag/LakeFormationAuthorizedCaller", "Amazon EMR")))
+ * .build());
+ * EmrAddStep.Builder.create(this, "Task")
+ * .clusterId("ClusterId")
+ * .executionRoleArn(executionRole.getRoleArn())
+ * .name("StepName")
+ * .jar("Jar")
+ * .actionOnFailure(ActionOnFailure.CONTINUE)
  * .build();
  * ```
  *

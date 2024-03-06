@@ -52,6 +52,7 @@ import software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule
  * .build())
  * .localPath("localPath")
  * // the properties below are optional
+ * .excludeFeaturesAttribute("excludeFeaturesAttribute")
  * .s3DataDistributionType("s3DataDistributionType")
  * .s3InputMode("s3InputMode")
  * .build())
@@ -59,6 +60,7 @@ import software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule
  * .endpointName("endpointName")
  * .localPath("localPath")
  * // the properties below are optional
+ * .excludeFeaturesAttribute("excludeFeaturesAttribute")
  * .s3DataDistributionType("s3DataDistributionType")
  * .s3InputMode("s3InputMode")
  * .build())
@@ -189,7 +191,7 @@ public class CfnMonitoringScheduleMonitoringJobDefinitionPropertyDsl {
 
     /**
      * @param monitoringOutputConfig The array of outputs from the monitoring job to be uploaded to
-     *   Amazon Simple Storage Service (Amazon S3).
+     *   Amazon S3.
      */
     public fun monitoringOutputConfig(monitoringOutputConfig: IResolvable) {
         cdkBuilder.monitoringOutputConfig(monitoringOutputConfig)
@@ -197,7 +199,7 @@ public class CfnMonitoringScheduleMonitoringJobDefinitionPropertyDsl {
 
     /**
      * @param monitoringOutputConfig The array of outputs from the monitoring job to be uploaded to
-     *   Amazon Simple Storage Service (Amazon S3).
+     *   Amazon S3.
      */
     public fun monitoringOutputConfig(
         monitoringOutputConfig: CfnMonitoringSchedule.MonitoringOutputConfigProperty

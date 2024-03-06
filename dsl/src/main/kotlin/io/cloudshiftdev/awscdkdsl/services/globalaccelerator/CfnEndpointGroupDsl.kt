@@ -39,6 +39,7 @@ import software.constructs.Construct
  * .endpointConfigurations(List.of(EndpointConfigurationProperty.builder()
  * .endpointId("endpointId")
  * // the properties below are optional
+ * .attachmentArn("attachmentArn")
  * .clientIpPreservationEnabled(false)
  * .weight(123)
  * .build()))

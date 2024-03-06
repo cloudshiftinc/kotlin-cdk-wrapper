@@ -45,14 +45,23 @@ import software.constructs.Construct
  *
  * Example:
  * ```
- * StateMachine stateMachine = StateMachine.Builder.create(this, "MyStateMachine")
- * .stateMachineType(StateMachineType.EXPRESS)
- * .definition(Chain.start(new Pass(this, "Pass")))
+ * Bucket destinationBucket = new Bucket(this, "Bucket");
+ * Role deliveryStreamRole = Role.Builder.create(this, "Role")
+ * .assumedBy(new ServicePrincipal("firehose.amazonaws.com"))
  * .build();
- * RestApi api = RestApi.Builder.create(this, "Api")
- * .restApiName("MyApi")
+ * CfnDeliveryStream stream = CfnDeliveryStream.Builder.create(this, "MyStream")
+ * .deliveryStreamName("amazon-apigateway-delivery-stream")
+ * .s3DestinationConfiguration(S3DestinationConfigurationProperty.builder()
+ * .bucketArn(destinationBucket.getBucketArn())
+ * .roleArn(deliveryStreamRole.getRoleArn())
+ * .build())
  * .build();
- * api.root.addMethod("GET", StepFunctionsIntegration.startExecution(stateMachine));
+ * RestApi api = RestApi.Builder.create(this, "books")
+ * .deployOptions(StageOptions.builder()
+ * .accessLogDestination(new FirehoseLogDestination(stream))
+ * .accessLogFormat(AccessLogFormat.jsonWithStandardFields())
+ * .build())
+ * .build();
  * ```
  */
 @CdkDslMarker

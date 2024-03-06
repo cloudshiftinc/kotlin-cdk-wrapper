@@ -318,7 +318,7 @@ public object frauddetector {
     }
 
     /**
-     * A model to associate with a detector.
+     * The model.
      *
      * Example:
      * ```
@@ -487,9 +487,6 @@ public object frauddetector {
 
     /**
      * A rule.
-     *
-     * Rule is a condition that tells Amazon Fraud Detector how to interpret variables values during
-     * a fraud prediction.
      *
      * Example:
      * ```

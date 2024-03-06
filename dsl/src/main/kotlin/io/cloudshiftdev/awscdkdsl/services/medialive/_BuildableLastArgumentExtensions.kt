@@ -14,6 +14,8 @@ package io.cloudshiftdev.awscdkdsl.services.medialive
 import kotlin.Unit
 import software.amazon.awscdk.services.medialive.CfnChannel
 import software.amazon.awscdk.services.medialive.CfnInput
+import software.amazon.awscdk.services.medialive.CfnMultiplex
+import software.amazon.awscdk.services.medialive.CfnMultiplexprogram
 
 /** Specification of CDI inputs for this channel. */
 public inline fun CfnChannel.setCdiInputSpecification(
@@ -42,7 +44,7 @@ public inline fun CfnChannel.setInputSpecification(
     return setInputSpecification(builder.build())
 }
 
-/**  */
+/** Maintenance settings for this channel. */
 public inline fun CfnChannel.setMaintenance(
     block: CfnChannelMaintenanceCreateSettingsPropertyDsl.() -> Unit = {}
 ) {
@@ -66,4 +68,31 @@ public inline fun CfnInput.setVpc(block: CfnInputInputVpcRequestPropertyDsl.() -
     val builder = CfnInputInputVpcRequestPropertyDsl()
     builder.apply(block)
     return setVpc(builder.build())
+}
+
+/** Configuration for a multiplex event. */
+public inline fun CfnMultiplex.setMultiplexSettings(
+    block: CfnMultiplexMultiplexSettingsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnMultiplexMultiplexSettingsPropertyDsl()
+    builder.apply(block)
+    return setMultiplexSettings(builder.build())
+}
+
+/** Multiplex Program settings configuration. */
+public inline fun CfnMultiplexprogram.setMultiplexProgramSettings(
+    block: CfnMultiplexprogramMultiplexProgramSettingsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnMultiplexprogramMultiplexProgramSettingsPropertyDsl()
+    builder.apply(block)
+    return setMultiplexProgramSettings(builder.build())
+}
+
+/** Packet identifiers map for a given Multiplex program. */
+public inline fun CfnMultiplexprogram.setPacketIdentifiersMap(
+    block: CfnMultiplexprogramMultiplexProgramPacketIdentifiersMapPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnMultiplexprogramMultiplexProgramPacketIdentifiersMapPropertyDsl()
+    builder.apply(block)
+    return setPacketIdentifiersMap(builder.build())
 }

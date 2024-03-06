@@ -59,6 +59,9 @@ import software.amazon.awscdk.services.sam.CfnFunctionProps
  * .variables(Map.of(
  * "variablesKey", "variables"))
  * .build())
+ * .ephemeralStorage(EphemeralStorageProperty.builder()
+ * .size(123)
+ * .build())
  * .eventInvokeConfig(EventInvokeConfigProperty.builder()
  * .destinationConfig(EventInvokeDestinationConfigProperty.builder()
  * .onFailure(DestinationProperty.builder()
@@ -87,6 +90,12 @@ import software.amazon.awscdk.services.sam.CfnFunctionProps
  * .localMountPath("localMountPath")
  * .build()))
  * .functionName("functionName")
+ * .functionUrlConfig(FunctionUrlConfigProperty.builder()
+ * .authType("authType")
+ * // the properties below are optional
+ * .cors("cors")
+ * .invokeMode("invokeMode")
+ * .build())
  * .handler("handler")
  * .imageConfig(ImageConfigProperty.builder()
  * .command(List.of("command"))
@@ -222,6 +231,16 @@ public class CfnFunctionPropsDsl {
         cdkBuilder.environment(environment)
     }
 
+    /** @param ephemeralStorage the value to be set. */
+    public fun ephemeralStorage(ephemeralStorage: IResolvable) {
+        cdkBuilder.ephemeralStorage(ephemeralStorage)
+    }
+
+    /** @param ephemeralStorage the value to be set. */
+    public fun ephemeralStorage(ephemeralStorage: CfnFunction.EphemeralStorageProperty) {
+        cdkBuilder.ephemeralStorage(ephemeralStorage)
+    }
+
     /** @param eventInvokeConfig the value to be set. */
     public fun eventInvokeConfig(eventInvokeConfig: IResolvable) {
         cdkBuilder.eventInvokeConfig(eventInvokeConfig)
@@ -267,6 +286,16 @@ public class CfnFunctionPropsDsl {
     /** @param functionName the value to be set. */
     public fun functionName(functionName: String) {
         cdkBuilder.functionName(functionName)
+    }
+
+    /** @param functionUrlConfig the value to be set. */
+    public fun functionUrlConfig(functionUrlConfig: IResolvable) {
+        cdkBuilder.functionUrlConfig(functionUrlConfig)
+    }
+
+    /** @param functionUrlConfig the value to be set. */
+    public fun functionUrlConfig(functionUrlConfig: CfnFunction.FunctionUrlConfigProperty) {
+        cdkBuilder.functionUrlConfig(functionUrlConfig)
     }
 
     /** @param handler the value to be set. */

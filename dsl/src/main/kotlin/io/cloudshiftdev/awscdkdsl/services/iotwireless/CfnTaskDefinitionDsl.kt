@@ -116,18 +116,22 @@ public class CfnTaskDefinitionDsl(
     }
 
     /**
+     * LoRaWANUpdateGatewayTaskEntry object.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-taskdefinition.html#cfn-iotwireless-taskdefinition-lorawanupdategatewaytaskentry)
      *
-     * @param loRaWanUpdateGatewayTaskEntry
+     * @param loRaWanUpdateGatewayTaskEntry LoRaWANUpdateGatewayTaskEntry object.
      */
     public fun loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry: IResolvable) {
         cdkBuilder.loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry)
     }
 
     /**
+     * LoRaWANUpdateGatewayTaskEntry object.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-taskdefinition.html#cfn-iotwireless-taskdefinition-lorawanupdategatewaytaskentry)
      *
-     * @param loRaWanUpdateGatewayTaskEntry
+     * @param loRaWanUpdateGatewayTaskEntry LoRaWANUpdateGatewayTaskEntry object.
      */
     public fun loRaWanUpdateGatewayTaskEntry(
         loRaWanUpdateGatewayTaskEntry: CfnTaskDefinition.LoRaWANUpdateGatewayTaskEntryProperty

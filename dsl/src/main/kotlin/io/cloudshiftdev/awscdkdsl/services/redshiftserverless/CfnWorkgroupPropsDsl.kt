@@ -41,6 +41,7 @@ import software.amazon.awscdk.services.redshiftserverless.CfnWorkgroupProps
  * .parameterValue("parameterValue")
  * .build()))
  * .enhancedVpcRouting(false)
+ * .maxCapacity(123)
  * .namespaceName("namespaceName")
  * .port(123)
  * .publiclyAccessible(false)
@@ -78,7 +79,7 @@ public class CfnWorkgroupPropsDsl {
     /**
      * @param configParameters A list of parameters to set for finer control over a database.
      *   Available options are `datestyle` , `enable_user_activity_logging` , `query_group` ,
-     *   `search_path` , and `max_query_execution_time` .
+     *   `search_path` , `max_query_execution_time` , and `require_ssl` .
      */
     public fun configParameters(vararg configParameters: Any) {
         _configParameters.addAll(listOf(*configParameters))
@@ -87,7 +88,7 @@ public class CfnWorkgroupPropsDsl {
     /**
      * @param configParameters A list of parameters to set for finer control over a database.
      *   Available options are `datestyle` , `enable_user_activity_logging` , `query_group` ,
-     *   `search_path` , and `max_query_execution_time` .
+     *   `search_path` , `max_query_execution_time` , and `require_ssl` .
      */
     public fun configParameters(configParameters: Collection<Any>) {
         _configParameters.addAll(configParameters)
@@ -96,7 +97,7 @@ public class CfnWorkgroupPropsDsl {
     /**
      * @param configParameters A list of parameters to set for finer control over a database.
      *   Available options are `datestyle` , `enable_user_activity_logging` , `query_group` ,
-     *   `search_path` , and `max_query_execution_time` .
+     *   `search_path` , `max_query_execution_time` , and `require_ssl` .
      */
     public fun configParameters(configParameters: IResolvable) {
         cdkBuilder.configParameters(configParameters)
@@ -118,6 +119,14 @@ public class CfnWorkgroupPropsDsl {
      */
     public fun enhancedVpcRouting(enhancedVpcRouting: IResolvable) {
         cdkBuilder.enhancedVpcRouting(enhancedVpcRouting)
+    }
+
+    /**
+     * @param maxCapacity The max compute capacity of the workgroup in Redshift Processing Units
+     *   (RPUs).
+     */
+    public fun maxCapacity(maxCapacity: Number) {
+        cdkBuilder.maxCapacity(maxCapacity)
     }
 
     /** @param namespaceName The namespace the workgroup is associated with. */

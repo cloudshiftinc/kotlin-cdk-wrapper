@@ -14,6 +14,7 @@ package io.cloudshiftdev.awscdkdsl.services.cloudfront
 import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.cloudfront.AddBehaviorOptions
+import software.amazon.awscdk.services.cloudfront.AssetImportSource
 import software.amazon.awscdk.services.cloudfront.Behavior
 import software.amazon.awscdk.services.cloudfront.BehaviorOptions
 import software.amazon.awscdk.services.cloudfront.CachePolicy
@@ -30,6 +31,8 @@ import software.amazon.awscdk.services.cloudfront.CfnFunction
 import software.amazon.awscdk.services.cloudfront.CfnFunctionProps
 import software.amazon.awscdk.services.cloudfront.CfnKeyGroup
 import software.amazon.awscdk.services.cloudfront.CfnKeyGroupProps
+import software.amazon.awscdk.services.cloudfront.CfnKeyValueStore
+import software.amazon.awscdk.services.cloudfront.CfnKeyValueStoreProps
 import software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription
 import software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscriptionProps
 import software.amazon.awscdk.services.cloudfront.CfnOriginAccessControl
@@ -60,6 +63,8 @@ import software.amazon.awscdk.services.cloudfront.FunctionAttributes
 import software.amazon.awscdk.services.cloudfront.FunctionProps
 import software.amazon.awscdk.services.cloudfront.KeyGroup
 import software.amazon.awscdk.services.cloudfront.KeyGroupProps
+import software.amazon.awscdk.services.cloudfront.KeyValueStore
+import software.amazon.awscdk.services.cloudfront.KeyValueStoreProps
 import software.amazon.awscdk.services.cloudfront.LambdaFunctionAssociation
 import software.amazon.awscdk.services.cloudfront.LoggingConfiguration
 import software.amazon.awscdk.services.cloudfront.OriginAccessIdentity
@@ -73,6 +78,8 @@ import software.amazon.awscdk.services.cloudfront.OriginRequestPolicy
 import software.amazon.awscdk.services.cloudfront.OriginRequestPolicyProps
 import software.amazon.awscdk.services.cloudfront.PublicKey
 import software.amazon.awscdk.services.cloudfront.PublicKeyProps
+import software.amazon.awscdk.services.cloudfront.RealtimeLogConfig
+import software.amazon.awscdk.services.cloudfront.RealtimeLogConfigProps
 import software.amazon.awscdk.services.cloudfront.ResponseCustomHeader
 import software.amazon.awscdk.services.cloudfront.ResponseCustomHeadersBehavior
 import software.amazon.awscdk.services.cloudfront.ResponseHeadersContentSecurityPolicy
@@ -109,6 +116,62 @@ public object cloudfront {
         block: AddBehaviorOptionsDsl.() -> Unit = {}
     ): AddBehaviorOptions {
         val builder = AddBehaviorOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * An import source from a local file.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.*;
+     * import software.amazon.awscdk.services.cloudfront.*;
+     * import software.amazon.awscdk.services.iam.*;
+     * DockerImage dockerImage;
+     * IGrantable grantable;
+     * ILocalBundling localBundling;
+     * AssetImportSource assetImportSource = AssetImportSource.Builder.create("path")
+     * .assetHash("assetHash")
+     * .assetHashType(AssetHashType.SOURCE)
+     * .bundling(BundlingOptions.builder()
+     * .image(dockerImage)
+     * // the properties below are optional
+     * .bundlingFileAccess(BundlingFileAccess.VOLUME_COPY)
+     * .command(List.of("command"))
+     * .entrypoint(List.of("entrypoint"))
+     * .environment(Map.of(
+     * "environmentKey", "environment"))
+     * .local(localBundling)
+     * .network("network")
+     * .outputType(BundlingOutput.ARCHIVED)
+     * .platform("platform")
+     * .securityOpt("securityOpt")
+     * .user("user")
+     * .volumes(List.of(DockerVolume.builder()
+     * .containerPath("containerPath")
+     * .hostPath("hostPath")
+     * // the properties below are optional
+     * .consistency(DockerVolumeConsistency.CONSISTENT)
+     * .build()))
+     * .volumesFrom(List.of("volumesFrom"))
+     * .workingDirectory("workingDirectory")
+     * .build())
+     * .deployTime(false)
+     * .exclude(List.of("exclude"))
+     * .followSymlinks(SymlinkFollowMode.NEVER)
+     * .ignoreMode(IgnoreMode.GLOB)
+     * .readers(List.of(grantable))
+     * .build();
+     * ```
+     */
+    public inline fun assetImportSource(
+        path: String,
+        block: AssetImportSourceDsl.() -> Unit = {}
+    ): AssetImportSource {
+        val builder = AssetImportSourceDsl(path)
         builder.apply(block)
         return builder.build()
     }
@@ -173,17 +236,17 @@ public object cloudfront {
      *
      * Example:
      * ```
+     * // Adding an existing Lambda&#64;Edge function created in a different stack
+     * // to a CloudFront distribution.
      * Bucket s3Bucket;
-     * // Add a cloudfront Function to a Distribution
-     * Function cfFunction = Function.Builder.create(this, "Function")
-     * .code(FunctionCode.fromInline("function handler(event) { return event.request }"))
-     * .build();
+     * IVersion functionVersion = Version.fromVersionArn(this, "Version",
+     * "arn:aws:lambda:us-east-1:123456789012:function:functionName:1");
      * Distribution.Builder.create(this, "distro")
      * .defaultBehavior(BehaviorOptions.builder()
      * .origin(new S3Origin(s3Bucket))
-     * .functionAssociations(List.of(FunctionAssociation.builder()
-     * .function(cfFunction)
-     * .eventType(FunctionEventType.VIEWER_REQUEST)
+     * .edgeLambdas(List.of(EdgeLambda.builder()
+     * .functionVersion(functionVersion)
+     * .eventType(LambdaEdgeEventType.VIEWER_REQUEST)
      * .build()))
      * .build())
      * .build();
@@ -673,6 +736,18 @@ public object cloudfront {
      * .enabled(false)
      * .stagingDistributionDnsNames(List.of("stagingDistributionDnsNames"))
      * // the properties below are optional
+     * .singleHeaderPolicyConfig(SingleHeaderPolicyConfigProperty.builder()
+     * .header("header")
+     * .value("value")
+     * .build())
+     * .singleWeightPolicyConfig(SingleWeightPolicyConfigProperty.builder()
+     * .weight(123)
+     * // the properties below are optional
+     * .sessionStickinessConfig(SessionStickinessConfigProperty.builder()
+     * .idleTtl(123)
+     * .maximumTtl(123)
+     * .build())
+     * .build())
      * .trafficConfig(TrafficConfigProperty.builder()
      * .type("type")
      * // the properties below are optional
@@ -689,6 +764,7 @@ public object cloudfront {
      * .build())
      * .build())
      * .build())
+     * .type("type")
      * .build())
      * .build();
      * ```
@@ -718,6 +794,18 @@ public object cloudfront {
      * .enabled(false)
      * .stagingDistributionDnsNames(List.of("stagingDistributionDnsNames"))
      * // the properties below are optional
+     * .singleHeaderPolicyConfig(SingleHeaderPolicyConfigProperty.builder()
+     * .header("header")
+     * .value("value")
+     * .build())
+     * .singleWeightPolicyConfig(SingleWeightPolicyConfigProperty.builder()
+     * .weight(123)
+     * // the properties below are optional
+     * .sessionStickinessConfig(SessionStickinessConfigProperty.builder()
+     * .idleTtl(123)
+     * .maximumTtl(123)
+     * .build())
+     * .build())
      * .trafficConfig(TrafficConfigProperty.builder()
      * .type("type")
      * // the properties below are optional
@@ -734,6 +822,7 @@ public object cloudfront {
      * .build())
      * .build())
      * .build())
+     * .type("type")
      * .build();
      * ```
      *
@@ -762,6 +851,18 @@ public object cloudfront {
      * .enabled(false)
      * .stagingDistributionDnsNames(List.of("stagingDistributionDnsNames"))
      * // the properties below are optional
+     * .singleHeaderPolicyConfig(SingleHeaderPolicyConfigProperty.builder()
+     * .header("header")
+     * .value("value")
+     * .build())
+     * .singleWeightPolicyConfig(SingleWeightPolicyConfigProperty.builder()
+     * .weight(123)
+     * // the properties below are optional
+     * .sessionStickinessConfig(SessionStickinessConfigProperty.builder()
+     * .idleTtl(123)
+     * .maximumTtl(123)
+     * .build())
+     * .build())
      * .trafficConfig(TrafficConfigProperty.builder()
      * .type("type")
      * // the properties below are optional
@@ -778,6 +879,7 @@ public object cloudfront {
      * .build())
      * .build())
      * .build())
+     * .type("type")
      * .build())
      * .build();
      * ```
@@ -847,6 +949,29 @@ public object cloudfront {
     }
 
     /**
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.cloudfront.*;
+     * SingleHeaderPolicyConfigProperty singleHeaderPolicyConfigProperty =
+     * SingleHeaderPolicyConfigProperty.builder()
+     * .header("header")
+     * .value("value")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleheaderpolicyconfig.html)
+     */
+    public inline fun cfnContinuousDeploymentPolicySingleHeaderPolicyConfigProperty(
+        block: CfnContinuousDeploymentPolicySingleHeaderPolicyConfigPropertyDsl.() -> Unit = {}
+    ): CfnContinuousDeploymentPolicy.SingleHeaderPolicyConfigProperty {
+        val builder = CfnContinuousDeploymentPolicySingleHeaderPolicyConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * This configuration determines the percentage of HTTP requests that are sent to the staging
      * distribution.
      *
@@ -871,6 +996,33 @@ public object cloudfront {
         block: CfnContinuousDeploymentPolicySingleWeightConfigPropertyDsl.() -> Unit = {}
     ): CfnContinuousDeploymentPolicy.SingleWeightConfigProperty {
         val builder = CfnContinuousDeploymentPolicySingleWeightConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.cloudfront.*;
+     * SingleWeightPolicyConfigProperty singleWeightPolicyConfigProperty =
+     * SingleWeightPolicyConfigProperty.builder()
+     * .weight(123)
+     * // the properties below are optional
+     * .sessionStickinessConfig(SessionStickinessConfigProperty.builder()
+     * .idleTtl(123)
+     * .maximumTtl(123)
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig.html)
+     */
+    public inline fun cfnContinuousDeploymentPolicySingleWeightPolicyConfigProperty(
+        block: CfnContinuousDeploymentPolicySingleWeightPolicyConfigPropertyDsl.() -> Unit = {}
+    ): CfnContinuousDeploymentPolicy.SingleWeightPolicyConfigProperty {
+        val builder = CfnContinuousDeploymentPolicySingleWeightPolicyConfigPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -1706,7 +1858,7 @@ public object cloudfront {
      * and a failover criteria that you specify.
      *
      * You create an origin group to support origin failover in CloudFront. When you create or
-     * update a distribution, you can specifiy the origin group instead of a single origin, and
+     * update a distribution, you can specify the origin group instead of a single origin, and
      * CloudFront will failover from the primary origin to the second origin under the failover
      * conditions that you've chosen.
      *
@@ -2262,6 +2414,10 @@ public object cloudfront {
      * .functionConfig(FunctionConfigProperty.builder()
      * .comment("comment")
      * .runtime("runtime")
+     * // the properties below are optional
+     * .keyValueStoreAssociations(List.of(KeyValueStoreAssociationProperty.builder()
+     * .keyValueStoreArn("keyValueStoreArn")
+     * .build()))
      * .build())
      * .name("name")
      * // the properties below are optional
@@ -2295,6 +2451,10 @@ public object cloudfront {
      * FunctionConfigProperty functionConfigProperty = FunctionConfigProperty.builder()
      * .comment("comment")
      * .runtime("runtime")
+     * // the properties below are optional
+     * .keyValueStoreAssociations(List.of(KeyValueStoreAssociationProperty.builder()
+     * .keyValueStoreArn("keyValueStoreArn")
+     * .build()))
      * .build();
      * ```
      *
@@ -2332,6 +2492,30 @@ public object cloudfront {
     }
 
     /**
+     * The key value store association.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.cloudfront.*;
+     * KeyValueStoreAssociationProperty keyValueStoreAssociationProperty =
+     * KeyValueStoreAssociationProperty.builder()
+     * .keyValueStoreArn("keyValueStoreArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-function-keyvaluestoreassociation.html)
+     */
+    public inline fun cfnFunctionKeyValueStoreAssociationProperty(
+        block: CfnFunctionKeyValueStoreAssociationPropertyDsl.() -> Unit = {}
+    ): CfnFunction.KeyValueStoreAssociationProperty {
+        val builder = CfnFunctionKeyValueStoreAssociationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Properties for defining a `CfnFunction`.
      *
      * Example:
@@ -2344,6 +2528,10 @@ public object cloudfront {
      * .functionConfig(FunctionConfigProperty.builder()
      * .comment("comment")
      * .runtime("runtime")
+     * // the properties below are optional
+     * .keyValueStoreAssociations(List.of(KeyValueStoreAssociationProperty.builder()
+     * .keyValueStoreArn("keyValueStoreArn")
+     * .build()))
      * .build())
      * .name("name")
      * // the properties below are optional
@@ -2452,6 +2640,94 @@ public object cloudfront {
         block: CfnKeyGroupPropsDsl.() -> Unit = {}
     ): CfnKeyGroupProps {
         val builder = CfnKeyGroupPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The key value store.
+     *
+     * Use this to separate data from function code, allowing you to update data without having to
+     * publish a new version of a function. The key value store holds keys and their corresponding
+     * values.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.cloudfront.*;
+     * CfnKeyValueStore cfnKeyValueStore = CfnKeyValueStore.Builder.create(this, "MyCfnKeyValueStore")
+     * .name("name")
+     * // the properties below are optional
+     * .comment("comment")
+     * .importSource(ImportSourceProperty.builder()
+     * .sourceArn("sourceArn")
+     * .sourceType("sourceType")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-keyvaluestore.html)
+     */
+    public inline fun cfnKeyValueStore(
+        scope: Construct,
+        id: String,
+        block: CfnKeyValueStoreDsl.() -> Unit = {},
+    ): CfnKeyValueStore {
+        val builder = CfnKeyValueStoreDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The import source for the key value store.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.cloudfront.*;
+     * ImportSourceProperty importSourceProperty = ImportSourceProperty.builder()
+     * .sourceArn("sourceArn")
+     * .sourceType("sourceType")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-keyvaluestore-importsource.html)
+     */
+    public inline fun cfnKeyValueStoreImportSourceProperty(
+        block: CfnKeyValueStoreImportSourcePropertyDsl.() -> Unit = {}
+    ): CfnKeyValueStore.ImportSourceProperty {
+        val builder = CfnKeyValueStoreImportSourcePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnKeyValueStore`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.cloudfront.*;
+     * CfnKeyValueStoreProps cfnKeyValueStoreProps = CfnKeyValueStoreProps.builder()
+     * .name("name")
+     * // the properties below are optional
+     * .comment("comment")
+     * .importSource(ImportSourceProperty.builder()
+     * .sourceArn("sourceArn")
+     * .sourceType("sourceType")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-keyvaluestore.html)
+     */
+    public inline fun cfnKeyValueStoreProps(
+        block: CfnKeyValueStorePropsDsl.() -> Unit = {}
+    ): CfnKeyValueStoreProps {
+        val builder = CfnKeyValueStorePropsDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -4325,17 +4601,17 @@ public object cloudfront {
      *
      * Example:
      * ```
+     * // Adding an existing Lambda&#64;Edge function created in a different stack
+     * // to a CloudFront distribution.
      * Bucket s3Bucket;
-     * // Add a cloudfront Function to a Distribution
-     * Function cfFunction = Function.Builder.create(this, "Function")
-     * .code(FunctionCode.fromInline("function handler(event) { return event.request }"))
-     * .build();
+     * IVersion functionVersion = Version.fromVersionArn(this, "Version",
+     * "arn:aws:lambda:us-east-1:123456789012:function:functionName:1");
      * Distribution.Builder.create(this, "distro")
      * .defaultBehavior(BehaviorOptions.builder()
      * .origin(new S3Origin(s3Bucket))
-     * .functionAssociations(List.of(FunctionAssociation.builder()
-     * .function(cfFunction)
-     * .eventType(FunctionEventType.VIEWER_REQUEST)
+     * .edgeLambdas(List.of(EdgeLambda.builder()
+     * .functionVersion(functionVersion)
+     * .eventType(LambdaEdgeEventType.VIEWER_REQUEST)
      * .build()))
      * .build())
      * .build();
@@ -4377,17 +4653,17 @@ public object cloudfront {
      *
      * Example:
      * ```
+     * // Adding an existing Lambda&#64;Edge function created in a different stack
+     * // to a CloudFront distribution.
      * Bucket s3Bucket;
-     * // Add a cloudfront Function to a Distribution
-     * Function cfFunction = Function.Builder.create(this, "Function")
-     * .code(FunctionCode.fromInline("function handler(event) { return event.request }"))
-     * .build();
+     * IVersion functionVersion = Version.fromVersionArn(this, "Version",
+     * "arn:aws:lambda:us-east-1:123456789012:function:functionName:1");
      * Distribution.Builder.create(this, "distro")
      * .defaultBehavior(BehaviorOptions.builder()
      * .origin(new S3Origin(s3Bucket))
-     * .functionAssociations(List.of(FunctionAssociation.builder()
-     * .function(cfFunction)
-     * .eventType(FunctionEventType.VIEWER_REQUEST)
+     * .edgeLambdas(List.of(EdgeLambda.builder()
+     * .functionVersion(functionVersion)
+     * .eventType(LambdaEdgeEventType.VIEWER_REQUEST)
      * .build()))
      * .build())
      * .build();
@@ -4479,6 +4755,7 @@ public object cloudfront {
      * // Add a cloudfront Function to a Distribution
      * Function cfFunction = Function.Builder.create(this, "Function")
      * .code(FunctionCode.fromInline("function handler(event) { return event.request }"))
+     * .runtime(FunctionRuntime.JS_2_0)
      * .build();
      * Distribution.Builder.create(this, "distro")
      * .defaultBehavior(BehaviorOptions.builder()
@@ -4537,6 +4814,8 @@ public object cloudfront {
      * FunctionAttributes functionAttributes = FunctionAttributes.builder()
      * .functionArn("functionArn")
      * .functionName("functionName")
+     * // the properties below are optional
+     * .functionRuntime("functionRuntime")
      * .build();
      * ```
      */
@@ -4557,6 +4836,7 @@ public object cloudfront {
      * // Add a cloudfront Function to a Distribution
      * Function cfFunction = Function.Builder.create(this, "Function")
      * .code(FunctionCode.fromInline("function handler(event) { return event.request }"))
+     * .runtime(FunctionRuntime.JS_2_0)
      * .build();
      * Distribution.Builder.create(this, "distro")
      * .defaultBehavior(BehaviorOptions.builder()
@@ -4631,6 +4911,46 @@ public object cloudfront {
      */
     public inline fun keyGroupProps(block: KeyGroupPropsDsl.() -> Unit = {}): KeyGroupProps {
         val builder = KeyGroupPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A CloudFront Key Value Store.
+     *
+     * Example:
+     * ```
+     * KeyValueStore store = KeyValueStore.Builder.create(this, "KeyValueStore")
+     * .keyValueStoreName("KeyValueStore")
+     * .source(ImportSource.fromAsset("path-to-data.json"))
+     * .build();
+     * ```
+     */
+    public inline fun keyValueStore(
+        scope: Construct,
+        id: String,
+        block: KeyValueStoreDsl.() -> Unit = {},
+    ): KeyValueStore {
+        val builder = KeyValueStoreDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The properties to create a Key Value Store.
+     *
+     * Example:
+     * ```
+     * KeyValueStore store = KeyValueStore.Builder.create(this, "KeyValueStore")
+     * .keyValueStoreName("KeyValueStore")
+     * .source(ImportSource.fromAsset("path-to-data.json"))
+     * .build();
+     * ```
+     */
+    public inline fun keyValueStoreProps(
+        block: KeyValueStorePropsDsl.() -> Unit = {}
+    ): KeyValueStoreProps {
+        val builder = KeyValueStorePropsDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -4996,6 +5316,68 @@ public object cloudfront {
      */
     public inline fun publicKeyProps(block: PublicKeyPropsDsl.() -> Unit = {}): PublicKeyProps {
         val builder = PublicKeyPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A Realtime Log Config configuration.
+     *
+     * Example:
+     * ```
+     * // Adding realtime logs config to a Cloudfront Distribution on default behavior.
+     * import software.amazon.awscdk.services.kinesis.*;
+     * Stream stream;
+     * RealtimeLogConfig realTimeConfig = RealtimeLogConfig.Builder.create(this, "realtimeLog")
+     * .endPoints(List.of(Endpoint.fromKinesisStream(stream)))
+     * .fields(List.of("timestamp", "c-ip", "time-to-first-byte", "sc-status"))
+     * .realtimeLogConfigName("my-delivery-stream")
+     * .samplingRate(100)
+     * .build();
+     * Distribution.Builder.create(this, "myCdn")
+     * .defaultBehavior(BehaviorOptions.builder()
+     * .origin(new HttpOrigin("www.example.com"))
+     * .realtimeLogConfig(realTimeConfig)
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun realtimeLogConfig(
+        scope: Construct,
+        id: String,
+        block: RealtimeLogConfigDsl.() -> Unit = {},
+    ): RealtimeLogConfig {
+        val builder = RealtimeLogConfigDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a RealtimeLogConfig resource.
+     *
+     * Example:
+     * ```
+     * // Adding realtime logs config to a Cloudfront Distribution on default behavior.
+     * import software.amazon.awscdk.services.kinesis.*;
+     * Stream stream;
+     * RealtimeLogConfig realTimeConfig = RealtimeLogConfig.Builder.create(this, "realtimeLog")
+     * .endPoints(List.of(Endpoint.fromKinesisStream(stream)))
+     * .fields(List.of("timestamp", "c-ip", "time-to-first-byte", "sc-status"))
+     * .realtimeLogConfigName("my-delivery-stream")
+     * .samplingRate(100)
+     * .build();
+     * Distribution.Builder.create(this, "myCdn")
+     * .defaultBehavior(BehaviorOptions.builder()
+     * .origin(new HttpOrigin("www.example.com"))
+     * .realtimeLogConfig(realTimeConfig)
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun realtimeLogConfigProps(
+        block: RealtimeLogConfigPropsDsl.() -> Unit = {}
+    ): RealtimeLogConfigProps {
+        val builder = RealtimeLogConfigPropsDsl()
         builder.apply(block)
         return builder.build()
     }

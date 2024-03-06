@@ -20,6 +20,7 @@ import software.amazon.awscdk.services.iot.CfnFleetMetric
 import software.amazon.awscdk.services.iot.CfnJobTemplate
 import software.amazon.awscdk.services.iot.CfnMitigationAction
 import software.amazon.awscdk.services.iot.CfnProvisioningTemplate
+import software.amazon.awscdk.services.iot.CfnSecurityProfile
 import software.amazon.awscdk.services.iot.CfnThing
 import software.amazon.awscdk.services.iot.CfnThingGroup
 import software.amazon.awscdk.services.iot.CfnThingType
@@ -72,6 +73,15 @@ public inline fun CfnDomainConfiguration.setAuthorizerConfig(
     return setAuthorizerConfig(builder.build())
 }
 
+/** The server certificate configuration. */
+public inline fun CfnDomainConfiguration.setServerCertificateConfig(
+    block: CfnDomainConfigurationServerCertificateConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnDomainConfigurationServerCertificateConfigPropertyDsl()
+    builder.apply(block)
+    return setServerCertificateConfig(builder.build())
+}
+
 /** An object that specifies the TLS configuration for a domain. */
 public inline fun CfnDomainConfiguration.setTlsConfig(
     block: CfnDomainConfigurationTlsConfigPropertyDsl.() -> Unit = {}
@@ -115,6 +125,15 @@ public inline fun CfnProvisioningTemplate.setPreProvisioningHook(
     val builder = CfnProvisioningTemplateProvisioningHookPropertyDsl()
     builder.apply(block)
     return setPreProvisioningHook(builder.build())
+}
+
+/** Specifies the MQTT topic and role ARN required for metric export. */
+public inline fun CfnSecurityProfile.setMetricsExportConfig(
+    block: CfnSecurityProfileMetricsExportConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnSecurityProfileMetricsExportConfigPropertyDsl()
+    builder.apply(block)
+    return setMetricsExportConfig(builder.build())
 }
 
 /** A string that contains up to three key value pairs. */

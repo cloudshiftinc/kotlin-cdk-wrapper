@@ -34,15 +34,14 @@ import software.amazon.awscdk.services.stepfunctions.tasks.CallAwsServiceProps
  *
  * Example:
  * ```
- * CallAwsService detectLabels = CallAwsService.Builder.create(this, "DetectLabels")
- * .service("rekognition")
- * .action("detectLabels")
- * .iamResources(List.of("*"))
- * .additionalIamStatements(List.of(
- * PolicyStatement.Builder.create()
- * .actions(List.of("s3:getObject"))
- * .resources(List.of("arn:aws:s3:::my-bucket/ *"))
- * .build()))
+ * Bucket myBucket;
+ * CallAwsService getObject = CallAwsService.Builder.create(this, "GetObject")
+ * .service("s3")
+ * .action("getObject")
+ * .parameters(Map.of(
+ * "Bucket", myBucket.getBucketName(),
+ * "Key", JsonPath.stringAt("$.key")))
+ * .iamResources(List.of(myBucket.arnForObjects("*")))
  * .build();
  * ```
  *
@@ -160,7 +159,9 @@ public class CallAwsServicePropsDsl {
 
     /**
      * @param integrationPattern AWS Step Functions integrates with services directly in the Amazon
-     *   States Language. You can control these AWS services using service integration patterns
+     *   States Language. You can control these AWS services using service integration patterns.
+     *
+     * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      */
     public fun integrationPattern(integrationPattern: IntegrationPattern) {
         cdkBuilder.integrationPattern(integrationPattern)
@@ -223,6 +224,11 @@ public class CallAwsServicePropsDsl {
     /** @param service The AWS service to call. */
     public fun service(service: String) {
         cdkBuilder.service(service)
+    }
+
+    /** @param stateName Optional name for this state. */
+    public fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
     }
 
     /**

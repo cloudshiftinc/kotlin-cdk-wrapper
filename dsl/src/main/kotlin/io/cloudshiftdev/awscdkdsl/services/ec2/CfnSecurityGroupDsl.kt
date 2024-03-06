@@ -236,6 +236,9 @@ public class CfnSecurityGroupDsl(
     /**
      * The ID of the VPC for the security group.
      *
+     * If you do not specify a VPC, the default is to use the default VPC for the Region. If there's
+     * no specified VPC and no default VPC, security group creation fails.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroup.html#cfn-ec2-securitygroup-vpcid)
      *
      * @param vpcId The ID of the VPC for the security group.

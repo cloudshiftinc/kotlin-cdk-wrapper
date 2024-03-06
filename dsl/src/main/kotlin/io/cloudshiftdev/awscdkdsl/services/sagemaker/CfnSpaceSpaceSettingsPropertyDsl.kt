@@ -12,6 +12,10 @@
 package io.cloudshiftdev.awscdkdsl.services.sagemaker
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Any
+import kotlin.String
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnSpace
 
@@ -24,6 +28,29 @@ import software.amazon.awscdk.services.sagemaker.CfnSpace
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.sagemaker.*;
  * SpaceSettingsProperty spaceSettingsProperty = SpaceSettingsProperty.builder()
+ * .appType("appType")
+ * .codeEditorAppSettings(SpaceCodeEditorAppSettingsProperty.builder()
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .build())
+ * .customFileSystems(List.of(CustomFileSystemProperty.builder()
+ * .efsFileSystem(EFSFileSystemProperty.builder()
+ * .fileSystemId("fileSystemId")
+ * .build())
+ * .build()))
+ * .jupyterLabAppSettings(SpaceJupyterLabAppSettingsProperty.builder()
+ * .codeRepositories(List.of(CodeRepositoryProperty.builder()
+ * .repositoryUrl("repositoryUrl")
+ * .build()))
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .build())
  * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
  * .defaultResourceSpec(ResourceSpecProperty.builder()
  * .instanceType("instanceType")
@@ -44,6 +71,11 @@ import software.amazon.awscdk.services.sagemaker.CfnSpace
  * .sageMakerImageVersionArn("sageMakerImageVersionArn")
  * .build())
  * .build())
+ * .spaceStorageSettings(SpaceStorageSettingsProperty.builder()
+ * .ebsStorageSettings(EbsStorageSettingsProperty.builder()
+ * .ebsVolumeSizeInGb(123)
+ * .build())
+ * .build())
  * .build();
  * ```
  *
@@ -53,6 +85,64 @@ import software.amazon.awscdk.services.sagemaker.CfnSpace
 public class CfnSpaceSpaceSettingsPropertyDsl {
     private val cdkBuilder: CfnSpace.SpaceSettingsProperty.Builder =
         CfnSpace.SpaceSettingsProperty.builder()
+
+    private val _customFileSystems: MutableList<Any> = mutableListOf()
+
+    /** @param appType The type of app created within the space. */
+    public fun appType(appType: String) {
+        cdkBuilder.appType(appType)
+    }
+
+    /** @param codeEditorAppSettings The Code Editor application settings. */
+    public fun codeEditorAppSettings(codeEditorAppSettings: IResolvable) {
+        cdkBuilder.codeEditorAppSettings(codeEditorAppSettings)
+    }
+
+    /** @param codeEditorAppSettings The Code Editor application settings. */
+    public fun codeEditorAppSettings(
+        codeEditorAppSettings: CfnSpace.SpaceCodeEditorAppSettingsProperty
+    ) {
+        cdkBuilder.codeEditorAppSettings(codeEditorAppSettings)
+    }
+
+    /**
+     * @param customFileSystems A file system, created by you, that you assign to a space for an
+     *   Amazon SageMaker Domain. Permitted users can access this file system in Amazon SageMaker
+     *   Studio.
+     */
+    public fun customFileSystems(vararg customFileSystems: Any) {
+        _customFileSystems.addAll(listOf(*customFileSystems))
+    }
+
+    /**
+     * @param customFileSystems A file system, created by you, that you assign to a space for an
+     *   Amazon SageMaker Domain. Permitted users can access this file system in Amazon SageMaker
+     *   Studio.
+     */
+    public fun customFileSystems(customFileSystems: Collection<Any>) {
+        _customFileSystems.addAll(customFileSystems)
+    }
+
+    /**
+     * @param customFileSystems A file system, created by you, that you assign to a space for an
+     *   Amazon SageMaker Domain. Permitted users can access this file system in Amazon SageMaker
+     *   Studio.
+     */
+    public fun customFileSystems(customFileSystems: IResolvable) {
+        cdkBuilder.customFileSystems(customFileSystems)
+    }
+
+    /** @param jupyterLabAppSettings The settings for the JupyterLab application. */
+    public fun jupyterLabAppSettings(jupyterLabAppSettings: IResolvable) {
+        cdkBuilder.jupyterLabAppSettings(jupyterLabAppSettings)
+    }
+
+    /** @param jupyterLabAppSettings The settings for the JupyterLab application. */
+    public fun jupyterLabAppSettings(
+        jupyterLabAppSettings: CfnSpace.SpaceJupyterLabAppSettingsProperty
+    ) {
+        cdkBuilder.jupyterLabAppSettings(jupyterLabAppSettings)
+    }
 
     /** @param jupyterServerAppSettings The JupyterServer app settings. */
     public fun jupyterServerAppSettings(jupyterServerAppSettings: IResolvable) {
@@ -78,5 +168,18 @@ public class CfnSpaceSpaceSettingsPropertyDsl {
         cdkBuilder.kernelGatewayAppSettings(kernelGatewayAppSettings)
     }
 
-    public fun build(): CfnSpace.SpaceSettingsProperty = cdkBuilder.build()
+    /** @param spaceStorageSettings The storage settings for a private space. */
+    public fun spaceStorageSettings(spaceStorageSettings: IResolvable) {
+        cdkBuilder.spaceStorageSettings(spaceStorageSettings)
+    }
+
+    /** @param spaceStorageSettings The storage settings for a private space. */
+    public fun spaceStorageSettings(spaceStorageSettings: CfnSpace.SpaceStorageSettingsProperty) {
+        cdkBuilder.spaceStorageSettings(spaceStorageSettings)
+    }
+
+    public fun build(): CfnSpace.SpaceSettingsProperty {
+        if (_customFileSystems.isNotEmpty()) cdkBuilder.customFileSystems(_customFileSystems)
+        return cdkBuilder.build()
+    }
 }

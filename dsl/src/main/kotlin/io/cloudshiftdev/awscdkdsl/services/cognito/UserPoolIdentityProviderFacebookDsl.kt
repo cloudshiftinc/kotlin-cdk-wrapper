@@ -22,7 +22,7 @@ import software.amazon.awscdk.services.cognito.UserPoolIdentityProviderFacebook
 import software.constructs.Construct
 
 /**
- * Represents a identity provider that integrates with 'Facebook Login'.
+ * Represents an identity provider that integrates with Facebook Login.
  *
  * Example:
  * ```
@@ -122,11 +122,11 @@ public class UserPoolIdentityProviderFacebookDsl(
     }
 
     /**
-     * The client secret to be accompanied with clientUd for Facebook to authenticate the client.
+     * The client secret to be accompanied with clientId for Facebook to authenticate the client.
      *
      * [Documentation](https://developers.facebook.com/docs/facebook-login/security#appsecret)
      *
-     * @param clientSecret The client secret to be accompanied with clientUd for Facebook to
+     * @param clientSecret The client secret to be accompanied with clientId for Facebook to
      *   authenticate the client.
      */
     public fun clientSecret(clientSecret: String) {
@@ -134,13 +134,13 @@ public class UserPoolIdentityProviderFacebookDsl(
     }
 
     /**
-     * The list of facebook permissions to obtain for getting access to the Facebook profile.
+     * The list of Facebook permissions to obtain for getting access to the Facebook profile.
      *
      * Default: [ public_profile ]
      *
      * [Documentation](https://developers.facebook.com/docs/facebook-login/permissions)
      *
-     * @param scopes The list of facebook permissions to obtain for getting access to the Facebook
+     * @param scopes The list of Facebook permissions to obtain for getting access to the Facebook
      *   profile.
      */
     public fun scopes(vararg scopes: String) {
@@ -148,13 +148,13 @@ public class UserPoolIdentityProviderFacebookDsl(
     }
 
     /**
-     * The list of facebook permissions to obtain for getting access to the Facebook profile.
+     * The list of Facebook permissions to obtain for getting access to the Facebook profile.
      *
      * Default: [ public_profile ]
      *
      * [Documentation](https://developers.facebook.com/docs/facebook-login/permissions)
      *
-     * @param scopes The list of facebook permissions to obtain for getting access to the Facebook
+     * @param scopes The list of Facebook permissions to obtain for getting access to the Facebook
      *   profile.
      */
     public fun scopes(scopes: Collection<String>) {

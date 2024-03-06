@@ -66,6 +66,12 @@ import software.amazon.awscdk.services.lightsail.CfnContainerProps
  * .build())
  * .build())
  * .isDisabled(false)
+ * .privateRegistryAccess(PrivateRegistryAccessProperty.builder()
+ * .ecrImagePullerRole(EcrImagePullerRoleProperty.builder()
+ * .isActive(false)
+ * .principalArn("principalArn")
+ * .build())
+ * .build())
  * .publicDomainNames(List.of(PublicDomainNameProperty.builder()
  * .certificateName("certificateName")
  * .domainNames(List.of("domainNames"))
@@ -121,6 +127,30 @@ public class CfnContainerPropsDsl {
      */
     public fun power(power: String) {
         cdkBuilder.power(power)
+    }
+
+    /**
+     * @param privateRegistryAccess An object that describes the configuration for the container
+     *   service to access private container image repositories, such as Amazon Elastic Container
+     *   Registry ( Amazon ECR ) private repositories. For more information, see
+     *   [Configuring access to an Amazon ECR private repository for an Amazon Lightsail container service](https://docs.aws.amazon.com/lightsail/latest/userguide/amazon-lightsail-container-service-ecr-private-repo-access)
+     *   in the *Amazon Lightsail Developer Guide* .
+     */
+    public fun privateRegistryAccess(privateRegistryAccess: IResolvable) {
+        cdkBuilder.privateRegistryAccess(privateRegistryAccess)
+    }
+
+    /**
+     * @param privateRegistryAccess An object that describes the configuration for the container
+     *   service to access private container image repositories, such as Amazon Elastic Container
+     *   Registry ( Amazon ECR ) private repositories. For more information, see
+     *   [Configuring access to an Amazon ECR private repository for an Amazon Lightsail container service](https://docs.aws.amazon.com/lightsail/latest/userguide/amazon-lightsail-container-service-ecr-private-repo-access)
+     *   in the *Amazon Lightsail Developer Guide* .
+     */
+    public fun privateRegistryAccess(
+        privateRegistryAccess: CfnContainer.PrivateRegistryAccessProperty
+    ) {
+        cdkBuilder.privateRegistryAccess(privateRegistryAccess)
     }
 
     /**

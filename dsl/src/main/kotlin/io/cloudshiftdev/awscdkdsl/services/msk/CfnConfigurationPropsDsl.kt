@@ -15,6 +15,8 @@ import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.msk.CfnConfiguration
 import software.amazon.awscdk.services.msk.CfnConfigurationProps
 
 /**
@@ -31,6 +33,11 @@ import software.amazon.awscdk.services.msk.CfnConfigurationProps
  * // the properties below are optional
  * .description("description")
  * .kafkaVersionsList(List.of("kafkaVersionsList"))
+ * .latestRevision(LatestRevisionProperty.builder()
+ * .creationTime("creationTime")
+ * .description("description")
+ * .revision(123)
+ * .build())
  * .build();
  * ```
  *
@@ -55,6 +62,16 @@ public class CfnConfigurationPropsDsl {
     /** @param kafkaVersionsList the value to be set. */
     public fun kafkaVersionsList(kafkaVersionsList: Collection<String>) {
         _kafkaVersionsList.addAll(kafkaVersionsList)
+    }
+
+    /** @param latestRevision Latest revision of the configuration. */
+    public fun latestRevision(latestRevision: IResolvable) {
+        cdkBuilder.latestRevision(latestRevision)
+    }
+
+    /** @param latestRevision Latest revision of the configuration. */
+    public fun latestRevision(latestRevision: CfnConfiguration.LatestRevisionProperty) {
+        cdkBuilder.latestRevision(latestRevision)
     }
 
     /**

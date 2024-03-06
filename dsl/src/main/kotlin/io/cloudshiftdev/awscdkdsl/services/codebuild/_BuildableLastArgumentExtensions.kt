@@ -26,8 +26,10 @@ import software.amazon.awscdk.services.codebuild.IBindableBuildImage
 import software.amazon.awscdk.services.codebuild.IBuildImage
 import software.amazon.awscdk.services.codebuild.IProject
 import software.amazon.awscdk.services.codebuild.LinuxArmBuildImage
+import software.amazon.awscdk.services.codebuild.LinuxArmLambdaBuildImage
 import software.amazon.awscdk.services.codebuild.LinuxBuildImage
 import software.amazon.awscdk.services.codebuild.LinuxGpuBuildImage
+import software.amazon.awscdk.services.codebuild.LinuxLambdaBuildImage
 import software.amazon.awscdk.services.codebuild.Project
 import software.amazon.awscdk.services.codebuild.WindowsBuildImage
 import software.amazon.awscdk.services.codestarnotifications.INotificationRule
@@ -413,7 +415,20 @@ public inline fun LinuxArmBuildImage.validate(
 /**
  * Allows the image a chance to validate whether the passed configuration is correct.
  *
- * @param _env
+ * @param buildEnvironment
+ */
+public inline fun LinuxArmLambdaBuildImage.validate(
+    block: BuildEnvironmentDsl.() -> Unit = {}
+): List<String> {
+    val builder = BuildEnvironmentDsl()
+    builder.apply(block)
+    return validate(builder.build())
+}
+
+/**
+ * Allows the image a chance to validate whether the passed configuration is correct.
+ *
+ * @param env
  */
 public inline fun LinuxBuildImage.validate(
     block: BuildEnvironmentDsl.() -> Unit = {}
@@ -446,6 +461,19 @@ public inline fun LinuxGpuBuildImage.bind(
  * @param buildEnvironment
  */
 public inline fun LinuxGpuBuildImage.validate(
+    block: BuildEnvironmentDsl.() -> Unit = {}
+): List<String> {
+    val builder = BuildEnvironmentDsl()
+    builder.apply(block)
+    return validate(builder.build())
+}
+
+/**
+ * Allows the image a chance to validate whether the passed configuration is correct.
+ *
+ * @param buildEnvironment
+ */
+public inline fun LinuxLambdaBuildImage.validate(
     block: BuildEnvironmentDsl.() -> Unit = {}
 ): List<String> {
     val builder = BuildEnvironmentDsl()

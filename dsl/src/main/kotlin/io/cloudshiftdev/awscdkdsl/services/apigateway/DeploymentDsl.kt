@@ -46,10 +46,10 @@ import software.constructs.Construct
  * Example:
  * ```
  * // production stage
- * LogGroup prdLogGroup = new LogGroup(this, "PrdLogs");
+ * LogGroup prodLogGroup = new LogGroup(this, "PrdLogs");
  * RestApi api = RestApi.Builder.create(this, "books")
  * .deployOptions(StageOptions.builder()
- * .accessLogDestination(new LogGroupLogDestination(prdLogGroup))
+ * .accessLogDestination(new LogGroupLogDestination(prodLogGroup))
  * .accessLogFormat(AccessLogFormat.jsonWithStandardFields())
  * .build())
  * .build();

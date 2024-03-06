@@ -30,6 +30,7 @@ import software.constructs.Construct
  * import software.amazon.awscdk.services.events.*;
  * CfnConnection cfnConnection = CfnConnection.Builder.create(this, "MyCfnConnection")
  * .authorizationType("authorizationType")
+ * // the properties below are optional
  * .authParameters(AuthParametersProperty.builder()
  * .apiKeyAuthParameters(ApiKeyAuthParametersProperty.builder()
  * .apiKeyName("apiKeyName")
@@ -89,7 +90,6 @@ import software.constructs.Construct
  * .build())
  * .build())
  * .build())
- * // the properties below are optional
  * .description("description")
  * .name("name")
  * .build();

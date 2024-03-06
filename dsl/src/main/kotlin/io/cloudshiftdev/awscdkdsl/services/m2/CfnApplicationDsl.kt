@@ -135,9 +135,11 @@ public class CfnApplicationDsl(
     }
 
     /**
+     * The Amazon Resource Name (ARN) of the role associated with the application.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-m2-application.html#cfn-m2-application-rolearn)
      *
-     * @param roleArn
+     * @param roleArn The Amazon Resource Name (ARN) of the role associated with the application.
      */
     public fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)

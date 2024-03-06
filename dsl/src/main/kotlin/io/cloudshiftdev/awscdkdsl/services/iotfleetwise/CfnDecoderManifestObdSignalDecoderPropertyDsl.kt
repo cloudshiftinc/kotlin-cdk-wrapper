@@ -17,6 +17,8 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest
 
 /**
+ * A list of information about signal decoders.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -58,12 +60,18 @@ public class CfnDecoderManifestObdSignalDecoderPropertyDsl {
         cdkBuilder.interfaceId(interfaceId)
     }
 
-    /** @param obdSignal the value to be set. */
+    /**
+     * @param obdSignal Information about signal messages using the on-board diagnostics (OBD) II
+     *   protocol in a vehicle.
+     */
     public fun obdSignal(obdSignal: IResolvable) {
         cdkBuilder.obdSignal(obdSignal)
     }
 
-    /** @param obdSignal the value to be set. */
+    /**
+     * @param obdSignal Information about signal messages using the on-board diagnostics (OBD) II
+     *   protocol in a vehicle.
+     */
     public fun obdSignal(obdSignal: CfnDecoderManifest.ObdSignalProperty) {
         cdkBuilder.obdSignal(obdSignal)
     }

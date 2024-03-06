@@ -38,8 +38,8 @@ public class CfnClusterEncryptionAtRestPropertyDsl {
         CfnCluster.EncryptionAtRestProperty.builder()
 
     /**
-     * @param dataVolumeKmsKeyId The ARN of the Amazon KMS key for encrypting data at rest. If you
-     *   don't specify a KMS key, MSK creates one for you and uses it.
+     * @param dataVolumeKmsKeyId The Amazon Resource Name (ARN) of the Amazon KMS key for encrypting
+     *   data at rest. If you don't specify a KMS key, MSK creates one for you and uses it.
      */
     public fun dataVolumeKmsKeyId(dataVolumeKmsKeyId: String) {
         cdkBuilder.dataVolumeKmsKeyId(dataVolumeKmsKeyId)

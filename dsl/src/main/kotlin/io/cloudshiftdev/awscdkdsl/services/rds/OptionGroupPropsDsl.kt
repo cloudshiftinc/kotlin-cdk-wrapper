@@ -79,7 +79,7 @@ import software.amazon.awscdk.services.rds.OptionGroupProps
  * Function fn = Function.Builder.create(this, "Function")
  * .code(Code.fromInline("exports.handler = (event) =&gt; console.log(event);"))
  * .handler("index.handler")
- * .runtime(Runtime.NODEJS_14_X)
+ * .runtime(Runtime.NODEJS_18_X)
  * .build();
  * Rule availabilityRule = instance.onEvent("Availability", OnEventOptions.builder().target(new
  * LambdaFunction(fn)).build());

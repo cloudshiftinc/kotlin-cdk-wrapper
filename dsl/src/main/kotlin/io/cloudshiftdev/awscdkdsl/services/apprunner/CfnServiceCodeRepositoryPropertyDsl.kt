@@ -50,6 +50,7 @@ import software.amazon.awscdk.services.apprunner.CfnService
  * .startCommand("startCommand")
  * .build())
  * .build())
+ * .sourceDirectory("sourceDirectory")
  * .build();
  * ```
  *
@@ -97,6 +98,15 @@ public class CfnServiceCodeRepositoryPropertyDsl {
      */
     public fun sourceCodeVersion(sourceCodeVersion: CfnService.SourceCodeVersionProperty) {
         cdkBuilder.sourceCodeVersion(sourceCodeVersion)
+    }
+
+    /**
+     * @param sourceDirectory The path of the directory that stores source code and configuration
+     *   files. The build and start commands also execute from here. The path is absolute from root
+     *   and, if not specified, defaults to the repository root.
+     */
+    public fun sourceDirectory(sourceDirectory: String) {
+        cdkBuilder.sourceDirectory(sourceDirectory)
     }
 
     public fun build(): CfnService.CodeRepositoryProperty = cdkBuilder.build()

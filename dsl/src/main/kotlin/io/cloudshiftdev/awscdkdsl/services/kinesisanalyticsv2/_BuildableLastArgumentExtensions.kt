@@ -35,7 +35,7 @@ public inline fun CfnApplication.setApplicationMaintenanceConfiguration(
     return setApplicationMaintenanceConfiguration(builder.build())
 }
 
-/** Identifies the run configuration (start parameters) of a Kinesis Data Analytics application. */
+/** Describes the starting parameters for an Managed Service for Apache Flink application. */
 public inline fun CfnApplication.setRunConfiguration(
     block: CfnApplicationRunConfigurationPropertyDsl.() -> Unit = {}
 ) {
@@ -57,9 +57,9 @@ public inline fun CfnApplicationCloudWatchLoggingOption.setCloudWatchLoggingOpti
 }
 
 /**
- * Describes a SQL-based Kinesis Data Analytics application's output configuration, in which you
- * identify an in-application stream and a destination where you want the in-application stream data
- * to be written.
+ * Describes a SQL-based Managed Service for Apache Flink application's output configuration, in
+ * which you identify an in-application stream and a destination where you want the in-application
+ * stream data to be written.
  */
 public inline fun CfnApplicationOutput.setOutput(
     block: CfnApplicationOutputOutputPropertyDsl.() -> Unit = {}
@@ -70,8 +70,8 @@ public inline fun CfnApplicationOutput.setOutput(
 }
 
 /**
- * For a SQL-based Kinesis Data Analytics application, describes the reference data source by
- * providing the source information (Amazon S3 bucket name and object key name), the resulting
+ * For a SQL-based Managed Service for Apache Flink application, describes the reference data source
+ * by providing the source information (Amazon S3 bucket name and object key name), the resulting
  * in-application table name that is created, and the necessary schema to map the data elements in
  * the Amazon S3 object to the in-application table.
  */

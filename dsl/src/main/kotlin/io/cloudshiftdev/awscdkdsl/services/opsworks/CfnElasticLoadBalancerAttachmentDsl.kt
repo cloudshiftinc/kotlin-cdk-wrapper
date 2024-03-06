@@ -17,7 +17,7 @@ import software.amazon.awscdk.services.opsworks.CfnElasticLoadBalancerAttachment
 import software.constructs.Construct
 
 /**
- * Attaches an Elastic Load Balancing load balancer to an AWS OpsWorks layer that you specify.
+ * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-elbattachment.html.
  *
  * Example:
  * ```

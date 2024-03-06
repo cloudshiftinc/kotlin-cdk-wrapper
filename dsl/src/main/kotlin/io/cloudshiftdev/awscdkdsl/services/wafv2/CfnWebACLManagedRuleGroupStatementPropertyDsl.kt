@@ -26,7 +26,9 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
  * retrieve the required names through the API call `ListAvailableManagedRuleGroups` .
  *
  * You cannot nest a `ManagedRuleGroupStatement` , for example for use inside a `NotStatement` or
- * `OrStatement` . It can only be referenced as a top-level statement within a rule.
+ * `OrStatement` . You cannot use a managed rule group statement inside another rule group. You can
+ * only use a managed rule group statement as a top-level statement in a rule that you define in a
+ * web ACL.
  *
  * You are charged additional fees when you use the AWS WAF Bot Control managed rule group
  * `AWSManagedRulesBotControlRuleSet` , the AWS WAF Fraud Control account takeover prevention (ATP)

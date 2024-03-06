@@ -16,7 +16,8 @@ import kotlin.String
 import software.amazon.awscdk.services.rds.CfnDBInstance
 
 /**
- * Describes an AWS Identity and Access Management (IAM) role that is associated with a DB instance.
+ * Information about an AWS Identity and Access Management (IAM) role that is associated with a DB
+ * instance.
  *
  * Example:
  * ```

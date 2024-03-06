@@ -38,6 +38,7 @@ import software.amazon.awscdk.cloudassembly.schema.DockerImageSource
  * .region("region")
  * .build()))
  * .source(DockerImageSource.builder()
+ * .cacheDisabled(false)
  * .cacheFrom(List.of(DockerCacheOption.builder()
  * .type("type")
  * // the properties below are optional

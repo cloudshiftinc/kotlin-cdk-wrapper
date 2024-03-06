@@ -28,6 +28,7 @@ import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.logs.RetentionDays
+import software.amazon.awscdk.services.rds.CaCertificate
 import software.amazon.awscdk.services.rds.DatabaseInstanceReadReplica
 import software.amazon.awscdk.services.rds.IDatabaseInstance
 import software.amazon.awscdk.services.rds.IOptionGroup
@@ -78,6 +79,17 @@ public class DatabaseInstanceReadReplicaDsl(
     private val _securityGroups: MutableList<ISecurityGroup> = mutableListOf()
 
     /**
+     * The allocated storage size, specified in gibibytes (GiB).
+     *
+     * Default: - The replica will inherit the allocated storage of the source database instance
+     *
+     * @param allocatedStorage The allocated storage size, specified in gibibytes (GiB).
+     */
+    public fun allocatedStorage(allocatedStorage: Number) {
+        cdkBuilder.allocatedStorage(allocatedStorage)
+    }
+
+    /**
      * Indicates that minor engine upgrades are applied automatically to the DB instance during the
      * maintenance window.
      *
@@ -115,6 +127,23 @@ public class DatabaseInstanceReadReplicaDsl(
      */
     public fun backupRetention(backupRetention: Duration) {
         cdkBuilder.backupRetention(backupRetention)
+    }
+
+    /**
+     * The identifier of the CA certificate for this DB instance.
+     *
+     * Specifying or updating this property triggers a reboot.
+     *
+     * For RDS DB engines:
+     *
+     * Default: - RDS will choose a certificate authority
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.SSL-certificate-rotation.html)
+     *
+     * @param caCertificate The identifier of the CA certificate for this DB instance.
+     */
+    public fun caCertificate(caCertificate: CaCertificate) {
+        cdkBuilder.caCertificate(caCertificate)
     }
 
     /**
@@ -185,7 +214,7 @@ public class DatabaseInstanceReadReplicaDsl(
      * Indicates whether automated backups should be deleted or retained when you delete a DB
      * instance.
      *
-     * Default: false
+     * Default: true
      *
      * @param deleteAutomatedBackups Indicates whether automated backups should be deleted or
      *   retained when you delete a DB instance.
@@ -233,7 +262,7 @@ public class DatabaseInstanceReadReplicaDsl(
     /**
      * Whether to enable Performance Insights for the DB instance.
      *
-     * Default: - false, unless ``performanceInsightRentention`` or
+     * Default: - false, unless ``performanceInsightRetention`` or
      * ``performanceInsightEncryptionKey`` is set.
      *
      * @param enablePerformanceInsights Whether to enable Performance Insights for the DB instance.
@@ -478,7 +507,11 @@ public class DatabaseInstanceReadReplicaDsl(
     /**
      * Indicates whether the DB instance is an internet-facing instance.
      *
-     * Default: - `true` if `vpcSubnets` is `subnetType: SubnetType.PUBLIC`, `false` otherwise
+     * If not specified, the instance's vpcSubnets will be used to determine if the instance is
+     * internet-facing or not.
+     *
+     * Default: - `true` if the instance's `vpcSubnets` is `subnetType: SubnetType.PUBLIC`, `false`
+     * otherwise
      *
      * @param publiclyAccessible Indicates whether the DB instance is an internet-facing instance.
      */

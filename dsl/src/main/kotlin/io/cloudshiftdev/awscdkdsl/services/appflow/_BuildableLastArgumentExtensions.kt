@@ -34,7 +34,7 @@ public inline fun CfnConnectorProfile.setConnectorProfileConfig(
     return setConnectorProfileConfig(builder.build())
 }
 
-/** Configurations of metadata catalog of the flow. */
+/** Specifies the configuration that Amazon AppFlow uses when it catalogs your data. */
 public inline fun CfnFlow.setMetadataCatalogConfig(
     block: CfnFlowMetadataCatalogConfigPropertyDsl.() -> Unit = {}
 ) {

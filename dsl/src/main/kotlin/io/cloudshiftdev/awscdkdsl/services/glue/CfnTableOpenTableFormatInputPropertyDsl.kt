@@ -16,6 +16,8 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnTable
 
 /**
+ * Specifies an `OpenTableFormatInput` structure when creating an open format table.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -37,12 +39,18 @@ public class CfnTableOpenTableFormatInputPropertyDsl {
     private val cdkBuilder: CfnTable.OpenTableFormatInputProperty.Builder =
         CfnTable.OpenTableFormatInputProperty.builder()
 
-    /** @param icebergInput the value to be set. */
+    /**
+     * @param icebergInput Specifies an `IcebergInput` structure that defines an Apache Iceberg
+     *   metadata table.
+     */
     public fun icebergInput(icebergInput: IResolvable) {
         cdkBuilder.icebergInput(icebergInput)
     }
 
-    /** @param icebergInput the value to be set. */
+    /**
+     * @param icebergInput Specifies an `IcebergInput` structure that defines an Apache Iceberg
+     *   metadata table.
+     */
     public fun icebergInput(icebergInput: CfnTable.IcebergInputProperty) {
         cdkBuilder.icebergInput(icebergInput)
     }

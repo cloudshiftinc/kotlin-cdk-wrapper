@@ -22,6 +22,8 @@ import software.amazon.awscdk.services.eks.AwsAuth
 import software.amazon.awscdk.services.eks.AwsAuthMapping
 import software.amazon.awscdk.services.eks.AwsAuthProps
 import software.amazon.awscdk.services.eks.BootstrapOptions
+import software.amazon.awscdk.services.eks.CfnAccessEntry
+import software.amazon.awscdk.services.eks.CfnAccessEntryProps
 import software.amazon.awscdk.services.eks.CfnAddon
 import software.amazon.awscdk.services.eks.CfnAddonProps
 import software.amazon.awscdk.services.eks.CfnCluster
@@ -32,6 +34,8 @@ import software.amazon.awscdk.services.eks.CfnIdentityProviderConfig
 import software.amazon.awscdk.services.eks.CfnIdentityProviderConfigProps
 import software.amazon.awscdk.services.eks.CfnNodegroup
 import software.amazon.awscdk.services.eks.CfnNodegroupProps
+import software.amazon.awscdk.services.eks.CfnPodIdentityAssociation
+import software.amazon.awscdk.services.eks.CfnPodIdentityAssociationProps
 import software.amazon.awscdk.services.eks.Cluster
 import software.amazon.awscdk.services.eks.ClusterAttributes
 import software.amazon.awscdk.services.eks.ClusterOptions
@@ -115,9 +119,9 @@ public object eks {
      * Example:
      * ```
      * Cluster.Builder.create(this, "HelloEKS")
-     * .version(KubernetesVersion.V1_21)
+     * .version(KubernetesVersion.V1_29)
      * .albController(AlbControllerOptions.builder()
-     * .version(AlbControllerVersion.V2_4_1)
+     * .version(AlbControllerVersion.V2_6_2)
      * .build())
      * .build();
      * ```
@@ -286,6 +290,164 @@ public object eks {
     }
 
     /**
+     * Creates an access entry.
+     *
+     * An access entry allows an IAM principal to access your cluster. Access entries can replace
+     * the need to maintain entries in the `aws-auth` `ConfigMap` for authentication. You have the
+     * following options for authorizing an IAM principal to access Kubernetes objects on your
+     * cluster: Kubernetes role-based access control (RBAC), Amazon EKS, or both. Kubernetes RBAC
+     * authorization requires you to create and manage Kubernetes `Role` , `ClusterRole` ,
+     * `RoleBinding` , and `ClusterRoleBinding` objects, in addition to managing access entries. If
+     * you use Amazon EKS authorization exclusively, you don't need to create and manage Kubernetes
+     * `Role` , `ClusterRole` , `RoleBinding` , and `ClusterRoleBinding` objects.
+     *
+     * For more information about access entries, see
+     * [Access entries](https://docs.aws.amazon.com/eks/latest/userguide/access-entries.html) in the
+     * *Amazon EKS User Guide* .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.eks.*;
+     * CfnAccessEntry cfnAccessEntry = CfnAccessEntry.Builder.create(this, "MyCfnAccessEntry")
+     * .clusterName("clusterName")
+     * .principalArn("principalArn")
+     * // the properties below are optional
+     * .accessPolicies(List.of(AccessPolicyProperty.builder()
+     * .accessScope(AccessScopeProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .namespaces(List.of("namespaces"))
+     * .build())
+     * .policyArn("policyArn")
+     * .build()))
+     * .kubernetesGroups(List.of("kubernetesGroups"))
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .type("type")
+     * .username("username")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-accessentry.html)
+     */
+    public inline fun cfnAccessEntry(
+        scope: Construct,
+        id: String,
+        block: CfnAccessEntryDsl.() -> Unit = {},
+    ): CfnAccessEntry {
+        val builder = CfnAccessEntryDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * An access policy includes permissions that allow Amazon EKS to authorize an IAM principal to
+     * work with Kubernetes objects on your cluster.
+     *
+     * The policies are managed by Amazon EKS, but they're not IAM policies. You can't view the
+     * permissions in the policies using the API. The permissions for many of the policies are
+     * similar to the Kubernetes `cluster-admin` , `admin` , `edit` , and `view` cluster roles. For
+     * more information about these cluster roles, see
+     * [User-facing roles](https://docs.aws.amazon.com/https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles)
+     * in the Kubernetes documentation. To view the contents of the policies, see
+     * [Access policy permissions](https://docs.aws.amazon.com/eks/latest/userguide/access-policies.html#access-policy-permissions)
+     * in the *Amazon EKS User Guide* .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.eks.*;
+     * AccessPolicyProperty accessPolicyProperty = AccessPolicyProperty.builder()
+     * .accessScope(AccessScopeProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .namespaces(List.of("namespaces"))
+     * .build())
+     * .policyArn("policyArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-accessentry-accesspolicy.html)
+     */
+    public inline fun cfnAccessEntryAccessPolicyProperty(
+        block: CfnAccessEntryAccessPolicyPropertyDsl.() -> Unit = {}
+    ): CfnAccessEntry.AccessPolicyProperty {
+        val builder = CfnAccessEntryAccessPolicyPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The scope of an `AccessPolicy` that's associated to an `AccessEntry` .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.eks.*;
+     * AccessScopeProperty accessScopeProperty = AccessScopeProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .namespaces(List.of("namespaces"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-accessentry-accessscope.html)
+     */
+    public inline fun cfnAccessEntryAccessScopeProperty(
+        block: CfnAccessEntryAccessScopePropertyDsl.() -> Unit = {}
+    ): CfnAccessEntry.AccessScopeProperty {
+        val builder = CfnAccessEntryAccessScopePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnAccessEntry`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.eks.*;
+     * CfnAccessEntryProps cfnAccessEntryProps = CfnAccessEntryProps.builder()
+     * .clusterName("clusterName")
+     * .principalArn("principalArn")
+     * // the properties below are optional
+     * .accessPolicies(List.of(AccessPolicyProperty.builder()
+     * .accessScope(AccessScopeProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .namespaces(List.of("namespaces"))
+     * .build())
+     * .policyArn("policyArn")
+     * .build()))
+     * .kubernetesGroups(List.of("kubernetesGroups"))
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .type("type")
+     * .username("username")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-accessentry.html)
+     */
+    public inline fun cfnAccessEntryProps(
+        block: CfnAccessEntryPropsDsl.() -> Unit = {}
+    ): CfnAccessEntryProps {
+        val builder = CfnAccessEntryPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Creates an Amazon EKS add-on.
      *
      * Amazon EKS add-ons help to automate the provisioning and lifecycle management of common
@@ -375,10 +537,26 @@ public object eks {
      * Amazon EKS nodes run in your AWS account and connect to your cluster's control plane over the
      * Kubernetes API server endpoint and a certificate file that is created for your cluster.
      *
+     * You can use the `endpointPublicAccess` and `endpointPrivateAccess` parameters to enable or
+     * disable public and private access to your cluster's Kubernetes API server endpoint. By
+     * default, public access is enabled, and private access is disabled. For more information, see
+     * [Amazon EKS Cluster Endpoint Access Control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html)
+     * in the **Amazon EKS User Guide** .
+     *
+     * You can use the `logging` parameter to enable or disable exporting the Kubernetes control
+     * plane logs for your cluster to CloudWatch Logs. By default, cluster control plane logs aren't
+     * exported to CloudWatch Logs. For more information, see
+     * [Amazon EKS Cluster Control Plane Logs](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html)
+     * in the **Amazon EKS User Guide** .
+     *
+     * CloudWatch Logs ingestion, archive storage, and data scanning rates apply to exported control
+     * plane logs. For more information, see
+     * [CloudWatch Pricing](https://docs.aws.amazon.com/cloudwatch/pricing/) .
+     *
      * In most cases, it takes several minutes to create a cluster. After you create an Amazon EKS
      * cluster, you must configure your Kubernetes tooling to communicate with the API server and
      * launch nodes into your cluster. For more information, see
-     * [Managing Cluster Authentication](https://docs.aws.amazon.com/eks/latest/userguide/managing-auth.html)
+     * [Allowing users to access your cluster](https://docs.aws.amazon.com/eks/latest/userguide/cluster-auth.html)
      * and
      * [Launching Amazon EKS nodes](https://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html)
      * in the *Amazon EKS User Guide* .
@@ -399,6 +577,10 @@ public object eks {
      * .build())
      * .roleArn("roleArn")
      * // the properties below are optional
+     * .accessConfig(AccessConfigProperty.builder()
+     * .authenticationMode("authenticationMode")
+     * .bootstrapClusterCreatorAdminPermissions(false)
+     * .build())
      * .encryptionConfig(List.of(EncryptionConfigProperty.builder()
      * .provider(ProviderProperty.builder()
      * .keyArn("keyArn")
@@ -442,6 +624,30 @@ public object eks {
         block: CfnClusterDsl.() -> Unit = {},
     ): CfnCluster {
         val builder = CfnClusterDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The access configuration for the cluster.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.eks.*;
+     * AccessConfigProperty accessConfigProperty = AccessConfigProperty.builder()
+     * .authenticationMode("authenticationMode")
+     * .bootstrapClusterCreatorAdminPermissions(false)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-accessconfig.html)
+     */
+    public inline fun cfnClusterAccessConfigProperty(
+        block: CfnClusterAccessConfigPropertyDsl.() -> Unit = {}
+    ): CfnCluster.AccessConfigProperty {
+        val builder = CfnClusterAccessConfigPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -672,6 +878,10 @@ public object eks {
      * .build())
      * .roleArn("roleArn")
      * // the properties below are optional
+     * .accessConfig(AccessConfigProperty.builder()
+     * .authenticationMode("authenticationMode")
+     * .bootstrapClusterCreatorAdminPermissions(false)
+     * .build())
      * .encryptionConfig(List.of(EncryptionConfigProperty.builder()
      * .provider(ProviderProperty.builder()
      * .keyArn("keyArn")
@@ -802,7 +1012,7 @@ public object eks {
      * Fargate profile to finish deleting before you can create any other profiles in that cluster.
      *
      * For more information, see
-     * [AWS Fargate Profile](https://docs.aws.amazon.com/eks/latest/userguide/fargate-profile.html)
+     * [AWS Fargate profile](https://docs.aws.amazon.com/eks/latest/userguide/fargate-profile.html)
      * in the *Amazon EKS User Guide* .
      *
      * Example:
@@ -936,13 +1146,13 @@ public object eks {
     }
 
     /**
-     * Associate an identity provider configuration to a cluster.
+     * Associates an identity provider configuration to a cluster.
      *
      * If you want to authenticate identities using an identity provider, you can create an identity
      * provider configuration and associate it to your cluster. After configuring authentication to
-     * your cluster you can create Kubernetes `roles` and `clusterroles` to assign permissions to
-     * the roles, and then bind the roles to the identities using Kubernetes `rolebindings` and
-     * `clusterrolebindings` . For more information see
+     * your cluster you can create Kubernetes `Role` and `ClusterRole` objects, assign permissions
+     * to them, and then bind them to the identities using Kubernetes `RoleBinding` and
+     * `ClusterRoleBinding` objects. For more information see
      * [Using RBAC Authorization](https://docs.aws.amazon.com/https://kubernetes.io/docs/reference/access-authn-authz/rbac/)
      * in the Kubernetes documentation.
      *
@@ -1097,14 +1307,19 @@ public object eks {
      * Creates a managed node group for an Amazon EKS cluster.
      *
      * You can only create a node group for your cluster that is equal to the current Kubernetes
-     * version for the cluster.
+     * version for the cluster. All node groups are created with the latest AMI release version for
+     * the respective minor Kubernetes version of the cluster, unless you deploy a custom AMI using
+     * a launch template. For more information about using launch templates, see
+     * [Launch template support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html)
+     * .
      *
      * An Amazon EKS managed node group is an Amazon EC2 Auto Scaling group and associated Amazon
      * EC2 instances that are managed by AWS for an Amazon EKS cluster. For more information, see
      * [Managed node groups](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html)
      * in the *Amazon EKS User Guide* .
      *
-     * Windows AMI types are only supported for commercial Regions that support Windows Amazon EKS.
+     * Windows AMI types are only supported for commercial AWS Regions that support Windows on
+     * Amazon EKS.
      *
      * Example:
      * ```
@@ -1331,11 +1546,11 @@ public object eks {
     }
 
     /**
-     * A property that allows a node to repel a set of pods.
+     * A property that allows a node to repel a `Pod` .
      *
      * For more information, see
      * [Node taints on managed node groups](https://docs.aws.amazon.com/eks/latest/userguide/node-taints-managed-node-groups.html)
-     * .
+     * in the *Amazon EKS User Guide* .
      *
      * Example:
      * ```
@@ -1384,6 +1599,74 @@ public object eks {
     }
 
     /**
+     * Amazon EKS Pod Identity associations provide the ability to manage credentials for your
+     * applications, similar to the way that Amazon EC2 instance profiles provide credentials to
+     * Amazon EC2 instances.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.eks.*;
+     * CfnPodIdentityAssociation cfnPodIdentityAssociation =
+     * CfnPodIdentityAssociation.Builder.create(this, "MyCfnPodIdentityAssociation")
+     * .clusterName("clusterName")
+     * .namespace("namespace")
+     * .roleArn("roleArn")
+     * .serviceAccount("serviceAccount")
+     * // the properties below are optional
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-podidentityassociation.html)
+     */
+    public inline fun cfnPodIdentityAssociation(
+        scope: Construct,
+        id: String,
+        block: CfnPodIdentityAssociationDsl.() -> Unit = {},
+    ): CfnPodIdentityAssociation {
+        val builder = CfnPodIdentityAssociationDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnPodIdentityAssociation`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.eks.*;
+     * CfnPodIdentityAssociationProps cfnPodIdentityAssociationProps =
+     * CfnPodIdentityAssociationProps.builder()
+     * .clusterName("clusterName")
+     * .namespace("namespace")
+     * .roleArn("roleArn")
+     * .serviceAccount("serviceAccount")
+     * // the properties below are optional
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-podidentityassociation.html)
+     */
+    public inline fun cfnPodIdentityAssociationProps(
+        block: CfnPodIdentityAssociationPropsDsl.() -> Unit = {}
+    ): CfnPodIdentityAssociationProps {
+        val builder = CfnPodIdentityAssociationPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * A Cluster represents a managed Kubernetes Service (EKS).
      *
      * This is a fully managed cluster of API Servers (control-plane) The user is still required to
@@ -1392,7 +1675,7 @@ public object eks {
      * Example:
      * ```
      * Cluster cluster = Cluster.Builder.create(this, "HelloEKS")
-     * .version(KubernetesVersion.V1_27)
+     * .version(KubernetesVersion.V1_29)
      * .defaultCapacity(0)
      * .build();
      * cluster.addNodegroupCapacity("custom-node-group", NodegroupOptions.builder()
@@ -1519,7 +1802,7 @@ public object eks {
      * Example:
      * ```
      * Cluster cluster = Cluster.Builder.create(this, "HelloEKS")
-     * .version(KubernetesVersion.V1_27)
+     * .version(KubernetesVersion.V1_29)
      * .defaultCapacity(0)
      * .build();
      * cluster.addNodegroupCapacity("custom-node-group", NodegroupOptions.builder()
@@ -1635,7 +1918,7 @@ public object eks {
      * Example:
      * ```
      * FargateCluster cluster = FargateCluster.Builder.create(this, "MyCluster")
-     * .version(KubernetesVersion.V1_27)
+     * .version(KubernetesVersion.V1_29)
      * .build();
      * ```
      */
@@ -1655,7 +1938,7 @@ public object eks {
      * Example:
      * ```
      * FargateCluster cluster = FargateCluster.Builder.create(this, "MyCluster")
-     * .version(KubernetesVersion.V1_27)
+     * .version(KubernetesVersion.V1_29)
      * .build();
      * ```
      */
@@ -2049,7 +2332,7 @@ public object eks {
      * Function proxyFunction = Function.Builder.create(this, "ProxyFunction")
      * .handler("index.handler")
      * .code(Code.fromInline("my-code"))
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .environment(Map.of(
      * "myServiceAddress", myServiceAddress.getValue()))
      * .build();
@@ -2083,7 +2366,7 @@ public object eks {
      * Function proxyFunction = Function.Builder.create(this, "ProxyFunction")
      * .handler("index.handler")
      * .code(Code.fromInline("my-code"))
-     * .runtime(Runtime.NODEJS_14_X)
+     * .runtime(Runtime.NODEJS_LATEST)
      * .environment(Map.of(
      * "myServiceAddress", myServiceAddress.getValue()))
      * .build();
@@ -2210,6 +2493,8 @@ public object eks {
      * .version("version")
      * .build())
      * .maxSize(123)
+     * .maxUnavailable(123)
+     * .maxUnavailablePercentage(123)
      * .minSize(123)
      * .nodegroupName("nodegroupName")
      * .nodeRole(role)
@@ -2252,15 +2537,14 @@ public object eks {
      *
      * Example:
      * ```
-     * Cluster cluster = Cluster.Builder.create(this, "HelloEKS")
-     * .version(KubernetesVersion.V1_27)
-     * .defaultCapacity(0)
-     * .build();
-     * cluster.addNodegroupCapacity("custom-node-group", NodegroupOptions.builder()
-     * .instanceTypes(List.of(new InstanceType("m5.large")))
-     * .minSize(4)
-     * .diskSize(100)
-     * .amiType(NodegroupAmiType.AL2_X86_64_GPU)
+     * Cluster cluster;
+     * cluster.addNodegroupCapacity("extra-ng-spot", NodegroupOptions.builder()
+     * .instanceTypes(List.of(
+     * new InstanceType("c5.large"),
+     * new InstanceType("c5a.large"),
+     * new InstanceType("c5d.large")))
+     * .minSize(3)
+     * .capacityType(CapacityType.SPOT)
      * .build());
      * ```
      */
@@ -2305,6 +2589,8 @@ public object eks {
      * .version("version")
      * .build())
      * .maxSize(123)
+     * .maxUnavailable(123)
+     * .maxUnavailablePercentage(123)
      * .minSize(123)
      * .nodegroupName("nodegroupName")
      * .nodeRole(role)

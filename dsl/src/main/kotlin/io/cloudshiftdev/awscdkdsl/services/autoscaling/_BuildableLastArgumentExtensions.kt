@@ -200,6 +200,15 @@ public inline fun AutoScalingGroup.scaleToTrackMetric(
     return scaleToTrackMetric(id, builder.build())
 }
 
+/** An instance maintenance policy. */
+public inline fun CfnAutoScalingGroup.setInstanceMaintenancePolicy(
+    block: CfnAutoScalingGroupInstanceMaintenancePolicyPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnAutoScalingGroupInstanceMaintenancePolicyPropertyDsl()
+    builder.apply(block)
+    return setInstanceMaintenancePolicy(builder.build())
+}
+
 /** Information used to specify the launch template and version to use to launch instances. */
 public inline fun CfnAutoScalingGroup.setLaunchTemplate(
     block: CfnAutoScalingGroupLaunchTemplateSpecificationPropertyDsl.() -> Unit = {}
@@ -216,6 +225,15 @@ public inline fun CfnAutoScalingGroup.setMixedInstancesPolicy(
     val builder = CfnAutoScalingGroupMixedInstancesPolicyPropertyDsl()
     builder.apply(block)
     return setMixedInstancesPolicy(builder.build())
+}
+
+/** @deprecated this property has been deprecated */
+public inline fun CfnAutoScalingGroup.setNotificationConfiguration(
+    block: CfnAutoScalingGroupNotificationConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnAutoScalingGroupNotificationConfigurationPropertyDsl()
+    builder.apply(block)
+    return setNotificationConfiguration(builder.build())
 }
 
 /** The metadata options for the instances. */

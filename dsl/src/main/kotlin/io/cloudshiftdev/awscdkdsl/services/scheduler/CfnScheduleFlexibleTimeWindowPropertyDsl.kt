@@ -49,8 +49,10 @@ public class CfnScheduleFlexibleTimeWindowPropertyDsl {
     }
 
     /**
-     * @param mode Determines whether the schedule is invoked within a flexible time window.
-     *   *Allowed Values* : `OFF` | `FLEXIBLE`
+     * @param mode Determines whether the schedule is invoked within a flexible time window. You
+     *   must use quotation marks when you specify this value in your JSON or YAML template.
+     *
+     * *Allowed Values* : `"OFF"` | `"FLEXIBLE"`
      */
     public fun mode(mode: String) {
         cdkBuilder.mode(mode)

@@ -67,6 +67,12 @@ import software.constructs.Construct
  * [Managing Your Costs with Budgets](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/budgets-managing-costs.html)
  * .
  *
+ * As an aid to help you jumpstart developing CloudFormation templates, the EventBridge console
+ * enables you to create templates from the existing rules in your account. For more information,
+ * see
+ * [Generating CloudFormation templates from an EventBridge rule](https://docs.aws.amazon.com/eventbridge/latest/userguide/rule-generate-template.html)
+ * in the *Amazon EventBridge User Guide* .
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -85,6 +91,9 @@ import software.constructs.Construct
  * .arn("arn")
  * .id("id")
  * // the properties below are optional
+ * .appSyncParameters(AppSyncParametersProperty.builder()
+ * .graphQlOperation("graphQlOperation")
+ * .build())
  * .batchParameters(BatchParametersProperty.builder()
  * .jobDefinition("jobDefinition")
  * .jobName("jobName")
@@ -161,6 +170,7 @@ import software.constructs.Construct
  * .dbUser("dbUser")
  * .secretManagerArn("secretManagerArn")
  * .sql("sql")
+ * .sqls(List.of("sqls"))
  * .statementName("statementName")
  * .withEvent(false)
  * .build())
@@ -299,6 +309,29 @@ public class CfnRuleDsl(
 
     /**
      * The state of the rule.
+     *
+     * Valid values include:
+     * * `DISABLED` : The rule is disabled. EventBridge does not match any events against the rule.
+     * * `ENABLED` : The rule is enabled. EventBridge matches events against the rule, *except* for
+     *   AWS management events delivered through CloudTrail.
+     * * `ENABLED_WITH_ALL_CLOUDTRAIL_MANAGEMENT_EVENTS` : The rule is enabled for all events,
+     *   including AWS management events delivered through CloudTrail.
+     *
+     * Management events provide visibility into management operations that are performed on
+     * resources in your AWS account. These are also known as control plane operations. For more
+     * information, see
+     * [Logging management events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html#logging-management-events)
+     * in the *CloudTrail User Guide* , and
+     * [Filtering management events from AWS services](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-service-event.html#eb-service-event-cloudtrail)
+     * in the *Amazon EventBridge User Guide* .
+     *
+     * This value is only valid for rules on the
+     * [default](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is-how-it-works-concepts.html#eb-bus-concepts-buses)
+     * event bus or
+     * [custom event buses](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-create-event-bus.html)
+     * . It does not apply to
+     * [partner event buses](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-saas.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html#cfn-events-rule-state)
      *

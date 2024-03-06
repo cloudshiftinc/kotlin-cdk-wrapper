@@ -14,6 +14,7 @@ package io.cloudshiftdev.awscdkdsl.services.applicationautoscaling
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import java.time.Instant
 import kotlin.Number
+import software.amazon.awscdk.TimeZone
 import software.amazon.awscdk.services.applicationautoscaling.ScalingSchedule
 import software.amazon.awscdk.services.applicationautoscaling.Schedule
 
@@ -86,6 +87,14 @@ public class ScalingScheduleDsl {
     /** @param startTime When this scheduled action becomes active. */
     public fun startTime(startTime: Instant) {
         cdkBuilder.startTime(startTime)
+    }
+
+    /**
+     * @param timeZone The time zone used when referring to the date and time of a scheduled action,
+     *   when the scheduled action uses an at or cron expression.
+     */
+    public fun timeZone(timeZone: TimeZone) {
+        cdkBuilder.timeZone(timeZone)
     }
 
     public fun build(): ScalingSchedule = cdkBuilder.build()

@@ -17,6 +17,8 @@ import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
 /**
+ * The lookback window setup of an incremental refresh configuration.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -36,17 +38,20 @@ public class CfnDataSetLookbackWindowPropertyDsl {
     private val cdkBuilder: CfnDataSet.LookbackWindowProperty.Builder =
         CfnDataSet.LookbackWindowProperty.builder()
 
-    /** @param columnName Column Name</p>. */
+    /** @param columnName The name of the lookback window column. */
     public fun columnName(columnName: String) {
         cdkBuilder.columnName(columnName)
     }
 
-    /** @param size Size</p>. */
+    /** @param size The lookback window column size. */
     public fun size(size: Number) {
         cdkBuilder.size(size)
     }
 
-    /** @param sizeUnit the value to be set. */
+    /**
+     * @param sizeUnit The size unit that is used for the lookback window column. Valid values for
+     *   this structure are `HOUR` , `DAY` , and `WEEK` .
+     */
     public fun sizeUnit(sizeUnit: String) {
         cdkBuilder.sizeUnit(sizeUnit)
     }

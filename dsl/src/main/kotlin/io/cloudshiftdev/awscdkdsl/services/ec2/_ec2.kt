@@ -20,6 +20,8 @@ import software.amazon.awscdk.services.ec2.AclPortRange
 import software.amazon.awscdk.services.ec2.AclTrafficConfig
 import software.amazon.awscdk.services.ec2.AddRouteOptions
 import software.amazon.awscdk.services.ec2.AllocateCidrRequest
+import software.amazon.awscdk.services.ec2.AllocateIpv6CidrRequest
+import software.amazon.awscdk.services.ec2.AllocateVpcIpv6CidrRequest
 import software.amazon.awscdk.services.ec2.AllocatedSubnet
 import software.amazon.awscdk.services.ec2.AmazonLinux2022ImageSsmParameter
 import software.amazon.awscdk.services.ec2.AmazonLinux2022ImageSsmParameterProps
@@ -87,6 +89,8 @@ import software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscoveryProps
 import software.amazon.awscdk.services.ec2.CfnIPAMScope
 import software.amazon.awscdk.services.ec2.CfnIPAMScopeProps
 import software.amazon.awscdk.services.ec2.CfnInstance
+import software.amazon.awscdk.services.ec2.CfnInstanceConnectEndpoint
+import software.amazon.awscdk.services.ec2.CfnInstanceConnectEndpointProps
 import software.amazon.awscdk.services.ec2.CfnInstanceProps
 import software.amazon.awscdk.services.ec2.CfnInternetGateway
 import software.amazon.awscdk.services.ec2.CfnInternetGatewayProps
@@ -138,6 +142,8 @@ import software.amazon.awscdk.services.ec2.CfnSecurityGroupEgressProps
 import software.amazon.awscdk.services.ec2.CfnSecurityGroupIngress
 import software.amazon.awscdk.services.ec2.CfnSecurityGroupIngressProps
 import software.amazon.awscdk.services.ec2.CfnSecurityGroupProps
+import software.amazon.awscdk.services.ec2.CfnSnapshotBlockPublicAccess
+import software.amazon.awscdk.services.ec2.CfnSnapshotBlockPublicAccessProps
 import software.amazon.awscdk.services.ec2.CfnSpotFleet
 import software.amazon.awscdk.services.ec2.CfnSpotFleetProps
 import software.amazon.awscdk.services.ec2.CfnSubnet
@@ -236,6 +242,7 @@ import software.amazon.awscdk.services.ec2.ConfigureNatOptions
 import software.amazon.awscdk.services.ec2.ConnectionRule
 import software.amazon.awscdk.services.ec2.Connections
 import software.amazon.awscdk.services.ec2.ConnectionsProps
+import software.amazon.awscdk.services.ec2.CreateIpv6CidrBlocksRequest
 import software.amazon.awscdk.services.ec2.DestinationOptions
 import software.amazon.awscdk.services.ec2.EbsDeviceOptions
 import software.amazon.awscdk.services.ec2.EbsDeviceOptionsBase
@@ -270,6 +277,9 @@ import software.amazon.awscdk.services.ec2.InterfaceVpcEndpoint
 import software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAttributes
 import software.amazon.awscdk.services.ec2.InterfaceVpcEndpointOptions
 import software.amazon.awscdk.services.ec2.InterfaceVpcEndpointProps
+import software.amazon.awscdk.services.ec2.KeyPair
+import software.amazon.awscdk.services.ec2.KeyPairAttributes
+import software.amazon.awscdk.services.ec2.KeyPairProps
 import software.amazon.awscdk.services.ec2.LaunchTemplate
 import software.amazon.awscdk.services.ec2.LaunchTemplateAttributes
 import software.amazon.awscdk.services.ec2.LaunchTemplateProps
@@ -466,7 +476,7 @@ public object ec2 {
     }
 
     /**
-     * Request for subnets Cidr to be allocated for a Vpc.
+     * Request for subnets CIDR to be allocated for a Vpc.
      *
      * Example:
      * ```
@@ -481,6 +491,7 @@ public object ec2 {
      * .subnetType(SubnetType.PRIVATE_ISOLATED)
      * // the properties below are optional
      * .cidrMask(123)
+     * .ipv6AssignAddressOnCreation(false)
      * .mapPublicIpOnLaunch(false)
      * .reserved(false)
      * .build())
@@ -499,7 +510,57 @@ public object ec2 {
     }
 
     /**
-     * Cidr Allocated Subnet.
+     * Request for subnet IPv6 CIDRs to be allocated for a VPC.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ec2.*;
+     * AllocateIpv6CidrRequest allocateIpv6CidrRequest = AllocateIpv6CidrRequest.builder()
+     * .allocatedSubnets(List.of(AllocatedSubnet.builder()
+     * .cidr("cidr")
+     * // the properties below are optional
+     * .ipv6Cidr("ipv6Cidr")
+     * .build()))
+     * .ipv6Cidrs(List.of("ipv6Cidrs"))
+     * .build();
+     * ```
+     */
+    public inline fun allocateIpv6CidrRequest(
+        block: AllocateIpv6CidrRequestDsl.() -> Unit = {}
+    ): AllocateIpv6CidrRequest {
+        val builder = AllocateIpv6CidrRequestDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Request for allocation of the VPC IPv6 CIDR.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ec2.*;
+     * import software.constructs.*;
+     * Construct construct;
+     * AllocateVpcIpv6CidrRequest allocateVpcIpv6CidrRequest = AllocateVpcIpv6CidrRequest.builder()
+     * .scope(construct)
+     * .vpcId("vpcId")
+     * .build();
+     * ```
+     */
+    public inline fun allocateVpcIpv6CidrRequest(
+        block: AllocateVpcIpv6CidrRequestDsl.() -> Unit = {}
+    ): AllocateVpcIpv6CidrRequest {
+        val builder = AllocateVpcIpv6CidrRequestDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * CIDR Allocated Subnet.
      *
      * Example:
      * ```
@@ -508,6 +569,8 @@ public object ec2 {
      * import software.amazon.awscdk.services.ec2.*;
      * AllocatedSubnet allocatedSubnet = AllocatedSubnet.builder()
      * .cidr("cidr")
+     * // the properties below are optional
+     * .ipv6Cidr("ipv6Cidr")
      * .build();
      * ```
      */
@@ -725,30 +788,18 @@ public object ec2 {
      *
      * Example:
      * ```
-     * ISecurityGroup sg = SecurityGroup.fromSecurityGroupId(this, "FsxSecurityGroup",
-     * "{SECURITY-GROUP-ID}");
-     * IFileSystem fs = LustreFileSystem.fromLustreFileSystemAttributes(this, "FsxLustreFileSystem",
-     * FileSystemAttributes.builder()
-     * .dnsName("{FILE-SYSTEM-DNS-NAME}")
-     * .fileSystemId("{FILE-SYSTEM-ID}")
-     * .securityGroup(sg)
-     * .build());
-     * IVpc vpc = Vpc.fromVpcAttributes(this, "Vpc", VpcAttributes.builder()
-     * .availabilityZones(List.of("us-west-2a", "us-west-2b"))
-     * .publicSubnetIds(List.of("{US-WEST-2A-SUBNET-ID}", "{US-WEST-2B-SUBNET-ID}"))
-     * .vpcId("{VPC-ID}")
-     * .build());
-     * Instance inst = Instance.Builder.create(this, "inst")
-     * .instanceType(InstanceType.of(InstanceClass.T2, InstanceSize.LARGE))
-     * .machineImage(AmazonLinuxImage.Builder.create()
-     * .generation(AmazonLinuxGeneration.AMAZON_LINUX_2)
-     * .build())
+     * IVpc vpc;
+     * LoadBalancer lb = LoadBalancer.Builder.create(this, "LB")
      * .vpc(vpc)
-     * .vpcSubnets(SubnetSelection.builder()
-     * .subnetType(SubnetType.PUBLIC)
-     * .build())
+     * .internetFacing(true)
      * .build();
-     * fs.connections.allowDefaultPortFrom(inst);
+     * // instance to add as the target for load balancer.
+     * Instance instance = Instance.Builder.create(this, "targetInstance")
+     * .vpc(vpc)
+     * .instanceType(InstanceType.of(InstanceClass.BURSTABLE2, InstanceSize.MICRO))
+     * .machineImage(AmazonLinuxImage.Builder.create().generation(AmazonLinuxGeneration.AMAZON_LINUX_2).build())
+     * .build();
+     * lb.addTarget(new InstanceTarget(instance));
      * ```
      */
     public inline fun amazonLinuxImage(
@@ -986,7 +1037,7 @@ public object ec2 {
      * BastionHostLinux host = BastionHostLinux.Builder.create(this, "BastionHost")
      * .vpc(vpc)
      * .blockDevices(List.of(BlockDevice.builder()
-     * .deviceName("EBSBastionHost")
+     * .deviceName("/dev/sdh")
      * .volume(BlockDeviceVolume.ebs(10, EbsDeviceOptions.builder()
      * .encrypted(true)
      * .build()))
@@ -1012,7 +1063,7 @@ public object ec2 {
      * BastionHostLinux host = BastionHostLinux.Builder.create(this, "BastionHost")
      * .vpc(vpc)
      * .blockDevices(List.of(BlockDevice.builder()
-     * .deviceName("EBSBastionHost")
+     * .deviceName("/dev/sdh")
      * .volume(BlockDeviceVolume.ebs(10, EbsDeviceOptions.builder()
      * .encrypted(true)
      * .build()))
@@ -2152,6 +2203,7 @@ public object ec2 {
      * .instanceGenerations(List.of("instanceGenerations"))
      * .localStorage("localStorage")
      * .localStorageTypes(List.of("localStorageTypes"))
+     * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
      * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
      * .max(123)
      * .min(123)
@@ -2451,6 +2503,7 @@ public object ec2 {
      * .instanceGenerations(List.of("instanceGenerations"))
      * .localStorage("localStorage")
      * .localStorageTypes(List.of("localStorageTypes"))
+     * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
      * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
      * .max(123)
      * .min(123)
@@ -2547,6 +2600,7 @@ public object ec2 {
      * .instanceGenerations(List.of("instanceGenerations"))
      * .localStorage("localStorage")
      * .localStorageTypes(List.of("localStorageTypes"))
+     * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
      * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
      * .max(123)
      * .min(123)
@@ -2718,6 +2772,7 @@ public object ec2 {
      * .instanceGenerations(List.of("instanceGenerations"))
      * .localStorage("localStorage")
      * .localStorageTypes(List.of("localStorageTypes"))
+     * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
      * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
      * .max(123)
      * .min(123)
@@ -2999,6 +3054,7 @@ public object ec2 {
      * .instanceGenerations(List.of("instanceGenerations"))
      * .localStorage("localStorage")
      * .localStorageTypes(List.of("localStorageTypes"))
+     * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
      * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
      * .max(123)
      * .min(123)
@@ -3399,6 +3455,10 @@ public object ec2 {
      * instances in your VPC to the internet, and prevents hosts outside of your VPC from initiating
      * an IPv6 connection with your instance.
      *
+     * For more information, see
+     * [Egress-only internet gateway](https://docs.aws.amazon.com/vpc/latest/userguide/egress-only-internet-gateway.html)
+     * in the *Amazon VPC User Guide* .
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -3538,6 +3598,7 @@ public object ec2 {
      * .resourceId("resourceId")
      * .resourceType("resourceType")
      * // the properties below are optional
+     * .deliverCrossAccountRole("deliverCrossAccountRole")
      * .deliverLogsPermissionArn("deliverLogsPermissionArn")
      * .destinationOptions(destinationOptions)
      * .logDestination("logDestination")
@@ -3603,6 +3664,7 @@ public object ec2 {
      * .resourceId("resourceId")
      * .resourceType("resourceType")
      * // the properties below are optional
+     * .deliverCrossAccountRole("deliverCrossAccountRole")
      * .deliverLogsPermissionArn("deliverLogsPermissionArn")
      * .destinationOptions(destinationOptions)
      * .logDestination("logDestination")
@@ -3769,8 +3831,6 @@ public object ec2 {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.ec2.*;
      * CfnIPAM cfnIPAM = CfnIPAM.Builder.create(this, "MyCfnIPAM")
-     * .defaultResourceDiscoveryAssociationId("defaultResourceDiscoveryAssociationId")
-     * .defaultResourceDiscoveryId("defaultResourceDiscoveryId")
      * .description("description")
      * .operatingRegions(List.of(IpamOperatingRegionProperty.builder()
      * .regionName("regionName")
@@ -3779,6 +3839,7 @@ public object ec2 {
      * .key("key")
      * .value("value")
      * .build()))
+     * .tier("tier")
      * .build();
      * ```
      *
@@ -3915,6 +3976,12 @@ public object ec2 {
      * .publicIpSource("publicIpSource")
      * .publiclyAdvertisable(false)
      * .sourceIpamPoolId("sourceIpamPoolId")
+     * .sourceResource(SourceResourceProperty.builder()
+     * .resourceId("resourceId")
+     * .resourceOwner("resourceOwner")
+     * .resourceRegion("resourceRegion")
+     * .resourceType("resourceType")
+     * .build())
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -4017,6 +4084,12 @@ public object ec2 {
      * .publicIpSource("publicIpSource")
      * .publiclyAdvertisable(false)
      * .sourceIpamPoolId("sourceIpamPoolId")
+     * .sourceResource(SourceResourceProperty.builder()
+     * .resourceId("resourceId")
+     * .resourceOwner("resourceOwner")
+     * .resourceRegion("resourceRegion")
+     * .resourceType("resourceType")
+     * .build())
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -4067,6 +4140,32 @@ public object ec2 {
     }
 
     /**
+     * The resource used to provision CIDRs to a resource planning pool.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ec2.*;
+     * SourceResourceProperty sourceResourceProperty = SourceResourceProperty.builder()
+     * .resourceId("resourceId")
+     * .resourceOwner("resourceOwner")
+     * .resourceRegion("resourceRegion")
+     * .resourceType("resourceType")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ipampool-sourceresource.html)
+     */
+    public inline fun cfnIPAMPoolSourceResourceProperty(
+        block: CfnIPAMPoolSourceResourcePropertyDsl.() -> Unit = {}
+    ): CfnIPAMPool.SourceResourceProperty {
+        val builder = CfnIPAMPoolSourceResourcePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Properties for defining a `CfnIPAM`.
      *
      * Example:
@@ -4075,8 +4174,6 @@ public object ec2 {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.ec2.*;
      * CfnIPAMProps cfnIPAMProps = CfnIPAMProps.builder()
-     * .defaultResourceDiscoveryAssociationId("defaultResourceDiscoveryAssociationId")
-     * .defaultResourceDiscoveryId("defaultResourceDiscoveryId")
      * .description("description")
      * .operatingRegions(List.of(IpamOperatingRegionProperty.builder()
      * .regionName("regionName")
@@ -4085,6 +4182,7 @@ public object ec2 {
      * .key("key")
      * .value("value")
      * .build()))
+     * .tier("tier")
      * .build();
      * ```
      *
@@ -4548,6 +4646,77 @@ public object ec2 {
     }
 
     /**
+     * Creates an EC2 Instance Connect Endpoint.
+     *
+     * An EC2 Instance Connect Endpoint allows you to connect to an instance, without requiring the
+     * instance to have a public IPv4 address. For more information, see
+     * [Connect to your instances without requiring a public IPv4 address using EC2 Instance Connect Endpoint](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Connect-using-EC2-Instance-Connect-Endpoint.html)
+     * in the *Amazon EC2 User Guide* .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ec2.*;
+     * CfnInstanceConnectEndpoint cfnInstanceConnectEndpoint =
+     * CfnInstanceConnectEndpoint.Builder.create(this, "MyCfnInstanceConnectEndpoint")
+     * .subnetId("subnetId")
+     * // the properties below are optional
+     * .clientToken("clientToken")
+     * .preserveClientIp(false)
+     * .securityGroupIds(List.of("securityGroupIds"))
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instanceconnectendpoint.html)
+     */
+    public inline fun cfnInstanceConnectEndpoint(
+        scope: Construct,
+        id: String,
+        block: CfnInstanceConnectEndpointDsl.() -> Unit = {},
+    ): CfnInstanceConnectEndpoint {
+        val builder = CfnInstanceConnectEndpointDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnInstanceConnectEndpoint`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ec2.*;
+     * CfnInstanceConnectEndpointProps cfnInstanceConnectEndpointProps =
+     * CfnInstanceConnectEndpointProps.builder()
+     * .subnetId("subnetId")
+     * // the properties below are optional
+     * .clientToken("clientToken")
+     * .preserveClientIp(false)
+     * .securityGroupIds(List.of("securityGroupIds"))
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instanceconnectendpoint.html)
+     */
+    public inline fun cfnInstanceConnectEndpointProps(
+        block: CfnInstanceConnectEndpointPropsDsl.() -> Unit = {}
+    ): CfnInstanceConnectEndpointProps {
+        val builder = CfnInstanceConnectEndpointPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Specifies the CPU options for the instance.
      *
      * When you specify CPU options, you must specify both the number of CPU cores and threads per
@@ -4653,10 +4822,14 @@ public object ec2 {
     }
 
     /**
-     * Specifies the type of Elastic GPU.
+     * Amazon Elastic Graphics reached end of life on January 8, 2024.
      *
-     * An Elastic GPU is a GPU resource that you can attach to your Amazon EC2 instance to
-     * accelerate the graphics performance of your applications. For more information, see
+     * For workloads that require graphics acceleration, we recommend that you use Amazon EC2 G4ad,
+     * G4dn, or G5 instances.
+     *
+     * Specifies the type of Elastic GPU. An Elastic GPU is a GPU resource that you can attach to
+     * your Amazon EC2 instance to accelerate the graphics performance of your applications. For
+     * more information, see
      * [Amazon EC2 Elastic GPUs](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html)
      * in the *Amazon EC2 User Guide for Windows Instances* .
      *
@@ -4916,14 +5089,6 @@ public object ec2 {
     }
 
     /**
-     * Suppresses the specified device included in the block device mapping of the AMI.
-     *
-     * To suppress a device, specify an empty string.
-     *
-     * `NoDevice` is a property of the
-     * [Amazon EC2 BlockDeviceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-blockdev-mapping.html)
-     * property.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -5463,7 +5628,10 @@ public object ec2 {
     }
 
     /**
-     * Information about a block device mapping for an Amazon EC2 launch template.
+     * Specifies a block device mapping for a launch template.
+     *
+     * You must specify `DeviceName` plus exactly one of the following properties: `Ebs` ,
+     * `NoDevice` , or `VirtualName` .
      *
      * `BlockDeviceMapping` is a property of
      * [AWS::EC2::LaunchTemplate LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
@@ -5564,6 +5732,37 @@ public object ec2 {
     }
 
     /**
+     * A security group connection tracking specification that enables you to set the idle timeout
+     * for connection tracking on an Elastic network interface.
+     *
+     * For more information, see
+     * [Connection tracking timeouts](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts)
+     * in the *Amazon Elastic Compute Cloud User Guide* .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ec2.*;
+     * ConnectionTrackingSpecificationProperty connectionTrackingSpecificationProperty =
+     * ConnectionTrackingSpecificationProperty.builder()
+     * .tcpEstablishedTimeout(123)
+     * .udpStreamTimeout(123)
+     * .udpTimeout(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-connectiontrackingspecification.html)
+     */
+    public inline fun cfnLaunchTemplateConnectionTrackingSpecificationProperty(
+        block: CfnLaunchTemplateConnectionTrackingSpecificationPropertyDsl.() -> Unit = {}
+    ): CfnLaunchTemplate.ConnectionTrackingSpecificationProperty {
+        val builder = CfnLaunchTemplateConnectionTrackingSpecificationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Specifies the CPU options for an instance.
      *
      * For more information, see
@@ -5658,6 +5857,11 @@ public object ec2 {
     }
 
     /**
+     * Amazon Elastic Graphics reached end of life on January 8, 2024.
+     *
+     * For workloads that require graphics acceleration, we recommend that you use Amazon EC2 G4ad,
+     * G4dn, or G5 instances.
+     *
      * Specifies a specification for an Elastic GPU for an Amazon EC2 launch template.
      *
      * `ElasticGpuSpecification` is a property of
@@ -5681,6 +5885,73 @@ public object ec2 {
         block: CfnLaunchTemplateElasticGpuSpecificationPropertyDsl.() -> Unit = {}
     ): CfnLaunchTemplate.ElasticGpuSpecificationProperty {
         val builder = CfnLaunchTemplateElasticGpuSpecificationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * ENA Express uses AWS Scalable Reliable Datagram (SRD) technology to increase the maximum
+     * bandwidth used per stream and minimize tail latency of network traffic between EC2 instances.
+     *
+     * With ENA Express, you can communicate between two EC2 instances in the same subnet within the
+     * same account, or in different accounts. Both sending and receiving instances must have ENA
+     * Express enabled.
+     *
+     * To improve the reliability of network packet delivery, ENA Express reorders network packets
+     * on the receiving end by default. However, some UDP-based applications are designed to handle
+     * network packets that are out of order to reduce the overhead for packet delivery at the
+     * network layer. When ENA Express is enabled, you can specify whether UDP network traffic uses
+     * it.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ec2.*;
+     * EnaSrdSpecificationProperty enaSrdSpecificationProperty = EnaSrdSpecificationProperty.builder()
+     * .enaSrdEnabled(false)
+     * .enaSrdUdpSpecification(EnaSrdUdpSpecificationProperty.builder()
+     * .enaSrdUdpEnabled(false)
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-enasrdspecification.html)
+     */
+    public inline fun cfnLaunchTemplateEnaSrdSpecificationProperty(
+        block: CfnLaunchTemplateEnaSrdSpecificationPropertyDsl.() -> Unit = {}
+    ): CfnLaunchTemplate.EnaSrdSpecificationProperty {
+        val builder = CfnLaunchTemplateEnaSrdSpecificationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * ENA Express is compatible with both TCP and UDP transport protocols.
+     *
+     * When it's enabled, TCP traffic automatically uses it. However, some UDP-based applications
+     * are designed to handle network packets that are out of order, without a need for
+     * retransmission, such as live video broadcasting or other near-real-time applications. For UDP
+     * traffic, you can specify whether to use ENA Express, based on your application environment
+     * needs.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ec2.*;
+     * EnaSrdUdpSpecificationProperty enaSrdUdpSpecificationProperty =
+     * EnaSrdUdpSpecificationProperty.builder()
+     * .enaSrdUdpEnabled(false)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-enasrdudpspecification.html)
+     */
+    public inline fun cfnLaunchTemplateEnaSrdUdpSpecificationProperty(
+        block: CfnLaunchTemplateEnaSrdUdpSpecificationPropertyDsl.() -> Unit = {}
+    ): CfnLaunchTemplate.EnaSrdUdpSpecificationProperty {
+        val builder = CfnLaunchTemplateEnaSrdUdpSpecificationPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -5878,6 +6149,7 @@ public object ec2 {
      * .instanceGenerations(List.of("instanceGenerations"))
      * .localStorage("localStorage")
      * .localStorageTypes(List.of("localStorageTypes"))
+     * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
      * .memoryGiBPerVCpu(MemoryGiBPerVCpuProperty.builder()
      * .max(123)
      * .min(123)
@@ -6098,6 +6370,7 @@ public object ec2 {
      * .instanceGenerations(List.of("instanceGenerations"))
      * .localStorage("localStorage")
      * .localStorageTypes(List.of("localStorageTypes"))
+     * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
      * .memoryGiBPerVCpu(MemoryGiBPerVCpuProperty.builder()
      * .max(123)
      * .min(123)
@@ -6134,6 +6407,7 @@ public object ec2 {
      * .build()))
      * .maintenanceOptions(MaintenanceOptionsProperty.builder()
      * .autoRecovery("autoRecovery")
+     * .rebootMigration("rebootMigration")
      * .build())
      * .metadataOptions(MetadataOptionsProperty.builder()
      * .httpEndpoint("httpEndpoint")
@@ -6148,9 +6422,20 @@ public object ec2 {
      * .networkInterfaces(List.of(NetworkInterfaceProperty.builder()
      * .associateCarrierIpAddress(false)
      * .associatePublicIpAddress(false)
+     * .connectionTrackingSpecification(ConnectionTrackingSpecificationProperty.builder()
+     * .tcpEstablishedTimeout(123)
+     * .udpStreamTimeout(123)
+     * .udpTimeout(123)
+     * .build())
      * .deleteOnTermination(false)
      * .description("description")
      * .deviceIndex(123)
+     * .enaSrdSpecification(EnaSrdSpecificationProperty.builder()
+     * .enaSrdEnabled(false)
+     * .enaSrdUdpSpecification(EnaSrdUdpSpecificationProperty.builder()
+     * .enaSrdUdpEnabled(false)
+     * .build())
+     * .build())
      * .groups(List.of("groups"))
      * .interfaceType("interfaceType")
      * .ipv4PrefixCount(123)
@@ -6167,6 +6452,7 @@ public object ec2 {
      * .build()))
      * .networkCardIndex(123)
      * .networkInterfaceId("networkInterfaceId")
+     * .primaryIpv6(false)
      * .privateIpAddress("privateIpAddress")
      * .privateIpAddresses(List.of(PrivateIpAddProperty.builder()
      * .primary(false)
@@ -6315,6 +6601,7 @@ public object ec2 {
      * import software.amazon.awscdk.services.ec2.*;
      * MaintenanceOptionsProperty maintenanceOptionsProperty = MaintenanceOptionsProperty.builder()
      * .autoRecovery("autoRecovery")
+     * .rebootMigration("rebootMigration")
      * .build();
      * ```
      *
@@ -6514,9 +6801,20 @@ public object ec2 {
      * NetworkInterfaceProperty networkInterfaceProperty = NetworkInterfaceProperty.builder()
      * .associateCarrierIpAddress(false)
      * .associatePublicIpAddress(false)
+     * .connectionTrackingSpecification(ConnectionTrackingSpecificationProperty.builder()
+     * .tcpEstablishedTimeout(123)
+     * .udpStreamTimeout(123)
+     * .udpTimeout(123)
+     * .build())
      * .deleteOnTermination(false)
      * .description("description")
      * .deviceIndex(123)
+     * .enaSrdSpecification(EnaSrdSpecificationProperty.builder()
+     * .enaSrdEnabled(false)
+     * .enaSrdUdpSpecification(EnaSrdUdpSpecificationProperty.builder()
+     * .enaSrdUdpEnabled(false)
+     * .build())
+     * .build())
      * .groups(List.of("groups"))
      * .interfaceType("interfaceType")
      * .ipv4PrefixCount(123)
@@ -6533,6 +6831,7 @@ public object ec2 {
      * .build()))
      * .networkCardIndex(123)
      * .networkInterfaceId("networkInterfaceId")
+     * .primaryIpv6(false)
      * .privateIpAddress("privateIpAddress")
      * .privateIpAddresses(List.of(PrivateIpAddProperty.builder()
      * .primary(false)
@@ -7053,14 +7352,22 @@ public object ec2 {
      * NAT gateway. If you create a public NAT gateway, you must specify an elastic IP address.
      *
      * With a NAT gateway, instances in a private subnet can connect to the internet, other AWS
-     * services, or an on-premises network using the IP address of the NAT gateway.
+     * services, or an on-premises network using the IP address of the NAT gateway. For more
+     * information, see
+     * [NAT gateways](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html) in the
+     * *Amazon VPC User Guide* .
      *
      * If you add a default route ( `AWS::EC2::Route` resource) that points to a NAT gateway,
      * specify the NAT gateway ID for the route's `NatGatewayId` property.
      *
-     * For more information, see
-     * [NAT Gateways](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html) in the
-     * *Amazon VPC User Guide* .
+     * When you associate an Elastic IP address or secondary Elastic IP address with a public NAT
+     * gateway, the network border group of the Elastic IP address must match the network border
+     * group of the Availability Zone (AZ) that the public NAT gateway is in. Otherwise, the NAT
+     * gateway fails to launch. You can see the network border group for the AZ by viewing the
+     * details of the subnet. Similarly, you can view the network border group for the Elastic IP
+     * address by viewing its details. For more information, see
+     * [Allocate an Elastic IP address](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#allocate-eip)
+     * in the *Amazon VPC User Guide* .
      *
      * Example:
      * ```
@@ -8902,7 +9209,13 @@ public object ec2 {
      * "MyCfnNetworkInterface")
      * .subnetId("subnetId")
      * // the properties below are optional
+     * .connectionTrackingSpecification(ConnectionTrackingSpecificationProperty.builder()
+     * .tcpEstablishedTimeout(123)
+     * .udpStreamTimeout(123)
+     * .udpTimeout(123)
+     * .build())
      * .description("description")
+     * .enablePrimaryIpv6(false)
      * .groupSet(List.of("groupSet"))
      * .interfaceType("interfaceType")
      * .ipv4PrefixCount(123)
@@ -9000,6 +9313,36 @@ public object ec2 {
         block: CfnNetworkInterfaceAttachmentPropsDsl.() -> Unit = {}
     ): CfnNetworkInterfaceAttachmentProps {
         val builder = CfnNetworkInterfaceAttachmentPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Configurable options for connection tracking on a network interface.
+     *
+     * For more information, see
+     * [Connection tracking timeouts](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts)
+     * in the *Amazon Elastic Compute Cloud User Guide* .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ec2.*;
+     * ConnectionTrackingSpecificationProperty connectionTrackingSpecificationProperty =
+     * ConnectionTrackingSpecificationProperty.builder()
+     * .tcpEstablishedTimeout(123)
+     * .udpStreamTimeout(123)
+     * .udpTimeout(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-connectiontrackingspecification.html)
+     */
+    public inline fun cfnNetworkInterfaceConnectionTrackingSpecificationProperty(
+        block: CfnNetworkInterfaceConnectionTrackingSpecificationPropertyDsl.() -> Unit = {}
+    ): CfnNetworkInterface.ConnectionTrackingSpecificationProperty {
+        val builder = CfnNetworkInterfaceConnectionTrackingSpecificationPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -9168,7 +9511,13 @@ public object ec2 {
      * CfnNetworkInterfaceProps cfnNetworkInterfaceProps = CfnNetworkInterfaceProps.builder()
      * .subnetId("subnetId")
      * // the properties below are optional
+     * .connectionTrackingSpecification(ConnectionTrackingSpecificationProperty.builder()
+     * .tcpEstablishedTimeout(123)
+     * .udpStreamTimeout(123)
+     * .udpTimeout(123)
+     * .build())
      * .description("description")
+     * .enablePrimaryIpv6(false)
      * .groupSet(List.of("groupSet"))
      * .interfaceType("interfaceType")
      * .ipv4PrefixCount(123)
@@ -9351,7 +9700,6 @@ public object ec2 {
      * import software.amazon.awscdk.services.ec2.*;
      * CfnPrefixList cfnPrefixList = CfnPrefixList.Builder.create(this, "MyCfnPrefixList")
      * .addressFamily("addressFamily")
-     * .maxEntries(123)
      * .prefixListName("prefixListName")
      * // the properties below are optional
      * .entries(List.of(EntryProperty.builder()
@@ -9359,6 +9707,7 @@ public object ec2 {
      * // the properties below are optional
      * .description("description")
      * .build()))
+     * .maxEntries(123)
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -9413,7 +9762,6 @@ public object ec2 {
      * import software.amazon.awscdk.services.ec2.*;
      * CfnPrefixListProps cfnPrefixListProps = CfnPrefixListProps.builder()
      * .addressFamily("addressFamily")
-     * .maxEntries(123)
      * .prefixListName("prefixListName")
      * // the properties below are optional
      * .entries(List.of(EntryProperty.builder()
@@ -9421,6 +9769,7 @@ public object ec2 {
      * // the properties below are optional
      * .description("description")
      * .build()))
+     * .maxEntries(123)
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -9439,10 +9788,12 @@ public object ec2 {
     }
 
     /**
-     * Specifies a route in a route table.
+     * Specifies a route in a route table. For more information, see
+     * [Routes](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html#route-table-routes)
+     * in the *Amazon VPC User Guide* .
      *
-     * You must specify either `DestinationCidrBlock` or `DestinationIpv6CidrBlock` , plus the ID of
-     * one of the target resources.
+     * You must specify either a destination CIDR block or prefix list ID. You must also specify
+     * exactly one of the resources as the target.
      *
      * If you create a route that references a transit gateway in the same template where you create
      * the transit gateway, you must declare a dependency on the transit gateway attachment. The
@@ -9461,8 +9812,10 @@ public object ec2 {
      * .routeTableId("routeTableId")
      * // the properties below are optional
      * .carrierGatewayId("carrierGatewayId")
+     * .coreNetworkArn("coreNetworkArn")
      * .destinationCidrBlock("destinationCidrBlock")
      * .destinationIpv6CidrBlock("destinationIpv6CidrBlock")
+     * .destinationPrefixListId("destinationPrefixListId")
      * .egressOnlyInternetGatewayId("egressOnlyInternetGatewayId")
      * .gatewayId("gatewayId")
      * .instanceId("instanceId")
@@ -9499,8 +9852,10 @@ public object ec2 {
      * .routeTableId("routeTableId")
      * // the properties below are optional
      * .carrierGatewayId("carrierGatewayId")
+     * .coreNetworkArn("coreNetworkArn")
      * .destinationCidrBlock("destinationCidrBlock")
      * .destinationIpv6CidrBlock("destinationIpv6CidrBlock")
+     * .destinationPrefixListId("destinationPrefixListId")
      * .egressOnlyInternetGatewayId("egressOnlyInternetGatewayId")
      * .gatewayId("gatewayId")
      * .instanceId("instanceId")
@@ -9527,8 +9882,8 @@ public object ec2 {
      * After you create a route table, you can add routes and associate the table with a subnet.
      *
      * For more information, see
-     * [Route Tables](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html)
-     * in the *Amazon VPC User Guide* .
+     * [Route tables](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html) in the
+     * *Amazon VPC User Guide* .
      *
      * Example:
      * ```
@@ -9663,37 +10018,24 @@ public object ec2 {
     }
 
     /**
-     * Adds the specified egress rules to a security group.
+     * Adds the specified outbound (egress) rule to a security group.
      *
-     * An outbound rule permits instances to send traffic to the specified destination IPv4 or IPv6
-     * CIDR address ranges, or to the specified destination security groups for the same VPC.
-     *
-     * You specify a protocol for each rule (for example, TCP). For the TCP and UDP protocols, you
-     * must also specify the destination port or port range. For the ICMP protocol, you must also
-     * specify the ICMP type and code. You can use -1 for the type or code to mean all types or all
-     * codes.
-     *
-     * You must specify only one of the following properties: `CidrIp` , `CidrIpv6` ,
-     * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
-     *
-     * You must specify a destination security group ( `DestinationPrefixListId` or
-     * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ). If you do not
-     * specify one of these parameters, the stack will launch successfully but the rule will not be
-     * added to the security group.
-     *
-     * Rule changes are propagated to affected instances as quickly as possible. However, a small
-     * delay might occur.
-     *
-     * For more information about VPC security group limits, see
-     * [Amazon VPC Limits](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html)
+     * An outbound rule permits instances to send traffic to the specified IPv4 or IPv6 address
+     * range, the IP addresses that are specified by a prefix list, or the instances that are
+     * associated with a destination security group. For more information, see
+     * [Security group rules](https://docs.aws.amazon.com/vpc/latest/userguide/security-group-rules.html)
      * .
      *
-     * Use `AWS::EC2::SecurityGroupIngress` and `AWS::EC2::SecurityGroupEgress` only when necessary,
-     * typically to allow security groups to reference each other in ingress and egress rules.
-     * Otherwise, use the embedded ingress and egress rules of the security group. For more
-     * information, see
-     * [Amazon EC2 Security Groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html)
-     * .
+     * You must specify exactly one of the following destinations: an IPv4 or IPv6 address range, a
+     * prefix list, or a security group. Otherwise, the stack launches successfully but the rule is
+     * not added to the security group.
+     *
+     * You must specify a protocol for each rule (for example, TCP). If the protocol is TCP or UDP,
+     * you must also specify a port or port range. If the protocol is ICMP or ICMPv6, you must also
+     * specify the ICMP/ICMPv6 type and code. To specify all types or all codes, use -1.
+     *
+     * Rule changes are propagated to instances associated with the security group as quickly as
+     * possible. However, a small delay might occur.
      *
      * Example:
      * ```
@@ -9728,38 +10070,24 @@ public object ec2 {
     }
 
     /**
-     * Adds the specified egress rules to a security group for use with a VPC.
+     * Adds the specified outbound (egress) rule to a security group.
      *
-     * An outbound rule permits instances to send traffic to the specified destination IPv4 or IPv6
-     * CIDR address ranges, or to the specified destination security groups for the same VPC.
-     *
-     * You specify a protocol for each rule (for example, TCP). For the TCP and UDP protocols, you
-     * must also specify the destination port or port range. For the ICMP protocol, you must also
-     * specify the ICMP type and code. You can use -1 for the type or code to mean all types or all
-     * codes.
-     *
-     * You must specify only one of the following properties: `CidrIp` , `CidrIpv6` ,
-     * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
-     *
-     * You must specify a destination security group ( `DestinationPrefixListId` or
-     * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ). If you do not
-     * specify one of these parameters, the stack will launch successfully but the rule will not be
-     * added to the security group.
-     *
-     * Rule changes are propagated to affected instances as quickly as possible. However, a small
-     * delay might occur.
-     *
-     * For more information about VPC security group limits, see
-     * [Amazon VPC Limits](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html)
+     * An outbound rule permits instances to send traffic to the specified IPv4 or IPv6 address
+     * range, the IP address ranges that are specified by a prefix list, or the instances that are
+     * associated with a destination security group. For more information, see
+     * [Security group rules](https://docs.aws.amazon.com/vpc/latest/userguide/security-group-rules.html)
      * .
      *
-     * Use `SecurityGroup.Ingress` and `SecurityGroup.Egress` only when necessary, typically to
-     * allow security groups to reference each other in ingress and egress rules. Otherwise, use the
-     * embedded ingress and egress rules of the security group. For more information, see
-     * [Amazon EC2 Security Groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html)
-     * .
+     * You must specify exactly one of the following destinations: an IPv4 or IPv6 address range, a
+     * prefix list, or a security group. Otherwise, the stack launches successfully but the rule is
+     * not added to the security group.
      *
-     * The EC2 Security Group Rule is an embedded property of the `AWS::EC2::SecurityGroup` type.
+     * You must specify a protocol for each rule (for example, TCP). If the protocol is TCP or UDP,
+     * you must also specify a port or port range. If the protocol is ICMP or ICMPv6, you must also
+     * specify the ICMP/ICMPv6 type and code.
+     *
+     * Rule changes are propagated to instances associated with the security group as quickly as
+     * possible. However, a small delay might occur.
      *
      * Example:
      * ```
@@ -9822,25 +10150,24 @@ public object ec2 {
     }
 
     /**
-     * Adds an inbound rule to a security group.
+     * Adds an inbound (ingress) rule to a security group.
      *
-     * An inbound rule permits instances to receive traffic from the specified IPv4 or IPv6 CIDR
-     * address range, or from the instances associated with the specified security group.
+     * An inbound rule permits instances to receive traffic from the specified IPv4 or IPv6 address
+     * range, the IP addresses that are specified by a prefix list, or the instances that are
+     * associated with a source security group. For more information, see
+     * [Security group rules](https://docs.aws.amazon.com/vpc/latest/userguide/security-group-rules.html)
+     * .
      *
-     * You must specify only one of the following properties: `CidrIp` , `CidrIpv6` ,
-     * `SourcePrefixListId` , `SourceSecurityGroupId` , or `SourceSecurityGroupName` .
-     *
-     * You specify a protocol for each rule (for example, TCP). For TCP and UDP, you must also
-     * specify a port or port range. For ICMP/ICMPv6, you must also specify the ICMP/ICMPv6 type and
-     * code. You can use -1 to mean all types or all codes.
-     *
-     * You must specify a source security group ( `SourcePrefixListId` , `SourceSecurityGroupId` ,
-     * or `SourceSecurityGroupName` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ). If you do not
-     * specify one of these parameters, the stack will launch successfully but the rule will not be
+     * You must specify only one of the following sources: an IPv4 or IPv6 address range, a prefix
+     * list, or a security group. Otherwise, the stack launches successfully, but the rule is not
      * added to the security group.
      *
-     * Rule changes are propagated to instances within the security group as quickly as possible.
-     * However, a small delay might occur.
+     * You must specify a protocol for each rule (for example, TCP). If the protocol is TCP or UDP,
+     * you must also specify a port or port range. If the protocol is ICMP or ICMPv6, you must also
+     * specify the ICMP/ICMPv6 type and code.
+     *
+     * Rule changes are propagated to instances associated with the security group as quickly as
+     * possible. However, a small delay might occur.
      *
      * Example:
      * ```
@@ -9878,27 +10205,24 @@ public object ec2 {
     }
 
     /**
-     * Adds an inbound rule to a security group.
+     * Adds an inbound (ingress) rule to a security group.
      *
-     * An inbound rule permits instances to receive traffic from the specified IPv4 or IPv6 CIDR
-     * address range, or from the instances associated with the specified security group.
+     * An inbound rule permits instances to receive traffic from the specified IPv4 or IPv6 address
+     * range, the IP address ranges that are specified by a prefix list, or the instances that are
+     * associated with a source security group. For more information, see
+     * [Security group rules](https://docs.aws.amazon.com/vpc/latest/userguide/security-group-rules.html)
+     * .
      *
-     * You must specify only one of the following properties: `CidrIp` , `CidrIpv6` ,
-     * `SourcePrefixListId` , `SourceSecurityGroupId` , or `SourceSecurityGroupName` .
+     * You must specify exactly one of the following sources: an IPv4 or IPv6 address range, a
+     * prefix list, or a security group. Otherwise, the stack launches successfully, but the rule is
+     * not added to the security group.
      *
-     * You specify a protocol for each rule (for example, TCP). For TCP and UDP, you must also
-     * specify a port or port range. For ICMP/ICMPv6, you must also specify the ICMP/ICMPv6 type and
-     * code. You can use -1 to mean all types or all codes.
+     * You must specify a protocol for each rule (for example, TCP). If the protocol is TCP or UDP,
+     * you must also specify a port or port range. If the protocol is ICMP or ICMPv6, you must also
+     * specify the ICMP/ICMPv6 type and code.
      *
-     * You must specify a source security group ( `SourcePrefixListId` , `SourceSecurityGroupId` ,
-     * or `SourceSecurityGroupName` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ). If you do not
-     * specify one of these parameters, the stack will launch successfully but the rule will not be
-     * added to the security group.
-     *
-     * Rule changes are propagated to instances within the security group as quickly as possible.
-     * However, a small delay might occur.
-     *
-     * The EC2 Security Group Rule is an embedded property of the `AWS::EC2::SecurityGroup` type.
+     * Rule changes are propagated to instances associated with the security group as quickly as
+     * possible. However, a small delay might occur.
      *
      * Example:
      * ```
@@ -10021,6 +10345,60 @@ public object ec2 {
     }
 
     /**
+     * Specifies the state of the *block public access for snapshots* setting for the Region.
+     *
+     * For more information, see
+     * [Block public access for snapshots](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-public-access-snapshots.html)
+     * .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ec2.*;
+     * CfnSnapshotBlockPublicAccess cfnSnapshotBlockPublicAccess =
+     * CfnSnapshotBlockPublicAccess.Builder.create(this, "MyCfnSnapshotBlockPublicAccess")
+     * .state("state")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-snapshotblockpublicaccess.html)
+     */
+    public inline fun cfnSnapshotBlockPublicAccess(
+        scope: Construct,
+        id: String,
+        block: CfnSnapshotBlockPublicAccessDsl.() -> Unit = {},
+    ): CfnSnapshotBlockPublicAccess {
+        val builder = CfnSnapshotBlockPublicAccessDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnSnapshotBlockPublicAccess`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ec2.*;
+     * CfnSnapshotBlockPublicAccessProps cfnSnapshotBlockPublicAccessProps =
+     * CfnSnapshotBlockPublicAccessProps.builder()
+     * .state("state")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-snapshotblockpublicaccess.html)
+     */
+    public inline fun cfnSnapshotBlockPublicAccessProps(
+        block: CfnSnapshotBlockPublicAccessPropsDsl.() -> Unit = {}
+    ): CfnSnapshotBlockPublicAccessProps {
+        val builder = CfnSnapshotBlockPublicAccessPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Specifies a Spot Fleet request.
      *
      * The Spot Fleet request specifies the total target capacity and the On-Demand target capacity.
@@ -10111,6 +10489,7 @@ public object ec2 {
      * .instanceGenerations(List.of("instanceGenerations"))
      * .localStorage("localStorage")
      * .localStorageTypes(List.of("localStorageTypes"))
+     * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
      * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
      * .max(123)
      * .min(123)
@@ -10218,6 +10597,7 @@ public object ec2 {
      * .instanceGenerations(List.of("instanceGenerations"))
      * .localStorage("localStorage")
      * .localStorageTypes(List.of("localStorageTypes"))
+     * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
      * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
      * .max(123)
      * .min(123)
@@ -10727,6 +11107,7 @@ public object ec2 {
      * .instanceGenerations(List.of("instanceGenerations"))
      * .localStorage("localStorage")
      * .localStorageTypes(List.of("localStorageTypes"))
+     * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
      * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
      * .max(123)
      * .min(123)
@@ -10809,6 +11190,7 @@ public object ec2 {
      * .instanceGenerations(List.of("instanceGenerations"))
      * .localStorage("localStorage")
      * .localStorageTypes(List.of("localStorageTypes"))
+     * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
      * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
      * .max(123)
      * .min(123)
@@ -10891,6 +11273,7 @@ public object ec2 {
      * .instanceGenerations(List.of("instanceGenerations"))
      * .localStorage("localStorage")
      * .localStorageTypes(List.of("localStorageTypes"))
+     * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
      * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
      * .max(123)
      * .min(123)
@@ -11163,6 +11546,7 @@ public object ec2 {
      * .instanceGenerations(List.of("instanceGenerations"))
      * .localStorage("localStorage")
      * .localStorageTypes(List.of("localStorageTypes"))
+     * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
      * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
      * .max(123)
      * .min(123)
@@ -11270,6 +11654,7 @@ public object ec2 {
      * .instanceGenerations(List.of("instanceGenerations"))
      * .localStorage("localStorage")
      * .localStorageTypes(List.of("localStorageTypes"))
+     * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
      * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
      * .max(123)
      * .min(123)
@@ -11444,6 +11829,7 @@ public object ec2 {
      * .instanceGenerations(List.of("instanceGenerations"))
      * .localStorage("localStorage")
      * .localStorageTypes(List.of("localStorageTypes"))
+     * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
      * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
      * .max(123)
      * .min(123)
@@ -11622,6 +12008,7 @@ public object ec2 {
      * .instanceGenerations(List.of("instanceGenerations"))
      * .localStorage("localStorage")
      * .localStorageTypes(List.of("localStorageTypes"))
+     * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
      * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
      * .max(123)
      * .min(123)
@@ -11729,6 +12116,7 @@ public object ec2 {
      * .instanceGenerations(List.of("instanceGenerations"))
      * .localStorage("localStorage")
      * .localStorageTypes(List.of("localStorageTypes"))
+     * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
      * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
      * .max(123)
      * .min(123)
@@ -12030,7 +12418,7 @@ public object ec2 {
      * subnetcount = subnetcount + 1;
      * }
      * Cluster cluster = Cluster.Builder.create(this, "hello-eks")
-     * .version(KubernetesVersion.V1_27)
+     * .version(KubernetesVersion.V1_29)
      * .vpc(vpc)
      * .ipFamily(IpFamily.IP_V6)
      * .vpcSubnets(List.of(SubnetSelection.builder().subnets(vpc.getPublicSubnets()).build()))
@@ -12052,8 +12440,7 @@ public object ec2 {
     /**
      * Associates a CIDR block with your subnet.
      *
-     * You can associate a single IPv6 CIDR block with your subnet. An IPv6 CIDR block must have a
-     * prefix length of /64.
+     * You can associate a single IPv6 CIDR block with your subnet.
      *
      * Example:
      * ```
@@ -12062,8 +12449,11 @@ public object ec2 {
      * import software.amazon.awscdk.services.ec2.*;
      * CfnSubnetCidrBlock cfnSubnetCidrBlock = CfnSubnetCidrBlock.Builder.create(this,
      * "MyCfnSubnetCidrBlock")
-     * .ipv6CidrBlock("ipv6CidrBlock")
      * .subnetId("subnetId")
+     * // the properties below are optional
+     * .ipv6CidrBlock("ipv6CidrBlock")
+     * .ipv6IpamPoolId("ipv6IpamPoolId")
+     * .ipv6NetmaskLength(123)
      * .build();
      * ```
      *
@@ -12088,8 +12478,11 @@ public object ec2 {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.ec2.*;
      * CfnSubnetCidrBlockProps cfnSubnetCidrBlockProps = CfnSubnetCidrBlockProps.builder()
-     * .ipv6CidrBlock("ipv6CidrBlock")
      * .subnetId("subnetId")
+     * // the properties below are optional
+     * .ipv6CidrBlock("ipv6CidrBlock")
+     * .ipv6IpamPoolId("ipv6IpamPoolId")
+     * .ipv6NetmaskLength(123)
      * .build();
      * ```
      *
@@ -12209,8 +12602,13 @@ public object ec2 {
      * .availabilityZoneId("availabilityZoneId")
      * .cidrBlock("cidrBlock")
      * .enableDns64(false)
+     * .ipv4IpamPoolId("ipv4IpamPoolId")
+     * .ipv4NetmaskLength(123)
      * .ipv6CidrBlock("ipv6CidrBlock")
+     * .ipv6CidrBlocks(List.of("ipv6CidrBlocks"))
+     * .ipv6IpamPoolId("ipv6IpamPoolId")
      * .ipv6Native(false)
+     * .ipv6NetmaskLength(123)
      * .mapPublicIpOnLaunch(false)
      * .outpostArn("outpostArn")
      * .privateDnsNameOptionsOnLaunch(privateDnsNameOptionsOnLaunch)
@@ -12745,6 +13143,7 @@ public object ec2 {
      * .applianceModeSupport("applianceModeSupport")
      * .dnsSupport("dnsSupport")
      * .ipv6Support("ipv6Support")
+     * .securityGroupReferencingSupport("securityGroupReferencingSupport")
      * .build();
      * ```
      *
@@ -13626,12 +14025,12 @@ public object ec2 {
     /**
      * Specifies a virtual private cloud (VPC).
      *
-     * You can optionally request an IPv6 CIDR block for the VPC. You can request an Amazon-provided
-     * IPv6 CIDR block from Amazon's pool of IPv6 addresses, or an IPv6 CIDR block from an IPv6
-     * address pool that you provisioned through bring your own IP addresses (BYOIP).
+     * To add an IPv6 CIDR block to the VPC, see
+     * [AWS::EC2::VPCCidrBlock](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html)
+     * .
      *
      * For more information, see
-     * [Virtual private clouds (VPC)](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/configure-your-vpc.html)
+     * [Virtual private clouds (VPC)](https://docs.aws.amazon.com/vpc/latest/userguide/configure-your-vpc.html)
      * in the *Amazon VPC User Guide* .
      *
      * Example:
@@ -13669,13 +14068,13 @@ public object ec2 {
     /**
      * Associates a CIDR block with your VPC.
      *
-     * You can only associate a single IPv6 CIDR block with your VPC. The IPv6 CIDR block size is
-     * fixed at /56.
+     * You can optionally request an IPv6 CIDR block for the VPC. You can request an Amazon-provided
+     * IPv6 CIDR block from Amazon's pool of IPv6 addresses, or an IPv6 CIDR block from an IPv6
+     * address pool that you provisioned through bring your own IP addresses (BYOIP).
      *
-     * For more information about associating CIDR blocks with your VPC and applicable restrictions,
-     * see
-     * [VPC and Subnet Sizing](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html#VPC_Sizing)
-     * in the *Amazon VPC User Guide* .
+     * For more information, see
+     * [VPC CIDR blocks](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-cidr-blocks.html) in
+     * the *Amazon VPC User Guide* .
      *
      * Example:
      * ```
@@ -13701,7 +14100,7 @@ public object ec2 {
      * subnetcount = subnetcount + 1;
      * }
      * Cluster cluster = Cluster.Builder.create(this, "hello-eks")
-     * .version(KubernetesVersion.V1_27)
+     * .version(KubernetesVersion.V1_29)
      * .vpc(vpc)
      * .ipFamily(IpFamily.IP_V6)
      * .vpcSubnets(List.of(SubnetSelection.builder().subnets(vpc.getPublicSubnets()).build()))
@@ -13747,7 +14146,7 @@ public object ec2 {
      * subnetcount = subnetcount + 1;
      * }
      * Cluster cluster = Cluster.Builder.create(this, "hello-eks")
-     * .version(KubernetesVersion.V1_27)
+     * .version(KubernetesVersion.V1_29)
      * .vpc(vpc)
      * .ipFamily(IpFamily.IP_V6)
      * .vpcSubnets(List.of(SubnetSelection.builder().subnets(vpc.getPublicSubnets()).build()))
@@ -14604,6 +15003,10 @@ public object ec2 {
      * .policyDocument("policyDocument")
      * .policyEnabled(false)
      * .securityGroupIds(List.of("securityGroupIds"))
+     * .sseSpecification(SseSpecificationProperty.builder()
+     * .customerManagedKeyEnabled(false)
+     * .kmsKeyArn("kmsKeyArn")
+     * .build())
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -14709,6 +15112,10 @@ public object ec2 {
      * .policyDocument("policyDocument")
      * .policyEnabled(false)
      * .securityGroupIds(List.of("securityGroupIds"))
+     * .sseSpecification(SseSpecificationProperty.builder()
+     * .customerManagedKeyEnabled(false)
+     * .kmsKeyArn("kmsKeyArn")
+     * .build())
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -14727,7 +15134,40 @@ public object ec2 {
     }
 
     /**
-     * Describes a Verified Access group.
+     * AWS Verified Access provides server side encryption by default to data at rest using AWS
+     * -owned KMS keys.
+     *
+     * You also have the option of using customer managed KMS keys, which can be specified using the
+     * options below.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ec2.*;
+     * SseSpecificationProperty sseSpecificationProperty = SseSpecificationProperty.builder()
+     * .customerManagedKeyEnabled(false)
+     * .kmsKeyArn("kmsKeyArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-ssespecification.html)
+     */
+    public inline fun cfnVerifiedAccessEndpointSseSpecificationProperty(
+        block: CfnVerifiedAccessEndpointSseSpecificationPropertyDsl.() -> Unit = {}
+    ): CfnVerifiedAccessEndpoint.SseSpecificationProperty {
+        val builder = CfnVerifiedAccessEndpointSseSpecificationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * An AWS Verified Access group is a collection of AWS Verified Access endpoints who's
+     * associated applications have similar security requirements.
+     *
+     * Each instance within a Verified Access group shares an Verified Access policy. For example,
+     * you can group all Verified Access instances associated with "sales" applications together and
+     * use one common Verified Access policy.
      *
      * Example:
      * ```
@@ -14741,6 +15181,10 @@ public object ec2 {
      * .description("description")
      * .policyDocument("policyDocument")
      * .policyEnabled(false)
+     * .sseSpecification(SseSpecificationProperty.builder()
+     * .customerManagedKeyEnabled(false)
+     * .kmsKeyArn("kmsKeyArn")
+     * .build())
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -14774,6 +15218,10 @@ public object ec2 {
      * .description("description")
      * .policyDocument("policyDocument")
      * .policyEnabled(false)
+     * .sseSpecification(SseSpecificationProperty.builder()
+     * .customerManagedKeyEnabled(false)
+     * .kmsKeyArn("kmsKeyArn")
+     * .build())
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -14792,7 +15240,36 @@ public object ec2 {
     }
 
     /**
-     * Describes a Verified Access instance.
+     * AWS Verified Access provides server side encryption by default to data at rest using AWS
+     * -owned KMS keys.
+     *
+     * You also have the option of using customer managed KMS keys, which can be specified using the
+     * options below.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ec2.*;
+     * SseSpecificationProperty sseSpecificationProperty = SseSpecificationProperty.builder()
+     * .customerManagedKeyEnabled(false)
+     * .kmsKeyArn("kmsKeyArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessgroup-ssespecification.html)
+     */
+    public inline fun cfnVerifiedAccessGroupSseSpecificationProperty(
+        block: CfnVerifiedAccessGroupSseSpecificationPropertyDsl.() -> Unit = {}
+    ): CfnVerifiedAccessGroup.SseSpecificationProperty {
+        val builder = CfnVerifiedAccessGroupSseSpecificationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * An AWS Verified Access instance is a regional entity that evaluates application requests and
+     * grants access only when your security requirements are met.
      *
      * Example:
      * ```
@@ -14802,6 +15279,7 @@ public object ec2 {
      * CfnVerifiedAccessInstance cfnVerifiedAccessInstance =
      * CfnVerifiedAccessInstance.Builder.create(this, "MyCfnVerifiedAccessInstance")
      * .description("description")
+     * .fipsEnabled(false)
      * .loggingConfigurations(VerifiedAccessLogsProperty.builder()
      * .cloudWatchLogs(CloudWatchLogsProperty.builder()
      * .enabled(false)
@@ -14906,6 +15384,7 @@ public object ec2 {
      * CfnVerifiedAccessInstanceProps cfnVerifiedAccessInstanceProps =
      * CfnVerifiedAccessInstanceProps.builder()
      * .description("description")
+     * .fipsEnabled(false)
      * .loggingConfigurations(VerifiedAccessLogsProperty.builder()
      * .cloudWatchLogs(CloudWatchLogsProperty.builder()
      * .enabled(false)
@@ -15014,7 +15493,11 @@ public object ec2 {
     }
 
     /**
-     * Describes a Verified Access trust provider.
+     * A trust provider is a third-party entity that creates, maintains, and manages identity
+     * information for users and devices.
+     *
+     * When an application request is made, the identity information sent by the trust provider is
+     * evaluated by Verified Access before allowing or denying the application request.
      *
      * Example:
      * ```
@@ -15042,7 +15525,11 @@ public object ec2 {
     }
 
     /**
-     * Describes a Verified Access trust provider.
+     * A trust provider is a third-party entity that creates, maintains, and manages identity
+     * information for users and devices.
+     *
+     * When an application request is made, the identity information sent by the trust provider is
+     * evaluated by Verified Access before allowing or denying the application request.
      *
      * Example:
      * ```
@@ -15056,6 +15543,7 @@ public object ec2 {
      * // the properties below are optional
      * .description("description")
      * .deviceOptions(DeviceOptionsProperty.builder()
+     * .publicSigningKeyUrl("publicSigningKeyUrl")
      * .tenantId("tenantId")
      * .build())
      * .deviceTrustProviderType("deviceTrustProviderType")
@@ -15067,6 +15555,10 @@ public object ec2 {
      * .scope("scope")
      * .tokenEndpoint("tokenEndpoint")
      * .userInfoEndpoint("userInfoEndpoint")
+     * .build())
+     * .sseSpecification(SseSpecificationProperty.builder()
+     * .customerManagedKeyEnabled(false)
+     * .kmsKeyArn("kmsKeyArn")
      * .build())
      * .tags(List.of(CfnTag.builder()
      * .key("key")
@@ -15097,6 +15589,7 @@ public object ec2 {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.ec2.*;
      * DeviceOptionsProperty deviceOptionsProperty = DeviceOptionsProperty.builder()
+     * .publicSigningKeyUrl("publicSigningKeyUrl")
      * .tenantId("tenantId")
      * .build();
      * ```
@@ -15155,6 +15648,7 @@ public object ec2 {
      * // the properties below are optional
      * .description("description")
      * .deviceOptions(DeviceOptionsProperty.builder()
+     * .publicSigningKeyUrl("publicSigningKeyUrl")
      * .tenantId("tenantId")
      * .build())
      * .deviceTrustProviderType("deviceTrustProviderType")
@@ -15166,6 +15660,10 @@ public object ec2 {
      * .scope("scope")
      * .tokenEndpoint("tokenEndpoint")
      * .userInfoEndpoint("userInfoEndpoint")
+     * .build())
+     * .sseSpecification(SseSpecificationProperty.builder()
+     * .customerManagedKeyEnabled(false)
+     * .kmsKeyArn("kmsKeyArn")
      * .build())
      * .tags(List.of(CfnTag.builder()
      * .key("key")
@@ -15186,11 +15684,35 @@ public object ec2 {
     }
 
     /**
-     * Specifies an Amazon Elastic Block Store (Amazon EBS) volume.
+     * AWS Verified Access provides server side encryption by default to data at rest using AWS
+     * -owned KMS keys.
      *
-     * You can attach the volume to an instance in the same Availability Zone using
-     * [AWS::EC2::VolumeAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volumeattachment.html)
-     * .
+     * You also have the option of using customer managed KMS keys, which can be specified using the
+     * options below.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ec2.*;
+     * SseSpecificationProperty sseSpecificationProperty = SseSpecificationProperty.builder()
+     * .customerManagedKeyEnabled(false)
+     * .kmsKeyArn("kmsKeyArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-ssespecification.html)
+     */
+    public inline fun cfnVerifiedAccessTrustProviderSseSpecificationProperty(
+        block: CfnVerifiedAccessTrustProviderSseSpecificationPropertyDsl.() -> Unit = {}
+    ): CfnVerifiedAccessTrustProvider.SseSpecificationProperty {
+        val builder = CfnVerifiedAccessTrustProviderSseSpecificationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies an Amazon Elastic Block Store (Amazon EBS) volume.
      *
      * When you use AWS CloudFormation to update an Amazon EBS volume that modifies `Iops` , `Size`
      * , or `VolumeType` , there is a cooldown period before another operation can occur. This can
@@ -15843,6 +16365,30 @@ public object ec2 {
     }
 
     /**
+     * Request for IPv6 CIDR block to be split up.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ec2.*;
+     * CreateIpv6CidrBlocksRequest createIpv6CidrBlocksRequest = CreateIpv6CidrBlocksRequest.builder()
+     * .ipv6SelectedCidr("ipv6SelectedCidr")
+     * .subnetCount(123)
+     * // the properties below are optional
+     * .sizeMask("sizeMask")
+     * .build();
+     * ```
+     */
+    public inline fun createIpv6CidrBlocksRequest(
+        block: CreateIpv6CidrBlocksRequestDsl.() -> Unit = {}
+    ): CreateIpv6CidrBlocksRequest {
+        val builder = CreateIpv6CidrBlocksRequestDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Options for writing logs to a destination.
      *
      * TODO: there are other destination options, currently they are only for s3 destinations (not
@@ -15876,7 +16422,7 @@ public object ec2 {
      * BastionHostLinux host = BastionHostLinux.Builder.create(this, "BastionHost")
      * .vpc(vpc)
      * .blockDevices(List.of(BlockDevice.builder()
-     * .deviceName("EBSBastionHost")
+     * .deviceName("/dev/sdh")
      * .volume(BlockDeviceVolume.ebs(10, EbsDeviceOptions.builder()
      * .encrypted(true)
      * .build()))
@@ -16034,14 +16580,9 @@ public object ec2 {
      *
      * Example:
      * ```
-     * Vpc vpc;
-     * LogGroup logGroup = new LogGroup(this, "MyCustomLogGroup");
-     * Role role = Role.Builder.create(this, "MyCustomRole")
-     * .assumedBy(new ServicePrincipal("vpc-flow-logs.amazonaws.com"))
-     * .build();
-     * FlowLog.Builder.create(this, "FlowLog")
-     * .resourceType(FlowLogResourceType.fromVpc(vpc))
-     * .destination(FlowLogDestination.toCloudWatchLogs(logGroup, role))
+     * CfnTransitGateway tgw;
+     * FlowLog.Builder.create(this, "TransitGatewayFlowLog")
+     * .resourceType(FlowLogResourceType.fromTransitGatewayId(tgw.getRef()))
      * .build();
      * ```
      */
@@ -16072,6 +16613,7 @@ public object ec2 {
      * FlowLogDestinationConfig flowLogDestinationConfig = FlowLogDestinationConfig.builder()
      * .logDestinationType(FlowLogDestinationType.CLOUD_WATCH_LOGS)
      * // the properties below are optional
+     * .deliveryStreamArn("deliveryStreamArn")
      * .destinationOptions(DestinationOptions.builder()
      * .fileFormat(FlowLogFileFormat.PLAIN_TEXT)
      * .hiveCompatiblePartitions(false)
@@ -16119,14 +16661,9 @@ public object ec2 {
      *
      * Example:
      * ```
-     * Vpc vpc;
-     * LogGroup logGroup = new LogGroup(this, "MyCustomLogGroup");
-     * Role role = Role.Builder.create(this, "MyCustomRole")
-     * .assumedBy(new ServicePrincipal("vpc-flow-logs.amazonaws.com"))
-     * .build();
-     * FlowLog.Builder.create(this, "FlowLog")
-     * .resourceType(FlowLogResourceType.fromVpc(vpc))
-     * .destination(FlowLogDestination.toCloudWatchLogs(logGroup, role))
+     * CfnTransitGateway tgw;
+     * FlowLog.Builder.create(this, "TransitGatewayFlowLog")
+     * .resourceType(FlowLogResourceType.fromTransitGatewayId(tgw.getRef()))
      * .build();
      * ```
      */
@@ -16818,6 +17355,72 @@ public object ec2 {
     }
 
     /**
+     * An EC2 Key Pair.
+     *
+     * Example:
+     * ```
+     * IKeyPair keyPair = KeyPair.fromKeyPairAttributes(this, "KeyPair", KeyPairAttributes.builder()
+     * .keyPairName("the-keypair-name")
+     * .type(KeyPairType.RSA)
+     * .build());
+     * ```
+     */
+    public inline fun keyPair(
+        scope: Construct,
+        id: String,
+        block: KeyPairDsl.() -> Unit = {},
+    ): KeyPair {
+        val builder = KeyPairDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Attributes of a Key Pair.
+     *
+     * Example:
+     * ```
+     * IKeyPair keyPair = KeyPair.fromKeyPairAttributes(this, "KeyPair", KeyPairAttributes.builder()
+     * .keyPairName("the-keypair-name")
+     * .type(KeyPairType.RSA)
+     * .build());
+     * ```
+     */
+    public inline fun keyPairAttributes(
+        block: KeyPairAttributesDsl.() -> Unit = {}
+    ): KeyPairAttributes {
+        val builder = KeyPairAttributesDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The properties of a Key Pair.
+     *
+     * Example:
+     * ```
+     * Vpc vpc;
+     * InstanceType instanceType;
+     * KeyPair keyPair = KeyPair.Builder.create(this, "KeyPair")
+     * .type(KeyPairType.ED25519)
+     * .format(KeyPairFormat.PEM)
+     * .build();
+     * Instance instance = Instance.Builder.create(this, "Instance")
+     * .vpc(vpc)
+     * .instanceType(instanceType)
+     * .machineImage(MachineImage.latestAmazonLinux2023())
+     * // Use the custom key pair
+     * .keyPair(keyPair)
+     * .build();
+     * ```
+     */
+    public inline fun keyPairProps(block: KeyPairPropsDsl.() -> Unit = {}): KeyPairProps {
+        val builder = KeyPairPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * This represents an EC2 LaunchTemplate.
      *
      * Example:
@@ -17273,14 +17876,13 @@ public object ec2 {
      *
      * Example:
      * ```
-     * // Configure the `natGatewayProvider` when defining a Vpc
-     * NatInstanceProvider natGatewayProvider = NatProvider.instance(NatInstanceProps.builder()
-     * .instanceType(new InstanceType("t3.small"))
+     * NatInstanceProvider natInstanceProvider = NatProvider.instance(NatInstanceProps.builder()
+     * .instanceType(InstanceType.of(InstanceClass.T4G, InstanceSize.LARGE))
+     * .machineImage(new AmazonLinuxImage())
+     * .creditSpecification(CpuCredits.UNLIMITED)
      * .build());
-     * Vpc vpc = Vpc.Builder.create(this, "MyVpc")
-     * .natGatewayProvider(natGatewayProvider)
-     * // The 'natGateways' parameter now controls the number of NAT instances
-     * .natGateways(2)
+     * Vpc.Builder.create(this, "VPC")
+     * .natGatewayProvider(natInstanceProvider)
      * .build();
      * ```
      */
@@ -17595,6 +18197,8 @@ public object ec2 {
      * .cidrBlock("cidrBlock")
      * .vpcId("vpcId")
      * // the properties below are optional
+     * .assignIpv6AddressOnCreation(false)
+     * .ipv6CidrBlock("ipv6CidrBlock")
      * .mapPublicIpOnLaunch(false)
      * .build();
      * ```
@@ -17643,6 +18247,8 @@ public object ec2 {
      * .cidrBlock("cidrBlock")
      * .vpcId("vpcId")
      * // the properties below are optional
+     * .assignIpv6AddressOnCreation(false)
+     * .ipv6CidrBlock("ipv6CidrBlock")
      * .mapPublicIpOnLaunch(false)
      * .build();
      * ```
@@ -17668,6 +18274,8 @@ public object ec2 {
      * .cidrBlock("cidrBlock")
      * .vpcId("vpcId")
      * // the properties below are optional
+     * .assignIpv6AddressOnCreation(false)
+     * .ipv6CidrBlock("ipv6CidrBlock")
      * .mapPublicIpOnLaunch(false)
      * .build();
      * ```
@@ -17716,6 +18324,8 @@ public object ec2 {
      * .cidrBlock("cidrBlock")
      * .vpcId("vpcId")
      * // the properties below are optional
+     * .assignIpv6AddressOnCreation(false)
+     * .ipv6CidrBlock("ipv6CidrBlock")
      * .mapPublicIpOnLaunch(false)
      * .build();
      * ```
@@ -17743,6 +18353,7 @@ public object ec2 {
      * .subnetType(SubnetType.PRIVATE_ISOLATED)
      * // the properties below are optional
      * .cidrMask(123)
+     * .ipv6AssignAddressOnCreation(false)
      * .mapPublicIpOnLaunch(false)
      * .reserved(false)
      * .build())
@@ -17946,17 +18557,16 @@ public object ec2 {
      * Example:
      * ```
      * Vpc vpc;
-     * SecurityGroup sg1 = SecurityGroup.Builder.create(this, "sg1")
+     * SecurityGroup securityGroup1 = SecurityGroup.Builder.create(this,
+     * "SecurityGroup1").vpc(vpc).build();
+     * ApplicationLoadBalancer lb = ApplicationLoadBalancer.Builder.create(this, "LB")
      * .vpc(vpc)
+     * .internetFacing(true)
+     * .securityGroup(securityGroup1)
      * .build();
-     * SecurityGroup sg2 = SecurityGroup.Builder.create(this, "sg2")
-     * .vpc(vpc)
-     * .build();
-     * LaunchTemplate launchTemplate = LaunchTemplate.Builder.create(this, "LaunchTemplate")
-     * .machineImage(MachineImage.latestAmazonLinux2023())
-     * .securityGroup(sg1)
-     * .build();
-     * launchTemplate.addSecurityGroup(sg2);
+     * SecurityGroup securityGroup2 = SecurityGroup.Builder.create(this,
+     * "SecurityGroup2").vpc(vpc).build();
+     * lb.addSecurityGroup(securityGroup2);
      * ```
      */
     public inline fun securityGroupProps(
@@ -18102,6 +18712,7 @@ public object ec2 {
      * .subnetType(SubnetType.PRIVATE_ISOLATED)
      * // the properties below are optional
      * .cidrMask(123)
+     * .ipv6AssignAddressOnCreation(false)
      * .mapPublicIpOnLaunch(false)
      * .reserved(false)
      * .build();
@@ -18116,7 +18727,7 @@ public object ec2 {
     }
 
     /**
-     * Cidr Allocated Subnets.
+     * CIDR Allocated Subnets.
      *
      * Example:
      * ```
@@ -18126,6 +18737,8 @@ public object ec2 {
      * SubnetIpamOptions subnetIpamOptions = SubnetIpamOptions.builder()
      * .allocatedSubnets(List.of(AllocatedSubnet.builder()
      * .cidr("cidr")
+     * // the properties below are optional
+     * .ipv6Cidr("ipv6Cidr")
      * .build()))
      * .build();
      * ```
@@ -18205,6 +18818,8 @@ public object ec2 {
      * .cidrBlock("cidrBlock")
      * .vpcId("vpcId")
      * // the properties below are optional
+     * .assignIpv6AddressOnCreation(false)
+     * .ipv6CidrBlock("ipv6CidrBlock")
      * .mapPublicIpOnLaunch(false)
      * .build();
      * ```
@@ -18227,15 +18842,16 @@ public object ec2 {
      * ```
      * Vpc vpc;
      * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
-     * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder()
-     * .version(AuroraMysqlEngineVersion.VER_3_03_0)
-     * .build()))
-     * .instances(2)
-     * .instanceProps(InstanceProps.builder()
-     * .instanceType(InstanceType.of(InstanceClass.BURSTABLE3, InstanceSize.SMALL))
-     * .vpcSubnets(SubnetSelection.builder().subnetType(SubnetType.PUBLIC).build())
-     * .vpc(vpc)
+     * .masterUser(Login.builder()
+     * .username("myuser")
      * .build())
+     * .instanceType(InstanceType.of(InstanceClass.MEMORY5, InstanceSize.LARGE))
+     * .vpcSubnets(SubnetSelection.builder()
+     * .subnetType(SubnetType.PUBLIC)
+     * .build())
+     * .vpc(vpc)
+     * .removalPolicy(RemovalPolicy.SNAPSHOT)
+     * .instanceRemovalPolicy(RemovalPolicy.RETAIN)
      * .build();
      * ```
      */
@@ -18430,6 +19046,7 @@ public object ec2 {
      * .vpcEndpointServiceLoadBalancers(List.of(networkLoadBalancer1, networkLoadBalancer2))
      * .acceptanceRequired(true)
      * .allowedPrincipals(List.of(new ArnPrincipal("arn:aws:iam::123456789012:root")))
+     * .contributorInsights(true)
      * .build();
      * ```
      */
@@ -18454,6 +19071,7 @@ public object ec2 {
      * .vpcEndpointServiceLoadBalancers(List.of(networkLoadBalancer1, networkLoadBalancer2))
      * .acceptanceRequired(true)
      * .allowedPrincipals(List.of(new ArnPrincipal("arn:aws:iam::123456789012:root")))
+     * .contributorInsights(true)
      * .build();
      * ```
      */
@@ -18466,7 +19084,7 @@ public object ec2 {
     }
 
     /**
-     * Cidr Allocated Vpc.
+     * CIDR Allocated Vpc.
      *
      * Example:
      * ```
@@ -18607,14 +19225,13 @@ public object ec2 {
     /**
      * Example:
      * ```
-     * Vpc vpc = Vpc.Builder.create(this, "MyVpc")
-     * .vpnConnections(Map.of(
-     * "dynamic", VpnConnectionOptions.builder() // Dynamic routing (BGP)
-     * .ip("1.2.3.4").build(),
-     * "static", VpnConnectionOptions.builder() // Static routing
-     * .ip("4.5.6.7")
-     * .staticRoutes(List.of("192.168.10.0/24", "192.168.20.0/24")).build()))
-     * .build();
+     * // Across all tunnels in the account/region
+     * Metric allDataOut = VpnConnection.metricAllTunnelDataOut();
+     * // For a specific vpn connection
+     * VpnConnection vpnConnection = vpc.addVpnConnection("Dynamic", VpnConnectionOptions.builder()
+     * .ip("1.2.3.4")
+     * .build());
+     * Metric state = vpnConnection.metricTunnelState();
      * ```
      */
     public inline fun vpnConnectionOptions(

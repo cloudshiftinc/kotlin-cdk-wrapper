@@ -29,7 +29,9 @@ import software.amazon.awscdk.services.networkmanager.CfnGlobalNetworkProps
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.networkmanager.*;
  * CfnGlobalNetworkProps cfnGlobalNetworkProps = CfnGlobalNetworkProps.builder()
+ * .createdAt("createdAt")
  * .description("description")
+ * .state("state")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -45,12 +47,22 @@ public class CfnGlobalNetworkPropsDsl {
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
+    /** @param createdAt The date and time that the global network was created. */
+    public fun createdAt(createdAt: String) {
+        cdkBuilder.createdAt(createdAt)
+    }
+
     /**
      * @param description A description of the global network. Constraints: Maximum length of 256
      *   characters.
      */
     public fun description(description: String) {
         cdkBuilder.description(description)
+    }
+
+    /** @param state The state of the global network. */
+    public fun state(state: String) {
+        cdkBuilder.state(state)
     }
 
     /** @param tags The tags for the global network. */

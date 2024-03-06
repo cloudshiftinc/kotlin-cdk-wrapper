@@ -14,6 +14,7 @@ package io.cloudshiftdev.awscdkdsl.services.rds
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.String
 import kotlin.collections.Map
+import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.rds.IEngine
 import software.amazon.awscdk.services.rds.ParameterGroup
 import software.constructs.Construct
@@ -43,7 +44,7 @@ import software.constructs.Construct
  * "ServerlessCluster")
  * .engine(DatabaseClusterEngine.AURORA_POSTGRESQL)
  * .parameterGroup(ParameterGroup.fromParameterGroupName(this, "ParameterGroup",
- * "default.aurora-postgresql10"))
+ * "default.aurora-postgresql11"))
  * .vpc(vpc)
  * .build();
  * Construct myCoolConstruct = new Construct(this, "MyCoolConstruct");
@@ -92,6 +93,19 @@ public class ParameterGroupDsl(
      */
     public fun parameters(parameters: Map<String, String>) {
         cdkBuilder.parameters(parameters)
+    }
+
+    /**
+     * The CloudFormation policy to apply when the instance is removed from the stack or replaced
+     * during an update.
+     *
+     * Default: - RemovalPolicy.DESTROY
+     *
+     * @param removalPolicy The CloudFormation policy to apply when the instance is removed from the
+     *   stack or replaced during an update.
+     */
+    public fun removalPolicy(removalPolicy: RemovalPolicy) {
+        cdkBuilder.removalPolicy(removalPolicy)
     }
 
     public fun build(): ParameterGroup = cdkBuilder.build()

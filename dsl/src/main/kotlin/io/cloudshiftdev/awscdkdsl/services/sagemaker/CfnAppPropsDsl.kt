@@ -61,10 +61,7 @@ public class CfnAppPropsDsl {
         cdkBuilder.appName(appName)
     }
 
-    /**
-     * @param appType The type of app. *Allowed Values* : `JupyterServer | KernelGateway |
-     *   RSessionGateway | RStudioServerPro | TensorBoard | Canvas`
-     */
+    /** @param appType The type of app. */
     public fun appType(appType: String) {
         cdkBuilder.appType(appType)
     }

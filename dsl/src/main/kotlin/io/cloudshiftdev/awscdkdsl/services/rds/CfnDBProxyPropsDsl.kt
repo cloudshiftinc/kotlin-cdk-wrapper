@@ -95,24 +95,24 @@ public class CfnDBProxyPropsDsl {
     }
 
     /**
-     * @param debugLogging Whether the proxy includes detailed information about SQL statements in
-     *   its logs. This information helps you to debug issues involving SQL behavior or the
-     *   performance and scalability of the proxy connections. The debug information includes the
-     *   text of SQL statements that you submit through the proxy. Thus, only enable this setting
-     *   when needed for debugging, and only when you have security measures in place to safeguard
-     *   any sensitive information that appears in the logs.
+     * @param debugLogging Specifies whether the proxy includes detailed information about SQL
+     *   statements in its logs. This information helps you to debug issues involving SQL behavior
+     *   or the performance and scalability of the proxy connections. The debug information includes
+     *   the text of SQL statements that you submit through the proxy. Thus, only enable this
+     *   setting when needed for debugging, and only when you have security measures in place to
+     *   safeguard any sensitive information that appears in the logs.
      */
     public fun debugLogging(debugLogging: Boolean) {
         cdkBuilder.debugLogging(debugLogging)
     }
 
     /**
-     * @param debugLogging Whether the proxy includes detailed information about SQL statements in
-     *   its logs. This information helps you to debug issues involving SQL behavior or the
-     *   performance and scalability of the proxy connections. The debug information includes the
-     *   text of SQL statements that you submit through the proxy. Thus, only enable this setting
-     *   when needed for debugging, and only when you have security measures in place to safeguard
-     *   any sensitive information that appears in the logs.
+     * @param debugLogging Specifies whether the proxy includes detailed information about SQL
+     *   statements in its logs. This information helps you to debug issues involving SQL behavior
+     *   or the performance and scalability of the proxy connections. The debug information includes
+     *   the text of SQL statements that you submit through the proxy. Thus, only enable this
+     *   setting when needed for debugging, and only when you have security measures in place to
+     *   safeguard any sensitive information that appears in the logs.
      */
     public fun debugLogging(debugLogging: IResolvable) {
         cdkBuilder.debugLogging(debugLogging)
@@ -125,7 +125,7 @@ public class CfnDBProxyPropsDsl {
      *   databases, specify `MYSQL` . For Aurora PostgreSQL and RDS for PostgreSQL databases,
      *   specify `POSTGRESQL` . For RDS for Microsoft SQL Server, specify `SQLSERVER` .
      *
-     * *Valid values* : `MYSQL` | `POSTGRESQL` | `SQLSERVER`
+     * *Valid Values* : `MYSQL` | `POSTGRESQL` | `SQLSERVER`
      */
     public fun engineFamily(engineFamily: String) {
         cdkBuilder.engineFamily(engineFamily)
@@ -141,18 +141,18 @@ public class CfnDBProxyPropsDsl {
     }
 
     /**
-     * @param requireTls A Boolean parameter that specifies whether Transport Layer Security (TLS)
-     *   encryption is required for connections to the proxy. By enabling this setting, you can
-     *   enforce encrypted TLS connections to the proxy.
+     * @param requireTls Specifies whether Transport Layer Security (TLS) encryption is required for
+     *   connections to the proxy. By enabling this setting, you can enforce encrypted TLS
+     *   connections to the proxy.
      */
     public fun requireTls(requireTls: Boolean) {
         cdkBuilder.requireTls(requireTls)
     }
 
     /**
-     * @param requireTls A Boolean parameter that specifies whether Transport Layer Security (TLS)
-     *   encryption is required for connections to the proxy. By enabling this setting, you can
-     *   enforce encrypted TLS connections to the proxy.
+     * @param requireTls Specifies whether Transport Layer Security (TLS) encryption is required for
+     *   connections to the proxy. By enabling this setting, you can enforce encrypted TLS
+     *   connections to the proxy.
      */
     public fun requireTls(requireTls: IResolvable) {
         cdkBuilder.requireTls(requireTls)

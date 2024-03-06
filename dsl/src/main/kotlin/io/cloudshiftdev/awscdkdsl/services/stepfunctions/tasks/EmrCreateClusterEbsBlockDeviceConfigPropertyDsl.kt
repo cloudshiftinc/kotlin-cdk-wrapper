@@ -31,7 +31,7 @@ import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
  * EbsBlockDeviceConfigProperty.builder()
  * .volumeSpecification(VolumeSpecificationProperty.builder()
  * .volumeSize(size)
- * .volumeType(EmrCreateCluster.getEbsBlockDeviceVolumeType().GP2)
+ * .volumeType(EmrCreateCluster.getEbsBlockDeviceVolumeType().GP3)
  * // the properties below are optional
  * .iops(123)
  * .build())

@@ -33,7 +33,9 @@ import software.amazon.awscdk.services.ecs.PlacementConstraint
 import software.amazon.awscdk.services.ecs.PlacementStrategy
 import software.amazon.awscdk.services.ecs.PropagatedTagSource
 import software.amazon.awscdk.services.ecs.ServiceConnectProps
+import software.amazon.awscdk.services.ecs.ServiceManagedVolume
 import software.amazon.awscdk.services.ecs.TaskDefinition
+import software.amazon.awscdk.services.ecs.TaskDefinitionRevision
 import software.constructs.Construct
 
 /**
@@ -68,6 +70,8 @@ public class Ec2ServiceDsl(
     private val _placementStrategies: MutableList<PlacementStrategy> = mutableListOf()
 
     private val _securityGroups: MutableList<ISecurityGroup> = mutableListOf()
+
+    private val _volumeConfigurations: MutableList<ServiceManagedVolume> = mutableListOf()
 
     /**
      * Specifies whether the task's elastic network interface receives a public IP address.
@@ -184,7 +188,7 @@ public class Ec2ServiceDsl(
      * If true, the service scheduler deploys exactly one task on each container instance in your
      * cluster.
      *
-     * When you are using this strategy, do not specify a desired number of tasks orany task
+     * When you are using this strategy, do not specify a desired number of tasks or any task
      * placement strategies.
      *
      * Default: false
@@ -487,6 +491,44 @@ public class Ec2ServiceDsl(
     }
 
     /**
+     * Revision number for the task definition or `latest` to use the latest active task revision.
+     *
+     * Default: - Uses the revision of the passed task definition deployed by CloudFormation
+     *
+     * @param taskDefinitionRevision Revision number for the task definition or `latest` to use the
+     *   latest active task revision.
+     */
+    public fun taskDefinitionRevision(taskDefinitionRevision: TaskDefinitionRevision) {
+        cdkBuilder.taskDefinitionRevision(taskDefinitionRevision)
+    }
+
+    /**
+     * Configuration details for a volume used by the service.
+     *
+     * This allows you to specify details about the EBS volume that can be attched to ECS tasks.
+     *
+     * Default: - undefined
+     *
+     * @param volumeConfigurations Configuration details for a volume used by the service.
+     */
+    public fun volumeConfigurations(vararg volumeConfigurations: ServiceManagedVolume) {
+        _volumeConfigurations.addAll(listOf(*volumeConfigurations))
+    }
+
+    /**
+     * Configuration details for a volume used by the service.
+     *
+     * This allows you to specify details about the EBS volume that can be attched to ECS tasks.
+     *
+     * Default: - undefined
+     *
+     * @param volumeConfigurations Configuration details for a volume used by the service.
+     */
+    public fun volumeConfigurations(volumeConfigurations: Collection<ServiceManagedVolume>) {
+        _volumeConfigurations.addAll(volumeConfigurations)
+    }
+
+    /**
      * The subnets to associate with the service.
      *
      * This property is only used for tasks that use the awsvpc network mode.
@@ -523,6 +565,8 @@ public class Ec2ServiceDsl(
             cdkBuilder.placementConstraints(_placementConstraints)
         if (_placementStrategies.isNotEmpty()) cdkBuilder.placementStrategies(_placementStrategies)
         if (_securityGroups.isNotEmpty()) cdkBuilder.securityGroups(_securityGroups)
+        if (_volumeConfigurations.isNotEmpty())
+            cdkBuilder.volumeConfigurations(_volumeConfigurations)
         return cdkBuilder.build()
     }
 }

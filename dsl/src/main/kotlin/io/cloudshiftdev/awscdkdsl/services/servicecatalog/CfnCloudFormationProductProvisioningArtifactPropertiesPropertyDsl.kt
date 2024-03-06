@@ -121,7 +121,9 @@ public class CfnCloudFormationProductProvisioningArtifactPropertiesPropertyDsl {
     /**
      * @param type The type of provisioning artifact.
      * * `CLOUD_FORMATION_TEMPLATE` - AWS CloudFormation template
-     * * `TERRAFORM_OPEN_SOURCE` - Terraform open source configuration file
+     * * `TERRAFORM_OPEN_SOURCE` - Terraform Open Source configuration file
+     * * `TERRAFORM_CLOUD` - Terraform Cloud configuration file
+     * * `EXTERNAL` - External configuration file
      */
     public fun type(type: String) {
         cdkBuilder.type(type)

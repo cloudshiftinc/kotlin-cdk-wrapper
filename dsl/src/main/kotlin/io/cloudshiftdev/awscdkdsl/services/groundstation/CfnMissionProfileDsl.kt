@@ -71,32 +71,28 @@ public class CfnMissionProfileDsl(
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
-     * Amount of time in seconds after a contact ends that you’d like to receive a CloudWatch Event
-     * indicating the pass has finished.
-     *
-     * For more information on CloudWatch Events, see the
-     * [What Is CloudWatch Events?](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/WhatIsCloudWatchEvents.html)
+     * Amount of time in seconds after a contact ends that you’d like to receive a Ground Station
+     * Contact State Change indicating the pass has finished.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-missionprofile.html#cfn-groundstation-missionprofile-contactpostpassdurationseconds)
      *
      * @param contactPostPassDurationSeconds Amount of time in seconds after a contact ends that
-     *   you’d like to receive a CloudWatch Event indicating the pass has finished.
+     *   you’d like to receive a Ground Station Contact State Change indicating the pass has
+     *   finished.
      */
     public fun contactPostPassDurationSeconds(contactPostPassDurationSeconds: Number) {
         cdkBuilder.contactPostPassDurationSeconds(contactPostPassDurationSeconds)
     }
 
     /**
-     * Amount of time in seconds prior to contact start that you'd like to receive a CloudWatch
-     * Event indicating an upcoming pass.
-     *
-     * For more information on CloudWatch Events, see the
-     * [What Is CloudWatch Events?](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/WhatIsCloudWatchEvents.html)
+     * Amount of time in seconds prior to contact start that you'd like to receive a Ground Station
+     * Contact State Change Event indicating an upcoming pass.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-missionprofile.html#cfn-groundstation-missionprofile-contactprepassdurationseconds)
      *
      * @param contactPrePassDurationSeconds Amount of time in seconds prior to contact start that
-     *   you'd like to receive a CloudWatch Event indicating an upcoming pass.
+     *   you'd like to receive a Ground Station Contact State Change Event indicating an upcoming
+     *   pass.
      */
     public fun contactPrePassDurationSeconds(contactPrePassDurationSeconds: Number) {
         cdkBuilder.contactPrePassDurationSeconds(contactPrePassDurationSeconds)

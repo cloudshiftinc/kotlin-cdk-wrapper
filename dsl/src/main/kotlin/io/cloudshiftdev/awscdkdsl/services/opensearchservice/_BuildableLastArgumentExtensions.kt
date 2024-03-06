@@ -108,7 +108,7 @@ public inline fun CfnDomain.setSnapshotOptions(
     return setSnapshotOptions(builder.build())
 }
 
-/** Options for configuring service software updates for a domain. */
+/** Service software update options for the domain. */
 public inline fun CfnDomain.setSoftwareUpdateOptions(
     block: CfnDomainSoftwareUpdateOptionsPropertyDsl.() -> Unit = {}
 ) {

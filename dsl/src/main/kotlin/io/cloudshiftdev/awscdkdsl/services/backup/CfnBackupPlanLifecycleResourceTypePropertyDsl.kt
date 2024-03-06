@@ -12,7 +12,9 @@
 package io.cloudshiftdev.awscdkdsl.services.backup
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Boolean
 import kotlin.Number
+import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.backup.CfnBackupPlan
 
 /**
@@ -28,6 +30,7 @@ import software.amazon.awscdk.services.backup.CfnBackupPlan
  * LifecycleResourceTypeProperty.builder()
  * .deleteAfterDays(123)
  * .moveToColdStorageAfterDays(123)
+ * .optInToArchiveForSupportedResources(false)
  * .build();
  * ```
  *
@@ -52,6 +55,18 @@ public class CfnBackupPlanLifecycleResourceTypePropertyDsl {
      */
     public fun moveToColdStorageAfterDays(moveToColdStorageAfterDays: Number) {
         cdkBuilder.moveToColdStorageAfterDays(moveToColdStorageAfterDays)
+    }
+
+    /** @param optInToArchiveForSupportedResources the value to be set. */
+    public fun optInToArchiveForSupportedResources(optInToArchiveForSupportedResources: Boolean) {
+        cdkBuilder.optInToArchiveForSupportedResources(optInToArchiveForSupportedResources)
+    }
+
+    /** @param optInToArchiveForSupportedResources the value to be set. */
+    public fun optInToArchiveForSupportedResources(
+        optInToArchiveForSupportedResources: IResolvable
+    ) {
+        cdkBuilder.optInToArchiveForSupportedResources(optInToArchiveForSupportedResources)
     }
 
     public fun build(): CfnBackupPlan.LifecycleResourceTypeProperty = cdkBuilder.build()

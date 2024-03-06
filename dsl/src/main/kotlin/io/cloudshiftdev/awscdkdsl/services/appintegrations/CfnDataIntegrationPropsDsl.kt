@@ -37,12 +37,6 @@ import software.amazon.awscdk.services.appintegrations.CfnDataIntegrationProps
  * CfnDataIntegrationProps cfnDataIntegrationProps = CfnDataIntegrationProps.builder()
  * .kmsKey("kmsKey")
  * .name("name")
- * .scheduleConfig(ScheduleConfigProperty.builder()
- * .scheduleExpression("scheduleExpression")
- * // the properties below are optional
- * .firstExecutionFrom("firstExecutionFrom")
- * .object("object")
- * .build())
  * .sourceUri("sourceUri")
  * // the properties below are optional
  * .description("description")
@@ -52,6 +46,12 @@ import software.amazon.awscdk.services.appintegrations.CfnDataIntegrationProps
  * .filters(filters)
  * .build())
  * .objectConfiguration(objectConfiguration)
+ * .scheduleConfig(ScheduleConfigProperty.builder()
+ * .scheduleExpression("scheduleExpression")
+ * // the properties below are optional
+ * .firstExecutionFrom("firstExecutionFrom")
+ * .object("object")
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")

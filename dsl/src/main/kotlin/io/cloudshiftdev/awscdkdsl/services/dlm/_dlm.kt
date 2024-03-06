@@ -29,10 +29,23 @@ public object dlm {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.dlm.*;
+     * Object crossRegionCopyTargets;
+     * Object excludeTags;
+     * Object excludeVolumeTypes;
      * CfnLifecyclePolicy cfnLifecyclePolicy = CfnLifecyclePolicy.Builder.create(this,
      * "MyCfnLifecyclePolicy")
+     * .copyTags(false)
+     * .createInterval(123)
+     * .crossRegionCopyTargets(crossRegionCopyTargets)
+     * .defaultPolicy("defaultPolicy")
      * .description("description")
+     * .exclusions(ExclusionsProperty.builder()
+     * .excludeBootVolumes(false)
+     * .excludeTags(excludeTags)
+     * .excludeVolumeTypes(excludeVolumeTypes)
+     * .build())
      * .executionRoleArn("executionRoleArn")
+     * .extendDeletion(false)
      * .policyDetails(PolicyDetailsProperty.builder()
      * .actions(List.of(ActionProperty.builder()
      * .crossRegionCopy(List.of(CrossRegionCopyActionProperty.builder()
@@ -50,6 +63,9 @@ public object dlm {
      * .build()))
      * .name("name")
      * .build()))
+     * .copyTags(false)
+     * .createInterval(123)
+     * .crossRegionCopyTargets(crossRegionCopyTargets)
      * .eventSource(EventSourceProperty.builder()
      * .type("type")
      * // the properties below are optional
@@ -60,6 +76,12 @@ public object dlm {
      * .descriptionRegex("descriptionRegex")
      * .build())
      * .build())
+     * .exclusions(ExclusionsProperty.builder()
+     * .excludeBootVolumes(false)
+     * .excludeTags(excludeTags)
+     * .excludeVolumeTypes(excludeVolumeTypes)
+     * .build())
+     * .extendDeletion(false)
      * .parameters(ParametersProperty.builder()
      * .excludeBootVolume(false)
      * .excludeDataVolumeTags(List.of(CfnTag.builder()
@@ -68,9 +90,12 @@ public object dlm {
      * .build()))
      * .noReboot(false)
      * .build())
+     * .policyLanguage("policyLanguage")
      * .policyType("policyType")
      * .resourceLocations(List.of("resourceLocations"))
+     * .resourceType("resourceType")
      * .resourceTypes(List.of("resourceTypes"))
+     * .retainInterval(123)
      * .schedules(List.of(ScheduleProperty.builder()
      * .archiveRule(ArchiveRuleProperty.builder()
      * .retainRule(ArchiveRetainRuleProperty.builder()
@@ -87,6 +112,14 @@ public object dlm {
      * .interval(123)
      * .intervalUnit("intervalUnit")
      * .location("location")
+     * .scripts(List.of(ScriptProperty.builder()
+     * .executeOperationOnScriptFailure(false)
+     * .executionHandler("executionHandler")
+     * .executionHandlerService("executionHandlerService")
+     * .executionTimeout(123)
+     * .maximumRetryCount(123)
+     * .stages(List.of("stages"))
+     * .build()))
      * .times(List.of("times"))
      * .build())
      * .crossRegionCopyRules(List.of(CrossRegionCopyRuleProperty.builder()
@@ -141,6 +174,7 @@ public object dlm {
      * .value("value")
      * .build()))
      * .build())
+     * .retainInterval(123)
      * .state("state")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
@@ -198,6 +232,9 @@ public object dlm {
     }
 
     /**
+     * *[Custom snapshot policies only]* Specifies information about the archive storage tier
+     * retention period.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -223,6 +260,8 @@ public object dlm {
     }
 
     /**
+     * *[Custom snapshot policies only]* Specifies a snapshot archiving rule for a schedule.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -250,10 +289,12 @@ public object dlm {
     }
 
     /**
-     * *[Snapshot and AMI policies only]* Specifies when the policy should create snapshots or AMIs.
+     * *[Custom snapshot and AMI policies only]* Specifies when the policy should create snapshots
+     * or AMIs.
      * * You must specify either *CronExpression* , or *Interval* , *IntervalUnit* , and *Times* .
-     * * If you need to specify an `ArchiveRule` for the schedule, then you must specify a creation
-     *   frequency of at least 28 days.
+     * * If you need to specify an
+     *   [ArchiveRule](https://docs.aws.amazon.com/dlm/latest/APIReference/API_ArchiveRule.html) for
+     *   the schedule, then you must specify a creation frequency of at least 28 days.
      *
      * Example:
      * ```
@@ -265,6 +306,14 @@ public object dlm {
      * .interval(123)
      * .intervalUnit("intervalUnit")
      * .location("location")
+     * .scripts(List.of(ScriptProperty.builder()
+     * .executeOperationOnScriptFailure(false)
+     * .executionHandler("executionHandler")
+     * .executionHandlerService("executionHandlerService")
+     * .executionTimeout(123)
+     * .maximumRetryCount(123)
+     * .stages(List.of("stages"))
+     * .build()))
      * .times(List.of("times"))
      * .build();
      * ```
@@ -282,7 +331,8 @@ public object dlm {
     /**
      * *[Event-based policies only]* Specifies a cross-Region copy action for event-based policies.
      *
-     * To specify a cross-Region copy rule for snapshot and AMI policies, use `CrossRegionCopyRule`
+     * To specify a cross-Region copy rule for snapshot and AMI policies, use
+     * [CrossRegionCopyRule](https://docs.aws.amazon.com/dlm/latest/APIReference/API_CrossRegionCopyRule.html)
      * .
      *
      * Example:
@@ -317,6 +367,9 @@ public object dlm {
     }
 
     /**
+     * *[Custom AMI policies only]* Specifies an AMI deprecation rule for cross-Region AMI copies
+     * created by an AMI policy.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -368,10 +421,12 @@ public object dlm {
     }
 
     /**
-     * *[Snapshot and AMI policies only]* Specifies a cross-Region copy rule for snapshot and AMI
-     * policies.
+     * *[Custom snapshot and AMI policies only]* Specifies a cross-Region copy rule for a snapshot
+     * and AMI policies.
      *
-     * To specify a cross-Region copy action for event-based polices, use `CrossRegionCopyAction` .
+     * To specify a cross-Region copy action for event-based polices, use
+     * [CrossRegionCopyAction](https://docs.aws.amazon.com/dlm/latest/APIReference/API_CrossRegionCopyAction.html)
+     * .
      *
      * Example:
      * ```
@@ -407,6 +462,12 @@ public object dlm {
     }
 
     /**
+     * *[Custom AMI policies only]* Specifies an AMI deprecation rule for AMIs created by an AMI
+     * lifecycle policy.
+     *
+     * For age-based schedules, you must specify *Interval* and *IntervalUnit* . For count-based
+     * schedules, you must specify *Count* .
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -513,8 +574,39 @@ public object dlm {
     }
 
     /**
-     * *[Snapshot policies only]* Specifies a rule for enabling fast snapshot restore for snapshots
-     * created by snapshot policies.
+     * *[Default policies only]* Specifies exclusion parameters for volumes or instances for which
+     * you do not want to create snapshots or AMIs.
+     *
+     * The policy will not create snapshots or AMIs for target resources that match any of the
+     * specified exclusion parameters.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.dlm.*;
+     * Object excludeTags;
+     * Object excludeVolumeTypes;
+     * ExclusionsProperty exclusionsProperty = ExclusionsProperty.builder()
+     * .excludeBootVolumes(false)
+     * .excludeTags(excludeTags)
+     * .excludeVolumeTypes(excludeVolumeTypes)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-exclusions.html)
+     */
+    public inline fun cfnLifecyclePolicyExclusionsProperty(
+        block: CfnLifecyclePolicyExclusionsPropertyDsl.() -> Unit = {}
+    ): CfnLifecyclePolicy.ExclusionsProperty {
+        val builder = CfnLifecyclePolicyExclusionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * *[Custom snapshot policies only]* Specifies a rule for enabling fast snapshot restore for
+     * snapshots created by snapshot policies.
      *
      * You can enable fast snapshot restore based on either a count or a time interval.
      *
@@ -542,7 +634,7 @@ public object dlm {
     }
 
     /**
-     * *[Snapshot and AMI policies only]* Specifies optional parameters for snapshot and AMI
+     * *[Custom snapshot and AMI policies only]* Specifies optional parameters for snapshot and AMI
      * policies.
      *
      * The set of valid parameters depends on the combination of policy type and target resource
@@ -581,13 +673,16 @@ public object dlm {
     }
 
     /**
-     * *[All policy types]* Specifies the configuration of a lifecycle policy.
+     * Specifies the configuration of a lifecycle policy.
      *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.dlm.*;
+     * Object crossRegionCopyTargets;
+     * Object excludeTags;
+     * Object excludeVolumeTypes;
      * PolicyDetailsProperty policyDetailsProperty = PolicyDetailsProperty.builder()
      * .actions(List.of(ActionProperty.builder()
      * .crossRegionCopy(List.of(CrossRegionCopyActionProperty.builder()
@@ -605,6 +700,9 @@ public object dlm {
      * .build()))
      * .name("name")
      * .build()))
+     * .copyTags(false)
+     * .createInterval(123)
+     * .crossRegionCopyTargets(crossRegionCopyTargets)
      * .eventSource(EventSourceProperty.builder()
      * .type("type")
      * // the properties below are optional
@@ -615,6 +713,12 @@ public object dlm {
      * .descriptionRegex("descriptionRegex")
      * .build())
      * .build())
+     * .exclusions(ExclusionsProperty.builder()
+     * .excludeBootVolumes(false)
+     * .excludeTags(excludeTags)
+     * .excludeVolumeTypes(excludeVolumeTypes)
+     * .build())
+     * .extendDeletion(false)
      * .parameters(ParametersProperty.builder()
      * .excludeBootVolume(false)
      * .excludeDataVolumeTags(List.of(CfnTag.builder()
@@ -623,9 +727,12 @@ public object dlm {
      * .build()))
      * .noReboot(false)
      * .build())
+     * .policyLanguage("policyLanguage")
      * .policyType("policyType")
      * .resourceLocations(List.of("resourceLocations"))
+     * .resourceType("resourceType")
      * .resourceTypes(List.of("resourceTypes"))
+     * .retainInterval(123)
      * .schedules(List.of(ScheduleProperty.builder()
      * .archiveRule(ArchiveRuleProperty.builder()
      * .retainRule(ArchiveRetainRuleProperty.builder()
@@ -642,6 +749,14 @@ public object dlm {
      * .interval(123)
      * .intervalUnit("intervalUnit")
      * .location("location")
+     * .scripts(List.of(ScriptProperty.builder()
+     * .executeOperationOnScriptFailure(false)
+     * .executionHandler("executionHandler")
+     * .executionHandlerService("executionHandlerService")
+     * .executionTimeout(123)
+     * .maximumRetryCount(123)
+     * .stages(List.of("stages"))
+     * .build()))
      * .times(List.of("times"))
      * .build())
      * .crossRegionCopyRules(List.of(CrossRegionCopyRuleProperty.builder()
@@ -716,9 +831,22 @@ public object dlm {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.dlm.*;
+     * Object crossRegionCopyTargets;
+     * Object excludeTags;
+     * Object excludeVolumeTypes;
      * CfnLifecyclePolicyProps cfnLifecyclePolicyProps = CfnLifecyclePolicyProps.builder()
+     * .copyTags(false)
+     * .createInterval(123)
+     * .crossRegionCopyTargets(crossRegionCopyTargets)
+     * .defaultPolicy("defaultPolicy")
      * .description("description")
+     * .exclusions(ExclusionsProperty.builder()
+     * .excludeBootVolumes(false)
+     * .excludeTags(excludeTags)
+     * .excludeVolumeTypes(excludeVolumeTypes)
+     * .build())
      * .executionRoleArn("executionRoleArn")
+     * .extendDeletion(false)
      * .policyDetails(PolicyDetailsProperty.builder()
      * .actions(List.of(ActionProperty.builder()
      * .crossRegionCopy(List.of(CrossRegionCopyActionProperty.builder()
@@ -736,6 +864,9 @@ public object dlm {
      * .build()))
      * .name("name")
      * .build()))
+     * .copyTags(false)
+     * .createInterval(123)
+     * .crossRegionCopyTargets(crossRegionCopyTargets)
      * .eventSource(EventSourceProperty.builder()
      * .type("type")
      * // the properties below are optional
@@ -746,6 +877,12 @@ public object dlm {
      * .descriptionRegex("descriptionRegex")
      * .build())
      * .build())
+     * .exclusions(ExclusionsProperty.builder()
+     * .excludeBootVolumes(false)
+     * .excludeTags(excludeTags)
+     * .excludeVolumeTypes(excludeVolumeTypes)
+     * .build())
+     * .extendDeletion(false)
      * .parameters(ParametersProperty.builder()
      * .excludeBootVolume(false)
      * .excludeDataVolumeTags(List.of(CfnTag.builder()
@@ -754,9 +891,12 @@ public object dlm {
      * .build()))
      * .noReboot(false)
      * .build())
+     * .policyLanguage("policyLanguage")
      * .policyType("policyType")
      * .resourceLocations(List.of("resourceLocations"))
+     * .resourceType("resourceType")
      * .resourceTypes(List.of("resourceTypes"))
+     * .retainInterval(123)
      * .schedules(List.of(ScheduleProperty.builder()
      * .archiveRule(ArchiveRuleProperty.builder()
      * .retainRule(ArchiveRetainRuleProperty.builder()
@@ -773,6 +913,14 @@ public object dlm {
      * .interval(123)
      * .intervalUnit("intervalUnit")
      * .location("location")
+     * .scripts(List.of(ScriptProperty.builder()
+     * .executeOperationOnScriptFailure(false)
+     * .executionHandler("executionHandler")
+     * .executionHandlerService("executionHandlerService")
+     * .executionTimeout(123)
+     * .maximumRetryCount(123)
+     * .stages(List.of("stages"))
+     * .build()))
      * .times(List.of("times"))
      * .build())
      * .crossRegionCopyRules(List.of(CrossRegionCopyRuleProperty.builder()
@@ -827,6 +975,7 @@ public object dlm {
      * .value("value")
      * .build()))
      * .build())
+     * .retainInterval(123)
      * .state("state")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
@@ -846,12 +995,13 @@ public object dlm {
     }
 
     /**
-     * *[Snapshot and AMI policies only]* Specifies a retention rule for snapshots created by
+     * *[Custom snapshot and AMI policies only]* Specifies a retention rule for snapshots created by
      * snapshot policies, or for AMIs created by AMI policies.
      *
-     * For snapshot policies that have an `ArchiveRule` , this retention rule applies to standard
-     * tier retention. When the retention threshold is met, snapshots are moved from the standard to
-     * the archive tier.
+     * For snapshot policies that have an
+     * [ArchiveRule](https://docs.aws.amazon.com/dlm/latest/APIReference/API_ArchiveRule.html) ,
+     * this retention rule applies to standard tier retention. When the retention threshold is met,
+     * snapshots are moved from the standard to the archive tier.
      *
      * For snapshot policies that do not have an *ArchiveRule* , snapshots are permanently deleted
      * when this retention threshold is met.
@@ -859,16 +1009,24 @@ public object dlm {
      * You can retain snapshots based on either a count or a time interval.
      * * *Count-based retention*
      *
-     * You must specify *Count* . If you specify an `ArchiveRule` for the schedule, then you can
-     * specify a retention count of `0` to archive snapshots immediately after creation. If you
-     * specify a `FastRestoreRule` , `ShareRule` , or a `CrossRegionCopyRule` , then you must
-     * specify a retention count of `1` or more.
+     * You must specify *Count* . If you specify an
+     * [ArchiveRule](https://docs.aws.amazon.com/dlm/latest/APIReference/API_ArchiveRule.html) for
+     * the schedule, then you can specify a retention count of `0` to archive snapshots immediately
+     * after creation. If you specify a
+     * [FastRestoreRule](https://docs.aws.amazon.com/dlm/latest/APIReference/API_FastRestoreRule.html)
+     * , [ShareRule](https://docs.aws.amazon.com/dlm/latest/APIReference/API_ShareRule.html) , or a
+     * [CrossRegionCopyRule](https://docs.aws.amazon.com/dlm/latest/APIReference/API_CrossRegionCopyRule.html)
+     * , then you must specify a retention count of `1` or more.
      * * *Age-based retention*
      *
-     * You must specify *Interval* and *IntervalUnit* . If you specify an `ArchiveRule` for the
-     * schedule, then you can specify a retention interval of `0` days to archive snapshots
-     * immediately after creation. If you specify a `FastRestoreRule` , `ShareRule` , or a
-     * `CrossRegionCopyRule` , then you must specify a retention interval of `1` day or more.
+     * You must specify *Interval* and *IntervalUnit* . If you specify an
+     * [ArchiveRule](https://docs.aws.amazon.com/dlm/latest/APIReference/API_ArchiveRule.html) for
+     * the schedule, then you can specify a retention interval of `0` days to archive snapshots
+     * immediately after creation. If you specify a
+     * [FastRestoreRule](https://docs.aws.amazon.com/dlm/latest/APIReference/API_FastRestoreRule.html)
+     * , [ShareRule](https://docs.aws.amazon.com/dlm/latest/APIReference/API_ShareRule.html) , or a
+     * [CrossRegionCopyRule](https://docs.aws.amazon.com/dlm/latest/APIReference/API_CrossRegionCopyRule.html)
+     * , then you must specify a retention interval of `1` day or more.
      *
      * Example:
      * ```
@@ -893,6 +1051,21 @@ public object dlm {
     }
 
     /**
+     * *[Custom snapshot policies only]* Describes the retention rule for archived snapshots.
+     *
+     * Once the archive retention threshold is met, the snapshots are permanently deleted from the
+     * archive tier.
+     *
+     * The archive retention rule must retain snapshots in the archive tier for a minimum of 90
+     * days.
+     *
+     * For *count-based schedules* , you must specify *Count* . For *age-based schedules* , you must
+     * specify *Interval* and *IntervalUnit* .
+     *
+     * For more information about using snapshot archiving, see
+     * [Considerations for snapshot lifecycle policies](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-ami-policy.html#dlm-archive)
+     * .
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -917,8 +1090,8 @@ public object dlm {
     }
 
     /**
-     * *[Snapshot and AMI policies only]* Specifies a schedule for a snapshot or AMI lifecycle
-     * policy.
+     * *[Custom snapshot and AMI policies only]* Specifies a schedule for a snapshot or AMI
+     * lifecycle policy.
      *
      * Example:
      * ```
@@ -941,6 +1114,14 @@ public object dlm {
      * .interval(123)
      * .intervalUnit("intervalUnit")
      * .location("location")
+     * .scripts(List.of(ScriptProperty.builder()
+     * .executeOperationOnScriptFailure(false)
+     * .executionHandler("executionHandler")
+     * .executionHandlerService("executionHandlerService")
+     * .executionTimeout(123)
+     * .maximumRetryCount(123)
+     * .stages(List.of("stages"))
+     * .build()))
      * .times(List.of("times"))
      * .build())
      * .crossRegionCopyRules(List.of(CrossRegionCopyRuleProperty.builder()
@@ -1003,7 +1184,41 @@ public object dlm {
     }
 
     /**
-     * *[Snapshot policies only]* Specifies a rule for sharing snapshots across AWS accounts .
+     * *[Custom snapshot policies that target instances only]* Information about pre and/or post
+     * scripts for a snapshot lifecycle policy that targets instances.
+     *
+     * For more information, see
+     * [Automating application-consistent snapshots with pre and post scripts](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/automate-app-consistent-backups.html)
+     * .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.dlm.*;
+     * ScriptProperty scriptProperty = ScriptProperty.builder()
+     * .executeOperationOnScriptFailure(false)
+     * .executionHandler("executionHandler")
+     * .executionHandlerService("executionHandlerService")
+     * .executionTimeout(123)
+     * .maximumRetryCount(123)
+     * .stages(List.of("stages"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-script.html)
+     */
+    public inline fun cfnLifecyclePolicyScriptProperty(
+        block: CfnLifecyclePolicyScriptPropertyDsl.() -> Unit = {}
+    ): CfnLifecyclePolicy.ScriptProperty {
+        val builder = CfnLifecyclePolicyScriptPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * *[Custom snapshot policies only]* Specifies a rule for sharing snapshots across AWS accounts
+     * .
      *
      * Example:
      * ```

@@ -65,6 +65,7 @@ import software.amazon.awscdk.services.lambda.StartingPosition
  * .build()))
  * .startingPosition(StartingPosition.TRIM_HORIZON)
  * .startingPositionTimestamp(123)
+ * .supportS3OnFailureDestination(false)
  * .tumblingWindow(Duration.minutes(30))
  * .build();
  * ```
@@ -255,6 +256,14 @@ public class EventSourceMappingPropsDsl {
      */
     public fun startingPositionTimestamp(startingPositionTimestamp: Number) {
         cdkBuilder.startingPositionTimestamp(startingPositionTimestamp)
+    }
+
+    /**
+     * @param supportS3OnFailureDestination Check if support S3 onfailure destination(ODF).
+     *   Currently only MSK and self managed kafka event support S3 ODF
+     */
+    public fun supportS3OnFailureDestination(supportS3OnFailureDestination: Boolean) {
+        cdkBuilder.supportS3OnFailureDestination(supportS3OnFailureDestination)
     }
 
     /** @param target The target AWS Lambda function. */

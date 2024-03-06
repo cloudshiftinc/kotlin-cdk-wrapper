@@ -34,17 +34,9 @@ import software.constructs.Construct
  * import software.amazon.awscdk.services.amplifyuibuilder.*;
  * ThemeValuesProperty themeValuesProperty_;
  * CfnTheme cfnTheme = CfnTheme.Builder.create(this, "MyCfnTheme")
- * .name("name")
- * .values(List.of(ThemeValuesProperty.builder()
- * .key("key")
- * .value(ThemeValueProperty.builder()
- * .children(List.of(themeValuesProperty_))
- * .value("value")
- * .build())
- * .build()))
- * // the properties below are optional
  * .appId("appId")
  * .environmentName("environmentName")
+ * .name("name")
  * .overrides(List.of(ThemeValuesProperty.builder()
  * .key("key")
  * .value(ThemeValueProperty.builder()
@@ -54,6 +46,13 @@ import software.constructs.Construct
  * .build()))
  * .tags(Map.of(
  * "tagsKey", "tags"))
+ * .values(List.of(ThemeValuesProperty.builder()
+ * .key("key")
+ * .value(ThemeValueProperty.builder()
+ * .children(List.of(themeValuesProperty_))
+ * .value("value")
+ * .build())
+ * .build()))
  * .build();
  * ```
  *

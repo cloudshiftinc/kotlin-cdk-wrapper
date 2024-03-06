@@ -19,6 +19,8 @@ import software.amazon.awscdk.services.ivs.CfnPlaybackKeyPair
 import software.amazon.awscdk.services.ivs.CfnPlaybackKeyPairProps
 import software.amazon.awscdk.services.ivs.CfnRecordingConfiguration
 import software.amazon.awscdk.services.ivs.CfnRecordingConfigurationProps
+import software.amazon.awscdk.services.ivs.CfnStage
+import software.amazon.awscdk.services.ivs.CfnStageProps
 import software.amazon.awscdk.services.ivs.CfnStreamKey
 import software.amazon.awscdk.services.ivs.CfnStreamKeyProps
 import software.constructs.Construct
@@ -29,8 +31,8 @@ public object ivs {
      *
      * A channel stores configuration information related to your live stream. For more information,
      * see
-     * [CreateChannel](https://docs.aws.amazon.com/ivs/latest/APIReference/API_CreateChannel.html)
-     * in the *Amazon Interactive Video Service API Reference* .
+     * [CreateChannel](https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_CreateChannel.html)
+     * in the *Amazon IVS Low-Latency Streaming API Reference* .
      *
      * By default, the IVS API CreateChannel endpoint creates a stream key in addition to a channel.
      * The Channel resource *does not* create a stream key; to create a stream key, use the
@@ -104,8 +106,8 @@ public object ivs {
      *
      * uses a public playback key to validate playback tokens that have been signed with the
      * corresponding private key. For more information, see
-     * [Setting Up Private Channels](https://docs.aws.amazon.com/ivs/latest/userguide/private-channels.html)
-     * in the *Amazon Interactive Video Service User Guide* .
+     * [Setting Up Private Channels](https://docs.aws.amazon.com/ivs/latest/LowLatencyUserGuide/private-channels.html)
+     * in the *Amazon IVS Low-Latency Streaming User Guide* .
      *
      * Example:
      * ```
@@ -168,8 +170,8 @@ public object ivs {
      *
      * A recording configuration enables the recording of a channel’s live streams to a data store.
      * Multiple channels can reference the same recording configuration. For more information, see
-     * [RecordingConfiguration](https://docs.aws.amazon.com/ivs/latest/APIReference/API_RecordingConfiguration.html)
-     * in the *Amazon Interactive Video Service API Reference* .
+     * [RecordingConfiguration](https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_RecordingConfiguration.html)
+     * in the *Amazon IVS Low-Latency Streaming API Reference* .
      *
      * Example:
      * ```
@@ -365,6 +367,65 @@ public object ivs {
         block: CfnRecordingConfigurationThumbnailConfigurationPropertyDsl.() -> Unit = {}
     ): CfnRecordingConfiguration.ThumbnailConfigurationProperty {
         val builder = CfnRecordingConfigurationThumbnailConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The `AWS::IVS::Stage` resource specifies an stage.
+     *
+     * A stage is a virtual space where participants can exchange video in real time. For more
+     * information, see
+     * [CreateStage](https://docs.aws.amazon.com/ivs/latest/RealTimeAPIReference/API_CreateStage.html)
+     * in the *Amazon IVS Real-Time Streaming API Reference* .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ivs.*;
+     * CfnStage cfnStage = CfnStage.Builder.create(this, "MyCfnStage")
+     * .name("name")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-stage.html)
+     */
+    public inline fun cfnStage(
+        scope: Construct,
+        id: String,
+        block: CfnStageDsl.() -> Unit = {},
+    ): CfnStage {
+        val builder = CfnStageDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnStage`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ivs.*;
+     * CfnStageProps cfnStageProps = CfnStageProps.builder()
+     * .name("name")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-stage.html)
+     */
+    public inline fun cfnStageProps(block: CfnStagePropsDsl.() -> Unit = {}): CfnStageProps {
+        val builder = CfnStagePropsDsl()
         builder.apply(block)
         return builder.build()
     }

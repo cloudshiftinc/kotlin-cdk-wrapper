@@ -86,8 +86,9 @@ public class CfnDocumentClassifierDocumentReaderConfigPropertyDsl {
      * @param featureTypes Specifies the type of Amazon Textract features to apply. If you chose
      *   `TEXTRACT_ANALYZE_DOCUMENT` as the read action, you must specify one or both of the
      *   following values:
-     * * `TABLES` - Returns information about any tables that are detected in the input document.
-     * * `FORMS` - Returns information and the data from any forms that are detected in the input
+     * * `TABLES` - Returns additional information about any tables that are detected in the input
+     *   document.
+     * * `FORMS` - Returns additional information about any forms that are detected in the input
      *   document.
      */
     public fun featureTypes(vararg featureTypes: String) {
@@ -98,8 +99,9 @@ public class CfnDocumentClassifierDocumentReaderConfigPropertyDsl {
      * @param featureTypes Specifies the type of Amazon Textract features to apply. If you chose
      *   `TEXTRACT_ANALYZE_DOCUMENT` as the read action, you must specify one or both of the
      *   following values:
-     * * `TABLES` - Returns information about any tables that are detected in the input document.
-     * * `FORMS` - Returns information and the data from any forms that are detected in the input
+     * * `TABLES` - Returns additional information about any tables that are detected in the input
+     *   document.
+     * * `FORMS` - Returns additional information about any forms that are detected in the input
      *   document.
      */
     public fun featureTypes(featureTypes: Collection<String>) {

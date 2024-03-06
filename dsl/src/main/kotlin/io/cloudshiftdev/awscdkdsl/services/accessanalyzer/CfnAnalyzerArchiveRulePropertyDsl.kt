@@ -20,7 +20,7 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer
 
 /**
- * The criteria for an archive rule.
+ * Contains information about an archive rule.
  *
  * Example:
  * ```
@@ -64,7 +64,7 @@ public class CfnAnalyzerArchiveRulePropertyDsl {
         cdkBuilder.filter(filter)
     }
 
-    /** @param ruleName The name of the archive rule. */
+    /** @param ruleName The name of the rule to create. */
     public fun ruleName(ruleName: String) {
         cdkBuilder.ruleName(ruleName)
     }

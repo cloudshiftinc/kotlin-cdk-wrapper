@@ -13,6 +13,7 @@ package io.cloudshiftdev.awscdkdsl.services.msk
 
 import kotlin.Unit
 import software.amazon.awscdk.services.msk.CfnCluster
+import software.amazon.awscdk.services.msk.CfnConfiguration
 import software.amazon.awscdk.services.msk.CfnServerlessCluster
 
 /** Information about the broker nodes in the cluster. */
@@ -24,7 +25,7 @@ public inline fun CfnCluster.setBrokerNodeGroupInfo(
     return setBrokerNodeGroupInfo(builder.build())
 }
 
-/** Includes all client authentication related information. */
+/** VPC connection control settings for brokers. */
 public inline fun CfnCluster.setClientAuthentication(
     block: CfnClusterClientAuthenticationPropertyDsl.() -> Unit = {}
 ) {
@@ -69,7 +70,16 @@ public inline fun CfnCluster.setOpenMonitoring(
     return setOpenMonitoring(builder.build())
 }
 
-/**  */
+/** Latest revision of the configuration. */
+public inline fun CfnConfiguration.setLatestRevision(
+    block: CfnConfigurationLatestRevisionPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnConfigurationLatestRevisionPropertyDsl()
+    builder.apply(block)
+    return setLatestRevision(builder.build())
+}
+
+/** Includes all client authentication information. */
 public inline fun CfnServerlessCluster.setClientAuthentication(
     block: CfnServerlessClusterClientAuthenticationPropertyDsl.() -> Unit = {}
 ) {

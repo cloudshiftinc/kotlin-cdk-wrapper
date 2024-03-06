@@ -21,6 +21,8 @@ import software.amazon.awscdk.services.msk.CfnClusterPolicyProps
 import software.amazon.awscdk.services.msk.CfnClusterProps
 import software.amazon.awscdk.services.msk.CfnConfiguration
 import software.amazon.awscdk.services.msk.CfnConfigurationProps
+import software.amazon.awscdk.services.msk.CfnReplicator
+import software.amazon.awscdk.services.msk.CfnReplicatorProps
 import software.amazon.awscdk.services.msk.CfnServerlessCluster
 import software.amazon.awscdk.services.msk.CfnServerlessClusterProps
 import software.amazon.awscdk.services.msk.CfnVpcConnection
@@ -29,7 +31,7 @@ import software.constructs.Construct
 
 public object msk {
     /**
-     * Resource Type definition for AWS::MSK::BatchScramSecret.
+     * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-batchscramsecret.html.
      *
      * Example:
      * ```
@@ -1332,6 +1334,11 @@ public object msk {
      * // the properties below are optional
      * .description("description")
      * .kafkaVersionsList(List.of("kafkaVersionsList"))
+     * .latestRevision(LatestRevisionProperty.builder()
+     * .creationTime("creationTime")
+     * .description("description")
+     * .revision(123)
+     * .build())
      * .build();
      * ```
      *
@@ -1343,6 +1350,29 @@ public object msk {
         block: CfnConfigurationDsl.() -> Unit = {},
     ): CfnConfiguration {
         val builder = CfnConfigurationDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.msk.*;
+     * LatestRevisionProperty latestRevisionProperty = LatestRevisionProperty.builder()
+     * .creationTime("creationTime")
+     * .description("description")
+     * .revision(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-configuration-latestrevision.html)
+     */
+    public inline fun cfnConfigurationLatestRevisionProperty(
+        block: CfnConfigurationLatestRevisionPropertyDsl.() -> Unit = {}
+    ): CfnConfiguration.LatestRevisionProperty {
+        val builder = CfnConfigurationLatestRevisionPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -1361,6 +1391,11 @@ public object msk {
      * // the properties below are optional
      * .description("description")
      * .kafkaVersionsList(List.of("kafkaVersionsList"))
+     * .latestRevision(LatestRevisionProperty.builder()
+     * .creationTime("creationTime")
+     * .description("description")
+     * .revision(123)
+     * .build())
      * .build();
      * ```
      *
@@ -1375,7 +1410,304 @@ public object msk {
     }
 
     /**
-     * Resource Type definition for AWS::MSK::ServerlessCluster.
+     * Resource Type definition for AWS::MSK::Replicator.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.msk.*;
+     * CfnReplicator cfnReplicator = CfnReplicator.Builder.create(this, "MyCfnReplicator")
+     * .kafkaClusters(List.of(KafkaClusterProperty.builder()
+     * .amazonMskCluster(AmazonMskClusterProperty.builder()
+     * .mskClusterArn("mskClusterArn")
+     * .build())
+     * .vpcConfig(KafkaClusterClientVpcConfigProperty.builder()
+     * .subnetIds(List.of("subnetIds"))
+     * // the properties below are optional
+     * .securityGroupIds(List.of("securityGroupIds"))
+     * .build())
+     * .build()))
+     * .replicationInfoList(List.of(ReplicationInfoProperty.builder()
+     * .consumerGroupReplication(ConsumerGroupReplicationProperty.builder()
+     * .consumerGroupsToReplicate(List.of("consumerGroupsToReplicate"))
+     * // the properties below are optional
+     * .consumerGroupsToExclude(List.of("consumerGroupsToExclude"))
+     * .detectAndCopyNewConsumerGroups(false)
+     * .synchroniseConsumerGroupOffsets(false)
+     * .build())
+     * .sourceKafkaClusterArn("sourceKafkaClusterArn")
+     * .targetCompressionType("targetCompressionType")
+     * .targetKafkaClusterArn("targetKafkaClusterArn")
+     * .topicReplication(TopicReplicationProperty.builder()
+     * .topicsToReplicate(List.of("topicsToReplicate"))
+     * // the properties below are optional
+     * .copyAccessControlListsForTopics(false)
+     * .copyTopicConfigurations(false)
+     * .detectAndCopyNewTopics(false)
+     * .topicsToExclude(List.of("topicsToExclude"))
+     * .build())
+     * .build()))
+     * .replicatorName("replicatorName")
+     * .serviceExecutionRoleArn("serviceExecutionRoleArn")
+     * // the properties below are optional
+     * .currentVersion("currentVersion")
+     * .description("description")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html)
+     */
+    public inline fun cfnReplicator(
+        scope: Construct,
+        id: String,
+        block: CfnReplicatorDsl.() -> Unit = {},
+    ): CfnReplicator {
+        val builder = CfnReplicatorDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Details of an Amazon MSK cluster.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.msk.*;
+     * AmazonMskClusterProperty amazonMskClusterProperty = AmazonMskClusterProperty.builder()
+     * .mskClusterArn("mskClusterArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-amazonmskcluster.html)
+     */
+    public inline fun cfnReplicatorAmazonMskClusterProperty(
+        block: CfnReplicatorAmazonMskClusterPropertyDsl.() -> Unit = {}
+    ): CfnReplicator.AmazonMskClusterProperty {
+        val builder = CfnReplicatorAmazonMskClusterPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Configuration relating to consumer group replication.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.msk.*;
+     * ConsumerGroupReplicationProperty consumerGroupReplicationProperty =
+     * ConsumerGroupReplicationProperty.builder()
+     * .consumerGroupsToReplicate(List.of("consumerGroupsToReplicate"))
+     * // the properties below are optional
+     * .consumerGroupsToExclude(List.of("consumerGroupsToExclude"))
+     * .detectAndCopyNewConsumerGroups(false)
+     * .synchroniseConsumerGroupOffsets(false)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-consumergroupreplication.html)
+     */
+    public inline fun cfnReplicatorConsumerGroupReplicationProperty(
+        block: CfnReplicatorConsumerGroupReplicationPropertyDsl.() -> Unit = {}
+    ): CfnReplicator.ConsumerGroupReplicationProperty {
+        val builder = CfnReplicatorConsumerGroupReplicationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Details of an Amazon VPC which has network connectivity to the Kafka cluster.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.msk.*;
+     * KafkaClusterClientVpcConfigProperty kafkaClusterClientVpcConfigProperty =
+     * KafkaClusterClientVpcConfigProperty.builder()
+     * .subnetIds(List.of("subnetIds"))
+     * // the properties below are optional
+     * .securityGroupIds(List.of("securityGroupIds"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-kafkaclusterclientvpcconfig.html)
+     */
+    public inline fun cfnReplicatorKafkaClusterClientVpcConfigProperty(
+        block: CfnReplicatorKafkaClusterClientVpcConfigPropertyDsl.() -> Unit = {}
+    ): CfnReplicator.KafkaClusterClientVpcConfigProperty {
+        val builder = CfnReplicatorKafkaClusterClientVpcConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Details of a Kafka cluster for replication.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.msk.*;
+     * KafkaClusterProperty kafkaClusterProperty = KafkaClusterProperty.builder()
+     * .amazonMskCluster(AmazonMskClusterProperty.builder()
+     * .mskClusterArn("mskClusterArn")
+     * .build())
+     * .vpcConfig(KafkaClusterClientVpcConfigProperty.builder()
+     * .subnetIds(List.of("subnetIds"))
+     * // the properties below are optional
+     * .securityGroupIds(List.of("securityGroupIds"))
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-kafkacluster.html)
+     */
+    public inline fun cfnReplicatorKafkaClusterProperty(
+        block: CfnReplicatorKafkaClusterPropertyDsl.() -> Unit = {}
+    ): CfnReplicator.KafkaClusterProperty {
+        val builder = CfnReplicatorKafkaClusterPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnReplicator`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.msk.*;
+     * CfnReplicatorProps cfnReplicatorProps = CfnReplicatorProps.builder()
+     * .kafkaClusters(List.of(KafkaClusterProperty.builder()
+     * .amazonMskCluster(AmazonMskClusterProperty.builder()
+     * .mskClusterArn("mskClusterArn")
+     * .build())
+     * .vpcConfig(KafkaClusterClientVpcConfigProperty.builder()
+     * .subnetIds(List.of("subnetIds"))
+     * // the properties below are optional
+     * .securityGroupIds(List.of("securityGroupIds"))
+     * .build())
+     * .build()))
+     * .replicationInfoList(List.of(ReplicationInfoProperty.builder()
+     * .consumerGroupReplication(ConsumerGroupReplicationProperty.builder()
+     * .consumerGroupsToReplicate(List.of("consumerGroupsToReplicate"))
+     * // the properties below are optional
+     * .consumerGroupsToExclude(List.of("consumerGroupsToExclude"))
+     * .detectAndCopyNewConsumerGroups(false)
+     * .synchroniseConsumerGroupOffsets(false)
+     * .build())
+     * .sourceKafkaClusterArn("sourceKafkaClusterArn")
+     * .targetCompressionType("targetCompressionType")
+     * .targetKafkaClusterArn("targetKafkaClusterArn")
+     * .topicReplication(TopicReplicationProperty.builder()
+     * .topicsToReplicate(List.of("topicsToReplicate"))
+     * // the properties below are optional
+     * .copyAccessControlListsForTopics(false)
+     * .copyTopicConfigurations(false)
+     * .detectAndCopyNewTopics(false)
+     * .topicsToExclude(List.of("topicsToExclude"))
+     * .build())
+     * .build()))
+     * .replicatorName("replicatorName")
+     * .serviceExecutionRoleArn("serviceExecutionRoleArn")
+     * // the properties below are optional
+     * .currentVersion("currentVersion")
+     * .description("description")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html)
+     */
+    public inline fun cfnReplicatorProps(
+        block: CfnReplicatorPropsDsl.() -> Unit = {}
+    ): CfnReplicatorProps {
+        val builder = CfnReplicatorPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies configuration for replication between a source and target Kafka cluster.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.msk.*;
+     * ReplicationInfoProperty replicationInfoProperty = ReplicationInfoProperty.builder()
+     * .consumerGroupReplication(ConsumerGroupReplicationProperty.builder()
+     * .consumerGroupsToReplicate(List.of("consumerGroupsToReplicate"))
+     * // the properties below are optional
+     * .consumerGroupsToExclude(List.of("consumerGroupsToExclude"))
+     * .detectAndCopyNewConsumerGroups(false)
+     * .synchroniseConsumerGroupOffsets(false)
+     * .build())
+     * .sourceKafkaClusterArn("sourceKafkaClusterArn")
+     * .targetCompressionType("targetCompressionType")
+     * .targetKafkaClusterArn("targetKafkaClusterArn")
+     * .topicReplication(TopicReplicationProperty.builder()
+     * .topicsToReplicate(List.of("topicsToReplicate"))
+     * // the properties below are optional
+     * .copyAccessControlListsForTopics(false)
+     * .copyTopicConfigurations(false)
+     * .detectAndCopyNewTopics(false)
+     * .topicsToExclude(List.of("topicsToExclude"))
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-replicationinfo.html)
+     */
+    public inline fun cfnReplicatorReplicationInfoProperty(
+        block: CfnReplicatorReplicationInfoPropertyDsl.() -> Unit = {}
+    ): CfnReplicator.ReplicationInfoProperty {
+        val builder = CfnReplicatorReplicationInfoPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.msk.*;
+     * TopicReplicationProperty topicReplicationProperty = TopicReplicationProperty.builder()
+     * .topicsToReplicate(List.of("topicsToReplicate"))
+     * // the properties below are optional
+     * .copyAccessControlListsForTopics(false)
+     * .copyTopicConfigurations(false)
+     * .detectAndCopyNewTopics(false)
+     * .topicsToExclude(List.of("topicsToExclude"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html)
+     */
+    public inline fun cfnReplicatorTopicReplicationProperty(
+        block: CfnReplicatorTopicReplicationPropertyDsl.() -> Unit = {}
+    ): CfnReplicator.TopicReplicationProperty {
+        val builder = CfnReplicatorTopicReplicationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html.
      *
      * Example:
      * ```

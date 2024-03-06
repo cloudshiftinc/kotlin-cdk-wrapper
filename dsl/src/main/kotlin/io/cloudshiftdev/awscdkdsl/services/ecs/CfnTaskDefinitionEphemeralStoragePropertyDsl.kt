@@ -20,8 +20,8 @@ import software.amazon.awscdk.services.ecs.CfnTaskDefinition
  *
  * This parameter is used to expand the total amount of ephemeral storage available, beyond the
  * default amount, for tasks hosted on AWS Fargate . For more information, see
- * [Fargate task storage](https://docs.aws.amazon.com/AmazonECS/latest/userguide/using_data_volumes.html)
- * in the *Amazon ECS User Guide for AWS Fargate* .
+ * [Using data volumes in tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_data_volumes.html)
+ * in the *Amazon ECS Developer Guide;* .
  *
  * For tasks using the Fargate launch type, the task requires the following platforms:
  * * Linux platform version `1.4.0` or later.

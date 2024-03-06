@@ -16,6 +16,8 @@ import kotlin.String
 import software.amazon.awscdk.services.s3outposts.CfnEndpoint
 
 /**
+ * The failure reason, if any, for a create or delete endpoint operation.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.

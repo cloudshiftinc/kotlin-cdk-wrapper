@@ -135,8 +135,8 @@ public class CfnMaintenanceWindowPropsDsl {
 
     /**
      * @param startDate The date and time, in ISO-8601 Extended format, for when the maintenance
-     *   window is scheduled to become active. StartDate allows you to delay activation of the
-     *   Maintenance Window until the specified future date.
+     *   window is scheduled to become active. `StartDate` allows you to delay activation of the
+     *   maintenance window until the specified future date.
      */
     public fun startDate(startDate: String) {
         cdkBuilder.startDate(startDate)

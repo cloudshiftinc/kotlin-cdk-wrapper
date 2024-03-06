@@ -13,6 +13,7 @@ package io.cloudshiftdev.awscdkdsl.services.quicksight
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.String
+import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
 /**
@@ -24,6 +25,9 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.quicksight.*;
  * DataPathValueProperty dataPathValueProperty = DataPathValueProperty.builder()
+ * .dataPathType(DataPathTypeProperty.builder()
+ * .pivotTableDataPathType("pivotTableDataPathType")
+ * .build())
  * .fieldId("fieldId")
  * .fieldValue("fieldValue")
  * .build();
@@ -35,6 +39,16 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
 public class CfnAnalysisDataPathValuePropertyDsl {
     private val cdkBuilder: CfnAnalysis.DataPathValueProperty.Builder =
         CfnAnalysis.DataPathValueProperty.builder()
+
+    /** @param dataPathType The type configuration of the field. */
+    public fun dataPathType(dataPathType: IResolvable) {
+        cdkBuilder.dataPathType(dataPathType)
+    }
+
+    /** @param dataPathType The type configuration of the field. */
+    public fun dataPathType(dataPathType: CfnAnalysis.DataPathTypeProperty) {
+        cdkBuilder.dataPathType(dataPathType)
+    }
 
     /** @param fieldId The field ID of the field that needs to be sorted. */
     public fun fieldId(fieldId: String) {

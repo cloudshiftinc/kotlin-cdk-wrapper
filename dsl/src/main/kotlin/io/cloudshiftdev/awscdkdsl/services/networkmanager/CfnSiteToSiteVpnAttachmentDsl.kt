@@ -75,22 +75,26 @@ public class CfnSiteToSiteVpnAttachmentDsl(
     }
 
     /**
-     * The attachment to move from one segment to another.
+     * Describes a proposed segment change.
+     *
+     * In some cases, the segment change must first be evaluated and accepted.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html#cfn-networkmanager-sitetositevpnattachment-proposedsegmentchange)
      *
-     * @param proposedSegmentChange The attachment to move from one segment to another.
+     * @param proposedSegmentChange Describes a proposed segment change.
      */
     public fun proposedSegmentChange(proposedSegmentChange: IResolvable) {
         cdkBuilder.proposedSegmentChange(proposedSegmentChange)
     }
 
     /**
-     * The attachment to move from one segment to another.
+     * Describes a proposed segment change.
+     *
+     * In some cases, the segment change must first be evaluated and accepted.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html#cfn-networkmanager-sitetositevpnattachment-proposedsegmentchange)
      *
-     * @param proposedSegmentChange The attachment to move from one segment to another.
+     * @param proposedSegmentChange Describes a proposed segment change.
      */
     public fun proposedSegmentChange(
         proposedSegmentChange: CfnSiteToSiteVpnAttachment.ProposedSegmentChangeProperty

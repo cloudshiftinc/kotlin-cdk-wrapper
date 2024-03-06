@@ -39,12 +39,12 @@ import software.constructs.Construct
  * import software.amazon.awscdk.services.cloud9.*;
  * CfnEnvironmentEC2 cfnEnvironmentEC2 = CfnEnvironmentEC2.Builder.create(this,
  * "MyCfnEnvironmentEC2")
+ * .imageId("imageId")
  * .instanceType("instanceType")
  * // the properties below are optional
  * .automaticStopTimeMinutes(123)
  * .connectionType("connectionType")
  * .description("description")
- * .imageId("imageId")
  * .name("name")
  * .ownerArn("ownerArn")
  * .repositories(List.of(RepositoryProperty.builder()
@@ -116,17 +116,24 @@ public class CfnEnvironmentEC2Dsl(
      * To choose an AMI for the instance, you must specify a valid AMI alias or a valid AWS Systems
      * Manager path.
      *
-     * The default AMI is used if the parameter isn't explicitly assigned a value in the request.
+     * From December 04, 2023, you will be required to include the `ImageId` parameter for the
+     * `CreateEnvironmentEC2` action. This change will be reflected across all direct methods of
+     * communicating with the API, such as AWS SDK, AWS CLI and AWS CloudFormation. This change will
+     * only affect direct API consumers, and not AWS Cloud9 console users.
+     *
+     * Since Ubuntu 18.04 has ended standard support as of May 31, 2023, we recommend you choose
+     * Ubuntu 22.04.
      *
      * *AMI aliases*
-     * * *Amazon Linux (default): `amazonlinux-1-x86_64`*
      * * Amazon Linux 2: `amazonlinux-2-x86_64`
+     * * Amazon Linux 2023 (recommended): `amazonlinux-2023-x86_64`
      * * Ubuntu 18.04: `ubuntu-18.04-x86_64`
      * * Ubuntu 22.04: `ubuntu-22.04-x86_64`
      *
      * *SSM paths*
-     * * *Amazon Linux (default): `resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64`*
      * * Amazon Linux 2: `resolve:ssm:/aws/service/cloud9/amis/amazonlinux-2-x86_64`
+     * * Amazon Linux 2023 (recommended):
+     *   `resolve:ssm:/aws/service/cloud9/amis/amazonlinux-2023-x86_64`
      * * Ubuntu 18.04: `resolve:ssm:/aws/service/cloud9/amis/ubuntu-18.04-x86_64`
      * * Ubuntu 22.04: `resolve:ssm:/aws/service/cloud9/amis/ubuntu-22.04-x86_64`
      *

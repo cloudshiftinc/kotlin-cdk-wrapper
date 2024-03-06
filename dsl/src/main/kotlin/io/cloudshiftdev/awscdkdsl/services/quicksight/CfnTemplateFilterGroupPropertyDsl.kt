@@ -31,6 +31,7 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.quicksight.*;
+ * Object allSheets;
  * FilterGroupProperty filterGroupProperty = FilterGroupProperty.builder()
  * .crossDataset("crossDataset")
  * .filterGroupId("filterGroupId")
@@ -60,6 +61,7 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * .matchOperator("matchOperator")
  * // the properties below are optional
  * .categoryValues(List.of("categoryValues"))
+ * .nullOption("nullOption")
  * .selectAllOptions("selectAllOptions")
  * .build())
  * .build())
@@ -75,6 +77,10 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * .nullOption("nullOption")
  * // the properties below are optional
  * .aggregationFunction(AggregationFunctionProperty.builder()
+ * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+ * .simpleAttributeAggregation("simpleAttributeAggregation")
+ * .valueForMultipleValues("valueForMultipleValues")
+ * .build())
  * .categoricalAggregationFunction("categoricalAggregationFunction")
  * .dateAggregationFunction("dateAggregationFunction")
  * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -97,6 +103,10 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * .nullOption("nullOption")
  * // the properties below are optional
  * .aggregationFunction(AggregationFunctionProperty.builder()
+ * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+ * .simpleAttributeAggregation("simpleAttributeAggregation")
+ * .valueForMultipleValues("valueForMultipleValues")
+ * .build())
  * .categoricalAggregationFunction("categoricalAggregationFunction")
  * .dateAggregationFunction("dateAggregationFunction")
  * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -150,6 +160,11 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * .filterId("filterId")
  * // the properties below are optional
  * .parameterName("parameterName")
+ * .rollingDate(RollingDateConfigurationProperty.builder()
+ * .expression("expression")
+ * // the properties below are optional
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
  * .timeGranularity("timeGranularity")
  * .value("value")
  * .build())
@@ -198,6 +213,10 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * .sortDirection("sortDirection")
  * // the properties below are optional
  * .aggregationFunction(AggregationFunctionProperty.builder()
+ * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+ * .simpleAttributeAggregation("simpleAttributeAggregation")
+ * .valueForMultipleValues("valueForMultipleValues")
+ * .build())
  * .categoricalAggregationFunction("categoricalAggregationFunction")
  * .dateAggregationFunction("dateAggregationFunction")
  * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -220,6 +239,7 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * .build())
  * .build()))
  * .scopeConfiguration(FilterScopeConfigurationProperty.builder()
+ * .allSheets(allSheets)
  * .selectedSheets(SelectedSheetsFilterScopeConfigurationProperty.builder()
  * .sheetVisualScopingConfigurations(List.of(SheetVisualScopingConfigurationProperty.builder()
  * .scope("scope")

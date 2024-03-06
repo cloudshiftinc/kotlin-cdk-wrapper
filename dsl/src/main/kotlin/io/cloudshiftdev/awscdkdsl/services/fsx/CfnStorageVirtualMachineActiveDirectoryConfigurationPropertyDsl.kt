@@ -20,7 +20,7 @@ import software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine
  * Describes the self-managed Microsoft Active Directory to which you want to join the SVM.
  *
  * Joining an Active Directory provides user authentication and access control for SMB clients,
- * including Microsoft Windows and macOS client accessing the file system.
+ * including Microsoft Windows and macOS clients accessing the file system.
  *
  * Example:
  * ```
@@ -59,7 +59,7 @@ public class CfnStorageVirtualMachineActiveDirectoryConfigurationPropertyDsl {
     /**
      * @param selfManagedActiveDirectoryConfiguration The configuration that Amazon FSx uses to join
      *   the ONTAP storage virtual machine (SVM) to your self-managed (including on-premises)
-     *   Microsoft Active Directory (AD) directory.
+     *   Microsoft Active Directory directory.
      */
     public fun selfManagedActiveDirectoryConfiguration(
         selfManagedActiveDirectoryConfiguration: IResolvable
@@ -70,7 +70,7 @@ public class CfnStorageVirtualMachineActiveDirectoryConfigurationPropertyDsl {
     /**
      * @param selfManagedActiveDirectoryConfiguration The configuration that Amazon FSx uses to join
      *   the ONTAP storage virtual machine (SVM) to your self-managed (including on-premises)
-     *   Microsoft Active Directory (AD) directory.
+     *   Microsoft Active Directory directory.
      */
     public fun selfManagedActiveDirectoryConfiguration(
         selfManagedActiveDirectoryConfiguration:

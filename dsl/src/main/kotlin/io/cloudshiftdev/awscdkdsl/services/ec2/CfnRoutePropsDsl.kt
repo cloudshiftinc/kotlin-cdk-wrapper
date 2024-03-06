@@ -27,8 +27,10 @@ import software.amazon.awscdk.services.ec2.CfnRouteProps
  * .routeTableId("routeTableId")
  * // the properties below are optional
  * .carrierGatewayId("carrierGatewayId")
+ * .coreNetworkArn("coreNetworkArn")
  * .destinationCidrBlock("destinationCidrBlock")
  * .destinationIpv6CidrBlock("destinationIpv6CidrBlock")
+ * .destinationPrefixListId("destinationPrefixListId")
  * .egressOnlyInternetGatewayId("egressOnlyInternetGatewayId")
  * .gatewayId("gatewayId")
  * .instanceId("instanceId")
@@ -55,6 +57,11 @@ public class CfnRoutePropsDsl {
         cdkBuilder.carrierGatewayId(carrierGatewayId)
     }
 
+    /** @param coreNetworkArn The Amazon Resource Name (ARN) of the core network. */
+    public fun coreNetworkArn(coreNetworkArn: String) {
+        cdkBuilder.coreNetworkArn(coreNetworkArn)
+    }
+
     /**
      * @param destinationCidrBlock The IPv4 CIDR address block used for the destination match.
      *   Routing decisions are based on the most specific match. We modify the specified CIDR block
@@ -71,6 +78,11 @@ public class CfnRoutePropsDsl {
      */
     public fun destinationIpv6CidrBlock(destinationIpv6CidrBlock: String) {
         cdkBuilder.destinationIpv6CidrBlock(destinationIpv6CidrBlock)
+    }
+
+    /** @param destinationPrefixListId The ID of a prefix list used for the destination match. */
+    public fun destinationPrefixListId(destinationPrefixListId: String) {
+        cdkBuilder.destinationPrefixListId(destinationPrefixListId)
     }
 
     /**

@@ -25,6 +25,12 @@ import software.amazon.awscdk.services.codepipeline.CfnPipeline
 /**
  * Represents information about an action declaration.
  *
+ * Documentation for the `timeoutInMinutes` parameter in the `ActionDeclaration` is not yet
+ * available for CloudFormation and CDK resources in CodePipeline. For more information about the
+ * configurable timeout for manual approval actions, see the
+ * [ActionDeclaration](https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_ActionDeclaration.html)
+ * in the CodePipeline API Reference.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.

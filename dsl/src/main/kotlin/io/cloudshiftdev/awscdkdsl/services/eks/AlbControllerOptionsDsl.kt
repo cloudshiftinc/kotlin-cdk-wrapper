@@ -25,9 +25,9 @@ import software.amazon.awscdk.services.eks.AlbControllerVersion
  * Example:
  * ```
  * Cluster.Builder.create(this, "HelloEKS")
- * .version(KubernetesVersion.V1_21)
+ * .version(KubernetesVersion.V1_29)
  * .albController(AlbControllerOptions.builder()
- * .version(AlbControllerVersion.V2_4_1)
+ * .version(AlbControllerVersion.V2_6_2)
  * .build())
  * .build();
  * ```

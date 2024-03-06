@@ -43,16 +43,19 @@ import software.amazon.awscdk.services.backup.CfnBackupPlan
  * .lifecycle(LifecycleResourceTypeProperty.builder()
  * .deleteAfterDays(123)
  * .moveToColdStorageAfterDays(123)
+ * .optInToArchiveForSupportedResources(false)
  * .build())
  * .build()))
  * .enableContinuousBackup(false)
  * .lifecycle(LifecycleResourceTypeProperty.builder()
  * .deleteAfterDays(123)
  * .moveToColdStorageAfterDays(123)
+ * .optInToArchiveForSupportedResources(false)
  * .build())
  * .recoveryPointTags(Map.of(
  * "recoveryPointTagsKey", "recoveryPointTags"))
  * .scheduleExpression("scheduleExpression")
+ * .scheduleExpressionTimezone("scheduleExpressionTimezone")
  * .startWindowMinutes(123)
  * .build();
  * ```
@@ -157,6 +160,11 @@ public class CfnBackupPlanBackupRuleResourceTypePropertyDsl {
      */
     public fun scheduleExpression(scheduleExpression: String) {
         cdkBuilder.scheduleExpression(scheduleExpression)
+    }
+
+    /** @param scheduleExpressionTimezone the value to be set. */
+    public fun scheduleExpressionTimezone(scheduleExpressionTimezone: String) {
+        cdkBuilder.scheduleExpressionTimezone(scheduleExpressionTimezone)
     }
 
     /**

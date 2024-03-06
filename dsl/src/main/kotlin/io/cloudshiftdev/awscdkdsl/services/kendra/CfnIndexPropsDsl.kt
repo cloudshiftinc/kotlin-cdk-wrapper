@@ -101,12 +101,18 @@ public class CfnIndexPropsDsl {
 
     private val _userTokenConfigurations: MutableList<Any> = mutableListOf()
 
-    /** @param capacityUnits the value to be set. */
+    /**
+     * @param capacityUnits Specifies additional capacity units configured for your Enterprise
+     *   Edition index. You can add and remove capacity units to fit your usage requirements.
+     */
     public fun capacityUnits(capacityUnits: IResolvable) {
         cdkBuilder.capacityUnits(capacityUnits)
     }
 
-    /** @param capacityUnits the value to be set. */
+    /**
+     * @param capacityUnits Specifies additional capacity units configured for your Enterprise
+     *   Edition index. You can add and remove capacity units to fit your usage requirements.
+     */
     public fun capacityUnits(capacityUnits: CfnIndex.CapacityUnitsConfigurationProperty) {
         cdkBuilder.capacityUnits(capacityUnits)
     }

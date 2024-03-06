@@ -183,7 +183,7 @@ public class CfnQueueDsl(
     /**
      * The tags used to organize, track, or control access for this resource.
      *
-     * For example, { "tags": {"key1":"value1", "key2":"value2"} }.
+     * For example, { "Tags": {"key1":"value1", "key2":"value2"} }.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-queue.html#cfn-connect-queue-tags)
      *
@@ -196,7 +196,7 @@ public class CfnQueueDsl(
     /**
      * The tags used to organize, track, or control access for this resource.
      *
-     * For example, { "tags": {"key1":"value1", "key2":"value2"} }.
+     * For example, { "Tags": {"key1":"value1", "key2":"value2"} }.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-queue.html#cfn-connect-queue-tags)
      *

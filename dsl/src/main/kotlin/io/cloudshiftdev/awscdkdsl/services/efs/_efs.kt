@@ -400,7 +400,7 @@ public object efs {
      *
      * The access point exposes the specified file system path as the root directory of your file
      * system to applications using the access point. NFS clients using the access point can only
-     * access data in the access point's `RootDirectory` and it's subdirectories.
+     * access data in the access point's `RootDirectory` and its subdirectories.
      *
      * Example:
      * ```
@@ -449,17 +449,29 @@ public object efs {
      * .bypassPolicyLockoutSafetyCheck(false)
      * .encrypted(false)
      * .fileSystemPolicy(fileSystemPolicy)
+     * .fileSystemProtection(FileSystemProtectionProperty.builder()
+     * .replicationOverwriteProtection("replicationOverwriteProtection")
+     * .build())
      * .fileSystemTags(List.of(ElasticFileSystemTagProperty.builder()
      * .key("key")
      * .value("value")
      * .build()))
      * .kmsKeyId("kmsKeyId")
      * .lifecyclePolicies(List.of(LifecyclePolicyProperty.builder()
+     * .transitionToArchive("transitionToArchive")
      * .transitionToIa("transitionToIa")
      * .transitionToPrimaryStorageClass("transitionToPrimaryStorageClass")
      * .build()))
      * .performanceMode("performanceMode")
      * .provisionedThroughputInMibps(123)
+     * .replicationConfiguration(ReplicationConfigurationProperty.builder()
+     * .destinations(List.of(ReplicationDestinationProperty.builder()
+     * .availabilityZoneName("availabilityZoneName")
+     * .fileSystemId("fileSystemId")
+     * .kmsKeyId("kmsKeyId")
+     * .region("region")
+     * .build()))
+     * .build())
      * .throughputMode("throughputMode")
      * .build();
      * ```
@@ -528,16 +540,39 @@ public object efs {
     }
 
     /**
-     * Describes a policy used by EFS lifecycle management and EFS Intelligent-Tiering that
-     * specifies when to transition files into and out of the file system's Infrequent Access (IA)
-     * storage class.
+     * Describes the protection on the file system.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.efs.*;
+     * FileSystemProtectionProperty fileSystemProtectionProperty =
+     * FileSystemProtectionProperty.builder()
+     * .replicationOverwriteProtection("replicationOverwriteProtection")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-filesystemprotection.html)
+     */
+    public inline fun cfnFileSystemFileSystemProtectionProperty(
+        block: CfnFileSystemFileSystemProtectionPropertyDsl.() -> Unit = {}
+    ): CfnFileSystem.FileSystemProtectionProperty {
+        val builder = CfnFileSystemFileSystemProtectionPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Describes a policy used by Lifecycle management that specifies when to transition files into
+     * and out of the EFS storage classes.
      *
      * For more information, see
-     * [EFS Intelligent‐Tiering and EFS Lifecycle Management](https://docs.aws.amazon.com/efs/latest/ug/lifecycle-management-efs.html)
+     * [Managing file system storage](https://docs.aws.amazon.com/efs/latest/ug/lifecycle-management-efs.html)
      * .
      * * Each `LifecyclePolicy` object can have only a single transition. This means that in a
      *   request body, `LifecyclePolicies` must be structured as an array of `LifecyclePolicy`
-     *   objects, one object for each transition, `TransitionToIA` ,
+     *   objects, one object for each transition, `TransitionToIA` , `TransitionToArchive` ,
      *   `TransitionToPrimaryStorageClass` .
      * * See the AWS::EFS::FileSystem examples for the correct `LifecyclePolicy` structure. Do not
      *   use the syntax shown on this page.
@@ -548,6 +583,7 @@ public object efs {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.efs.*;
      * LifecyclePolicyProperty lifecyclePolicyProperty = LifecyclePolicyProperty.builder()
+     * .transitionToArchive("transitionToArchive")
      * .transitionToIa("transitionToIa")
      * .transitionToPrimaryStorageClass("transitionToPrimaryStorageClass")
      * .build();
@@ -580,17 +616,29 @@ public object efs {
      * .bypassPolicyLockoutSafetyCheck(false)
      * .encrypted(false)
      * .fileSystemPolicy(fileSystemPolicy)
+     * .fileSystemProtection(FileSystemProtectionProperty.builder()
+     * .replicationOverwriteProtection("replicationOverwriteProtection")
+     * .build())
      * .fileSystemTags(List.of(ElasticFileSystemTagProperty.builder()
      * .key("key")
      * .value("value")
      * .build()))
      * .kmsKeyId("kmsKeyId")
      * .lifecyclePolicies(List.of(LifecyclePolicyProperty.builder()
+     * .transitionToArchive("transitionToArchive")
      * .transitionToIa("transitionToIa")
      * .transitionToPrimaryStorageClass("transitionToPrimaryStorageClass")
      * .build()))
      * .performanceMode("performanceMode")
      * .provisionedThroughputInMibps(123)
+     * .replicationConfiguration(ReplicationConfigurationProperty.builder()
+     * .destinations(List.of(ReplicationDestinationProperty.builder()
+     * .availabilityZoneName("availabilityZoneName")
+     * .fileSystemId("fileSystemId")
+     * .kmsKeyId("kmsKeyId")
+     * .region("region")
+     * .build()))
+     * .build())
      * .throughputMode("throughputMode")
      * .build();
      * ```
@@ -601,6 +649,62 @@ public object efs {
         block: CfnFileSystemPropsDsl.() -> Unit = {}
     ): CfnFileSystemProps {
         val builder = CfnFileSystemPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Describes the replication configuration for a specific file system.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.efs.*;
+     * ReplicationConfigurationProperty replicationConfigurationProperty =
+     * ReplicationConfigurationProperty.builder()
+     * .destinations(List.of(ReplicationDestinationProperty.builder()
+     * .availabilityZoneName("availabilityZoneName")
+     * .fileSystemId("fileSystemId")
+     * .kmsKeyId("kmsKeyId")
+     * .region("region")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationconfiguration.html)
+     */
+    public inline fun cfnFileSystemReplicationConfigurationProperty(
+        block: CfnFileSystemReplicationConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnFileSystem.ReplicationConfigurationProperty {
+        val builder = CfnFileSystemReplicationConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Describes the destination file system in the replication configuration.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.efs.*;
+     * ReplicationDestinationProperty replicationDestinationProperty =
+     * ReplicationDestinationProperty.builder()
+     * .availabilityZoneName("availabilityZoneName")
+     * .fileSystemId("fileSystemId")
+     * .kmsKeyId("kmsKeyId")
+     * .region("region")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html)
+     */
+    public inline fun cfnFileSystemReplicationDestinationProperty(
+        block: CfnFileSystemReplicationDestinationPropertyDsl.() -> Unit = {}
+    ): CfnFileSystem.ReplicationDestinationProperty {
+        val builder = CfnFileSystemReplicationDestinationPropertyDsl()
         builder.apply(block)
         return builder.build()
     }

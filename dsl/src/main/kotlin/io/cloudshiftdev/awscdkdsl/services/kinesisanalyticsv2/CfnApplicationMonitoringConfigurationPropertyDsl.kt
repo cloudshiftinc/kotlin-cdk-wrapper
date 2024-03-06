@@ -20,7 +20,7 @@ import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
  * Analytics application.
  *
  * For more information about CloudWatch logging, see
- * [Monitoring](https://docs.aws.amazon.com/kinesisanalytics/latest/java/monitoring-overview) .
+ * [Monitoring](https://docs.aws.amazon.com/managed-flink/latest/java/monitoring-overview) .
  *
  * Example:
  * ```

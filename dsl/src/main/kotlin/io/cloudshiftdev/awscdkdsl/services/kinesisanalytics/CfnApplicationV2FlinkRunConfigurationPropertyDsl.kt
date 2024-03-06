@@ -17,7 +17,7 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2
 
 /**
- * Describes the starting parameters for a Flink-based Kinesis Data Analytics application.
+ * Describes the starting parameters for a Managed Service for Apache Flink application.
  *
  * Example:
  * ```

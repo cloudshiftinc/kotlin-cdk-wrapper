@@ -42,6 +42,10 @@ import software.amazon.awscdk.services.cognito.CfnUserPool
  * .preAuthentication("preAuthentication")
  * .preSignUp("preSignUp")
  * .preTokenGeneration("preTokenGeneration")
+ * .preTokenGenerationConfig(PreTokenGenerationConfigProperty.builder()
+ * .lambdaArn("lambdaArn")
+ * .lambdaVersion("lambdaVersion")
+ * .build())
  * .userMigration("userMigration")
  * .verifyAuthChallengeResponse("verifyAuthChallengeResponse")
  * .build();
@@ -118,9 +122,37 @@ public class CfnUserPoolLambdaConfigPropertyDsl {
         cdkBuilder.preSignUp(preSignUp)
     }
 
-    /** @param preTokenGeneration A Lambda trigger that is invoked before token generation. */
+    /**
+     * @param preTokenGeneration The Amazon Resource Name (ARN) of the function that you want to
+     *   assign to your Lambda trigger. Set this parameter for legacy purposes. If you also set an
+     *   ARN in `PreTokenGenerationConfig` , its value must be identical to `PreTokenGeneration` .
+     *   For new instances of pre token generation triggers, set the `LambdaArn` of
+     *   `PreTokenGenerationConfig` .
+     *
+     * You can set ``
+     */
     public fun preTokenGeneration(preTokenGeneration: String) {
         cdkBuilder.preTokenGeneration(preTokenGeneration)
+    }
+
+    /**
+     * @param preTokenGenerationConfig The detailed configuration of a pre token generation trigger.
+     *   If you also set an ARN in `PreTokenGeneration` , its value must be identical to
+     *   `PreTokenGenerationConfig` .
+     */
+    public fun preTokenGenerationConfig(preTokenGenerationConfig: IResolvable) {
+        cdkBuilder.preTokenGenerationConfig(preTokenGenerationConfig)
+    }
+
+    /**
+     * @param preTokenGenerationConfig The detailed configuration of a pre token generation trigger.
+     *   If you also set an ARN in `PreTokenGeneration` , its value must be identical to
+     *   `PreTokenGenerationConfig` .
+     */
+    public fun preTokenGenerationConfig(
+        preTokenGenerationConfig: CfnUserPool.PreTokenGenerationConfigProperty
+    ) {
+        cdkBuilder.preTokenGenerationConfig(preTokenGenerationConfig)
     }
 
     /** @param userMigration The user migration Lambda config type. */

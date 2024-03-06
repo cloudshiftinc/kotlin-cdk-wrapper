@@ -24,7 +24,11 @@ import software.amazon.awscdk.services.mediatailor.CfnSourceLocation
 import software.constructs.Construct
 
 /**
- * Definition of AWS::MediaTailor::SourceLocation Resource Type.
+ * A source location is a container for sources.
+ *
+ * For more information about source locations, see
+ * [Working with source locations](https://docs.aws.amazon.com/mediatailor/latest/ug/channel-assembly-source-locations.html)
+ * in the *MediaTailor User Guide* .
  *
  * Example:
  * ```
@@ -74,22 +78,22 @@ public class CfnSourceLocationDsl(
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
-     * Access configuration parameters.</p>.
+     * The access configuration for the source location.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-sourcelocation.html#cfn-mediatailor-sourcelocation-accessconfiguration)
      *
-     * @param accessConfiguration Access configuration parameters.</p>.
+     * @param accessConfiguration The access configuration for the source location.
      */
     public fun accessConfiguration(accessConfiguration: IResolvable) {
         cdkBuilder.accessConfiguration(accessConfiguration)
     }
 
     /**
-     * Access configuration parameters.</p>.
+     * The access configuration for the source location.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-sourcelocation.html#cfn-mediatailor-sourcelocation-accessconfiguration)
      *
-     * @param accessConfiguration Access configuration parameters.</p>.
+     * @param accessConfiguration The access configuration for the source location.
      */
     public fun accessConfiguration(
         accessConfiguration: CfnSourceLocation.AccessConfigurationProperty
@@ -98,18 +102,11 @@ public class CfnSourceLocationDsl(
     }
 
     /**
-     * The optional configuration for a server that serves segments.
-     *
-     * Use this if you want the segment delivery server to be different from the source location
-     * server. For example, you can configure your source location server to be an origination
-     * server, such as MediaPackage, and the segment delivery server to be a content delivery
-     * network (CDN), such as CloudFront. If you don't specify a segment delivery server, then the
-     * source location server is used.</p>
+     * The default segment delivery configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-sourcelocation.html#cfn-mediatailor-sourcelocation-defaultsegmentdeliveryconfiguration)
      *
-     * @param defaultSegmentDeliveryConfiguration The optional configuration for a server that
-     *   serves segments.
+     * @param defaultSegmentDeliveryConfiguration The default segment delivery configuration.
      */
     public fun defaultSegmentDeliveryConfiguration(
         defaultSegmentDeliveryConfiguration: IResolvable
@@ -118,18 +115,11 @@ public class CfnSourceLocationDsl(
     }
 
     /**
-     * The optional configuration for a server that serves segments.
-     *
-     * Use this if you want the segment delivery server to be different from the source location
-     * server. For example, you can configure your source location server to be an origination
-     * server, such as MediaPackage, and the segment delivery server to be a content delivery
-     * network (CDN), such as CloudFront. If you don't specify a segment delivery server, then the
-     * source location server is used.</p>
+     * The default segment delivery configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-sourcelocation.html#cfn-mediatailor-sourcelocation-defaultsegmentdeliveryconfiguration)
      *
-     * @param defaultSegmentDeliveryConfiguration The optional configuration for a server that
-     *   serves segments.
+     * @param defaultSegmentDeliveryConfiguration The default segment delivery configuration.
      */
     public fun defaultSegmentDeliveryConfiguration(
         defaultSegmentDeliveryConfiguration:
@@ -139,89 +129,101 @@ public class CfnSourceLocationDsl(
     }
 
     /**
-     * The HTTP configuration for the source location.</p>.
+     * The HTTP configuration for the source location.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-sourcelocation.html#cfn-mediatailor-sourcelocation-httpconfiguration)
      *
-     * @param httpConfiguration The HTTP configuration for the source location.</p>.
+     * @param httpConfiguration The HTTP configuration for the source location.
      */
     public fun httpConfiguration(httpConfiguration: IResolvable) {
         cdkBuilder.httpConfiguration(httpConfiguration)
     }
 
     /**
-     * The HTTP configuration for the source location.</p>.
+     * The HTTP configuration for the source location.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-sourcelocation.html#cfn-mediatailor-sourcelocation-httpconfiguration)
      *
-     * @param httpConfiguration The HTTP configuration for the source location.</p>.
+     * @param httpConfiguration The HTTP configuration for the source location.
      */
     public fun httpConfiguration(httpConfiguration: CfnSourceLocation.HttpConfigurationProperty) {
         cdkBuilder.httpConfiguration(httpConfiguration)
     }
 
     /**
-     * A list of the segment delivery configurations associated with this resource.</p>.
+     * The segment delivery configurations for the source location.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-sourcelocation.html#cfn-mediatailor-sourcelocation-segmentdeliveryconfigurations)
      *
-     * @param segmentDeliveryConfigurations A list of the segment delivery configurations associated
-     *   with this resource.</p>.
+     * @param segmentDeliveryConfigurations The segment delivery configurations for the source
+     *   location.
      */
     public fun segmentDeliveryConfigurations(vararg segmentDeliveryConfigurations: Any) {
         _segmentDeliveryConfigurations.addAll(listOf(*segmentDeliveryConfigurations))
     }
 
     /**
-     * A list of the segment delivery configurations associated with this resource.</p>.
+     * The segment delivery configurations for the source location.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-sourcelocation.html#cfn-mediatailor-sourcelocation-segmentdeliveryconfigurations)
      *
-     * @param segmentDeliveryConfigurations A list of the segment delivery configurations associated
-     *   with this resource.</p>.
+     * @param segmentDeliveryConfigurations The segment delivery configurations for the source
+     *   location.
      */
     public fun segmentDeliveryConfigurations(segmentDeliveryConfigurations: Collection<Any>) {
         _segmentDeliveryConfigurations.addAll(segmentDeliveryConfigurations)
     }
 
     /**
-     * A list of the segment delivery configurations associated with this resource.</p>.
+     * The segment delivery configurations for the source location.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-sourcelocation.html#cfn-mediatailor-sourcelocation-segmentdeliveryconfigurations)
      *
-     * @param segmentDeliveryConfigurations A list of the segment delivery configurations associated
-     *   with this resource.</p>.
+     * @param segmentDeliveryConfigurations The segment delivery configurations for the source
+     *   location.
      */
     public fun segmentDeliveryConfigurations(segmentDeliveryConfigurations: IResolvable) {
         cdkBuilder.segmentDeliveryConfigurations(segmentDeliveryConfigurations)
     }
 
     /**
+     * The name of the source location.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-sourcelocation.html#cfn-mediatailor-sourcelocation-sourcelocationname)
      *
-     * @param sourceLocationName
+     * @param sourceLocationName The name of the source location.
      */
     public fun sourceLocationName(sourceLocationName: String) {
         cdkBuilder.sourceLocationName(sourceLocationName)
     }
 
     /**
-     * The tags to assign to the source location.
+     * The tags assigned to the source location.
+     *
+     * Tags are key-value pairs that you can associate with Amazon resources to help with
+     * organization, access control, and cost tracking. For more information, see
+     * [Tagging AWS Elemental MediaTailor Resources](https://docs.aws.amazon.com/mediatailor/latest/ug/tagging.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-sourcelocation.html#cfn-mediatailor-sourcelocation-tags)
      *
-     * @param tags The tags to assign to the source location.
+     * @param tags The tags assigned to the source location.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
     /**
-     * The tags to assign to the source location.
+     * The tags assigned to the source location.
+     *
+     * Tags are key-value pairs that you can associate with Amazon resources to help with
+     * organization, access control, and cost tracking. For more information, see
+     * [Tagging AWS Elemental MediaTailor Resources](https://docs.aws.amazon.com/mediatailor/latest/ug/tagging.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-sourcelocation.html#cfn-mediatailor-sourcelocation-tags)
      *
-     * @param tags The tags to assign to the source location.
+     * @param tags The tags assigned to the source location.
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)

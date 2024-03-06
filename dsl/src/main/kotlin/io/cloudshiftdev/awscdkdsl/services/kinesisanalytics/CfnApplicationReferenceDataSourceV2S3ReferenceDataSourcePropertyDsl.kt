@@ -21,7 +21,7 @@ import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceD
  *
  * A Kinesis Data Analytics application loads reference data only once. If the data changes, you
  * call the
- * [UpdateApplication](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_UpdateApplication.html)
+ * [UpdateApplication](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_UpdateApplication.html)
  * operation to trigger reloading of data into your application.
  *
  * Example:

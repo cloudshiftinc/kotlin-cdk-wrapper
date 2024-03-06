@@ -631,13 +631,7 @@ public class CfnReplicationGroupPropsDsl {
         cdkBuilder.replicationGroupDescription(replicationGroupDescription)
     }
 
-    /**
-     * @param replicationGroupId The replication group identifier. This parameter is stored as a
-     *   lowercase string. Constraints:
-     * * A name must contain from 1 to 40 alphanumeric characters or hyphens.
-     * * The first character must be a letter.
-     * * A name cannot end with a hyphen or contain two consecutive hyphens.
-     */
+    /** @param replicationGroupId the value to be set. */
     public fun replicationGroupId(replicationGroupId: String) {
         cdkBuilder.replicationGroupId(replicationGroupId)
     }

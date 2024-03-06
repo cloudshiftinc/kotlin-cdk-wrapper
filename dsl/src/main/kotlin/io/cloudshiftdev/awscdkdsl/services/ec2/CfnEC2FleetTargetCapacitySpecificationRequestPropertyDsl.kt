@@ -50,10 +50,7 @@ public class CfnEC2FleetTargetCapacitySpecificationRequestPropertyDsl {
     private val cdkBuilder: CfnEC2Fleet.TargetCapacitySpecificationRequestProperty.Builder =
         CfnEC2Fleet.TargetCapacitySpecificationRequestProperty.builder()
 
-    /**
-     * @param defaultTargetCapacityType The default `TotalTargetCapacity` , which is either `Spot`
-     *   or `On-Demand` .
-     */
+    /** @param defaultTargetCapacityType The default target capacity type. */
     public fun defaultTargetCapacityType(defaultTargetCapacityType: String) {
         cdkBuilder.defaultTargetCapacityType(defaultTargetCapacityType)
     }
@@ -69,8 +66,8 @@ public class CfnEC2FleetTargetCapacitySpecificationRequestPropertyDsl {
     }
 
     /**
-     * @param targetCapacityUnitType The unit for the target capacity. `TargetCapacityUnitType` can
-     *   only be specified when `InstanceRequirements` is specified. Default: `units` (translates to
+     * @param targetCapacityUnitType The unit for the target capacity. You can specify this
+     *   parameter only when using attributed-based instance type selection. Default: `units` (the
      *   number of instances)
      */
     public fun targetCapacityUnitType(targetCapacityUnitType: String) {
@@ -78,8 +75,8 @@ public class CfnEC2FleetTargetCapacitySpecificationRequestPropertyDsl {
     }
 
     /**
-     * @param totalTargetCapacity The number of units to request, filled using
-     *   `DefaultTargetCapacityType` .
+     * @param totalTargetCapacity The number of units to request, filled using the default target
+     *   capacity type.
      */
     public fun totalTargetCapacity(totalTargetCapacity: Number) {
         cdkBuilder.totalTargetCapacity(totalTargetCapacity)

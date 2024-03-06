@@ -25,19 +25,18 @@ import software.amazon.awscdk.services.dynamodb.ProjectionType
  *
  * Example:
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import software.amazon.awscdk.services.dynamodb.*;
- * LocalSecondaryIndexProps localSecondaryIndexProps = LocalSecondaryIndexProps.builder()
- * .indexName("indexName")
- * .sortKey(Attribute.builder()
- * .name("name")
- * .type(AttributeType.BINARY)
- * .build())
- * // the properties below are optional
- * .nonKeyAttributes(List.of("nonKeyAttributes"))
- * .projectionType(ProjectionType.KEYS_ONLY)
+ * TableV2 table = TableV2.Builder.create(this, "Table")
+ * .partitionKey(Attribute.builder().name("pk").type(AttributeType.STRING).build())
+ * .sortKey(Attribute.builder().name("sk").type(AttributeType.NUMBER).build())
+ * .localSecondaryIndexes(List.of(LocalSecondaryIndexProps.builder()
+ * .indexName("lsi1")
+ * .sortKey(Attribute.builder().name("sk").type(AttributeType.NUMBER).build())
+ * .build()))
  * .build();
+ * table.addLocalSecondaryIndex(LocalSecondaryIndexProps.builder()
+ * .indexName("lsi2")
+ * .sortKey(Attribute.builder().name("sk").type(AttributeType.NUMBER).build())
+ * .build());
  * ```
  */
 @CdkDslMarker

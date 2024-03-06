@@ -20,9 +20,12 @@ import software.amazon.awscdk.services.vpclattice.CfnAuthPolicy
 import software.constructs.Construct
 
 /**
- * Creates or updates the auth policy.
+ * Creates or updates the auth policy. The policy string in JSON must not contain newlines or blank
+ * lines.
  *
- * The policy string in JSON must not contain newlines or blank lines.
+ * For more information, see
+ * [Auth policies](https://docs.aws.amazon.com/vpc-lattice/latest/ug/auth-policies.html) in the
+ * *Amazon VPC Lattice User Guide* .
  *
  * Example:
  * ```

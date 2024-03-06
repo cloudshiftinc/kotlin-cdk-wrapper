@@ -22,6 +22,8 @@ import software.amazon.awscdk.services.docdb.CfnDBInstance
 import software.amazon.awscdk.services.docdb.CfnDBInstanceProps
 import software.amazon.awscdk.services.docdb.CfnDBSubnetGroup
 import software.amazon.awscdk.services.docdb.CfnDBSubnetGroupProps
+import software.amazon.awscdk.services.docdb.CfnEventSubscription
+import software.amazon.awscdk.services.docdb.CfnEventSubscriptionProps
 import software.amazon.awscdk.services.docdb.ClusterParameterGroup
 import software.amazon.awscdk.services.docdb.ClusterParameterGroupProps
 import software.amazon.awscdk.services.docdb.DatabaseCluster
@@ -100,6 +102,7 @@ public object docdb {
      * .snapshotIdentifier("snapshotIdentifier")
      * .sourceDbClusterIdentifier("sourceDbClusterIdentifier")
      * .storageEncrypted(false)
+     * .storageType("storageType")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -239,6 +242,7 @@ public object docdb {
      * .snapshotIdentifier("snapshotIdentifier")
      * .sourceDbClusterIdentifier("sourceDbClusterIdentifier")
      * .storageEncrypted(false)
+     * .storageType("storageType")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -277,6 +281,8 @@ public object docdb {
      * // the properties below are optional
      * .autoMinorVersionUpgrade(false)
      * .availabilityZone("availabilityZone")
+     * .caCertificateIdentifier("caCertificateIdentifier")
+     * .certificateRotationRestart(false)
      * .dbInstanceIdentifier("dbInstanceIdentifier")
      * .enablePerformanceInsights(false)
      * .preferredMaintenanceWindow("preferredMaintenanceWindow")
@@ -313,6 +319,8 @@ public object docdb {
      * // the properties below are optional
      * .autoMinorVersionUpgrade(false)
      * .availabilityZone("availabilityZone")
+     * .caCertificateIdentifier("caCertificateIdentifier")
+     * .certificateRotationRestart(false)
      * .dbInstanceIdentifier("dbInstanceIdentifier")
      * .enablePerformanceInsights(false)
      * .preferredMaintenanceWindow("preferredMaintenanceWindow")
@@ -402,6 +410,85 @@ public object docdb {
     }
 
     /**
+     * Creates an Amazon DocumentDB event notification subscription.
+     *
+     * This action requires a topic Amazon Resource Name (ARN) created by using the Amazon
+     * DocumentDB console, the Amazon SNS console, or the Amazon SNS API. To obtain an ARN with
+     * Amazon SNS, you must create a topic in Amazon SNS and subscribe to the topic. The ARN is
+     * displayed in the Amazon SNS console.
+     *
+     * You can specify the type of source ( `SourceType` ) that you want to be notified of. You can
+     * also provide a list of Amazon DocumentDB sources ( `SourceIds` ) that trigger the events, and
+     * you can provide a list of event categories ( `EventCategories` ) for events that you want to
+     * be notified of. For example, you can specify `SourceType = db-instance` , `SourceIds =
+     * mydbinstance1, mydbinstance2` and `EventCategories = Availability, Backup` .
+     *
+     * If you specify both the `SourceType` and `SourceIds` (such as `SourceType = db-instance` and
+     * `SourceIdentifier = myDBInstance1` ), you are notified of all the `db-instance` events for
+     * the specified source. If you specify a `SourceType` but do not specify a `SourceIdentifier` ,
+     * you receive notice of the events for that source type for all your Amazon DocumentDB sources.
+     * If you do not specify either the `SourceType` or the `SourceIdentifier` , you are notified of
+     * events generated from all Amazon DocumentDB sources belonging to your customer account.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.docdb.*;
+     * CfnEventSubscription cfnEventSubscription = CfnEventSubscription.Builder.create(this,
+     * "MyCfnEventSubscription")
+     * .snsTopicArn("snsTopicArn")
+     * // the properties below are optional
+     * .enabled(false)
+     * .eventCategories(List.of("eventCategories"))
+     * .sourceIds(List.of("sourceIds"))
+     * .sourceType("sourceType")
+     * .subscriptionName("subscriptionName")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-eventsubscription.html)
+     */
+    public inline fun cfnEventSubscription(
+        scope: Construct,
+        id: String,
+        block: CfnEventSubscriptionDsl.() -> Unit = {},
+    ): CfnEventSubscription {
+        val builder = CfnEventSubscriptionDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnEventSubscription`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.docdb.*;
+     * CfnEventSubscriptionProps cfnEventSubscriptionProps = CfnEventSubscriptionProps.builder()
+     * .snsTopicArn("snsTopicArn")
+     * // the properties below are optional
+     * .enabled(false)
+     * .eventCategories(List.of("eventCategories"))
+     * .sourceIds(List.of("sourceIds"))
+     * .sourceType("sourceType")
+     * .subscriptionName("subscriptionName")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-eventsubscription.html)
+     */
+    public inline fun cfnEventSubscriptionProps(
+        block: CfnEventSubscriptionPropsDsl.() -> Unit = {}
+    ): CfnEventSubscriptionProps {
+        val builder = CfnEventSubscriptionPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * A cluster parameter group.
      *
      * Example:
@@ -471,7 +558,7 @@ public object docdb {
      * .subnetType(SubnetType.PUBLIC)
      * .build())
      * .vpc(vpc)
-     * .deletionProtection(true)
+     * .removalPolicy(RemovalPolicy.SNAPSHOT)
      * .build();
      * ```
      */
@@ -530,7 +617,7 @@ public object docdb {
      * .subnetType(SubnetType.PUBLIC)
      * .build())
      * .vpc(vpc)
-     * .deletionProtection(true)
+     * .removalPolicy(RemovalPolicy.SNAPSHOT)
      * .build();
      * ```
      */
@@ -700,7 +787,7 @@ public object docdb {
      * .subnetType(SubnetType.PUBLIC)
      * .build())
      * .vpc(vpc)
-     * .deletionProtection(true)
+     * .removalPolicy(RemovalPolicy.SNAPSHOT)
      * .build();
      * ```
      */

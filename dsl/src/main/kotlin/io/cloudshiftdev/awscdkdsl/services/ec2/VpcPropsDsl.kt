@@ -24,6 +24,8 @@ import software.amazon.awscdk.services.ec2.DefaultInstanceTenancy
 import software.amazon.awscdk.services.ec2.FlowLogOptions
 import software.amazon.awscdk.services.ec2.GatewayVpcEndpointOptions
 import software.amazon.awscdk.services.ec2.IIpAddresses
+import software.amazon.awscdk.services.ec2.IIpv6Addresses
+import software.amazon.awscdk.services.ec2.IpProtocol
 import software.amazon.awscdk.services.ec2.NatProvider
 import software.amazon.awscdk.services.ec2.SubnetConfiguration
 import software.amazon.awscdk.services.ec2.SubnetSelection
@@ -138,11 +140,28 @@ public class VpcPropsDsl {
     }
 
     /**
-     * @param ipAddresses The Provider to use to allocate IP Space to your VPC. Options include
+     * @param ipAddresses The Provider to use to allocate IPv4 Space to your VPC. Options include
      *   static allocation or from a pool.
+     *
+     * Note this is specific to IPv4 addresses.
      */
     public fun ipAddresses(ipAddresses: IIpAddresses) {
         cdkBuilder.ipAddresses(ipAddresses)
+    }
+
+    /** @param ipProtocol The protocol of the vpc. Options are IPv4 only or dual stack. */
+    public fun ipProtocol(ipProtocol: IpProtocol) {
+        cdkBuilder.ipProtocol(ipProtocol)
+    }
+
+    /**
+     * @param ipv6Addresses The Provider to use to allocate IPv6 Space to your VPC. Options include
+     *   amazon provided CIDR block.
+     *
+     * Note this is specific to IPv6 addresses.
+     */
+    public fun ipv6Addresses(ipv6Addresses: IIpv6Addresses) {
+        cdkBuilder.ipv6Addresses(ipv6Addresses)
     }
 
     /**

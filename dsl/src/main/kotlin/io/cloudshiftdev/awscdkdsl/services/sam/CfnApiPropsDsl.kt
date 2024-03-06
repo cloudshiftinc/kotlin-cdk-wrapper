@@ -45,6 +45,7 @@ import software.amazon.awscdk.services.sam.CfnApiProps
  * .destinationArn("destinationArn")
  * .format("format")
  * .build())
+ * .alwaysDeploy(false)
  * .auth(AuthProperty.builder()
  * .addDefaultAuthorizerToCorsPreflight(false)
  * .authorizers(authorizers)
@@ -118,6 +119,16 @@ public class CfnApiPropsDsl {
     /** @param accessLogSetting the value to be set. */
     public fun accessLogSetting(accessLogSetting: CfnApi.AccessLogSettingProperty) {
         cdkBuilder.accessLogSetting(accessLogSetting)
+    }
+
+    /** @param alwaysDeploy the value to be set. */
+    public fun alwaysDeploy(alwaysDeploy: Boolean) {
+        cdkBuilder.alwaysDeploy(alwaysDeploy)
+    }
+
+    /** @param alwaysDeploy the value to be set. */
+    public fun alwaysDeploy(alwaysDeploy: IResolvable) {
+        cdkBuilder.alwaysDeploy(alwaysDeploy)
     }
 
     /** @param auth the value to be set. */

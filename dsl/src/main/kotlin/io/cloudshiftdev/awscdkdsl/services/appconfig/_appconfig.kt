@@ -13,6 +13,10 @@ package io.cloudshiftdev.awscdkdsl.services.appconfig
 
 import kotlin.String
 import kotlin.Unit
+import software.amazon.awscdk.services.appconfig.Action
+import software.amazon.awscdk.services.appconfig.ActionProps
+import software.amazon.awscdk.services.appconfig.Application
+import software.amazon.awscdk.services.appconfig.ApplicationProps
 import software.amazon.awscdk.services.appconfig.CfnApplication
 import software.amazon.awscdk.services.appconfig.CfnApplicationProps
 import software.amazon.awscdk.services.appconfig.CfnConfigurationProfile
@@ -29,9 +33,120 @@ import software.amazon.awscdk.services.appconfig.CfnExtensionAssociationProps
 import software.amazon.awscdk.services.appconfig.CfnExtensionProps
 import software.amazon.awscdk.services.appconfig.CfnHostedConfigurationVersion
 import software.amazon.awscdk.services.appconfig.CfnHostedConfigurationVersionProps
+import software.amazon.awscdk.services.appconfig.ConfigurationOptions
+import software.amazon.awscdk.services.appconfig.ConfigurationProps
+import software.amazon.awscdk.services.appconfig.DeploymentStrategy
+import software.amazon.awscdk.services.appconfig.DeploymentStrategyProps
+import software.amazon.awscdk.services.appconfig.Environment
+import software.amazon.awscdk.services.appconfig.EnvironmentAttributes
+import software.amazon.awscdk.services.appconfig.EnvironmentOptions
+import software.amazon.awscdk.services.appconfig.EnvironmentProps
+import software.amazon.awscdk.services.appconfig.Extension
+import software.amazon.awscdk.services.appconfig.ExtensionAttributes
+import software.amazon.awscdk.services.appconfig.ExtensionOptions
+import software.amazon.awscdk.services.appconfig.ExtensionProps
+import software.amazon.awscdk.services.appconfig.HostedConfiguration
+import software.amazon.awscdk.services.appconfig.HostedConfigurationOptions
+import software.amazon.awscdk.services.appconfig.HostedConfigurationProps
+import software.amazon.awscdk.services.appconfig.RolloutStrategyProps
+import software.amazon.awscdk.services.appconfig.SourcedConfiguration
+import software.amazon.awscdk.services.appconfig.SourcedConfigurationOptions
+import software.amazon.awscdk.services.appconfig.SourcedConfigurationProps
 import software.constructs.Construct
 
 public object appconfig {
+    /**
+     * Defines an action for an extension.
+     *
+     * Example:
+     * ```
+     * Function fn;
+     * Extension.Builder.create(this, "MyExtension")
+     * .actions(List.of(
+     * Action.Builder.create()
+     * .actionPoints(List.of(ActionPoint.ON_DEPLOYMENT_START))
+     * .eventDestination(new LambdaDestination(fn))
+     * .build()))
+     * .build();
+     * ```
+     */
+    public inline fun action(block: ActionDsl.() -> Unit = {}): Action {
+        val builder = ActionDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for the Action construct.
+     *
+     * Example:
+     * ```
+     * Function fn;
+     * Extension.Builder.create(this, "MyExtension")
+     * .actions(List.of(
+     * Action.Builder.create()
+     * .actionPoints(List.of(ActionPoint.ON_DEPLOYMENT_START))
+     * .eventDestination(new LambdaDestination(fn))
+     * .build()))
+     * .build();
+     * ```
+     */
+    public inline fun actionProps(block: ActionPropsDsl.() -> Unit = {}): ActionProps {
+        val builder = ActionPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * An AWS AppConfig application.
+     *
+     * Example:
+     * ```
+     * Application app = new Application(this, "MyApp");
+     * Environment env = Environment.Builder.create(this, "MyEnv")
+     * .application(app)
+     * .build();
+     * HostedConfiguration.Builder.create(this, "MyHostedConfig")
+     * .application(app)
+     * .deployTo(List.of(env))
+     * .content(ConfigurationContent.fromInlineText("This is my configuration content."))
+     * .build();
+     * ```
+     *
+     * [Documentation](https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-creating-application.html)
+     */
+    public inline fun application(
+        scope: Construct,
+        id: String,
+        block: ApplicationDsl.() -> Unit = {},
+    ): Application {
+        val builder = ApplicationDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for the Application construct.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.appconfig.*;
+     * ApplicationProps applicationProps = ApplicationProps.builder()
+     * .applicationName("applicationName")
+     * .description("description")
+     * .build();
+     * ```
+     */
+    public inline fun applicationProps(
+        block: ApplicationPropsDsl.() -> Unit = {}
+    ): ApplicationProps {
+        val builder = ApplicationPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
     /**
      * The `AWS::AppConfig::Application` resource creates an application.
      *
@@ -172,6 +287,7 @@ public object appconfig {
      * .name("name")
      * // the properties below are optional
      * .description("description")
+     * .kmsKeyIdentifier("kmsKeyIdentifier")
      * .retrievalRoleArn("retrievalRoleArn")
      * .tags(List.of(TagsProperty.builder()
      * .key("key")
@@ -212,6 +328,7 @@ public object appconfig {
      * .name("name")
      * // the properties below are optional
      * .description("description")
+     * .kmsKeyIdentifier("kmsKeyIdentifier")
      * .retrievalRoleArn("retrievalRoleArn")
      * .tags(List.of(TagsProperty.builder()
      * .key("key")
@@ -589,6 +706,29 @@ public object appconfig {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.appconfig.*;
+     * MonitorProperty monitorProperty = MonitorProperty.builder()
+     * .alarmArn("alarmArn")
+     * // the properties below are optional
+     * .alarmRoleArn("alarmRoleArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-environment-monitor.html)
+     */
+    public inline fun cfnEnvironmentMonitorProperty(
+        block: CfnEnvironmentMonitorPropertyDsl.() -> Unit = {}
+    ): CfnEnvironment.MonitorProperty {
+        val builder = CfnEnvironmentMonitorPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.appconfig.*;
      * MonitorsProperty monitorsProperty = MonitorsProperty.builder()
      * .alarmArn("alarmArn")
      * .alarmRoleArn("alarmRoleArn")
@@ -640,11 +780,6 @@ public object appconfig {
     }
 
     /**
-     * Metadata to assign to the environment.
-     *
-     * Tags help organize and categorize your AWS AppConfig resources. Each tag consists of a key
-     * and an optional value, both of which you define.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -726,7 +861,20 @@ public object appconfig {
     }
 
     /**
-     * An action for an extension to take at a specific action point.
+     * An action defines the tasks that the extension performs during the AWS AppConfig workflow.
+     *
+     * Each action includes an action point such as `ON_CREATE_HOSTED_CONFIGURATION` ,
+     * `PRE_DEPLOYMENT` , or `ON_DEPLOYMENT` . Each action also includes a name, a URI to an AWS
+     * Lambda function, and an Amazon Resource Name (ARN) for an AWS Identity and Access Management
+     * assume role. You specify the name, URI, and ARN for each *action point* defined in the
+     * extension. You can specify the following actions for an extension:
+     * * `PRE_CREATE_HOSTED_CONFIGURATION_VERSION`
+     * * `PRE_START_DEPLOYMENT`
+     * * `ON_DEPLOYMENT_START`
+     * * `ON_DEPLOYMENT_STEP`
+     * * `ON_DEPLOYMENT_BAKING`
+     * * `ON_DEPLOYMENT_COMPLETE`
+     * * `ON_DEPLOYMENT_ROLLED_BACK`
      *
      * Example:
      * ```
@@ -969,6 +1117,526 @@ public object appconfig {
         block: CfnHostedConfigurationVersionPropsDsl.() -> Unit = {}
     ): CfnHostedConfigurationVersionProps {
         val builder = CfnHostedConfigurationVersionPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Options for the Configuration construct.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.appconfig.*;
+     * import software.amazon.awscdk.services.kms.*;
+     * DeploymentStrategy deploymentStrategy;
+     * Environment environment;
+     * Key key;
+     * IValidator validator;
+     * ConfigurationOptions configurationOptions = ConfigurationOptions.builder()
+     * .deploymentKey(key)
+     * .deploymentStrategy(deploymentStrategy)
+     * .deployTo(List.of(environment))
+     * .description("description")
+     * .name("name")
+     * .type(ConfigurationType.FREEFORM)
+     * .validators(List.of(validator))
+     * .build();
+     * ```
+     */
+    public inline fun configurationOptions(
+        block: ConfigurationOptionsDsl.() -> Unit = {}
+    ): ConfigurationOptions {
+        val builder = ConfigurationOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for the Configuration construct.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.appconfig.*;
+     * import software.amazon.awscdk.services.kms.*;
+     * Application application;
+     * DeploymentStrategy deploymentStrategy;
+     * Environment environment;
+     * Key key;
+     * IValidator validator;
+     * ConfigurationProps configurationProps = ConfigurationProps.builder()
+     * .application(application)
+     * // the properties below are optional
+     * .deploymentKey(key)
+     * .deploymentStrategy(deploymentStrategy)
+     * .deployTo(List.of(environment))
+     * .description("description")
+     * .name("name")
+     * .type(ConfigurationType.FREEFORM)
+     * .validators(List.of(validator))
+     * .build();
+     * ```
+     */
+    public inline fun configurationProps(
+        block: ConfigurationPropsDsl.() -> Unit = {}
+    ): ConfigurationProps {
+        val builder = ConfigurationPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * An AWS AppConfig deployment strategy.
+     *
+     * Example:
+     * ```
+     * DeploymentStrategy.Builder.create(this, "MyDeploymentStrategy")
+     * .rolloutStrategy(RolloutStrategy.linear(RolloutStrategyProps.builder()
+     * .growthFactor(20)
+     * .deploymentDuration(Duration.minutes(30))
+     * .finalBakeTime(Duration.minutes(30))
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-creating-deployment-strategy.html)
+     */
+    public inline fun deploymentStrategy(
+        scope: Construct,
+        id: String,
+        block: DeploymentStrategyDsl.() -> Unit = {},
+    ): DeploymentStrategy {
+        val builder = DeploymentStrategyDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for DeploymentStrategy.
+     *
+     * Example:
+     * ```
+     * DeploymentStrategy.Builder.create(this, "MyDeploymentStrategy")
+     * .rolloutStrategy(RolloutStrategy.linear(RolloutStrategyProps.builder()
+     * .growthFactor(20)
+     * .deploymentDuration(Duration.minutes(30))
+     * .finalBakeTime(Duration.minutes(30))
+     * .build()))
+     * .build();
+     * ```
+     */
+    public inline fun deploymentStrategyProps(
+        block: DeploymentStrategyPropsDsl.() -> Unit = {}
+    ): DeploymentStrategyProps {
+        val builder = DeploymentStrategyPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * An AWS AppConfig environment.
+     *
+     * Example:
+     * ```
+     * Application app = new Application(this, "MyApp");
+     * Environment env = Environment.Builder.create(this, "MyEnv")
+     * .application(app)
+     * .build();
+     * HostedConfiguration.Builder.create(this, "MyHostedConfig")
+     * .application(app)
+     * .deployTo(List.of(env))
+     * .content(ConfigurationContent.fromInlineText("This is my configuration content."))
+     * .build();
+     * ```
+     *
+     * [Documentation](https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-creating-environment.html)
+     */
+    public inline fun environment(
+        scope: Construct,
+        id: String,
+        block: EnvironmentDsl.() -> Unit = {},
+    ): Environment {
+        val builder = EnvironmentDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Attributes of an existing AWS AppConfig environment to import it.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.appconfig.*;
+     * Application application;
+     * Monitor monitor;
+     * EnvironmentAttributes environmentAttributes = EnvironmentAttributes.builder()
+     * .application(application)
+     * .environmentId("environmentId")
+     * // the properties below are optional
+     * .description("description")
+     * .monitors(List.of(monitor))
+     * .name("name")
+     * .build();
+     * ```
+     */
+    public inline fun environmentAttributes(
+        block: EnvironmentAttributesDsl.() -> Unit = {}
+    ): EnvironmentAttributes {
+        val builder = EnvironmentAttributesDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Options for the Environment construct.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.appconfig.*;
+     * Monitor monitor;
+     * EnvironmentOptions environmentOptions = EnvironmentOptions.builder()
+     * .description("description")
+     * .environmentName("environmentName")
+     * .monitors(List.of(monitor))
+     * .build();
+     * ```
+     */
+    public inline fun environmentOptions(
+        block: EnvironmentOptionsDsl.() -> Unit = {}
+    ): EnvironmentOptions {
+        val builder = EnvironmentOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for the Environment construct.
+     *
+     * Example:
+     * ```
+     * Application app = new Application(this, "MyApp");
+     * Environment env = Environment.Builder.create(this, "MyEnv")
+     * .application(app)
+     * .build();
+     * HostedConfiguration.Builder.create(this, "MyHostedConfig")
+     * .application(app)
+     * .deployTo(List.of(env))
+     * .content(ConfigurationContent.fromInlineText("This is my configuration content."))
+     * .build();
+     * ```
+     */
+    public inline fun environmentProps(
+        block: EnvironmentPropsDsl.() -> Unit = {}
+    ): EnvironmentProps {
+        val builder = EnvironmentPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * An AWS AppConfig extension.
+     *
+     * Example:
+     * ```
+     * Function fn;
+     * Extension.Builder.create(this, "MyExtension")
+     * .actions(List.of(
+     * Action.Builder.create()
+     * .actionPoints(List.of(ActionPoint.ON_DEPLOYMENT_START))
+     * .eventDestination(new LambdaDestination(fn))
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](https://docs.aws.amazon.com/appconfig/latest/userguide/working-with-appconfig-extensions.html)
+     */
+    public inline fun extension(
+        scope: Construct,
+        id: String,
+        block: ExtensionDsl.() -> Unit = {},
+    ): Extension {
+        val builder = ExtensionDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Attributes of an existing AWS AppConfig extension to import.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.appconfig.*;
+     * Action action;
+     * ExtensionAttributes extensionAttributes = ExtensionAttributes.builder()
+     * .extensionId("extensionId")
+     * .extensionVersionNumber(123)
+     * // the properties below are optional
+     * .actions(List.of(action))
+     * .description("description")
+     * .extensionArn("extensionArn")
+     * .name("name")
+     * .build();
+     * ```
+     */
+    public inline fun extensionAttributes(
+        block: ExtensionAttributesDsl.() -> Unit = {}
+    ): ExtensionAttributes {
+        val builder = ExtensionAttributesDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Options for the Extension construct.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.appconfig.*;
+     * Parameter parameter;
+     * ExtensionOptions extensionOptions = ExtensionOptions.builder()
+     * .description("description")
+     * .extensionName("extensionName")
+     * .latestVersionNumber(123)
+     * .parameters(List.of(parameter))
+     * .build();
+     * ```
+     */
+    public inline fun extensionOptions(
+        block: ExtensionOptionsDsl.() -> Unit = {}
+    ): ExtensionOptions {
+        val builder = ExtensionOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for the Extension construct.
+     *
+     * Example:
+     * ```
+     * Function fn;
+     * Extension.Builder.create(this, "MyExtension")
+     * .actions(List.of(
+     * Action.Builder.create()
+     * .actionPoints(List.of(ActionPoint.ON_DEPLOYMENT_START))
+     * .eventDestination(new LambdaDestination(fn))
+     * .build()))
+     * .build();
+     * ```
+     */
+    public inline fun extensionProps(block: ExtensionPropsDsl.() -> Unit = {}): ExtensionProps {
+        val builder = ExtensionPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A hosted configuration represents configuration stored in the AWS AppConfig hosted
+     * configuration store.
+     *
+     * Example:
+     * ```
+     * Application application;
+     * HostedConfiguration.Builder.create(this, "MyHostedConfiguration")
+     * .application(application)
+     * .content(ConfigurationContent.fromInlineText("This is my configuration content."))
+     * .type(ConfigurationType.FEATURE_FLAGS)
+     * .build();
+     * ```
+     */
+    public inline fun hostedConfiguration(
+        scope: Construct,
+        id: String,
+        block: HostedConfigurationDsl.() -> Unit = {},
+    ): HostedConfiguration {
+        val builder = HostedConfigurationDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Options for HostedConfiguration.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.appconfig.*;
+     * import software.amazon.awscdk.services.kms.*;
+     * ConfigurationContent configurationContent;
+     * DeploymentStrategy deploymentStrategy;
+     * Environment environment;
+     * Key key;
+     * IValidator validator;
+     * HostedConfigurationOptions hostedConfigurationOptions = HostedConfigurationOptions.builder()
+     * .content(configurationContent)
+     * // the properties below are optional
+     * .deploymentKey(key)
+     * .deploymentStrategy(deploymentStrategy)
+     * .deployTo(List.of(environment))
+     * .description("description")
+     * .latestVersionNumber(123)
+     * .name("name")
+     * .type(ConfigurationType.FREEFORM)
+     * .validators(List.of(validator))
+     * .versionLabel("versionLabel")
+     * .build();
+     * ```
+     */
+    public inline fun hostedConfigurationOptions(
+        block: HostedConfigurationOptionsDsl.() -> Unit = {}
+    ): HostedConfigurationOptions {
+        val builder = HostedConfigurationOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for HostedConfiguration.
+     *
+     * Example:
+     * ```
+     * Application application;
+     * HostedConfiguration.Builder.create(this, "MyHostedConfiguration")
+     * .application(application)
+     * .content(ConfigurationContent.fromInlineText("This is my configuration content."))
+     * .type(ConfigurationType.FEATURE_FLAGS)
+     * .build();
+     * ```
+     */
+    public inline fun hostedConfigurationProps(
+        block: HostedConfigurationPropsDsl.() -> Unit = {}
+    ): HostedConfigurationProps {
+        val builder = HostedConfigurationPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for the Rollout Strategy.
+     *
+     * Example:
+     * ```
+     * Application application;
+     * HostedConfiguration.Builder.create(this, "MyHostedConfiguration")
+     * .application(application)
+     * .content(ConfigurationContent.fromInlineText("This is my configuration content."))
+     * .deploymentStrategy(DeploymentStrategy.Builder.create(this, "MyDeploymentStrategy")
+     * .rolloutStrategy(RolloutStrategy.linear(RolloutStrategyProps.builder()
+     * .growthFactor(15)
+     * .deploymentDuration(Duration.minutes(30))
+     * .finalBakeTime(Duration.minutes(15))
+     * .build()))
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun rolloutStrategyProps(
+        block: RolloutStrategyPropsDsl.() -> Unit = {}
+    ): RolloutStrategyProps {
+        val builder = RolloutStrategyPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A sourced configuration represents configuration stored in an Amazon S3 bucket, AWS Secrets
+     * Manager secret, Systems Manager (SSM) Parameter Store parameter, SSM document, or AWS
+     * CodePipeline.
+     *
+     * Example:
+     * ```
+     * Application application;
+     * Bucket bucket;
+     * SourcedConfiguration.Builder.create(this, "MySourcedConfiguration")
+     * .application(application)
+     * .location(ConfigurationSource.fromBucket(bucket, "path/to/file.json"))
+     * .type(ConfigurationType.FEATURE_FLAGS)
+     * .name("MyConfig")
+     * .description("This is my sourced configuration from CDK.")
+     * .build();
+     * ```
+     */
+    public inline fun sourcedConfiguration(
+        scope: Construct,
+        id: String,
+        block: SourcedConfigurationDsl.() -> Unit = {},
+    ): SourcedConfiguration {
+        val builder = SourcedConfigurationDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Options for SourcedConfiguration.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.appconfig.*;
+     * import software.amazon.awscdk.services.iam.*;
+     * import software.amazon.awscdk.services.kms.*;
+     * ConfigurationSource configurationSource;
+     * DeploymentStrategy deploymentStrategy;
+     * Environment environment;
+     * Key key;
+     * Role role;
+     * IValidator validator;
+     * SourcedConfigurationOptions sourcedConfigurationOptions = SourcedConfigurationOptions.builder()
+     * .location(configurationSource)
+     * // the properties below are optional
+     * .deploymentKey(key)
+     * .deploymentStrategy(deploymentStrategy)
+     * .deployTo(List.of(environment))
+     * .description("description")
+     * .name("name")
+     * .retrievalRole(role)
+     * .type(ConfigurationType.FREEFORM)
+     * .validators(List.of(validator))
+     * .versionNumber("versionNumber")
+     * .build();
+     * ```
+     */
+    public inline fun sourcedConfigurationOptions(
+        block: SourcedConfigurationOptionsDsl.() -> Unit = {}
+    ): SourcedConfigurationOptions {
+        val builder = SourcedConfigurationOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for SourcedConfiguration.
+     *
+     * Example:
+     * ```
+     * Application application;
+     * Bucket bucket;
+     * SourcedConfiguration.Builder.create(this, "MySourcedConfiguration")
+     * .application(application)
+     * .location(ConfigurationSource.fromBucket(bucket, "path/to/file.json"))
+     * .type(ConfigurationType.FEATURE_FLAGS)
+     * .name("MyConfig")
+     * .description("This is my sourced configuration from CDK.")
+     * .build();
+     * ```
+     */
+    public inline fun sourcedConfigurationProps(
+        block: SourcedConfigurationPropsDsl.() -> Unit = {}
+    ): SourcedConfigurationProps {
+        val builder = SourcedConfigurationPropsDsl()
         builder.apply(block)
         return builder.build()
     }

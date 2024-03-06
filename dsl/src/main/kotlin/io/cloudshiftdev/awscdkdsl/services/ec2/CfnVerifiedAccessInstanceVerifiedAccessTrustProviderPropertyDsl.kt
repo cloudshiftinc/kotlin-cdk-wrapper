@@ -16,7 +16,11 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance
 
 /**
- * Describes a Verified Access trust provider.
+ * A trust provider is a third-party entity that creates, maintains, and manages identity
+ * information for users and devices.
+ *
+ * When an application request is made, the identity information sent by the trust provider is
+ * evaluated by Verified Access before allowing or denying the application request.
  *
  * Example:
  * ```

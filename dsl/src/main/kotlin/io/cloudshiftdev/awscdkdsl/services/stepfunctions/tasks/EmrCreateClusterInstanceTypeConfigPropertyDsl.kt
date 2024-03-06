@@ -46,7 +46,7 @@ import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
  * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
  * .volumeSpecification(VolumeSpecificationProperty.builder()
  * .volumeSize(size)
- * .volumeType(EmrCreateCluster.getEbsBlockDeviceVolumeType().GP2)
+ * .volumeType(EmrCreateCluster.getEbsBlockDeviceVolumeType().GP3)
  * // the properties below are optional
  * .iops(123)
  * .build())
@@ -71,7 +71,7 @@ public class EmrCreateClusterInstanceTypeConfigPropertyDsl {
 
     /**
      * @param bidPrice The bid price for each EC2 Spot instance type as defined by InstanceType.
-     *   Expressed in USD.
+     *   Expressed in USD. Cannot specify both `bidPrice` and `bidPriceAsPercentageOfOnDemandPrice`.
      */
     public fun bidPrice(bidPrice: String) {
         cdkBuilder.bidPrice(bidPrice)
@@ -79,6 +79,7 @@ public class EmrCreateClusterInstanceTypeConfigPropertyDsl {
 
     /**
      * @param bidPriceAsPercentageOfOnDemandPrice The bid price, as a percentage of On-Demand price.
+     *   Cannot specify both `bidPrice` and `bidPriceAsPercentageOfOnDemandPrice`.
      */
     public fun bidPriceAsPercentageOfOnDemandPrice(bidPriceAsPercentageOfOnDemandPrice: Number) {
         cdkBuilder.bidPriceAsPercentageOfOnDemandPrice(bidPriceAsPercentageOfOnDemandPrice)

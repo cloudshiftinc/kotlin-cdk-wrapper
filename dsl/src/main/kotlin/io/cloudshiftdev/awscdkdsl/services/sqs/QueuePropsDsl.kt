@@ -24,6 +24,7 @@ import software.amazon.awscdk.services.sqs.DeduplicationScope
 import software.amazon.awscdk.services.sqs.FifoThroughputLimit
 import software.amazon.awscdk.services.sqs.QueueEncryption
 import software.amazon.awscdk.services.sqs.QueueProps
+import software.amazon.awscdk.services.sqs.RedriveAllowPolicy
 
 /**
  * Properties for creating a new Queue.
@@ -170,6 +171,26 @@ public class QueuePropsDsl {
      */
     public fun receiveMessageWaitTime(receiveMessageWaitTime: Duration) {
         cdkBuilder.receiveMessageWaitTime(receiveMessageWaitTime)
+    }
+
+    /**
+     * @param redriveAllowPolicy The string that includes the parameters for the permissions for the
+     *   dead-letter queue redrive permission and which source queues can specify dead-letter
+     *   queues.
+     */
+    public fun redriveAllowPolicy(redriveAllowPolicy: RedriveAllowPolicyDsl.() -> Unit = {}) {
+        val builder = RedriveAllowPolicyDsl()
+        builder.apply(redriveAllowPolicy)
+        cdkBuilder.redriveAllowPolicy(builder.build())
+    }
+
+    /**
+     * @param redriveAllowPolicy The string that includes the parameters for the permissions for the
+     *   dead-letter queue redrive permission and which source queues can specify dead-letter
+     *   queues.
+     */
+    public fun redriveAllowPolicy(redriveAllowPolicy: RedriveAllowPolicy) {
+        cdkBuilder.redriveAllowPolicy(redriveAllowPolicy)
     }
 
     /**

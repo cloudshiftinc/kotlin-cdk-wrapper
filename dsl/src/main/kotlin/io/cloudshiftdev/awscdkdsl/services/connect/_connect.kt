@@ -31,6 +31,8 @@ import software.amazon.awscdk.services.connect.CfnIntegrationAssociation
 import software.amazon.awscdk.services.connect.CfnIntegrationAssociationProps
 import software.amazon.awscdk.services.connect.CfnPhoneNumber
 import software.amazon.awscdk.services.connect.CfnPhoneNumberProps
+import software.amazon.awscdk.services.connect.CfnPredefinedAttribute
+import software.amazon.awscdk.services.connect.CfnPredefinedAttributeProps
 import software.amazon.awscdk.services.connect.CfnPrompt
 import software.amazon.awscdk.services.connect.CfnPromptProps
 import software.amazon.awscdk.services.connect.CfnQueue
@@ -43,6 +45,8 @@ import software.amazon.awscdk.services.connect.CfnRule
 import software.amazon.awscdk.services.connect.CfnRuleProps
 import software.amazon.awscdk.services.connect.CfnSecurityKey
 import software.amazon.awscdk.services.connect.CfnSecurityKeyProps
+import software.amazon.awscdk.services.connect.CfnSecurityProfile
+import software.amazon.awscdk.services.connect.CfnSecurityProfileProps
 import software.amazon.awscdk.services.connect.CfnTaskTemplate
 import software.amazon.awscdk.services.connect.CfnTaskTemplateProps
 import software.amazon.awscdk.services.connect.CfnTrafficDistributionGroup
@@ -51,6 +55,10 @@ import software.amazon.awscdk.services.connect.CfnUser
 import software.amazon.awscdk.services.connect.CfnUserHierarchyGroup
 import software.amazon.awscdk.services.connect.CfnUserHierarchyGroupProps
 import software.amazon.awscdk.services.connect.CfnUserProps
+import software.amazon.awscdk.services.connect.CfnView
+import software.amazon.awscdk.services.connect.CfnViewProps
+import software.amazon.awscdk.services.connect.CfnViewVersion
+import software.amazon.awscdk.services.connect.CfnViewVersionProps
 import software.constructs.Construct
 
 public object connect {
@@ -1320,6 +1328,10 @@ public object connect {
      * // the properties below are optional
      * .directoryId("directoryId")
      * .instanceAlias("instanceAlias")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .build();
      * ```
      *
@@ -1390,6 +1402,10 @@ public object connect {
      * // the properties below are optional
      * .directoryId("directoryId")
      * .instanceAlias("instanceAlias")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .build();
      * ```
      *
@@ -1424,13 +1440,12 @@ public object connect {
      * .streamArn("streamArn")
      * .build())
      * .kinesisVideoStreamConfig(KinesisVideoStreamConfigProperty.builder()
-     * .prefix("prefix")
-     * .retentionPeriodHours(123)
-     * // the properties below are optional
      * .encryptionConfig(EncryptionConfigProperty.builder()
      * .encryptionType("encryptionType")
      * .keyId("keyId")
      * .build())
+     * .prefix("prefix")
+     * .retentionPeriodHours(123)
      * .build())
      * .s3Config(S3ConfigProperty.builder()
      * .bucketName("bucketName")
@@ -1537,13 +1552,12 @@ public object connect {
      * import software.amazon.awscdk.services.connect.*;
      * KinesisVideoStreamConfigProperty kinesisVideoStreamConfigProperty =
      * KinesisVideoStreamConfigProperty.builder()
-     * .prefix("prefix")
-     * .retentionPeriodHours(123)
-     * // the properties below are optional
      * .encryptionConfig(EncryptionConfigProperty.builder()
      * .encryptionType("encryptionType")
      * .keyId("keyId")
      * .build())
+     * .prefix("prefix")
+     * .retentionPeriodHours(123)
      * .build();
      * ```
      *
@@ -1578,13 +1592,12 @@ public object connect {
      * .streamArn("streamArn")
      * .build())
      * .kinesisVideoStreamConfig(KinesisVideoStreamConfigProperty.builder()
-     * .prefix("prefix")
-     * .retentionPeriodHours(123)
-     * // the properties below are optional
      * .encryptionConfig(EncryptionConfigProperty.builder()
      * .encryptionType("encryptionType")
      * .keyId("keyId")
      * .build())
+     * .prefix("prefix")
+     * .retentionPeriodHours(123)
      * .build())
      * .s3Config(S3ConfigProperty.builder()
      * .bucketName("bucketName")
@@ -1701,16 +1714,17 @@ public object connect {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.connect.*;
      * CfnPhoneNumber cfnPhoneNumber = CfnPhoneNumber.Builder.create(this, "MyCfnPhoneNumber")
-     * .countryCode("countryCode")
      * .targetArn("targetArn")
-     * .type("type")
      * // the properties below are optional
+     * .countryCode("countryCode")
      * .description("description")
      * .prefix("prefix")
+     * .sourcePhoneNumberArn("sourcePhoneNumberArn")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
      * .build()))
+     * .type("type")
      * .build();
      * ```
      *
@@ -1735,16 +1749,17 @@ public object connect {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.connect.*;
      * CfnPhoneNumberProps cfnPhoneNumberProps = CfnPhoneNumberProps.builder()
-     * .countryCode("countryCode")
      * .targetArn("targetArn")
-     * .type("type")
      * // the properties below are optional
+     * .countryCode("countryCode")
      * .description("description")
      * .prefix("prefix")
+     * .sourcePhoneNumberArn("sourcePhoneNumberArn")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
      * .build()))
+     * .type("type")
      * .build();
      * ```
      *
@@ -1754,6 +1769,86 @@ public object connect {
         block: CfnPhoneNumberPropsDsl.() -> Unit = {}
     ): CfnPhoneNumberProps {
         val builder = CfnPhoneNumberPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Textual or numeric value that describes an attribute.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.connect.*;
+     * CfnPredefinedAttribute cfnPredefinedAttribute = CfnPredefinedAttribute.Builder.create(this,
+     * "MyCfnPredefinedAttribute")
+     * .instanceArn("instanceArn")
+     * .name("name")
+     * .values(ValuesProperty.builder()
+     * .stringList(List.of("stringList"))
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-predefinedattribute.html)
+     */
+    public inline fun cfnPredefinedAttribute(
+        scope: Construct,
+        id: String,
+        block: CfnPredefinedAttributeDsl.() -> Unit = {},
+    ): CfnPredefinedAttribute {
+        val builder = CfnPredefinedAttributeDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnPredefinedAttribute`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.connect.*;
+     * CfnPredefinedAttributeProps cfnPredefinedAttributeProps = CfnPredefinedAttributeProps.builder()
+     * .instanceArn("instanceArn")
+     * .name("name")
+     * .values(ValuesProperty.builder()
+     * .stringList(List.of("stringList"))
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-predefinedattribute.html)
+     */
+    public inline fun cfnPredefinedAttributeProps(
+        block: CfnPredefinedAttributePropsDsl.() -> Unit = {}
+    ): CfnPredefinedAttributeProps {
+        val builder = CfnPredefinedAttributePropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The values of a predefined attribute.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.connect.*;
+     * ValuesProperty valuesProperty = ValuesProperty.builder()
+     * .stringList(List.of("stringList"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-predefinedattribute-values.html)
+     */
+    public inline fun cfnPredefinedAttributeValuesProperty(
+        block: CfnPredefinedAttributeValuesPropertyDsl.() -> Unit = {}
+    ): CfnPredefinedAttribute.ValuesProperty {
+        val builder = CfnPredefinedAttributeValuesPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -2152,6 +2247,7 @@ public object connect {
      * .build()))
      * .name("name")
      * // the properties below are optional
+     * .agentAvailabilityTimer("agentAvailabilityTimer")
      * .queueConfigs(List.of(RoutingProfileQueueConfigProperty.builder()
      * .delay(123)
      * .priority(123)
@@ -2255,6 +2351,7 @@ public object connect {
      * .build()))
      * .name("name")
      * // the properties below are optional
+     * .agentAvailabilityTimer("agentAvailabilityTimer")
      * .queueConfigs(List.of(RoutingProfileQueueConfigProperty.builder()
      * .delay(123)
      * .priority(123)
@@ -2343,9 +2440,24 @@ public object connect {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.connect.*;
      * Object assignContactCategoryActions;
+     * Object emptyValue;
+     * Object endAssociatedTasksActions;
      * CfnRule cfnRule = CfnRule.Builder.create(this, "MyCfnRule")
      * .actions(ActionsProperty.builder()
      * .assignContactCategoryActions(List.of(assignContactCategoryActions))
+     * .createCaseActions(List.of(CreateCaseActionProperty.builder()
+     * .fields(List.of(FieldProperty.builder()
+     * .id("id")
+     * .value(FieldValueProperty.builder()
+     * .booleanValue(false)
+     * .doubleValue(123)
+     * .emptyValue(emptyValue)
+     * .stringValue("stringValue")
+     * .build())
+     * .build()))
+     * .templateId("templateId")
+     * .build()))
+     * .endAssociatedTasksActions(List.of(endAssociatedTasksActions))
      * .eventBridgeActions(List.of(EventBridgeActionProperty.builder()
      * .name("name")
      * .build()))
@@ -2370,6 +2482,17 @@ public object connect {
      * "referencesKey", ReferenceProperty.builder()
      * .type("type")
      * .value("value")
+     * .build()))
+     * .build()))
+     * .updateCaseActions(List.of(UpdateCaseActionProperty.builder()
+     * .fields(List.of(FieldProperty.builder()
+     * .id("id")
+     * .value(FieldValueProperty.builder()
+     * .booleanValue(false)
+     * .doubleValue(123)
+     * .emptyValue(emptyValue)
+     * .stringValue("stringValue")
+     * .build())
      * .build()))
      * .build()))
      * .build())
@@ -2411,8 +2534,23 @@ public object connect {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.connect.*;
      * Object assignContactCategoryActions;
+     * Object emptyValue;
+     * Object endAssociatedTasksActions;
      * ActionsProperty actionsProperty = ActionsProperty.builder()
      * .assignContactCategoryActions(List.of(assignContactCategoryActions))
+     * .createCaseActions(List.of(CreateCaseActionProperty.builder()
+     * .fields(List.of(FieldProperty.builder()
+     * .id("id")
+     * .value(FieldValueProperty.builder()
+     * .booleanValue(false)
+     * .doubleValue(123)
+     * .emptyValue(emptyValue)
+     * .stringValue("stringValue")
+     * .build())
+     * .build()))
+     * .templateId("templateId")
+     * .build()))
+     * .endAssociatedTasksActions(List.of(endAssociatedTasksActions))
      * .eventBridgeActions(List.of(EventBridgeActionProperty.builder()
      * .name("name")
      * .build()))
@@ -2439,6 +2577,17 @@ public object connect {
      * .value("value")
      * .build()))
      * .build()))
+     * .updateCaseActions(List.of(UpdateCaseActionProperty.builder()
+     * .fields(List.of(FieldProperty.builder()
+     * .id("id")
+     * .value(FieldValueProperty.builder()
+     * .booleanValue(false)
+     * .doubleValue(123)
+     * .emptyValue(emptyValue)
+     * .stringValue("stringValue")
+     * .build())
+     * .build()))
+     * .build()))
      * .build();
      * ```
      *
@@ -2448,6 +2597,39 @@ public object connect {
         block: CfnRuleActionsPropertyDsl.() -> Unit = {}
     ): CfnRule.ActionsProperty {
         val builder = CfnRuleActionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The definition for create case action.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.connect.*;
+     * Object emptyValue;
+     * CreateCaseActionProperty createCaseActionProperty = CreateCaseActionProperty.builder()
+     * .fields(List.of(FieldProperty.builder()
+     * .id("id")
+     * .value(FieldValueProperty.builder()
+     * .booleanValue(false)
+     * .doubleValue(123)
+     * .emptyValue(emptyValue)
+     * .stringValue("stringValue")
+     * .build())
+     * .build()))
+     * .templateId("templateId")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-createcaseaction.html)
+     */
+    public inline fun cfnRuleCreateCaseActionProperty(
+        block: CfnRuleCreateCaseActionPropertyDsl.() -> Unit = {}
+    ): CfnRule.CreateCaseActionProperty {
+        val builder = CfnRuleCreateCaseActionPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -2471,6 +2653,63 @@ public object connect {
         block: CfnRuleEventBridgeActionPropertyDsl.() -> Unit = {}
     ): CfnRule.EventBridgeActionProperty {
         val builder = CfnRuleEventBridgeActionPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The field of the case.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.connect.*;
+     * Object emptyValue;
+     * FieldProperty fieldProperty = FieldProperty.builder()
+     * .id("id")
+     * .value(FieldValueProperty.builder()
+     * .booleanValue(false)
+     * .doubleValue(123)
+     * .emptyValue(emptyValue)
+     * .stringValue("stringValue")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-field.html)
+     */
+    public inline fun cfnRuleFieldProperty(
+        block: CfnRuleFieldPropertyDsl.() -> Unit = {}
+    ): CfnRule.FieldProperty {
+        val builder = CfnRuleFieldPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Object for case field values.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.connect.*;
+     * Object emptyValue;
+     * FieldValueProperty fieldValueProperty = FieldValueProperty.builder()
+     * .booleanValue(false)
+     * .doubleValue(123)
+     * .emptyValue(emptyValue)
+     * .stringValue("stringValue")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-fieldvalue.html)
+     */
+    public inline fun cfnRuleFieldValueProperty(
+        block: CfnRuleFieldValuePropertyDsl.() -> Unit = {}
+    ): CfnRule.FieldValueProperty {
+        val builder = CfnRuleFieldValuePropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -2510,9 +2749,24 @@ public object connect {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.connect.*;
      * Object assignContactCategoryActions;
+     * Object emptyValue;
+     * Object endAssociatedTasksActions;
      * CfnRuleProps cfnRuleProps = CfnRuleProps.builder()
      * .actions(ActionsProperty.builder()
      * .assignContactCategoryActions(List.of(assignContactCategoryActions))
+     * .createCaseActions(List.of(CreateCaseActionProperty.builder()
+     * .fields(List.of(FieldProperty.builder()
+     * .id("id")
+     * .value(FieldValueProperty.builder()
+     * .booleanValue(false)
+     * .doubleValue(123)
+     * .emptyValue(emptyValue)
+     * .stringValue("stringValue")
+     * .build())
+     * .build()))
+     * .templateId("templateId")
+     * .build()))
+     * .endAssociatedTasksActions(List.of(endAssociatedTasksActions))
      * .eventBridgeActions(List.of(EventBridgeActionProperty.builder()
      * .name("name")
      * .build()))
@@ -2537,6 +2791,17 @@ public object connect {
      * "referencesKey", ReferenceProperty.builder()
      * .type("type")
      * .value("value")
+     * .build()))
+     * .build()))
+     * .updateCaseActions(List.of(UpdateCaseActionProperty.builder()
+     * .fields(List.of(FieldProperty.builder()
+     * .id("id")
+     * .value(FieldValueProperty.builder()
+     * .booleanValue(false)
+     * .doubleValue(123)
+     * .emptyValue(emptyValue)
+     * .stringValue("stringValue")
+     * .build())
      * .build()))
      * .build()))
      * .build())
@@ -2685,6 +2950,38 @@ public object connect {
     }
 
     /**
+     * The definition for update case action.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.connect.*;
+     * Object emptyValue;
+     * UpdateCaseActionProperty updateCaseActionProperty = UpdateCaseActionProperty.builder()
+     * .fields(List.of(FieldProperty.builder()
+     * .id("id")
+     * .value(FieldValueProperty.builder()
+     * .booleanValue(false)
+     * .doubleValue(123)
+     * .emptyValue(emptyValue)
+     * .stringValue("stringValue")
+     * .build())
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-updatecaseaction.html)
+     */
+    public inline fun cfnRuleUpdateCaseActionProperty(
+        block: CfnRuleUpdateCaseActionPropertyDsl.() -> Unit = {}
+    ): CfnRule.UpdateCaseActionProperty {
+        val builder = CfnRuleUpdateCaseActionPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The security key for the instance.
      *
      * Only two security keys are allowed per Amazon Connect instance.
@@ -2732,6 +3029,81 @@ public object connect {
         block: CfnSecurityKeyPropsDsl.() -> Unit = {}
     ): CfnSecurityKeyProps {
         val builder = CfnSecurityKeyPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Creates a security profile.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.connect.*;
+     * CfnSecurityProfile cfnSecurityProfile = CfnSecurityProfile.Builder.create(this,
+     * "MyCfnSecurityProfile")
+     * .instanceArn("instanceArn")
+     * .securityProfileName("securityProfileName")
+     * // the properties below are optional
+     * .allowedAccessControlTags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .description("description")
+     * .permissions(List.of("permissions"))
+     * .tagRestrictedResources(List.of("tagRestrictedResources"))
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-securityprofile.html)
+     */
+    public inline fun cfnSecurityProfile(
+        scope: Construct,
+        id: String,
+        block: CfnSecurityProfileDsl.() -> Unit = {},
+    ): CfnSecurityProfile {
+        val builder = CfnSecurityProfileDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnSecurityProfile`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.connect.*;
+     * CfnSecurityProfileProps cfnSecurityProfileProps = CfnSecurityProfileProps.builder()
+     * .instanceArn("instanceArn")
+     * .securityProfileName("securityProfileName")
+     * // the properties below are optional
+     * .allowedAccessControlTags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .description("description")
+     * .permissions(List.of("permissions"))
+     * .tagRestrictedResources(List.of("tagRestrictedResources"))
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-securityprofile.html)
+     */
+    public inline fun cfnSecurityProfileProps(
+        block: CfnSecurityProfilePropsDsl.() -> Unit = {}
+    ): CfnSecurityProfileProps {
+        val builder = CfnSecurityProfilePropsDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -3131,6 +3503,11 @@ public object connect {
      * .key("key")
      * .value("value")
      * .build()))
+     * .userProficiencies(List.of(UserProficiencyProperty.builder()
+     * .attributeName("attributeName")
+     * .attributeValue("attributeValue")
+     * .level(123)
+     * .build()))
      * .build();
      * ```
      *
@@ -3160,6 +3537,10 @@ public object connect {
      * .name("name")
      * // the properties below are optional
      * .parentGroupArn("parentGroupArn")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .build();
      * ```
      *
@@ -3188,6 +3569,10 @@ public object connect {
      * .name("name")
      * // the properties below are optional
      * .parentGroupArn("parentGroupArn")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .build();
      * ```
      *
@@ -3236,6 +3621,11 @@ public object connect {
      * .key("key")
      * .value("value")
      * .build()))
+     * .userProficiencies(List.of(UserProficiencyProperty.builder()
+     * .attributeName("attributeName")
+     * .attributeValue("attributeValue")
+     * .level(123)
+     * .build()))
      * .build();
      * ```
      *
@@ -3249,6 +3639,10 @@ public object connect {
 
     /**
      * Contains information about the identity of a user.
+     *
+     * For Amazon Connect instances that are created with the `EXISTING_DIRECTORY` identity
+     * management type, `FirstName` , `LastName` , and `Email` cannot be updated from within Amazon
+     * Connect because they are managed by the directory.
      *
      * Example:
      * ```
@@ -3297,6 +3691,158 @@ public object connect {
         block: CfnUserUserPhoneConfigPropertyDsl.() -> Unit = {}
     ): CfnUser.UserPhoneConfigProperty {
         val builder = CfnUserUserPhoneConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A predefined attribute must be created before using `UserProficiencies` in the Cloudformation
+     * *User* template.
+     *
+     * For more information, see
+     * [Predefined attributes](https://docs.aws.amazon.com/connect/latest/adminguide/predefined-attributes.html)
+     * .
+     *
+     * Proficiency of a user.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.connect.*;
+     * UserProficiencyProperty userProficiencyProperty = UserProficiencyProperty.builder()
+     * .attributeName("attributeName")
+     * .attributeValue("attributeValue")
+     * .level(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-user-userproficiency.html)
+     */
+    public inline fun cfnUserUserProficiencyProperty(
+        block: CfnUserUserProficiencyPropertyDsl.() -> Unit = {}
+    ): CfnUser.UserProficiencyProperty {
+        val builder = CfnUserUserProficiencyPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Creates a customer-managed view in the published state within the specified instance.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.connect.*;
+     * Object template;
+     * CfnView cfnView = CfnView.Builder.create(this, "MyCfnView")
+     * .actions(List.of("actions"))
+     * .instanceArn("instanceArn")
+     * .name("name")
+     * .template(template)
+     * // the properties below are optional
+     * .description("description")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-view.html)
+     */
+    public inline fun cfnView(
+        scope: Construct,
+        id: String,
+        block: CfnViewDsl.() -> Unit = {},
+    ): CfnView {
+        val builder = CfnViewDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnView`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.connect.*;
+     * Object template;
+     * CfnViewProps cfnViewProps = CfnViewProps.builder()
+     * .actions(List.of("actions"))
+     * .instanceArn("instanceArn")
+     * .name("name")
+     * .template(template)
+     * // the properties below are optional
+     * .description("description")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-view.html)
+     */
+    public inline fun cfnViewProps(block: CfnViewPropsDsl.() -> Unit = {}): CfnViewProps {
+        val builder = CfnViewPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Creates a version for the specified customer-managed view within the specified instance.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.connect.*;
+     * CfnViewVersion cfnViewVersion = CfnViewVersion.Builder.create(this, "MyCfnViewVersion")
+     * .viewArn("viewArn")
+     * // the properties below are optional
+     * .versionDescription("versionDescription")
+     * .viewContentSha256("viewContentSha256")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-viewversion.html)
+     */
+    public inline fun cfnViewVersion(
+        scope: Construct,
+        id: String,
+        block: CfnViewVersionDsl.() -> Unit = {},
+    ): CfnViewVersion {
+        val builder = CfnViewVersionDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnViewVersion`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.connect.*;
+     * CfnViewVersionProps cfnViewVersionProps = CfnViewVersionProps.builder()
+     * .viewArn("viewArn")
+     * // the properties below are optional
+     * .versionDescription("versionDescription")
+     * .viewContentSha256("viewContentSha256")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-viewversion.html)
+     */
+    public inline fun cfnViewVersionProps(
+        block: CfnViewVersionPropsDsl.() -> Unit = {}
+    ): CfnViewVersionProps {
+        val builder = CfnViewVersionPropsDsl()
         builder.apply(block)
         return builder.build()
     }

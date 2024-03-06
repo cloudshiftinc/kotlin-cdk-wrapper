@@ -49,11 +49,11 @@ public class CfnApiMappingDsl(
     private val cdkBuilder: CfnApiMapping.Builder = CfnApiMapping.Builder.create(scope, id)
 
     /**
-     * The identifier of the API.
+     * The API identifier.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-apimapping.html#cfn-apigatewayv2-apimapping-apiid)
      *
-     * @param apiId The identifier of the API.
+     * @param apiId The API identifier.
      */
     public fun apiId(apiId: String) {
         cdkBuilder.apiId(apiId)

@@ -22,6 +22,7 @@ import software.amazon.awscdk.services.sns.CfnTopicInlinePolicyProps
 import software.amazon.awscdk.services.sns.CfnTopicPolicy
 import software.amazon.awscdk.services.sns.CfnTopicPolicyProps
 import software.amazon.awscdk.services.sns.CfnTopicProps
+import software.amazon.awscdk.services.sns.LoggingConfig
 import software.amazon.awscdk.services.sns.NumericConditions
 import software.amazon.awscdk.services.sns.StringConditions
 import software.amazon.awscdk.services.sns.Subscription
@@ -53,6 +54,7 @@ public object sns {
      * "color", SubscriptionFilter.stringFilter(StringConditions.builder()
      * .allowlist(List.of("red", "orange"))
      * .matchPrefixes(List.of("bl"))
+     * .matchSuffixes(List.of("ue"))
      * .build()),
      * "size", SubscriptionFilter.stringFilter(StringConditions.builder()
      * .denylist(List.of("small", "medium"))
@@ -86,6 +88,7 @@ public object sns {
      * Object deliveryPolicy;
      * Object filterPolicy;
      * Object redrivePolicy;
+     * Object replayPolicy;
      * CfnSubscription cfnSubscription = CfnSubscription.Builder.create(this, "MyCfnSubscription")
      * .protocol("protocol")
      * .topicArn("topicArn")
@@ -97,6 +100,7 @@ public object sns {
      * .rawMessageDelivery(false)
      * .redrivePolicy(redrivePolicy)
      * .region("region")
+     * .replayPolicy(replayPolicy)
      * .subscriptionRoleArn("subscriptionRoleArn")
      * .build();
      * ```
@@ -124,6 +128,7 @@ public object sns {
      * Object deliveryPolicy;
      * Object filterPolicy;
      * Object redrivePolicy;
+     * Object replayPolicy;
      * CfnSubscriptionProps cfnSubscriptionProps = CfnSubscriptionProps.builder()
      * .protocol("protocol")
      * .topicArn("topicArn")
@@ -135,6 +140,7 @@ public object sns {
      * .rawMessageDelivery(false)
      * .redrivePolicy(redrivePolicy)
      * .region("region")
+     * .replayPolicy(replayPolicy)
      * .subscriptionRoleArn("subscriptionRoleArn")
      * .build();
      * ```
@@ -162,10 +168,19 @@ public object sns {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.sns.*;
+     * Object archivePolicy;
      * Object dataProtectionPolicy;
      * CfnTopic cfnTopic = CfnTopic.Builder.create(this, "MyCfnTopic")
+     * .archivePolicy(archivePolicy)
      * .contentBasedDeduplication(false)
      * .dataProtectionPolicy(dataProtectionPolicy)
+     * .deliveryStatusLogging(List.of(LoggingConfigProperty.builder()
+     * .protocol("protocol")
+     * // the properties below are optional
+     * .failureFeedbackRoleArn("failureFeedbackRoleArn")
+     * .successFeedbackRoleArn("successFeedbackRoleArn")
+     * .successFeedbackSampleRate("successFeedbackSampleRate")
+     * .build()))
      * .displayName("displayName")
      * .fifoTopic(false)
      * .kmsMasterKeyId("kmsMasterKeyId")
@@ -249,6 +264,36 @@ public object sns {
     }
 
     /**
+     * The `LoggingConfig` property type specifies the `Delivery` status logging configuration for
+     * an
+     * [`AWS::SNS::Topic`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topic.html)
+     * .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sns.*;
+     * LoggingConfigProperty loggingConfigProperty = LoggingConfigProperty.builder()
+     * .protocol("protocol")
+     * // the properties below are optional
+     * .failureFeedbackRoleArn("failureFeedbackRoleArn")
+     * .successFeedbackRoleArn("successFeedbackRoleArn")
+     * .successFeedbackSampleRate("successFeedbackSampleRate")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic-loggingconfig.html)
+     */
+    public inline fun cfnTopicLoggingConfigProperty(
+        block: CfnTopicLoggingConfigPropertyDsl.() -> Unit = {}
+    ): CfnTopic.LoggingConfigProperty {
+        val builder = CfnTopicLoggingConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The `AWS::SNS::TopicPolicy` resource associates Amazon SNS topics with a policy.
      *
      * For an example snippet, see
@@ -312,10 +357,19 @@ public object sns {
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.sns.*;
+     * Object archivePolicy;
      * Object dataProtectionPolicy;
      * CfnTopicProps cfnTopicProps = CfnTopicProps.builder()
+     * .archivePolicy(archivePolicy)
      * .contentBasedDeduplication(false)
      * .dataProtectionPolicy(dataProtectionPolicy)
+     * .deliveryStatusLogging(List.of(LoggingConfigProperty.builder()
+     * .protocol("protocol")
+     * // the properties below are optional
+     * .failureFeedbackRoleArn("failureFeedbackRoleArn")
+     * .successFeedbackRoleArn("successFeedbackRoleArn")
+     * .successFeedbackSampleRate("successFeedbackSampleRate")
+     * .build()))
      * .displayName("displayName")
      * .fifoTopic(false)
      * .kmsMasterKeyId("kmsMasterKeyId")
@@ -372,6 +426,31 @@ public object sns {
     }
 
     /**
+     * A logging configuration for delivery status of messages sent from SNS topic to subscribed
+     * endpoints.
+     *
+     * For more information, see
+     * https://docs.aws.amazon.com/sns/latest/dg/sns-topic-attributes.html.
+     *
+     * Example:
+     * ```
+     * Role role;
+     * Topic topic = new Topic(this, "MyTopic");
+     * topic.addLoggingConfig(LoggingConfig.builder()
+     * .protocol(LoggingProtocol.SQS)
+     * .failureFeedbackRole(role)
+     * .successFeedbackRole(role)
+     * .successFeedbackSampleRate(50)
+     * .build());
+     * ```
+     */
+    public inline fun loggingConfig(block: LoggingConfigDsl.() -> Unit = {}): LoggingConfig {
+        val builder = LoggingConfigDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Conditions that can be applied to numeric attributes.
      *
      * Example:
@@ -389,6 +468,7 @@ public object sns {
      * "color", SubscriptionFilter.stringFilter(StringConditions.builder()
      * .allowlist(List.of("red", "orange"))
      * .matchPrefixes(List.of("bl"))
+     * .matchSuffixes(List.of("ue"))
      * .build()),
      * "size", SubscriptionFilter.stringFilter(StringConditions.builder()
      * .denylist(List.of("small", "medium"))
@@ -427,6 +507,7 @@ public object sns {
      * "color", SubscriptionFilter.stringFilter(StringConditions.builder()
      * .allowlist(List.of("red", "orange"))
      * .matchPrefixes(List.of("bl"))
+     * .matchSuffixes(List.of("ue"))
      * .build()),
      * "size", SubscriptionFilter.stringFilter(StringConditions.builder()
      * .denylist(List.of("small", "medium"))
@@ -577,14 +658,19 @@ public object sns {
      * Example:
      * ```
      * Topic topic = new Topic(this, "Topic");
-     * TopicPolicy topicPolicy = TopicPolicy.Builder.create(this, "TopicPolicy")
-     * .topics(List.of(topic))
-     * .build();
-     * topicPolicy.document.addStatements(PolicyStatement.Builder.create()
+     * PolicyDocument policyDocument = PolicyDocument.Builder.create()
+     * .assignSids(true)
+     * .statements(List.of(
+     * PolicyStatement.Builder.create()
      * .actions(List.of("sns:Subscribe"))
      * .principals(List.of(new AnyPrincipal()))
      * .resources(List.of(topic.getTopicArn()))
-     * .build());
+     * .build()))
+     * .build();
+     * TopicPolicy topicPolicy = TopicPolicy.Builder.create(this, "Policy")
+     * .topics(List.of(topic))
+     * .policyDocument(policyDocument)
+     * .build();
      * ```
      */
     public inline fun topicPolicy(
@@ -603,14 +689,19 @@ public object sns {
      * Example:
      * ```
      * Topic topic = new Topic(this, "Topic");
-     * TopicPolicy topicPolicy = TopicPolicy.Builder.create(this, "TopicPolicy")
-     * .topics(List.of(topic))
-     * .build();
-     * topicPolicy.document.addStatements(PolicyStatement.Builder.create()
+     * PolicyDocument policyDocument = PolicyDocument.Builder.create()
+     * .assignSids(true)
+     * .statements(List.of(
+     * PolicyStatement.Builder.create()
      * .actions(List.of("sns:Subscribe"))
      * .principals(List.of(new AnyPrincipal()))
      * .resources(List.of(topic.getTopicArn()))
-     * .build());
+     * .build()))
+     * .build();
+     * TopicPolicy topicPolicy = TopicPolicy.Builder.create(this, "Policy")
+     * .topics(List.of(topic))
+     * .policyDocument(policyDocument)
+     * .build();
      * ```
      */
     public inline fun topicPolicyProps(
@@ -627,7 +718,9 @@ public object sns {
      * Example:
      * ```
      * Topic topic = Topic.Builder.create(this, "Topic")
+     * .contentBasedDeduplication(true)
      * .displayName("Customer subscription topic")
+     * .fifo(true)
      * .build();
      * ```
      */

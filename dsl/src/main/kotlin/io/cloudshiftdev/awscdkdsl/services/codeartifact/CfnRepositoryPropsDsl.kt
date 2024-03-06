@@ -69,10 +69,7 @@ public class CfnRepositoryPropsDsl {
         cdkBuilder.domainName(domainName)
     }
 
-    /**
-     * @param domainOwner The 12-digit account number of the AWS account that owns the domain that
-     *   contains the repository. It does not include dashes or spaces.
-     */
+    /** @param domainOwner The 12-digit account ID of the AWS account that owns the domain. */
     public fun domainOwner(domainOwner: String) {
         cdkBuilder.domainOwner(domainOwner)
     }

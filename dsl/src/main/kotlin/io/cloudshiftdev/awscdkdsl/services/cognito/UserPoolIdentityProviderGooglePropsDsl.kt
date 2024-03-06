@@ -89,7 +89,7 @@ public class UserPoolIdentityProviderGooglePropsDsl {
     }
 
     /**
-     * @param scopes The list of google permissions to obtain for getting access to the google
+     * @param scopes The list of Google permissions to obtain for getting access to the Google
      *   profile.
      */
     public fun scopes(vararg scopes: String) {
@@ -97,7 +97,7 @@ public class UserPoolIdentityProviderGooglePropsDsl {
     }
 
     /**
-     * @param scopes The list of google permissions to obtain for getting access to the google
+     * @param scopes The list of Google permissions to obtain for getting access to the Google
      *   profile.
      */
     public fun scopes(scopes: Collection<String>) {

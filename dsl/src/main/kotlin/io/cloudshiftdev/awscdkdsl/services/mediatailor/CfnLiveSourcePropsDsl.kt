@@ -56,46 +56,49 @@ public class CfnLiveSourcePropsDsl {
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
-    /**
-     * @param httpPackageConfigurations A list of HTTP package configuration parameters for this
-     *   live source.</p>.
-     */
+    /** @param httpPackageConfigurations The HTTP package configurations for the live source. */
     public fun httpPackageConfigurations(vararg httpPackageConfigurations: Any) {
         _httpPackageConfigurations.addAll(listOf(*httpPackageConfigurations))
     }
 
-    /**
-     * @param httpPackageConfigurations A list of HTTP package configuration parameters for this
-     *   live source.</p>.
-     */
+    /** @param httpPackageConfigurations The HTTP package configurations for the live source. */
     public fun httpPackageConfigurations(httpPackageConfigurations: Collection<Any>) {
         _httpPackageConfigurations.addAll(httpPackageConfigurations)
     }
 
-    /**
-     * @param httpPackageConfigurations A list of HTTP package configuration parameters for this
-     *   live source.</p>.
-     */
+    /** @param httpPackageConfigurations The HTTP package configurations for the live source. */
     public fun httpPackageConfigurations(httpPackageConfigurations: IResolvable) {
         cdkBuilder.httpPackageConfigurations(httpPackageConfigurations)
     }
 
-    /** @param liveSourceName the value to be set. */
+    /** @param liveSourceName The name that's used to refer to a live source. */
     public fun liveSourceName(liveSourceName: String) {
         cdkBuilder.liveSourceName(liveSourceName)
     }
 
-    /** @param sourceLocationName the value to be set. */
+    /** @param sourceLocationName The name of the source location. */
     public fun sourceLocationName(sourceLocationName: String) {
         cdkBuilder.sourceLocationName(sourceLocationName)
     }
 
-    /** @param tags The tags to assign to the live source. */
+    /**
+     * @param tags The tags assigned to the live source. Tags are key-value pairs that you can
+     *   associate with Amazon resources to help with organization, access control, and cost
+     *   tracking. For more information, see
+     *   [Tagging AWS Elemental MediaTailor Resources](https://docs.aws.amazon.com/mediatailor/latest/ug/tagging.html)
+     *   .
+     */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
-    /** @param tags The tags to assign to the live source. */
+    /**
+     * @param tags The tags assigned to the live source. Tags are key-value pairs that you can
+     *   associate with Amazon resources to help with organization, access control, and cost
+     *   tracking. For more information, see
+     *   [Tagging AWS Elemental MediaTailor Resources](https://docs.aws.amazon.com/mediatailor/latest/ug/tagging.html)
+     *   .
+     */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
     }

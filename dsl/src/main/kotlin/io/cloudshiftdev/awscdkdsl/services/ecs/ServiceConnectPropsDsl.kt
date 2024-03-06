@@ -27,23 +27,19 @@ import software.amazon.awscdk.services.ecs.ServiceConnectService
  * ```
  * Cluster cluster;
  * TaskDefinition taskDefinition;
- * ContainerDefinitionOptions containerOptions;
- * ContainerDefinition container = taskDefinition.addContainer("MyContainer", containerOptions);
- * container.addPortMappings(PortMapping.builder()
- * .name("api")
- * .containerPort(8080)
- * .build());
- * cluster.addDefaultCloudMapNamespace(CloudMapNamespaceOptions.builder()
- * .name("local")
- * .build());
- * FargateService service = FargateService.Builder.create(this, "Service")
+ * FargateService customService = FargateService.Builder.create(this, "CustomizedService")
  * .cluster(cluster)
  * .taskDefinition(taskDefinition)
  * .serviceConnectConfiguration(ServiceConnectProps.builder()
+ * .logDriver(LogDrivers.awsLogs(AwsLogDriverProps.builder()
+ * .streamPrefix("sc-traffic")
+ * .build()))
  * .services(List.of(ServiceConnectService.builder()
  * .portMappingName("api")
- * .dnsName("http-api")
+ * .dnsName("customized-api")
  * .port(80)
+ * .ingressPortOverride(20040)
+ * .discoveryName("custom")
  * .build()))
  * .build())
  * .build();

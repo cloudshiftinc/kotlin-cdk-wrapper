@@ -59,6 +59,7 @@ import software.constructs.Construct
  * .approvedPatches(List.of("approvedPatches"))
  * .approvedPatchesComplianceLevel("approvedPatchesComplianceLevel")
  * .approvedPatchesEnableNonSecurity(false)
+ * .defaultBaseline(false)
  * .description("description")
  * .globalFilters(PatchFilterGroupProperty.builder()
  * .patchFilters(List.of(PatchFilterProperty.builder()
@@ -161,6 +162,8 @@ public class CfnPatchBaselineDsl(
      * When an approved patch is reported as missing, this value describes the severity of the
      * compliance violation. The default value is `UNSPECIFIED` .
      *
+     * Default: - "UNSPECIFIED"
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-approvedpatchescompliancelevel)
      *
      * @param approvedPatchesComplianceLevel Defines the compliance level for approved patches.
@@ -174,6 +177,8 @@ public class CfnPatchBaselineDsl(
      * applied to the managed nodes.
      *
      * The default value is `false` . Applies to Linux managed nodes only.
+     *
+     * Default: - false
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-approvedpatchesenablenonsecurity)
      *
@@ -190,6 +195,8 @@ public class CfnPatchBaselineDsl(
      *
      * The default value is `false` . Applies to Linux managed nodes only.
      *
+     * Default: - false
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-approvedpatchesenablenonsecurity)
      *
      * @param approvedPatchesEnableNonSecurity Indicates whether the list of approved patches
@@ -197,6 +204,36 @@ public class CfnPatchBaselineDsl(
      */
     public fun approvedPatchesEnableNonSecurity(approvedPatchesEnableNonSecurity: IResolvable) {
         cdkBuilder.approvedPatchesEnableNonSecurity(approvedPatchesEnableNonSecurity)
+    }
+
+    /**
+     * Set the baseline as default baseline.
+     *
+     * Only registering to default patch baseline is allowed.
+     *
+     * Default: - false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-defaultbaseline)
+     *
+     * @param defaultBaseline Set the baseline as default baseline.
+     */
+    public fun defaultBaseline(defaultBaseline: Boolean) {
+        cdkBuilder.defaultBaseline(defaultBaseline)
+    }
+
+    /**
+     * Set the baseline as default baseline.
+     *
+     * Only registering to default patch baseline is allowed.
+     *
+     * Default: - false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-defaultbaseline)
+     *
+     * @param defaultBaseline Set the baseline as default baseline.
+     */
+    public fun defaultBaseline(defaultBaseline: IResolvable) {
+        cdkBuilder.defaultBaseline(defaultBaseline)
     }
 
     /**
@@ -247,6 +284,8 @@ public class CfnPatchBaselineDsl(
      * Defines the operating system the patch baseline applies to.
      *
      * The default value is `WINDOWS` .
+     *
+     * Default: - "WINDOWS"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-operatingsystem)
      *
@@ -320,6 +359,8 @@ public class CfnPatchBaselineDsl(
      *   dependencies, aren't installed under any circumstances. If a package was installed before
      *   it was added to the Rejected patches list, it is considered non-compliant with the patch
      *   baseline, and its status is reported as `InstalledRejected` .
+     *
+     * Default: - "ALLOW_AS_DEPENDENCY"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-rejectedpatchesaction)
      *

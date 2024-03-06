@@ -11,8 +11,13 @@
 
 package io.cloudshiftdev.awscdkdsl.services.location
 
+import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.String
+import kotlin.Unit
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.location.CfnPlaceIndex
 import software.constructs.Construct
@@ -43,6 +48,10 @@ import software.constructs.Construct
  * .build())
  * .description("description")
  * .pricingPlan("pricingPlan")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -54,6 +63,8 @@ public class CfnPlaceIndexDsl(
     id: String,
 ) {
     private val cdkBuilder: CfnPlaceIndex.Builder = CfnPlaceIndex.Builder.create(scope, id)
+
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
      * Specifies the geospatial data provider for the new place index.
@@ -162,5 +173,30 @@ public class CfnPlaceIndexDsl(
         cdkBuilder.pricingPlan(pricingPlan)
     }
 
-    public fun build(): CfnPlaceIndex = cdkBuilder.build()
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-placeindex.html#cfn-location-placeindex-tags)
+     *
+     * @param tags An array of key-value pairs to apply to this resource.
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
+
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-placeindex.html#cfn-location-placeindex-tags)
+     *
+     * @param tags An array of key-value pairs to apply to this resource.
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
+
+    public fun build(): CfnPlaceIndex {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

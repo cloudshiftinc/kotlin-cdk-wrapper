@@ -12,9 +12,14 @@
 package io.cloudshiftdev.awscdkdsl
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Boolean
 import kotlin.String
+import kotlin.Unit
+import kotlin.collections.Collection
 import kotlin.collections.Map
+import kotlin.collections.MutableList
 import software.amazon.awscdk.DockerBuildOptions
+import software.amazon.awscdk.DockerCacheOption
 
 /**
  * Docker build options.
@@ -40,9 +45,40 @@ import software.amazon.awscdk.DockerBuildOptions
 public class DockerBuildOptionsDsl {
     private val cdkBuilder: DockerBuildOptions.Builder = DockerBuildOptions.builder()
 
+    private val _cacheFrom: MutableList<DockerCacheOption> = mutableListOf()
+
     /** @param buildArgs Build args. */
     public fun buildArgs(buildArgs: Map<String, String>) {
         cdkBuilder.buildArgs(buildArgs)
+    }
+
+    /**
+     * @param cacheDisabled Disable the cache and pass `--no-cache` to the `docker build` command.
+     */
+    public fun cacheDisabled(cacheDisabled: Boolean) {
+        cdkBuilder.cacheDisabled(cacheDisabled)
+    }
+
+    /** @param cacheFrom Cache from options to pass to the `docker build` command. */
+    public fun cacheFrom(cacheFrom: DockerCacheOptionDsl.() -> Unit) {
+        _cacheFrom.add(DockerCacheOptionDsl().apply(cacheFrom).build())
+    }
+
+    /** @param cacheFrom Cache from options to pass to the `docker build` command. */
+    public fun cacheFrom(cacheFrom: Collection<DockerCacheOption>) {
+        _cacheFrom.addAll(cacheFrom)
+    }
+
+    /** @param cacheTo Cache to options to pass to the `docker build` command. */
+    public fun cacheTo(cacheTo: DockerCacheOptionDsl.() -> Unit = {}) {
+        val builder = DockerCacheOptionDsl()
+        builder.apply(cacheTo)
+        cdkBuilder.cacheTo(builder.build())
+    }
+
+    /** @param cacheTo Cache to options to pass to the `docker build` command. */
+    public fun cacheTo(cacheTo: DockerCacheOption) {
+        cdkBuilder.cacheTo(cacheTo)
     }
 
     /** @param file Name of the Dockerfile, must relative to the docker build path. */
@@ -66,5 +102,8 @@ public class DockerBuildOptionsDsl {
         cdkBuilder.targetStage(targetStage)
     }
 
-    public fun build(): DockerBuildOptions = cdkBuilder.build()
+    public fun build(): DockerBuildOptions {
+        if (_cacheFrom.isNotEmpty()) cdkBuilder.cacheFrom(_cacheFrom)
+        return cdkBuilder.build()
+    }
 }

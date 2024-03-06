@@ -23,6 +23,15 @@ public inline fun CfnPipe.setEnrichmentParameters(
     return setEnrichmentParameters(builder.build())
 }
 
+/** The logging configuration settings for the pipe. */
+public inline fun CfnPipe.setLogConfiguration(
+    block: CfnPipePipeLogConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnPipePipeLogConfigurationPropertyDsl()
+    builder.apply(block)
+    return setLogConfiguration(builder.build())
+}
+
 /** The parameters required to set up a source for your pipe. */
 public inline fun CfnPipe.setSourceParameters(
     block: CfnPipePipeSourceParametersPropertyDsl.() -> Unit = {}

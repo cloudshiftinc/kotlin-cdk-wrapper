@@ -51,32 +51,32 @@ public class CfnCRLPropsDsl {
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
-    /** @param crlData The x509 v3 specified certificate revocation list (CRL). */
+    /** @param crlData the value to be set. */
     public fun crlData(crlData: String) {
         cdkBuilder.crlData(crlData)
     }
 
-    /** @param enabled Specifies whether the certificate revocation list (CRL) is enabled. */
+    /** @param enabled the value to be set. */
     public fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
     }
 
-    /** @param enabled Specifies whether the certificate revocation list (CRL) is enabled. */
+    /** @param enabled the value to be set. */
     public fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled)
     }
 
-    /** @param name The name of the certificate revocation list (CRL). */
+    /** @param name the value to be set. */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }
 
-    /** @param tags A list of tags to attach to the certificate revocation list (CRL). */
+    /** @param tags the value to be set. */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
-    /** @param tags A list of tags to attach to the certificate revocation list (CRL). */
+    /** @param tags the value to be set. */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
     }

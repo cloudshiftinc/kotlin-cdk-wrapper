@@ -26,6 +26,8 @@ import software.amazon.awscdk.services.quicksight.CfnDataSet
  * InputColumnProperty inputColumnProperty = InputColumnProperty.builder()
  * .name("name")
  * .type("type")
+ * // the properties below are optional
+ * .subType("subType")
  * .build();
  * ```
  *
@@ -39,6 +41,14 @@ public class CfnDataSetInputColumnPropertyDsl {
     /** @param name The name of this column in the underlying data source. */
     public fun name(name: String) {
         cdkBuilder.name(name)
+    }
+
+    /**
+     * @param subType The sub data type of the column. Sub types are only available for decimal
+     *   columns that are part of a SPICE dataset.
+     */
+    public fun subType(subType: String) {
+        cdkBuilder.subType(subType)
     }
 
     /** @param type The data type of the column. */

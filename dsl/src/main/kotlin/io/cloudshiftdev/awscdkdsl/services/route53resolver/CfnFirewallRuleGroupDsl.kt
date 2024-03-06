@@ -47,6 +47,7 @@ import software.constructs.Construct
  * .blockOverrideDomain("blockOverrideDomain")
  * .blockOverrideTtl(123)
  * .blockResponse("blockResponse")
+ * .qtype("qtype")
  * .build()))
  * .name("name")
  * .tags(List.of(CfnTag.builder()

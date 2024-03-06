@@ -12,6 +12,7 @@
 package io.cloudshiftdev.awscdkdsl.services.iot
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnSecurityProfile
@@ -29,6 +30,7 @@ import software.amazon.awscdk.services.iot.CfnSecurityProfile
  * MetricToRetainProperty metricToRetainProperty = MetricToRetainProperty.builder()
  * .metric("metric")
  * // the properties below are optional
+ * .exportMetric(false)
  * .metricDimension(MetricDimensionProperty.builder()
  * .dimensionName("dimensionName")
  * // the properties below are optional
@@ -43,6 +45,22 @@ import software.amazon.awscdk.services.iot.CfnSecurityProfile
 public class CfnSecurityProfileMetricToRetainPropertyDsl {
     private val cdkBuilder: CfnSecurityProfile.MetricToRetainProperty.Builder =
         CfnSecurityProfile.MetricToRetainProperty.builder()
+
+    /**
+     * @param exportMetric The value indicates exporting metrics related to the `MetricToRetain`
+     *   when it's true.
+     */
+    public fun exportMetric(exportMetric: Boolean) {
+        cdkBuilder.exportMetric(exportMetric)
+    }
+
+    /**
+     * @param exportMetric The value indicates exporting metrics related to the `MetricToRetain`
+     *   when it's true.
+     */
+    public fun exportMetric(exportMetric: IResolvable) {
+        cdkBuilder.exportMetric(exportMetric)
+    }
 
     /** @param metric A standard of measurement. */
     public fun metric(metric: String) {

@@ -12,7 +12,10 @@
 package io.cloudshiftdev.awscdkdsl.services.quicksight
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Any
 import kotlin.String
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
@@ -28,6 +31,12 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * .customLabel("customLabel")
  * .placement("placement")
  * .scrollStatus("scrollStatus")
+ * .totalAggregationOptions(List.of(TotalAggregationOptionProperty.builder()
+ * .fieldId("fieldId")
+ * .totalAggregationFunction(TotalAggregationFunctionProperty.builder()
+ * .simpleTotalAggregationFunction("simpleTotalAggregationFunction")
+ * .build())
+ * .build()))
  * .totalCellStyle(TableCellStyleProperty.builder()
  * .backgroundColor("backgroundColor")
  * .border(GlobalTableBorderOptionsProperty.builder()
@@ -97,6 +106,8 @@ public class CfnAnalysisTotalOptionsPropertyDsl {
     private val cdkBuilder: CfnAnalysis.TotalOptionsProperty.Builder =
         CfnAnalysis.TotalOptionsProperty.builder()
 
+    private val _totalAggregationOptions: MutableList<Any> = mutableListOf()
+
     /** @param customLabel The custom label string for the total cells. */
     public fun customLabel(customLabel: String) {
         cdkBuilder.customLabel(customLabel)
@@ -110,6 +121,21 @@ public class CfnAnalysisTotalOptionsPropertyDsl {
     /** @param scrollStatus The scroll status (pinned, scrolled) for the total cells. */
     public fun scrollStatus(scrollStatus: String) {
         cdkBuilder.scrollStatus(scrollStatus)
+    }
+
+    /** @param totalAggregationOptions The total aggregation settings for each value field. */
+    public fun totalAggregationOptions(vararg totalAggregationOptions: Any) {
+        _totalAggregationOptions.addAll(listOf(*totalAggregationOptions))
+    }
+
+    /** @param totalAggregationOptions The total aggregation settings for each value field. */
+    public fun totalAggregationOptions(totalAggregationOptions: Collection<Any>) {
+        _totalAggregationOptions.addAll(totalAggregationOptions)
+    }
+
+    /** @param totalAggregationOptions The total aggregation settings for each value field. */
+    public fun totalAggregationOptions(totalAggregationOptions: IResolvable) {
+        cdkBuilder.totalAggregationOptions(totalAggregationOptions)
     }
 
     /** @param totalCellStyle Cell styling options for the total cells. */
@@ -127,5 +153,9 @@ public class CfnAnalysisTotalOptionsPropertyDsl {
         cdkBuilder.totalsVisibility(totalsVisibility)
     }
 
-    public fun build(): CfnAnalysis.TotalOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.TotalOptionsProperty {
+        if (_totalAggregationOptions.isNotEmpty())
+            cdkBuilder.totalAggregationOptions(_totalAggregationOptions)
+        return cdkBuilder.build()
+    }
 }

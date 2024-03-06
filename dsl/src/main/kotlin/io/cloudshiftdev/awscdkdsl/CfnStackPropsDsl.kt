@@ -31,8 +31,6 @@ import software.amazon.awscdk.IResolvable
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.*;
  * CfnStackProps cfnStackProps = CfnStackProps.builder()
- * .templateUrl("templateUrl")
- * // the properties below are optional
  * .notificationArns(List.of("notificationArns"))
  * .parameters(Map.of(
  * "parametersKey", "parameters"))
@@ -40,6 +38,7 @@ import software.amazon.awscdk.IResolvable
  * .key("key")
  * .value("value")
  * .build()))
+ * .templateUrl("templateUrl")
  * .timeoutInMinutes(123)
  * .build();
  * ```

@@ -198,8 +198,9 @@ public class CfnMetricStreamPropsDsl {
     }
 
     /**
-     * @param outputFormat The output format for the stream. Valid values are `json` and
-     *   `opentelemetry0.7` For more information about metric stream output formats, see
+     * @param outputFormat The output format for the stream. Valid values are `json` ,
+     *   `opentelemetry1.0` and `opentelemetry0.7` For more information about metric stream output
+     *   formats, see
      *   [Metric streams output formats](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html)
      *   .
      */
@@ -228,8 +229,7 @@ public class CfnMetricStreamPropsDsl {
      * on the stream's `OutputFormat` . If the `OutputFormat` is `json` , you can stream any
      * additional statistic that is supported by CloudWatch , listed in
      * [CloudWatch statistics definitions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html)
-     * . If the `OutputFormat` is `opentelemetry0` .7, you can stream percentile statistics *(p??)*
-     * .
+     * . If the `OutputFormat` is OpenTelemetry, you can stream percentile statistics.
      */
     public fun statisticsConfigurations(vararg statisticsConfigurations: Any) {
         _statisticsConfigurations.addAll(listOf(*statisticsConfigurations))
@@ -246,8 +246,7 @@ public class CfnMetricStreamPropsDsl {
      * on the stream's `OutputFormat` . If the `OutputFormat` is `json` , you can stream any
      * additional statistic that is supported by CloudWatch , listed in
      * [CloudWatch statistics definitions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html)
-     * . If the `OutputFormat` is `opentelemetry0` .7, you can stream percentile statistics *(p??)*
-     * .
+     * . If the `OutputFormat` is OpenTelemetry, you can stream percentile statistics.
      */
     public fun statisticsConfigurations(statisticsConfigurations: Collection<Any>) {
         _statisticsConfigurations.addAll(statisticsConfigurations)
@@ -264,8 +263,7 @@ public class CfnMetricStreamPropsDsl {
      * on the stream's `OutputFormat` . If the `OutputFormat` is `json` , you can stream any
      * additional statistic that is supported by CloudWatch , listed in
      * [CloudWatch statistics definitions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html)
-     * . If the `OutputFormat` is `opentelemetry0` .7, you can stream percentile statistics *(p??)*
-     * .
+     * . If the `OutputFormat` is OpenTelemetry, you can stream percentile statistics.
      */
     public fun statisticsConfigurations(statisticsConfigurations: IResolvable) {
         cdkBuilder.statisticsConfigurations(statisticsConfigurations)

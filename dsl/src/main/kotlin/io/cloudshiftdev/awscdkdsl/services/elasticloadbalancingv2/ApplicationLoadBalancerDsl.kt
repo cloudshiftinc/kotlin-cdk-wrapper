@@ -137,9 +137,7 @@ public class ApplicationLoadBalancerDsl(
     /**
      * The type of IP addresses to use.
      *
-     * Only applies to application load balancers.
-     *
-     * Default: IpAddressType.Ipv4
+     * Default: IpAddressType.IPV4
      *
      * @param ipAddressType The type of IP addresses to use.
      */

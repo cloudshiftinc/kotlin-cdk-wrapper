@@ -95,5 +95,16 @@ public class RuntimeDsl(
         cdkBuilder.supportsInlineCode(supportsInlineCode)
     }
 
+    /**
+     * Whether this runtime supports SnapStart.
+     *
+     * Default: false
+     *
+     * @param supportsSnapStart Whether this runtime supports SnapStart.
+     */
+    public fun supportsSnapStart(supportsSnapStart: Boolean) {
+        cdkBuilder.supportsSnapStart(supportsSnapStart)
+    }
+
     public fun build(): Runtime = cdkBuilder.build()
 }

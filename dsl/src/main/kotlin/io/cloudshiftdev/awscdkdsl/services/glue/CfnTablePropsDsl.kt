@@ -120,12 +120,18 @@ public class CfnTablePropsDsl {
         cdkBuilder.databaseName(databaseName)
     }
 
-    /** @param openTableFormatInput the value to be set. */
+    /**
+     * @param openTableFormatInput Specifies an `OpenTableFormatInput` structure when creating an
+     *   open format table.
+     */
     public fun openTableFormatInput(openTableFormatInput: IResolvable) {
         cdkBuilder.openTableFormatInput(openTableFormatInput)
     }
 
-    /** @param openTableFormatInput the value to be set. */
+    /**
+     * @param openTableFormatInput Specifies an `OpenTableFormatInput` structure when creating an
+     *   open format table.
+     */
     public fun openTableFormatInput(openTableFormatInput: CfnTable.OpenTableFormatInputProperty) {
         cdkBuilder.openTableFormatInput(openTableFormatInput)
     }

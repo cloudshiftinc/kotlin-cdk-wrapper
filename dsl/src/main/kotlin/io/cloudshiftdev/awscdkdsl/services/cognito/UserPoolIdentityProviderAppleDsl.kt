@@ -22,7 +22,7 @@ import software.amazon.awscdk.services.cognito.UserPoolIdentityProviderApple
 import software.constructs.Construct
 
 /**
- * Represents a identity provider that integrates with 'Apple'.
+ * Represents an identity provider that integrates with Apple.
  *
  * Example:
  * ```

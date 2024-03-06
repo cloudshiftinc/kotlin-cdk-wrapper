@@ -72,7 +72,7 @@ public class CfnScenePropsDsl {
         cdkBuilder.description(description)
     }
 
-    /** @param sceneId The scene ID. */
+    /** @param sceneId The ID of the scene. */
     public fun sceneId(sceneId: String) {
         cdkBuilder.sceneId(sceneId)
     }
@@ -92,7 +92,7 @@ public class CfnScenePropsDsl {
         cdkBuilder.tags(tags)
     }
 
-    /** @param workspaceId The ID of the workspace. */
+    /** @param workspaceId The ID of the scene. */
     public fun workspaceId(workspaceId: String) {
         cdkBuilder.workspaceId(workspaceId)
     }

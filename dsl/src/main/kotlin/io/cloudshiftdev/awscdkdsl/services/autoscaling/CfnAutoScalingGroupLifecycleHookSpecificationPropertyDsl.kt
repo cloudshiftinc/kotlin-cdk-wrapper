@@ -19,7 +19,7 @@ import software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup
 /**
  * `LifecycleHookSpecification` specifies a lifecycle hook for the `LifecycleHookSpecificationList`
  * property of the
- * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html)
+ * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
  * resource. A lifecycle hook specifies actions to perform when Amazon EC2 Auto Scaling launches or
  * terminates instances.
  *

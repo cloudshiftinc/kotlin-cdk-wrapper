@@ -146,5 +146,16 @@ public class PassDsl(
         cdkBuilder.resultPath(resultPath)
     }
 
+    /**
+     * Optional name for this state.
+     *
+     * Default: - The construct ID will be used as state name
+     *
+     * @param stateName Optional name for this state.
+     */
+    public fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
+    }
+
     public fun build(): Pass = cdkBuilder.build()
 }

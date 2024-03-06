@@ -21,7 +21,7 @@ import software.amazon.awscdk.services.greengrass.CfnResourceDefinition
  * system.
  *
  * For more information, see
- * [Access Local Resources with Lambda Functions](https://docs.aws.amazon.com/greengrass/latest/developerguide/access-local-resources.html)
+ * [Access Local Resources with Lambda Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-local-resources.html)
  * in the *Developer Guide* .
  *
  * In an AWS CloudFormation template, `LocalVolumeResourceData` can be used in the

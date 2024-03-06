@@ -60,6 +60,14 @@ public class CfnKnowledgeBaseAppIntegrationsConfigurationPropertyDsl {
      * * For [SharePoint](https://docs.aws.amazon.com/https://learn.microsoft.com/en-us/sharepoint/dev/sp-add-ins/sharepoint-net-server-csom-jsom-and-rest-api-index)
      *   , your AppIntegrations DataIntegration must have a FileConfiguration, including only file
      *   extensions that are among `docx` , `pdf` , `html` , `htm` , and `txt` .
+     * * For [Amazon S3](https://docs.aws.amazon.com/https://aws.amazon.com/s3/) , the
+     *   ObjectConfiguration and FileConfiguration of your AppIntegrations DataIntegration must be
+     *   null. The `SourceURI` of your DataIntegration must use the following format:
+     *   `s3://your_s3_bucket_name` .
+     *
+     * The bucket policy of the corresponding S3 bucket must allow the AWS principal
+     * `app-integrations.amazonaws.com` to perform `s3:ListBucket` , `s3:GetObject` , and
+     * `s3:GetBucketLocation` against the bucket.
      */
     public fun appIntegrationArn(appIntegrationArn: String) {
         cdkBuilder.appIntegrationArn(appIntegrationArn)
@@ -67,7 +75,7 @@ public class CfnKnowledgeBaseAppIntegrationsConfigurationPropertyDsl {
 
     /**
      * @param objectFields The fields from the source that are made available to your agents in
-     *   Wisdom. Optional if ObjectConfiguration is included in the provided DataIntegration.
+     *   Amazon Q. Optional if ObjectConfiguration is included in the provided DataIntegration.
      * * For [Salesforce](https://docs.aws.amazon.com/https://developer.salesforce.com/docs/atlas.en-us.knowledge_dev.meta/knowledge_dev/sforce_api_objects_knowledge__kav.htm)
      *   , you must include at least `Id` , `ArticleNumber` , `VersionNumber` , `Title` ,
      *   `PublishStatus` , and `IsDeleted` .
@@ -86,7 +94,7 @@ public class CfnKnowledgeBaseAppIntegrationsConfigurationPropertyDsl {
 
     /**
      * @param objectFields The fields from the source that are made available to your agents in
-     *   Wisdom. Optional if ObjectConfiguration is included in the provided DataIntegration.
+     *   Amazon Q. Optional if ObjectConfiguration is included in the provided DataIntegration.
      * * For [Salesforce](https://docs.aws.amazon.com/https://developer.salesforce.com/docs/atlas.en-us.knowledge_dev.meta/knowledge_dev/sforce_api_objects_knowledge__kav.htm)
      *   , you must include at least `Id` , `ArticleNumber` , `VersionNumber` , `Title` ,
      *   `PublishStatus` , and `IsDeleted` .

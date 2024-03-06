@@ -81,7 +81,7 @@ public class CfnModelExplainabilityJobDefinitionEndpointInputPropertyDsl {
 
     /**
      * @param s3DataDistributionType Whether input data distributed in Amazon S3 is fully replicated
-     *   or sharded by an S3 key. Defaults to `FullyReplicated`
+     *   or sharded by an Amazon S3 key. Defaults to `FullyReplicated`
      */
     public fun s3DataDistributionType(s3DataDistributionType: String) {
         cdkBuilder.s3DataDistributionType(s3DataDistributionType)

@@ -33,7 +33,6 @@ import software.amazon.awscdk.services.ec2.CfnPrefixListProps
  * import software.amazon.awscdk.services.ec2.*;
  * CfnPrefixListProps cfnPrefixListProps = CfnPrefixListProps.builder()
  * .addressFamily("addressFamily")
- * .maxEntries(123)
  * .prefixListName("prefixListName")
  * // the properties below are optional
  * .entries(List.of(EntryProperty.builder()
@@ -41,6 +40,7 @@ import software.amazon.awscdk.services.ec2.CfnPrefixListProps
  * // the properties below are optional
  * .description("description")
  * .build()))
+ * .maxEntries(123)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")

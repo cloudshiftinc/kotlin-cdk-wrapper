@@ -52,6 +52,7 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * .matchOperator("matchOperator")
  * // the properties below are optional
  * .categoryValues(List.of("categoryValues"))
+ * .nullOption("nullOption")
  * .selectAllOptions("selectAllOptions")
  * .build())
  * .build())
@@ -67,6 +68,10 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * .nullOption("nullOption")
  * // the properties below are optional
  * .aggregationFunction(AggregationFunctionProperty.builder()
+ * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+ * .simpleAttributeAggregation("simpleAttributeAggregation")
+ * .valueForMultipleValues("valueForMultipleValues")
+ * .build())
  * .categoricalAggregationFunction("categoricalAggregationFunction")
  * .dateAggregationFunction("dateAggregationFunction")
  * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -89,6 +94,10 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * .nullOption("nullOption")
  * // the properties below are optional
  * .aggregationFunction(AggregationFunctionProperty.builder()
+ * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+ * .simpleAttributeAggregation("simpleAttributeAggregation")
+ * .valueForMultipleValues("valueForMultipleValues")
+ * .build())
  * .categoricalAggregationFunction("categoricalAggregationFunction")
  * .dateAggregationFunction("dateAggregationFunction")
  * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -142,6 +151,11 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * .filterId("filterId")
  * // the properties below are optional
  * .parameterName("parameterName")
+ * .rollingDate(RollingDateConfigurationProperty.builder()
+ * .expression("expression")
+ * // the properties below are optional
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
  * .timeGranularity("timeGranularity")
  * .value("value")
  * .build())
@@ -190,6 +204,10 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * .sortDirection("sortDirection")
  * // the properties below are optional
  * .aggregationFunction(AggregationFunctionProperty.builder()
+ * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+ * .simpleAttributeAggregation("simpleAttributeAggregation")
+ * .valueForMultipleValues("valueForMultipleValues")
+ * .build())
  * .categoricalAggregationFunction("categoricalAggregationFunction")
  * .dateAggregationFunction("dateAggregationFunction")
  * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()

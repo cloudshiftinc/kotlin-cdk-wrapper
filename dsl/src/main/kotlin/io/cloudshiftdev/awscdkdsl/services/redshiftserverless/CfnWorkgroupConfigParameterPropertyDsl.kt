@@ -38,8 +38,8 @@ public class CfnWorkgroupConfigParameterPropertyDsl {
 
     /**
      * @param parameterKey The key of the parameter. The options are `datestyle` ,
-     *   `enable_user_activity_logging` , `query_group` , `search_path` , and
-     *   `max_query_execution_time` .
+     *   `enable_user_activity_logging` , `query_group` , `search_path` , `max_query_execution_time`
+     *   , and `require_ssl` .
      */
     public fun parameterKey(parameterKey: String) {
         cdkBuilder.parameterKey(parameterKey)

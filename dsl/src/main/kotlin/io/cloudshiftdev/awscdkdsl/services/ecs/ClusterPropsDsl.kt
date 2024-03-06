@@ -26,31 +26,35 @@ import software.amazon.awscdk.services.ecs.ExecuteCommandConfiguration
  *
  * Example:
  * ```
- * IVpc vpc = Vpc.fromLookup(this, "Vpc", VpcLookupOptions.builder()
- * .isDefault(true)
- * .build());
- * Cluster cluster = Cluster.Builder.create(this, "FargateCluster").vpc(vpc).build();
- * TaskDefinition taskDefinition = TaskDefinition.Builder.create(this, "TD")
- * .memoryMiB("512")
- * .cpu("256")
- * .compatibility(Compatibility.FARGATE)
+ * Vpc vpc;
+ * Cluster cluster = Cluster.Builder.create(this, "Cluster")
+ * .vpc(vpc)
  * .build();
- * ContainerDefinition containerDefinition = taskDefinition.addContainer("TheContainer",
- * ContainerDefinitionOptions.builder()
- * .image(ContainerImage.fromRegistry("foo/bar"))
- * .memoryLimitMiB(256)
+ * AutoScalingGroup autoScalingGroup = AutoScalingGroup.Builder.create(this, "ASG")
+ * .vpc(vpc)
+ * .instanceType(new InstanceType("t2.micro"))
+ * .machineImage(EcsOptimizedImage.amazonLinux2())
+ * .minCapacity(0)
+ * .maxCapacity(100)
+ * .build();
+ * AsgCapacityProvider capacityProvider = AsgCapacityProvider.Builder.create(this,
+ * "AsgCapacityProvider")
+ * .autoScalingGroup(autoScalingGroup)
+ * .instanceWarmupPeriod(300)
+ * .build();
+ * cluster.addAsgCapacityProvider(capacityProvider);
+ * Ec2TaskDefinition taskDefinition = new Ec2TaskDefinition(this, "TaskDef");
+ * taskDefinition.addContainer("web", ContainerDefinitionOptions.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .memoryReservationMiB(256)
  * .build());
- * EcsRunTask runTask = EcsRunTask.Builder.create(this, "RunFargate")
- * .integrationPattern(IntegrationPattern.RUN_JOB)
+ * Ec2Service.Builder.create(this, "EC2Service")
  * .cluster(cluster)
  * .taskDefinition(taskDefinition)
- * .assignPublicIp(true)
- * .containerOverrides(List.of(ContainerOverride.builder()
- * .containerDefinition(containerDefinition)
- * .environment(List.of(TaskEnvironmentVariable.builder().name("SOME_KEY").value(JsonPath.stringAt("$.SomeKey")).build()))
+ * .capacityProviderStrategies(List.of(CapacityProviderStrategy.builder()
+ * .capacityProvider(capacityProvider.getCapacityProviderName())
+ * .weight(1)
  * .build()))
- * .launchTarget(new EcsFargateLaunchTarget())
- * .propagatedTagSource(PropagatedTagSource.TASK_DEFINITION)
  * .build();
  * ```
  */

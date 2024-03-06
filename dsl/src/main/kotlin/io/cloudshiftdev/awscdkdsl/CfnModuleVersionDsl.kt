@@ -23,7 +23,7 @@ import software.constructs.Construct
  * and Region.
  *
  * To specify a module version as the default version, use the
- * `[AWS::CloudFormation::ModuleDefaultVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html)`
+ * `[`AWS::CloudFormation::ModuleDefaultVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html)`
  * resource.
  *
  * For more information using modules, see

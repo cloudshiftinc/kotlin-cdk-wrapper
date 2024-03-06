@@ -48,7 +48,6 @@ import software.amazon.awscdk.services.dms.CfnReplicationConfigProps
  * .replicationSubnetGroupId("replicationSubnetGroupId")
  * .vpcSecurityGroupIds(List.of("vpcSecurityGroupIds"))
  * .build())
- * .replicationConfigArn("replicationConfigArn")
  * .replicationConfigIdentifier("replicationConfigIdentifier")
  * .replicationSettings(replicationSettings)
  * .replicationType("replicationType")
@@ -86,14 +85,6 @@ public class CfnReplicationConfigPropsDsl {
      */
     public fun computeConfig(computeConfig: CfnReplicationConfig.ComputeConfigProperty) {
         cdkBuilder.computeConfig(computeConfig)
-    }
-
-    /**
-     * @param replicationConfigArn The Amazon Resource Name (ARN) of this AWS DMS Serverless
-     *   replication configuration.
-     */
-    public fun replicationConfigArn(replicationConfigArn: String) {
-        cdkBuilder.replicationConfigArn(replicationConfigArn)
     }
 
     /**

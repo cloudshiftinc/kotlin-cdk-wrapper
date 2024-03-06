@@ -107,24 +107,18 @@ public class CfnApplicationSettingsDsl(
     }
 
     /**
-     * Specifies whether to enable application-related alarms in Amazon CloudWatch.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-applicationsettings.html#cfn-pinpoint-applicationsettings-cloudwatchmetricsenabled)
      *
-     * @param cloudWatchMetricsEnabled Specifies whether to enable application-related alarms in
-     *   Amazon CloudWatch.
+     * @param cloudWatchMetricsEnabled
      */
     public fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: Boolean) {
         cdkBuilder.cloudWatchMetricsEnabled(cloudWatchMetricsEnabled)
     }
 
     /**
-     * Specifies whether to enable application-related alarms in Amazon CloudWatch.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-applicationsettings.html#cfn-pinpoint-applicationsettings-cloudwatchmetricsenabled)
      *
-     * @param cloudWatchMetricsEnabled Specifies whether to enable application-related alarms in
-     *   Amazon CloudWatch.
+     * @param cloudWatchMetricsEnabled
      */
     public fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: IResolvable) {
         cdkBuilder.cloudWatchMetricsEnabled(cloudWatchMetricsEnabled)

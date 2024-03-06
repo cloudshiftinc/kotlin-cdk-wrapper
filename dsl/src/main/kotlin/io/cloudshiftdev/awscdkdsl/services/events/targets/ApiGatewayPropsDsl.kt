@@ -35,7 +35,7 @@ import software.amazon.awscdk.services.sqs.IQueue
  * .build();
  * Function fn = Function.Builder.create(this, "MyFunc")
  * .handler("index.handler")
- * .runtime(Runtime.NODEJS_14_X)
+ * .runtime(Runtime.NODEJS_LATEST)
  * .code(Code.fromInline("exports.handler = e =&gt; {}"))
  * .build();
  * LambdaRestApi restApi = LambdaRestApi.Builder.create(this, "MyRestAPI").handler(fn).build();

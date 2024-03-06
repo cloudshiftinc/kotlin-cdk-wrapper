@@ -184,9 +184,11 @@ public class CfnWorkteamDsl(
     }
 
     /**
+     * The name of the workforce.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-workteam.html#cfn-sagemaker-workteam-workforcename)
      *
-     * @param workforceName
+     * @param workforceName The name of the workforce.
      */
     public fun workforceName(workforceName: String) {
         cdkBuilder.workforceName(workforceName)

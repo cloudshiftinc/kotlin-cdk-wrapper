@@ -32,14 +32,24 @@ import software.constructs.Construct
  *
  * Example:
  * ```
- * NetworkListener listener;
- * AutoScalingGroup asg1;
- * AutoScalingGroup asg2;
- * NetworkTargetGroup group = listener.addTargets("AppFleet", AddNetworkTargetsProps.builder()
- * .port(443)
- * .targets(List.of(asg1))
- * .build());
- * group.addTarget(asg2);
+ * import software.amazon.awscdk.services.elasticloadbalancing.*;
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * LoadBalancer clb;
+ * ApplicationLoadBalancer alb;
+ * NetworkLoadBalancer nlb;
+ * ApplicationListener albListener = alb.addListener("ALBListener",
+ * BaseApplicationListenerProps.builder().port(80).build());
+ * ApplicationTargetGroup albTargetGroup = albListener.addTargets("ALBFleet",
+ * AddApplicationTargetsProps.builder().port(80).build());
+ * NetworkListener nlbListener = nlb.addListener("NLBListener",
+ * BaseNetworkListenerProps.builder().port(80).build());
+ * NetworkTargetGroup nlbTargetGroup = nlbListener.addTargets("NLBFleet",
+ * AddNetworkTargetsProps.builder().port(80).build());
+ * ServerDeploymentGroup deploymentGroup = ServerDeploymentGroup.Builder.create(this,
+ * "DeploymentGroup")
+ * .loadBalancers(List.of(LoadBalancer.classic(clb), LoadBalancer.application(albTargetGroup),
+ * LoadBalancer.network(nlbTargetGroup)))
+ * .build();
  * ```
  */
 @CdkDslMarker

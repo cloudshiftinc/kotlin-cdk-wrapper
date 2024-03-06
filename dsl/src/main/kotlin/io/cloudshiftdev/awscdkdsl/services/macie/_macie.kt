@@ -232,6 +232,10 @@ public object macie {
      * .ignoreWords(List.of("ignoreWords"))
      * .keywords(List.of("keywords"))
      * .maximumMatchDistance(123)
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .build();
      * ```
      *
@@ -264,6 +268,10 @@ public object macie {
      * .ignoreWords(List.of("ignoreWords"))
      * .keywords(List.of("keywords"))
      * .maximumMatchDistance(123)
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .build();
      * ```
      *
@@ -318,6 +326,10 @@ public object macie {
      * .action("action")
      * .description("description")
      * .position(123)
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .build();
      * ```
      *
@@ -456,6 +468,10 @@ public object macie {
      * .action("action")
      * .description("description")
      * .position(123)
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
      * .build();
      * ```
      *

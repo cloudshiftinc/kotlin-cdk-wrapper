@@ -29,7 +29,7 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
  * For information about customizing web requests and responses, see
  * [Customizing web requests and responses in AWS WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html)
  * in the
- * [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)
+ * [AWS WAF developer guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)
  * .
  *
  * Example:
@@ -80,33 +80,36 @@ public class CfnWebACLCustomResponsePropertyDsl {
     }
 
     /**
-     * @param responseHeaders The HTTP headers to use in the response. Duplicate header names are
-     *   not allowed. For information about the limits on count and size for custom request and
-     *   response settings, see
-     *   [AWS WAF quotas](https://docs.aws.amazon.com/waf/latest/developerguide/limits.html) in the
-     *   *AWS WAF Developer Guide* .
+     * @param responseHeaders The HTTP headers to use in the response. You can specify any header
+     *   name except for `content-type` . Duplicate header names are not allowed.
+     *
+     * For information about the limits on count and size for custom request and response settings,
+     * see [AWS WAF quotas](https://docs.aws.amazon.com/waf/latest/developerguide/limits.html) in
+     * the *AWS WAF Developer Guide* .
      */
     public fun responseHeaders(vararg responseHeaders: Any) {
         _responseHeaders.addAll(listOf(*responseHeaders))
     }
 
     /**
-     * @param responseHeaders The HTTP headers to use in the response. Duplicate header names are
-     *   not allowed. For information about the limits on count and size for custom request and
-     *   response settings, see
-     *   [AWS WAF quotas](https://docs.aws.amazon.com/waf/latest/developerguide/limits.html) in the
-     *   *AWS WAF Developer Guide* .
+     * @param responseHeaders The HTTP headers to use in the response. You can specify any header
+     *   name except for `content-type` . Duplicate header names are not allowed.
+     *
+     * For information about the limits on count and size for custom request and response settings,
+     * see [AWS WAF quotas](https://docs.aws.amazon.com/waf/latest/developerguide/limits.html) in
+     * the *AWS WAF Developer Guide* .
      */
     public fun responseHeaders(responseHeaders: Collection<Any>) {
         _responseHeaders.addAll(responseHeaders)
     }
 
     /**
-     * @param responseHeaders The HTTP headers to use in the response. Duplicate header names are
-     *   not allowed. For information about the limits on count and size for custom request and
-     *   response settings, see
-     *   [AWS WAF quotas](https://docs.aws.amazon.com/waf/latest/developerguide/limits.html) in the
-     *   *AWS WAF Developer Guide* .
+     * @param responseHeaders The HTTP headers to use in the response. You can specify any header
+     *   name except for `content-type` . Duplicate header names are not allowed.
+     *
+     * For information about the limits on count and size for custom request and response settings,
+     * see [AWS WAF quotas](https://docs.aws.amazon.com/waf/latest/developerguide/limits.html) in
+     * the *AWS WAF Developer Guide* .
      */
     public fun responseHeaders(responseHeaders: IResolvable) {
         cdkBuilder.responseHeaders(responseHeaders)

@@ -177,16 +177,16 @@ public class CfnDeliveryStreamRedshiftDestinationConfigurationPropertyDsl {
     }
 
     /**
-     * @param retryOptions The retry behavior in case Kinesis Data Firehose is unable to deliver
-     *   documents to Amazon Redshift. Default value is 3600 (60 minutes).
+     * @param retryOptions The retry behavior in case Firehose is unable to deliver documents to
+     *   Amazon Redshift. Default value is 3600 (60 minutes).
      */
     public fun retryOptions(retryOptions: IResolvable) {
         cdkBuilder.retryOptions(retryOptions)
     }
 
     /**
-     * @param retryOptions The retry behavior in case Kinesis Data Firehose is unable to deliver
-     *   documents to Amazon Redshift. Default value is 3600 (60 minutes).
+     * @param retryOptions The retry behavior in case Firehose is unable to deliver documents to
+     *   Amazon Redshift. Default value is 3600 (60 minutes).
      */
     public fun retryOptions(retryOptions: CfnDeliveryStream.RedshiftRetryOptionsProperty) {
         cdkBuilder.retryOptions(retryOptions)

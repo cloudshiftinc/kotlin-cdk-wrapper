@@ -13,6 +13,7 @@ package io.cloudshiftdev.awscdkdsl.services.ec2
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -21,6 +22,8 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.ec2.ApplyCloudFormationInitOptions
 import software.amazon.awscdk.services.ec2.BlockDevice
 import software.amazon.awscdk.services.ec2.CloudFormationInit
+import software.amazon.awscdk.services.ec2.CpuCredits
+import software.amazon.awscdk.services.ec2.IKeyPair
 import software.amazon.awscdk.services.ec2.IMachineImage
 import software.amazon.awscdk.services.ec2.ISecurityGroup
 import software.amazon.awscdk.services.ec2.IVpc
@@ -54,6 +57,14 @@ public class InstancePropsDsl {
     private val cdkBuilder: InstanceProps.Builder = InstanceProps.builder()
 
     private val _blockDevices: MutableList<BlockDevice> = mutableListOf()
+
+    /**
+     * @param allowAllIpv6Outbound Whether the instance could initiate IPv6 connections to anywhere
+     *   by default. This property is only used when you do not provide a security group.
+     */
+    public fun allowAllIpv6Outbound(allowAllIpv6Outbound: Boolean) {
+        cdkBuilder.allowAllIpv6Outbound(allowAllIpv6Outbound)
+    }
 
     /**
      * @param allowAllOutbound Whether the instance could initiate connections to anywhere by
@@ -99,6 +110,15 @@ public class InstancePropsDsl {
     }
 
     /**
+     * @param creditSpecification Specifying the CPU credit type for burstable EC2 instance types
+     *   (T2, T3, T3a, etc). The unlimited CPU credit option is not supported for T3 instances with
+     *   a dedicated host.
+     */
+    public fun creditSpecification(creditSpecification: CpuCredits) {
+        cdkBuilder.creditSpecification(creditSpecification)
+    }
+
+    /**
      * @param detailedMonitoring Whether "Detailed Monitoring" is enabled for this instance Keep in
      *   mind that Detailed Monitoring results in extra charges.
      */
@@ -139,9 +159,19 @@ public class InstancePropsDsl {
         cdkBuilder.instanceType(instanceType)
     }
 
-    /** @param keyName Name of SSH keypair to grant access to instance. */
+    /**
+     * @param keyName Name of SSH keypair to grant access to instance.
+     * @deprecated - Use `keyPair` instead -
+     *   https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_ec2-readme.html#using-an-existing-ec2-key-pair
+     */
+    @Deprecated(message = "deprecated in CDK")
     public fun keyName(keyName: String) {
         cdkBuilder.keyName(keyName)
+    }
+
+    /** @param keyPair The SSH keypair to grant access to the instance. */
+    public fun keyPair(keyPair: IKeyPair) {
+        cdkBuilder.keyPair(keyPair)
     }
 
     /** @param machineImage AMI to launch. */

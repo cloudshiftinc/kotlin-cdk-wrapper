@@ -70,6 +70,7 @@ public object amazonmq {
      * // the properties below are optional
      * .consoleAccess(false)
      * .groups(List.of("groups"))
+     * .replicationUser(false)
      * .build()))
      * // the properties below are optional
      * .authenticationStrategy("authenticationStrategy")
@@ -291,6 +292,7 @@ public object amazonmq {
      * // the properties below are optional
      * .consoleAccess(false)
      * .groups(List.of("groups"))
+     * .replicationUser(false)
      * .build()))
      * // the properties below are optional
      * .authenticationStrategy("authenticationStrategy")
@@ -388,6 +390,7 @@ public object amazonmq {
      * // the properties below are optional
      * .consoleAccess(false)
      * .groups(List.of("groups"))
+     * .replicationUser(false)
      * .build();
      * ```
      *

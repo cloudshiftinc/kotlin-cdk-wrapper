@@ -34,9 +34,6 @@ import software.constructs.Construct
  * import software.amazon.awscdk.services.guardduty.*;
  * Object criterion;
  * CfnFilter cfnFilter = CfnFilter.Builder.create(this, "MyCfnFilter")
- * .action("action")
- * .description("description")
- * .detectorId("detectorId")
  * .findingCriteria(FindingCriteriaProperty.builder()
  * .criterion(criterion)
  * .itemType(ConditionProperty.builder()
@@ -54,9 +51,12 @@ import software.constructs.Construct
  * .notEquals(List.of("notEquals"))
  * .build())
  * .build())
+ * // the properties below are optional
+ * .action("action")
+ * .description("description")
+ * .detectorId("detectorId")
  * .name("name")
  * .rank(123)
- * // the properties below are optional
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")

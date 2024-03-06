@@ -454,19 +454,17 @@ public object elasticloadbalancing {
      *
      * Example:
      * ```
-     * IVpc vpc;
-     * AutoScalingGroup myAutoScalingGroup;
-     * LoadBalancer lb = LoadBalancer.Builder.create(this, "LB")
-     * .vpc(vpc)
-     * .internetFacing(true)
-     * .healthCheck(HealthCheck.builder()
-     * .port(80)
-     * .build())
-     * .build();
-     * lb.addTarget(myAutoScalingGroup);
-     * lb.addListener(LoadBalancerListener.builder()
-     * .externalPort(80)
-     * .build());
+     * Cluster cluster;
+     * TaskDefinition taskDefinition;
+     * Vpc vpc;
+     * Ec2Service service = Ec2Service.Builder.create(this,
+     * "Service").cluster(cluster).taskDefinition(taskDefinition).build();
+     * LoadBalancer lb = LoadBalancer.Builder.create(this, "LB").vpc(vpc).build();
+     * lb.addListener(LoadBalancerListener.builder().externalPort(80).build());
+     * lb.addTarget(service.loadBalancerTarget(LoadBalancerTargetOptions.builder()
+     * .containerName("MyContainer")
+     * .containerPort(80)
+     * .build()));
      * ```
      */
     public inline fun loadBalancer(

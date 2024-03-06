@@ -41,6 +41,16 @@ import software.amazon.awscdk.services.config.CfnConfigurationRecorderProps
  * .build())
  * .resourceTypes(List.of("resourceTypes"))
  * .build())
+ * .recordingMode(RecordingModeProperty.builder()
+ * .recordingFrequency("recordingFrequency")
+ * // the properties below are optional
+ * .recordingModeOverrides(List.of(RecordingModeOverrideProperty.builder()
+ * .recordingFrequency("recordingFrequency")
+ * .resourceTypes(List.of("resourceTypes"))
+ * // the properties below are optional
+ * .description("description")
+ * .build()))
+ * .build())
  * .build();
  * ```
  *
@@ -107,6 +117,42 @@ public class CfnConfigurationRecorderPropsDsl {
      */
     public fun recordingGroup(recordingGroup: CfnConfigurationRecorder.RecordingGroupProperty) {
         cdkBuilder.recordingGroup(recordingGroup)
+    }
+
+    /**
+     * @param recordingMode Specifies the default recording frequency that AWS Config uses to record
+     *   configuration changes. AWS Config supports *Continuous recording* and *Daily recording* .
+     * * Continuous recording allows you to record configuration changes continuously whenever a
+     *   change occurs.
+     * * Daily recording allows you to receive a configuration item (CI) representing the most
+     *   recent state of your resources over the last 24-hour period, only if it’s different from
+     *   the previous CI recorded.
+     *
+     * AWS Firewall Manager depends on continuous recording to monitor your resources. If you are
+     * using Firewall Manager, it is recommended that you set the recording frequency to Continuous.
+     *
+     * You can also override the recording frequency for specific resource types.
+     */
+    public fun recordingMode(recordingMode: IResolvable) {
+        cdkBuilder.recordingMode(recordingMode)
+    }
+
+    /**
+     * @param recordingMode Specifies the default recording frequency that AWS Config uses to record
+     *   configuration changes. AWS Config supports *Continuous recording* and *Daily recording* .
+     * * Continuous recording allows you to record configuration changes continuously whenever a
+     *   change occurs.
+     * * Daily recording allows you to receive a configuration item (CI) representing the most
+     *   recent state of your resources over the last 24-hour period, only if it’s different from
+     *   the previous CI recorded.
+     *
+     * AWS Firewall Manager depends on continuous recording to monitor your resources. If you are
+     * using Firewall Manager, it is recommended that you set the recording frequency to Continuous.
+     *
+     * You can also override the recording frequency for specific resource types.
+     */
+    public fun recordingMode(recordingMode: CfnConfigurationRecorder.RecordingModeProperty) {
+        cdkBuilder.recordingMode(recordingMode)
     }
 
     /**

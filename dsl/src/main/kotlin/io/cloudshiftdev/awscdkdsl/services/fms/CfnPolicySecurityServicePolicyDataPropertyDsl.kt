@@ -106,34 +106,12 @@ public class CfnPolicySecurityServicePolicyDataPropertyDsl {
      * To use the distributed deployment model, you must set
      * [FirewallDeploymentModel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkfirewallpolicy.html)
      * to `DISTRIBUTED` .
-     * * Example: `THIRD_PARTY_FIREWALL` - Palo Alto Networks Cloud Next-Generation Firewall
-     *   centralized deployment model
-     *
-     * `"{ \"type\":\"THIRD_PARTY_FIREWALL\",
-     * \"thirdPartyFirewall\":\"PALO_ALTO_NETWORKS_CLOUD_NGFW\", \"thirdPartyFirewallConfig\":{
-     * \"thirdPartyFirewallPolicyList\":[\"global-1\"]
-     * },\"firewallDeploymentModel\":{\"centralizedFirewallDeploymentModel\":{\"centralizedFirewallOrchestrationConfig\":{\"inspectionVpcIds\":[{\"resourceId\":\"vpc-1234\",\"accountId\":\"123456789011\"}],\"firewallCreationConfig\":{\"endpointLocation\":{\"availabilityZoneConfigList\":[{\"availabilityZoneId\":null,\"availabilityZoneName\":\"us-east-1a\",\"allowedIPV4CidrList\":[\"10.0.0.0/28\"]}]}},\"allowedIPV4CidrList\":[]}}}}"`
-     *
-     * To use the distributed deployment model, you must set
-     * [FirewallDeploymentModel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-thirdpartyfirewallpolicy.html)
-     * to `CENTRALIZED` .
-     * * Example: `THIRD_PARTY_FIREWALL` - Palo Alto Networks Cloud Next-Generation Firewall
-     *   distributed deployment model
-     *
-     * `"{\"type\":\"THIRD_PARTY_FIREWALL\",\"thirdPartyFirewall\":\"PALO_ALTO_NETWORKS_CLOUD_NGFW\",\"thirdPartyFirewallConfig\":{\"thirdPartyFirewallPolicyList\":[\"global-1\"]
-     * },\"firewallDeploymentModel\":{ \"distributedFirewallDeploymentModel\":{
-     * \"distributedFirewallOrchestrationConfig\":{\"firewallCreationConfig\":{\"endpointLocation\":{
-     * \"availabilityZoneConfigList\":[ {\"availabilityZoneName\":\"${AvailabilityZone}\" } ] } },
-     * \"allowedIPV4CidrList\":[ ] } } } }"`
-     *
-     * To use the distributed deployment model, you must set
-     * [FirewallDeploymentModel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-thirdpartyfirewallpolicy.html)
-     * to `DISTRIBUTED` .
      * * Specification for `SHIELD_ADVANCED` for Amazon CloudFront distributions
      *
      * `"{\"type\":\"SHIELD_ADVANCED\",\"automaticResponseConfiguration\":
      * {\"automaticResponseStatus\":\"ENABLED|IGNORED|DISABLED\",
-     * \"automaticResponseAction\":\"BLOCK|COUNT\"}, \"overrideCustomerWebaclClassic\":true|false}"`
+     * \"automaticResponseAction\":\"BLOCK|COUNT\"}, \"overrideCustomerWebaclClassic\":true|false,
+     * \"optimizeUnassociatedWebACL\":true|false}"`
      *
      * For example: `"{\"type\":\"SHIELD_ADVANCED\",\"automaticResponseConfiguration\":
      * {\"automaticResponseStatus\":\"ENABLED\", \"automaticResponseAction\":\"COUNT\"}}"`
@@ -144,9 +122,33 @@ public class CfnPolicySecurityServicePolicyDataPropertyDsl {
      *
      * For other resource types that you can protect with a Shield Advanced policy, this
      * `ManagedServiceData` configuration is an empty string.
+     * * Example: `THIRD_PARTY_FIREWALL` - Centralized deployment model
+     *
+     * Replace `THIRD_PARTY_FIREWALL_NAME` with the name of the third-party firewall.
+     *
+     * `"{ \"type\":\"THIRD_PARTY_FIREWALL\", \"thirdPartyFirewall\":\"\THIRD_PARTY_FIREWALL_NAME\",
+     * \"thirdPartyFirewallConfig\":{ \"thirdPartyFirewallPolicyList\":[\"global-1\"]
+     * },\"firewallDeploymentModel\":{\"centralizedFirewallDeploymentModel\":{\"centralizedFirewallOrchestrationConfig\":{\"inspectionVpcIds\":[{\"resourceId\":\"vpc-1234\",\"accountId\":\"123456789011\"}],\"firewallCreationConfig\":{\"endpointLocation\":{\"availabilityZoneConfigList\":[{\"availabilityZoneId\":null,\"availabilityZoneName\":\"us-east-1a\",\"allowedIPV4CidrList\":[\"10.0.0.0/28\"]}]}},\"allowedIPV4CidrList\":[]}}}}"`
+     *
+     * To use the distributed deployment model, you must set
+     * [FirewallDeploymentModel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-thirdpartyfirewallpolicy.html)
+     * to `CENTRALIZED` .
+     * * Example: `THIRD_PARTY_FIREWALL` - Distributed deployment model
+     *
+     * Replace `THIRD_PARTY_FIREWALL_NAME` with the name of the third-party firewall.
+     *
+     * `"{\"type\":\"THIRD_PARTY_FIREWALL\",\"thirdPartyFirewall\":\"THIRD_PARTY_FIREWALL_NAME\",\"thirdPartyFirewallConfig\":{\"thirdPartyFirewallPolicyList\":[\"global-1\"]
+     * },\"firewallDeploymentModel\":{ \"distributedFirewallDeploymentModel\":{
+     * \"distributedFirewallOrchestrationConfig\":{\"firewallCreationConfig\":{\"endpointLocation\":{
+     * \"availabilityZoneConfigList\":[ {\"availabilityZoneName\":\"${AvailabilityZone}\" } ] } },
+     * \"allowedIPV4CidrList\":[ ] } } } }"`
+     *
+     * To use the distributed deployment model, you must set
+     * [FirewallDeploymentModel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-thirdpartyfirewallpolicy.html)
+     * to `DISTRIBUTED` .
      * * Example: `WAFV2`
      *
-     * `"{\"type\":\"WAFV2\",\"preProcessRuleGroups\":[{\"ruleGroupArn\":null,\"overrideAction\":{\"type\":\"NONE\"},\"managedRuleGroupIdentifier\":{\"version\":null,\"vendorName\":\"AWS\",\"managedRuleGroupName\":\"AWSManagedRulesAmazonIpReputationList\"},\"ruleGroupType\":\"ManagedRuleGroup\",\"excludeRules\":[{\"name\":\"NoUserAgent_HEADER\"}]}],\"postProcessRuleGroups\":[],\"defaultAction\":{\"type\":\"ALLOW\"},\"overrideCustomerWebACLAssociation\":false,\"loggingConfiguration\":{\"logDestinationConfigs\":[\"arn:aws:firehose:us-west-2:12345678912:deliverystream/aws-waf-logs-fms-admin-destination\"],\"redactedFields\":[{\"redactedFieldType\":\"SingleHeader\",\"redactedFieldValue\":\"Cookies\"},{\"redactedFieldType\":\"Method\"}]}}"`
+     * `"{\"type\":\"WAFV2\",\"preProcessRuleGroups\":[{\"ruleGroupArn\":null,\"overrideAction\":{\"type\":\"NONE\"},\"managedRuleGroupIdentifier\":{\"version\":null,\"vendorName\":\"AWS\",\"managedRuleGroupName\":\"AWSManagedRulesAmazonIpReputationList\"},\"ruleGroupType\":\"ManagedRuleGroup\",\"excludeRules\":[{\"name\":\"NoUserAgent_HEADER\"}]}],\"postProcessRuleGroups\":[],\"defaultAction\":{\"type\":\"ALLOW\"},\"overrideCustomerWebACLAssociation\":false,\"loggingConfiguration\":{\"logDestinationConfigs\":[\"arn:aws:firehose:us-west-2:12345678912:deliverystream/aws-waf-logs-fms-admin-destination\"],\"redactedFields\":[{\"redactedFieldType\":\"SingleHeader\",\"redactedFieldValue\":\"Cookies\"},{\"redactedFieldType\":\"Method\"}]},\"optimizeUnassociatedWebACL\":true}"`
      *
      * In the `loggingConfiguration` , you can specify one `logDestinationConfigs` , you can
      * optionally provide up to 20 `redactedFields` , and the `RedactedFieldType` must be one of

@@ -20,7 +20,8 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dlm.CfnLifecyclePolicy
 
 /**
- * *[Snapshot and AMI policies only]* Specifies optional parameters for snapshot and AMI policies.
+ * *[Custom snapshot and AMI policies only]* Specifies optional parameters for snapshot and AMI
+ * policies.
  *
  * The set of valid parameters depends on the combination of policy type and target resource type.
  *
@@ -56,55 +57,73 @@ public class CfnLifecyclePolicyParametersPropertyDsl {
     private val _excludeDataVolumeTags: MutableList<Any> = mutableListOf()
 
     /**
-     * @param excludeBootVolume *[Snapshot policies that target instances only]* Indicates whether
-     *   to exclude the root volume from multi-volume snapshot sets. The default is `false` . If you
-     *   specify `true` , then the root volumes attached to targeted instances will be excluded from
-     *   the multi-volume snapshot sets created by the policy.
+     * @param excludeBootVolume *[Custom snapshot policies that target instances only]* Indicates
+     *   whether to exclude the root volume from multi-volume snapshot sets. The default is `false`
+     *   . If you specify `true` , then the root volumes attached to targeted instances will be
+     *   excluded from the multi-volume snapshot sets created by the policy.
      */
     public fun excludeBootVolume(excludeBootVolume: Boolean) {
         cdkBuilder.excludeBootVolume(excludeBootVolume)
     }
 
     /**
-     * @param excludeBootVolume *[Snapshot policies that target instances only]* Indicates whether
-     *   to exclude the root volume from multi-volume snapshot sets. The default is `false` . If you
-     *   specify `true` , then the root volumes attached to targeted instances will be excluded from
-     *   the multi-volume snapshot sets created by the policy.
+     * @param excludeBootVolume *[Custom snapshot policies that target instances only]* Indicates
+     *   whether to exclude the root volume from multi-volume snapshot sets. The default is `false`
+     *   . If you specify `true` , then the root volumes attached to targeted instances will be
+     *   excluded from the multi-volume snapshot sets created by the policy.
      */
     public fun excludeBootVolume(excludeBootVolume: IResolvable) {
         cdkBuilder.excludeBootVolume(excludeBootVolume)
     }
 
-    /** @param excludeDataVolumeTags the value to be set. */
+    /**
+     * @param excludeDataVolumeTags *[Custom snapshot policies that target instances only]* The tags
+     *   used to identify data (non-root) volumes to exclude from multi-volume snapshot sets. If you
+     *   create a snapshot lifecycle policy that targets instances and you specify tags for this
+     *   parameter, then data volumes with the specified tags that are attached to targeted
+     *   instances will be excluded from the multi-volume snapshot sets created by the policy.
+     */
     public fun excludeDataVolumeTags(vararg excludeDataVolumeTags: Any) {
         _excludeDataVolumeTags.addAll(listOf(*excludeDataVolumeTags))
     }
 
-    /** @param excludeDataVolumeTags the value to be set. */
+    /**
+     * @param excludeDataVolumeTags *[Custom snapshot policies that target instances only]* The tags
+     *   used to identify data (non-root) volumes to exclude from multi-volume snapshot sets. If you
+     *   create a snapshot lifecycle policy that targets instances and you specify tags for this
+     *   parameter, then data volumes with the specified tags that are attached to targeted
+     *   instances will be excluded from the multi-volume snapshot sets created by the policy.
+     */
     public fun excludeDataVolumeTags(excludeDataVolumeTags: Collection<Any>) {
         _excludeDataVolumeTags.addAll(excludeDataVolumeTags)
     }
 
-    /** @param excludeDataVolumeTags the value to be set. */
+    /**
+     * @param excludeDataVolumeTags *[Custom snapshot policies that target instances only]* The tags
+     *   used to identify data (non-root) volumes to exclude from multi-volume snapshot sets. If you
+     *   create a snapshot lifecycle policy that targets instances and you specify tags for this
+     *   parameter, then data volumes with the specified tags that are attached to targeted
+     *   instances will be excluded from the multi-volume snapshot sets created by the policy.
+     */
     public fun excludeDataVolumeTags(excludeDataVolumeTags: IResolvable) {
         cdkBuilder.excludeDataVolumeTags(excludeDataVolumeTags)
     }
 
     /**
-     * @param noReboot *[AMI policies only]* Indicates whether targeted instances are rebooted when
-     *   the lifecycle policy runs. `true` indicates that targeted instances are not rebooted when
-     *   the policy runs. `false` indicates that target instances are rebooted when the policy runs.
-     *   The default is `true` (instances are not rebooted).
+     * @param noReboot *[Custom AMI policies only]* Indicates whether targeted instances are
+     *   rebooted when the lifecycle policy runs. `true` indicates that targeted instances are not
+     *   rebooted when the policy runs. `false` indicates that target instances are rebooted when
+     *   the policy runs. The default is `true` (instances are not rebooted).
      */
     public fun noReboot(noReboot: Boolean) {
         cdkBuilder.noReboot(noReboot)
     }
 
     /**
-     * @param noReboot *[AMI policies only]* Indicates whether targeted instances are rebooted when
-     *   the lifecycle policy runs. `true` indicates that targeted instances are not rebooted when
-     *   the policy runs. `false` indicates that target instances are rebooted when the policy runs.
-     *   The default is `true` (instances are not rebooted).
+     * @param noReboot *[Custom AMI policies only]* Indicates whether targeted instances are
+     *   rebooted when the lifecycle policy runs. `true` indicates that targeted instances are not
+     *   rebooted when the policy runs. `false` indicates that target instances are rebooted when
+     *   the policy runs. The default is `true` (instances are not rebooted).
      */
     public fun noReboot(noReboot: IResolvable) {
         cdkBuilder.noReboot(noReboot)

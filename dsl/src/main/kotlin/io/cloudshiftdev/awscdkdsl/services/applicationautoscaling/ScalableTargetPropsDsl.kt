@@ -23,25 +23,18 @@ import software.amazon.awscdk.services.iam.IRole
  *
  * Example:
  * ```
- * import software.amazon.awscdk.services.lambda.*;
- * Code code;
- * Function handler = Function.Builder.create(this, "MyFunction")
- * .runtime(Runtime.PYTHON_3_7)
- * .handler("index.handler")
- * .code(code)
- * .reservedConcurrentExecutions(2)
+ * ScalableTarget shardsScalableTarget = ScalableTarget.Builder.create(this,
+ * "ElastiCacheRedisShardsScalableTarget")
+ * .serviceNamespace(ServiceNamespace.ELASTICACHE)
+ * .scalableDimension("elasticache:replication-group:NodeGroups")
+ * .minCapacity(2)
+ * .maxCapacity(10)
+ * .resourceId("replication-group/main-cluster")
  * .build();
- * Version fnVer = handler.getCurrentVersion();
- * ScalableTarget target = ScalableTarget.Builder.create(this, "ScalableTarget")
- * .serviceNamespace(ServiceNamespace.LAMBDA)
- * .maxCapacity(100)
- * .minCapacity(10)
- * .resourceId(String.format("function:%s:%s", handler.getFunctionName(), fnVer.getVersion()))
- * .scalableDimension("lambda:function:ProvisionedConcurrency")
- * .build();
- * target.scaleToTrackMetric("PceTracking", BasicTargetTrackingScalingPolicyProps.builder()
- * .targetValue(0.9)
- * .predefinedMetric(PredefinedMetric.LAMBDA_PROVISIONED_CONCURRENCY_UTILIZATION)
+ * shardsScalableTarget.scaleToTrackMetric("ElastiCacheRedisShardsCPUUtilization",
+ * BasicTargetTrackingScalingPolicyProps.builder()
+ * .targetValue(20)
+ * .predefinedMetric(PredefinedMetric.ELASTICACHE_PRIMARY_ENGINE_CPU_UTILIZATION)
  * .build());
  * ```
  */

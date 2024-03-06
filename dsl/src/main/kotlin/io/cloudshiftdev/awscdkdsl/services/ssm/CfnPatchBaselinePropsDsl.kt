@@ -52,6 +52,7 @@ import software.amazon.awscdk.services.ssm.CfnPatchBaselineProps
  * .approvedPatches(List.of("approvedPatches"))
  * .approvedPatchesComplianceLevel("approvedPatchesComplianceLevel")
  * .approvedPatchesEnableNonSecurity(false)
+ * .defaultBaseline(false)
  * .description("description")
  * .globalFilters(PatchFilterGroupProperty.builder()
  * .patchFilters(List.of(PatchFilterProperty.builder()
@@ -146,6 +147,22 @@ public class CfnPatchBaselinePropsDsl {
      */
     public fun approvedPatchesEnableNonSecurity(approvedPatchesEnableNonSecurity: IResolvable) {
         cdkBuilder.approvedPatchesEnableNonSecurity(approvedPatchesEnableNonSecurity)
+    }
+
+    /**
+     * @param defaultBaseline Set the baseline as default baseline. Only registering to default
+     *   patch baseline is allowed.
+     */
+    public fun defaultBaseline(defaultBaseline: Boolean) {
+        cdkBuilder.defaultBaseline(defaultBaseline)
+    }
+
+    /**
+     * @param defaultBaseline Set the baseline as default baseline. Only registering to default
+     *   patch baseline is allowed.
+     */
+    public fun defaultBaseline(defaultBaseline: IResolvable) {
+        cdkBuilder.defaultBaseline(defaultBaseline)
     }
 
     /** @param description A description of the patch baseline. */

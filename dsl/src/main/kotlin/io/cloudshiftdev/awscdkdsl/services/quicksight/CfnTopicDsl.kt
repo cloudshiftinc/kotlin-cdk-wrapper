@@ -73,6 +73,7 @@ import software.constructs.Construct
  * .build())
  * .isIncludedInTopic(false)
  * .neverAggregateInFilter(false)
+ * .nonAdditive(false)
  * .notAllowedAggregations(List.of("notAllowedAggregations"))
  * .semanticType(SemanticTypeProperty.builder()
  * .falseyCellValue("falseyCellValue")
@@ -126,6 +127,7 @@ import software.constructs.Construct
  * .build())
  * .isIncludedInTopic(false)
  * .neverAggregateInFilter(false)
+ * .nonAdditive(false)
  * .notAllowedAggregations(List.of("notAllowedAggregations"))
  * .semanticType(SemanticTypeProperty.builder()
  * .falseyCellValue("falseyCellValue")
@@ -229,6 +231,7 @@ import software.constructs.Construct
  * .description("description")
  * .name("name")
  * .topicId("topicId")
+ * .userExperienceVersion("userExperienceVersion")
  * .build();
  * ```
  *
@@ -320,6 +323,17 @@ public class CfnTopicDsl(
      */
     public fun topicId(topicId: String) {
         cdkBuilder.topicId(topicId)
+    }
+
+    /**
+     * The user experience version of a topic.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-topic.html#cfn-quicksight-topic-userexperienceversion)
+     *
+     * @param userExperienceVersion The user experience version of a topic.
+     */
+    public fun userExperienceVersion(userExperienceVersion: String) {
+        cdkBuilder.userExperienceVersion(userExperienceVersion)
     }
 
     public fun build(): CfnTopic {

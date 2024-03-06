@@ -18,6 +18,7 @@ import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.logs.DataProtectionPolicy
 import software.amazon.awscdk.services.logs.LogGroup
+import software.amazon.awscdk.services.logs.LogGroupClass
 import software.amazon.awscdk.services.logs.RetentionDays
 import software.constructs.Construct
 
@@ -86,6 +87,22 @@ public class LogGroupDsl(
      */
     public fun encryptionKey(encryptionKey: IKey) {
         cdkBuilder.encryptionKey(encryptionKey)
+    }
+
+    /**
+     * The class of the log group. Possible values are: STANDARD and INFREQUENT_ACCESS.
+     *
+     * INFREQUENT_ACCESS class provides customers a cost-effective way to consolidate logs which
+     * supports querying using Logs Insights. The logGroupClass property cannot be changed once the
+     * log group is created.
+     *
+     * Default: LogGroupClass.STANDARD
+     *
+     * @param logGroupClass The class of the log group. Possible values are: STANDARD and
+     *   INFREQUENT_ACCESS.
+     */
+    public fun logGroupClass(logGroupClass: LogGroupClass) {
+        cdkBuilder.logGroupClass(logGroupClass)
     }
 
     /**

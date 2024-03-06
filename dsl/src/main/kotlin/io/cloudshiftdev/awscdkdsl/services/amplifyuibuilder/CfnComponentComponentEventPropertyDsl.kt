@@ -30,6 +30,7 @@ import software.amazon.awscdk.services.amplifyuibuilder.CfnComponent
  * ComponentPropertyProperty componentPropertyProperty_;
  * ComponentEventProperty componentEventProperty = ComponentEventProperty.builder()
  * .action("action")
+ * .bindingEvent("bindingEvent")
  * .parameters(ActionParametersProperty.builder()
  * .anchor(ComponentPropertyProperty.builder()
  * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
@@ -347,6 +348,14 @@ public class CfnComponentComponentEventPropertyDsl {
     /** @param action The action to perform when a specific event is raised. */
     public fun action(action: String) {
         cdkBuilder.action(action)
+    }
+
+    /**
+     * @param bindingEvent Binds an event to an action on a component. When you specify a
+     *   `bindingEvent` , the event is called when the action is performed.
+     */
+    public fun bindingEvent(bindingEvent: String) {
+        cdkBuilder.bindingEvent(bindingEvent)
     }
 
     /** @param parameters Describes information about the action. */

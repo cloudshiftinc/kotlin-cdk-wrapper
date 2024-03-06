@@ -28,6 +28,10 @@ import software.constructs.Construct
  * You specify a name, data source connector type and description for your data source. You also
  * specify configuration information for the data source connector.
  *
+ * `CreateDataSource` does *not* support connectors which
+ * [require a `TemplateConfiguration` object](https://docs.aws.amazon.com/kendra/latest/dg/ds-schemas.html)
+ * for connecting to Amazon Kendra .
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -412,6 +416,7 @@ import software.constructs.Construct
  * .build())
  * .build())
  * .description("description")
+ * .languageCode("languageCode")
  * .roleArn("roleArn")
  * .schedule("schedule")
  * .tags(List.of(CfnTag.builder()
@@ -523,6 +528,22 @@ public class CfnDataSourceDsl(
      */
     public fun indexId(indexId: String) {
         cdkBuilder.indexId(indexId)
+    }
+
+    /**
+     * The code for a language.
+     *
+     * This shows a supported language for all documents in the data source. English is supported by
+     * default. For more information on supported languages, including their codes, see
+     * [Adding documents in languages other than English](https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendra-datasource.html#cfn-kendra-datasource-languagecode)
+     *
+     * @param languageCode The code for a language.
+     */
+    public fun languageCode(languageCode: String) {
+        cdkBuilder.languageCode(languageCode)
     }
 
     /**

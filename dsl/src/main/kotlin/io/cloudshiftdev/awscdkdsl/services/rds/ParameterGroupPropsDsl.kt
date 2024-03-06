@@ -14,6 +14,7 @@ package io.cloudshiftdev.awscdkdsl.services.rds
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.String
 import kotlin.collections.Map
+import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.rds.IEngine
 import software.amazon.awscdk.services.rds.ParameterGroupProps
 
@@ -76,7 +77,7 @@ import software.amazon.awscdk.services.rds.ParameterGroupProps
  * Function fn = Function.Builder.create(this, "Function")
  * .code(Code.fromInline("exports.handler = (event) =&gt; console.log(event);"))
  * .handler("index.handler")
- * .runtime(Runtime.NODEJS_14_X)
+ * .runtime(Runtime.NODEJS_18_X)
  * .build();
  * Rule availabilityRule = instance.onEvent("Availability", OnEventOptions.builder().target(new
  * LambdaFunction(fn)).build());
@@ -103,6 +104,14 @@ public class ParameterGroupPropsDsl {
     /** @param parameters The parameters in this parameter group. */
     public fun parameters(parameters: Map<String, String>) {
         cdkBuilder.parameters(parameters)
+    }
+
+    /**
+     * @param removalPolicy The CloudFormation policy to apply when the instance is removed from the
+     *   stack or replaced during an update.
+     */
+    public fun removalPolicy(removalPolicy: RemovalPolicy) {
+        cdkBuilder.removalPolicy(removalPolicy)
     }
 
     public fun build(): ParameterGroupProps = cdkBuilder.build()

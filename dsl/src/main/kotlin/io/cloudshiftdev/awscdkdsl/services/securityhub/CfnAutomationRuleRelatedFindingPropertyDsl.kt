@@ -40,14 +40,20 @@ public class CfnAutomationRuleRelatedFindingPropertyDsl {
     private val cdkBuilder: CfnAutomationRule.RelatedFindingProperty.Builder =
         CfnAutomationRule.RelatedFindingProperty.builder()
 
-    /** @param id The product-generated identifier for a related finding. */
+    /**
+     * @param id The product-generated identifier for a related finding. Array Members: Minimum
+     *   number of 1 item. Maximum number of 20 items.
+     */
     public fun id(id: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
         builder.apply(id)
         cdkBuilder.id(builder.map)
     }
 
-    /** @param id The product-generated identifier for a related finding. */
+    /**
+     * @param id The product-generated identifier for a related finding. Array Members: Minimum
+     *   number of 1 item. Maximum number of 20 items.
+     */
     public fun id(id: Any) {
         cdkBuilder.id(id)
     }

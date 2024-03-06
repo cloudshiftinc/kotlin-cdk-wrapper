@@ -24,7 +24,7 @@ import software.amazon.awscdk.services.cognito.UserPoolIdentityProviderOidc
 import software.constructs.Construct
 
 /**
- * Represents a identity provider that integrates with OpenID Connect.
+ * Represents an identity provider that integrates with OpenID Connect.
  *
  * Example:
  * ```

@@ -32,6 +32,7 @@ import software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup
  * EndpointConfigurationProperty.builder()
  * .endpointId("endpointId")
  * // the properties below are optional
+ * .attachmentArn("attachmentArn")
  * .clientIpPreservationEnabled(false)
  * .weight(123)
  * .build();
@@ -43,6 +44,15 @@ import software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup
 public class CfnEndpointGroupEndpointConfigurationPropertyDsl {
     private val cdkBuilder: CfnEndpointGroup.EndpointConfigurationProperty.Builder =
         CfnEndpointGroup.EndpointConfigurationProperty.builder()
+
+    /**
+     * @param attachmentArn The Amazon Resource Name (ARN) of the cross-account attachment that
+     *   specifies the endpoints (resources) that can be added to accelerators and principals that
+     *   have permission to add the endpoints to accelerators.
+     */
+    public fun attachmentArn(attachmentArn: String) {
+        cdkBuilder.attachmentArn(attachmentArn)
+    }
 
     /**
      * @param clientIpPreservationEnabled Indicates whether client IP address preservation is
@@ -85,7 +95,7 @@ public class CfnEndpointGroupEndpointConfigurationPropertyDsl {
      *   EC2 instances, this is the EC2 instance ID. A resource must be valid and active when you
      *   add it as an endpoint.
      *
-     * An Application Load Balancer can be either internal or internet-facing.
+     * For cross-account endpoints, this must be the ARN of the resource.
      */
     public fun endpointId(endpointId: String) {
         cdkBuilder.endpointId(endpointId)

@@ -37,6 +37,7 @@ import software.amazon.awscdk.services.amazonmq.CfnBroker
  * // the properties below are optional
  * .consoleAccess(false)
  * .groups(List.of("groups"))
+ * .replicationUser(false)
  * .build();
  * ```
  *
@@ -89,6 +90,16 @@ public class CfnBrokerUserPropertyDsl {
      */
     public fun password(password: String) {
         cdkBuilder.password(password)
+    }
+
+    /** @param replicationUser Defines if this user is intended for CRDR replication purposes. */
+    public fun replicationUser(replicationUser: Boolean) {
+        cdkBuilder.replicationUser(replicationUser)
+    }
+
+    /** @param replicationUser Defines if this user is intended for CRDR replication purposes. */
+    public fun replicationUser(replicationUser: IResolvable) {
+        cdkBuilder.replicationUser(replicationUser)
     }
 
     /**

@@ -44,7 +44,7 @@ import software.constructs.Construct
  * BastionHostLinux host = BastionHostLinux.Builder.create(this, "BastionHost")
  * .vpc(vpc)
  * .blockDevices(List.of(BlockDevice.builder()
- * .deviceName("EBSBastionHost")
+ * .deviceName("/dev/sdh")
  * .volume(BlockDeviceVolume.ebs(10, EbsDeviceOptions.builder()
  * .encrypted(true)
  * .build()))

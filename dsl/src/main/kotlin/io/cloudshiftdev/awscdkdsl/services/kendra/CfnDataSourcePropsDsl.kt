@@ -409,6 +409,7 @@ import software.amazon.awscdk.services.kendra.CfnDataSourceProps
  * .build())
  * .build())
  * .description("description")
+ * .languageCode("languageCode")
  * .roleArn("roleArn")
  * .schedule("schedule")
  * .tags(List.of(CfnTag.builder()
@@ -487,6 +488,17 @@ public class CfnDataSourcePropsDsl {
      */
     public fun indexId(indexId: String) {
         cdkBuilder.indexId(indexId)
+    }
+
+    /**
+     * @param languageCode The code for a language. This shows a supported language for all
+     *   documents in the data source. English is supported by default. For more information on
+     *   supported languages, including their codes, see
+     *   [Adding documents in languages other than English](https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html)
+     *   .
+     */
+    public fun languageCode(languageCode: String) {
+        cdkBuilder.languageCode(languageCode)
     }
 
     /** @param name The name of the data source. */

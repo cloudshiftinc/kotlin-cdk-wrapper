@@ -151,6 +151,20 @@ public class EmrAddStepDsl(
     }
 
     /**
+     * The Amazon Resource Name (ARN) of the runtime role for a step on the cluster.
+     *
+     * Default: - Uses EC2 instance profile role
+     *
+     * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_AddJobFlowSteps.html#API_AddJobFlowSteps_RequestSyntax)
+     *
+     * @param executionRoleArn The Amazon Resource Name (ARN) of the runtime role for a step on the
+     *   cluster.
+     */
+    public fun executionRoleArn(executionRoleArn: String) {
+        cdkBuilder.executionRoleArn(executionRoleArn)
+    }
+
+    /**
      * (deprecated) Timeout for the heartbeat.
      *
      * Default: - None
@@ -195,13 +209,15 @@ public class EmrAddStepDsl(
     /**
      * AWS Step Functions integrates with services directly in the Amazon States Language.
      *
-     * You can control these AWS services using service integration patterns
+     * You can control these AWS services using service integration patterns.
+     *
+     * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      *
      * Default: - `IntegrationPattern.REQUEST_RESPONSE` for most tasks. `IntegrationPattern.RUN_JOB`
      * for the following exceptions: `BatchSubmitJob`, `EmrAddStep`, `EmrCreateCluster`,
      * `EmrTerminationCluster`, and `EmrContainersStartJobRun`.
      *
-     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html#connect-wait-token)
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-supported-services.html)
      *
      * @param integrationPattern AWS Step Functions integrates with services directly in the Amazon
      *   States Language.
@@ -328,6 +344,17 @@ public class EmrAddStepDsl(
      */
     public fun resultSelector(resultSelector: Map<String, Any>) {
         cdkBuilder.resultSelector(resultSelector)
+    }
+
+    /**
+     * Optional name for this state.
+     *
+     * Default: - The construct ID will be used as state name
+     *
+     * @param stateName Optional name for this state.
+     */
+    public fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
     }
 
     /**

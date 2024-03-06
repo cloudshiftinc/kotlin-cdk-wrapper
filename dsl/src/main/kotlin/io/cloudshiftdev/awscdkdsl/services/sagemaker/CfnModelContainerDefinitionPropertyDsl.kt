@@ -41,6 +41,17 @@ import software.amazon.awscdk.services.sagemaker.CfnModel
  * .build())
  * .inferenceSpecificationName("inferenceSpecificationName")
  * .mode("mode")
+ * .modelDataSource(ModelDataSourceProperty.builder()
+ * .s3DataSource(S3DataSourceProperty.builder()
+ * .compressionType("compressionType")
+ * .s3DataType("s3DataType")
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .modelAccessConfig(ModelAccessConfigProperty.builder()
+ * .acceptEula(false)
+ * .build())
+ * .build())
+ * .build())
  * .modelDataUrl("modelDataUrl")
  * .modelPackageName("modelPackageName")
  * .multiModelConfig(MultiModelConfigProperty.builder()
@@ -152,6 +163,26 @@ public class CfnModelContainerDefinitionPropertyDsl {
     /** @param mode Whether the container hosts a single model or multiple models. */
     public fun mode(mode: String) {
         cdkBuilder.mode(mode)
+    }
+
+    /**
+     * @param modelDataSource Specifies the location of ML model data to deploy.
+     *
+     * Currently you cannot use `ModelDataSource` in conjunction with SageMaker batch transform,
+     * SageMaker serverless endpoints, SageMaker multi-model endpoints, and SageMaker Marketplace.
+     */
+    public fun modelDataSource(modelDataSource: IResolvable) {
+        cdkBuilder.modelDataSource(modelDataSource)
+    }
+
+    /**
+     * @param modelDataSource Specifies the location of ML model data to deploy.
+     *
+     * Currently you cannot use `ModelDataSource` in conjunction with SageMaker batch transform,
+     * SageMaker serverless endpoints, SageMaker multi-model endpoints, and SageMaker Marketplace.
+     */
+    public fun modelDataSource(modelDataSource: CfnModel.ModelDataSourceProperty) {
+        cdkBuilder.modelDataSource(modelDataSource)
     }
 
     /**

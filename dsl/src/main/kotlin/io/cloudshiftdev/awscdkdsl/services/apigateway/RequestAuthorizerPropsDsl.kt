@@ -74,7 +74,7 @@ public class RequestAuthorizerPropsDsl {
      * @param identitySources An array of request header mapping expressions for identities.
      *   Supported parameter types are Header, Query String, Stage Variable, and Context. For
      *   instance, extracting an authorization token from a header would use the identity source
-     *   `IdentitySource.header('Authorizer')`.
+     *   `IdentitySource.header('Authorization')`.
      *
      * Note: API Gateway uses the specified identity sources as the request authorizer caching key.
      * When caching is enabled, API Gateway calls the authorizer's Lambda function only after
@@ -90,7 +90,7 @@ public class RequestAuthorizerPropsDsl {
      * @param identitySources An array of request header mapping expressions for identities.
      *   Supported parameter types are Header, Query String, Stage Variable, and Context. For
      *   instance, extracting an authorization token from a header would use the identity source
-     *   `IdentitySource.header('Authorizer')`.
+     *   `IdentitySource.header('Authorization')`.
      *
      * Note: API Gateway uses the specified identity sources as the request authorizer caching key.
      * When caching is enabled, API Gateway calls the authorizer's Lambda function only after

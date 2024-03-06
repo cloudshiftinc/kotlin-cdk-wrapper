@@ -22,6 +22,7 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.ec2.CfnIPAMPool
 import software.amazon.awscdk.services.ec2.CfnIPAMPoolProps
 
 /**
@@ -53,6 +54,12 @@ import software.amazon.awscdk.services.ec2.CfnIPAMPoolProps
  * .publicIpSource("publicIpSource")
  * .publiclyAdvertisable(false)
  * .sourceIpamPoolId("sourceIpamPoolId")
+ * .sourceResource(SourceResourceProperty.builder()
+ * .resourceId("resourceId")
+ * .resourceOwner("resourceOwner")
+ * .resourceRegion("resourceRegion")
+ * .resourceType("resourceType")
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -253,6 +260,16 @@ public class CfnIPAMPoolPropsDsl {
      */
     public fun sourceIpamPoolId(sourceIpamPoolId: String) {
         cdkBuilder.sourceIpamPoolId(sourceIpamPoolId)
+    }
+
+    /** @param sourceResource The resource used to provision CIDRs to a resource planning pool. */
+    public fun sourceResource(sourceResource: IResolvable) {
+        cdkBuilder.sourceResource(sourceResource)
+    }
+
+    /** @param sourceResource The resource used to provision CIDRs to a resource planning pool. */
+    public fun sourceResource(sourceResource: CfnIPAMPool.SourceResourceProperty) {
+        cdkBuilder.sourceResource(sourceResource)
     }
 
     /**

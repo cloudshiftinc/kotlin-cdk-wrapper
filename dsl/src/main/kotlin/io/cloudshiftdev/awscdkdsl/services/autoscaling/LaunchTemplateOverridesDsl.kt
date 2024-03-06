@@ -13,6 +13,8 @@ package io.cloudshiftdev.awscdkdsl.services.autoscaling
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Number
+import kotlin.Unit
+import software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup
 import software.amazon.awscdk.services.autoscaling.LaunchTemplateOverrides
 import software.amazon.awscdk.services.ec2.ILaunchTemplate
 import software.amazon.awscdk.services.ec2.InstanceType
@@ -30,8 +32,61 @@ import software.amazon.awscdk.services.ec2.InstanceType
  * InstanceType instanceType;
  * LaunchTemplate launchTemplate;
  * LaunchTemplateOverrides launchTemplateOverrides = LaunchTemplateOverrides.builder()
- * .instanceType(instanceType)
+ * .instanceRequirements(InstanceRequirementsProperty.builder()
+ * .memoryMiB(MemoryMiBRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .vCpuCount(VCpuCountRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
  * // the properties below are optional
+ * .acceleratorCount(AcceleratorCountRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .acceleratorManufacturers(List.of("acceleratorManufacturers"))
+ * .acceleratorNames(List.of("acceleratorNames"))
+ * .acceleratorTotalMemoryMiB(AcceleratorTotalMemoryMiBRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .acceleratorTypes(List.of("acceleratorTypes"))
+ * .allowedInstanceTypes(List.of("allowedInstanceTypes"))
+ * .bareMetal("bareMetal")
+ * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .burstablePerformance("burstablePerformance")
+ * .cpuManufacturers(List.of("cpuManufacturers"))
+ * .excludedInstanceTypes(List.of("excludedInstanceTypes"))
+ * .instanceGenerations(List.of("instanceGenerations"))
+ * .localStorage("localStorage")
+ * .localStorageTypes(List.of("localStorageTypes"))
+ * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
+ * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .networkBandwidthGbps(NetworkBandwidthGbpsRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .networkInterfaceCount(NetworkInterfaceCountRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .onDemandMaxPricePercentageOverLowestPrice(123)
+ * .requireHibernateSupport(false)
+ * .spotMaxPricePercentageOverLowestPrice(123)
+ * .totalLocalStorageGb(TotalLocalStorageGBRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .build())
+ * .instanceType(instanceType)
  * .launchTemplate(launchTemplate)
  * .weightedCapacity(123)
  * .build();
@@ -42,8 +97,47 @@ public class LaunchTemplateOverridesDsl {
     private val cdkBuilder: LaunchTemplateOverrides.Builder = LaunchTemplateOverrides.builder()
 
     /**
+     * @param instanceRequirements The instance requirements. Amazon EC2 Auto Scaling uses your
+     *   specified requirements to identify instance types. Then, it uses your On-Demand and Spot
+     *   allocation strategies to launch instances from these instance types.
+     *
+     * You can specify up to four separate sets of instance requirements per Auto Scaling group.
+     * This is useful for provisioning instances from different Amazon Machine Images (AMIs) in the
+     * same Auto Scaling group. To do this, create the AMIs and create a new launch template for
+     * each AMI. Then, create a compatible set of instance requirements for each launch template.
+     *
+     * You must specify one of instanceRequirements or instanceType.
+     */
+    public fun instanceRequirements(
+        instanceRequirements: CfnAutoScalingGroupInstanceRequirementsPropertyDsl.() -> Unit = {}
+    ) {
+        val builder = CfnAutoScalingGroupInstanceRequirementsPropertyDsl()
+        builder.apply(instanceRequirements)
+        cdkBuilder.instanceRequirements(builder.build())
+    }
+
+    /**
+     * @param instanceRequirements The instance requirements. Amazon EC2 Auto Scaling uses your
+     *   specified requirements to identify instance types. Then, it uses your On-Demand and Spot
+     *   allocation strategies to launch instances from these instance types.
+     *
+     * You can specify up to four separate sets of instance requirements per Auto Scaling group.
+     * This is useful for provisioning instances from different Amazon Machine Images (AMIs) in the
+     * same Auto Scaling group. To do this, create the AMIs and create a new launch template for
+     * each AMI. Then, create a compatible set of instance requirements for each launch template.
+     *
+     * You must specify one of instanceRequirements or instanceType.
+     */
+    public fun instanceRequirements(
+        instanceRequirements: CfnAutoScalingGroup.InstanceRequirementsProperty
+    ) {
+        cdkBuilder.instanceRequirements(instanceRequirements)
+    }
+
+    /**
      * @param instanceType The instance type, such as m3.xlarge. You must use an instance type that
-     *   is supported in your requested Region and Availability Zones.
+     *   is supported in your requested Region and Availability Zones. You must specify one of
+     *   instanceRequirements or instanceType.
      */
     public fun instanceType(instanceType: InstanceType) {
         cdkBuilder.instanceType(instanceType)

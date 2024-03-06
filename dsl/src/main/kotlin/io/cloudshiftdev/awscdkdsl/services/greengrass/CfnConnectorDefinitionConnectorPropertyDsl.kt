@@ -23,7 +23,7 @@ import software.amazon.awscdk.services.greengrass.CfnConnectorDefinition
  * protocols, AWS , and other cloud services.
  *
  * For more information, see
- * [Integrate with Services and Protocols Using Greengrass Connectors](https://docs.aws.amazon.com/greengrass/latest/developerguide/connectors.html)
+ * [Integrate with Services and Protocols Using Greengrass Connectors](https://docs.aws.amazon.com/greengrass/v1/developerguide/connectors.html)
  * in the *Developer Guide* .
  *
  * In an AWS CloudFormation template, the `Connectors` property of the
@@ -54,7 +54,7 @@ public class CfnConnectorDefinitionConnectorPropertyDsl {
     /**
      * @param connectorArn The Amazon Resource Name (ARN) of the connector. For more information
      *   about connectors provided by AWS , see
-     *   [Greengrass Connectors Provided by AWS](https://docs.aws.amazon.com/greengrass/latest/developerguide/connectors-list.html)
+     *   [Greengrass Connectors Provided by AWS](https://docs.aws.amazon.com/greengrass/v1/developerguide/connectors-list.html)
      *   .
      */
     public fun connectorArn(connectorArn: String) {
@@ -73,7 +73,7 @@ public class CfnConnectorDefinitionConnectorPropertyDsl {
     /**
      * @param parameters The parameters or configuration used by the connector. For more information
      *   about connectors provided by AWS , see
-     *   [Greengrass Connectors Provided by AWS](https://docs.aws.amazon.com/greengrass/latest/developerguide/connectors-list.html)
+     *   [Greengrass Connectors Provided by AWS](https://docs.aws.amazon.com/greengrass/v1/developerguide/connectors-list.html)
      *   .
      */
     public fun parameters(parameters: MapBuilder.() -> Unit = {}) {
@@ -85,7 +85,7 @@ public class CfnConnectorDefinitionConnectorPropertyDsl {
     /**
      * @param parameters The parameters or configuration used by the connector. For more information
      *   about connectors provided by AWS , see
-     *   [Greengrass Connectors Provided by AWS](https://docs.aws.amazon.com/greengrass/latest/developerguide/connectors-list.html)
+     *   [Greengrass Connectors Provided by AWS](https://docs.aws.amazon.com/greengrass/v1/developerguide/connectors-list.html)
      *   .
      */
     public fun parameters(parameters: Any) {

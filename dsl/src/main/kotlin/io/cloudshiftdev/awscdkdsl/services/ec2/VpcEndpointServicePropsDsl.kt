@@ -30,6 +30,7 @@ import software.amazon.awscdk.services.iam.ArnPrincipal
  * .vpcEndpointServiceLoadBalancers(List.of(networkLoadBalancer1, networkLoadBalancer2))
  * .acceptanceRequired(true)
  * .allowedPrincipals(List.of(new ArnPrincipal("arn:aws:iam::123456789012:root")))
+ * .contributorInsights(true)
  * .build();
  * ```
  */
@@ -66,6 +67,14 @@ public class VpcEndpointServicePropsDsl {
      */
     public fun allowedPrincipals(allowedPrincipals: Collection<ArnPrincipal>) {
         _allowedPrincipals.addAll(allowedPrincipals)
+    }
+
+    /**
+     * @param contributorInsights Indicates whether to enable the built-in Contributor Insights
+     *   rules provided by AWS PrivateLink.
+     */
+    public fun contributorInsights(contributorInsights: Boolean) {
+        cdkBuilder.contributorInsights(contributorInsights)
     }
 
     /**

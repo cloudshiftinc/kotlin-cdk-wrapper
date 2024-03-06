@@ -22,7 +22,7 @@ import software.amazon.awscdk.services.greengrass.CfnResourceDefinition
  *
  * AWS IoT Greengrass stores a local, encrypted copy of the secret on the Greengrass core, where it
  * can be securely accessed by connectors and Lambda functions. For more information, see
- * [Deploy Secrets to the AWS IoT Greengrass Core](https://docs.aws.amazon.com/greengrass/latest/developerguide/secrets.html)
+ * [Deploy Secrets to the AWS IoT Greengrass Core](https://docs.aws.amazon.com/greengrass/v1/developerguide/secrets.html)
  * in the *Developer Guide* .
  *
  * In an AWS CloudFormation template, `SecretsManagerSecretResourceData` can be used in the

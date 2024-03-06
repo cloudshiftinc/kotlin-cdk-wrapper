@@ -24,6 +24,7 @@ import software.amazon.awscdk.services.cloudfront.FunctionAssociation
 import software.amazon.awscdk.services.cloudfront.ICachePolicy
 import software.amazon.awscdk.services.cloudfront.IKeyGroup
 import software.amazon.awscdk.services.cloudfront.IOriginRequestPolicy
+import software.amazon.awscdk.services.cloudfront.IRealtimeLogConfig
 import software.amazon.awscdk.services.cloudfront.IResponseHeadersPolicy
 import software.amazon.awscdk.services.cloudfront.ViewerProtocolPolicy
 
@@ -110,6 +111,14 @@ public class AddBehaviorOptionsDsl {
      */
     public fun originRequestPolicy(originRequestPolicy: IOriginRequestPolicy) {
         cdkBuilder.originRequestPolicy(originRequestPolicy)
+    }
+
+    /**
+     * @param realtimeLogConfig The real-time log configuration to be attached to this cache
+     *   behavior.
+     */
+    public fun realtimeLogConfig(realtimeLogConfig: IRealtimeLogConfig) {
+        cdkBuilder.realtimeLogConfig(realtimeLogConfig)
     }
 
     /**

@@ -34,6 +34,7 @@ import software.amazon.awscdk.services.amplifyuibuilder.CfnComponent
  * .and(List.of(predicateProperty_))
  * .field("field")
  * .operand("operand")
+ * .operandType("operandType")
  * .operator("operator")
  * .or(List.of(predicateProperty_))
  * .build();
@@ -73,6 +74,11 @@ public class CfnComponentPredicatePropertyDsl {
     /** @param operand The value to use when performing the evaluation. */
     public fun operand(operand: String) {
         cdkBuilder.operand(operand)
+    }
+
+    /** @param operandType The type of value to use when performing the evaluation. */
+    public fun operandType(operandType: String) {
+        cdkBuilder.operandType(operandType)
     }
 
     /** @param operator The operator to use to perform the evaluation. */

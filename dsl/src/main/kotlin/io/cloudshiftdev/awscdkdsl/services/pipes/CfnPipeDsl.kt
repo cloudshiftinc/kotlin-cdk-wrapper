@@ -19,10 +19,16 @@ import software.amazon.awscdk.services.pipes.CfnPipe
 import software.constructs.Construct
 
 /**
- * Create a pipe.
+ * Specifies a pipe.
  *
  * Amazon EventBridge Pipes connect event sources to targets and reduces the need for specialized
  * knowledge and integration code.
+ *
+ * As an aid to help you jumpstart developing CloudFormation templates, the EventBridge console
+ * enables you to create templates from the existing pipes in your account. For more information,
+ * see
+ * [Generate an CloudFormation template from EventBridge Pipes](https://docs.aws.amazon.com/eventbridge/latest/userguide/pipes-generate-template.html)
+ * in the *Amazon EventBridge User Guide* .
  *
  * Example:
  * ```
@@ -46,6 +52,22 @@ import software.constructs.Construct
  * "queryStringParametersKey", "queryStringParameters"))
  * .build())
  * .inputTemplate("inputTemplate")
+ * .build())
+ * .logConfiguration(PipeLogConfigurationProperty.builder()
+ * .cloudwatchLogsLogDestination(CloudwatchLogsLogDestinationProperty.builder()
+ * .logGroupArn("logGroupArn")
+ * .build())
+ * .firehoseLogDestination(FirehoseLogDestinationProperty.builder()
+ * .deliveryStreamArn("deliveryStreamArn")
+ * .build())
+ * .includeExecutionData(List.of("includeExecutionData"))
+ * .level("level")
+ * .s3LogDestination(S3LogDestinationProperty.builder()
+ * .bucketName("bucketName")
+ * .bucketOwner("bucketOwner")
+ * .outputFormat("outputFormat")
+ * .prefix("prefix")
+ * .build())
  * .build())
  * .name("name")
  * .sourceParameters(PipeSourceParametersProperty.builder()
@@ -354,6 +376,28 @@ public class CfnPipeDsl(
         enrichmentParameters: CfnPipe.PipeEnrichmentParametersProperty
     ) {
         cdkBuilder.enrichmentParameters(enrichmentParameters)
+    }
+
+    /**
+     * The logging configuration settings for the pipe.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pipes-pipe.html#cfn-pipes-pipe-logconfiguration)
+     *
+     * @param logConfiguration The logging configuration settings for the pipe.
+     */
+    public fun logConfiguration(logConfiguration: IResolvable) {
+        cdkBuilder.logConfiguration(logConfiguration)
+    }
+
+    /**
+     * The logging configuration settings for the pipe.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pipes-pipe.html#cfn-pipes-pipe-logconfiguration)
+     *
+     * @param logConfiguration The logging configuration settings for the pipe.
+     */
+    public fun logConfiguration(logConfiguration: CfnPipe.PipeLogConfigurationProperty) {
+        cdkBuilder.logConfiguration(logConfiguration)
     }
 
     /**

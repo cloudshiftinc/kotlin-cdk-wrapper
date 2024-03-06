@@ -13,6 +13,7 @@ package io.cloudshiftdev.awscdkdsl.services.rolesanywhere
 
 import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -42,6 +43,13 @@ import software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchorProps
  * .build())
  * // the properties below are optional
  * .enabled(false)
+ * .notificationSettings(List.of(NotificationSettingProperty.builder()
+ * .enabled(false)
+ * .event("event")
+ * // the properties below are optional
+ * .channel("channel")
+ * .threshold(123)
+ * .build()))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -54,6 +62,8 @@ import software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchorProps
 @CdkDslMarker
 public class CfnTrustAnchorPropsDsl {
     private val cdkBuilder: CfnTrustAnchorProps.Builder = CfnTrustAnchorProps.builder()
+
+    private val _notificationSettings: MutableList<Any> = mutableListOf()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
@@ -70,6 +80,30 @@ public class CfnTrustAnchorPropsDsl {
     /** @param name The name of the trust anchor. */
     public fun name(name: String) {
         cdkBuilder.name(name)
+    }
+
+    /**
+     * @param notificationSettings A list of notification settings to be associated to the trust
+     *   anchor.
+     */
+    public fun notificationSettings(vararg notificationSettings: Any) {
+        _notificationSettings.addAll(listOf(*notificationSettings))
+    }
+
+    /**
+     * @param notificationSettings A list of notification settings to be associated to the trust
+     *   anchor.
+     */
+    public fun notificationSettings(notificationSettings: Collection<Any>) {
+        _notificationSettings.addAll(notificationSettings)
+    }
+
+    /**
+     * @param notificationSettings A list of notification settings to be associated to the trust
+     *   anchor.
+     */
+    public fun notificationSettings(notificationSettings: IResolvable) {
+        cdkBuilder.notificationSettings(notificationSettings)
     }
 
     /** @param source The trust anchor type and its related certificate data. */
@@ -93,6 +127,8 @@ public class CfnTrustAnchorPropsDsl {
     }
 
     public fun build(): CfnTrustAnchorProps {
+        if (_notificationSettings.isNotEmpty())
+            cdkBuilder.notificationSettings(_notificationSettings)
         if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
         return cdkBuilder.build()
     }

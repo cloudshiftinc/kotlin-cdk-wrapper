@@ -11,11 +11,15 @@
 
 package io.cloudshiftdev.awscdkdsl.services.iot
 
+import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import io.cloudshiftdev.awscdkdsl.common.MapBuilder
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iot.CfnPolicy
 import software.constructs.Construct
 
@@ -36,6 +40,10 @@ import software.constructs.Construct
  * .policyDocument(policyDocument)
  * // the properties below are optional
  * .policyName("policyName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -47,6 +55,8 @@ public class CfnPolicyDsl(
     id: String,
 ) {
     private val cdkBuilder: CfnPolicy.Builder = CfnPolicy.Builder.create(scope, id)
+
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
      * The JSON document that describes the policy.
@@ -83,5 +93,26 @@ public class CfnPolicyDsl(
         cdkBuilder.policyName(policyName)
     }
 
-    public fun build(): CfnPolicy = cdkBuilder.build()
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-policy.html#cfn-iot-policy-tags)
+     *
+     * @param tags
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-policy.html#cfn-iot-policy-tags)
+     *
+     * @param tags
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
+
+    public fun build(): CfnPolicy {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

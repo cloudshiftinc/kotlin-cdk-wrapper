@@ -28,6 +28,15 @@ public inline fun CfnKeyspace.setReplicationSpecification(
     return setReplicationSpecification(builder.build())
 }
 
+/** The optional auto scaling capacity settings for a table in provisioned capacity mode. */
+public inline fun CfnTable.setAutoScalingSpecifications(
+    block: CfnTableAutoScalingSpecificationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnTableAutoScalingSpecificationPropertyDsl()
+    builder.apply(block)
+    return setAutoScalingSpecifications(builder.build())
+}
+
 /** The billing mode for the table, which determines how you'll be charged for reads and writes:. */
 public inline fun CfnTable.setBillingMode(block: CfnTableBillingModePropertyDsl.() -> Unit = {}) {
     val builder = CfnTableBillingModePropertyDsl()

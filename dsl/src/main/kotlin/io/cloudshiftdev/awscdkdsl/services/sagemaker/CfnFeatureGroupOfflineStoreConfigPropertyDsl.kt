@@ -108,8 +108,8 @@ public class CfnFeatureGroupOfflineStoreConfigPropertyDsl {
     }
 
     /**
-     * @param tableFormat Format for the offline store feature group. Iceberg is the optimal format
-     *   for feature groups shared between offline and online stores.
+     * @param tableFormat Format for the offline store table. Supported formats are Glue (Default)
+     *   and [Apache Iceberg](https://docs.aws.amazon.com/https://iceberg.apache.org/) .
      */
     public fun tableFormat(tableFormat: String) {
         cdkBuilder.tableFormat(tableFormat)

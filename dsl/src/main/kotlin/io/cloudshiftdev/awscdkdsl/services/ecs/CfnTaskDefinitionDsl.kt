@@ -60,6 +60,7 @@ import software.constructs.Construct
  * // the properties below are optional
  * .command(List.of("command"))
  * .cpu(123)
+ * .credentialSpecs(List.of("credentialSpecs"))
  * .dependsOn(List.of(ContainerDependencyProperty.builder()
  * .condition("condition")
  * .containerName("containerName")
@@ -216,6 +217,7 @@ import software.constructs.Construct
  * .build()))
  * .taskRoleArn("taskRoleArn")
  * .volumes(List.of(VolumeProperty.builder()
+ * .configuredAtLaunch(false)
  * .dockerVolumeConfiguration(DockerVolumeConfigurationProperty.builder()
  * .autoprovision(false)
  * .driver("driver")

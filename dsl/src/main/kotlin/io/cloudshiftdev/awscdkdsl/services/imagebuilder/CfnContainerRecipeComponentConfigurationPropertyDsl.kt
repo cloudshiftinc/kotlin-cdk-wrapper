@@ -52,24 +52,24 @@ public class CfnContainerRecipeComponentConfigurationPropertyDsl {
     }
 
     /**
-     * @param parameters A group of parameter settings that are used to configure the component for
-     *   a specific recipe.
+     * @param parameters A group of parameter settings that Image Builder uses to configure the
+     *   component for a specific recipe.
      */
     public fun parameters(vararg parameters: Any) {
         _parameters.addAll(listOf(*parameters))
     }
 
     /**
-     * @param parameters A group of parameter settings that are used to configure the component for
-     *   a specific recipe.
+     * @param parameters A group of parameter settings that Image Builder uses to configure the
+     *   component for a specific recipe.
      */
     public fun parameters(parameters: Collection<Any>) {
         _parameters.addAll(parameters)
     }
 
     /**
-     * @param parameters A group of parameter settings that are used to configure the component for
-     *   a specific recipe.
+     * @param parameters A group of parameter settings that Image Builder uses to configure the
+     *   component for a specific recipe.
      */
     public fun parameters(parameters: IResolvable) {
         cdkBuilder.parameters(parameters)

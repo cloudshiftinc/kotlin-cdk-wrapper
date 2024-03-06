@@ -42,7 +42,7 @@ import software.constructs.Construct
  * EvaluateExpression createMessage = EvaluateExpression.Builder.create(this, "Create message")
  * // Note: this is a string inside a string.
  * .expression("`Now waiting ${$.waitSeconds} seconds...`")
- * .runtime(Runtime.NODEJS_16_X)
+ * .runtime(Runtime.NODEJS_LATEST)
  * .resultPath("$.message")
  * .build();
  * SnsPublish publishMessage = SnsPublish.Builder.create(this, "Publish message")
@@ -167,13 +167,15 @@ public class EvaluateExpressionDsl(
     /**
      * AWS Step Functions integrates with services directly in the Amazon States Language.
      *
-     * You can control these AWS services using service integration patterns
+     * You can control these AWS services using service integration patterns.
+     *
+     * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      *
      * Default: - `IntegrationPattern.REQUEST_RESPONSE` for most tasks. `IntegrationPattern.RUN_JOB`
      * for the following exceptions: `BatchSubmitJob`, `EmrAddStep`, `EmrCreateCluster`,
      * `EmrTerminationCluster`, and `EmrContainersStartJobRun`.
      *
-     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html#connect-wait-token)
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-supported-services.html)
      *
      * @param integrationPattern AWS Step Functions integrates with services directly in the Amazon
      *   States Language.
@@ -253,12 +255,23 @@ public class EvaluateExpressionDsl(
     /**
      * The runtime language to use to evaluate the expression.
      *
-     * Default: lambda.Runtime.NODEJS_16_X
+     * Default: lambda.Runtime.NODEJS_18_X
      *
      * @param runtime The runtime language to use to evaluate the expression.
      */
     public fun runtime(runtime: Runtime) {
         cdkBuilder.runtime(runtime)
+    }
+
+    /**
+     * Optional name for this state.
+     *
+     * Default: - The construct ID will be used as state name
+     *
+     * @param stateName Optional name for this state.
+     */
+    public fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
     }
 
     /**

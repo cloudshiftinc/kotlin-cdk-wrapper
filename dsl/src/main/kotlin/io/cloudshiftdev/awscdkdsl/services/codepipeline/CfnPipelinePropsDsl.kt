@@ -90,11 +90,52 @@ import software.amazon.awscdk.services.codepipeline.CfnPipelineProps
  * .reason("reason")
  * .stageName("stageName")
  * .build()))
+ * .executionMode("executionMode")
  * .name("name")
+ * .pipelineType("pipelineType")
  * .restartExecutionOnUpdate(false)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
+ * .build()))
+ * .triggers(List.of(PipelineTriggerDeclarationProperty.builder()
+ * .providerType("providerType")
+ * // the properties below are optional
+ * .gitConfiguration(GitConfigurationProperty.builder()
+ * .sourceActionName("sourceActionName")
+ * // the properties below are optional
+ * .pullRequest(List.of(GitPullRequestFilterProperty.builder()
+ * .branches(GitBranchFilterCriteriaProperty.builder()
+ * .excludes(List.of("excludes"))
+ * .includes(List.of("includes"))
+ * .build())
+ * .events(List.of("events"))
+ * .filePaths(GitFilePathFilterCriteriaProperty.builder()
+ * .excludes(List.of("excludes"))
+ * .includes(List.of("includes"))
+ * .build())
+ * .build()))
+ * .push(List.of(GitPushFilterProperty.builder()
+ * .branches(GitBranchFilterCriteriaProperty.builder()
+ * .excludes(List.of("excludes"))
+ * .includes(List.of("includes"))
+ * .build())
+ * .filePaths(GitFilePathFilterCriteriaProperty.builder()
+ * .excludes(List.of("excludes"))
+ * .includes(List.of("includes"))
+ * .build())
+ * .tags(GitTagFilterCriteriaProperty.builder()
+ * .excludes(List.of("excludes"))
+ * .includes(List.of("includes"))
+ * .build())
+ * .build()))
+ * .build())
+ * .build()))
+ * .variables(List.of(VariableDeclarationProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .defaultValue("defaultValue")
+ * .description("description")
  * .build()))
  * .build();
  * ```
@@ -112,6 +153,10 @@ public class CfnPipelinePropsDsl {
     private val _stages: MutableList<Any> = mutableListOf()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
+
+    private val _triggers: MutableList<Any> = mutableListOf()
+
+    private val _variables: MutableList<Any> = mutableListOf()
 
     /**
      * @param artifactStore The S3 bucket where artifacts for the pipeline are stored.
@@ -198,9 +243,41 @@ public class CfnPipelinePropsDsl {
         cdkBuilder.disableInboundStageTransitions(disableInboundStageTransitions)
     }
 
+    /**
+     * @param executionMode The method that the pipeline will use to handle multiple executions. The
+     *   default mode is SUPERSEDED.
+     */
+    public fun executionMode(executionMode: String) {
+        cdkBuilder.executionMode(executionMode)
+    }
+
     /** @param name The name of the pipeline. */
     public fun name(name: String) {
         cdkBuilder.name(name)
+    }
+
+    /**
+     * @param pipelineType CodePipeline provides the following pipeline types, which differ in
+     *   characteristics and price, so that you can tailor your pipeline features and cost to the
+     *   needs of your applications.
+     * * V1 type pipelines have a JSON structure that contains standard pipeline, stage, and
+     *   action-level parameters.
+     * * V2 type pipelines have the same structure as a V1 type, along with additional parameters
+     *   for release safety and trigger configuration.
+     *
+     * Including V2 parameters, such as triggers on Git tags, in the pipeline JSON when creating or
+     * updating a pipeline will result in the pipeline having the V2 type of pipeline and the
+     * associated costs.
+     *
+     * For information about pricing for CodePipeline, see
+     * [Pricing](https://docs.aws.amazon.com/codepipeline/pricing/) .
+     *
+     * For information about which type of pipeline to choose, see
+     * [What type of pipeline is right for me?](https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html)
+     * .
+     */
+    public fun pipelineType(pipelineType: String) {
+        cdkBuilder.pipelineType(pipelineType)
     }
 
     /**
@@ -253,12 +330,74 @@ public class CfnPipelinePropsDsl {
         _tags.addAll(tags)
     }
 
+    /**
+     * @param triggers The trigger configuration specifying a type of event, such as Git tags, that
+     *   starts the pipeline.
+     *
+     * When a trigger configuration is specified, default change detection for repository and branch
+     * commits is disabled.
+     */
+    public fun triggers(vararg triggers: Any) {
+        _triggers.addAll(listOf(*triggers))
+    }
+
+    /**
+     * @param triggers The trigger configuration specifying a type of event, such as Git tags, that
+     *   starts the pipeline.
+     *
+     * When a trigger configuration is specified, default change detection for repository and branch
+     * commits is disabled.
+     */
+    public fun triggers(triggers: Collection<Any>) {
+        _triggers.addAll(triggers)
+    }
+
+    /**
+     * @param triggers The trigger configuration specifying a type of event, such as Git tags, that
+     *   starts the pipeline.
+     *
+     * When a trigger configuration is specified, default change detection for repository and branch
+     * commits is disabled.
+     */
+    public fun triggers(triggers: IResolvable) {
+        cdkBuilder.triggers(triggers)
+    }
+
+    /**
+     * @param variables A list that defines the pipeline variables for a pipeline resource. Variable
+     *   names can have alphanumeric and underscore characters, and the values must match
+     *   `[A-Za-z0-9&#64;\-_]+` .
+     */
+    public fun variables(vararg variables: Any) {
+        _variables.addAll(listOf(*variables))
+    }
+
+    /**
+     * @param variables A list that defines the pipeline variables for a pipeline resource. Variable
+     *   names can have alphanumeric and underscore characters, and the values must match
+     *   `[A-Za-z0-9&#64;\-_]+` .
+     */
+    public fun variables(variables: Collection<Any>) {
+        _variables.addAll(variables)
+    }
+
+    /**
+     * @param variables A list that defines the pipeline variables for a pipeline resource. Variable
+     *   names can have alphanumeric and underscore characters, and the values must match
+     *   `[A-Za-z0-9&#64;\-_]+` .
+     */
+    public fun variables(variables: IResolvable) {
+        cdkBuilder.variables(variables)
+    }
+
     public fun build(): CfnPipelineProps {
         if (_artifactStores.isNotEmpty()) cdkBuilder.artifactStores(_artifactStores)
         if (_disableInboundStageTransitions.isNotEmpty())
             cdkBuilder.disableInboundStageTransitions(_disableInboundStageTransitions)
         if (_stages.isNotEmpty()) cdkBuilder.stages(_stages)
         if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        if (_triggers.isNotEmpty()) cdkBuilder.triggers(_triggers)
+        if (_variables.isNotEmpty()) cdkBuilder.variables(_variables)
         return cdkBuilder.build()
     }
 }

@@ -23,11 +23,14 @@ import software.amazon.awscdk.services.lambda.InvokeMode
  *
  * Example:
  * ```
+ * // Can be a Function or an Alias
  * Function fn;
- * fn.addFunctionUrl(FunctionUrlOptions.builder()
+ * FunctionUrl fnUrl = fn.addFunctionUrl(FunctionUrlOptions.builder()
  * .authType(FunctionUrlAuthType.NONE)
- * .invokeMode(InvokeMode.RESPONSE_STREAM)
  * .build());
+ * CfnOutput.Builder.create(this, "TheUrl")
+ * .value(fnUrl.getUrl())
+ * .build();
  * ```
  */
 @CdkDslMarker

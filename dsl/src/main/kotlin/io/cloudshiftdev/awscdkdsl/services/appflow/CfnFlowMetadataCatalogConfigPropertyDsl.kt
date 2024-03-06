@@ -16,7 +16,9 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appflow.CfnFlow
 
 /**
- * Configurations of metadata catalog of the flow.
+ * Specifies the configuration that Amazon AppFlow uses when it catalogs your data.
+ *
+ * When Amazon AppFlow catalogs your data, it stores metadata in a data catalog.
  *
  * Example:
  * ```
@@ -40,12 +42,18 @@ public class CfnFlowMetadataCatalogConfigPropertyDsl {
     private val cdkBuilder: CfnFlow.MetadataCatalogConfigProperty.Builder =
         CfnFlow.MetadataCatalogConfigProperty.builder()
 
-    /** @param glueDataCatalog Trigger settings of the flow. */
+    /**
+     * @param glueDataCatalog Specifies the configuration that Amazon AppFlow uses when it catalogs
+     *   your data with the AWS Glue Data Catalog .
+     */
     public fun glueDataCatalog(glueDataCatalog: IResolvable) {
         cdkBuilder.glueDataCatalog(glueDataCatalog)
     }
 
-    /** @param glueDataCatalog Trigger settings of the flow. */
+    /**
+     * @param glueDataCatalog Specifies the configuration that Amazon AppFlow uses when it catalogs
+     *   your data with the AWS Glue Data Catalog .
+     */
     public fun glueDataCatalog(glueDataCatalog: CfnFlow.GlueDataCatalogProperty) {
         cdkBuilder.glueDataCatalog(glueDataCatalog)
     }

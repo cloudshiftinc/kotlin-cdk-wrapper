@@ -18,8 +18,6 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.config.CfnRemediationConfiguration
 
 /**
- * The static value of the resource.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -52,12 +50,12 @@ public class CfnRemediationConfigurationStaticValuePropertyDsl {
         _value.addAll(`value`)
     }
 
-    /** @param values A list of values. For example, the ARN of the assumed role. */
+    /** @param values the value to be set. */
     public fun values(vararg values: String) {
         _values.addAll(listOf(*values))
     }
 
-    /** @param values A list of values. For example, the ARN of the assumed role. */
+    /** @param values the value to be set. */
     public fun values(values: Collection<String>) {
         _values.addAll(values)
     }

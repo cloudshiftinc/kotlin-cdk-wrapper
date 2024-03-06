@@ -96,24 +96,31 @@ public class CfnLocationS3PropsDsl {
     }
 
     /**
-     * @param subdirectory A subdirectory in the Amazon S3 bucket. This subdirectory in Amazon S3 is
-     *   used to read data from the S3 source location or write data to the S3 destination.
+     * @param subdirectory Specifies a prefix in the S3 bucket that DataSync reads from or writes to
+     *   (depending on whether the bucket is a source or destination location).
+     *
+     * DataSync can't transfer objects with a prefix that begins with a slash ( `/` ) or includes
+     * `//` , `/./` , or `/../` patterns. For example:
+     * * `/photos`
+     * * `photos//2006/January`
+     * * `photos/./2006/February`
+     * * `photos/../2006/March`
      */
     public fun subdirectory(subdirectory: String) {
         cdkBuilder.subdirectory(subdirectory)
     }
 
     /**
-     * @param tags The key-value pair that represents the tag that you want to add to the location.
-     *   The value can be an empty string. We recommend using tags to name your resources.
+     * @param tags Specifies labels that help you categorize, filter, and search for your AWS
+     *   resources. We recommend creating at least a name tag for your transfer location.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
     /**
-     * @param tags The key-value pair that represents the tag that you want to add to the location.
-     *   The value can be an empty string. We recommend using tags to name your resources.
+     * @param tags Specifies labels that help you categorize, filter, and search for your AWS
+     *   resources. We recommend creating at least a name tag for your transfer location.
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)

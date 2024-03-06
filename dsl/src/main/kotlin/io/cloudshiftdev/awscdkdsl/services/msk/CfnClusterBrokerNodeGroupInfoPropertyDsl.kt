@@ -125,7 +125,7 @@ public class CfnClusterBrokerNodeGroupInfoPropertyDsl {
     /**
      * @param instanceType The type of Amazon EC2 instances to use for brokers. The following
      *   instance types are allowed: kafka.m5.large, kafka.m5.xlarge, kafka.m5.2xlarge,
-     *   kafka.m5.4xlarge, kafka.m5.8xlarge, kafka.m5.12xlarge, kafka.m5.16xlarge, and
+     *   kafka.m5.4xlarge, kafka.m5.8xlarge, kafka.m5.12xlarge, kafka.m5.16xlarge,
      *   kafka.m5.24xlarge, and kafka.t3.small.
      */
     public fun instanceType(instanceType: String) {

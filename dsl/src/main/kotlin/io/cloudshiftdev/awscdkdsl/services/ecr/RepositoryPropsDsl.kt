@@ -13,6 +13,7 @@ package io.cloudshiftdev.awscdkdsl.services.ecr
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -40,9 +41,19 @@ public class RepositoryPropsDsl {
      * @param autoDeleteImages Whether all images should be automatically deleted when the
      *   repository is removed from the stack or when the stack is deleted. Requires the
      *   `removalPolicy` to be set to `RemovalPolicy.DESTROY`.
+     * @deprecated Use `emptyOnDelete` instead.
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun autoDeleteImages(autoDeleteImages: Boolean) {
         cdkBuilder.autoDeleteImages(autoDeleteImages)
+    }
+
+    /**
+     * @param emptyOnDelete If true, deleting the repository force deletes the contents of the
+     *   repository. If false, the repository must be empty before attempting to delete it.
+     */
+    public fun emptyOnDelete(emptyOnDelete: Boolean) {
+        cdkBuilder.emptyOnDelete(emptyOnDelete)
     }
 
     /**
@@ -103,7 +114,14 @@ public class RepositoryPropsDsl {
         cdkBuilder.removalPolicy(removalPolicy)
     }
 
-    /** @param repositoryName Name for this repository. */
+    /**
+     * @param repositoryName Name for this repository. The repository name must start with a letter
+     *   and can only contain lowercase letters, numbers, hyphens, underscores, and forward slashes.
+     *
+     * If you specify a name, you cannot perform updates that require replacement of this resource.
+     * You can perform updates that require no or some interruption. If you must replace the
+     * resource, specify a new name.
+     */
     public fun repositoryName(repositoryName: String) {
         cdkBuilder.repositoryName(repositoryName)
     }

@@ -19,7 +19,10 @@ import kotlin.collections.Collection
 import kotlin.collections.Map
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.codepipeline.PipelineProps
+import software.amazon.awscdk.services.codepipeline.PipelineType
 import software.amazon.awscdk.services.codepipeline.StageProps
+import software.amazon.awscdk.services.codepipeline.TriggerProps
+import software.amazon.awscdk.services.codepipeline.Variable
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.s3.IBucket
 
@@ -61,6 +64,10 @@ public class PipelinePropsDsl {
     private val cdkBuilder: PipelineProps.Builder = PipelineProps.builder()
 
     private val _stages: MutableList<StageProps> = mutableListOf()
+
+    private val _triggers: MutableList<TriggerProps> = mutableListOf()
+
+    private val _variables: MutableList<Variable> = mutableListOf()
 
     /** @param artifactBucket The S3 bucket used by this Pipeline to store artifacts. */
     public fun artifactBucket(artifactBucket: IBucket) {
@@ -107,6 +114,11 @@ public class PipelinePropsDsl {
         cdkBuilder.pipelineName(pipelineName)
     }
 
+    /** @param pipelineType Type of the pipeline. */
+    public fun pipelineType(pipelineType: PipelineType) {
+        cdkBuilder.pipelineType(pipelineType)
+    }
+
     /**
      * @param restartExecutionOnUpdate Indicates whether to rerun the AWS CodePipeline pipeline
      *   after you update it.
@@ -144,8 +156,52 @@ public class PipelinePropsDsl {
         _stages.addAll(stages)
     }
 
+    /**
+     * @param triggers The trigger configuration specifying a type of event, such as Git tags, that
+     *   starts the pipeline. When a trigger configuration is specified, default change detection
+     *   for repository and branch commits is disabled.
+     *
+     * `triggers` can only be used when `pipelineType` is set to `PipelineType.V2`. You can always
+     * add more triggers later by calling `Pipeline#addTrigger`.
+     */
+    public fun triggers(triggers: TriggerPropsDsl.() -> Unit) {
+        _triggers.add(TriggerPropsDsl().apply(triggers).build())
+    }
+
+    /**
+     * @param triggers The trigger configuration specifying a type of event, such as Git tags, that
+     *   starts the pipeline. When a trigger configuration is specified, default change detection
+     *   for repository and branch commits is disabled.
+     *
+     * `triggers` can only be used when `pipelineType` is set to `PipelineType.V2`. You can always
+     * add more triggers later by calling `Pipeline#addTrigger`.
+     */
+    public fun triggers(triggers: Collection<TriggerProps>) {
+        _triggers.addAll(triggers)
+    }
+
+    /**
+     * @param variables A list that defines the pipeline variables for a pipeline resource.
+     *   `variables` can only be used when `pipelineType` is set to `PipelineType.V2`. You can
+     *   always add more variables later by calling `Pipeline#addVariable`.
+     */
+    public fun variables(variables: VariableDsl.() -> Unit) {
+        _variables.add(VariableDsl().apply(variables).build())
+    }
+
+    /**
+     * @param variables A list that defines the pipeline variables for a pipeline resource.
+     *   `variables` can only be used when `pipelineType` is set to `PipelineType.V2`. You can
+     *   always add more variables later by calling `Pipeline#addVariable`.
+     */
+    public fun variables(variables: Collection<Variable>) {
+        _variables.addAll(variables)
+    }
+
     public fun build(): PipelineProps {
         if (_stages.isNotEmpty()) cdkBuilder.stages(_stages)
+        if (_triggers.isNotEmpty()) cdkBuilder.triggers(_triggers)
+        if (_variables.isNotEmpty()) cdkBuilder.variables(_variables)
         return cdkBuilder.build()
     }
 }

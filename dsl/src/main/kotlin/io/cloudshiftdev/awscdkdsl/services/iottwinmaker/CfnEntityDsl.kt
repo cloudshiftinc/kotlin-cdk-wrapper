@@ -69,6 +69,38 @@ import software.constructs.Construct
  * .state("state")
  * .build())
  * .build()))
+ * .compositeComponents(Map.of(
+ * "compositeComponentsKey", CompositeComponentProperty.builder()
+ * .componentName("componentName")
+ * .componentPath("componentPath")
+ * .componentTypeId("componentTypeId")
+ * .description("description")
+ * .properties(Map.of(
+ * "propertiesKey", PropertyProperty.builder()
+ * .definition(definition)
+ * .value(DataValueProperty.builder()
+ * .booleanValue(false)
+ * .doubleValue(123)
+ * .expression("expression")
+ * .integerValue(123)
+ * .listValue(List.of(dataValueProperty_))
+ * .longValue(123)
+ * .mapValue(Map.of(
+ * "mapValueKey", dataValueProperty_))
+ * .relationshipValue(relationshipValue)
+ * .stringValue("stringValue")
+ * .build())
+ * .build()))
+ * .propertyGroups(Map.of(
+ * "propertyGroupsKey", PropertyGroupProperty.builder()
+ * .groupType("groupType")
+ * .propertyNames(List.of("propertyNames"))
+ * .build()))
+ * .status(StatusProperty.builder()
+ * .error(error)
+ * .state("state")
+ * .build())
+ * .build()))
  * .description("description")
  * .entityId("entityId")
  * .parentEntityId("parentEntityId")
@@ -140,6 +172,47 @@ public class CfnEntityDsl(
     }
 
     /**
+     * Maps string to `compositeComponent` updates in the request.
+     *
+     * Each key of the map represents the `componentPath` of the `compositeComponent` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-entity.html#cfn-iottwinmaker-entity-compositecomponents)
+     *
+     * @param compositeComponents Maps string to `compositeComponent` updates in the request.
+     */
+    public fun compositeComponents(compositeComponents: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(compositeComponents)
+        cdkBuilder.compositeComponents(builder.map)
+    }
+
+    /**
+     * Maps string to `compositeComponent` updates in the request.
+     *
+     * Each key of the map represents the `componentPath` of the `compositeComponent` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-entity.html#cfn-iottwinmaker-entity-compositecomponents)
+     *
+     * @param compositeComponents Maps string to `compositeComponent` updates in the request.
+     */
+    public fun compositeComponents(compositeComponents: Map<String, Any>) {
+        cdkBuilder.compositeComponents(compositeComponents)
+    }
+
+    /**
+     * Maps string to `compositeComponent` updates in the request.
+     *
+     * Each key of the map represents the `componentPath` of the `compositeComponent` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-entity.html#cfn-iottwinmaker-entity-compositecomponents)
+     *
+     * @param compositeComponents Maps string to `compositeComponent` updates in the request.
+     */
+    public fun compositeComponents(compositeComponents: IResolvable) {
+        cdkBuilder.compositeComponents(compositeComponents)
+    }
+
+    /**
      * The description of the entity.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-entity.html#cfn-iottwinmaker-entity-description)
@@ -151,11 +224,11 @@ public class CfnEntityDsl(
     }
 
     /**
-     * The entity ID.
+     * The ID of the entity.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-entity.html#cfn-iottwinmaker-entity-entityid)
      *
-     * @param entityId The entity ID.
+     * @param entityId The ID of the entity.
      */
     public fun entityId(entityId: String) {
         cdkBuilder.entityId(entityId)
@@ -195,11 +268,11 @@ public class CfnEntityDsl(
     }
 
     /**
-     * The ID of the workspace.
+     * The ID of the workspace that contains the entity.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-entity.html#cfn-iottwinmaker-entity-workspaceid)
      *
-     * @param workspaceId The ID of the workspace.
+     * @param workspaceId The ID of the workspace that contains the entity.
      */
     public fun workspaceId(workspaceId: String) {
         cdkBuilder.workspaceId(workspaceId)

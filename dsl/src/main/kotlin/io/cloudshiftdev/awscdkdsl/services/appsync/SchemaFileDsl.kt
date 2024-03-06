@@ -22,19 +22,36 @@ import software.amazon.awscdk.services.appsync.SchemaFile
  *
  * Example:
  * ```
- * import software.amazon.awscdk.services.events.*;
- * GraphqlApi api = GraphqlApi.Builder.create(this, "EventBridgeApi")
- * .name("EventBridgeApi")
- * .schema(SchemaFile.fromAsset(join(__dirname, "appsync.eventbridge.graphql")))
+ * import software.amazon.awscdk.services.certificatemanager.*;
+ * import software.amazon.awscdk.services.route53.*;
+ * // hosted zone and route53 features
+ * String hostedZoneId;
+ * String zoneName = "example.com";
+ * String myDomainName = "api.example.com";
+ * Certificate certificate = Certificate.Builder.create(this,
+ * "cert").domainName(myDomainName).build();
+ * SchemaFile schema = SchemaFile.Builder.create().filePath("mySchemaFile").build();
+ * GraphqlApi api = GraphqlApi.Builder.create(this, "api")
+ * .name("myApi")
+ * .definition(Definition.fromSchema(schema))
+ * .domainName(DomainOptions.builder()
+ * .certificate(certificate)
+ * .domainName(myDomainName)
+ * .build())
  * .build();
- * EventBus bus = EventBus.Builder.create(this, "DestinationEventBus").build();
- * EventBridgeDataSource dataSource = api.addEventBridgeDataSource("NoneDS", bus);
- * dataSource.createResolver("EventResolver", BaseResolverProps.builder()
- * .typeName("Mutation")
- * .fieldName("emitEvent")
- * .requestMappingTemplate(MappingTemplate.fromFile("request.vtl"))
- * .responseMappingTemplate(MappingTemplate.fromFile("response.vtl"))
+ * // hosted zone for adding appsync domain
+ * IHostedZone zone = HostedZone.fromHostedZoneAttributes(this, "HostedZone",
+ * HostedZoneAttributes.builder()
+ * .hostedZoneId(hostedZoneId)
+ * .zoneName(zoneName)
  * .build());
+ * // create a cname to the appsync domain. will map to something like xxxx.cloudfront.net
+ * // create a cname to the appsync domain. will map to something like xxxx.cloudfront.net
+ * CnameRecord.Builder.create(this, "CnameApiRecord")
+ * .recordName("api")
+ * .zone(zone)
+ * .domainName(api.getAppSyncDomainName())
+ * .build();
  * ```
  */
 @CdkDslMarker

@@ -11,7 +11,6 @@
 
 package io.cloudshiftdev.awscdkdsl.services.guardduty
 
-import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Any
 import kotlin.Boolean
@@ -19,7 +18,6 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
-import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.guardduty.CfnDetector
 import software.amazon.awscdk.services.guardduty.CfnDetectorProps
@@ -50,16 +48,17 @@ import software.amazon.awscdk.services.guardduty.CfnDetectorProps
  * .enable(false)
  * .build())
  * .build())
- * .features(List.of(FeatureConfigurationsProperty.builder()
- * .additionalConfiguration(List.of(FeatureAdditionalConfigurationProperty.builder()
+ * .features(List.of(CFNFeatureConfigurationProperty.builder()
+ * .name("name")
+ * .status("status")
+ * // the properties below are optional
+ * .additionalConfiguration(List.of(CFNFeatureAdditionalConfigurationProperty.builder()
  * .name("name")
  * .status("status")
  * .build()))
- * .name("name")
- * .status("status")
  * .build()))
  * .findingPublishingFrequency("findingPublishingFrequency")
- * .tags(List.of(CfnTag.builder()
+ * .tags(List.of(TagItemProperty.builder()
  * .key("key")
  * .value("value")
  * .build()))
@@ -74,7 +73,7 @@ public class CfnDetectorPropsDsl {
 
     private val _features: MutableList<Any> = mutableListOf()
 
-    private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnDetector.TagItemProperty> = mutableListOf()
 
     /** @param dataSources Describes which data sources will be enabled for the detector. */
     public fun dataSources(dataSources: IResolvable) {
@@ -127,8 +126,8 @@ public class CfnDetectorPropsDsl {
      * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
      * .
      */
-    public fun tags(tags: CfnTagDsl.() -> Unit) {
-        _tags.add(CfnTagDsl().apply(tags).build())
+    public fun tags(tags: CfnDetectorTagItemPropertyDsl.() -> Unit) {
+        _tags.add(CfnDetectorTagItemPropertyDsl().apply(tags).build())
     }
 
     /**
@@ -142,7 +141,7 @@ public class CfnDetectorPropsDsl {
      * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
      * .
      */
-    public fun tags(tags: Collection<CfnTag>) {
+    public fun tags(tags: Collection<CfnDetector.TagItemProperty>) {
         _tags.addAll(tags)
     }
 

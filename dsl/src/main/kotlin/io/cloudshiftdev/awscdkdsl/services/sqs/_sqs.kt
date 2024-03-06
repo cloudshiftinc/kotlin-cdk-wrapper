@@ -25,6 +25,7 @@ import software.amazon.awscdk.services.sqs.QueueAttributes
 import software.amazon.awscdk.services.sqs.QueuePolicy
 import software.amazon.awscdk.services.sqs.QueuePolicyProps
 import software.amazon.awscdk.services.sqs.QueueProps
+import software.amazon.awscdk.services.sqs.RedriveAllowPolicy
 import software.constructs.Construct
 
 public object sqs {
@@ -270,15 +271,15 @@ public object sqs {
      *
      * Example:
      * ```
-     * // An sqs queue for unsuccessful invocations of a lambda function
-     * import software.amazon.awscdk.services.sqs.*;
-     * Queue deadLetterQueue = new Queue(this, "DeadLetterQueue");
-     * Function myFn = Function.Builder.create(this, "Fn")
-     * .runtime(Runtime.NODEJS_14_X)
-     * .handler("index.handler")
-     * .code(Code.fromInline("// your code"))
-     * // sqs queue for unsuccessful invocations
-     * .onFailure(new SqsDestination(deadLetterQueue))
+     * Queue sourceQueue;
+     * Queue targetQueue;
+     * SqsTarget pipeTarget = SqsTarget.Builder.create(targetQueue)
+     * .inputTransformation(InputTransformation.fromObject(Map.of(
+     * "SomeKey", DynamicInput.fromEventPath("$.body"))))
+     * .build();
+     * Pipe pipe = Pipe.Builder.create(this, "Pipe")
+     * .source(new SomeSource(sourceQueue))
+     * .target(pipeTarget)
      * .build();
      * ```
      */
@@ -392,6 +393,34 @@ public object sqs {
      */
     public inline fun queueProps(block: QueuePropsDsl.() -> Unit = {}): QueueProps {
         val builder = QueuePropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Permission settings for the dead letter source queue.
+     *
+     * Example:
+     * ```
+     * IQueue sourceQueue;
+     * // Only the sourceQueue can specify this queue as the dead-letter queue.
+     * Queue queue1 = Queue.Builder.create(this, "Queue2")
+     * .redriveAllowPolicy(RedriveAllowPolicy.builder()
+     * .sourceQueues(List.of(sourceQueue))
+     * .build())
+     * .build();
+     * // No source queues can specify this queue as the dead-letter queue.
+     * Queue queue2 = Queue.Builder.create(this, "Queue")
+     * .redriveAllowPolicy(RedriveAllowPolicy.builder()
+     * .redrivePermission(RedrivePermission.DENY_ALL)
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun redriveAllowPolicy(
+        block: RedriveAllowPolicyDsl.() -> Unit = {}
+    ): RedriveAllowPolicy {
+        val builder = RedriveAllowPolicyDsl()
         builder.apply(block)
         return builder.build()
     }

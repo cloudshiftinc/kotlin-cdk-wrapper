@@ -24,8 +24,9 @@ import software.constructs.Construct
 /**
  * Creates a notification rule for a resource.
  *
- * The rule specifies the events you want notifications about and the targets (such as AWS Chatbot
- * topics or AWS Chatbot clients configured for Slack) where you want to receive them.
+ * The rule specifies the events you want notifications about and the targets (such as Amazon Simple
+ * Notification Service topics or AWS Chatbot clients configured for Slack) where you want to
+ * receive them.
  *
  * Example:
  * ```
@@ -67,9 +68,11 @@ public class CfnNotificationRuleDsl(
     private val _targets: MutableList<Any> = mutableListOf()
 
     /**
+     * The name or email alias of the person who created the notification rule.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-createdby)
      *
-     * @param createdBy
+     * @param createdBy The name or email alias of the person who created the notification rule.
      */
     public fun createdBy(createdBy: String) {
         cdkBuilder.createdBy(createdBy)
@@ -91,9 +94,15 @@ public class CfnNotificationRuleDsl(
     }
 
     /**
+     * The event type associated with this notification rule.
+     *
+     * For a complete list of event types and IDs, see
+     * [Notification concepts](https://docs.aws.amazon.com/dtconsole/latest/userguide/concepts.html#concepts-api)
+     * in the *Developer Tools Console User Guide* .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-eventtypeid)
      *
-     * @param eventTypeId
+     * @param eventTypeId The event type associated with this notification rule.
      */
     public fun eventTypeId(eventTypeId: String) {
         cdkBuilder.eventTypeId(eventTypeId)
@@ -185,48 +194,51 @@ public class CfnNotificationRuleDsl(
     }
 
     /**
+     * The Amazon Resource Name (ARN) of the Amazon SNS topic or AWS Chatbot client.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-targetaddress)
      *
-     * @param targetAddress
+     * @param targetAddress The Amazon Resource Name (ARN) of the Amazon SNS topic or AWS Chatbot
+     *   client.
      */
     public fun targetAddress(targetAddress: String) {
         cdkBuilder.targetAddress(targetAddress)
     }
 
     /**
-     * A list of Amazon Resource Names (ARNs) of Amazon Simple Notification Service topics and AWS
-     * Chatbot clients to associate with the notification rule.
+     * A list of Amazon Resource Names (ARNs) of Amazon SNS topics and AWS Chatbot clients to
+     * associate with the notification rule.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-targets)
      *
-     * @param targets A list of Amazon Resource Names (ARNs) of Amazon Simple Notification Service
-     *   topics and AWS Chatbot clients to associate with the notification rule.
+     * @param targets A list of Amazon Resource Names (ARNs) of Amazon SNS topics and AWS Chatbot
+     *   clients to associate with the notification rule.
      */
     public fun targets(vararg targets: Any) {
         _targets.addAll(listOf(*targets))
     }
 
     /**
-     * A list of Amazon Resource Names (ARNs) of Amazon Simple Notification Service topics and AWS
-     * Chatbot clients to associate with the notification rule.
+     * A list of Amazon Resource Names (ARNs) of Amazon SNS topics and AWS Chatbot clients to
+     * associate with the notification rule.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-targets)
      *
-     * @param targets A list of Amazon Resource Names (ARNs) of Amazon Simple Notification Service
-     *   topics and AWS Chatbot clients to associate with the notification rule.
+     * @param targets A list of Amazon Resource Names (ARNs) of Amazon SNS topics and AWS Chatbot
+     *   clients to associate with the notification rule.
      */
     public fun targets(targets: Collection<Any>) {
         _targets.addAll(targets)
     }
 
     /**
-     * A list of Amazon Resource Names (ARNs) of Amazon Simple Notification Service topics and AWS
-     * Chatbot clients to associate with the notification rule.
+     * A list of Amazon Resource Names (ARNs) of Amazon SNS topics and AWS Chatbot clients to
+     * associate with the notification rule.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-targets)
      *
-     * @param targets A list of Amazon Resource Names (ARNs) of Amazon Simple Notification Service
-     *   topics and AWS Chatbot clients to associate with the notification rule.
+     * @param targets A list of Amazon Resource Names (ARNs) of Amazon SNS topics and AWS Chatbot
+     *   clients to associate with the notification rule.
      */
     public fun targets(targets: IResolvable) {
         cdkBuilder.targets(targets)

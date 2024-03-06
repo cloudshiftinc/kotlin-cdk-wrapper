@@ -23,7 +23,7 @@ import software.amazon.awscdk.services.sam.CfnHttpApi
 import software.constructs.Construct
 
 /**
- * Definition of AWS::Serverless::HttpApi.
+ * https://github.com/aws/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlesshttpapi.
  *
  * Example:
  * ```

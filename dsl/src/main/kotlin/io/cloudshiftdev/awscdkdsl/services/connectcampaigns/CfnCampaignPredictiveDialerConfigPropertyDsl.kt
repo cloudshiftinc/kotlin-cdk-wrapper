@@ -26,6 +26,8 @@ import software.amazon.awscdk.services.connectcampaigns.CfnCampaign
  * PredictiveDialerConfigProperty predictiveDialerConfigProperty =
  * PredictiveDialerConfigProperty.builder()
  * .bandwidthAllocation(123)
+ * // the properties below are optional
+ * .dialingCapacity(123)
  * .build();
  * ```
  *
@@ -39,6 +41,13 @@ public class CfnCampaignPredictiveDialerConfigPropertyDsl {
     /** @param bandwidthAllocation Bandwidth allocation for the predictive dialer. */
     public fun bandwidthAllocation(bandwidthAllocation: Number) {
         cdkBuilder.bandwidthAllocation(bandwidthAllocation)
+    }
+
+    /**
+     * @param dialingCapacity The allocation of dialing capacity between multiple active campaigns.
+     */
+    public fun dialingCapacity(dialingCapacity: Number) {
+        cdkBuilder.dialingCapacity(dialingCapacity)
     }
 
     public fun build(): CfnCampaign.PredictiveDialerConfigProperty = cdkBuilder.build()

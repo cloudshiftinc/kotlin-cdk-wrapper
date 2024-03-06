@@ -21,7 +21,7 @@ import software.amazon.awscdk.services.lambda.IFunction
  * Example:
  * ```
  * Function authChallengeFn = Function.Builder.create(this, "authChallengeFn")
- * .runtime(Runtime.NODEJS_14_X)
+ * .runtime(Runtime.NODEJS_LATEST)
  * .handler("index.handler")
  * .code(Code.fromAsset(join(__dirname, "path/to/asset")))
  * .build();
@@ -33,7 +33,7 @@ import software.amazon.awscdk.services.lambda.IFunction
  * .build();
  * userpool.addTrigger(UserPoolOperation.USER_MIGRATION, Function.Builder.create(this,
  * "userMigrationFn")
- * .runtime(Runtime.NODEJS_14_X)
+ * .runtime(Runtime.NODEJS_LATEST)
  * .handler("index.handler")
  * .code(Code.fromAsset(join(__dirname, "path/to/asset")))
  * .build());

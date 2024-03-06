@@ -17,7 +17,7 @@ import software.amazon.awscdk.services.opsworks.CfnVolume
 import software.constructs.Construct
 
 /**
- * Describes an instance's Amazon EBS volume.
+ * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-volume.html.
  *
  * Example:
  * ```

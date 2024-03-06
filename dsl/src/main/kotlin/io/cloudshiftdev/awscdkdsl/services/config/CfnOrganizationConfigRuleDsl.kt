@@ -165,9 +165,16 @@ public class CfnOrganizationConfigRuleDsl(
     }
 
     /**
+     * An object that specifies metadata for your organization's AWS Config Custom Policy rule.
+     *
+     * The metadata includes the runtime system in use, which accounts have debug logging enabled,
+     * and other custom rule metadata, such as resource type, resource ID of AWS resource, and
+     * organization trigger types that initiate AWS Config to evaluate AWS resources against a rule.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-organizationconfigrule.html#cfn-config-organizationconfigrule-organizationcustompolicyrulemetadata)
      *
-     * @param organizationCustomPolicyRuleMetadata
+     * @param organizationCustomPolicyRuleMetadata An object that specifies metadata for your
+     *   organization's AWS Config Custom Policy rule.
      */
     public fun organizationCustomPolicyRuleMetadata(
         organizationCustomPolicyRuleMetadata: IResolvable
@@ -176,9 +183,16 @@ public class CfnOrganizationConfigRuleDsl(
     }
 
     /**
+     * An object that specifies metadata for your organization's AWS Config Custom Policy rule.
+     *
+     * The metadata includes the runtime system in use, which accounts have debug logging enabled,
+     * and other custom rule metadata, such as resource type, resource ID of AWS resource, and
+     * organization trigger types that initiate AWS Config to evaluate AWS resources against a rule.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-organizationconfigrule.html#cfn-config-organizationconfigrule-organizationcustompolicyrulemetadata)
      *
-     * @param organizationCustomPolicyRuleMetadata
+     * @param organizationCustomPolicyRuleMetadata An object that specifies metadata for your
+     *   organization's AWS Config Custom Policy rule.
      */
     public fun organizationCustomPolicyRuleMetadata(
         organizationCustomPolicyRuleMetadata:

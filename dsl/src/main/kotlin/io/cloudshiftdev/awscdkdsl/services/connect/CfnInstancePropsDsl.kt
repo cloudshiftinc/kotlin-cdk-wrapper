@@ -11,8 +11,13 @@
 
 package io.cloudshiftdev.awscdkdsl.services.connect
 
+import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.String
+import kotlin.Unit
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnInstance
 import software.amazon.awscdk.services.connect.CfnInstanceProps
@@ -40,6 +45,10 @@ import software.amazon.awscdk.services.connect.CfnInstanceProps
  * // the properties below are optional
  * .directoryId("directoryId")
  * .instanceAlias("instanceAlias")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -48,6 +57,8 @@ import software.amazon.awscdk.services.connect.CfnInstanceProps
 @CdkDslMarker
 public class CfnInstancePropsDsl {
     private val cdkBuilder: CfnInstanceProps.Builder = CfnInstanceProps.builder()
+
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /** @param attributes A toggle for an individual feature at the instance level. */
     public fun attributes(attributes: IResolvable) {
@@ -78,5 +89,18 @@ public class CfnInstancePropsDsl {
         cdkBuilder.instanceAlias(instanceAlias)
     }
 
-    public fun build(): CfnInstanceProps = cdkBuilder.build()
+    /** @param tags An array of key-value pairs to apply to this resource. */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
+
+    /** @param tags An array of key-value pairs to apply to this resource. */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
+
+    public fun build(): CfnInstanceProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

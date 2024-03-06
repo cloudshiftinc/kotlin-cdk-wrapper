@@ -228,7 +228,7 @@ public class CfnFleetDsl(
      * are disconnected.
      *
      * To prevent users from being disconnected due to inactivity, specify a value of 0. Otherwise,
-     * specify a value between 60 and 3600.
+     * specify a value between 60 and 36000.
      *
      * If you enable this feature, we recommend that you specify a value that corresponds exactly to
      * a whole number of minutes (for example, 60, 120, and 180). If you don't do this, the value is
@@ -334,6 +334,19 @@ public class CfnFleetDsl(
     }
 
     /**
+     * Max number of user sessions on an instance.
+     *
+     * This is applicable only for multi-session fleets.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-maxsessionsperinstance)
+     *
+     * @param maxSessionsPerInstance Max number of user sessions on an instance.
+     */
+    public fun maxSessionsPerInstance(maxSessionsPerInstance: Number) {
+        cdkBuilder.maxSessionsPerInstance(maxSessionsPerInstance)
+    }
+
+    /**
      * The maximum amount of time that a streaming session can remain active, in seconds.
      *
      * If users are still connected to a streaming instance five minutes before this limit is
@@ -366,8 +379,6 @@ public class CfnFleetDsl(
      * The platform of the fleet.
      *
      * Platform is a required setting for Elastic fleets, and is not used for other fleet types.
-     *
-     * *Allowed Values* : `WINDOWS_SERVER_2019` | `AMAZON_LINUX2`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-platform)
      *

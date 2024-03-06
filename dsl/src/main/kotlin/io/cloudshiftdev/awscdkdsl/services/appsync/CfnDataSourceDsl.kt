@@ -68,6 +68,7 @@ import software.constructs.Construct
  * .lambdaConfig(LambdaConfigProperty.builder()
  * .lambdaFunctionArn("lambdaFunctionArn")
  * .build())
+ * .metricsConfig("metricsConfig")
  * .openSearchServiceConfig(OpenSearchServiceConfigProperty.builder()
  * .awsRegion("awsRegion")
  * .endpoint("endpoint")
@@ -246,6 +247,25 @@ public class CfnDataSourceDsl(
      */
     public fun lambdaConfig(lambdaConfig: CfnDataSource.LambdaConfigProperty) {
         cdkBuilder.lambdaConfig(lambdaConfig)
+    }
+
+    /**
+     * Enables or disables enhanced data source metrics for specified data sources.
+     *
+     * Note that `MetricsConfig` won't be used unless the `dataSourceLevelMetricsBehavior` value is
+     * set to `PER_DATA_SOURCE_METRICS` . If the `dataSourceLevelMetricsBehavior` is set to
+     * `FULL_REQUEST_DATA_SOURCE_METRICS` instead, `MetricsConfig` will be ignored. However, you can
+     * still set its value.
+     *
+     * `MetricsConfig` can be `ENABLED` or `DISABLED` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-metricsconfig)
+     *
+     * @param metricsConfig Enables or disables enhanced data source metrics for specified data
+     *   sources.
+     */
+    public fun metricsConfig(metricsConfig: String) {
+        cdkBuilder.metricsConfig(metricsConfig)
     }
 
     /**

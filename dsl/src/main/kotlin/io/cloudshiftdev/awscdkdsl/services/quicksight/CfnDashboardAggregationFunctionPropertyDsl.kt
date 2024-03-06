@@ -28,6 +28,10 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.quicksight.*;
  * AggregationFunctionProperty aggregationFunctionProperty = AggregationFunctionProperty.builder()
+ * .attributeAggregationFunction(AttributeAggregationFunctionProperty.builder()
+ * .simpleAttributeAggregation("simpleAttributeAggregation")
+ * .valueForMultipleValues("valueForMultipleValues")
+ * .build())
  * .categoricalAggregationFunction("categoricalAggregationFunction")
  * .dateAggregationFunction("dateAggregationFunction")
  * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
@@ -45,6 +49,18 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
 public class CfnDashboardAggregationFunctionPropertyDsl {
     private val cdkBuilder: CfnDashboard.AggregationFunctionProperty.Builder =
         CfnDashboard.AggregationFunctionProperty.builder()
+
+    /** @param attributeAggregationFunction Aggregation for attributes. */
+    public fun attributeAggregationFunction(attributeAggregationFunction: IResolvable) {
+        cdkBuilder.attributeAggregationFunction(attributeAggregationFunction)
+    }
+
+    /** @param attributeAggregationFunction Aggregation for attributes. */
+    public fun attributeAggregationFunction(
+        attributeAggregationFunction: CfnDashboard.AttributeAggregationFunctionProperty
+    ) {
+        cdkBuilder.attributeAggregationFunction(attributeAggregationFunction)
+    }
 
     /**
      * @param categoricalAggregationFunction Aggregation for categorical values.

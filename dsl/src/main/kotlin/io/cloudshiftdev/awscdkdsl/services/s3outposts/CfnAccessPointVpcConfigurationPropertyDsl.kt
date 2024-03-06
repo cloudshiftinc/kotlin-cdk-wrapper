@@ -35,7 +35,7 @@ public class CfnAccessPointVpcConfigurationPropertyDsl {
     private val cdkBuilder: CfnAccessPoint.VpcConfigurationProperty.Builder =
         CfnAccessPoint.VpcConfigurationProperty.builder()
 
-    /** @param vpcId The ID of the VPC configuration. */
+    /** @param vpcId Virtual Private Cloud (VPC) Id from which AccessPoint will allow requests. */
     public fun vpcId(vpcId: String) {
         cdkBuilder.vpcId(vpcId)
     }

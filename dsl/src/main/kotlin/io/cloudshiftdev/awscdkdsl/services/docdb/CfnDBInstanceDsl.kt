@@ -42,6 +42,8 @@ import software.constructs.Construct
  * // the properties below are optional
  * .autoMinorVersionUpgrade(false)
  * .availabilityZone("availabilityZone")
+ * .caCertificateIdentifier("caCertificateIdentifier")
+ * .certificateRotationRestart(false)
  * .dbInstanceIdentifier("dbInstanceIdentifier")
  * .enablePerformanceInsights(false)
  * .preferredMaintenanceWindow("preferredMaintenanceWindow")
@@ -109,6 +111,70 @@ public class CfnDBInstanceDsl(
     }
 
     /**
+     * The CA certificate identifier to use for the DB instance's server certificate.
+     *
+     * For more information, see
+     * [Updating Your Amazon DocumentDB TLS Certificates](https://docs.aws.amazon.com/documentdb/latest/developerguide/ca_cert_rotation.html)
+     * and
+     * [Encrypting Data in Transit](https://docs.aws.amazon.com/documentdb/latest/developerguide/security.encryption.ssl.html)
+     * in the *Amazon DocumentDB Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbinstance.html#cfn-docdb-dbinstance-cacertificateidentifier)
+     *
+     * @param caCertificateIdentifier The CA certificate identifier to use for the DB instance's
+     *   server certificate.
+     */
+    public fun caCertificateIdentifier(caCertificateIdentifier: String) {
+        cdkBuilder.caCertificateIdentifier(caCertificateIdentifier)
+    }
+
+    /**
+     * Specifies whether the DB instance is restarted when you rotate your SSL/TLS certificate.
+     *
+     * By default, the DB instance is restarted when you rotate your SSL/TLS certificate. The
+     * certificate is not updated until the DB instance is restarted.
+     *
+     * Set this parameter only if you are *not* using SSL/TLS to connect to the DB instance.
+     *
+     * If you are using SSL/TLS to connect to the DB instance, see
+     * [Updating Your Amazon DocumentDB TLS Certificates](https://docs.aws.amazon.com/documentdb/latest/developerguide/ca_cert_rotation.html)
+     * and
+     * [Encrypting Data in Transit](https://docs.aws.amazon.com/documentdb/latest/developerguide/security.encryption.ssl.html)
+     * in the *Amazon DocumentDB Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbinstance.html#cfn-docdb-dbinstance-certificaterotationrestart)
+     *
+     * @param certificateRotationRestart Specifies whether the DB instance is restarted when you
+     *   rotate your SSL/TLS certificate.
+     */
+    public fun certificateRotationRestart(certificateRotationRestart: Boolean) {
+        cdkBuilder.certificateRotationRestart(certificateRotationRestart)
+    }
+
+    /**
+     * Specifies whether the DB instance is restarted when you rotate your SSL/TLS certificate.
+     *
+     * By default, the DB instance is restarted when you rotate your SSL/TLS certificate. The
+     * certificate is not updated until the DB instance is restarted.
+     *
+     * Set this parameter only if you are *not* using SSL/TLS to connect to the DB instance.
+     *
+     * If you are using SSL/TLS to connect to the DB instance, see
+     * [Updating Your Amazon DocumentDB TLS Certificates](https://docs.aws.amazon.com/documentdb/latest/developerguide/ca_cert_rotation.html)
+     * and
+     * [Encrypting Data in Transit](https://docs.aws.amazon.com/documentdb/latest/developerguide/security.encryption.ssl.html)
+     * in the *Amazon DocumentDB Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbinstance.html#cfn-docdb-dbinstance-certificaterotationrestart)
+     *
+     * @param certificateRotationRestart Specifies whether the DB instance is restarted when you
+     *   rotate your SSL/TLS certificate.
+     */
+    public fun certificateRotationRestart(certificateRotationRestart: IResolvable) {
+        cdkBuilder.certificateRotationRestart(certificateRotationRestart)
+    }
+
+    /**
      * The identifier of the cluster that the instance will belong to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbinstance.html#cfn-docdb-dbinstance-dbclusteridentifier)
@@ -153,18 +219,32 @@ public class CfnDBInstanceDsl(
     }
 
     /**
+     * A value that indicates whether to enable Performance Insights for the DB Instance.
+     *
+     * For more information, see
+     * [Using Amazon Performance Insights](https://docs.aws.amazon.com/documentdb/latest/developerguide/performance-insights.html)
+     * .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbinstance.html#cfn-docdb-dbinstance-enableperformanceinsights)
      *
-     * @param enablePerformanceInsights
+     * @param enablePerformanceInsights A value that indicates whether to enable Performance
+     *   Insights for the DB Instance.
      */
     public fun enablePerformanceInsights(enablePerformanceInsights: Boolean) {
         cdkBuilder.enablePerformanceInsights(enablePerformanceInsights)
     }
 
     /**
+     * A value that indicates whether to enable Performance Insights for the DB Instance.
+     *
+     * For more information, see
+     * [Using Amazon Performance Insights](https://docs.aws.amazon.com/documentdb/latest/developerguide/performance-insights.html)
+     * .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbinstance.html#cfn-docdb-dbinstance-enableperformanceinsights)
      *
-     * @param enablePerformanceInsights
+     * @param enablePerformanceInsights A value that indicates whether to enable Performance
+     *   Insights for the DB Instance.
      */
     public fun enablePerformanceInsights(enablePerformanceInsights: IResolvable) {
         cdkBuilder.enablePerformanceInsights(enablePerformanceInsights)

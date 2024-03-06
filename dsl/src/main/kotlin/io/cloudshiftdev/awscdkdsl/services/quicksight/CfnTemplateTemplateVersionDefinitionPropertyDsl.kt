@@ -147,6 +147,16 @@ public class CfnTemplateTemplateVersionDefinitionPropertyDsl {
         cdkBuilder.filterGroups(filterGroups)
     }
 
+    /** @param options An array of option definitions for a template. */
+    public fun options(options: IResolvable) {
+        cdkBuilder.options(options)
+    }
+
+    /** @param options An array of option definitions for a template. */
+    public fun options(options: CfnTemplate.AssetOptionsProperty) {
+        cdkBuilder.options(options)
+    }
+
     /**
      * @param parameterDeclarations An array of parameter declarations for a template. *Parameters*
      *   are named variables that can transfer a value for use by an action or an object.

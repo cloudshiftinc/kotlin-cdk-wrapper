@@ -28,8 +28,8 @@ import software.constructs.Construct
  *
  * A recording configuration enables the recording of a channel’s live streams to a data store.
  * Multiple channels can reference the same recording configuration. For more information, see
- * [RecordingConfiguration](https://docs.aws.amazon.com/ivs/latest/APIReference/API_RecordingConfiguration.html)
- * in the *Amazon Interactive Video Service API Reference* .
+ * [RecordingConfiguration](https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_RecordingConfiguration.html)
+ * in the *Amazon IVS Low-Latency Streaming API Reference* .
  *
  * Example:
  * ```
@@ -170,7 +170,7 @@ public class CfnRecordingConfigurationDsl(
      * An array of key-value pairs to apply to this resource.
      *
      * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-tag.html)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-recordingconfiguration.html#cfn-ivs-recordingconfiguration-tags)
@@ -185,7 +185,7 @@ public class CfnRecordingConfigurationDsl(
      * An array of key-value pairs to apply to this resource.
      *
      * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-tag.html)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-recordingconfiguration.html#cfn-ivs-recordingconfiguration-tags)

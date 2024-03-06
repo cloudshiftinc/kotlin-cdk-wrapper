@@ -23,7 +23,7 @@ import software.constructs.Construct
  * Region.
  *
  * To register a module version, use the
- * `[AWS::CloudFormation::ModuleVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduleversion.html)`
+ * `[`AWS::CloudFormation::ModuleVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduleversion.html)`
  * resource.
  *
  * For more information using modules, see

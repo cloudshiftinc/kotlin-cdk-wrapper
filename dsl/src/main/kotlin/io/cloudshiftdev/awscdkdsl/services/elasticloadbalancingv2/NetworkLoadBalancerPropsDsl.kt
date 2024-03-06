@@ -16,8 +16,12 @@ import io.cloudshiftdev.awscdkdsl.services.ec2.SubnetSelectionDsl
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
+import software.amazon.awscdk.services.ec2.ISecurityGroup
 import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.ec2.SubnetSelection
+import software.amazon.awscdk.services.elasticloadbalancingv2.IpAddressType
 import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancerProps
 
 /**
@@ -35,6 +39,7 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalance
  * .build();
  * Integration integration = Integration.Builder.create()
  * .type(IntegrationType.HTTP_PROXY)
+ * .integrationHttpMethod("ANY")
  * .options(IntegrationOptions.builder()
  * .connectionType(ConnectionType.VPC_LINK)
  * .vpcLink(link)
@@ -45,6 +50,8 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalance
 @CdkDslMarker
 public class NetworkLoadBalancerPropsDsl {
     private val cdkBuilder: NetworkLoadBalancerProps.Builder = NetworkLoadBalancerProps.builder()
+
+    private val _securityGroups: MutableList<ISecurityGroup> = mutableListOf()
 
     /** @param crossZoneEnabled Indicates whether cross-zone load balancing is enabled. */
     public fun crossZoneEnabled(crossZoneEnabled: Boolean) {
@@ -61,9 +68,27 @@ public class NetworkLoadBalancerPropsDsl {
         cdkBuilder.internetFacing(internetFacing)
     }
 
+    /**
+     * @param ipAddressType The type of IP addresses to use. If you want to add a UDP or TCP_UDP
+     *   listener to the load balancer, you must choose IPv4.
+     */
+    public fun ipAddressType(ipAddressType: IpAddressType) {
+        cdkBuilder.ipAddressType(ipAddressType)
+    }
+
     /** @param loadBalancerName Name of the load balancer. */
     public fun loadBalancerName(loadBalancerName: String) {
         cdkBuilder.loadBalancerName(loadBalancerName)
+    }
+
+    /** @param securityGroups Security groups to associate with this load balancer. */
+    public fun securityGroups(vararg securityGroups: ISecurityGroup) {
+        _securityGroups.addAll(listOf(*securityGroups))
+    }
+
+    /** @param securityGroups Security groups to associate with this load balancer. */
+    public fun securityGroups(securityGroups: Collection<ISecurityGroup>) {
+        _securityGroups.addAll(securityGroups)
     }
 
     /** @param vpc The VPC network to place the load balancer in. */
@@ -83,5 +108,8 @@ public class NetworkLoadBalancerPropsDsl {
         cdkBuilder.vpcSubnets(vpcSubnets)
     }
 
-    public fun build(): NetworkLoadBalancerProps = cdkBuilder.build()
+    public fun build(): NetworkLoadBalancerProps {
+        if (_securityGroups.isNotEmpty()) cdkBuilder.securityGroups(_securityGroups)
+        return cdkBuilder.build()
+    }
 }

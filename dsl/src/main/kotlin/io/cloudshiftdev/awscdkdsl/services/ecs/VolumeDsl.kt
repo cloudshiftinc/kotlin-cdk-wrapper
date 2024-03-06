@@ -12,6 +12,7 @@
 package io.cloudshiftdev.awscdkdsl.services.ecs
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.ecs.DockerVolumeConfiguration
@@ -30,22 +31,37 @@ import software.amazon.awscdk.services.ecs.Volume
  *
  * Example:
  * ```
- * FargateTaskDefinition fargateTaskDefinition = FargateTaskDefinition.Builder.create(this,
- * "TaskDef")
- * .memoryLimitMiB(512)
- * .cpu(256)
+ * ContainerDefinition container;
+ * Cluster cluster;
+ * TaskDefinition taskDefinition;
+ * ServiceManagedVolume volumeFromSnapshot = ServiceManagedVolume.Builder.create(this, "EBSVolume")
+ * .name("nginx-vol")
+ * .managedEBSVolume(ServiceManagedEBSVolumeConfiguration.builder()
+ * .snapShotId("snap-066877671789bd71b")
+ * .volumeType(EbsDeviceVolumeType.GP3)
+ * .fileSystemType(FileSystemType.XFS)
+ * .build())
  * .build();
- * Map&lt;String, Object&gt; volume = Map.of(
- * // Use an Elastic FileSystem
- * "name", "mydatavolume",
- * "efsVolumeConfiguration", Map.of(
- * "fileSystemId", "EFS"));
- * void container = fargateTaskDefinition.addVolume(volume);
+ * volumeFromSnapshot.mountIn(container, ContainerMountPoint.builder()
+ * .containerPath("/var/lib")
+ * .readOnly(false)
+ * .build());
+ * taskDefinition.addVolume(volumeFromSnapshot);
+ * FargateService service = FargateService.Builder.create(this, "FargateService")
+ * .cluster(cluster)
+ * .taskDefinition(taskDefinition)
+ * .build();
+ * service.addVolume(volumeFromSnapshot);
  * ```
  */
 @CdkDslMarker
 public class VolumeDsl {
     private val cdkBuilder: Volume.Builder = Volume.builder()
+
+    /** @param configuredAtLaunch Indicates if the volume should be configured at launch. */
+    public fun configuredAtLaunch(configuredAtLaunch: Boolean) {
+        cdkBuilder.configuredAtLaunch(configuredAtLaunch)
+    }
 
     /**
      * @param dockerVolumeConfiguration This property is specified when you are using Docker

@@ -78,7 +78,12 @@ public class CfnWebACLHeadersPropertyDsl {
 
     /**
      * @param matchScope The parts of the headers to match with the rule inspection criteria. If you
-     *   specify `All` , AWS WAF inspects both keys and values.
+     *   specify `ALL` , AWS WAF inspects both keys and values.
+     *
+     * `All` does not require a match to be found in the keys and a match to be found in the values.
+     * It requires a match to be found in the keys or the values or both. To require a match in the
+     * keys and in the values, use a logical `AND` statement to combine two match rules, one that
+     * inspects the keys and another that inspects the values.
      */
     public fun matchScope(matchScope: String) {
         cdkBuilder.matchScope(matchScope)

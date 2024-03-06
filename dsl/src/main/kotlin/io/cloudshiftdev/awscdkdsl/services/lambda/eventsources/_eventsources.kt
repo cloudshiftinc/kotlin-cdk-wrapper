@@ -26,6 +26,7 @@ import software.amazon.awscdk.services.lambda.eventsources.ManagedKafkaEventSour
 import software.amazon.awscdk.services.lambda.eventsources.ManagedKafkaEventSourceProps
 import software.amazon.awscdk.services.lambda.eventsources.S3EventSource
 import software.amazon.awscdk.services.lambda.eventsources.S3EventSourceProps
+import software.amazon.awscdk.services.lambda.eventsources.S3EventSourceV2
 import software.amazon.awscdk.services.lambda.eventsources.SelfManagedKafkaEventSource
 import software.amazon.awscdk.services.lambda.eventsources.SelfManagedKafkaEventSourceProps
 import software.amazon.awscdk.services.lambda.eventsources.SnsEventSource
@@ -34,6 +35,7 @@ import software.amazon.awscdk.services.lambda.eventsources.SqsEventSource
 import software.amazon.awscdk.services.lambda.eventsources.SqsEventSourceProps
 import software.amazon.awscdk.services.lambda.eventsources.StreamEventSourceProps
 import software.amazon.awscdk.services.s3.Bucket
+import software.amazon.awscdk.services.s3.IBucket
 import software.amazon.awscdk.services.sns.ITopic
 import software.amazon.awscdk.services.sqs.IQueue
 
@@ -180,6 +182,7 @@ public object eventsources {
      * import software.amazon.awscdk.services.lambda.*;
      * import software.amazon.awscdk.services.lambda.eventsources.*;
      * import software.amazon.awscdk.services.secretsmanager.*;
+     * IEventSourceDlq eventSourceDlq;
      * Object filters;
      * Secret secret;
      * KafkaEventSourceProps kafkaEventSourceProps = KafkaEventSourceProps.builder()
@@ -192,6 +195,7 @@ public object eventsources {
      * .filters(List.of(Map.of(
      * "filtersKey", filters)))
      * .maxBatchingWindow(Duration.minutes(30))
+     * .onFailure(eventSourceDlq)
      * .secret(secret)
      * .build();
      * ```
@@ -346,10 +350,10 @@ public object eventsources {
     /**
      * Example:
      * ```
-     * import software.amazon.awscdk.services.lambda.eventsources.*;
      * import software.amazon.awscdk.services.s3.*;
+     * import software.amazon.awscdk.services.lambda.eventsources.S3EventSource;
      * Function fn;
-     * Bucket bucket = new Bucket(this, "Bucket");
+     * Bucket bucket = new Bucket(this, "mybucket");
      * fn.addEventSource(S3EventSource.Builder.create(bucket)
      * .events(List.of(EventType.OBJECT_CREATED, EventType.OBJECT_REMOVED))
      * .filters(List.of(NotificationKeyFilter.builder().prefix("subdir/").build()))
@@ -360,6 +364,30 @@ public object eventsources {
         block: S3EventSourcePropsDsl.() -> Unit = {}
     ): S3EventSourceProps {
         val builder = S3EventSourcePropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * S3EventSourceV2 Use S3 bucket notifications as an event source for AWS Lambda.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.services.s3.*;
+     * import software.amazon.awscdk.services.lambda.eventsources.S3EventSourceV2;
+     * Function fn;
+     * IBucket bucket = Bucket.fromBucketName(this, "Bucket", "bucket-name");
+     * fn.addEventSource(S3EventSourceV2.Builder.create(bucket)
+     * .events(List.of(EventType.OBJECT_CREATED, EventType.OBJECT_REMOVED))
+     * .filters(List.of(NotificationKeyFilter.builder().prefix("subdir/").build()))
+     * .build());
+     * ```
+     */
+    public inline fun s3EventSourceV2(
+        bucket: IBucket,
+        block: S3EventSourceV2Dsl.() -> Unit = {}
+    ): S3EventSourceV2 {
+        val builder = S3EventSourceV2Dsl(bucket)
         builder.apply(block)
         return builder.build()
     }
@@ -514,8 +542,7 @@ public object eventsources {
      * import software.amazon.awscdk.services.lambda.eventsources.SqsEventSource;
      * Function fn;
      * Queue queue = Queue.Builder.create(this, "MyQueue")
-     * .visibilityTimeout(Duration.seconds(30)) // default,
-     * .receiveMessageWaitTime(Duration.seconds(20))
+     * .visibilityTimeout(Duration.seconds(30))
      * .build();
      * fn.addEventSource(SqsEventSource.Builder.create(queue)
      * .batchSize(10) // default

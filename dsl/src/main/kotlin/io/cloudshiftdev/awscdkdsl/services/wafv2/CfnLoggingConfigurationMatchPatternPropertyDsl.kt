@@ -21,10 +21,6 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration
 
 /**
- * The patterns to look for in the JSON body.
- *
- * AWS WAF inspects the results of these pattern matches against the rule inspection criteria.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -46,50 +42,24 @@ public class CfnLoggingConfigurationMatchPatternPropertyDsl {
 
     private val _includedPaths: MutableList<String> = mutableListOf()
 
-    /**
-     * @param all Match all of the elements. You must specify either this setting or the
-     *   `IncludedPaths` setting, but not both.
-     */
+    /** @param all the value to be set. */
     public fun all(all: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
         builder.apply(all)
         cdkBuilder.all(builder.map)
     }
 
-    /**
-     * @param all Match all of the elements. You must specify either this setting or the
-     *   `IncludedPaths` setting, but not both.
-     */
+    /** @param all the value to be set. */
     public fun all(all: Any) {
         cdkBuilder.all(all)
     }
 
-    /**
-     * @param includedPaths Match only the specified include paths. Provide the include paths using
-     *   JSON Pointer syntax. For example, `"IncludedPaths": ["/dogs/0/name", "/dogs/1/name"]` . For
-     *   information about this syntax, see the Internet Engineering Task Force (IETF) documentation
-     *   [JavaScript Object Notation (JSON) Pointer](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc6901)
-     *   .
-     *
-     * You must specify either this setting or the `All` setting, but not both.
-     *
-     * Don't use this option to include all paths. Instead, use the `All` setting.
-     */
+    /** @param includedPaths the value to be set. */
     public fun includedPaths(vararg includedPaths: String) {
         _includedPaths.addAll(listOf(*includedPaths))
     }
 
-    /**
-     * @param includedPaths Match only the specified include paths. Provide the include paths using
-     *   JSON Pointer syntax. For example, `"IncludedPaths": ["/dogs/0/name", "/dogs/1/name"]` . For
-     *   information about this syntax, see the Internet Engineering Task Force (IETF) documentation
-     *   [JavaScript Object Notation (JSON) Pointer](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc6901)
-     *   .
-     *
-     * You must specify either this setting or the `All` setting, but not both.
-     *
-     * Don't use this option to include all paths. Instead, use the `All` setting.
-     */
+    /** @param includedPaths the value to be set. */
     public fun includedPaths(includedPaths: Collection<String>) {
         _includedPaths.addAll(includedPaths)
     }

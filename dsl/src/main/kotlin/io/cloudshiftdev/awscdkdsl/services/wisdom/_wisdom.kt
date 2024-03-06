@@ -185,7 +185,7 @@ public object wisdom {
     }
 
     /**
-     * The KMS key used for encryption.
+     * The configuration information for the customer managed key used for encryption.
      *
      * Example:
      * ```
@@ -347,7 +347,7 @@ public object wisdom {
     }
 
     /**
-     * The KMS key used for encryption.
+     * The configuration information for the customer managed key used for encryption.
      *
      * Example:
      * ```

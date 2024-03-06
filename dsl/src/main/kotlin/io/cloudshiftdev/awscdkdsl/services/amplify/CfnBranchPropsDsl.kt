@@ -36,6 +36,9 @@ import software.amazon.awscdk.services.amplify.CfnBranchProps
  * .appId("appId")
  * .branchName("branchName")
  * // the properties below are optional
+ * .backend(BackendProperty.builder()
+ * .stackArn("stackArn")
+ * .build())
  * .basicAuthConfig(BasicAuthConfigProperty.builder()
  * .password("password")
  * .username("username")
@@ -71,14 +74,19 @@ public class CfnBranchPropsDsl {
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
-    /**
-     * @param appId The unique ID for an Amplify app. *Length Constraints:* Minimum length of 1.
-     *   Maximum length of 20.
-     *
-     * *Pattern:* d[a-z0-9]+
-     */
+    /** @param appId The unique ID for an Amplify app. */
     public fun appId(appId: String) {
         cdkBuilder.appId(appId)
+    }
+
+    /** @param backend The backend environment for an Amplify app. */
+    public fun backend(backend: IResolvable) {
+        cdkBuilder.backend(backend)
+    }
+
+    /** @param backend The backend environment for an Amplify app. */
+    public fun backend(backend: CfnBranch.BackendProperty) {
+        cdkBuilder.backend(backend)
     }
 
     /**

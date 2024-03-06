@@ -17,7 +17,8 @@ import kotlin.String
 import software.amazon.awscdk.services.batch.CfnJobDefinition
 
 /**
- * The `ulimit` settings to pass to the container.
+ * The `ulimit` settings to pass to the container. For more information, see
+ * [Ulimit](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_Ulimit.html) .
  *
  * This object isn't applicable to jobs that are running on Fargate resources.
  *
@@ -45,7 +46,11 @@ public class CfnJobDefinitionUlimitPropertyDsl {
         cdkBuilder.hardLimit(hardLimit)
     }
 
-    /** @param name The `type` of the `ulimit` . */
+    /**
+     * @param name The `type` of the `ulimit` . Valid values are: `core` | `cpu` | `data` | `fsize`
+     *   | `locks` | `memlock` | `msgqueue` | `nice` | `nofile` | `nproc` | `rss` | `rtprio` |
+     *   `rttime` | `sigpending` | `stack` .
+     */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }

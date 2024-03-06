@@ -38,6 +38,7 @@ import software.amazon.awscdk.services.amplifyuibuilder.CfnComponent
  * .and(List.of(predicateProperty_))
  * .field("field")
  * .operand("operand")
+ * .operandType("operandType")
  * .operator("operator")
  * .or(List.of(predicateProperty_))
  * .build())

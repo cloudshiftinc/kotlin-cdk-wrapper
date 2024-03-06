@@ -23,10 +23,10 @@ import software.amazon.awscdk.services.sagemaker.CfnDomain
 import software.constructs.Construct
 
 /**
- * Creates a `Domain` used by Amazon SageMaker Studio.
+ * Creates a `Domain` .
  *
- * A domain consists of an associated Amazon Elastic File System (EFS) volume, a list of authorized
- * users, and a variety of security, application, policy, and Amazon Virtual Private Cloud (VPC)
+ * A domain consists of an associated Amazon Elastic File System volume, a list of authorized users,
+ * and a variety of security, application, policy, and Amazon Virtual Private Cloud (VPC)
  * configurations. Users within a domain can share notebook files and other artifacts with each
  * other.
  *
@@ -44,24 +44,24 @@ import software.constructs.Construct
  *
  * *VPC configuration*
  *
- * All SageMaker Studio traffic between the domain and the EFS volume is through the specified VPC
- * and subnets. For other Studio traffic, you can specify the `AppNetworkAccessType` parameter.
+ * All traffic between the domain and the Amazon EFS volume is through the specified VPC and
+ * subnets. For other traffic, you can specify the `AppNetworkAccessType` parameter.
  * `AppNetworkAccessType` corresponds to the network access type that you choose when you onboard to
- * Studio. The following options are available:
+ * the domain. The following options are available:
  * * `PublicInternetOnly` - Non-EFS traffic goes through a VPC managed by Amazon SageMaker, which
  *   allows internet access. This is the default value.
- * * `VpcOnly` - All Studio traffic is through the specified VPC and subnets. Internet access is
- *   disabled by default. To allow internet access, you must specify a NAT gateway.
+ * * `VpcOnly` - All traffic is through the specified VPC and subnets. Internet access is disabled
+ *   by default. To allow internet access, you must specify a NAT gateway.
  *
- * When internet access is disabled, you won't be able to run a Studio notebook or to train or host
- * models unless your VPC has an interface endpoint to the SageMaker API and runtime or a NAT
- * gateway and your security groups allow outbound connections.
+ * When internet access is disabled, you won't be able to run a Amazon SageMaker Studio notebook or
+ * to train or host models unless your VPC has an interface endpoint to the SageMaker API and
+ * runtime or a NAT gateway and your security groups allow outbound connections.
  *
  * NFS traffic over TCP on port 2049 needs to be allowed in both inbound and outbound rules in order
- * to launch a SageMaker Studio app successfully.
+ * to launch a Amazon SageMaker Studio app successfully.
  *
  * For more information, see
- * [Connect SageMaker Studio Notebooks to Resources in a VPC](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-notebooks-and-internet-access.html)
+ * [Connect Amazon SageMaker Studio Notebooks to Resources in a VPC](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-notebooks-and-internet-access.html)
  * .
  *
  * Example:
@@ -74,6 +74,45 @@ import software.constructs.Construct
  * .defaultUserSettings(UserSettingsProperty.builder()
  * .executionRole("executionRole")
  * // the properties below are optional
+ * .codeEditorAppSettings(CodeEditorAppSettingsProperty.builder()
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
+ * .build())
+ * .customFileSystemConfigs(List.of(CustomFileSystemConfigProperty.builder()
+ * .efsFileSystemConfig(EFSFileSystemConfigProperty.builder()
+ * .fileSystemId("fileSystemId")
+ * // the properties below are optional
+ * .fileSystemPath("fileSystemPath")
+ * .build())
+ * .build()))
+ * .customPosixUserConfig(CustomPosixUserConfigProperty.builder()
+ * .gid(123)
+ * .uid(123)
+ * .build())
+ * .defaultLandingUri("defaultLandingUri")
+ * .jupyterLabAppSettings(JupyterLabAppSettingsProperty.builder()
+ * .codeRepositories(List.of(CodeRepositoryProperty.builder()
+ * .repositoryUrl("repositoryUrl")
+ * .build()))
+ * .customImages(List.of(CustomImageProperty.builder()
+ * .appImageConfigName("appImageConfigName")
+ * .imageName("imageName")
+ * // the properties below are optional
+ * .imageVersionNumber(123)
+ * .build()))
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
+ * .build())
  * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
  * .defaultResourceSpec(ResourceSpecProperty.builder()
  * .instanceType("instanceType")
@@ -120,6 +159,13 @@ import software.constructs.Construct
  * .s3KmsKeyId("s3KmsKeyId")
  * .s3OutputPath("s3OutputPath")
  * .build())
+ * .spaceStorageSettings(DefaultSpaceStorageSettingsProperty.builder()
+ * .defaultEbsStorageSettings(DefaultEbsStorageSettingsProperty.builder()
+ * .defaultEbsVolumeSizeInGb(123)
+ * .maximumEbsVolumeSizeInGb(123)
+ * .build())
+ * .build())
+ * .studioWebPortal("studioWebPortal")
  * .build())
  * .domainName("domainName")
  * .subnetIds(List.of("subnetIds"))
@@ -155,6 +201,10 @@ import software.constructs.Construct
  * .securityGroups(List.of("securityGroups"))
  * .build())
  * .domainSettings(DomainSettingsProperty.builder()
+ * .dockerSettings(DockerSettingsProperty.builder()
+ * .enableDockerAccess("enableDockerAccess")
+ * .vpcOnlyTrustedAccounts(List.of("vpcOnlyTrustedAccounts"))
+ * .build())
  * .rStudioServerProDomainSettings(RStudioServerProDomainSettingsProperty.builder()
  * .domainExecutionRoleArn("domainExecutionRoleArn")
  * // the properties below are optional
@@ -240,28 +290,24 @@ public class CfnDomainDsl(
     }
 
     /**
-     * A collection of settings that apply to spaces of Amazon SageMaker Studio.
-     *
-     * These settings are specified when the Create/Update Domain API is called.
+     * A collection of settings that apply to spaces created in the domain.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-defaultspacesettings)
      *
-     * @param defaultSpaceSettings A collection of settings that apply to spaces of Amazon SageMaker
-     *   Studio.
+     * @param defaultSpaceSettings A collection of settings that apply to spaces created in the
+     *   domain.
      */
     public fun defaultSpaceSettings(defaultSpaceSettings: IResolvable) {
         cdkBuilder.defaultSpaceSettings(defaultSpaceSettings)
     }
 
     /**
-     * A collection of settings that apply to spaces of Amazon SageMaker Studio.
-     *
-     * These settings are specified when the Create/Update Domain API is called.
+     * A collection of settings that apply to spaces created in the domain.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-defaultspacesettings)
      *
-     * @param defaultSpaceSettings A collection of settings that apply to spaces of Amazon SageMaker
-     *   Studio.
+     * @param defaultSpaceSettings A collection of settings that apply to spaces created in the
+     *   domain.
      */
     public fun defaultSpaceSettings(defaultSpaceSettings: CfnDomain.DefaultSpaceSettingsProperty) {
         cdkBuilder.defaultSpaceSettings(defaultSpaceSettings)

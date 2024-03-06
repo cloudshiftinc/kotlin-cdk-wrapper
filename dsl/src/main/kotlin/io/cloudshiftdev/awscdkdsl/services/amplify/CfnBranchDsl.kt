@@ -36,6 +36,9 @@ import software.constructs.Construct
  * .appId("appId")
  * .branchName("branchName")
  * // the properties below are optional
+ * .backend(BackendProperty.builder()
+ * .stackArn("stackArn")
+ * .build())
  * .basicAuthConfig(BasicAuthConfigProperty.builder()
  * .password("password")
  * .username("username")
@@ -77,16 +80,34 @@ public class CfnBranchDsl(
     /**
      * The unique ID for an Amplify app.
      *
-     * *Length Constraints:* Minimum length of 1. Maximum length of 20.
-     *
-     * *Pattern:* d[a-z0-9]+
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-appid)
      *
      * @param appId The unique ID for an Amplify app.
      */
     public fun appId(appId: String) {
         cdkBuilder.appId(appId)
+    }
+
+    /**
+     * The backend environment for an Amplify app.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-backend)
+     *
+     * @param backend The backend environment for an Amplify app.
+     */
+    public fun backend(backend: IResolvable) {
+        cdkBuilder.backend(backend)
+    }
+
+    /**
+     * The backend environment for an Amplify app.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-backend)
+     *
+     * @param backend The backend environment for an Amplify app.
+     */
+    public fun backend(backend: CfnBranch.BackendProperty) {
+        cdkBuilder.backend(backend)
     }
 
     /**

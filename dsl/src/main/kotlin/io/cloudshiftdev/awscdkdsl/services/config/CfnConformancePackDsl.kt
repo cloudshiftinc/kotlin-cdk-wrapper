@@ -165,13 +165,15 @@ public class CfnConformancePackDsl(
     }
 
     /**
-     * The TemplateSSMDocumentDetails object contains the name of the SSM document and the version
-     * of the SSM document.
+     * An object that contains the name or Amazon Resource Name (ARN) of the AWS Systems Manager
+     * document (SSM document) and the version of the SSM document that is used to create a
+     * conformance pack.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-templatessmdocumentdetails)
      *
-     * @param templateSsmDocumentDetails The TemplateSSMDocumentDetails object contains the name of
-     *   the SSM document and the version of the SSM document.
+     * @param templateSsmDocumentDetails An object that contains the name or Amazon Resource Name
+     *   (ARN) of the AWS Systems Manager document (SSM document) and the version of the SSM
+     *   document that is used to create a conformance pack.
      */
     public fun templateSsmDocumentDetails(templateSsmDocumentDetails: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
@@ -180,13 +182,15 @@ public class CfnConformancePackDsl(
     }
 
     /**
-     * The TemplateSSMDocumentDetails object contains the name of the SSM document and the version
-     * of the SSM document.
+     * An object that contains the name or Amazon Resource Name (ARN) of the AWS Systems Manager
+     * document (SSM document) and the version of the SSM document that is used to create a
+     * conformance pack.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-templatessmdocumentdetails)
      *
-     * @param templateSsmDocumentDetails The TemplateSSMDocumentDetails object contains the name of
-     *   the SSM document and the version of the SSM document.
+     * @param templateSsmDocumentDetails An object that contains the name or Amazon Resource Name
+     *   (ARN) of the AWS Systems Manager document (SSM document) and the version of the SSM
+     *   document that is used to create a conformance pack.
      */
     public fun templateSsmDocumentDetails(templateSsmDocumentDetails: Any) {
         cdkBuilder.templateSsmDocumentDetails(templateSsmDocumentDetails)

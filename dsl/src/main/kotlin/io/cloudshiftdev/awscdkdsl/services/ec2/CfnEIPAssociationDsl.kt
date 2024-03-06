@@ -12,6 +12,7 @@
 package io.cloudshiftdev.awscdkdsl.services.ec2
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Deprecated
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnEIPAssociation
 import software.constructs.Construct
@@ -65,12 +66,14 @@ public class CfnEIPAssociationDsl(
     }
 
     /**
-     * Deprecated.
+     * (deprecated) The Elastic IP address to associate with the instance.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-eipassociation.html#cfn-ec2-eipassociation-eip)
      *
-     * @param eip Deprecated.
+     * @param eip The Elastic IP address to associate with the instance.
+     * @deprecated this property has been deprecated
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun eip(eip: String) {
         cdkBuilder.eip(eip)
     }

@@ -25,6 +25,10 @@ import software.constructs.Construct
 /**
  * Associates a service with a service network.
  *
+ * For more information, see
+ * [Manage service associations](https://docs.aws.amazon.com/vpc-lattice/latest/ug/service-network-associations.html#service-network-service-associations)
+ * in the *Amazon VPC Lattice User Guide* .
+ *
  * You can't use this operation if the service and service network are already associated or if
  * there is a disassociation or deletion in progress. If the association fails, you can retry the
  * operation by deleting the association and recreating it.

@@ -13,6 +13,7 @@ package io.cloudshiftdev.awscdkdsl.services.connect
 
 import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -61,6 +62,11 @@ import software.constructs.Construct
  * .key("key")
  * .value("value")
  * .build()))
+ * .userProficiencies(List.of(UserProficiencyProperty.builder()
+ * .attributeName("attributeName")
+ * .attributeValue("attributeValue")
+ * .level(123)
+ * .build()))
  * .build();
  * ```
  *
@@ -76,6 +82,8 @@ public class CfnUserDsl(
     private val _securityProfileArns: MutableList<String> = mutableListOf()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
+
+    private val _userProficiencies: MutableList<Any> = mutableListOf()
 
     /**
      * The identifier of the user account in the directory used for identity management.
@@ -222,6 +230,45 @@ public class CfnUserDsl(
     }
 
     /**
+     * One or more predefined attributes assigned to a user, with a numeric value that indicates how
+     * their level of skill in a specified area.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html#cfn-connect-user-userproficiencies)
+     *
+     * @param userProficiencies One or more predefined attributes assigned to a user, with a numeric
+     *   value that indicates how their level of skill in a specified area.
+     */
+    public fun userProficiencies(vararg userProficiencies: Any) {
+        _userProficiencies.addAll(listOf(*userProficiencies))
+    }
+
+    /**
+     * One or more predefined attributes assigned to a user, with a numeric value that indicates how
+     * their level of skill in a specified area.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html#cfn-connect-user-userproficiencies)
+     *
+     * @param userProficiencies One or more predefined attributes assigned to a user, with a numeric
+     *   value that indicates how their level of skill in a specified area.
+     */
+    public fun userProficiencies(userProficiencies: Collection<Any>) {
+        _userProficiencies.addAll(userProficiencies)
+    }
+
+    /**
+     * One or more predefined attributes assigned to a user, with a numeric value that indicates how
+     * their level of skill in a specified area.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html#cfn-connect-user-userproficiencies)
+     *
+     * @param userProficiencies One or more predefined attributes assigned to a user, with a numeric
+     *   value that indicates how their level of skill in a specified area.
+     */
+    public fun userProficiencies(userProficiencies: IResolvable) {
+        cdkBuilder.userProficiencies(userProficiencies)
+    }
+
+    /**
      * The user name assigned to the user account.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html#cfn-connect-user-username)
@@ -235,6 +282,7 @@ public class CfnUserDsl(
     public fun build(): CfnUser {
         if (_securityProfileArns.isNotEmpty()) cdkBuilder.securityProfileArns(_securityProfileArns)
         if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        if (_userProficiencies.isNotEmpty()) cdkBuilder.userProficiencies(_userProficiencies)
         return cdkBuilder.build()
     }
 }

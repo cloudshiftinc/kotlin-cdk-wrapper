@@ -47,6 +47,7 @@ import software.constructs.Construct
  * .name("name")
  * // the properties below are optional
  * .description("description")
+ * .standbyReplicas("standbyReplicas")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -92,6 +93,17 @@ public class CfnCollectionDsl(
      */
     public fun name(name: String) {
         cdkBuilder.name(name)
+    }
+
+    /**
+     * Indicates whether standby replicas should be used for a collection.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-collection.html#cfn-opensearchserverless-collection-standbyreplicas)
+     *
+     * @param standbyReplicas Indicates whether standby replicas should be used for a collection.
+     */
+    public fun standbyReplicas(standbyReplicas: String) {
+        cdkBuilder.standbyReplicas(standbyReplicas)
     }
 
     /**

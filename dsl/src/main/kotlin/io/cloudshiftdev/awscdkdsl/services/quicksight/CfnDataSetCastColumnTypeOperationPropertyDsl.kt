@@ -29,6 +29,7 @@ import software.amazon.awscdk.services.quicksight.CfnDataSet
  * .newColumnType("newColumnType")
  * // the properties below are optional
  * .format("format")
+ * .subType("subType")
  * .build();
  * ```
  *
@@ -55,6 +56,14 @@ public class CfnDataSetCastColumnTypeOperationPropertyDsl {
     /** @param newColumnType New column data type. */
     public fun newColumnType(newColumnType: String) {
         cdkBuilder.newColumnType(newColumnType)
+    }
+
+    /**
+     * @param subType The sub data type of the new column. Sub types are only available for decimal
+     *   columns that are part of a SPICE dataset.
+     */
+    public fun subType(subType: String) {
+        cdkBuilder.subType(subType)
     }
 
     public fun build(): CfnDataSet.CastColumnTypeOperationProperty = cdkBuilder.build()

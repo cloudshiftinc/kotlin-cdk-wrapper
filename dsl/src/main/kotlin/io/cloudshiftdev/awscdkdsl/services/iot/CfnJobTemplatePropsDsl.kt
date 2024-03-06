@@ -41,6 +41,7 @@ import software.amazon.awscdk.services.iot.CfnJobTemplateProps
  * .jobTemplateId("jobTemplateId")
  * // the properties below are optional
  * .abortConfig(abortConfig)
+ * .destinationPackageVersions(List.of("destinationPackageVersions"))
  * .document("document")
  * .documentSource("documentSource")
  * .jobArn("jobArn")
@@ -70,6 +71,8 @@ import software.amazon.awscdk.services.iot.CfnJobTemplateProps
 public class CfnJobTemplatePropsDsl {
     private val cdkBuilder: CfnJobTemplateProps.Builder = CfnJobTemplateProps.builder()
 
+    private val _destinationPackageVersions: MutableList<String> = mutableListOf()
+
     private val _maintenanceWindows: MutableList<Any> = mutableListOf()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
@@ -89,6 +92,24 @@ public class CfnJobTemplatePropsDsl {
     /** @param description A description of the job template. */
     public fun description(description: String) {
         cdkBuilder.description(description)
+    }
+
+    /**
+     * @param destinationPackageVersions The package version Amazon Resource Names (ARNs) that are
+     *   installed on the device’s reserved named shadow ( `$package` ) when the job successfully
+     *   completes. *Note:* Up to 25 package version ARNS are allowed.
+     */
+    public fun destinationPackageVersions(vararg destinationPackageVersions: String) {
+        _destinationPackageVersions.addAll(listOf(*destinationPackageVersions))
+    }
+
+    /**
+     * @param destinationPackageVersions The package version Amazon Resource Names (ARNs) that are
+     *   installed on the device’s reserved named shadow ( `$package` ) when the job successfully
+     *   completes. *Note:* Up to 25 package version ARNS are allowed.
+     */
+    public fun destinationPackageVersions(destinationPackageVersions: Collection<String>) {
+        _destinationPackageVersions.addAll(destinationPackageVersions)
     }
 
     /**
@@ -223,6 +244,8 @@ public class CfnJobTemplatePropsDsl {
     }
 
     public fun build(): CfnJobTemplateProps {
+        if (_destinationPackageVersions.isNotEmpty())
+            cdkBuilder.destinationPackageVersions(_destinationPackageVersions)
         if (_maintenanceWindows.isNotEmpty()) cdkBuilder.maintenanceWindows(_maintenanceWindows)
         if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
         return cdkBuilder.build()

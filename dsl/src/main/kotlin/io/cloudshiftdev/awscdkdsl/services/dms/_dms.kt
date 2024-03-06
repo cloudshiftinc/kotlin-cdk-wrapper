@@ -15,10 +15,16 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.dms.CfnCertificate
 import software.amazon.awscdk.services.dms.CfnCertificateProps
+import software.amazon.awscdk.services.dms.CfnDataProvider
+import software.amazon.awscdk.services.dms.CfnDataProviderProps
 import software.amazon.awscdk.services.dms.CfnEndpoint
 import software.amazon.awscdk.services.dms.CfnEndpointProps
 import software.amazon.awscdk.services.dms.CfnEventSubscription
 import software.amazon.awscdk.services.dms.CfnEventSubscriptionProps
+import software.amazon.awscdk.services.dms.CfnInstanceProfile
+import software.amazon.awscdk.services.dms.CfnInstanceProfileProps
+import software.amazon.awscdk.services.dms.CfnMigrationProject
+import software.amazon.awscdk.services.dms.CfnMigrationProjectProps
 import software.amazon.awscdk.services.dms.CfnReplicationConfig
 import software.amazon.awscdk.services.dms.CfnReplicationConfigProps
 import software.amazon.awscdk.services.dms.CfnReplicationInstance
@@ -84,6 +90,146 @@ public object dms {
     }
 
     /**
+     * Provides information that defines a data provider.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.dms.*;
+     * CfnDataProvider cfnDataProvider = CfnDataProvider.Builder.create(this, "MyCfnDataProvider")
+     * .engine("engine")
+     * // the properties below are optional
+     * .dataProviderIdentifier("dataProviderIdentifier")
+     * .dataProviderName("dataProviderName")
+     * .description("description")
+     * .exactSettings(false)
+     * .settings(SettingsProperty.builder()
+     * .postgreSqlSettings(PostgreSqlSettingsProperty.builder()
+     * .certificateArn("certificateArn")
+     * .databaseName("databaseName")
+     * .port(123)
+     * .serverName("serverName")
+     * .sslMode("sslMode")
+     * .build())
+     * .build())
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html)
+     */
+    public inline fun cfnDataProvider(
+        scope: Construct,
+        id: String,
+        block: CfnDataProviderDsl.() -> Unit = {},
+    ): CfnDataProvider {
+        val builder = CfnDataProviderDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Provides information that defines a PostgreSQL endpoint.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.dms.*;
+     * PostgreSqlSettingsProperty postgreSqlSettingsProperty = PostgreSqlSettingsProperty.builder()
+     * .certificateArn("certificateArn")
+     * .databaseName("databaseName")
+     * .port(123)
+     * .serverName("serverName")
+     * .sslMode("sslMode")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-postgresqlsettings.html)
+     */
+    public inline fun cfnDataProviderPostgreSqlSettingsProperty(
+        block: CfnDataProviderPostgreSqlSettingsPropertyDsl.() -> Unit = {}
+    ): CfnDataProvider.PostgreSqlSettingsProperty {
+        val builder = CfnDataProviderPostgreSqlSettingsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnDataProvider`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.dms.*;
+     * CfnDataProviderProps cfnDataProviderProps = CfnDataProviderProps.builder()
+     * .engine("engine")
+     * // the properties below are optional
+     * .dataProviderIdentifier("dataProviderIdentifier")
+     * .dataProviderName("dataProviderName")
+     * .description("description")
+     * .exactSettings(false)
+     * .settings(SettingsProperty.builder()
+     * .postgreSqlSettings(PostgreSqlSettingsProperty.builder()
+     * .certificateArn("certificateArn")
+     * .databaseName("databaseName")
+     * .port(123)
+     * .serverName("serverName")
+     * .sslMode("sslMode")
+     * .build())
+     * .build())
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html)
+     */
+    public inline fun cfnDataProviderProps(
+        block: CfnDataProviderPropsDsl.() -> Unit = {}
+    ): CfnDataProviderProps {
+        val builder = CfnDataProviderPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * PostgreSqlSettings property identifier.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.dms.*;
+     * SettingsProperty settingsProperty = SettingsProperty.builder()
+     * .postgreSqlSettings(PostgreSqlSettingsProperty.builder()
+     * .certificateArn("certificateArn")
+     * .databaseName("databaseName")
+     * .port(123)
+     * .serverName("serverName")
+     * .sslMode("sslMode")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html)
+     */
+    public inline fun cfnDataProviderSettingsProperty(
+        block: CfnDataProviderSettingsPropertyDsl.() -> Unit = {}
+    ): CfnDataProvider.SettingsProperty {
+        val builder = CfnDataProviderSettingsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The `AWS::DMS::Endpoint` resource specifies an AWS DMS endpoint.
      *
      * Currently, AWS CloudFormation supports all AWS DMS endpoint types.
@@ -134,10 +280,14 @@ public object dms {
      * .build())
      * .ibmDb2Settings(IbmDb2SettingsProperty.builder()
      * .currentLsn("currentLsn")
+     * .keepCsvFiles(false)
+     * .loadTimeout(123)
+     * .maxFileSize(123)
      * .maxKBytesPerRead(123)
      * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
      * .secretsManagerSecretId("secretsManagerSecretId")
      * .setDataCaptureChanges(false)
+     * .writeBufferSize(123)
      * .build())
      * .kafkaSettings(KafkaSettingsProperty.builder()
      * .broker("broker")
@@ -175,12 +325,20 @@ public object dms {
      * .microsoftSqlServerSettings(MicrosoftSqlServerSettingsProperty.builder()
      * .bcpPacketSize(123)
      * .controlTablesFileGroup("controlTablesFileGroup")
+     * .databaseName("databaseName")
+     * .forceLobLookup(false)
+     * .password("password")
+     * .port(123)
      * .querySingleAlwaysOnNode(false)
      * .readBackupOnly(false)
      * .safeguardPolicy("safeguardPolicy")
      * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
      * .secretsManagerSecretId("secretsManagerSecretId")
+     * .serverName("serverName")
+     * .tlogAccessMode("tlogAccessMode")
+     * .trimSpaceInChar(false)
      * .useBcpFullLoad(false)
+     * .username("username")
      * .useThirdPartyBackupDevice(false)
      * .build())
      * .mongoDbSettings(MongoDbSettingsProperty.builder()
@@ -259,7 +417,9 @@ public object dms {
      * .port(123)
      * .postgreSqlSettings(PostgreSqlSettingsProperty.builder()
      * .afterConnectScript("afterConnectScript")
+     * .babelfishDatabaseName("babelfishDatabaseName")
      * .captureDdls(false)
+     * .databaseMode("databaseMode")
      * .ddlArtifactsSchema("ddlArtifactsSchema")
      * .executeTimeout(123)
      * .failTasksOnLobTruncation(false)
@@ -313,6 +473,7 @@ public object dms {
      * .resourceIdentifier("resourceIdentifier")
      * .s3Settings(S3SettingsProperty.builder()
      * .addColumnName(false)
+     * .addTrailingPaddingCharacter(false)
      * .bucketFolder("bucketFolder")
      * .bucketName("bucketName")
      * .cannedAclForObjects("cannedAclForObjects")
@@ -336,7 +497,9 @@ public object dms {
      * .enableStatistics(false)
      * .encodingType("encodingType")
      * .encryptionMode("encryptionMode")
+     * .expectedBucketOwner("expectedBucketOwner")
      * .externalTableDefinition("externalTableDefinition")
+     * .glueCatalogGeneration(false)
      * .ignoreHeaderRows(123)
      * .includeOpForFullLoad(false)
      * .maxFileSize(123)
@@ -532,10 +695,14 @@ public object dms {
      * import software.amazon.awscdk.services.dms.*;
      * IbmDb2SettingsProperty ibmDb2SettingsProperty = IbmDb2SettingsProperty.builder()
      * .currentLsn("currentLsn")
+     * .keepCsvFiles(false)
+     * .loadTimeout(123)
+     * .maxFileSize(123)
      * .maxKBytesPerRead(123)
      * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
      * .secretsManagerSecretId("secretsManagerSecretId")
      * .setDataCaptureChanges(false)
+     * .writeBufferSize(123)
      * .build();
      * ```
      *
@@ -653,12 +820,20 @@ public object dms {
      * MicrosoftSqlServerSettingsProperty.builder()
      * .bcpPacketSize(123)
      * .controlTablesFileGroup("controlTablesFileGroup")
+     * .databaseName("databaseName")
+     * .forceLobLookup(false)
+     * .password("password")
+     * .port(123)
      * .querySingleAlwaysOnNode(false)
      * .readBackupOnly(false)
      * .safeguardPolicy("safeguardPolicy")
      * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
      * .secretsManagerSecretId("secretsManagerSecretId")
+     * .serverName("serverName")
+     * .tlogAccessMode("tlogAccessMode")
+     * .trimSpaceInChar(false)
      * .useBcpFullLoad(false)
+     * .username("username")
      * .useThirdPartyBackupDevice(false)
      * .build();
      * ```
@@ -871,7 +1046,9 @@ public object dms {
      * import software.amazon.awscdk.services.dms.*;
      * PostgreSqlSettingsProperty postgreSqlSettingsProperty = PostgreSqlSettingsProperty.builder()
      * .afterConnectScript("afterConnectScript")
+     * .babelfishDatabaseName("babelfishDatabaseName")
      * .captureDdls(false)
+     * .databaseMode("databaseMode")
      * .ddlArtifactsSchema("ddlArtifactsSchema")
      * .executeTimeout(123)
      * .failTasksOnLobTruncation(false)
@@ -946,10 +1123,14 @@ public object dms {
      * .build())
      * .ibmDb2Settings(IbmDb2SettingsProperty.builder()
      * .currentLsn("currentLsn")
+     * .keepCsvFiles(false)
+     * .loadTimeout(123)
+     * .maxFileSize(123)
      * .maxKBytesPerRead(123)
      * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
      * .secretsManagerSecretId("secretsManagerSecretId")
      * .setDataCaptureChanges(false)
+     * .writeBufferSize(123)
      * .build())
      * .kafkaSettings(KafkaSettingsProperty.builder()
      * .broker("broker")
@@ -987,12 +1168,20 @@ public object dms {
      * .microsoftSqlServerSettings(MicrosoftSqlServerSettingsProperty.builder()
      * .bcpPacketSize(123)
      * .controlTablesFileGroup("controlTablesFileGroup")
+     * .databaseName("databaseName")
+     * .forceLobLookup(false)
+     * .password("password")
+     * .port(123)
      * .querySingleAlwaysOnNode(false)
      * .readBackupOnly(false)
      * .safeguardPolicy("safeguardPolicy")
      * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
      * .secretsManagerSecretId("secretsManagerSecretId")
+     * .serverName("serverName")
+     * .tlogAccessMode("tlogAccessMode")
+     * .trimSpaceInChar(false)
      * .useBcpFullLoad(false)
+     * .username("username")
      * .useThirdPartyBackupDevice(false)
      * .build())
      * .mongoDbSettings(MongoDbSettingsProperty.builder()
@@ -1071,7 +1260,9 @@ public object dms {
      * .port(123)
      * .postgreSqlSettings(PostgreSqlSettingsProperty.builder()
      * .afterConnectScript("afterConnectScript")
+     * .babelfishDatabaseName("babelfishDatabaseName")
      * .captureDdls(false)
+     * .databaseMode("databaseMode")
      * .ddlArtifactsSchema("ddlArtifactsSchema")
      * .executeTimeout(123)
      * .failTasksOnLobTruncation(false)
@@ -1125,6 +1316,7 @@ public object dms {
      * .resourceIdentifier("resourceIdentifier")
      * .s3Settings(S3SettingsProperty.builder()
      * .addColumnName(false)
+     * .addTrailingPaddingCharacter(false)
      * .bucketFolder("bucketFolder")
      * .bucketName("bucketName")
      * .cannedAclForObjects("cannedAclForObjects")
@@ -1148,7 +1340,9 @@ public object dms {
      * .enableStatistics(false)
      * .encodingType("encodingType")
      * .encryptionMode("encryptionMode")
+     * .expectedBucketOwner("expectedBucketOwner")
      * .externalTableDefinition("externalTableDefinition")
+     * .glueCatalogGeneration(false)
      * .ignoreHeaderRows(123)
      * .includeOpForFullLoad(false)
      * .maxFileSize(123)
@@ -1294,6 +1488,7 @@ public object dms {
      * import software.amazon.awscdk.services.dms.*;
      * S3SettingsProperty s3SettingsProperty = S3SettingsProperty.builder()
      * .addColumnName(false)
+     * .addTrailingPaddingCharacter(false)
      * .bucketFolder("bucketFolder")
      * .bucketName("bucketName")
      * .cannedAclForObjects("cannedAclForObjects")
@@ -1317,7 +1512,9 @@ public object dms {
      * .enableStatistics(false)
      * .encodingType("encodingType")
      * .encryptionMode("encryptionMode")
+     * .expectedBucketOwner("expectedBucketOwner")
      * .externalTableDefinition("externalTableDefinition")
+     * .glueCatalogGeneration(false)
      * .ignoreHeaderRows(123)
      * .includeOpForFullLoad(false)
      * .maxFileSize(123)
@@ -1451,8 +1648,240 @@ public object dms {
     }
 
     /**
-     * A replication configuration that you later provide to configure and start a AWS DMS
-     * Serverless replication.
+     * Provides information that defines an instance profile.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.dms.*;
+     * CfnInstanceProfile cfnInstanceProfile = CfnInstanceProfile.Builder.create(this,
+     * "MyCfnInstanceProfile")
+     * .availabilityZone("availabilityZone")
+     * .description("description")
+     * .instanceProfileIdentifier("instanceProfileIdentifier")
+     * .instanceProfileName("instanceProfileName")
+     * .kmsKeyArn("kmsKeyArn")
+     * .networkType("networkType")
+     * .publiclyAccessible(false)
+     * .subnetGroupIdentifier("subnetGroupIdentifier")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .vpcSecurityGroups(List.of("vpcSecurityGroups"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-instanceprofile.html)
+     */
+    public inline fun cfnInstanceProfile(
+        scope: Construct,
+        id: String,
+        block: CfnInstanceProfileDsl.() -> Unit = {},
+    ): CfnInstanceProfile {
+        val builder = CfnInstanceProfileDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnInstanceProfile`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.dms.*;
+     * CfnInstanceProfileProps cfnInstanceProfileProps = CfnInstanceProfileProps.builder()
+     * .availabilityZone("availabilityZone")
+     * .description("description")
+     * .instanceProfileIdentifier("instanceProfileIdentifier")
+     * .instanceProfileName("instanceProfileName")
+     * .kmsKeyArn("kmsKeyArn")
+     * .networkType("networkType")
+     * .publiclyAccessible(false)
+     * .subnetGroupIdentifier("subnetGroupIdentifier")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .vpcSecurityGroups(List.of("vpcSecurityGroups"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-instanceprofile.html)
+     */
+    public inline fun cfnInstanceProfileProps(
+        block: CfnInstanceProfilePropsDsl.() -> Unit = {}
+    ): CfnInstanceProfileProps {
+        val builder = CfnInstanceProfilePropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Provides information that defines a migration project.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.dms.*;
+     * CfnMigrationProject cfnMigrationProject = CfnMigrationProject.Builder.create(this,
+     * "MyCfnMigrationProject")
+     * .description("description")
+     * .instanceProfileArn("instanceProfileArn")
+     * .instanceProfileIdentifier("instanceProfileIdentifier")
+     * .instanceProfileName("instanceProfileName")
+     * .migrationProjectCreationTime("migrationProjectCreationTime")
+     * .migrationProjectIdentifier("migrationProjectIdentifier")
+     * .migrationProjectName("migrationProjectName")
+     * .schemaConversionApplicationAttributes(SchemaConversionApplicationAttributesProperty.builder()
+     * .s3BucketPath("s3BucketPath")
+     * .s3BucketRoleArn("s3BucketRoleArn")
+     * .build())
+     * .sourceDataProviderDescriptors(List.of(DataProviderDescriptorProperty.builder()
+     * .dataProviderArn("dataProviderArn")
+     * .dataProviderIdentifier("dataProviderIdentifier")
+     * .dataProviderName("dataProviderName")
+     * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
+     * .secretsManagerSecretId("secretsManagerSecretId")
+     * .build()))
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .targetDataProviderDescriptors(List.of(DataProviderDescriptorProperty.builder()
+     * .dataProviderArn("dataProviderArn")
+     * .dataProviderIdentifier("dataProviderIdentifier")
+     * .dataProviderName("dataProviderName")
+     * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
+     * .secretsManagerSecretId("secretsManagerSecretId")
+     * .build()))
+     * .transformationRules("transformationRules")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-migrationproject.html)
+     */
+    public inline fun cfnMigrationProject(
+        scope: Construct,
+        id: String,
+        block: CfnMigrationProjectDsl.() -> Unit = {},
+    ): CfnMigrationProject {
+        val builder = CfnMigrationProjectDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Information about a data provider.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.dms.*;
+     * DataProviderDescriptorProperty dataProviderDescriptorProperty =
+     * DataProviderDescriptorProperty.builder()
+     * .dataProviderArn("dataProviderArn")
+     * .dataProviderIdentifier("dataProviderIdentifier")
+     * .dataProviderName("dataProviderName")
+     * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
+     * .secretsManagerSecretId("secretsManagerSecretId")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-migrationproject-dataproviderdescriptor.html)
+     */
+    public inline fun cfnMigrationProjectDataProviderDescriptorProperty(
+        block: CfnMigrationProjectDataProviderDescriptorPropertyDsl.() -> Unit = {}
+    ): CfnMigrationProject.DataProviderDescriptorProperty {
+        val builder = CfnMigrationProjectDataProviderDescriptorPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnMigrationProject`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.dms.*;
+     * CfnMigrationProjectProps cfnMigrationProjectProps = CfnMigrationProjectProps.builder()
+     * .description("description")
+     * .instanceProfileArn("instanceProfileArn")
+     * .instanceProfileIdentifier("instanceProfileIdentifier")
+     * .instanceProfileName("instanceProfileName")
+     * .migrationProjectCreationTime("migrationProjectCreationTime")
+     * .migrationProjectIdentifier("migrationProjectIdentifier")
+     * .migrationProjectName("migrationProjectName")
+     * .schemaConversionApplicationAttributes(SchemaConversionApplicationAttributesProperty.builder()
+     * .s3BucketPath("s3BucketPath")
+     * .s3BucketRoleArn("s3BucketRoleArn")
+     * .build())
+     * .sourceDataProviderDescriptors(List.of(DataProviderDescriptorProperty.builder()
+     * .dataProviderArn("dataProviderArn")
+     * .dataProviderIdentifier("dataProviderIdentifier")
+     * .dataProviderName("dataProviderName")
+     * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
+     * .secretsManagerSecretId("secretsManagerSecretId")
+     * .build()))
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .targetDataProviderDescriptors(List.of(DataProviderDescriptorProperty.builder()
+     * .dataProviderArn("dataProviderArn")
+     * .dataProviderIdentifier("dataProviderIdentifier")
+     * .dataProviderName("dataProviderName")
+     * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
+     * .secretsManagerSecretId("secretsManagerSecretId")
+     * .build()))
+     * .transformationRules("transformationRules")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-migrationproject.html)
+     */
+    public inline fun cfnMigrationProjectProps(
+        block: CfnMigrationProjectPropsDsl.() -> Unit = {}
+    ): CfnMigrationProjectProps {
+        val builder = CfnMigrationProjectPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The property describes schema conversion application attributes for the migration project.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.dms.*;
+     * SchemaConversionApplicationAttributesProperty schemaConversionApplicationAttributesProperty =
+     * SchemaConversionApplicationAttributesProperty.builder()
+     * .s3BucketPath("s3BucketPath")
+     * .s3BucketRoleArn("s3BucketRoleArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-migrationproject-schemaconversionapplicationattributes.html)
+     */
+    public inline fun cfnMigrationProjectSchemaConversionApplicationAttributesProperty(
+        block: CfnMigrationProjectSchemaConversionApplicationAttributesPropertyDsl.() -> Unit = {}
+    ): CfnMigrationProject.SchemaConversionApplicationAttributesProperty {
+        val builder = CfnMigrationProjectSchemaConversionApplicationAttributesPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html.
      *
      * Example:
      * ```
@@ -1476,7 +1905,6 @@ public object dms {
      * .replicationSubnetGroupId("replicationSubnetGroupId")
      * .vpcSecurityGroupIds(List.of("vpcSecurityGroupIds"))
      * .build())
-     * .replicationConfigArn("replicationConfigArn")
      * .replicationConfigIdentifier("replicationConfigIdentifier")
      * .replicationSettings(replicationSettings)
      * .replicationType("replicationType")
@@ -1560,7 +1988,6 @@ public object dms {
      * .replicationSubnetGroupId("replicationSubnetGroupId")
      * .vpcSecurityGroupIds(List.of("vpcSecurityGroupIds"))
      * .build())
-     * .replicationConfigArn("replicationConfigArn")
      * .replicationConfigIdentifier("replicationConfigIdentifier")
      * .replicationSettings(replicationSettings)
      * .replicationType("replicationType")

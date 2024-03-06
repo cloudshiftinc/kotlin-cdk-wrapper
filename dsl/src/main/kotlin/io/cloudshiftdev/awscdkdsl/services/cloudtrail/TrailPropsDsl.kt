@@ -147,6 +147,14 @@ public class TrailPropsDsl {
     }
 
     /**
+     * @param orgId The orgId. Required when `isOrganizationTrail` is set to true to attach the
+     *   necessary permissions.
+     */
+    public fun orgId(orgId: String) {
+        cdkBuilder.orgId(orgId)
+    }
+
+    /**
      * @param s3KeyPrefix An Amazon S3 object key prefix that precedes the name of all log files.
      */
     public fun s3KeyPrefix(s3KeyPrefix: String) {

@@ -33,8 +33,8 @@ public inline fun CfnAccessPoint.setPosixUser(
 }
 
 /**
- * The directory on the Amazon EFS file system that the access point exposes as the root directory
- * to NFS clients using the access point.
+ * The directory on the EFS file system that the access point exposes as the root directory to NFS
+ * clients using the access point.
  */
 public inline fun CfnAccessPoint.setRootDirectory(
     block: CfnAccessPointRootDirectoryPropertyDsl.() -> Unit = {}
@@ -51,6 +51,24 @@ public inline fun CfnFileSystem.setBackupPolicy(
     val builder = CfnFileSystemBackupPolicyPropertyDsl()
     builder.apply(block)
     return setBackupPolicy(builder.build())
+}
+
+/** Describes the protection on the file system. */
+public inline fun CfnFileSystem.setFileSystemProtection(
+    block: CfnFileSystemFileSystemProtectionPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnFileSystemFileSystemProtectionPropertyDsl()
+    builder.apply(block)
+    return setFileSystemProtection(builder.build())
+}
+
+/** Describes the replication configuration for a specific file system. */
+public inline fun CfnFileSystem.setReplicationConfiguration(
+    block: CfnFileSystemReplicationConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnFileSystemReplicationConfigurationPropertyDsl()
+    builder.apply(block)
+    return setReplicationConfiguration(builder.build())
 }
 
 /**

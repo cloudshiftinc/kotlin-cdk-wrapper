@@ -35,10 +35,12 @@ import software.constructs.Construct
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.pinpoint.*;
  * CfnGCMChannel cfnGCMChannel = CfnGCMChannel.Builder.create(this, "MyCfnGCMChannel")
- * .apiKey("apiKey")
  * .applicationId("applicationId")
  * // the properties below are optional
+ * .apiKey("apiKey")
+ * .defaultAuthenticationMethod("defaultAuthenticationMethod")
  * .enabled(false)
+ * .serviceJson("serviceJson")
  * .build();
  * ```
  *
@@ -77,6 +79,19 @@ public class CfnGCMChannelDsl(
     }
 
     /**
+     * The default authentication method used for GCM.
+     *
+     * Values are either "TOKEN" or "KEY". Defaults to "KEY".
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-gcmchannel.html#cfn-pinpoint-gcmchannel-defaultauthenticationmethod)
+     *
+     * @param defaultAuthenticationMethod The default authentication method used for GCM.
+     */
+    public fun defaultAuthenticationMethod(defaultAuthenticationMethod: String) {
+        cdkBuilder.defaultAuthenticationMethod(defaultAuthenticationMethod)
+    }
+
+    /**
      * Specifies whether to enable the GCM channel for the Amazon Pinpoint application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-gcmchannel.html#cfn-pinpoint-gcmchannel-enabled)
@@ -98,6 +113,23 @@ public class CfnGCMChannelDsl(
      */
     public fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled)
+    }
+
+    /**
+     * The contents of the JSON file provided by Google during registration in order to generate an
+     * access token for authentication.
+     *
+     * For more information see
+     * [Migrate from legacy FCM APIs to HTTP v1](https://docs.aws.amazon.com/https://firebase.google.com/docs/cloud-messaging/migrate-v1)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-gcmchannel.html#cfn-pinpoint-gcmchannel-servicejson)
+     *
+     * @param serviceJson The contents of the JSON file provided by Google during registration in
+     *   order to generate an access token for authentication.
+     */
+    public fun serviceJson(serviceJson: String) {
+        cdkBuilder.serviceJson(serviceJson)
     }
 
     public fun build(): CfnGCMChannel = cdkBuilder.build()

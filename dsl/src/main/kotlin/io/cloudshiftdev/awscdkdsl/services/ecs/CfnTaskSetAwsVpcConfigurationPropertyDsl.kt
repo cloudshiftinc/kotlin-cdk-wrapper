@@ -20,6 +20,8 @@ import software.amazon.awscdk.services.ecs.CfnTaskSet
 /**
  * An object representing the networking details for a task or service.
  *
+ * For example `awsvpcConfiguration={subnets=["subnet-12344321"],securityGroups=["sg-12344321"]}`
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.

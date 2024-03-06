@@ -96,6 +96,11 @@ import software.constructs.Construct
  * .certificates(List.of(CertificateProperty.builder()
  * .certificateArn("certificateArn")
  * .build()))
+ * .mutualAuthentication(MutualAuthenticationProperty.builder()
+ * .ignoreClientCertificateExpiry(false)
+ * .mode("mode")
+ * .trustStoreArn("trustStoreArn")
+ * .build())
  * .port(123)
  * .protocol("protocol")
  * .sslPolicy("sslPolicy")
@@ -249,6 +254,30 @@ public class CfnListenerDsl(
      */
     public fun loadBalancerArn(loadBalancerArn: String) {
         cdkBuilder.loadBalancerArn(loadBalancerArn)
+    }
+
+    /**
+     * The mutual authentication configuration information.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-mutualauthentication)
+     *
+     * @param mutualAuthentication The mutual authentication configuration information.
+     */
+    public fun mutualAuthentication(mutualAuthentication: IResolvable) {
+        cdkBuilder.mutualAuthentication(mutualAuthentication)
+    }
+
+    /**
+     * The mutual authentication configuration information.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-mutualauthentication)
+     *
+     * @param mutualAuthentication The mutual authentication configuration information.
+     */
+    public fun mutualAuthentication(
+        mutualAuthentication: CfnListener.MutualAuthenticationProperty
+    ) {
+        cdkBuilder.mutualAuthentication(mutualAuthentication)
     }
 
     /**

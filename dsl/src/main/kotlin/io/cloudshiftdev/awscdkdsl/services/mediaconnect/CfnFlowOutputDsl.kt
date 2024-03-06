@@ -190,11 +190,13 @@ public class CfnFlowOutputDsl(
     }
 
     /**
-     * The name of the VPC interface.
+     * The name of the output.
+     *
+     * This value must be unique within the current flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-name)
      *
-     * @param name The name of the VPC interface.
+     * @param name The name of the output.
      */
     public fun name(name: String) {
         cdkBuilder.name(name)

@@ -56,6 +56,12 @@ public object workspaces {
     }
 
     /**
+     * Describes a connection alias association that is used for cross-Region redirection.
+     *
+     * For more information, see
+     * [Cross-Region Redirection for Amazon WorkSpaces](https://docs.aws.amazon.com/workspaces/latest/adminguide/cross-region-redirection.html)
+     * .
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.

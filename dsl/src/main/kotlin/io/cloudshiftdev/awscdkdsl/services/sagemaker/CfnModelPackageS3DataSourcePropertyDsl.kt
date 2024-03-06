@@ -56,7 +56,7 @@ public class CfnModelPackageS3DataSourcePropertyDsl {
     /**
      * @param s3Uri Depending on the value specified for the `S3DataType` , identifies either a key
      *   name prefix or a manifest. For example:
-     * * A key name prefix might look like this: `s3://bucketname/exampleprefix`
+     * * A key name prefix might look like this: `s3://bucketname/exampleprefix/`
      * * A manifest might look like this: `s3://bucketname/example.manifest`
      *
      * A manifest is an S3 object which is a JSON file consisting of an array of elements. The first

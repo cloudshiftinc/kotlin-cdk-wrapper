@@ -31,6 +31,7 @@ import software.amazon.awscdk.services.cognito.CfnIdentityPool
  * CognitoIdentityProviderProperty.builder()
  * .clientId("clientId")
  * .providerName("providerName")
+ * // the properties below are optional
  * .serverSideTokenCheck(false)
  * .build();
  * ```

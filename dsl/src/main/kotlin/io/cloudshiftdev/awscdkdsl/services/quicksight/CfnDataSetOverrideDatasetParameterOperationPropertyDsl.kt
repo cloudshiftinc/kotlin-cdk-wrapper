@@ -17,8 +17,8 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
 /**
- * A transform operation that overrides the dataset parameter values defined in another
- * dataset.</p>.
+ * A transform operation that overrides the dataset parameter values that are defined in another
+ * dataset.
  *
  * Example:
  * ```
@@ -46,22 +46,22 @@ public class CfnDataSetOverrideDatasetParameterOperationPropertyDsl {
     private val cdkBuilder: CfnDataSet.OverrideDatasetParameterOperationProperty.Builder =
         CfnDataSet.OverrideDatasetParameterOperationProperty.builder()
 
-    /** @param newDefaultValues the value to be set. */
+    /** @param newDefaultValues The new default values for the parameter. */
     public fun newDefaultValues(newDefaultValues: IResolvable) {
         cdkBuilder.newDefaultValues(newDefaultValues)
     }
 
-    /** @param newDefaultValues the value to be set. */
+    /** @param newDefaultValues The new default values for the parameter. */
     public fun newDefaultValues(newDefaultValues: CfnDataSet.NewDefaultValuesProperty) {
         cdkBuilder.newDefaultValues(newDefaultValues)
     }
 
-    /** @param newParameterName Name of the parameter created in the dataset.</p>. */
+    /** @param newParameterName The new name for the parameter. */
     public fun newParameterName(newParameterName: String) {
         cdkBuilder.newParameterName(newParameterName)
     }
 
-    /** @param parameterName Name of the parameter created in the dataset.</p>. */
+    /** @param parameterName The name of the parameter to be overridden with different values. */
     public fun parameterName(parameterName: String) {
         cdkBuilder.parameterName(parameterName)
     }

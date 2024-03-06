@@ -56,7 +56,10 @@ public class CfnDomainPropsDsl {
         cdkBuilder.domainName(domainName)
     }
 
-    /** @param encryptionKey The key used to encrypt the domain. */
+    /**
+     * @param encryptionKey The ARN of an AWS Key Management Service (AWS KMS) key associated with a
+     *   domain.
+     */
     public fun encryptionKey(encryptionKey: String) {
         cdkBuilder.encryptionKey(encryptionKey)
     }

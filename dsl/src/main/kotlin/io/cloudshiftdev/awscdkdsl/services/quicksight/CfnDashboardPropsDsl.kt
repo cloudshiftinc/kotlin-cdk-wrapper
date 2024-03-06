@@ -36,6 +36,8 @@ import software.amazon.awscdk.services.quicksight.CfnDashboardProps
 public class CfnDashboardPropsDsl {
     private val cdkBuilder: CfnDashboardProps.Builder = CfnDashboardProps.builder()
 
+    private val _linkEntities: MutableList<String> = mutableListOf()
+
     private val _permissions: MutableList<Any> = mutableListOf()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
@@ -92,6 +94,34 @@ public class CfnDashboardPropsDsl {
     /** @param definition the value to be set. */
     public fun definition(definition: CfnDashboard.DashboardVersionDefinitionProperty) {
         cdkBuilder.definition(definition)
+    }
+
+    /** @param linkEntities the value to be set. */
+    public fun linkEntities(vararg linkEntities: String) {
+        _linkEntities.addAll(listOf(*linkEntities))
+    }
+
+    /** @param linkEntities the value to be set. */
+    public fun linkEntities(linkEntities: Collection<String>) {
+        _linkEntities.addAll(linkEntities)
+    }
+
+    /**
+     * @param linkSharingConfiguration A structure that contains the link sharing configurations
+     *   that you want to apply overrides to.
+     */
+    public fun linkSharingConfiguration(linkSharingConfiguration: IResolvable) {
+        cdkBuilder.linkSharingConfiguration(linkSharingConfiguration)
+    }
+
+    /**
+     * @param linkSharingConfiguration A structure that contains the link sharing configurations
+     *   that you want to apply overrides to.
+     */
+    public fun linkSharingConfiguration(
+        linkSharingConfiguration: CfnDashboard.LinkSharingConfigurationProperty
+    ) {
+        cdkBuilder.linkSharingConfiguration(linkSharingConfiguration)
     }
 
     /** @param name The display name of the dashboard. */
@@ -211,6 +241,24 @@ public class CfnDashboardPropsDsl {
     }
 
     /**
+     * @param validationStrategy The option to relax the validation that is required to create and
+     *   update analyses, dashboards, and templates with definition objects. When you set this value
+     *   to `LENIENT` , validation is skipped for specific errors.
+     */
+    public fun validationStrategy(validationStrategy: IResolvable) {
+        cdkBuilder.validationStrategy(validationStrategy)
+    }
+
+    /**
+     * @param validationStrategy The option to relax the validation that is required to create and
+     *   update analyses, dashboards, and templates with definition objects. When you set this value
+     *   to `LENIENT` , validation is skipped for specific errors.
+     */
+    public fun validationStrategy(validationStrategy: CfnDashboard.ValidationStrategyProperty) {
+        cdkBuilder.validationStrategy(validationStrategy)
+    }
+
+    /**
      * @param versionDescription A description for the first version of the dashboard being created.
      */
     public fun versionDescription(versionDescription: String) {
@@ -218,6 +266,7 @@ public class CfnDashboardPropsDsl {
     }
 
     public fun build(): CfnDashboardProps {
+        if (_linkEntities.isNotEmpty()) cdkBuilder.linkEntities(_linkEntities)
         if (_permissions.isNotEmpty()) cdkBuilder.permissions(_permissions)
         if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
         return cdkBuilder.build()

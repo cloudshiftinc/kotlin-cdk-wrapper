@@ -20,6 +20,8 @@ import software.amazon.awscdk.services.backup.BackupVault
 import software.amazon.awscdk.services.backup.CfnBackupPlan
 import software.amazon.awscdk.services.backup.CfnBackupSelection
 import software.amazon.awscdk.services.backup.CfnBackupVault
+import software.amazon.awscdk.services.backup.CfnRestoreTestingPlan
+import software.amazon.awscdk.services.backup.CfnRestoreTestingSelection
 
 /**
  * Adds a rule to a plan.
@@ -95,4 +97,28 @@ public inline fun CfnBackupVault.setNotifications(
     val builder = CfnBackupVaultNotificationObjectTypePropertyDsl()
     builder.apply(block)
     return setNotifications(builder.build())
+}
+
+/**
+ * The specified criteria to assign a set of resources, such as recovery point types or backup
+ * vaults.
+ */
+public inline fun CfnRestoreTestingPlan.setRecoveryPointSelection(
+    block: CfnRestoreTestingPlanRestoreTestingRecoveryPointSelectionPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnRestoreTestingPlanRestoreTestingRecoveryPointSelectionPropertyDsl()
+    builder.apply(block)
+    return setRecoveryPointSelection(builder.build())
+}
+
+/**
+ * In a resource testing selection, this parameter filters by specific conditions such as
+ * `StringEquals` or `StringNotEquals` .
+ */
+public inline fun CfnRestoreTestingSelection.setProtectedResourceConditions(
+    block: CfnRestoreTestingSelectionProtectedResourceConditionsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnRestoreTestingSelectionProtectedResourceConditionsPropertyDsl()
+    builder.apply(block)
+    return setProtectedResourceConditions(builder.build())
 }

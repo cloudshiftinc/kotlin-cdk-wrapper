@@ -37,6 +37,7 @@ import software.constructs.Construct
  * CfnWorkspace cfnWorkspace = CfnWorkspace.Builder.create(this, "MyCfnWorkspace")
  * .alertManagerDefinition("alertManagerDefinition")
  * .alias("alias")
+ * .kmsKeyArn("kmsKeyArn")
  * .loggingConfiguration(LoggingConfigurationProperty.builder()
  * .logGroupArn("logGroupArn")
  * .build())
@@ -88,6 +89,17 @@ public class CfnWorkspaceDsl(
      */
     public fun alias(alias: String) {
         cdkBuilder.alias(alias)
+    }
+
+    /**
+     * KMS Key ARN used to encrypt and decrypt AMP workspace data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-workspace.html#cfn-aps-workspace-kmskeyarn)
+     *
+     * @param kmsKeyArn KMS Key ARN used to encrypt and decrypt AMP workspace data.
+     */
+    public fun kmsKeyArn(kmsKeyArn: String) {
+        cdkBuilder.kmsKeyArn(kmsKeyArn)
     }
 
     /**

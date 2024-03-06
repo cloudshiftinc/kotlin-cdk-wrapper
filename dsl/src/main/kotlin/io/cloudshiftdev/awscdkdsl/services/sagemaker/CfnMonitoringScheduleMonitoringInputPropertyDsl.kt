@@ -37,6 +37,7 @@ import software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule
  * .build())
  * .localPath("localPath")
  * // the properties below are optional
+ * .excludeFeaturesAttribute("excludeFeaturesAttribute")
  * .s3DataDistributionType("s3DataDistributionType")
  * .s3InputMode("s3InputMode")
  * .build())
@@ -44,6 +45,7 @@ import software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule
  * .endpointName("endpointName")
  * .localPath("localPath")
  * // the properties below are optional
+ * .excludeFeaturesAttribute("excludeFeaturesAttribute")
  * .s3DataDistributionType("s3DataDistributionType")
  * .s3InputMode("s3InputMode")
  * .build())
@@ -57,12 +59,12 @@ public class CfnMonitoringScheduleMonitoringInputPropertyDsl {
     private val cdkBuilder: CfnMonitoringSchedule.MonitoringInputProperty.Builder =
         CfnMonitoringSchedule.MonitoringInputProperty.builder()
 
-    /** @param batchTransformInput The batch transform input for a monitoring job. */
+    /** @param batchTransformInput Input object for the batch transform job. */
     public fun batchTransformInput(batchTransformInput: IResolvable) {
         cdkBuilder.batchTransformInput(batchTransformInput)
     }
 
-    /** @param batchTransformInput The batch transform input for a monitoring job. */
+    /** @param batchTransformInput Input object for the batch transform job. */
     public fun batchTransformInput(
         batchTransformInput: CfnMonitoringSchedule.BatchTransformInputProperty
     ) {

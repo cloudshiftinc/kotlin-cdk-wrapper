@@ -50,6 +50,9 @@ import software.amazon.awscdk.services.codedeploy.AutoRollbackConfig
  * // whether to ignore failure to fetch the status of alarms from CloudWatch
  * // default: false
  * .ignorePollAlarmsFailure(false)
+ * // whether to skip the step of checking CloudWatch alarms during the deployment process
+ * // default: false
+ * .ignoreAlarmConfiguration(false)
  * // auto-rollback configuration
  * .autoRollback(AutoRollbackConfig.builder()
  * .failedDeployment(true) // default: true

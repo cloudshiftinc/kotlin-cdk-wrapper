@@ -27,7 +27,6 @@ import software.amazon.awscdk.services.appsync.CfnApiKeyProps
  * CfnApiKeyProps cfnApiKeyProps = CfnApiKeyProps.builder()
  * .apiId("apiId")
  * // the properties below are optional
- * .apiKeyId("apiKeyId")
  * .description("description")
  * .expires(123)
  * .build();
@@ -42,11 +41,6 @@ public class CfnApiKeyPropsDsl {
     /** @param apiId Unique AWS AppSync GraphQL API ID for this API key. */
     public fun apiId(apiId: String) {
         cdkBuilder.apiId(apiId)
-    }
-
-    /** @param apiKeyId The API key ID. */
-    public fun apiKeyId(apiKeyId: String) {
-        cdkBuilder.apiKeyId(apiKeyId)
     }
 
     /** @param description Unique description of your API key. */

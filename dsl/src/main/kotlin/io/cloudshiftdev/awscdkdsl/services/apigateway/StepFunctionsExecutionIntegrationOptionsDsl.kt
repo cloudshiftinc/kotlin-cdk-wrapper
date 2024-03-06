@@ -88,6 +88,7 @@ import software.amazon.awscdk.services.iam.IRole
  * .requestTemplates(Map.of(
  * "requestTemplatesKey", "requestTemplates"))
  * .timeout(Duration.minutes(30))
+ * .useDefaultMethodResponses(false)
  * .vpcLink(vpcLink)
  * .build();
  * ```
@@ -277,6 +278,14 @@ public class StepFunctionsExecutionIntegrationOptionsDsl {
      */
     public fun timeout(timeout: Duration) {
         cdkBuilder.timeout(timeout)
+    }
+
+    /**
+     * @param useDefaultMethodResponses Whether to add default response models with 200, 400, and
+     *   500 status codes to the method.
+     */
+    public fun useDefaultMethodResponses(useDefaultMethodResponses: Boolean) {
+        cdkBuilder.useDefaultMethodResponses(useDefaultMethodResponses)
     }
 
     /**

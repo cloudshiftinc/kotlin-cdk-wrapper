@@ -29,11 +29,13 @@ import software.amazon.awscdk.services.lambda.CfnParametersCode
  * Function.Builder.create(lambdaStack, "Lambda")
  * .code(lambdaCode)
  * .handler("index.handler")
- * .runtime(Runtime.NODEJS_14_X)
+ * .runtime(Runtime.NODEJS_LATEST)
  * .build();
  * // other resources that your Lambda needs, added to the lambdaStack...
  * Stack pipelineStack = new Stack(app, "PipelineStack");
- * Pipeline pipeline = new Pipeline(pipelineStack, "Pipeline");
+ * Pipeline pipeline = Pipeline.Builder.create(pipelineStack, "Pipeline")
+ * .crossAccountKeys(true)
+ * .build();
  * // add the source code repository containing this code to your Pipeline,
  * // and the source code of the Lambda Function, if they're separate
  * Artifact cdkSourceOutput = new Artifact();
@@ -61,7 +63,7 @@ import software.amazon.awscdk.services.lambda.CfnParametersCode
  * // adjust the build environment and/or commands accordingly
  * Project cdkBuildProject = Project.Builder.create(pipelineStack, "CdkBuildProject")
  * .environment(BuildEnvironment.builder()
- * .buildImage(LinuxBuildImage.UBUNTU_14_04_NODEJS_10_1_0)
+ * .buildImage(LinuxBuildImage.STANDARD_7_0)
  * .build())
  * .buildSpec(BuildSpec.fromObject(Map.of(
  * "version", "0.2",
@@ -86,7 +88,7 @@ import software.amazon.awscdk.services.lambda.CfnParametersCode
  * situation
  * Project lambdaBuildProject = Project.Builder.create(pipelineStack, "LambdaBuildProject")
  * .environment(BuildEnvironment.builder()
- * .buildImage(LinuxBuildImage.UBUNTU_14_04_NODEJS_10_1_0)
+ * .buildImage(LinuxBuildImage.STANDARD_7_0)
  * .build())
  * .buildSpec(BuildSpec.fromObject(Map.of(
  * "version", "0.2",

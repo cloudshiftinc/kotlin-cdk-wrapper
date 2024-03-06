@@ -72,7 +72,7 @@ public inline fun CfnCampaign.setLimits(block: CfnCampaignLimitsPropertyDsl.() -
     return setLimits(builder.build())
 }
 
-/** The message configuration settings for the campaign. */
+/** The message configuration settings for the treatment. */
 public inline fun CfnCampaign.setMessageConfiguration(
     block: CfnCampaignMessageConfigurationPropertyDsl.() -> Unit = {}
 ) {
@@ -81,7 +81,7 @@ public inline fun CfnCampaign.setMessageConfiguration(
     return setMessageConfiguration(builder.build())
 }
 
-/** The schedule settings for the campaign. */
+/** The schedule settings for the treatment. */
 public inline fun CfnCampaign.setSchedule(block: CfnCampaignSchedulePropertyDsl.() -> Unit = {}) {
     val builder = CfnCampaignSchedulePropertyDsl()
     builder.apply(block)
@@ -145,7 +145,7 @@ public inline fun CfnPushTemplate.setGcm(
     return setGcm(builder.build())
 }
 
-/** The criteria that define the dimensions for the segment. */
+/** An array that defines the dimensions for the segment. */
 public inline fun CfnSegment.setDimensions(
     block: CfnSegmentSegmentDimensionsPropertyDsl.() -> Unit = {}
 ) {

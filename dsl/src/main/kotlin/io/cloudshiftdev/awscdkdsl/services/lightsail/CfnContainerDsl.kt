@@ -68,6 +68,12 @@ import software.constructs.Construct
  * .build())
  * .build())
  * .isDisabled(false)
+ * .privateRegistryAccess(PrivateRegistryAccessProperty.builder()
+ * .ecrImagePullerRole(EcrImagePullerRoleProperty.builder()
+ * .isActive(false)
+ * .principalArn("principalArn")
+ * .build())
+ * .build())
  * .publicDomainNames(List.of(PublicDomainNameProperty.builder()
  * .certificateName("certificateName")
  * .domainNames(List.of("domainNames"))
@@ -152,6 +158,46 @@ public class CfnContainerDsl(
      */
     public fun power(power: String) {
         cdkBuilder.power(power)
+    }
+
+    /**
+     * An object that describes the configuration for the container service to access private
+     * container image repositories, such as Amazon Elastic Container Registry ( Amazon ECR )
+     * private repositories.
+     *
+     * For more information, see
+     * [Configuring access to an Amazon ECR private repository for an Amazon Lightsail container service](https://docs.aws.amazon.com/lightsail/latest/userguide/amazon-lightsail-container-service-ecr-private-repo-access)
+     * in the *Amazon Lightsail Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-privateregistryaccess)
+     *
+     * @param privateRegistryAccess An object that describes the configuration for the container
+     *   service to access private container image repositories, such as Amazon Elastic Container
+     *   Registry ( Amazon ECR ) private repositories.
+     */
+    public fun privateRegistryAccess(privateRegistryAccess: IResolvable) {
+        cdkBuilder.privateRegistryAccess(privateRegistryAccess)
+    }
+
+    /**
+     * An object that describes the configuration for the container service to access private
+     * container image repositories, such as Amazon Elastic Container Registry ( Amazon ECR )
+     * private repositories.
+     *
+     * For more information, see
+     * [Configuring access to an Amazon ECR private repository for an Amazon Lightsail container service](https://docs.aws.amazon.com/lightsail/latest/userguide/amazon-lightsail-container-service-ecr-private-repo-access)
+     * in the *Amazon Lightsail Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-privateregistryaccess)
+     *
+     * @param privateRegistryAccess An object that describes the configuration for the container
+     *   service to access private container image repositories, such as Amazon Elastic Container
+     *   Registry ( Amazon ECR ) private repositories.
+     */
+    public fun privateRegistryAccess(
+        privateRegistryAccess: CfnContainer.PrivateRegistryAccessProperty
+    ) {
+        cdkBuilder.privateRegistryAccess(privateRegistryAccess)
     }
 
     /**

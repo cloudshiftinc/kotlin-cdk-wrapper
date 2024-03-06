@@ -14,6 +14,7 @@ package io.cloudshiftdev.awscdkdsl.services.ec2
 import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -34,6 +35,7 @@ import software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstanceProps
  * CfnVerifiedAccessInstanceProps cfnVerifiedAccessInstanceProps =
  * CfnVerifiedAccessInstanceProps.builder()
  * .description("description")
+ * .fipsEnabled(false)
  * .loggingConfigurations(VerifiedAccessLogsProperty.builder()
  * .cloudWatchLogs(CloudWatchLogsProperty.builder()
  * .enabled(false)
@@ -86,17 +88,27 @@ public class CfnVerifiedAccessInstancePropsDsl {
     }
 
     /**
-     * @param loggingConfigurations The current logging configuration for the Verified Access
-     *   instances.
+     * @param fipsEnabled Indicates whether support for Federal Information Processing Standards
+     *   (FIPS) is enabled on the instance.
      */
+    public fun fipsEnabled(fipsEnabled: Boolean) {
+        cdkBuilder.fipsEnabled(fipsEnabled)
+    }
+
+    /**
+     * @param fipsEnabled Indicates whether support for Federal Information Processing Standards
+     *   (FIPS) is enabled on the instance.
+     */
+    public fun fipsEnabled(fipsEnabled: IResolvable) {
+        cdkBuilder.fipsEnabled(fipsEnabled)
+    }
+
+    /** @param loggingConfigurations The logging configuration for the Verified Access instances. */
     public fun loggingConfigurations(loggingConfigurations: IResolvable) {
         cdkBuilder.loggingConfigurations(loggingConfigurations)
     }
 
-    /**
-     * @param loggingConfigurations The current logging configuration for the Verified Access
-     *   instances.
-     */
+    /** @param loggingConfigurations The logging configuration for the Verified Access instances. */
     public fun loggingConfigurations(
         loggingConfigurations: CfnVerifiedAccessInstance.VerifiedAccessLogsProperty
     ) {

@@ -42,6 +42,7 @@ import software.constructs.Construct
  * .parameterValue("parameterValue")
  * .build()))
  * .enhancedVpcRouting(false)
+ * .maxCapacity(123)
  * .namespaceName("namespaceName")
  * .port(123)
  * .publiclyAccessible(false)
@@ -87,7 +88,7 @@ public class CfnWorkgroupDsl(
      * A list of parameters to set for finer control over a database.
      *
      * Available options are `datestyle` , `enable_user_activity_logging` , `query_group` ,
-     * `search_path` , and `max_query_execution_time` .
+     * `search_path` , `max_query_execution_time` , and `require_ssl` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-configparameters)
      *
@@ -101,7 +102,7 @@ public class CfnWorkgroupDsl(
      * A list of parameters to set for finer control over a database.
      *
      * Available options are `datestyle` , `enable_user_activity_logging` , `query_group` ,
-     * `search_path` , and `max_query_execution_time` .
+     * `search_path` , `max_query_execution_time` , and `require_ssl` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-configparameters)
      *
@@ -115,7 +116,7 @@ public class CfnWorkgroupDsl(
      * A list of parameters to set for finer control over a database.
      *
      * Available options are `datestyle` , `enable_user_activity_logging` , `query_group` ,
-     * `search_path` , and `max_query_execution_time` .
+     * `search_path` , `max_query_execution_time` , and `require_ssl` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-configparameters)
      *
@@ -155,6 +156,18 @@ public class CfnWorkgroupDsl(
      */
     public fun enhancedVpcRouting(enhancedVpcRouting: IResolvable) {
         cdkBuilder.enhancedVpcRouting(enhancedVpcRouting)
+    }
+
+    /**
+     * The max compute capacity of the workgroup in Redshift Processing Units (RPUs).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-maxcapacity)
+     *
+     * @param maxCapacity The max compute capacity of the workgroup in Redshift Processing Units
+     *   (RPUs).
+     */
+    public fun maxCapacity(maxCapacity: Number) {
+        cdkBuilder.maxCapacity(maxCapacity)
     }
 
     /**

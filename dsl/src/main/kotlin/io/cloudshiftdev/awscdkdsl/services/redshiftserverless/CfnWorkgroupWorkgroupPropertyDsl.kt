@@ -51,6 +51,7 @@ import software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup
  * .build()))
  * .build())
  * .enhancedVpcRouting(false)
+ * .maxCapacity(123)
  * .namespaceName("namespaceName")
  * .publiclyAccessible(false)
  * .securityGroupIds(List.of("securityGroupIds"))
@@ -85,10 +86,10 @@ public class CfnWorkgroupWorkgroupPropertyDsl {
 
     /**
      * @param configParameters An array of parameters to set for advanced control over a database.
-     *   The options are `auto_mv` , `datestyle` , `enable_case_sensitivity_identifier` ,
-     *   `enable_user_activity_logging` , `query_group` , , `search_path` , and query monitoring
-     *   metrics that let you define performance boundaries. For more information about query
-     *   monitoring rules and available metrics, see
+     *   The options are `auto_mv` , `datestyle` , `enable_case_sensitive_identifier` ,
+     *   `enable_user_activity_logging` , `query_group` , `search_path` , `require_ssl` , and query
+     *   monitoring metrics that let you define performance boundaries. For more information about
+     *   query monitoring rules and available metrics, see
      *   [Query monitoring metrics for Amazon Redshift Serverless](https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless)
      *   .
      */
@@ -98,10 +99,10 @@ public class CfnWorkgroupWorkgroupPropertyDsl {
 
     /**
      * @param configParameters An array of parameters to set for advanced control over a database.
-     *   The options are `auto_mv` , `datestyle` , `enable_case_sensitivity_identifier` ,
-     *   `enable_user_activity_logging` , `query_group` , , `search_path` , and query monitoring
-     *   metrics that let you define performance boundaries. For more information about query
-     *   monitoring rules and available metrics, see
+     *   The options are `auto_mv` , `datestyle` , `enable_case_sensitive_identifier` ,
+     *   `enable_user_activity_logging` , `query_group` , `search_path` , `require_ssl` , and query
+     *   monitoring metrics that let you define performance boundaries. For more information about
+     *   query monitoring rules and available metrics, see
      *   [Query monitoring metrics for Amazon Redshift Serverless](https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless)
      *   .
      */
@@ -111,10 +112,10 @@ public class CfnWorkgroupWorkgroupPropertyDsl {
 
     /**
      * @param configParameters An array of parameters to set for advanced control over a database.
-     *   The options are `auto_mv` , `datestyle` , `enable_case_sensitivity_identifier` ,
-     *   `enable_user_activity_logging` , `query_group` , , `search_path` , and query monitoring
-     *   metrics that let you define performance boundaries. For more information about query
-     *   monitoring rules and available metrics, see
+     *   The options are `auto_mv` , `datestyle` , `enable_case_sensitive_identifier` ,
+     *   `enable_user_activity_logging` , `query_group` , `search_path` , `require_ssl` , and query
+     *   monitoring metrics that let you define performance boundaries. For more information about
+     *   query monitoring rules and available metrics, see
      *   [Query monitoring metrics for Amazon Redshift Serverless](https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless)
      *   .
      */
@@ -153,6 +154,11 @@ public class CfnWorkgroupWorkgroupPropertyDsl {
      */
     public fun enhancedVpcRouting(enhancedVpcRouting: IResolvable) {
         cdkBuilder.enhancedVpcRouting(enhancedVpcRouting)
+    }
+
+    /** @param maxCapacity the value to be set. */
+    public fun maxCapacity(maxCapacity: Number) {
+        cdkBuilder.maxCapacity(maxCapacity)
     }
 
     /** @param namespaceName The namespace the workgroup is associated with. */

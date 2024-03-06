@@ -31,6 +31,7 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancerPro
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
  * CfnLoadBalancerProps cfnLoadBalancerProps = CfnLoadBalancerProps.builder()
+ * .enforceSecurityGroupInboundRulesOnPrivateLinkTraffic("enforceSecurityGroupInboundRulesOnPrivateLinkTraffic")
  * .ipAddressType("ipAddressType")
  * .loadBalancerAttributes(List.of(LoadBalancerAttributeProperty.builder()
  * .key("key")
@@ -70,6 +71,19 @@ public class CfnLoadBalancerPropsDsl {
     private val _subnets: MutableList<String> = mutableListOf()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
+
+    /**
+     * @param enforceSecurityGroupInboundRulesOnPrivateLinkTraffic Indicates whether to evaluate
+     *   inbound security group rules for traffic sent to a Network Load Balancer through AWS
+     *   PrivateLink .
+     */
+    public fun enforceSecurityGroupInboundRulesOnPrivateLinkTraffic(
+        enforceSecurityGroupInboundRulesOnPrivateLinkTraffic: String
+    ) {
+        cdkBuilder.enforceSecurityGroupInboundRulesOnPrivateLinkTraffic(
+            enforceSecurityGroupInboundRulesOnPrivateLinkTraffic
+        )
+    }
 
     /**
      * @param ipAddressType The IP address type. The possible values are `ipv4` (for IPv4 addresses)
@@ -144,7 +158,7 @@ public class CfnLoadBalancerPropsDsl {
     }
 
     /**
-     * @param subnetMappings The IDs of the public subnets. You can specify only one subnet per
+     * @param subnetMappings The IDs of the subnets. You can specify only one subnet per
      *   Availability Zone. You must specify either subnets or subnet mappings, but not both.
      *
      * [Application Load Balancers] You must specify subnets from at least two Availability Zones.
@@ -169,7 +183,7 @@ public class CfnLoadBalancerPropsDsl {
     }
 
     /**
-     * @param subnetMappings The IDs of the public subnets. You can specify only one subnet per
+     * @param subnetMappings The IDs of the subnets. You can specify only one subnet per
      *   Availability Zone. You must specify either subnets or subnet mappings, but not both.
      *
      * [Application Load Balancers] You must specify subnets from at least two Availability Zones.
@@ -194,7 +208,7 @@ public class CfnLoadBalancerPropsDsl {
     }
 
     /**
-     * @param subnetMappings The IDs of the public subnets. You can specify only one subnet per
+     * @param subnetMappings The IDs of the subnets. You can specify only one subnet per
      *   Availability Zone. You must specify either subnets or subnet mappings, but not both.
      *
      * [Application Load Balancers] You must specify subnets from at least two Availability Zones.
@@ -219,9 +233,9 @@ public class CfnLoadBalancerPropsDsl {
     }
 
     /**
-     * @param subnets The IDs of the public subnets. You can specify only one subnet per
-     *   Availability Zone. You must specify either subnets or subnet mappings, but not both. To
-     *   specify an Elastic IP address, specify subnet mappings instead of subnets.
+     * @param subnets The IDs of the subnets. You can specify only one subnet per Availability Zone.
+     *   You must specify either subnets or subnet mappings, but not both. To specify an Elastic IP
+     *   address, specify subnet mappings instead of subnets.
      *
      * [Application Load Balancers] You must specify subnets from at least two Availability Zones.
      *
@@ -239,9 +253,9 @@ public class CfnLoadBalancerPropsDsl {
     }
 
     /**
-     * @param subnets The IDs of the public subnets. You can specify only one subnet per
-     *   Availability Zone. You must specify either subnets or subnet mappings, but not both. To
-     *   specify an Elastic IP address, specify subnet mappings instead of subnets.
+     * @param subnets The IDs of the subnets. You can specify only one subnet per Availability Zone.
+     *   You must specify either subnets or subnet mappings, but not both. To specify an Elastic IP
+     *   address, specify subnet mappings instead of subnets.
      *
      * [Application Load Balancers] You must specify subnets from at least two Availability Zones.
      *

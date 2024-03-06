@@ -127,12 +127,14 @@ public class CfnRemediationConfigurationPropsDsl {
     }
 
     /**
-     * @param retryAttemptSeconds Maximum time in seconds that AWS Config runs auto-remediation. If
-     *   you do not select a number, the default is 60 seconds.
+     * @param retryAttemptSeconds Time window to determine whether or not to add a remediation
+     *   exception to prevent infinite remediation attempts. If `MaximumAutomaticAttempts`
+     *   remediation attempts have been made under `RetryAttemptSeconds` , a remediation exception
+     *   will be added to the resource. If you do not select a number, the default is 60 seconds.
      *
-     * For example, if you specify RetryAttemptSeconds as 50 seconds and MaximumAutomaticAttempts as
-     * 5, AWS Config will run auto-remediations 5 times within 50 seconds before throwing an
-     * exception.
+     * For example, if you specify `RetryAttemptSeconds` as 50 seconds and
+     * `MaximumAutomaticAttempts` as 5, AWS Config will run auto-remediations 5 times within 50
+     * seconds before adding a remediation exception to the resource.
      */
     public fun retryAttemptSeconds(retryAttemptSeconds: Number) {
         cdkBuilder.retryAttemptSeconds(retryAttemptSeconds)

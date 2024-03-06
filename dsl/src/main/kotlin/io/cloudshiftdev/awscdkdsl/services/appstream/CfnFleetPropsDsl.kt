@@ -165,7 +165,7 @@ public class CfnFleetPropsDsl {
      *   after the time interval in `IdleDisconnectTimeoutInSeconds` elapses, they are disconnected.
      *
      * To prevent users from being disconnected due to inactivity, specify a value of 0. Otherwise,
-     * specify a value between 60 and 3600.
+     * specify a value between 60 and 36000.
      *
      * If you enable this feature, we recommend that you specify a value that corresponds exactly to
      * a whole number of minutes (for example, 60, 120, and 180). If you don't do this, the value is
@@ -243,6 +243,14 @@ public class CfnFleetPropsDsl {
     }
 
     /**
+     * @param maxSessionsPerInstance Max number of user sessions on an instance. This is applicable
+     *   only for multi-session fleets.
+     */
+    public fun maxSessionsPerInstance(maxSessionsPerInstance: Number) {
+        cdkBuilder.maxSessionsPerInstance(maxSessionsPerInstance)
+    }
+
+    /**
      * @param maxUserDurationInSeconds The maximum amount of time that a streaming session can
      *   remain active, in seconds. If users are still connected to a streaming instance five
      *   minutes before this limit is reached, they are prompted to save any open documents before
@@ -263,8 +271,6 @@ public class CfnFleetPropsDsl {
     /**
      * @param platform The platform of the fleet. Platform is a required setting for Elastic fleets,
      *   and is not used for other fleet types.
-     *
-     * *Allowed Values* : `WINDOWS_SERVER_2019` | `AMAZON_LINUX2`
      */
     public fun platform(platform: String) {
         cdkBuilder.platform(platform)

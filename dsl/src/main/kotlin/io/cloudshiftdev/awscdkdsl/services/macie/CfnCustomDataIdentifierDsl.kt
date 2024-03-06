@@ -11,11 +11,14 @@
 
 package io.cloudshiftdev.awscdkdsl.services.macie
 
+import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Number
 import kotlin.String
+import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.macie.CfnCustomDataIdentifier
 import software.constructs.Construct
 
@@ -56,6 +59,10 @@ import software.constructs.Construct
  * .ignoreWords(List.of("ignoreWords"))
  * .keywords(List.of("keywords"))
  * .maximumMatchDistance(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -72,6 +79,8 @@ public class CfnCustomDataIdentifierDsl(
     private val _ignoreWords: MutableList<String> = mutableListOf()
 
     private val _keywords: MutableList<String> = mutableListOf()
+
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
      * A custom description of the custom data identifier. The description can contain 1-512
@@ -206,9 +215,40 @@ public class CfnCustomDataIdentifierDsl(
         cdkBuilder.regex(regex)
     }
 
+    /**
+     * An array of key-value pairs to apply to the custom data identifier.
+     *
+     * For more information, see
+     * [Resource tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-customdataidentifier.html#cfn-macie-customdataidentifier-tags)
+     *
+     * @param tags An array of key-value pairs to apply to the custom data identifier.
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
+
+    /**
+     * An array of key-value pairs to apply to the custom data identifier.
+     *
+     * For more information, see
+     * [Resource tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-customdataidentifier.html#cfn-macie-customdataidentifier-tags)
+     *
+     * @param tags An array of key-value pairs to apply to the custom data identifier.
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
+
     public fun build(): CfnCustomDataIdentifier {
         if (_ignoreWords.isNotEmpty()) cdkBuilder.ignoreWords(_ignoreWords)
         if (_keywords.isNotEmpty()) cdkBuilder.keywords(_keywords)
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
         return cdkBuilder.build()
     }
 }

@@ -37,6 +37,7 @@ import software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProviderProps
  * // the properties below are optional
  * .description("description")
  * .deviceOptions(DeviceOptionsProperty.builder()
+ * .publicSigningKeyUrl("publicSigningKeyUrl")
  * .tenantId("tenantId")
  * .build())
  * .deviceTrustProviderType("deviceTrustProviderType")
@@ -48,6 +49,10 @@ import software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProviderProps
  * .scope("scope")
  * .tokenEndpoint("tokenEndpoint")
  * .userInfoEndpoint("userInfoEndpoint")
+ * .build())
+ * .sseSpecification(SseSpecificationProperty.builder()
+ * .customerManagedKeyEnabled(false)
+ * .kmsKeyArn("kmsKeyArn")
  * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -103,6 +108,18 @@ public class CfnVerifiedAccessTrustProviderPropsDsl {
     /** @param policyReferenceName The identifier to be used when working with policy rules. */
     public fun policyReferenceName(policyReferenceName: String) {
         cdkBuilder.policyReferenceName(policyReferenceName)
+    }
+
+    /** @param sseSpecification The options for additional server side encryption. */
+    public fun sseSpecification(sseSpecification: IResolvable) {
+        cdkBuilder.sseSpecification(sseSpecification)
+    }
+
+    /** @param sseSpecification The options for additional server side encryption. */
+    public fun sseSpecification(
+        sseSpecification: CfnVerifiedAccessTrustProvider.SseSpecificationProperty
+    ) {
+        cdkBuilder.sseSpecification(sseSpecification)
     }
 
     /** @param tags The tags. */

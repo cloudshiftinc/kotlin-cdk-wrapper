@@ -38,6 +38,7 @@ import software.amazon.awscdk.services.stepfunctions.StateProps
  * .resultPath("resultPath")
  * .resultSelector(Map.of(
  * "resultSelectorKey", resultSelector))
+ * .stateName("stateName")
  * .build();
  * ```
  */
@@ -113,6 +114,11 @@ public class StatePropsDsl {
      */
     public fun resultSelector(resultSelector: Map<String, Any>) {
         cdkBuilder.resultSelector(resultSelector)
+    }
+
+    /** @param stateName Optional name for this state. */
+    public fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
     }
 
     public fun build(): StateProps = cdkBuilder.build()

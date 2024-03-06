@@ -16,6 +16,11 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
 
 /**
+ * Amazon Elastic Graphics reached end of life on January 8, 2024.
+ *
+ * For workloads that require graphics acceleration, we recommend that you use Amazon EC2 G4ad,
+ * G4dn, or G5 instances.
+ *
  * Specifies a specification for an Elastic GPU for an Amazon EC2 launch template.
  *
  * `ElasticGpuSpecification` is a property of

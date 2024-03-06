@@ -16,6 +16,9 @@ import kotlin.Number
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
 /**
+ * Configures retry behavior in case Firehose is unable to deliver documents to the Serverless
+ * offering for Amazon OpenSearch Service.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -35,7 +38,13 @@ public class CfnDeliveryStreamAmazonOpenSearchServerlessRetryOptionsPropertyDsl 
         CfnDeliveryStream.AmazonOpenSearchServerlessRetryOptionsProperty.Builder =
         CfnDeliveryStream.AmazonOpenSearchServerlessRetryOptionsProperty.builder()
 
-    /** @param durationInSeconds the value to be set. */
+    /**
+     * @param durationInSeconds After an initial failure to deliver to the Serverless offering for
+     *   Amazon OpenSearch Service, the total amount of time during which Firehose retries delivery
+     *   (including the first attempt). After this time has elapsed, the failed documents are
+     *   written to Amazon S3. Default value is 300 seconds (5 minutes). A value of 0 (zero) results
+     *   in no retries.
+     */
     public fun durationInSeconds(durationInSeconds: Number) {
         cdkBuilder.durationInSeconds(durationInSeconds)
     }

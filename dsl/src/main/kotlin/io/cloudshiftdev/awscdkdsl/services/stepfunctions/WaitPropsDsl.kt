@@ -29,7 +29,7 @@ import software.amazon.awscdk.services.stepfunctions.WaitTime
  * EvaluateExpression createMessage = EvaluateExpression.Builder.create(this, "Create message")
  * // Note: this is a string inside a string.
  * .expression("`Now waiting ${$.waitSeconds} seconds...`")
- * .runtime(Runtime.NODEJS_16_X)
+ * .runtime(Runtime.NODEJS_LATEST)
  * .resultPath("$.message")
  * .build();
  * SnsPublish publishMessage = SnsPublish.Builder.create(this, "Publish message")
@@ -52,6 +52,11 @@ public class WaitPropsDsl {
     /** @param comment An optional description for this state. */
     public fun comment(comment: String) {
         cdkBuilder.comment(comment)
+    }
+
+    /** @param stateName Optional name for this state. */
+    public fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
     }
 
     /** @param time Wait duration. */

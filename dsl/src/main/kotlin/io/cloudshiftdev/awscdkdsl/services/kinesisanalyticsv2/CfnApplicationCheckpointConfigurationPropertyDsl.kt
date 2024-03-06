@@ -63,8 +63,8 @@ public class CfnApplicationCheckpointConfigurationPropertyDsl {
     }
 
     /**
-     * @param checkpointingEnabled Describes whether checkpointing is enabled for a Flink-based
-     *   Kinesis Data Analytics application.
+     * @param checkpointingEnabled Describes whether checkpointing is enabled for a Managed Service
+     *   for Apache Flink application.
      *
      * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
      * `CheckpointingEnabled` value of `true` , even if this value is set to another value using
@@ -75,8 +75,8 @@ public class CfnApplicationCheckpointConfigurationPropertyDsl {
     }
 
     /**
-     * @param checkpointingEnabled Describes whether checkpointing is enabled for a Flink-based
-     *   Kinesis Data Analytics application.
+     * @param checkpointingEnabled Describes whether checkpointing is enabled for a Managed Service
+     *   for Apache Flink application.
      *
      * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
      * `CheckpointingEnabled` value of `true` , even if this value is set to another value using
@@ -87,9 +87,10 @@ public class CfnApplicationCheckpointConfigurationPropertyDsl {
     }
 
     /**
-     * @param configurationType Describes whether the application uses Kinesis Data Analytics'
-     *   default checkpointing behavior. You must set this property to `CUSTOM` in order to set the
-     *   `CheckpointingEnabled` , `CheckpointInterval` , or `MinPauseBetweenCheckpoints` parameters.
+     * @param configurationType Describes whether the application uses Managed Service for Apache
+     *   Flink' default checkpointing behavior. You must set this property to `CUSTOM` in order to
+     *   set the `CheckpointingEnabled` , `CheckpointInterval` , or `MinPauseBetweenCheckpoints`
+     *   parameters.
      *
      * If this value is set to `DEFAULT` , the application will use the following values, even if
      * they are set to other values using APIs or application code:

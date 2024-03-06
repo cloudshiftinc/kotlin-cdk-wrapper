@@ -100,7 +100,7 @@ public class CfnWorkflowPropsDsl {
         cdkBuilder.parameterTemplate(parameterTemplate)
     }
 
-    /** @param storageCapacity A storage capacity for the workflow in gigabytes. */
+    /** @param storageCapacity A storage capacity for the workflow in gibibytes. */
     public fun storageCapacity(storageCapacity: Number) {
         cdkBuilder.storageCapacity(storageCapacity)
     }

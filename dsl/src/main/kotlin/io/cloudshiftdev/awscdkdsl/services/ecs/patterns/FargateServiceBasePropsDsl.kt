@@ -32,6 +32,7 @@ import software.amazon.awscdk.services.ecs.patterns.FargateServiceBaseProps
  * OperatingSystemFamily operatingSystemFamily;
  * FargateServiceBaseProps fargateServiceBaseProps = FargateServiceBaseProps.builder()
  * .cpu(123)
+ * .ephemeralStorageGiB(123)
  * .memoryLimitMiB(123)
  * .platformVersion(FargatePlatformVersion.LATEST)
  * .runtimePlatform(RuntimePlatform.builder()
@@ -68,6 +69,16 @@ public class FargateServiceBasePropsDsl {
      */
     public fun cpu(cpu: Number) {
         cdkBuilder.cpu(cpu)
+    }
+
+    /**
+     * @param ephemeralStorageGiB The amount (in GiB) of ephemeral storage to be allocated to the
+     *   task. The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
+     *
+     * Only supported in Fargate platform version 1.4.0 or later.
+     */
+    public fun ephemeralStorageGiB(ephemeralStorageGiB: Number) {
+        cdkBuilder.ephemeralStorageGiB(ephemeralStorageGiB)
     }
 
     /**

@@ -2129,18 +2129,23 @@ public object iam {
      *
      * Example:
      * ```
-     * // Option 3: Create a new role that allows the account root principal to assume. Add this role
-     * in the `system:masters` and witch to this role from the AWS console.
-     * Cluster cluster;
-     * Role consoleReadOnlyRole = Role.Builder.create(this, "ConsoleReadOnlyRole")
-     * .assumedBy(new ArnPrincipal("arn_for_trusted_principal"))
+     * String crossAccountRoleArn = "arn:aws:iam::OTHERACCOUNT:role/CrossAccountRoleName"; // arn of
+     * role deployed in separate account
+     * String callRegion = "us-west-1"; // sdk call to be made in specified region (optional)
+     * // sdk call to be made in specified region (optional)
+     * AwsCustomResource.Builder.create(this, "CrossAccount")
+     * .onCreate(AwsSdkCall.builder()
+     * .assumedRoleArn(crossAccountRoleArn)
+     * .region(callRegion) // optional
+     * .service("sts")
+     * .action("GetCallerIdentity")
+     * .physicalResourceId(PhysicalResourceId.of("id"))
+     * .build())
+     * .policy(AwsCustomResourcePolicy.fromStatements(List.of(PolicyStatement.fromJson(Map.of(
+     * "Effect", "Allow",
+     * "Action", "sts:AssumeRole",
+     * "Resource", crossAccountRoleArn)))))
      * .build();
-     * consoleReadOnlyRole.addToPolicy(PolicyStatement.Builder.create()
-     * .actions(List.of("eks:AccessKubernetesApi", "eks:Describe*", "eks:List*"))
-     * .resources(List.of(cluster.getClusterArn()))
-     * .build());
-     * // Add this role to system:masters RBAC group
-     * cluster.awsAuth.addMastersRole(consoleReadOnlyRole);
      * ```
      */
     public inline fun policyStatement(block: PolicyStatementDsl.() -> Unit = {}): PolicyStatement {
@@ -2194,15 +2199,15 @@ public object iam {
      *
      * Example:
      * ```
-     * Role lambdaRole = Role.Builder.create(this, "Role")
+     * IChainable definition;
+     * Role role = Role.Builder.create(this, "Role")
      * .assumedBy(new ServicePrincipal("lambda.amazonaws.com"))
-     * .description("Example role...")
      * .build();
-     * Stream stream = Stream.Builder.create(this, "MyEncryptedStream")
-     * .encryption(StreamEncryption.KMS)
+     * StateMachine stateMachine = StateMachine.Builder.create(this, "StateMachine")
+     * .definitionBody(DefinitionBody.fromChainable(definition))
      * .build();
-     * // give lambda permissions to read stream
-     * stream.grantRead(lambdaRole);
+     * // Give role permission to get execution history of ALL executions for the state machine
+     * stateMachine.grantExecution(role, "states:GetExecutionHistory");
      * ```
      */
     public inline fun role(
@@ -2220,15 +2225,18 @@ public object iam {
      *
      * Example:
      * ```
-     * Role lambdaRole = Role.Builder.create(this, "Role")
-     * .assumedBy(new ServicePrincipal("lambda.amazonaws.com"))
-     * .description("Example role...")
+     * // Option 3: Create a new role that allows the account root principal to assume. Add this role
+     * in the `system:masters` and witch to this role from the AWS console.
+     * Cluster cluster;
+     * Role consoleReadOnlyRole = Role.Builder.create(this, "ConsoleReadOnlyRole")
+     * .assumedBy(new ArnPrincipal("arn_for_trusted_principal"))
      * .build();
-     * Stream stream = Stream.Builder.create(this, "MyEncryptedStream")
-     * .encryption(StreamEncryption.KMS)
-     * .build();
-     * // give lambda permissions to read stream
-     * stream.grantRead(lambdaRole);
+     * consoleReadOnlyRole.addToPolicy(PolicyStatement.Builder.create()
+     * .actions(List.of("eks:AccessKubernetesApi", "eks:Describe*", "eks:List*"))
+     * .resources(List.of(cluster.getClusterArn()))
+     * .build());
+     * // Add this role to system:masters RBAC group
+     * cluster.awsAuth.addMastersRole(consoleReadOnlyRole);
      * ```
      */
     public inline fun roleProps(block: RolePropsDsl.() -> Unit = {}): RoleProps {
@@ -2388,12 +2396,13 @@ public object iam {
      *
      * Example:
      * ```
-     * User user = User.Builder.create(this,
-     * "MyUser").password(SecretValue.plainText("1234")).build();
-     * Group group = new Group(this, "MyGroup");
-     * Policy policy = new Policy(this, "MyPolicy");
-     * policy.attachToUser(user);
-     * group.attachInlinePolicy(policy);
+     * IChainable definition;
+     * User user = new User(this, "MyUser");
+     * StateMachine stateMachine = StateMachine.Builder.create(this, "StateMachine")
+     * .definitionBody(DefinitionBody.fromChainable(definition))
+     * .build();
+     * //give user permission to send task success to the state machine
+     * stateMachine.grant(user, "states:SendTaskSuccess");
      * ```
      */
     public inline fun user(

@@ -25,7 +25,7 @@ import software.amazon.awscdk.customresources.SdkCallsPolicyOptions
  * AwsCustomResource getParameter = AwsCustomResource.Builder.create(this, "GetParameter")
  * .onUpdate(AwsSdkCall.builder() // will also be called for a CREATE event
  * .service("SSM")
- * .action("getParameter")
+ * .action("GetParameter")
  * .parameters(Map.of(
  * "Name", "my-parameter",
  * "WithDecryption", true))

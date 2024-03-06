@@ -38,6 +38,10 @@ import software.amazon.awscdk.services.iottwinmaker.CfnComponentTypeProps
  * .componentTypeId("componentTypeId")
  * .workspaceId("workspaceId")
  * // the properties below are optional
+ * .compositeComponentTypes(Map.of(
+ * "compositeComponentTypesKey", CompositeComponentTypeProperty.builder()
+ * .componentTypeId("componentTypeId")
+ * .build()))
  * .description("description")
  * .extendsFrom(List.of("extendsFrom"))
  * .functions(Map.of(
@@ -116,6 +120,32 @@ public class CfnComponentTypePropsDsl {
     /** @param componentTypeId The ID of the component type. */
     public fun componentTypeId(componentTypeId: String) {
         cdkBuilder.componentTypeId(componentTypeId)
+    }
+
+    /**
+     * @param compositeComponentTypes Maps strings to `compositeComponentTypes` of the
+     *   `componentType` . `CompositeComponentType` is referenced by `componentTypeId` .
+     */
+    public fun compositeComponentTypes(compositeComponentTypes: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(compositeComponentTypes)
+        cdkBuilder.compositeComponentTypes(builder.map)
+    }
+
+    /**
+     * @param compositeComponentTypes Maps strings to `compositeComponentTypes` of the
+     *   `componentType` . `CompositeComponentType` is referenced by `componentTypeId` .
+     */
+    public fun compositeComponentTypes(compositeComponentTypes: Map<String, Any>) {
+        cdkBuilder.compositeComponentTypes(compositeComponentTypes)
+    }
+
+    /**
+     * @param compositeComponentTypes Maps strings to `compositeComponentTypes` of the
+     *   `componentType` . `CompositeComponentType` is referenced by `componentTypeId` .
+     */
+    public fun compositeComponentTypes(compositeComponentTypes: IResolvable) {
+        cdkBuilder.compositeComponentTypes(compositeComponentTypes)
     }
 
     /** @param description The description of the component type. */
@@ -260,7 +290,7 @@ public class CfnComponentTypePropsDsl {
         cdkBuilder.tags(tags)
     }
 
-    /** @param workspaceId The ID of the workspace. */
+    /** @param workspaceId The ID of the workspace that contains the component type. */
     public fun workspaceId(workspaceId: String) {
         cdkBuilder.workspaceId(workspaceId)
     }

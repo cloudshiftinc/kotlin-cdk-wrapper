@@ -49,12 +49,18 @@ public class CfnMeshMeshSpecPropertyDsl {
         cdkBuilder.egressFilter(egressFilter)
     }
 
-    /** @param serviceDiscovery the value to be set. */
+    /**
+     * @param serviceDiscovery An object that represents the service discovery information for a
+     *   service mesh.
+     */
     public fun serviceDiscovery(serviceDiscovery: IResolvable) {
         cdkBuilder.serviceDiscovery(serviceDiscovery)
     }
 
-    /** @param serviceDiscovery the value to be set. */
+    /**
+     * @param serviceDiscovery An object that represents the service discovery information for a
+     *   service mesh.
+     */
     public fun serviceDiscovery(serviceDiscovery: CfnMesh.MeshServiceDiscoveryProperty) {
         cdkBuilder.serviceDiscovery(serviceDiscovery)
     }

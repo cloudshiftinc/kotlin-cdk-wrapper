@@ -74,5 +74,16 @@ public class SucceedDsl(
         cdkBuilder.outputPath(outputPath)
     }
 
+    /**
+     * Optional name for this state.
+     *
+     * Default: - The construct ID will be used as state name
+     *
+     * @param stateName Optional name for this state.
+     */
+    public fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
+    }
+
     public fun build(): Succeed = cdkBuilder.build()
 }

@@ -39,6 +39,7 @@ import software.amazon.awscdk.services.networkmanager.CfnConnectPeerProps
  * .build())
  * .coreNetworkAddress("coreNetworkAddress")
  * .insideCidrBlocks(List.of("insideCidrBlocks"))
+ * .subnetArn("subnetArn")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -56,12 +57,12 @@ public class CfnConnectPeerPropsDsl {
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
-    /** @param bgpOptions Bgp options. */
+    /** @param bgpOptions Describes the BGP options. */
     public fun bgpOptions(bgpOptions: IResolvable) {
         cdkBuilder.bgpOptions(bgpOptions)
     }
 
-    /** @param bgpOptions Bgp options. */
+    /** @param bgpOptions Describes the BGP options. */
     public fun bgpOptions(bgpOptions: CfnConnectPeer.BgpOptionsProperty) {
         cdkBuilder.bgpOptions(bgpOptions)
     }
@@ -89,6 +90,11 @@ public class CfnConnectPeerPropsDsl {
     /** @param peerAddress The IP address of the Connect peer. */
     public fun peerAddress(peerAddress: String) {
         cdkBuilder.peerAddress(peerAddress)
+    }
+
+    /** @param subnetArn The subnet ARN of the Connect peer. */
+    public fun subnetArn(subnetArn: String) {
+        cdkBuilder.subnetArn(subnetArn)
     }
 
     /** @param tags The list of key-value tags associated with the Connect peer. */

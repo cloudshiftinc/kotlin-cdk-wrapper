@@ -67,6 +67,7 @@ import software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicyProps
  * .priority(123)
  * .resourceArn("resourceArn")
  * .build()))
+ * .tlsInspectionConfigurationArn("tlsInspectionConfigurationArn")
  * .build())
  * .firewallPolicyName("firewallPolicyName")
  * // the properties below are optional

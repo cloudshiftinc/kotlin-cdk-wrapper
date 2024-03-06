@@ -23,8 +23,11 @@ import software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias
 import software.amazon.awscdk.services.stepfunctions.Chain
 import software.amazon.awscdk.services.stepfunctions.ChainDefinitionBody
 import software.amazon.awscdk.services.stepfunctions.Choice
+import software.amazon.awscdk.services.stepfunctions.Condition
+import software.amazon.awscdk.services.stepfunctions.CustomState
 import software.amazon.awscdk.services.stepfunctions.DefinitionBody
 import software.amazon.awscdk.services.stepfunctions.DefinitionConfig
+import software.amazon.awscdk.services.stepfunctions.DistributedMap
 import software.amazon.awscdk.services.stepfunctions.FileDefinitionBody
 import software.amazon.awscdk.services.stepfunctions.IChainable
 import software.amazon.awscdk.services.stepfunctions.IStateMachine
@@ -232,17 +235,18 @@ public inline fun Chain.toSingleState(
 
 /**
  * @param scope
- * @param sfnPrincipal
+ * @param _sfnPrincipal
  * @param sfnProps
+ * @param graph
  */
 public inline fun ChainDefinitionBody.bind(
     scope: Construct,
-    sfnPrincipal: IPrincipal,
+    _sfnPrincipal: IPrincipal,
     block: StateMachinePropsDsl.() -> Unit = {},
 ): DefinitionConfig {
     val builder = StateMachinePropsDsl()
     builder.apply(block)
-    return bind(scope, sfnPrincipal, builder.build())
+    return bind(scope, _sfnPrincipal, builder.build())
 }
 
 /**
@@ -259,9 +263,58 @@ public inline fun Choice.afterwards(block: AfterwardsOptionsDsl.() -> Unit = {})
 }
 
 /**
+ * If the given condition matches, continue execution with the given state.
+ *
+ * @param condition
+ * @param next
+ * @param options
+ */
+public inline fun Choice.`when`(
+    condition: Condition,
+    next: IChainable,
+    block: ChoiceTransitionOptionsDsl.() -> Unit = {},
+): Choice {
+    val builder = ChoiceTransitionOptionsDsl()
+    builder.apply(block)
+    return `when`(condition, next, builder.build())
+}
+
+/**
+ * Add a recovery handler for this state.
+ *
+ * When a particular error occurs, execution will continue at the error handler instead of failing
+ * the state machine execution.
+ *
+ * @param handler
+ * @param props
+ */
+public inline fun CustomState.addCatch(
+    handler: IChainable,
+    block: CatchPropsDsl.() -> Unit = {}
+): CustomState {
+    val builder = CatchPropsDsl()
+    builder.apply(block)
+    return addCatch(handler, builder.build())
+}
+
+/**
+ * Add retry configuration for this state.
+ *
+ * This controls if and how the execution will be retried if a particular error occurs.
+ *
+ * @param props
+ */
+public inline fun CustomState.addRetry(block: RetryPropsDsl.() -> Unit = {}): CustomState {
+    val builder = RetryPropsDsl()
+    builder.apply(block)
+    return addRetry(builder.build())
+}
+
+/**
  * @param scope
  * @param sfnPrincipal
  * @param sfnProps
+ * @param graph
  */
 public inline fun DefinitionBody.bind(
     arg0: Construct,
@@ -274,9 +327,58 @@ public inline fun DefinitionBody.bind(
 }
 
 /**
+ * Add a recovery handler for this state.
+ *
+ * When a particular error occurs, execution will continue at the error handler instead of failing
+ * the state machine execution.
+ *
+ * @param handler
+ * @param props
+ */
+public inline fun DistributedMap.addCatch(
+    handler: IChainable,
+    block: CatchPropsDsl.() -> Unit = {}
+): DistributedMap {
+    val builder = CatchPropsDsl()
+    builder.apply(block)
+    return addCatch(handler, builder.build())
+}
+
+/**
+ * Add retry configuration for this state.
+ *
+ * This controls if and how the execution will be retried if a particular error occurs.
+ *
+ * @param props
+ */
+public inline fun DistributedMap.addRetry(block: RetryPropsDsl.() -> Unit = {}): DistributedMap {
+    val builder = RetryPropsDsl()
+    builder.apply(block)
+    return addRetry(builder.build())
+}
+
+/**
+ * Define item processor in a Distributed Map.
+ *
+ * A Distributed Map must have a non-empty item processor
+ *
+ * @param processor
+ * @param config
+ */
+public inline fun DistributedMap.itemProcessor(
+    processor: IChainable,
+    block: ProcessorConfigDsl.() -> Unit = {}
+): DistributedMap {
+    val builder = ProcessorConfigDsl()
+    builder.apply(block)
+    return itemProcessor(processor, builder.build())
+}
+
+/**
  * @param scope
  * @param _sfnPrincipal
  * @param _sfnProps
+ * @param _graph
  */
 public inline fun FileDefinitionBody.bind(
     scope: Construct,
@@ -423,6 +525,24 @@ public inline fun Map.addRetry(block: RetryPropsDsl.() -> Unit = {}): Map {
     val builder = RetryPropsDsl()
     builder.apply(block)
     return addRetry(builder.build())
+}
+
+/**
+ * Define item processor in Map.
+ *
+ * A Map must either have a non-empty iterator or a non-empty item processor (mutually exclusive
+ * with `iterator`).
+ *
+ * @param processor
+ * @param config
+ */
+public inline fun Map.itemProcessor(
+    processor: IChainable,
+    block: ProcessorConfigDsl.() -> Unit = {}
+): Map {
+    val builder = ProcessorConfigDsl()
+    builder.apply(block)
+    return itemProcessor(processor, builder.build())
 }
 
 /**
@@ -610,6 +730,7 @@ public inline fun StateMachineFragment.toSingleState(
  * @param _scope
  * @param _sfnPrincipal
  * @param _sfnProps
+ * @param _graph
  */
 public inline fun StringDefinitionBody.bind(
     _scope: Construct,

@@ -403,9 +403,13 @@ public object budgets {
     /**
      * The amount of cost or usage that's measured for a budget.
      *
-     * For example, a `Spend` for `3 GB` of S3 usage has the following parameters:
+     * *Cost example:* A `Spend` for `3 USD` of costs has the following parameters:
      * * An `Amount` of `3`
-     * * A `unit` of `GB`
+     * * A `Unit` of `USD`
+     *
+     * *Usage example:* A `Spend` for `3 GB` of S3 usage has the following parameters:
+     * * An `Amount` of `3`
+     * * A `Unit` of `GB`
      *
      * Example:
      * ```

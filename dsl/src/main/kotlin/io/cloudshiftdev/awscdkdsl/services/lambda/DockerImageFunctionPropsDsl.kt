@@ -41,10 +41,13 @@ import software.amazon.awscdk.services.lambda.IEventSource
 import software.amazon.awscdk.services.lambda.ILayerVersion
 import software.amazon.awscdk.services.lambda.LambdaInsightsVersion
 import software.amazon.awscdk.services.lambda.LogRetentionRetryOptions
+import software.amazon.awscdk.services.lambda.LoggingFormat
 import software.amazon.awscdk.services.lambda.ParamsAndSecretsLayerVersion
 import software.amazon.awscdk.services.lambda.RuntimeManagementMode
+import software.amazon.awscdk.services.lambda.SnapStartConf
 import software.amazon.awscdk.services.lambda.Tracing
 import software.amazon.awscdk.services.lambda.VersionOptions
+import software.amazon.awscdk.services.logs.ILogGroup
 import software.amazon.awscdk.services.logs.RetentionDays
 import software.amazon.awscdk.services.sns.ITopic
 import software.amazon.awscdk.services.sqs.IQueue
@@ -95,6 +98,9 @@ public class DockerImageFunctionPropsDsl {
      * @param allowAllOutbound Whether to allow the Lambda to send all network traffic. If set to
      *   false, you must individually add traffic rules to allow the Lambda to connect to network
      *   targets.
+     *
+     * Do not specify this property if the `securityGroups` or `securityGroup` property is set.
+     * Instead, configure `allowAllOutbound` directly on the security group.
      */
     public fun allowAllOutbound(allowAllOutbound: Boolean) {
         cdkBuilder.allowAllOutbound(allowAllOutbound)
@@ -107,6 +113,11 @@ public class DockerImageFunctionPropsDsl {
      */
     public fun allowPublicSubnet(allowPublicSubnet: Boolean) {
         cdkBuilder.allowPublicSubnet(allowPublicSubnet)
+    }
+
+    /** @param applicationLogLevel Sets the application log level for the function. */
+    public fun applicationLogLevel(applicationLogLevel: String) {
+        cdkBuilder.applicationLogLevel(applicationLogLevel)
     }
 
     /** @param architecture The system architectures compatible with this lambda function. */
@@ -248,6 +259,14 @@ public class DockerImageFunctionPropsDsl {
     }
 
     /**
+     * @param ipv6AllowedForDualStack Allows outbound IPv6 traffic on VPC functions that are
+     *   connected to dual-stack subnets. Only used if 'vpc' is supplied.
+     */
+    public fun ipv6AllowedForDualStack(ipv6AllowedForDualStack: Boolean) {
+        cdkBuilder.ipv6AllowedForDualStack(ipv6AllowedForDualStack)
+    }
+
+    /**
      * @param layers A list of layers to add to the function's execution environment. You can
      *   configure your Lambda function to pull in additional code during initialization in the form
      *   of layers. Layers are packages of libraries or other dependencies that can be used by
@@ -267,10 +286,46 @@ public class DockerImageFunctionPropsDsl {
         _layers.addAll(layers)
     }
 
+    /** @param logFormat Sets the logFormat for the function. */
+    public fun logFormat(logFormat: String) {
+        cdkBuilder.logFormat(logFormat)
+    }
+
+    /**
+     * @param logGroup The log group the function sends logs to. By default, Lambda functions send
+     *   logs to an automatically created default log group named /aws/lambda/<function name>.
+     *   However you cannot change the properties of this auto-created log group using the AWS CDK,
+     *   e.g. you cannot set a different log retention.
+     *
+     * Use the `logGroup` property to create a fully customizable LogGroup ahead of time, and
+     * instruct the Lambda function to send logs to it.
+     *
+     * Providing a user-controlled log group was rolled out to commercial regions on 2023-11-16. If
+     * you are deploying to another type of region, please check regional availability first.
+     */
+    public fun logGroup(logGroup: ILogGroup) {
+        cdkBuilder.logGroup(logGroup)
+    }
+
     /**
      * @param logRetention The number of days log events are kept in CloudWatch Logs. When updating
      *   this property, unsetting it doesn't remove the log retention policy. To remove the
      *   retention policy, set the value to `INFINITE`.
+     *
+     * This is a legacy API and we strongly recommend you move away from it if you can. Instead
+     * create a fully customizable log group with `logs.LogGroup` and use the `logGroup` property to
+     * instruct the Lambda function to send logs to it. Migrating from `logRetention` to `logGroup`
+     * will cause the name of the log group to change. Users and code and referencing the name
+     * verbatim will have to adjust.
+     *
+     * In AWS CDK code, you can access the log group name directly from the LogGroup construct:
+     * ```
+     * import software.amazon.awscdk.services.logs.*;
+     * *
+     * LogGroup myLogGroup;
+     * *
+     * myLogGroup.getLogGroupName();
+     * ```
      */
     public fun logRetention(logRetention: RetentionDays) {
         cdkBuilder.logRetention(logRetention)
@@ -280,6 +335,10 @@ public class DockerImageFunctionPropsDsl {
      * @param logRetentionRetryOptions When log retention is specified, a custom resource attempts
      *   to create the CloudWatch log group. These options control the retry policy when interacting
      *   with CloudWatch APIs.
+     *
+     * This is a legacy API and we strongly recommend you migrate to `logGroup` if you can.
+     * `logGroup` allows you to create a fully customizable log group and instruct the Lambda
+     * function to send logs to it.
      */
     public fun logRetentionRetryOptions(
         logRetentionRetryOptions: LogRetentionRetryOptionsDsl.() -> Unit = {}
@@ -293,6 +352,10 @@ public class DockerImageFunctionPropsDsl {
      * @param logRetentionRetryOptions When log retention is specified, a custom resource attempts
      *   to create the CloudWatch log group. These options control the retry policy when interacting
      *   with CloudWatch APIs.
+     *
+     * This is a legacy API and we strongly recommend you migrate to `logGroup` if you can.
+     * `logGroup` allows you to create a fully customizable log group and instruct the Lambda
+     * function to send logs to it.
      */
     public fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions) {
         cdkBuilder.logRetentionRetryOptions(logRetentionRetryOptions)
@@ -300,10 +363,17 @@ public class DockerImageFunctionPropsDsl {
 
     /**
      * @param logRetentionRole The IAM role for the Lambda function associated with the custom
-     *   resource that sets the retention policy.
+     *   resource that sets the retention policy. This is a legacy API and we strongly recommend you
+     *   migrate to `logGroup` if you can. `logGroup` allows you to create a fully customizable log
+     *   group and instruct the Lambda function to send logs to it.
      */
     public fun logRetentionRole(logRetentionRole: IRole) {
         cdkBuilder.logRetentionRole(logRetentionRole)
+    }
+
+    /** @param loggingFormat Sets the loggingFormat for the function. */
+    public fun loggingFormat(loggingFormat: LoggingFormat) {
+        cdkBuilder.loggingFormat(loggingFormat)
     }
 
     /**
@@ -401,6 +471,19 @@ public class DockerImageFunctionPropsDsl {
      */
     public fun securityGroups(securityGroups: Collection<ISecurityGroup>) {
         _securityGroups.addAll(securityGroups)
+    }
+
+    /**
+     * @param snapStart Enable SnapStart for Lambda Function. SnapStart is currently supported only
+     *   for Java 11, 17 runtime
+     */
+    public fun snapStart(snapStart: SnapStartConf) {
+        cdkBuilder.snapStart(snapStart)
+    }
+
+    /** @param systemLogLevel Sets the system log level for the function. */
+    public fun systemLogLevel(systemLogLevel: String) {
+        cdkBuilder.systemLogLevel(systemLogLevel)
     }
 
     /**

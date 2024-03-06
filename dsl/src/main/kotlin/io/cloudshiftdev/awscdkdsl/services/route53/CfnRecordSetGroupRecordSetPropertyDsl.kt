@@ -48,6 +48,15 @@ import software.amazon.awscdk.services.route53.CfnRecordSetGroup
  * .countryCode("countryCode")
  * .subdivisionCode("subdivisionCode")
  * .build())
+ * .geoProximityLocation(GeoProximityLocationProperty.builder()
+ * .awsRegion("awsRegion")
+ * .bias(123)
+ * .coordinates(CoordinatesProperty.builder()
+ * .latitude("latitude")
+ * .longitude("longitude")
+ * .build())
+ * .localZoneGroup("localZoneGroup")
+ * .build())
  * .healthCheckId("healthCheckId")
  * .hostedZoneId("hostedZoneId")
  * .hostedZoneName("hostedZoneName")
@@ -154,9 +163,6 @@ public class CfnRecordSetGroupRecordSetPropertyDsl {
      *   an IP address of `192.0.2.111` , create a resource record set with a `Type` of `A` and a
      *   `ContinentCode` of `AF` .
      *
-     * Although creating geolocation and geolocation alias resource record sets in a private hosted
-     * zone is allowed, it's not supported.
-     *
      * If you create separate resource record sets for overlapping geographic regions (for example,
      * one resource record set for a continent and one for a country on the same continent),
      * priority goes to the smallest geographic region. This allows you to route most queries for a
@@ -194,9 +200,6 @@ public class CfnRecordSetGroupRecordSetPropertyDsl {
      *   an IP address of `192.0.2.111` , create a resource record set with a `Type` of `A` and a
      *   `ContinentCode` of `AF` .
      *
-     * Although creating geolocation and geolocation alias resource record sets in a private hosted
-     * zone is allowed, it's not supported.
-     *
      * If you create separate resource record sets for overlapping geographic regions (for example,
      * one resource record set for a continent and one for a country on the same continent),
      * priority goes to the smallest geographic region. This allows you to route most queries for a
@@ -225,6 +228,24 @@ public class CfnRecordSetGroupRecordSetPropertyDsl {
      */
     public fun geoLocation(geoLocation: CfnRecordSetGroup.GeoLocationProperty) {
         cdkBuilder.geoLocation(geoLocation)
+    }
+
+    /**
+     * @param geoProximityLocation A complex type that contains information about a geographic
+     *   location.
+     */
+    public fun geoProximityLocation(geoProximityLocation: IResolvable) {
+        cdkBuilder.geoProximityLocation(geoProximityLocation)
+    }
+
+    /**
+     * @param geoProximityLocation A complex type that contains information about a geographic
+     *   location.
+     */
+    public fun geoProximityLocation(
+        geoProximityLocation: CfnRecordSetGroup.GeoProximityLocationProperty
+    ) {
+        cdkBuilder.geoProximityLocation(geoProximityLocation)
     }
 
     /**
@@ -425,11 +446,6 @@ public class CfnRecordSetGroupRecordSetPropertyDsl {
      *   it as an * character (ASCII 42), not as a wildcard.
      *
      * You can't use the * wildcard for resource records sets that have a type of NS.
-     *
-     * You can use the * wildcard as the leftmost label in a domain name, for example,
-     * `*.example.com` . You can't use an * for one of the middle labels, for example,
-     * `marketing.*.example.com` . In addition, the * must replace the entire label; for example,
-     * you can't specify `prod*.example.com` .
      */
     public fun name(name: String) {
         cdkBuilder.name(name)

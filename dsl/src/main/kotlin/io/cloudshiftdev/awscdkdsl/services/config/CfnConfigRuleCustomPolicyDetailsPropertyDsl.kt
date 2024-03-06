@@ -18,10 +18,9 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.config.CfnConfigRule
 
 /**
- * Provides the runtime system, policy definition, and whether debug logging enabled.
- *
- * You can specify the following CustomPolicyDetails parameter values only for AWS Config Custom
- * Policy rules.
+ * Provides the CustomPolicyDetails, the rule owner ( `AWS` for managed rules, `CUSTOM_POLICY` for
+ * Custom Policy rules, and `CUSTOM_LAMBDA` for Custom Lambda rules), the rule identifier, and the
+ * events that cause the evaluation of your AWS resources.
  *
  * Example:
  * ```

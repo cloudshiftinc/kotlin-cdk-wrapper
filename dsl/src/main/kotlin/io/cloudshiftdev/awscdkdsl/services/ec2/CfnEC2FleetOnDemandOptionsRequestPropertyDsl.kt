@@ -85,6 +85,14 @@ public class CfnEC2FleetOnDemandOptionsRequestPropertyDsl {
     /**
      * @param maxTotalPrice The maximum amount per hour for On-Demand Instances that you're willing
      *   to pay.
+     *
+     * If your fleet includes T instances that are configured as `unlimited` , and if their average
+     * CPU usage exceeds the baseline utilization, you will incur a charge for surplus credits. The
+     * `MaxTotalPrice` does not account for surplus credits, and, if you use surplus credits, your
+     * final cost might be higher than what you specified for `MaxTotalPrice` . For more
+     * information, see
+     * [Surplus credits can incur charges](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits)
+     * in the *EC2 User Guide* .
      */
     public fun maxTotalPrice(maxTotalPrice: String) {
         cdkBuilder.maxTotalPrice(maxTotalPrice)

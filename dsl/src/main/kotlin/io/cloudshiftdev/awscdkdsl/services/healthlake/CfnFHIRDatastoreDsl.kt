@@ -98,22 +98,24 @@ public class CfnFHIRDatastoreDsl(
     }
 
     /**
-     * The identity provider configuration for the datastore.
+     * The identity provider configuration that you gave when the data store was created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-identityproviderconfiguration)
      *
-     * @param identityProviderConfiguration The identity provider configuration for the datastore.
+     * @param identityProviderConfiguration The identity provider configuration that you gave when
+     *   the data store was created.
      */
     public fun identityProviderConfiguration(identityProviderConfiguration: IResolvable) {
         cdkBuilder.identityProviderConfiguration(identityProviderConfiguration)
     }
 
     /**
-     * The identity provider configuration for the datastore.
+     * The identity provider configuration that you gave when the data store was created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-identityproviderconfiguration)
      *
-     * @param identityProviderConfiguration The identity provider configuration for the datastore.
+     * @param identityProviderConfiguration The identity provider configuration that you gave when
+     *   the data store was created.
      */
     public fun identityProviderConfiguration(
         identityProviderConfiguration: CfnFHIRDatastore.IdentityProviderConfigurationProperty

@@ -253,6 +253,7 @@ public object patterns {
      * .build()))
      * .certificate(certificate)
      * .circuitBreaker(DeploymentCircuitBreaker.builder()
+     * .enable(false)
      * .rollback(false)
      * .build())
      * .cloudMapOptions(CloudMapOptions.builder()
@@ -819,6 +820,7 @@ public object patterns {
      * OperatingSystemFamily operatingSystemFamily;
      * FargateServiceBaseProps fargateServiceBaseProps = FargateServiceBaseProps.builder()
      * .cpu(123)
+     * .ephemeralStorageGiB(123)
      * .memoryLimitMiB(123)
      * .platformVersion(FargatePlatformVersion.LATEST)
      * .runtimePlatform(RuntimePlatform.builder()
@@ -1005,6 +1007,7 @@ public object patterns {
      * .weight(123)
      * .build()))
      * .circuitBreaker(DeploymentCircuitBreaker.builder()
+     * .enable(false)
      * .rollback(false)
      * .build())
      * .cloudMapOptions(CloudMapOptions.builder()
@@ -1596,8 +1599,6 @@ public object patterns {
      * Vpc vpc;
      * QueueProcessingServiceBaseProps queueProcessingServiceBaseProps =
      * QueueProcessingServiceBaseProps.builder()
-     * .image(containerImage)
-     * // the properties below are optional
      * .capacityProviderStrategies(List.of(CapacityProviderStrategy.builder()
      * .capacityProvider("capacityProvider")
      * // the properties below are optional
@@ -1605,19 +1606,24 @@ public object patterns {
      * .weight(123)
      * .build()))
      * .circuitBreaker(DeploymentCircuitBreaker.builder()
+     * .enable(false)
      * .rollback(false)
      * .build())
      * .cluster(cluster)
      * .command(List.of("command"))
+     * .cooldown(Duration.minutes(30))
+     * .cpuTargetUtilizationPercent(123)
      * .deploymentController(DeploymentController.builder()
      * .type(DeploymentControllerType.ECS)
      * .build())
+     * .disableCpuBasedScaling(false)
      * .enableECSManagedTags(false)
      * .enableExecuteCommand(false)
      * .enableLogging(false)
      * .environment(Map.of(
      * "environmentKey", "environment"))
      * .family("family")
+     * .image(containerImage)
      * .logDriver(logDriver)
      * .maxHealthyPercent(123)
      * .maxReceiveCount(123)

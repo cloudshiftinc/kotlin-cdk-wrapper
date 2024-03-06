@@ -45,6 +45,36 @@ import software.constructs.Construct
  * .columnType("columnType")
  * .build()))
  * // the properties below are optional
+ * .autoScalingSpecifications(AutoScalingSpecificationProperty.builder()
+ * .readCapacityAutoScaling(AutoScalingSettingProperty.builder()
+ * .autoScalingDisabled(false)
+ * .maximumUnits(123)
+ * .minimumUnits(123)
+ * .scalingPolicy(ScalingPolicyProperty.builder()
+ * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
+ * .targetValue(123)
+ * // the properties below are optional
+ * .disableScaleIn(false)
+ * .scaleInCooldown(123)
+ * .scaleOutCooldown(123)
+ * .build())
+ * .build())
+ * .build())
+ * .writeCapacityAutoScaling(AutoScalingSettingProperty.builder()
+ * .autoScalingDisabled(false)
+ * .maximumUnits(123)
+ * .minimumUnits(123)
+ * .scalingPolicy(ScalingPolicyProperty.builder()
+ * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
+ * .targetValue(123)
+ * // the properties below are optional
+ * .disableScaleIn(false)
+ * .scaleInCooldown(123)
+ * .scaleOutCooldown(123)
+ * .build())
+ * .build())
+ * .build())
+ * .build())
  * .billingMode(BillingModeProperty.builder()
  * .mode("mode")
  * // the properties below are optional
@@ -73,6 +103,25 @@ import software.constructs.Construct
  * .columnName("columnName")
  * .columnType("columnType")
  * .build()))
+ * .replicaSpecifications(List.of(ReplicaSpecificationProperty.builder()
+ * .region("region")
+ * // the properties below are optional
+ * .readCapacityAutoScaling(AutoScalingSettingProperty.builder()
+ * .autoScalingDisabled(false)
+ * .maximumUnits(123)
+ * .minimumUnits(123)
+ * .scalingPolicy(ScalingPolicyProperty.builder()
+ * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
+ * .targetValue(123)
+ * // the properties below are optional
+ * .disableScaleIn(false)
+ * .scaleInCooldown(123)
+ * .scaleOutCooldown(123)
+ * .build())
+ * .build())
+ * .build())
+ * .readCapacityUnits(123)
+ * .build()))
  * .tableName("tableName")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -96,7 +145,35 @@ public class CfnTableDsl(
 
     private val _regularColumns: MutableList<Any> = mutableListOf()
 
+    private val _replicaSpecifications: MutableList<Any> = mutableListOf()
+
     private val _tags: MutableList<CfnTag> = mutableListOf()
+
+    /**
+     * The optional auto scaling capacity settings for a table in provisioned capacity mode.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-autoscalingspecifications)
+     *
+     * @param autoScalingSpecifications The optional auto scaling capacity settings for a table in
+     *   provisioned capacity mode.
+     */
+    public fun autoScalingSpecifications(autoScalingSpecifications: IResolvable) {
+        cdkBuilder.autoScalingSpecifications(autoScalingSpecifications)
+    }
+
+    /**
+     * The optional auto scaling capacity settings for a table in provisioned capacity mode.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-autoscalingspecifications)
+     *
+     * @param autoScalingSpecifications The optional auto scaling capacity settings for a table in
+     *   provisioned capacity mode.
+     */
+    public fun autoScalingSpecifications(
+        autoScalingSpecifications: CfnTable.AutoScalingSpecificationProperty
+    ) {
+        cdkBuilder.autoScalingSpecifications(autoScalingSpecifications)
+    }
 
     /**
      * The billing mode for the table, which determines how you'll be charged for reads and writes:.
@@ -222,7 +299,7 @@ public class CfnTableDsl(
 
     /**
      * The encryption at rest options for the table.
-     * * *AWS owned key* (default) - The key is owned by Amazon Keyspaces.
+     * * *AWS owned key* (default) - The key is owned by Amazon Keyspaces .
      * * *Customer managed key* - The key is stored in your account and is created, owned, and
      *   managed by you.
      *
@@ -243,7 +320,7 @@ public class CfnTableDsl(
 
     /**
      * The encryption at rest options for the table.
-     * * *AWS owned key* (default) - The key is owned by Amazon Keyspaces.
+     * * *AWS owned key* (default) - The key is owned by Amazon Keyspaces .
      * * *Customer managed key* - The key is stored in your account and is created, owned, and
      *   managed by you.
      *
@@ -392,6 +469,60 @@ public class CfnTableDsl(
     }
 
     /**
+     * The AWS Region specific settings of a multi-Region table.
+     *
+     * For a multi-Region table, you can configure the table's read capacity differently per AWS
+     * Region. You can do this by configuring the following parameters.
+     * * `region` : The Region where these settings are applied. (Required)
+     * * `readCapacityUnits` : The provisioned read capacity units. (Optional)
+     * * `readCapacityAutoScaling` : The read capacity auto scaling settings for the table.
+     *   (Optional)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-replicaspecifications)
+     *
+     * @param replicaSpecifications The AWS Region specific settings of a multi-Region table.
+     */
+    public fun replicaSpecifications(vararg replicaSpecifications: Any) {
+        _replicaSpecifications.addAll(listOf(*replicaSpecifications))
+    }
+
+    /**
+     * The AWS Region specific settings of a multi-Region table.
+     *
+     * For a multi-Region table, you can configure the table's read capacity differently per AWS
+     * Region. You can do this by configuring the following parameters.
+     * * `region` : The Region where these settings are applied. (Required)
+     * * `readCapacityUnits` : The provisioned read capacity units. (Optional)
+     * * `readCapacityAutoScaling` : The read capacity auto scaling settings for the table.
+     *   (Optional)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-replicaspecifications)
+     *
+     * @param replicaSpecifications The AWS Region specific settings of a multi-Region table.
+     */
+    public fun replicaSpecifications(replicaSpecifications: Collection<Any>) {
+        _replicaSpecifications.addAll(replicaSpecifications)
+    }
+
+    /**
+     * The AWS Region specific settings of a multi-Region table.
+     *
+     * For a multi-Region table, you can configure the table's read capacity differently per AWS
+     * Region. You can do this by configuring the following parameters.
+     * * `region` : The Region where these settings are applied. (Required)
+     * * `readCapacityUnits` : The provisioned read capacity units. (Optional)
+     * * `readCapacityAutoScaling` : The read capacity auto scaling settings for the table.
+     *   (Optional)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-replicaspecifications)
+     *
+     * @param replicaSpecifications The AWS Region specific settings of a multi-Region table.
+     */
+    public fun replicaSpecifications(replicaSpecifications: IResolvable) {
+        cdkBuilder.replicaSpecifications(replicaSpecifications)
+    }
+
+    /**
      * The name of the table to be created.
      *
      * The table name is case sensitive. If you don't specify a name, AWS CloudFormation generates a
@@ -450,6 +581,8 @@ public class CfnTableDsl(
             cdkBuilder.clusteringKeyColumns(_clusteringKeyColumns)
         if (_partitionKeyColumns.isNotEmpty()) cdkBuilder.partitionKeyColumns(_partitionKeyColumns)
         if (_regularColumns.isNotEmpty()) cdkBuilder.regularColumns(_regularColumns)
+        if (_replicaSpecifications.isNotEmpty())
+            cdkBuilder.replicaSpecifications(_replicaSpecifications)
         if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
         return cdkBuilder.build()
     }

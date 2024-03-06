@@ -18,9 +18,9 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
 /**
- * List of default values defined for a given string dataset parameter type.
+ * A list of default values for a given string dataset parameter type.
  *
- * Currently only static values are supported.</p>
+ * This structure only accepts static values.
  *
  * Example:
  * ```
@@ -42,12 +42,12 @@ public class CfnDataSetStringDatasetParameterDefaultValuesPropertyDsl {
 
     private val _staticValues: MutableList<String> = mutableListOf()
 
-    /** @param staticValues the value to be set. */
+    /** @param staticValues A list of static default values for a given string parameter. */
     public fun staticValues(vararg staticValues: String) {
         _staticValues.addAll(listOf(*staticValues))
     }
 
-    /** @param staticValues the value to be set. */
+    /** @param staticValues A list of static default values for a given string parameter. */
     public fun staticValues(staticValues: Collection<String>) {
         _staticValues.addAll(staticValues)
     }

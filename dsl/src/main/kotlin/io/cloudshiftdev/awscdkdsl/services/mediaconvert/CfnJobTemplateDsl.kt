@@ -187,11 +187,11 @@ public class CfnJobTemplateDsl(
     }
 
     /**
-     * The name of the job template you are creating.
+     * Name of the output group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-jobtemplate.html#cfn-mediaconvert-jobtemplate-name)
      *
-     * @param name The name of the job template you are creating.
+     * @param name Name of the output group.
      */
     public fun name(name: String) {
         cdkBuilder.name(name)

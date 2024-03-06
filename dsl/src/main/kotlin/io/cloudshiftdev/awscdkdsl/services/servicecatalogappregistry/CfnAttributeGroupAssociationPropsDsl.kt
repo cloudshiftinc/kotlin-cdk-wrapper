@@ -43,7 +43,7 @@ public class CfnAttributeGroupAssociationPropsDsl {
     }
 
     /**
-     * @param attributeGroup The name or ID of the attribute group that holds the attributes to
+     * @param attributeGroup The name or ID of the attribute group which holds the attributes that
      *   describe the application.
      */
     public fun attributeGroup(attributeGroup: String) {

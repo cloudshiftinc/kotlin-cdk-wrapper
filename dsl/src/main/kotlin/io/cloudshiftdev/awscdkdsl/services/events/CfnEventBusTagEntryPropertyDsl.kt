@@ -16,10 +16,6 @@ import kotlin.String
 import software.amazon.awscdk.services.events.CfnEventBus
 
 /**
- * A key-value pair associated with an AWS resource.
- *
- * In EventBridge, rules and event buses support tagging.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -38,15 +34,12 @@ public class CfnEventBusTagEntryPropertyDsl {
     private val cdkBuilder: CfnEventBus.TagEntryProperty.Builder =
         CfnEventBus.TagEntryProperty.builder()
 
-    /**
-     * @param key A string you can use to assign a value. The combination of tag keys and values can
-     *   help you organize and categorize your resources.
-     */
+    /** @param key the value to be set. */
     public fun key(key: String) {
         cdkBuilder.key(key)
     }
 
-    /** @param value The value for the specified tag key. */
+    /** @param value the value to be set. */
     public fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
     }

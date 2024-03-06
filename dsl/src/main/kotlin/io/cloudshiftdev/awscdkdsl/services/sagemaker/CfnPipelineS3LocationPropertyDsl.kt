@@ -16,6 +16,10 @@ import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnPipeline
 
 /**
+ * The location of the pipeline definition stored in Amazon S3.
+ *
+ * If specified, SageMaker will retrieve the pipeline definition from this location.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -37,27 +41,26 @@ public class CfnPipelineS3LocationPropertyDsl {
     private val cdkBuilder: CfnPipeline.S3LocationProperty.Builder =
         CfnPipeline.S3LocationProperty.builder()
 
-    /** @param bucket The name of the S3 bucket where the PipelineDefinition file is stored. */
+    /** @param bucket The name of the S3 bucket. */
     public fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
     }
 
-    /**
-     * @param eTag The Amazon S3 ETag (a file checksum) of the PipelineDefinition file. If you don't
-     *   specify a value, SageMaker skips ETag validation of your PipelineDefinition file.
-     */
+    /** @param eTag A file checksum of the pipeline definition file. */
     public fun eTag(eTag: String) {
         cdkBuilder.eTag(eTag)
     }
 
-    /** @param key The file name of the PipelineDefinition file (Amazon S3 object name). */
+    /**
+     * @param key The object key (or key name) which uniquely identifies the object in an S3 bucket.
+     */
     public fun key(key: String) {
         cdkBuilder.key(key)
     }
 
     /**
-     * @param version For versioning-enabled buckets, a specific version of the PipelineDefinition
-     *   file.
+     * @param version The version ID of the pipeline definition file. If not specified, Amazon
+     *   SageMaker will retrieve the latest version.
      */
     public fun version(version: String) {
         cdkBuilder.version(version)

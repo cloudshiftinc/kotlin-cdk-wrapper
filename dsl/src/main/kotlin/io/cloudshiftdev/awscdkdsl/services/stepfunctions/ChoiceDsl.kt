@@ -23,42 +23,23 @@ import software.constructs.Construct
  *
  * Example:
  * ```
- * import software.amazon.awscdk.services.lambda.*;
- * Function submitLambda;
- * Function getStatusLambda;
- * LambdaInvoke submitJob = LambdaInvoke.Builder.create(this, "Submit Job")
- * .lambdaFunction(submitLambda)
- * // Lambda's result is in the attribute `guid`
- * .outputPath("$.guid")
+ * Map map = Map.Builder.create(this, "Map State")
+ * .maxConcurrency(1)
+ * .itemsPath(JsonPath.stringAt("$.inputForMap"))
+ * .itemSelector(Map.of(
+ * "item", JsonPath.stringAt("$.Map.Item.Value")))
+ * .resultPath("$.mapOutput")
  * .build();
- * Wait waitX = Wait.Builder.create(this, "Wait X Seconds")
- * .time(WaitTime.secondsPath("$.waitSeconds"))
- * .build();
- * LambdaInvoke getStatus = LambdaInvoke.Builder.create(this, "Get Job Status")
- * .lambdaFunction(getStatusLambda)
- * // Pass just the field named "guid" into the Lambda, put the
- * // Lambda's result in a field called "status" in the response
- * .inputPath("$.guid")
- * .outputPath("$.status")
- * .build();
- * Fail jobFailed = Fail.Builder.create(this, "Job Failed")
- * .cause("AWS Batch Job Failed")
- * .error("DescribeJob returned FAILED")
- * .build();
- * LambdaInvoke finalStatus = LambdaInvoke.Builder.create(this, "Get Final Job Status")
- * .lambdaFunction(getStatusLambda)
- * // Use "guid" field as input
- * .inputPath("$.guid")
- * .outputPath("$.Payload")
- * .build();
- * Chain definition = submitJob.next(waitX).next(getStatus).next(new Choice(this, "Job
- * Complete?").when(Condition.stringEquals("$.status", "FAILED"),
- * jobFailed).when(Condition.stringEquals("$.status", "SUCCEEDED"), finalStatus).otherwise(waitX));
- * StateMachine.Builder.create(this, "StateMachine")
- * .definition(definition)
- * .timeout(Duration.minutes(5))
- * .comment("a super cool state machine")
- * .build();
+ * // The Map iterator can contain a IChainable, which can be an individual or multiple steps
+ * chained together.
+ * // Below example is with a Choice and Pass step
+ * Choice choice = new Choice(this, "Choice");
+ * Condition condition1 = Condition.stringEquals("$.item.status", "SUCCESS");
+ * Pass step1 = new Pass(this, "Step1");
+ * Pass step2 = new Pass(this, "Step2");
+ * Pass finish = new Pass(this, "Finish");
+ * Chain definition = choice.when(condition1, step1).otherwise(step2).afterwards().next(finish);
+ * map.itemProcessor(definition);
  * ```
  */
 @CdkDslMarker
@@ -107,6 +88,17 @@ public class ChoiceDsl(
      */
     public fun outputPath(outputPath: String) {
         cdkBuilder.outputPath(outputPath)
+    }
+
+    /**
+     * Optional name for this state.
+     *
+     * Default: - The construct ID will be used as state name
+     *
+     * @param stateName Optional name for this state.
+     */
+    public fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
     }
 
     public fun build(): Choice = cdkBuilder.build()

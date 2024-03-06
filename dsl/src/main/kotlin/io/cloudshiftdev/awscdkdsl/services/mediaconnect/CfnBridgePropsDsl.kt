@@ -124,8 +124,8 @@ public class CfnBridgePropsDsl {
     }
 
     /**
-     * @param name The network output name. This name is used to reference the output and must be
-     *   unique among outputs in this bridge.
+     * @param name The name of the bridge. This name can not be modified after the bridge is
+     *   created.
      */
     public fun name(name: String) {
         cdkBuilder.name(name)

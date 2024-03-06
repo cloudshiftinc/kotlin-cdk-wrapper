@@ -2232,7 +2232,10 @@ public object ses {
      *
      * Example:
      * ```
-     * new DedicatedIpPool(this, "Pool");
+     * DedicatedIpPool.Builder.create(this, "Pool")
+     * .dedicatedIpPoolName("mypool")
+     * .scalingMode(ScalingMode.STANDARD)
+     * .build();
      * ```
      */
     public inline fun dedicatedIpPool(
@@ -2250,11 +2253,9 @@ public object ses {
      *
      * Example:
      * ```
-     * // The code below shows an example of how to instantiate this type.
-     * // The values are placeholders you should change.
-     * import software.amazon.awscdk.services.ses.*;
-     * DedicatedIpPoolProps dedicatedIpPoolProps = DedicatedIpPoolProps.builder()
-     * .dedicatedIpPoolName("dedicatedIpPoolName")
+     * DedicatedIpPool.Builder.create(this, "Pool")
+     * .dedicatedIpPoolName("mypool")
+     * .scalingMode(ScalingMode.STANDARD)
      * .build();
      * ```
      */
@@ -2381,11 +2382,12 @@ public object ses {
      *
      * Example:
      * ```
-     * IPublicHostedZone myHostedZone;
+     * import software.amazon.awscdk.services.iam.*;
+     * User user;
      * EmailIdentity identity = EmailIdentity.Builder.create(this, "Identity")
-     * .identity(Identity.publicHostedZone(myHostedZone))
-     * .mailFromDomain("mail.cdk.dev")
+     * .identity(Identity.domain("cdk.dev"))
      * .build();
+     * identity.grantSendEmail(user);
      * ```
      */
     public inline fun emailIdentity(
@@ -2403,11 +2405,12 @@ public object ses {
      *
      * Example:
      * ```
-     * IPublicHostedZone myHostedZone;
+     * import software.amazon.awscdk.services.iam.*;
+     * User user;
      * EmailIdentity identity = EmailIdentity.Builder.create(this, "Identity")
-     * .identity(Identity.publicHostedZone(myHostedZone))
-     * .mailFromDomain("mail.cdk.dev")
+     * .identity(Identity.domain("cdk.dev"))
      * .build();
+     * identity.grantSendEmail(user);
      * ```
      */
     public inline fun emailIdentityProps(

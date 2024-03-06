@@ -140,6 +140,7 @@ import software.amazon.awscdk.services.quicksight.CfnDataSetProps
  * .newColumnType("newColumnType")
  * // the properties below are optional
  * .format("format")
+ * .subType("subType")
  * .build())
  * .createColumnsOperation(CreateColumnsOperationProperty.builder()
  * .columns(List.of(CalculatedColumnProperty.builder()
@@ -191,6 +192,8 @@ import software.amazon.awscdk.services.quicksight.CfnDataSetProps
  * .columns(List.of(InputColumnProperty.builder()
  * .name("name")
  * .type("type")
+ * // the properties below are optional
+ * .subType("subType")
  * .build()))
  * .dataSourceArn("dataSourceArn")
  * .name("name")
@@ -201,6 +204,8 @@ import software.amazon.awscdk.services.quicksight.CfnDataSetProps
  * .inputColumns(List.of(InputColumnProperty.builder()
  * .name("name")
  * .type("type")
+ * // the properties below are optional
+ * .subType("subType")
  * .build()))
  * .name("name")
  * // the properties below are optional
@@ -212,6 +217,8 @@ import software.amazon.awscdk.services.quicksight.CfnDataSetProps
  * .inputColumns(List.of(InputColumnProperty.builder()
  * .name("name")
  * .type("type")
+ * // the properties below are optional
+ * .subType("subType")
  * .build()))
  * // the properties below are optional
  * .uploadSettings(UploadSettingsProperty.builder()
@@ -327,12 +334,12 @@ public class CfnDataSetPropsDsl {
         cdkBuilder.dataSetId(dataSetId)
     }
 
-    /** @param dataSetRefreshProperties The dataset refresh properties for the dataset.</p>. */
+    /** @param dataSetRefreshProperties The refresh properties of a dataset. */
     public fun dataSetRefreshProperties(dataSetRefreshProperties: IResolvable) {
         cdkBuilder.dataSetRefreshProperties(dataSetRefreshProperties)
     }
 
-    /** @param dataSetRefreshProperties The dataset refresh properties for the dataset.</p>. */
+    /** @param dataSetRefreshProperties The refresh properties of a dataset. */
     public fun dataSetRefreshProperties(
         dataSetRefreshProperties: CfnDataSet.DataSetRefreshPropertiesProperty
     ) {
@@ -357,17 +364,17 @@ public class CfnDataSetPropsDsl {
         cdkBuilder.dataSetUsageConfiguration(dataSetUsageConfiguration)
     }
 
-    /** @param datasetParameters The parameters declared in the dataset.</p>. */
+    /** @param datasetParameters The parameters that are declared in a dataset. */
     public fun datasetParameters(vararg datasetParameters: Any) {
         _datasetParameters.addAll(listOf(*datasetParameters))
     }
 
-    /** @param datasetParameters The parameters declared in the dataset.</p>. */
+    /** @param datasetParameters The parameters that are declared in a dataset. */
     public fun datasetParameters(datasetParameters: Collection<Any>) {
         _datasetParameters.addAll(datasetParameters)
     }
 
-    /** @param datasetParameters The parameters declared in the dataset.</p>. */
+    /** @param datasetParameters The parameters that are declared in a dataset. */
     public fun datasetParameters(datasetParameters: IResolvable) {
         cdkBuilder.datasetParameters(datasetParameters)
     }

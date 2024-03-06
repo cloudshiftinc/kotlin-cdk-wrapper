@@ -249,6 +249,7 @@ import software.constructs.Construct
  * .build())
  * .modelPackageVersion(123)
  * .samplePayloadUrl("samplePayloadUrl")
+ * .skipModelValidation("skipModelValidation")
  * .sourceAlgorithmSpecification(SourceAlgorithmSpecificationProperty.builder()
  * .sourceAlgorithms(List.of(SourceAlgorithmProperty.builder()
  * .algorithmName("algorithmName")
@@ -712,6 +713,17 @@ public class CfnModelPackageDsl(
      */
     public fun samplePayloadUrl(samplePayloadUrl: String) {
         cdkBuilder.samplePayloadUrl(samplePayloadUrl)
+    }
+
+    /**
+     * Indicates if you want to skip model validation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-skipmodelvalidation)
+     *
+     * @param skipModelValidation Indicates if you want to skip model validation.
+     */
+    public fun skipModelValidation(skipModelValidation: String) {
+        cdkBuilder.skipModelValidation(skipModelValidation)
     }
 
     /**

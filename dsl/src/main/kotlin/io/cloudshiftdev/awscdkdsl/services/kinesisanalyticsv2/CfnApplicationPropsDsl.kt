@@ -244,18 +244,16 @@ public class CfnApplicationPropsDsl {
     }
 
     /**
-     * @param runConfiguration Identifies the run configuration (start parameters) of a Kinesis Data
-     *   Analytics application. This section is evaluated only on stack updates for applications in
-     *   running RUNNING state and has no effect during manual application start.
+     * @param runConfiguration Describes the starting parameters for an Managed Service for Apache
+     *   Flink application.
      */
     public fun runConfiguration(runConfiguration: IResolvable) {
         cdkBuilder.runConfiguration(runConfiguration)
     }
 
     /**
-     * @param runConfiguration Identifies the run configuration (start parameters) of a Kinesis Data
-     *   Analytics application. This section is evaluated only on stack updates for applications in
-     *   running RUNNING state and has no effect during manual application start.
+     * @param runConfiguration Describes the starting parameters for an Managed Service for Apache
+     *   Flink application.
      */
     public fun runConfiguration(runConfiguration: CfnApplication.RunConfigurationProperty) {
         cdkBuilder.runConfiguration(runConfiguration)

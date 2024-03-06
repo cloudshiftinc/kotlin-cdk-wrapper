@@ -18,6 +18,11 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup
 
 /**
+ * Information about a listener.
+ *
+ * The listener contains the path used to route traffic that is received from the load balancer to a
+ * target group.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -37,12 +42,20 @@ public class CfnDeploymentGroupTrafficRoutePropertyDsl {
 
     private val _listenerArns: MutableList<String> = mutableListOf()
 
-    /** @param listenerArns the value to be set. */
+    /**
+     * @param listenerArns The Amazon Resource Name (ARN) of one listener. The listener identifies
+     *   the route between a target group and a load balancer. This is an array of strings with a
+     *   maximum size of one.
+     */
     public fun listenerArns(vararg listenerArns: String) {
         _listenerArns.addAll(listOf(*listenerArns))
     }
 
-    /** @param listenerArns the value to be set. */
+    /**
+     * @param listenerArns The Amazon Resource Name (ARN) of one listener. The listener identifies
+     *   the route between a target group and a load balancer. This is an array of strings with a
+     *   maximum size of one.
+     */
     public fun listenerArns(listenerArns: Collection<String>) {
         _listenerArns.addAll(listenerArns)
     }

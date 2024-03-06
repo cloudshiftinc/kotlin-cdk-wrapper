@@ -36,6 +36,8 @@ import software.amazon.awscdk.services.docdb.CfnDBInstanceProps
  * // the properties below are optional
  * .autoMinorVersionUpgrade(false)
  * .availabilityZone("availabilityZone")
+ * .caCertificateIdentifier("caCertificateIdentifier")
+ * .certificateRotationRestart(false)
  * .dbInstanceIdentifier("dbInstanceIdentifier")
  * .enablePerformanceInsights(false)
  * .preferredMaintenanceWindow("preferredMaintenanceWindow")
@@ -85,6 +87,54 @@ public class CfnDBInstancePropsDsl {
     }
 
     /**
+     * @param caCertificateIdentifier The CA certificate identifier to use for the DB instance's
+     *   server certificate. For more information, see
+     *   [Updating Your Amazon DocumentDB TLS Certificates](https://docs.aws.amazon.com/documentdb/latest/developerguide/ca_cert_rotation.html)
+     *   and
+     *   [Encrypting Data in Transit](https://docs.aws.amazon.com/documentdb/latest/developerguide/security.encryption.ssl.html)
+     *   in the *Amazon DocumentDB Developer Guide* .
+     */
+    public fun caCertificateIdentifier(caCertificateIdentifier: String) {
+        cdkBuilder.caCertificateIdentifier(caCertificateIdentifier)
+    }
+
+    /**
+     * @param certificateRotationRestart Specifies whether the DB instance is restarted when you
+     *   rotate your SSL/TLS certificate. By default, the DB instance is restarted when you rotate
+     *   your SSL/TLS certificate. The certificate is not updated until the DB instance is
+     *   restarted.
+     *
+     * Set this parameter only if you are *not* using SSL/TLS to connect to the DB instance.
+     *
+     * If you are using SSL/TLS to connect to the DB instance, see
+     * [Updating Your Amazon DocumentDB TLS Certificates](https://docs.aws.amazon.com/documentdb/latest/developerguide/ca_cert_rotation.html)
+     * and
+     * [Encrypting Data in Transit](https://docs.aws.amazon.com/documentdb/latest/developerguide/security.encryption.ssl.html)
+     * in the *Amazon DocumentDB Developer Guide* .
+     */
+    public fun certificateRotationRestart(certificateRotationRestart: Boolean) {
+        cdkBuilder.certificateRotationRestart(certificateRotationRestart)
+    }
+
+    /**
+     * @param certificateRotationRestart Specifies whether the DB instance is restarted when you
+     *   rotate your SSL/TLS certificate. By default, the DB instance is restarted when you rotate
+     *   your SSL/TLS certificate. The certificate is not updated until the DB instance is
+     *   restarted.
+     *
+     * Set this parameter only if you are *not* using SSL/TLS to connect to the DB instance.
+     *
+     * If you are using SSL/TLS to connect to the DB instance, see
+     * [Updating Your Amazon DocumentDB TLS Certificates](https://docs.aws.amazon.com/documentdb/latest/developerguide/ca_cert_rotation.html)
+     * and
+     * [Encrypting Data in Transit](https://docs.aws.amazon.com/documentdb/latest/developerguide/security.encryption.ssl.html)
+     * in the *Amazon DocumentDB Developer Guide* .
+     */
+    public fun certificateRotationRestart(certificateRotationRestart: IResolvable) {
+        cdkBuilder.certificateRotationRestart(certificateRotationRestart)
+    }
+
+    /**
      * @param dbClusterIdentifier The identifier of the cluster that the instance will belong to.
      */
     public fun dbClusterIdentifier(dbClusterIdentifier: String) {
@@ -113,12 +163,22 @@ public class CfnDBInstancePropsDsl {
         cdkBuilder.dbInstanceIdentifier(dbInstanceIdentifier)
     }
 
-    /** @param enablePerformanceInsights the value to be set. */
+    /**
+     * @param enablePerformanceInsights A value that indicates whether to enable Performance
+     *   Insights for the DB Instance. For more information, see
+     *   [Using Amazon Performance Insights](https://docs.aws.amazon.com/documentdb/latest/developerguide/performance-insights.html)
+     *   .
+     */
     public fun enablePerformanceInsights(enablePerformanceInsights: Boolean) {
         cdkBuilder.enablePerformanceInsights(enablePerformanceInsights)
     }
 
-    /** @param enablePerformanceInsights the value to be set. */
+    /**
+     * @param enablePerformanceInsights A value that indicates whether to enable Performance
+     *   Insights for the DB Instance. For more information, see
+     *   [Using Amazon Performance Insights](https://docs.aws.amazon.com/documentdb/latest/developerguide/performance-insights.html)
+     *   .
+     */
     public fun enablePerformanceInsights(enablePerformanceInsights: IResolvable) {
         cdkBuilder.enablePerformanceInsights(enablePerformanceInsights)
     }

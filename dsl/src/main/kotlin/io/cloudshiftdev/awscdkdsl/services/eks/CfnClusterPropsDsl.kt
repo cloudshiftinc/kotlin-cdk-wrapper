@@ -42,6 +42,10 @@ import software.amazon.awscdk.services.eks.CfnClusterProps
  * .build())
  * .roleArn("roleArn")
  * // the properties below are optional
+ * .accessConfig(AccessConfigProperty.builder()
+ * .authenticationMode("authenticationMode")
+ * .bootstrapClusterCreatorAdminPermissions(false)
+ * .build())
  * .encryptionConfig(List.of(EncryptionConfigProperty.builder()
  * .provider(ProviderProperty.builder()
  * .keyArn("keyArn")
@@ -86,6 +90,16 @@ public class CfnClusterPropsDsl {
     private val _encryptionConfig: MutableList<Any> = mutableListOf()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
+
+    /** @param accessConfig The access configuration for the cluster. */
+    public fun accessConfig(accessConfig: IResolvable) {
+        cdkBuilder.accessConfig(accessConfig)
+    }
+
+    /** @param accessConfig The access configuration for the cluster. */
+    public fun accessConfig(accessConfig: CfnCluster.AccessConfigProperty) {
+        cdkBuilder.accessConfig(accessConfig)
+    }
 
     /** @param encryptionConfig The encryption configuration for the cluster. */
     public fun encryptionConfig(vararg encryptionConfig: Any) {
@@ -155,8 +169,6 @@ public class CfnClusterPropsDsl {
      *   in the *Amazon EKS User Guide* . You must specify at least two subnets. You can specify up
      *   to five security groups, but we recommend that you use a dedicated security group for your
      *   cluster control plane.
-     *
-     * Updates require replacement of the `SecurityGroupIds` and `SubnetIds` sub-properties.
      */
     public fun resourcesVpcConfig(resourcesVpcConfig: IResolvable) {
         cdkBuilder.resourcesVpcConfig(resourcesVpcConfig)
@@ -172,8 +184,6 @@ public class CfnClusterPropsDsl {
      *   in the *Amazon EKS User Guide* . You must specify at least two subnets. You can specify up
      *   to five security groups, but we recommend that you use a dedicated security group for your
      *   cluster control plane.
-     *
-     * Updates require replacement of the `SecurityGroupIds` and `SubnetIds` sub-properties.
      */
     public fun resourcesVpcConfig(resourcesVpcConfig: CfnCluster.ResourcesVpcConfigProperty) {
         cdkBuilder.resourcesVpcConfig(resourcesVpcConfig)

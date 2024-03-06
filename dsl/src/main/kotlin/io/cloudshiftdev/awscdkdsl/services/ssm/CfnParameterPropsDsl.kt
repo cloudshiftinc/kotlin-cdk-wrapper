@@ -12,10 +12,8 @@
 package io.cloudshiftdev.awscdkdsl.services.ssm
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
-import io.cloudshiftdev.awscdkdsl.common.MapBuilder
-import kotlin.Any
 import kotlin.String
-import kotlin.Unit
+import kotlin.collections.Map
 import software.amazon.awscdk.services.ssm.CfnParameterProps
 
 /**
@@ -26,7 +24,6 @@ import software.amazon.awscdk.services.ssm.CfnParameterProps
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.ssm.*;
- * Object tags;
  * CfnParameterProps cfnParameterProps = CfnParameterProps.builder()
  * .type("type")
  * .value("value")
@@ -36,7 +33,8 @@ import software.amazon.awscdk.services.ssm.CfnParameterProps
  * .description("description")
  * .name("name")
  * .policies("policies")
- * .tags(tags)
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
  * .tier("tier")
  * .build();
  * ```
@@ -49,7 +47,7 @@ public class CfnParameterPropsDsl {
 
     /**
      * @param allowedPattern A regular expression used to validate the parameter value. For example,
-     *   for String types with values restricted to numbers, you can specify the following:
+     *   for `String` types with values restricted to numbers, you can specify the following:
      *   `AllowedPattern=^\d+$`
      */
     public fun allowedPattern(allowedPattern: String) {
@@ -98,20 +96,7 @@ public class CfnParameterPropsDsl {
      *   parameter to identify the type of resource to which it applies, the environment, or the
      *   type of configuration data referenced by the parameter.
      */
-    public fun tags(tags: MapBuilder.() -> Unit = {}) {
-        val builder = MapBuilder()
-        builder.apply(tags)
-        cdkBuilder.tags(builder.map)
-    }
-
-    /**
-     * @param tags Optional metadata that you assign to a resource in the form of an arbitrary set
-     *   of tags (key-value pairs). Tags enable you to categorize a resource in different ways, such
-     *   as by purpose, owner, or environment. For example, you might want to tag a Systems Manager
-     *   parameter to identify the type of resource to which it applies, the environment, or the
-     *   type of configuration data referenced by the parameter.
-     */
-    public fun tags(tags: Any) {
+    public fun tags(tags: Map<String, String>) {
         cdkBuilder.tags(tags)
     }
 
@@ -123,9 +108,8 @@ public class CfnParameterPropsDsl {
     /**
      * @param type The type of parameter.
      *
-     * AWS CloudFormation doesn't support creating a `SecureString` parameter type.
-     *
-     * *Allowed Values* : String | StringList
+     * Although `SecureString` is included in the list of valid values, AWS CloudFormation does
+     * *not* currently support creating a `SecureString` parameter type.
      */
     public fun type(type: String) {
         cdkBuilder.type(type)

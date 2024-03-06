@@ -16,8 +16,8 @@ import kotlin.Number
 import software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration
 
 /**
- * Configuration settings for managing the number of snapshots that are created from pre-provisioned
- * instances for the Windows AMI when faster launching is enabled.
+ * Configuration settings for creating and managing pre-provisioned snapshots for a fast-launch
+ * enabled Windows AMI.
  *
  * Example:
  * ```

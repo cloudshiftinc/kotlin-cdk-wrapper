@@ -16,6 +16,7 @@ import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
+import kotlin.collections.Map
 import kotlin.collections.MutableList
 import software.amazon.awscdk.pipelines.CodeBuildOptions
 import software.amazon.awscdk.pipelines.CodePipelineProps
@@ -30,15 +31,22 @@ import software.amazon.awscdk.services.s3.IBucket
  *
  * Example:
  * ```
- * Pipeline codePipeline;
- * Artifact sourceArtifact = new Artifact("MySourceArtifact");
- * CodePipeline pipeline = CodePipeline.Builder.create(this, "Pipeline")
- * .codePipeline(codePipeline)
+ * // Modern API
+ * CodePipeline modernPipeline = CodePipeline.Builder.create(this, "Pipeline")
+ * .selfMutation(false)
  * .synth(ShellStep.Builder.create("Synth")
- * .input(CodePipelineFileSet.fromArtifact(sourceArtifact))
+ * .input(CodePipelineSource.connection("my-org/my-app", "main", ConnectionSourceOptions.builder()
+ * .connectionArn("arn:aws:codestar-connections:us-east-1:222222222222:connection/7d2469ff-514a-4e4f-9003-5ca4a43cdc41")
+ * .build()))
  * .commands(List.of("npm ci", "npm run build", "npx cdk synth"))
  * .build())
  * .build();
+ * // Original API
+ * Artifact cloudAssemblyArtifact = new Artifact();
+ * CdkPipeline originalPipeline = new CdkPipeline(this, "Pipeline", new CdkPipelineProps()
+ * .selfMutating(false)
+ * .cloudAssemblyArtifact(cloudAssemblyArtifact)
+ * );
  * ```
  */
 @CdkDslMarker
@@ -124,6 +132,17 @@ public class CodePipelinePropsDsl {
      */
     public fun crossAccountKeys(crossAccountKeys: Boolean) {
         cdkBuilder.crossAccountKeys(crossAccountKeys)
+    }
+
+    /**
+     * @param crossRegionReplicationBuckets A map of region to S3 bucket name used for cross-region
+     *   CodePipeline. For every Action that you specify targeting a different region than the
+     *   Pipeline itself, if you don't provide an explicit Bucket for that region using this
+     *   property, the construct will automatically create a Stack containing an S3 Bucket in that
+     *   region. Passed directly through to the [cp.Pipeline].
+     */
+    public fun crossRegionReplicationBuckets(crossRegionReplicationBuckets: Map<String, IBucket>) {
+        cdkBuilder.crossRegionReplicationBuckets(crossRegionReplicationBuckets)
     }
 
     /**

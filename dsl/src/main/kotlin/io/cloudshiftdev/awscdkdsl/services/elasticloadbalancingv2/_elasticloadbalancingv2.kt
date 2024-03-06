@@ -52,6 +52,10 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancerProps
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroupProps
+import software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStore
+import software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreProps
+import software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation
+import software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocationProps
 import software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptions
 import software.amazon.awscdk.services.elasticloadbalancingv2.ForwardOptions
 import software.amazon.awscdk.services.elasticloadbalancingv2.HealthCheck
@@ -192,17 +196,27 @@ public object elasticloadbalancingv2 {
      *
      * Example:
      * ```
-     * import software.amazon.awscdk.services.apigatewayv2.integrations.alpha.HttpNlbIntegration;
-     * Vpc vpc = new Vpc(this, "VPC");
-     * NetworkLoadBalancer lb = NetworkLoadBalancer.Builder.create(this, "lb").vpc(vpc).build();
-     * NetworkListener listener = lb.addListener("listener",
-     * BaseNetworkListenerProps.builder().port(80).build());
-     * listener.addTargets("target", AddNetworkTargetsProps.builder()
-     * .port(80)
-     * .build());
-     * HttpApi httpEndpoint = HttpApi.Builder.create(this, "HttpProxyPrivateApi")
-     * .defaultIntegration(new HttpNlbIntegration("DefaultIntegration", listener))
+     * Vpc vpc;
+     * AutoScalingGroup asg;
+     * ISecurityGroup sg1;
+     * ISecurityGroup sg2;
+     * // Create the load balancer in a VPC. 'internetFacing' is 'false'
+     * // by default, which creates an internal load balancer.
+     * NetworkLoadBalancer lb = NetworkLoadBalancer.Builder.create(this, "LB")
+     * .vpc(vpc)
+     * .internetFacing(true)
+     * .securityGroups(List.of(sg1))
      * .build();
+     * lb.addSecurityGroup(sg2);
+     * // Add a listener on a particular port.
+     * NetworkListener listener = lb.addListener("Listener", BaseNetworkListenerProps.builder()
+     * .port(443)
+     * .build());
+     * // Add targets on a particular port.
+     * listener.addTargets("AppFleet", AddNetworkTargetsProps.builder()
+     * .port(443)
+     * .targets(List.of(asg))
+     * .build());
      * ```
      */
     public inline fun addNetworkTargetsProps(
@@ -239,18 +253,31 @@ public object elasticloadbalancingv2 {
      *
      * Example:
      * ```
-     * import software.amazon.awscdk.services.apigatewayv2.integrations.alpha.HttpAlbIntegration;
-     * ApplicationLoadBalancer lb;
-     * ApplicationListener listener = lb.addListener("listener",
-     * BaseApplicationListenerProps.builder().port(80).build());
-     * listener.addTargets("target", AddApplicationTargetsProps.builder()
-     * .port(80)
-     * .build());
-     * HttpApi httpEndpoint = HttpApi.Builder.create(this, "HttpProxyPrivateApi")
-     * .defaultIntegration(HttpAlbIntegration.Builder.create("DefaultIntegration", listener)
-     * .parameterMapping(new ParameterMapping().custom("myKey", "myValue"))
-     * .build())
+     * import software.amazon.awscdk.services.autoscaling.AutoScalingGroup;
+     * AutoScalingGroup asg;
+     * Vpc vpc;
+     * // Create the load balancer in a VPC. 'internetFacing' is 'false'
+     * // by default, which creates an internal load balancer.
+     * ApplicationLoadBalancer lb = ApplicationLoadBalancer.Builder.create(this, "LB")
+     * .vpc(vpc)
+     * .internetFacing(true)
      * .build();
+     * // Add a listener and open up the load balancer's security group
+     * // to the world.
+     * ApplicationListener listener = lb.addListener("Listener",
+     * BaseApplicationListenerProps.builder()
+     * .port(80)
+     * // 'open: true' is the default, you can leave it out if you want. Set it
+     * // to 'false' and use `listener.connections` if you want to be selective
+     * // about who can access the load balancer.
+     * .open(true)
+     * .build());
+     * // Create an AutoScaling group and add it as a load balancing
+     * // target to the listener.
+     * listener.addTargets("ApplicationFleet", AddApplicationTargetsProps.builder()
+     * .port(8080)
+     * .targets(List.of(asg))
+     * .build());
      * ```
      */
     public inline fun applicationListener(
@@ -845,16 +872,23 @@ public object elasticloadbalancingv2 {
      *
      * Example:
      * ```
-     * import software.amazon.awscdk.services.apigatewayv2.integrations.alpha.HttpNlbIntegration;
-     * Vpc vpc = new Vpc(this, "VPC");
-     * NetworkLoadBalancer lb = NetworkLoadBalancer.Builder.create(this, "lb").vpc(vpc).build();
-     * NetworkListener listener = lb.addListener("listener",
+     * import software.amazon.awscdk.services.elasticloadbalancing.*;
+     * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+     * LoadBalancer clb;
+     * ApplicationLoadBalancer alb;
+     * NetworkLoadBalancer nlb;
+     * ApplicationListener albListener = alb.addListener("ALBListener",
+     * BaseApplicationListenerProps.builder().port(80).build());
+     * ApplicationTargetGroup albTargetGroup = albListener.addTargets("ALBFleet",
+     * AddApplicationTargetsProps.builder().port(80).build());
+     * NetworkListener nlbListener = nlb.addListener("NLBListener",
      * BaseNetworkListenerProps.builder().port(80).build());
-     * listener.addTargets("target", AddNetworkTargetsProps.builder()
-     * .port(80)
-     * .build());
-     * HttpApi httpEndpoint = HttpApi.Builder.create(this, "HttpProxyPrivateApi")
-     * .defaultIntegration(new HttpNlbIntegration("DefaultIntegration", listener))
+     * NetworkTargetGroup nlbTargetGroup = nlbListener.addTargets("NLBFleet",
+     * AddNetworkTargetsProps.builder().port(80).build());
+     * ServerDeploymentGroup deploymentGroup = ServerDeploymentGroup.Builder.create(this,
+     * "DeploymentGroup")
+     * .loadBalancers(List.of(LoadBalancer.classic(clb), LoadBalancer.application(albTargetGroup),
+     * LoadBalancer.network(nlbTargetGroup)))
      * .build();
      * ```
      */
@@ -980,6 +1014,11 @@ public object elasticloadbalancingv2 {
      * .certificates(List.of(CertificateProperty.builder()
      * .certificateArn("certificateArn")
      * .build()))
+     * .mutualAuthentication(MutualAuthenticationProperty.builder()
+     * .ignoreClientCertificateExpiry(false)
+     * .mode("mode")
+     * .trustStoreArn("trustStoreArn")
+     * .build())
      * .port(123)
      * .protocol("protocol")
      * .sslPolicy("sslPolicy")
@@ -1312,6 +1351,32 @@ public object elasticloadbalancingv2 {
     }
 
     /**
+     * Specifies the configuration information for mutual authentication.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+     * MutualAuthenticationProperty mutualAuthenticationProperty =
+     * MutualAuthenticationProperty.builder()
+     * .ignoreClientCertificateExpiry(false)
+     * .mode("mode")
+     * .trustStoreArn("trustStoreArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-mutualauthentication.html)
+     */
+    public inline fun cfnListenerMutualAuthenticationProperty(
+        block: CfnListenerMutualAuthenticationPropertyDsl.() -> Unit = {}
+    ): CfnListener.MutualAuthenticationProperty {
+        val builder = CfnListenerMutualAuthenticationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Properties for defining a `CfnListener`.
      *
      * Example:
@@ -1385,6 +1450,11 @@ public object elasticloadbalancingv2 {
      * .certificates(List.of(CertificateProperty.builder()
      * .certificateArn("certificateArn")
      * .build()))
+     * .mutualAuthentication(MutualAuthenticationProperty.builder()
+     * .ignoreClientCertificateExpiry(false)
+     * .mode("mode")
+     * .trustStoreArn("trustStoreArn")
+     * .build())
      * .port(123)
      * .protocol("protocol")
      * .sslPolicy("sslPolicy")
@@ -2265,6 +2335,7 @@ public object elasticloadbalancingv2 {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
      * CfnLoadBalancer cfnLoadBalancer = CfnLoadBalancer.Builder.create(this, "MyCfnLoadBalancer")
+     * .enforceSecurityGroupInboundRulesOnPrivateLinkTraffic("enforceSecurityGroupInboundRulesOnPrivateLinkTraffic")
      * .ipAddressType("ipAddressType")
      * .loadBalancerAttributes(List.of(LoadBalancerAttributeProperty.builder()
      * .key("key")
@@ -2336,6 +2407,7 @@ public object elasticloadbalancingv2 {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
      * CfnLoadBalancerProps cfnLoadBalancerProps = CfnLoadBalancerProps.builder()
+     * .enforceSecurityGroupInboundRulesOnPrivateLinkTraffic("enforceSecurityGroupInboundRulesOnPrivateLinkTraffic")
      * .ipAddressType("ipAddressType")
      * .loadBalancerAttributes(List.of(LoadBalancerAttributeProperty.builder()
      * .key("key")
@@ -2591,6 +2663,189 @@ public object elasticloadbalancingv2 {
     }
 
     /**
+     * Creates a trust store.
+     *
+     * You must specify `CaCertificatesBundleS3Bucket` and `CaCertificatesBundleS3Key` .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+     * CfnTrustStore cfnTrustStore = CfnTrustStore.Builder.create(this, "MyCfnTrustStore")
+     * .caCertificatesBundleS3Bucket("caCertificatesBundleS3Bucket")
+     * .caCertificatesBundleS3Key("caCertificatesBundleS3Key")
+     * .caCertificatesBundleS3ObjectVersion("caCertificatesBundleS3ObjectVersion")
+     * .name("name")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-truststore.html)
+     */
+    public inline fun cfnTrustStore(
+        scope: Construct,
+        id: String,
+        block: CfnTrustStoreDsl.() -> Unit = {},
+    ): CfnTrustStore {
+        val builder = CfnTrustStoreDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnTrustStore`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+     * CfnTrustStoreProps cfnTrustStoreProps = CfnTrustStoreProps.builder()
+     * .caCertificatesBundleS3Bucket("caCertificatesBundleS3Bucket")
+     * .caCertificatesBundleS3Key("caCertificatesBundleS3Key")
+     * .caCertificatesBundleS3ObjectVersion("caCertificatesBundleS3ObjectVersion")
+     * .name("name")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-truststore.html)
+     */
+    public inline fun cfnTrustStoreProps(
+        block: CfnTrustStorePropsDsl.() -> Unit = {}
+    ): CfnTrustStoreProps {
+        val builder = CfnTrustStorePropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Adds the specified revocation contents to the specified trust store.
+     *
+     * You must specify `TrustStoreArn` .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+     * CfnTrustStoreRevocation cfnTrustStoreRevocation = CfnTrustStoreRevocation.Builder.create(this,
+     * "MyCfnTrustStoreRevocation")
+     * .revocationContents(List.of(RevocationContentProperty.builder()
+     * .revocationType("revocationType")
+     * .s3Bucket("s3Bucket")
+     * .s3Key("s3Key")
+     * .s3ObjectVersion("s3ObjectVersion")
+     * .build()))
+     * .trustStoreArn("trustStoreArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-truststorerevocation.html)
+     */
+    public inline fun cfnTrustStoreRevocation(
+        scope: Construct,
+        id: String,
+        block: CfnTrustStoreRevocationDsl.() -> Unit = {},
+    ): CfnTrustStoreRevocation {
+        val builder = CfnTrustStoreRevocationDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnTrustStoreRevocation`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+     * CfnTrustStoreRevocationProps cfnTrustStoreRevocationProps =
+     * CfnTrustStoreRevocationProps.builder()
+     * .revocationContents(List.of(RevocationContentProperty.builder()
+     * .revocationType("revocationType")
+     * .s3Bucket("s3Bucket")
+     * .s3Key("s3Key")
+     * .s3ObjectVersion("s3ObjectVersion")
+     * .build()))
+     * .trustStoreArn("trustStoreArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-truststorerevocation.html)
+     */
+    public inline fun cfnTrustStoreRevocationProps(
+        block: CfnTrustStoreRevocationPropsDsl.() -> Unit = {}
+    ): CfnTrustStoreRevocationProps {
+        val builder = CfnTrustStoreRevocationPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Information about a revocation file.
+     *
+     * You must specify `S3Bucket` and `S3Key` .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+     * RevocationContentProperty revocationContentProperty = RevocationContentProperty.builder()
+     * .revocationType("revocationType")
+     * .s3Bucket("s3Bucket")
+     * .s3Key("s3Key")
+     * .s3ObjectVersion("s3ObjectVersion")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-truststorerevocation-revocationcontent.html)
+     */
+    public inline fun cfnTrustStoreRevocationRevocationContentProperty(
+        block: CfnTrustStoreRevocationRevocationContentPropertyDsl.() -> Unit = {}
+    ): CfnTrustStoreRevocation.RevocationContentProperty {
+        val builder = CfnTrustStoreRevocationRevocationContentPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Information about a revocation file in use by a trust store.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+     * TrustStoreRevocationProperty trustStoreRevocationProperty =
+     * TrustStoreRevocationProperty.builder()
+     * .numberOfRevokedEntries(123)
+     * .revocationId("revocationId")
+     * .revocationType("revocationType")
+     * .trustStoreArn("trustStoreArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-truststorerevocation-truststorerevocation.html)
+     */
+    public inline fun cfnTrustStoreRevocationTrustStoreRevocationProperty(
+        block: CfnTrustStoreRevocationTrustStoreRevocationPropertyDsl.() -> Unit = {}
+    ): CfnTrustStoreRevocation.TrustStoreRevocationProperty {
+        val builder = CfnTrustStoreRevocationTrustStoreRevocationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Options for `ListenerAction.fixedResponse()`.
      *
      * Example:
@@ -2713,17 +2968,27 @@ public object elasticloadbalancingv2 {
      *
      * Example:
      * ```
-     * import software.amazon.awscdk.services.apigatewayv2.integrations.alpha.HttpNlbIntegration;
-     * Vpc vpc = new Vpc(this, "VPC");
-     * NetworkLoadBalancer lb = NetworkLoadBalancer.Builder.create(this, "lb").vpc(vpc).build();
-     * NetworkListener listener = lb.addListener("listener",
-     * BaseNetworkListenerProps.builder().port(80).build());
-     * listener.addTargets("target", AddNetworkTargetsProps.builder()
-     * .port(80)
-     * .build());
-     * HttpApi httpEndpoint = HttpApi.Builder.create(this, "HttpProxyPrivateApi")
-     * .defaultIntegration(new HttpNlbIntegration("DefaultIntegration", listener))
+     * Vpc vpc;
+     * AutoScalingGroup asg;
+     * ISecurityGroup sg1;
+     * ISecurityGroup sg2;
+     * // Create the load balancer in a VPC. 'internetFacing' is 'false'
+     * // by default, which creates an internal load balancer.
+     * NetworkLoadBalancer lb = NetworkLoadBalancer.Builder.create(this, "LB")
+     * .vpc(vpc)
+     * .internetFacing(true)
+     * .securityGroups(List.of(sg1))
      * .build();
+     * lb.addSecurityGroup(sg2);
+     * // Add a listener on a particular port.
+     * NetworkListener listener = lb.addListener("Listener", BaseNetworkListenerProps.builder()
+     * .port(443)
+     * .build());
+     * // Add targets on a particular port.
+     * listener.addTargets("AppFleet", AddNetworkTargetsProps.builder()
+     * .port(443)
+     * .targets(List.of(asg))
+     * .build());
      * ```
      */
     public inline fun networkListener(
@@ -2806,6 +3071,7 @@ public object elasticloadbalancingv2 {
      * .build();
      * Integration integration = Integration.Builder.create()
      * .type(IntegrationType.HTTP_PROXY)
+     * .integrationHttpMethod("ANY")
      * .options(IntegrationOptions.builder()
      * .connectionType(ConnectionType.VPC_LINK)
      * .vpcLink(link)
@@ -2903,6 +3169,7 @@ public object elasticloadbalancingv2 {
      * .build();
      * Integration integration = Integration.Builder.create()
      * .type(IntegrationType.HTTP_PROXY)
+     * .integrationHttpMethod("ANY")
      * .options(IntegrationOptions.builder()
      * .connectionType(ConnectionType.VPC_LINK)
      * .vpcLink(link)
@@ -2923,14 +3190,24 @@ public object elasticloadbalancingv2 {
      *
      * Example:
      * ```
-     * NetworkListener listener;
-     * AutoScalingGroup asg1;
-     * AutoScalingGroup asg2;
-     * NetworkTargetGroup group = listener.addTargets("AppFleet", AddNetworkTargetsProps.builder()
-     * .port(443)
-     * .targets(List.of(asg1))
-     * .build());
-     * group.addTarget(asg2);
+     * import software.amazon.awscdk.services.elasticloadbalancing.*;
+     * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+     * LoadBalancer clb;
+     * ApplicationLoadBalancer alb;
+     * NetworkLoadBalancer nlb;
+     * ApplicationListener albListener = alb.addListener("ALBListener",
+     * BaseApplicationListenerProps.builder().port(80).build());
+     * ApplicationTargetGroup albTargetGroup = albListener.addTargets("ALBFleet",
+     * AddApplicationTargetsProps.builder().port(80).build());
+     * NetworkListener nlbListener = nlb.addListener("NLBListener",
+     * BaseNetworkListenerProps.builder().port(80).build());
+     * NetworkTargetGroup nlbTargetGroup = nlbListener.addTargets("NLBFleet",
+     * AddNetworkTargetsProps.builder().port(80).build());
+     * ServerDeploymentGroup deploymentGroup = ServerDeploymentGroup.Builder.create(this,
+     * "DeploymentGroup")
+     * .loadBalancers(List.of(LoadBalancer.classic(clb), LoadBalancer.application(albTargetGroup),
+     * LoadBalancer.network(nlbTargetGroup)))
+     * .build();
      * ```
      */
     public inline fun networkTargetGroup(

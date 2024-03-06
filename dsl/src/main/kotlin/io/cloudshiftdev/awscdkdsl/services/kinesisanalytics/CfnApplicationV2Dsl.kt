@@ -26,7 +26,7 @@ import software.constructs.Construct
  * Creates an Amazon Kinesis Data Analytics application.
  *
  * For information about creating a Kinesis Data Analytics application, see
- * [Creating an Application](https://docs.aws.amazon.com/kinesisanalytics/latest/java/getting-started.html)
+ * [Creating an Application](https://docs.aws.amazon.com/managed-flink/latest/java/getting-started.html)
  * .
  *
  * Example:
@@ -290,30 +290,24 @@ public class CfnApplicationV2Dsl(
     }
 
     /**
-     * Identifies the run configuration (start parameters) of a Kinesis Data Analytics application.
-     *
-     * This section is evaluated only on stack updates for applications in running RUNNING state and
-     * has no effect during manual application start.
+     * Describes the starting parameters for an Managed Service for Apache Flink application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-application.html#cfn-kinesisanalyticsv2-application-runconfiguration)
      *
-     * @param runConfiguration Identifies the run configuration (start parameters) of a Kinesis Data
-     *   Analytics application.
+     * @param runConfiguration Describes the starting parameters for an Managed Service for Apache
+     *   Flink application.
      */
     public fun runConfiguration(runConfiguration: IResolvable) {
         cdkBuilder.runConfiguration(runConfiguration)
     }
 
     /**
-     * Identifies the run configuration (start parameters) of a Kinesis Data Analytics application.
-     *
-     * This section is evaluated only on stack updates for applications in running RUNNING state and
-     * has no effect during manual application start.
+     * Describes the starting parameters for an Managed Service for Apache Flink application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-application.html#cfn-kinesisanalyticsv2-application-runconfiguration)
      *
-     * @param runConfiguration Identifies the run configuration (start parameters) of a Kinesis Data
-     *   Analytics application.
+     * @param runConfiguration Describes the starting parameters for an Managed Service for Apache
+     *   Flink application.
      */
     public fun runConfiguration(runConfiguration: CfnApplicationV2.RunConfigurationProperty) {
         cdkBuilder.runConfiguration(runConfiguration)

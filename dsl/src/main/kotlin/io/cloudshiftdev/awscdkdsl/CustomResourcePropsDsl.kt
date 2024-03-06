@@ -29,7 +29,7 @@ import software.amazon.awscdk.RemovalPolicy
  * String serviceToken = CustomResourceProvider.getOrCreate(this, "Custom::MyCustomResourceType",
  * CustomResourceProviderProps.builder()
  * .codeDirectory(String.format("%s/my-handler", __dirname))
- * .runtime(CustomResourceProviderRuntime.NODEJS_14_X)
+ * .runtime(CustomResourceProviderRuntime.NODEJS_18_X)
  * .description("Lambda function created by the custom resource provider")
  * .build());
  * CustomResource.Builder.create(this, "MyResource")

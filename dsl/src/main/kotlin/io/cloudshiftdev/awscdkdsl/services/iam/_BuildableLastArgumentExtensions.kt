@@ -253,6 +253,22 @@ public inline fun PrincipalBase.addToPrincipalPolicy(
 }
 
 /**
+ * Add the principal to the AssumeRolePolicyDocument.
+ *
+ * Add the statements to the AssumeRolePolicyDocument necessary to give this principal permissions
+ * to assume the given role.
+ *
+ * @param doc
+ */
+public inline fun PrincipalWithConditions.addToAssumeRolePolicy(
+    block: PolicyDocumentDsl.() -> Unit = {}
+) {
+    val builder = PolicyDocumentDsl()
+    builder.apply(block)
+    return addToAssumeRolePolicy(builder.build())
+}
+
+/**
  * Add to the policy of this principal.
  *
  * @param statement

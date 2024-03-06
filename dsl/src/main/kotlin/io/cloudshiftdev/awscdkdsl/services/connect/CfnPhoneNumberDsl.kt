@@ -30,16 +30,17 @@ import software.constructs.Construct
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.connect.*;
  * CfnPhoneNumber cfnPhoneNumber = CfnPhoneNumber.Builder.create(this, "MyCfnPhoneNumber")
- * .countryCode("countryCode")
  * .targetArn("targetArn")
- * .type("type")
  * // the properties below are optional
+ * .countryCode("countryCode")
  * .description("description")
  * .prefix("prefix")
+ * .sourcePhoneNumberArn("sourcePhoneNumberArn")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
  * .build()))
+ * .type("type")
  * .build();
  * ```
  *
@@ -88,6 +89,22 @@ public class CfnPhoneNumberDsl(
      */
     public fun prefix(prefix: String) {
         cdkBuilder.prefix(prefix)
+    }
+
+    /**
+     * The claimed phone number ARN that was previously imported from the external service, such as
+     * Amazon Pinpoint.
+     *
+     * If it is from Amazon Pinpoint, it looks like the ARN of the phone number that was imported
+     * from Amazon Pinpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-phonenumber.html#cfn-connect-phonenumber-sourcephonenumberarn)
+     *
+     * @param sourcePhoneNumberArn The claimed phone number ARN that was previously imported from
+     *   the external service, such as Amazon Pinpoint.
+     */
+    public fun sourcePhoneNumberArn(sourcePhoneNumberArn: String) {
+        cdkBuilder.sourcePhoneNumberArn(sourcePhoneNumberArn)
     }
 
     /**

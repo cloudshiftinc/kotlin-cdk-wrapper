@@ -355,13 +355,13 @@ public class UserPoolDsl(
     }
 
     /**
-     * Whether self sign up should be enabled.
+     * Whether self sign-up should be enabled.
      *
-     * This can be further configured via the `selfSignUp` property.
+     * To configure self sign-up configuration use the `userVerification` property.
      *
-     * Default: false
+     * Default: - false
      *
-     * @param selfSignUpEnabled Whether self sign up should be enabled.
+     * @param selfSignUpEnabled Whether self sign-up should be enabled.
      */
     public fun selfSignUpEnabled(selfSignUpEnabled: Boolean) {
         cdkBuilder.selfSignUpEnabled(selfSignUpEnabled)
@@ -428,7 +428,7 @@ public class UserPoolDsl(
     /**
      * The IAM role that Cognito will assume while sending SMS messages.
      *
-     * Default: - a new IAM role is created
+     * Default: - a new IAM role is created.
      *
      * @param smsRole The IAM role that Cognito will assume while sending SMS messages.
      */
@@ -445,7 +445,7 @@ public class UserPoolDsl(
      *
      * This property will be ignored if `smsRole` is not specified.
      *
-     * Default: - No external id will be configured
+     * Default: - No external id will be configured.
      *
      * @param smsRoleExternalId The 'ExternalId' that Cognito service must be using when assuming
      *   the `smsRole`, if the role is restricted with an 'sts:ExternalId' conditional.
@@ -457,7 +457,7 @@ public class UserPoolDsl(
     /**
      * The region to integrate with SNS to send SMS messages.
      *
-     * This property will do nothing if SMS configuration is not configured
+     * This property will do nothing if SMS configuration is not configured.
      *
      * Default: - The same region as the user pool, with a few exceptions -
      * https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-sms-settings.html#user-pool-sms-settings-first-time
@@ -503,7 +503,7 @@ public class UserPoolDsl(
     /**
      * Configuration around admins signing up users into a user pool.
      *
-     * Default: - see defaults in UserInvitationConfig
+     * Default: - see defaults in UserInvitationConfig.
      *
      * @param userInvitation Configuration around admins signing up users into a user pool.
      */
@@ -516,7 +516,7 @@ public class UserPoolDsl(
     /**
      * Configuration around admins signing up users into a user pool.
      *
-     * Default: - see defaults in UserInvitationConfig
+     * Default: - see defaults in UserInvitationConfig.
      *
      * @param userInvitation Configuration around admins signing up users into a user pool.
      */
@@ -527,7 +527,7 @@ public class UserPoolDsl(
     /**
      * Name of the user pool.
      *
-     * Default: - automatically generated name by CloudFormation at deploy time
+     * Default: - automatically generated name by CloudFormation at deploy time.
      *
      * @param userPoolName Name of the user pool.
      */
@@ -540,7 +540,7 @@ public class UserPoolDsl(
      *
      * Enable or disable self sign-up via the `selfSignUpEnabled` property.
      *
-     * Default: - see defaults in UserVerificationConfig
+     * Default: - see defaults in UserVerificationConfig.
      *
      * @param userVerification Configuration around users signing themselves up to the user pool.
      */
@@ -555,7 +555,7 @@ public class UserPoolDsl(
      *
      * Enable or disable self sign-up via the `selfSignUpEnabled` property.
      *
-     * Default: - see defaults in UserVerificationConfig
+     * Default: - see defaults in UserVerificationConfig.
      *
      * @param userVerification Configuration around users signing themselves up to the user pool.
      */

@@ -26,12 +26,25 @@ import software.amazon.awscdk.services.amplifyuibuilder.CfnForm
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.amplifyuibuilder.*;
+ * FormInputValuePropertyProperty formInputValuePropertyProperty_;
  * ValueMappingProperty valueMappingProperty = ValueMappingProperty.builder()
  * .value(FormInputValuePropertyProperty.builder()
+ * .bindingProperties(FormInputValuePropertyBindingPropertiesProperty.builder()
+ * .property("property")
+ * // the properties below are optional
+ * .field("field")
+ * .build())
+ * .concat(List.of(formInputValuePropertyProperty_))
  * .value("value")
  * .build())
  * // the properties below are optional
  * .displayValue(FormInputValuePropertyProperty.builder()
+ * .bindingProperties(FormInputValuePropertyBindingPropertiesProperty.builder()
+ * .property("property")
+ * // the properties below are optional
+ * .field("field")
+ * .build())
+ * .concat(List.of(formInputValuePropertyProperty_))
  * .value("value")
  * .build())
  * .build();

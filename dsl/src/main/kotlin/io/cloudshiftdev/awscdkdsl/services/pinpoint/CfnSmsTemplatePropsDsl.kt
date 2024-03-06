@@ -86,7 +86,10 @@ public class CfnSmsTemplatePropsDsl {
         cdkBuilder.templateDescription(templateDescription)
     }
 
-    /** @param templateName The name of the message template. */
+    /**
+     * @param templateName The name of the message template to use for the message. If specified,
+     *   this value must match the name of an existing message template.
+     */
     public fun templateName(templateName: String) {
         cdkBuilder.templateName(templateName)
     }

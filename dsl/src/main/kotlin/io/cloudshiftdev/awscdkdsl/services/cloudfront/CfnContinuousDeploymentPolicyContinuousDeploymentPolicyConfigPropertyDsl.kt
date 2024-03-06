@@ -32,6 +32,18 @@ import software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy
  * .enabled(false)
  * .stagingDistributionDnsNames(List.of("stagingDistributionDnsNames"))
  * // the properties below are optional
+ * .singleHeaderPolicyConfig(SingleHeaderPolicyConfigProperty.builder()
+ * .header("header")
+ * .value("value")
+ * .build())
+ * .singleWeightPolicyConfig(SingleWeightPolicyConfigProperty.builder()
+ * .weight(123)
+ * // the properties below are optional
+ * .sessionStickinessConfig(SessionStickinessConfigProperty.builder()
+ * .idleTtl(123)
+ * .maximumTtl(123)
+ * .build())
+ * .build())
  * .trafficConfig(TrafficConfigProperty.builder()
  * .type("type")
  * // the properties below are optional
@@ -48,6 +60,7 @@ import software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy
  * .build())
  * .build())
  * .build())
+ * .type("type")
  * .build();
  * ```
  *
@@ -80,6 +93,46 @@ public class CfnContinuousDeploymentPolicyContinuousDeploymentPolicyConfigProper
     }
 
     /**
+     * @param singleHeaderPolicyConfig This configuration determines which HTTP requests are sent to
+     *   the staging distribution. If the HTTP request contains a header and value that matches what
+     *   you specify here, the request is sent to the staging distribution. Otherwise the request is
+     *   sent to the primary distribution.
+     */
+    public fun singleHeaderPolicyConfig(singleHeaderPolicyConfig: IResolvable) {
+        cdkBuilder.singleHeaderPolicyConfig(singleHeaderPolicyConfig)
+    }
+
+    /**
+     * @param singleHeaderPolicyConfig This configuration determines which HTTP requests are sent to
+     *   the staging distribution. If the HTTP request contains a header and value that matches what
+     *   you specify here, the request is sent to the staging distribution. Otherwise the request is
+     *   sent to the primary distribution.
+     */
+    public fun singleHeaderPolicyConfig(
+        singleHeaderPolicyConfig: CfnContinuousDeploymentPolicy.SingleHeaderPolicyConfigProperty
+    ) {
+        cdkBuilder.singleHeaderPolicyConfig(singleHeaderPolicyConfig)
+    }
+
+    /**
+     * @param singleWeightPolicyConfig This configuration determines the percentage of HTTP requests
+     *   that are sent to the staging distribution.
+     */
+    public fun singleWeightPolicyConfig(singleWeightPolicyConfig: IResolvable) {
+        cdkBuilder.singleWeightPolicyConfig(singleWeightPolicyConfig)
+    }
+
+    /**
+     * @param singleWeightPolicyConfig This configuration determines the percentage of HTTP requests
+     *   that are sent to the staging distribution.
+     */
+    public fun singleWeightPolicyConfig(
+        singleWeightPolicyConfig: CfnContinuousDeploymentPolicy.SingleWeightPolicyConfigProperty
+    ) {
+        cdkBuilder.singleWeightPolicyConfig(singleWeightPolicyConfig)
+    }
+
+    /**
      * @param stagingDistributionDnsNames The CloudFront domain name of the staging distribution.
      *   For example: `d111111abcdef8.cloudfront.net` .
      */
@@ -109,6 +162,11 @@ public class CfnContinuousDeploymentPolicyContinuousDeploymentPolicyConfigProper
      */
     public fun trafficConfig(trafficConfig: CfnContinuousDeploymentPolicy.TrafficConfigProperty) {
         cdkBuilder.trafficConfig(trafficConfig)
+    }
+
+    /** @param type The type of traffic configuration. */
+    public fun type(type: String) {
+        cdkBuilder.type(type)
     }
 
     public fun build(): CfnContinuousDeploymentPolicy.ContinuousDeploymentPolicyConfigProperty {

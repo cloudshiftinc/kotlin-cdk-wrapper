@@ -14,6 +14,7 @@ package io.cloudshiftdev.awscdkdsl.services.codedeploy
 import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -142,6 +143,7 @@ import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroupProps
  * .key("key")
  * .value("value")
  * .build()))
+ * .terminationHookEnabled(false)
  * .triggerConfigurations(List.of(TriggerConfigProperty.builder()
  * .triggerEvents(List.of("triggerEvents"))
  * .triggerName("triggerName")
@@ -497,7 +499,16 @@ public class CfnDeploymentGroupPropsDsl {
         cdkBuilder.onPremisesTagSet(onPremisesTagSet)
     }
 
-    /** @param outdatedInstancesStrategy the value to be set. */
+    /**
+     * @param outdatedInstancesStrategy Indicates what happens when new Amazon EC2 instances are
+     *   launched mid-deployment and do not receive the deployed application revision. If this
+     *   option is set to `UPDATE` or is unspecified, CodeDeploy initiates one or more 'auto-update
+     *   outdated instances' deployments to apply the deployed application revision to the new
+     *   Amazon EC2 instances.
+     *
+     * If this option is set to `IGNORE` , CodeDeploy does not initiate a deployment to update the
+     * new Amazon EC2 instances. This may result in instances having different revisions.
+     */
     public fun outdatedInstancesStrategy(outdatedInstancesStrategy: String) {
         cdkBuilder.outdatedInstancesStrategy(outdatedInstancesStrategy)
     }
@@ -517,14 +528,44 @@ public class CfnDeploymentGroupPropsDsl {
         cdkBuilder.serviceRoleArn(serviceRoleArn)
     }
 
-    /** @param tags the value to be set. */
+    /**
+     * @param tags The metadata that you apply to CodeDeploy deployment groups to help you organize
+     *   and categorize them. Each tag consists of a key and an optional value, both of which you
+     *   define.
+     */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
-    /** @param tags the value to be set. */
+    /**
+     * @param tags The metadata that you apply to CodeDeploy deployment groups to help you organize
+     *   and categorize them. Each tag consists of a key and an optional value, both of which you
+     *   define.
+     */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
+    }
+
+    /**
+     * @param terminationHookEnabled Indicates whether the deployment group was configured to have
+     *   CodeDeploy install a termination hook into an Auto Scaling group. For more information
+     *   about the termination hook, see
+     *   [How Amazon EC2 Auto Scaling works with CodeDeploy](https://docs.aws.amazon.com//codedeploy/latest/userguide/integrations-aws-auto-scaling.html#integrations-aws-auto-scaling-behaviors)
+     *   in the *AWS CodeDeploy User Guide* .
+     */
+    public fun terminationHookEnabled(terminationHookEnabled: Boolean) {
+        cdkBuilder.terminationHookEnabled(terminationHookEnabled)
+    }
+
+    /**
+     * @param terminationHookEnabled Indicates whether the deployment group was configured to have
+     *   CodeDeploy install a termination hook into an Auto Scaling group. For more information
+     *   about the termination hook, see
+     *   [How Amazon EC2 Auto Scaling works with CodeDeploy](https://docs.aws.amazon.com//codedeploy/latest/userguide/integrations-aws-auto-scaling.html#integrations-aws-auto-scaling-behaviors)
+     *   in the *AWS CodeDeploy User Guide* .
+     */
+    public fun terminationHookEnabled(terminationHookEnabled: IResolvable) {
+        cdkBuilder.terminationHookEnabled(terminationHookEnabled)
     }
 
     /**

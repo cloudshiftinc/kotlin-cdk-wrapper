@@ -31,6 +31,10 @@ import software.amazon.awscdk.services.cloudfront.CfnFunctionProps
  * .functionConfig(FunctionConfigProperty.builder()
  * .comment("comment")
  * .runtime("runtime")
+ * // the properties below are optional
+ * .keyValueStoreAssociations(List.of(KeyValueStoreAssociationProperty.builder()
+ * .keyValueStoreArn("keyValueStoreArn")
+ * .build()))
  * .build())
  * .name("name")
  * // the properties below are optional

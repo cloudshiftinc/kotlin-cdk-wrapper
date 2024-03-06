@@ -32,6 +32,11 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * .filterId("filterId")
  * // the properties below are optional
  * .parameterName("parameterName")
+ * .rollingDate(RollingDateConfigurationProperty.builder()
+ * .expression("expression")
+ * // the properties below are optional
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
  * .timeGranularity("timeGranularity")
  * .value("value")
  * .build();
@@ -64,10 +69,26 @@ public class CfnDashboardTimeEqualityFilterPropertyDsl {
 
     /**
      * @param parameterName The parameter whose value should be used for the filter value. This
-     *   field is mutually exclusive to `Value` .
+     *   field is mutually exclusive to `Value` and `RollingDate` .
      */
     public fun parameterName(parameterName: String) {
         cdkBuilder.parameterName(parameterName)
+    }
+
+    /**
+     * @param rollingDate The rolling date input for the `TimeEquality` filter. This field is
+     *   mutually exclusive to `Value` and `ParameterName` .
+     */
+    public fun rollingDate(rollingDate: IResolvable) {
+        cdkBuilder.rollingDate(rollingDate)
+    }
+
+    /**
+     * @param rollingDate The rolling date input for the `TimeEquality` filter. This field is
+     *   mutually exclusive to `Value` and `ParameterName` .
+     */
+    public fun rollingDate(rollingDate: CfnDashboard.RollingDateConfigurationProperty) {
+        cdkBuilder.rollingDate(rollingDate)
     }
 
     /**
@@ -80,7 +101,7 @@ public class CfnDashboardTimeEqualityFilterPropertyDsl {
 
     /**
      * @param value The value of a `TimeEquality` filter. This field is mutually exclusive to
-     *   `ParameterName` .
+     *   `RollingDate` and `ParameterName` .
      */
     public fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)

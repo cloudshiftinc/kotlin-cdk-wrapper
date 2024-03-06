@@ -191,7 +191,7 @@ public class LifecycleRuleDsl {
 
     /**
      * @param objectSizeGreaterThan Specifies the minimum object size in bytes for this rule to
-     *   apply to.
+     *   apply to. Objects must be larger than this value in bytes.
      */
     public fun objectSizeGreaterThan(objectSizeGreaterThan: Number) {
         cdkBuilder.objectSizeGreaterThan(objectSizeGreaterThan)
@@ -199,7 +199,7 @@ public class LifecycleRuleDsl {
 
     /**
      * @param objectSizeLessThan Specifies the maximum object size in bytes for this rule to apply
-     *   to.
+     *   to. Objects must be smaller than this value in bytes.
      */
     public fun objectSizeLessThan(objectSizeLessThan: Number) {
         cdkBuilder.objectSizeLessThan(objectSizeLessThan)

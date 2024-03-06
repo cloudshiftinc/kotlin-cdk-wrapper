@@ -175,6 +175,7 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * .cacheFullBehavior("cacheFullBehavior")
  * .cacheLength(123)
  * .captionData("captionData")
+ * .includeFillerNalUnits("includeFillerNalUnits")
  * .inputLossAction("inputLossAction")
  * .restartDelay(123)
  * .build())

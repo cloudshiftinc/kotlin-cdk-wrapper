@@ -18,6 +18,7 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.certificatemanager.Certificate
 import software.amazon.awscdk.services.certificatemanager.CertificateValidation
+import software.amazon.awscdk.services.certificatemanager.KeyAlgorithm
 import software.constructs.Construct
 
 /**
@@ -74,6 +75,21 @@ public class CertificateDsl(
      */
     public fun domainName(domainName: String) {
         cdkBuilder.domainName(domainName)
+    }
+
+    /**
+     * Specifies the algorithm of the public and private key pair that your certificate uses to
+     * encrypt data.
+     *
+     * Default: KeyAlgorithm.RSA_2048
+     *
+     * [Documentation](https://docs.aws.amazon.com/acm/latest/userguide/acm-certificate.html#algorithms.title)
+     *
+     * @param keyAlgorithm Specifies the algorithm of the public and private key pair that your
+     *   certificate uses to encrypt data.
+     */
+    public fun keyAlgorithm(keyAlgorithm: KeyAlgorithm) {
+        cdkBuilder.keyAlgorithm(keyAlgorithm)
     }
 
     /**

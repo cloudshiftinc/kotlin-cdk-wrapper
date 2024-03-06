@@ -388,6 +388,7 @@ import software.amazon.awscdk.services.emr.CfnClusterProps
  * .name("name")
  * .build()))
  * .terminationProtected(false)
+ * .unhealthyNodeReplacement(false)
  * .build())
  * .jobFlowRole("jobFlowRole")
  * .name("name")
@@ -420,7 +421,9 @@ import software.amazon.awscdk.services.emr.CfnClusterProps
  * .configurations(List.of(configurationProperty_))
  * .build()))
  * .customAmiId("customAmiId")
+ * .ebsRootVolumeIops(123)
  * .ebsRootVolumeSize(123)
+ * .ebsRootVolumeThroughput(123)
  * .kerberosAttributes(KerberosAttributesProperty.builder()
  * .kdcAdminPassword("kdcAdminPassword")
  * .realm("realm")
@@ -442,6 +445,11 @@ import software.amazon.awscdk.services.emr.CfnClusterProps
  * .build())
  * .build())
  * .osReleaseLabel("osReleaseLabel")
+ * .placementGroupConfigs(List.of(PlacementGroupConfigProperty.builder()
+ * .instanceRole("instanceRole")
+ * // the properties below are optional
+ * .placementStrategy("placementStrategy")
+ * .build()))
  * .releaseLabel("releaseLabel")
  * .scaleDownBehavior("scaleDownBehavior")
  * .securityConfiguration("securityConfiguration")
@@ -480,6 +488,8 @@ public class CfnClusterPropsDsl {
     private val _bootstrapActions: MutableList<Any> = mutableListOf()
 
     private val _configurations: MutableList<Any> = mutableListOf()
+
+    private val _placementGroupConfigs: MutableList<Any> = mutableListOf()
 
     private val _steps: MutableList<Any> = mutableListOf()
 
@@ -530,12 +540,22 @@ public class CfnClusterPropsDsl {
         cdkBuilder.autoScalingRole(autoScalingRole)
     }
 
-    /** @param autoTerminationPolicy the value to be set. */
+    /**
+     * @param autoTerminationPolicy An auto-termination policy defines the amount of idle time in
+     *   seconds after which a cluster automatically terminates. For alternative cluster termination
+     *   options, see
+     *   [Control cluster termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html)
+     */
     public fun autoTerminationPolicy(autoTerminationPolicy: IResolvable) {
         cdkBuilder.autoTerminationPolicy(autoTerminationPolicy)
     }
 
-    /** @param autoTerminationPolicy the value to be set. */
+    /**
+     * @param autoTerminationPolicy An auto-termination policy defines the amount of idle time in
+     *   seconds after which a cluster automatically terminates. For alternative cluster termination
+     *   options, see
+     *   [Control cluster termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html)
+     */
     public fun autoTerminationPolicy(
         autoTerminationPolicy: CfnCluster.AutoTerminationPolicyProperty
     ) {
@@ -599,12 +619,29 @@ public class CfnClusterPropsDsl {
     }
 
     /**
+     * @param ebsRootVolumeIops The IOPS, of the Amazon EBS root device volume of the Linux AMI that
+     *   is used for each Amazon EC2 instance. Available in Amazon EMR releases 6.15.0 and later.
+     */
+    public fun ebsRootVolumeIops(ebsRootVolumeIops: Number) {
+        cdkBuilder.ebsRootVolumeIops(ebsRootVolumeIops)
+    }
+
+    /**
      * @param ebsRootVolumeSize The size, in GiB, of the Amazon EBS root device volume of the Linux
      *   AMI that is used for each Amazon EC2 instance. Available in Amazon EMR releases 4.x and
      *   later.
      */
     public fun ebsRootVolumeSize(ebsRootVolumeSize: Number) {
         cdkBuilder.ebsRootVolumeSize(ebsRootVolumeSize)
+    }
+
+    /**
+     * @param ebsRootVolumeThroughput The throughput, in MiB/s, of the Amazon EBS root device volume
+     *   of the Linux AMI that is used for each Amazon EC2 instance. Available in Amazon EMR
+     *   releases 6.15.0 and later.
+     */
+    public fun ebsRootVolumeThroughput(ebsRootVolumeThroughput: Number) {
+        cdkBuilder.ebsRootVolumeThroughput(ebsRootVolumeThroughput)
     }
 
     /** @param instances A specification of the number and type of Amazon EC2 instances. */
@@ -685,9 +722,28 @@ public class CfnClusterPropsDsl {
         cdkBuilder.name(name)
     }
 
-    /** @param osReleaseLabel the value to be set. */
+    /**
+     * @param osReleaseLabel The Amazon Linux release specified in a cluster launch RunJobFlow
+     *   request. If no Amazon Linux release was specified, the default Amazon Linux release is
+     *   shown in the response.
+     */
     public fun osReleaseLabel(osReleaseLabel: String) {
         cdkBuilder.osReleaseLabel(osReleaseLabel)
+    }
+
+    /** @param placementGroupConfigs the value to be set. */
+    public fun placementGroupConfigs(vararg placementGroupConfigs: Any) {
+        _placementGroupConfigs.addAll(listOf(*placementGroupConfigs))
+    }
+
+    /** @param placementGroupConfigs the value to be set. */
+    public fun placementGroupConfigs(placementGroupConfigs: Collection<Any>) {
+        _placementGroupConfigs.addAll(placementGroupConfigs)
+    }
+
+    /** @param placementGroupConfigs the value to be set. */
+    public fun placementGroupConfigs(placementGroupConfigs: IResolvable) {
+        cdkBuilder.placementGroupConfigs(placementGroupConfigs)
     }
 
     /**
@@ -801,6 +857,8 @@ public class CfnClusterPropsDsl {
         if (_applications.isNotEmpty()) cdkBuilder.applications(_applications)
         if (_bootstrapActions.isNotEmpty()) cdkBuilder.bootstrapActions(_bootstrapActions)
         if (_configurations.isNotEmpty()) cdkBuilder.configurations(_configurations)
+        if (_placementGroupConfigs.isNotEmpty())
+            cdkBuilder.placementGroupConfigs(_placementGroupConfigs)
         if (_steps.isNotEmpty()) cdkBuilder.steps(_steps)
         if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
         return cdkBuilder.build()

@@ -27,7 +27,7 @@ import software.amazon.awscdk.services.appsync.UserPoolConfig
  * ```
  * GraphqlApi api = GraphqlApi.Builder.create(this, "Api")
  * .name("demo")
- * .schema(SchemaFile.fromAsset(join(__dirname, "schema.graphql")))
+ * .definition(Definition.fromFile(join(__dirname, "schema.graphql")))
  * .authorizationConfig(AuthorizationConfig.builder()
  * .defaultAuthorization(AuthorizationMode.builder()
  * .authorizationType(AuthorizationType.IAM)

@@ -16,11 +16,11 @@ import kotlin.String
 import software.amazon.awscdk.services.eks.CfnNodegroup
 
 /**
- * A property that allows a node to repel a set of pods.
+ * A property that allows a node to repel a `Pod` .
  *
  * For more information, see
  * [Node taints on managed node groups](https://docs.aws.amazon.com/eks/latest/userguide/node-taints-managed-node-groups.html)
- * .
+ * in the *Amazon EKS User Guide* .
  *
  * Example:
  * ```

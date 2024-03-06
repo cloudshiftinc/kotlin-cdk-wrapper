@@ -16,6 +16,7 @@ import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import io.cloudshiftdev.awscdkdsl.common.MapBuilder
 import kotlin.Any
 import kotlin.Boolean
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -60,7 +61,7 @@ import software.constructs.Construct
  * subnetcount = subnetcount + 1;
  * }
  * Cluster cluster = Cluster.Builder.create(this, "hello-eks")
- * .version(KubernetesVersion.V1_27)
+ * .version(KubernetesVersion.V1_29)
  * .vpc(vpc)
  * .ipFamily(IpFamily.IP_V6)
  * .vpcSubnets(List.of(SubnetSelection.builder().subnets(vpc.getPublicSubnets()).build()))
@@ -76,13 +77,15 @@ public class CfnSubnetDsl(
 ) {
     private val cdkBuilder: CfnSubnet.Builder = CfnSubnet.Builder.create(scope, id)
 
+    private val _ipv6CidrBlocks: MutableList<String> = mutableListOf()
+
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
      * Indicates whether a network interface created in this subnet receives an IPv6 address. The
      * default value is `false` .
      *
-     * If you specify `AssignIpv6AddressOnCreation` , you must also specify `Ipv6CidrBlock` .
+     * If you specify `AssignIpv6AddressOnCreation` , you must also specify an IPv6 CIDR block.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-assignipv6addressoncreation)
      *
@@ -97,7 +100,7 @@ public class CfnSubnetDsl(
      * Indicates whether a network interface created in this subnet receives an IPv6 address. The
      * default value is `false` .
      *
-     * If you specify `AssignIpv6AddressOnCreation` , you must also specify `Ipv6CidrBlock` .
+     * If you specify `AssignIpv6AddressOnCreation` , you must also specify an IPv6 CIDR block.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-assignipv6addressoncreation)
      *
@@ -180,9 +183,31 @@ public class CfnSubnetDsl(
     }
 
     /**
+     * An IPv4 IPAM pool ID for the subnet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-ipv4ipampoolid)
+     *
+     * @param ipv4IpamPoolId An IPv4 IPAM pool ID for the subnet.
+     */
+    public fun ipv4IpamPoolId(ipv4IpamPoolId: String) {
+        cdkBuilder.ipv4IpamPoolId(ipv4IpamPoolId)
+    }
+
+    /**
+     * An IPv4 netmask length for the subnet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-ipv4netmasklength)
+     *
+     * @param ipv4NetmaskLength An IPv4 netmask length for the subnet.
+     */
+    public fun ipv4NetmaskLength(ipv4NetmaskLength: Number) {
+        cdkBuilder.ipv4NetmaskLength(ipv4NetmaskLength)
+    }
+
+    /**
      * The IPv6 CIDR block.
      *
-     * If you specify `AssignIpv6AddressOnCreation` , you must also specify `Ipv6CidrBlock` .
+     * If you specify `AssignIpv6AddressOnCreation` , you must also specify an IPv6 CIDR block.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-ipv6cidrblock)
      *
@@ -190,6 +215,39 @@ public class CfnSubnetDsl(
      */
     public fun ipv6CidrBlock(ipv6CidrBlock: String) {
         cdkBuilder.ipv6CidrBlock(ipv6CidrBlock)
+    }
+
+    /**
+     * The IPv6 network ranges for the subnet, in CIDR notation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-ipv6cidrblocks)
+     *
+     * @param ipv6CidrBlocks The IPv6 network ranges for the subnet, in CIDR notation.
+     */
+    public fun ipv6CidrBlocks(vararg ipv6CidrBlocks: String) {
+        _ipv6CidrBlocks.addAll(listOf(*ipv6CidrBlocks))
+    }
+
+    /**
+     * The IPv6 network ranges for the subnet, in CIDR notation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-ipv6cidrblocks)
+     *
+     * @param ipv6CidrBlocks The IPv6 network ranges for the subnet, in CIDR notation.
+     */
+    public fun ipv6CidrBlocks(ipv6CidrBlocks: Collection<String>) {
+        _ipv6CidrBlocks.addAll(ipv6CidrBlocks)
+    }
+
+    /**
+     * An IPv6 IPAM pool ID for the subnet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-ipv6ipampoolid)
+     *
+     * @param ipv6IpamPoolId An IPv6 IPAM pool ID for the subnet.
+     */
+    public fun ipv6IpamPoolId(ipv6IpamPoolId: String) {
+        cdkBuilder.ipv6IpamPoolId(ipv6IpamPoolId)
     }
 
     /**
@@ -223,28 +281,45 @@ public class CfnSubnetDsl(
     }
 
     /**
-     * Indicates whether instances launched in this subnet receive a public IPv4 address.
+     * An IPv6 netmask length for the subnet.
      *
-     * The default value is `false` .
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-ipv6netmasklength)
+     *
+     * @param ipv6NetmaskLength An IPv6 netmask length for the subnet.
+     */
+    public fun ipv6NetmaskLength(ipv6NetmaskLength: Number) {
+        cdkBuilder.ipv6NetmaskLength(ipv6NetmaskLength)
+    }
+
+    /**
+     * Indicates whether instances launched in this subnet receive a public IPv4 address. The
+     * default value is `false` .
+     *
+     * AWS charges for all public IPv4 addresses, including public IPv4 addresses associated with
+     * running instances and Elastic IP addresses. For more information, see the *Public IPv4
+     * Address* tab on the [VPC pricing page](https://docs.aws.amazon.com/vpc/pricing/) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-mappubliciponlaunch)
      *
      * @param mapPublicIpOnLaunch Indicates whether instances launched in this subnet receive a
-     *   public IPv4 address.
+     *   public IPv4 address. The default value is `false` .
      */
     public fun mapPublicIpOnLaunch(mapPublicIpOnLaunch: Boolean) {
         cdkBuilder.mapPublicIpOnLaunch(mapPublicIpOnLaunch)
     }
 
     /**
-     * Indicates whether instances launched in this subnet receive a public IPv4 address.
+     * Indicates whether instances launched in this subnet receive a public IPv4 address. The
+     * default value is `false` .
      *
-     * The default value is `false` .
+     * AWS charges for all public IPv4 addresses, including public IPv4 addresses associated with
+     * running instances and Elastic IP addresses. For more information, see the *Public IPv4
+     * Address* tab on the [VPC pricing page](https://docs.aws.amazon.com/vpc/pricing/) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-mappubliciponlaunch)
      *
      * @param mapPublicIpOnLaunch Indicates whether instances launched in this subnet receive a
-     *   public IPv4 address.
+     *   public IPv4 address. The default value is `false` .
      */
     public fun mapPublicIpOnLaunch(mapPublicIpOnLaunch: IResolvable) {
         cdkBuilder.mapPublicIpOnLaunch(mapPublicIpOnLaunch)
@@ -345,6 +420,7 @@ public class CfnSubnetDsl(
     }
 
     public fun build(): CfnSubnet {
+        if (_ipv6CidrBlocks.isNotEmpty()) cdkBuilder.ipv6CidrBlocks(_ipv6CidrBlocks)
         if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
         return cdkBuilder.build()
     }

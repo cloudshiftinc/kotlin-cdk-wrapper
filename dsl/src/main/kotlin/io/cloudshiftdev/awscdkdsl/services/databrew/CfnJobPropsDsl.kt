@@ -297,12 +297,12 @@ public class CfnJobPropsDsl {
         cdkBuilder.name(name)
     }
 
-    /** @param outputLocation Output location. */
+    /** @param outputLocation The location in Amazon S3 where the job writes its output. */
     public fun outputLocation(outputLocation: IResolvable) {
         cdkBuilder.outputLocation(outputLocation)
     }
 
-    /** @param outputLocation Output location. */
+    /** @param outputLocation The location in Amazon S3 where the job writes its output. */
     public fun outputLocation(outputLocation: CfnJob.OutputLocationProperty) {
         cdkBuilder.outputLocation(outputLocation)
     }

@@ -20,6 +20,7 @@ import kotlin.collections.Collection
 import kotlin.collections.Map
 import kotlin.collections.MutableList
 import software.amazon.awscdk.Duration
+import software.amazon.awscdk.services.lambda.IEventSourceDlq
 import software.amazon.awscdk.services.lambda.StartingPosition
 import software.amazon.awscdk.services.lambda.eventsources.KafkaEventSourceProps
 import software.amazon.awscdk.services.secretsmanager.ISecret
@@ -35,6 +36,7 @@ import software.amazon.awscdk.services.secretsmanager.ISecret
  * import software.amazon.awscdk.services.lambda.*;
  * import software.amazon.awscdk.services.lambda.eventsources.*;
  * import software.amazon.awscdk.services.secretsmanager.*;
+ * IEventSourceDlq eventSourceDlq;
  * Object filters;
  * Secret secret;
  * KafkaEventSourceProps kafkaEventSourceProps = KafkaEventSourceProps.builder()
@@ -47,6 +49,7 @@ import software.amazon.awscdk.services.secretsmanager.ISecret
  * .filters(List.of(Map.of(
  * "filtersKey", filters)))
  * .maxBatchingWindow(Duration.minutes(30))
+ * .onFailure(eventSourceDlq)
  * .secret(secret)
  * .build();
  * ```
@@ -104,6 +107,13 @@ public class KafkaEventSourcePropsDsl {
      */
     public fun maxBatchingWindow(maxBatchingWindow: Duration) {
         cdkBuilder.maxBatchingWindow(maxBatchingWindow)
+    }
+
+    /**
+     * @param onFailure Add an on Failure Destination for this Kafka event. SNS/SQS/S3 are supported
+     */
+    public fun onFailure(onFailure: IEventSourceDlq) {
+        cdkBuilder.onFailure(onFailure)
     }
 
     /**

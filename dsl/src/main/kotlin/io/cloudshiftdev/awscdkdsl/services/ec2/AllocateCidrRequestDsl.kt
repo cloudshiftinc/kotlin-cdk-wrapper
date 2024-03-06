@@ -20,7 +20,7 @@ import software.amazon.awscdk.services.ec2.AllocateCidrRequest
 import software.amazon.awscdk.services.ec2.RequestedSubnet
 
 /**
- * Request for subnets Cidr to be allocated for a Vpc.
+ * Request for subnets CIDR to be allocated for a Vpc.
  *
  * Example:
  * ```
@@ -35,6 +35,7 @@ import software.amazon.awscdk.services.ec2.RequestedSubnet
  * .subnetType(SubnetType.PRIVATE_ISOLATED)
  * // the properties below are optional
  * .cidrMask(123)
+ * .ipv6AssignAddressOnCreation(false)
  * .mapPublicIpOnLaunch(false)
  * .reserved(false)
  * .build())

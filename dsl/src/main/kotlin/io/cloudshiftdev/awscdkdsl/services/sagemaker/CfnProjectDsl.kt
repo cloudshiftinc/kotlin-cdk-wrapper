@@ -84,11 +84,16 @@ public class CfnProjectDsl(
     }
 
     /**
-     * Provisioned ServiceCatalog Details.
+     * Details of a provisioned service catalog product.
+     *
+     * For information about service catalog, see
+     * [What is AWS Service Catalog](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-project.html#cfn-sagemaker-project-servicecatalogprovisionedproductdetails)
      *
-     * @param serviceCatalogProvisionedProductDetails Provisioned ServiceCatalog Details.
+     * @param serviceCatalogProvisionedProductDetails Details of a provisioned service catalog
+     *   product.
      */
     public fun serviceCatalogProvisionedProductDetails(
         serviceCatalogProvisionedProductDetails: IResolvable
@@ -97,11 +102,16 @@ public class CfnProjectDsl(
     }
 
     /**
-     * Provisioned ServiceCatalog Details.
+     * Details of a provisioned service catalog product.
+     *
+     * For information about service catalog, see
+     * [What is AWS Service Catalog](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-project.html#cfn-sagemaker-project-servicecatalogprovisionedproductdetails)
      *
-     * @param serviceCatalogProvisionedProductDetails Provisioned ServiceCatalog Details.
+     * @param serviceCatalogProvisionedProductDetails Details of a provisioned service catalog
+     *   product.
      */
     public fun serviceCatalogProvisionedProductDetails(
         serviceCatalogProvisionedProductDetails:

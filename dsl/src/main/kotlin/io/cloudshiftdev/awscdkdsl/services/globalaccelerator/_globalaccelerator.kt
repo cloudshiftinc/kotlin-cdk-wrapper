@@ -89,6 +89,10 @@ public object globalaccelerator {
      * AcceleratorAttributes acceleratorAttributes = AcceleratorAttributes.builder()
      * .acceleratorArn("acceleratorArn")
      * .dnsName("dnsName")
+     * // the properties below are optional
+     * .dualStackDnsName("dualStackDnsName")
+     * .ipv4Addresses(List.of("ipv4Addresses"))
+     * .ipv6Addresses(List.of("ipv6Addresses"))
      * .build();
      * ```
      */
@@ -105,12 +109,9 @@ public object globalaccelerator {
      *
      * Example:
      * ```
-     * // The code below shows an example of how to instantiate this type.
-     * // The values are placeholders you should change.
-     * import software.amazon.awscdk.services.globalaccelerator.*;
-     * AcceleratorProps acceleratorProps = AcceleratorProps.builder()
-     * .acceleratorName("acceleratorName")
-     * .enabled(false)
+     * Accelerator accelerator = Accelerator.Builder.create(this, "Accelerator")
+     * .ipAddresses(List.of("1.1.1.1", "2.2.2.2"))
+     * .ipAddressType(IpAddressType.IPV4)
      * .build();
      * ```
      */
@@ -209,6 +210,7 @@ public object globalaccelerator {
      * .endpointConfigurations(List.of(EndpointConfigurationProperty.builder()
      * .endpointId("endpointId")
      * // the properties below are optional
+     * .attachmentArn("attachmentArn")
      * .clientIpPreservationEnabled(false)
      * .weight(123)
      * .build()))
@@ -251,6 +253,7 @@ public object globalaccelerator {
      * EndpointConfigurationProperty.builder()
      * .endpointId("endpointId")
      * // the properties below are optional
+     * .attachmentArn("attachmentArn")
      * .clientIpPreservationEnabled(false)
      * .weight(123)
      * .build();
@@ -314,6 +317,7 @@ public object globalaccelerator {
      * .endpointConfigurations(List.of(EndpointConfigurationProperty.builder()
      * .endpointId("endpointId")
      * // the properties below are optional
+     * .attachmentArn("attachmentArn")
      * .clientIpPreservationEnabled(false)
      * .weight(123)
      * .build()))

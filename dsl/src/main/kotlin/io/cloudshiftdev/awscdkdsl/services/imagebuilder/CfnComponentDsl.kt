@@ -64,7 +64,7 @@ public class CfnComponentDsl(
      * The change description of the component.
      *
      * Describes what change has been made in this version, or what makes this version different
-     * from other versions of this component.
+     * from other versions of the component.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html#cfn-imagebuilder-component-changedescription)
      *

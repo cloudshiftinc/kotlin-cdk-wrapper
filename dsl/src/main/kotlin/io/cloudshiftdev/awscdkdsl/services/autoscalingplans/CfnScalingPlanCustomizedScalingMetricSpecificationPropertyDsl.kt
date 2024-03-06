@@ -22,8 +22,8 @@ import software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan
 /**
  * `CustomizedScalingMetricSpecification` is a subproperty of
  * [TargetTrackingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html)
- * that specifies a customized scaling metric for a target tracking configuration to use with AWS
- * Auto Scaling ( Auto Scaling Plans ).
+ * that specifies a customized scaling metric for a target tracking configuration to use with a
+ * scaling plan.
  *
  * To create your customized scaling metric specification:
  * * Add values for each required property from CloudWatch. You can use an existing metric, or a new

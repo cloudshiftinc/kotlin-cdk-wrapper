@@ -29,6 +29,7 @@ import software.amazon.awscdk.services.route53resolver.CfnResolverRule
  * .ip("ip")
  * .ipv6("ipv6")
  * .port("port")
+ * .protocol("protocol")
  * .build();
  * ```
  *
@@ -52,6 +53,26 @@ public class CfnResolverRuleTargetAddressPropertyDsl {
     /** @param port The port at `Ip` that you want to forward DNS queries to. */
     public fun port(port: String) {
         cdkBuilder.port(port)
+    }
+
+    /**
+     * @param protocol The protocols for the Resolver endpoints. DoH-FIPS is applicable for inbound
+     *   endpoints only. For an inbound endpoint you can apply the protocols as follows:
+     * * Do53 and DoH in combination.
+     * * Do53 and DoH-FIPS in combination.
+     * * Do53 alone.
+     * * DoH alone.
+     * * DoH-FIPS alone.
+     * * None, which is treated as Do53.
+     *
+     * For an outbound endpoint you can apply the protocols as follows:
+     * * Do53 and DoH in combination.
+     * * Do53 alone.
+     * * DoH alone.
+     * * None, which is treated as Do53.
+     */
+    public fun protocol(protocol: String) {
+        cdkBuilder.protocol(protocol)
     }
 
     public fun build(): CfnResolverRule.TargetAddressProperty = cdkBuilder.build()

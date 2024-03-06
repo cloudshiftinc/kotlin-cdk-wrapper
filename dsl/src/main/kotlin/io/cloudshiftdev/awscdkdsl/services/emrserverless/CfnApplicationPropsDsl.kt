@@ -33,6 +33,7 @@ import software.amazon.awscdk.services.emrserverless.CfnApplicationProps
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.emrserverless.*;
+ * ConfigurationObjectProperty configurationObjectProperty_;
  * CfnApplicationProps cfnApplicationProps = CfnApplicationProps.builder()
  * .releaseLabel("releaseLabel")
  * .type("type")
@@ -66,11 +67,38 @@ import software.amazon.awscdk.services.emrserverless.CfnApplicationProps
  * // the properties below are optional
  * .disk("disk")
  * .build())
+ * .monitoringConfiguration(MonitoringConfigurationProperty.builder()
+ * .cloudWatchLoggingConfiguration(CloudWatchLoggingConfigurationProperty.builder()
+ * .enabled(false)
+ * .encryptionKeyArn("encryptionKeyArn")
+ * .logGroupName("logGroupName")
+ * .logStreamNamePrefix("logStreamNamePrefix")
+ * .logTypeMap(List.of(LogTypeMapKeyValuePairProperty.builder()
+ * .key("key")
+ * .value(List.of("value"))
+ * .build()))
+ * .build())
+ * .managedPersistenceMonitoringConfiguration(ManagedPersistenceMonitoringConfigurationProperty.builder()
+ * .enabled(false)
+ * .encryptionKeyArn("encryptionKeyArn")
+ * .build())
+ * .s3MonitoringConfiguration(S3MonitoringConfigurationProperty.builder()
+ * .encryptionKeyArn("encryptionKeyArn")
+ * .logUri("logUri")
+ * .build())
+ * .build())
  * .name("name")
  * .networkConfiguration(NetworkConfigurationProperty.builder()
  * .securityGroupIds(List.of("securityGroupIds"))
  * .subnetIds(List.of("subnetIds"))
  * .build())
+ * .runtimeConfiguration(List.of(ConfigurationObjectProperty.builder()
+ * .classification("classification")
+ * // the properties below are optional
+ * .configurations(List.of(configurationObjectProperty_))
+ * .properties(Map.of(
+ * "propertiesKey", "properties"))
+ * .build()))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -92,12 +120,11 @@ public class CfnApplicationPropsDsl {
 
     private val _initialCapacity: MutableList<Any> = mutableListOf()
 
+    private val _runtimeConfiguration: MutableList<Any> = mutableListOf()
+
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
-    /**
-     * @param architecture The CPU architecture type of the application. Allowed values: `X86_64` or
-     *   `ARM64`
-     */
+    /** @param architecture The CPU architecture of an application. */
     public fun architecture(architecture: String) {
         cdkBuilder.architecture(architecture)
     }
@@ -138,12 +165,12 @@ public class CfnApplicationPropsDsl {
         cdkBuilder.autoStopConfiguration(autoStopConfiguration)
     }
 
-    /** @param imageConfiguration The image configuration. */
+    /** @param imageConfiguration The image configuration applied to all worker types. */
     public fun imageConfiguration(imageConfiguration: IResolvable) {
         cdkBuilder.imageConfiguration(imageConfiguration)
     }
 
-    /** @param imageConfiguration The image configuration. */
+    /** @param imageConfiguration The image configuration applied to all worker types. */
     public fun imageConfiguration(
         imageConfiguration: CfnApplication.ImageConfigurationInputProperty
     ) {
@@ -184,12 +211,28 @@ public class CfnApplicationPropsDsl {
     }
 
     /**
-     * @param name The name of the application. *Minimum* : 1
-     *
-     * *Maximum* : 64
-     *
-     * *Pattern* : `^[A-Za-z0-9._\\/#-]+$`
+     * @param monitoringConfiguration A configuration specification to be used when provisioning an
+     *   application. A configuration consists of a classification, properties, and optional nested
+     *   configurations. A classification refers to an application-specific configuration file.
+     *   Properties are the settings you want to change in that file.
      */
+    public fun monitoringConfiguration(monitoringConfiguration: IResolvable) {
+        cdkBuilder.monitoringConfiguration(monitoringConfiguration)
+    }
+
+    /**
+     * @param monitoringConfiguration A configuration specification to be used when provisioning an
+     *   application. A configuration consists of a classification, properties, and optional nested
+     *   configurations. A classification refers to an application-specific configuration file.
+     *   Properties are the settings you want to change in that file.
+     */
+    public fun monitoringConfiguration(
+        monitoringConfiguration: CfnApplication.MonitoringConfigurationProperty
+    ) {
+        cdkBuilder.monitoringConfiguration(monitoringConfiguration)
+    }
+
+    /** @param name The name of the application. */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }
@@ -212,15 +255,48 @@ public class CfnApplicationPropsDsl {
         cdkBuilder.networkConfiguration(networkConfiguration)
     }
 
-    /**
-     * @param releaseLabel The EMR release version associated with the application. *Minimum* : 1
-     *
-     * *Maximum* : 64
-     *
-     * *Pattern* : `^[A-Za-z0-9._/-]+$`
-     */
+    /** @param releaseLabel The EMR release associated with the application. */
     public fun releaseLabel(releaseLabel: String) {
         cdkBuilder.releaseLabel(releaseLabel)
+    }
+
+    /**
+     * @param runtimeConfiguration The
+     *   [Configuration](https://docs.aws.amazon.com/emr-serverless/latest/APIReference/API_Configuration.html)
+     *   specifications of an application. Each configuration consists of a classification and
+     *   properties. You use this parameter when creating or updating an application. To see the
+     *   runtimeConfiguration object of an application, run the
+     *   [GetApplication](https://docs.aws.amazon.com/emr-serverless/latest/APIReference/API_GetApplication.html)
+     *   API operation.
+     */
+    public fun runtimeConfiguration(vararg runtimeConfiguration: Any) {
+        _runtimeConfiguration.addAll(listOf(*runtimeConfiguration))
+    }
+
+    /**
+     * @param runtimeConfiguration The
+     *   [Configuration](https://docs.aws.amazon.com/emr-serverless/latest/APIReference/API_Configuration.html)
+     *   specifications of an application. Each configuration consists of a classification and
+     *   properties. You use this parameter when creating or updating an application. To see the
+     *   runtimeConfiguration object of an application, run the
+     *   [GetApplication](https://docs.aws.amazon.com/emr-serverless/latest/APIReference/API_GetApplication.html)
+     *   API operation.
+     */
+    public fun runtimeConfiguration(runtimeConfiguration: Collection<Any>) {
+        _runtimeConfiguration.addAll(runtimeConfiguration)
+    }
+
+    /**
+     * @param runtimeConfiguration The
+     *   [Configuration](https://docs.aws.amazon.com/emr-serverless/latest/APIReference/API_Configuration.html)
+     *   specifications of an application. Each configuration consists of a classification and
+     *   properties. You use this parameter when creating or updating an application. To see the
+     *   runtimeConfiguration object of an application, run the
+     *   [GetApplication](https://docs.aws.amazon.com/emr-serverless/latest/APIReference/API_GetApplication.html)
+     *   API operation.
+     */
+    public fun runtimeConfiguration(runtimeConfiguration: IResolvable) {
+        cdkBuilder.runtimeConfiguration(runtimeConfiguration)
     }
 
     /** @param tags The tags assigned to the application. */
@@ -238,25 +314,27 @@ public class CfnApplicationPropsDsl {
         cdkBuilder.type(type)
     }
 
-    /** @param workerTypeSpecifications the value to be set. */
+    /** @param workerTypeSpecifications The specification applied to each worker type. */
     public fun workerTypeSpecifications(workerTypeSpecifications: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
         builder.apply(workerTypeSpecifications)
         cdkBuilder.workerTypeSpecifications(builder.map)
     }
 
-    /** @param workerTypeSpecifications the value to be set. */
+    /** @param workerTypeSpecifications The specification applied to each worker type. */
     public fun workerTypeSpecifications(workerTypeSpecifications: Map<String, Any>) {
         cdkBuilder.workerTypeSpecifications(workerTypeSpecifications)
     }
 
-    /** @param workerTypeSpecifications the value to be set. */
+    /** @param workerTypeSpecifications The specification applied to each worker type. */
     public fun workerTypeSpecifications(workerTypeSpecifications: IResolvable) {
         cdkBuilder.workerTypeSpecifications(workerTypeSpecifications)
     }
 
     public fun build(): CfnApplicationProps {
         if (_initialCapacity.isNotEmpty()) cdkBuilder.initialCapacity(_initialCapacity)
+        if (_runtimeConfiguration.isNotEmpty())
+            cdkBuilder.runtimeConfiguration(_runtimeConfiguration)
         if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
         return cdkBuilder.build()
     }

@@ -14,6 +14,7 @@ package io.cloudshiftdev.awscdkdsl.services.autoscaling
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Any
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -35,11 +36,12 @@ import software.constructs.Construct
  * Amazon EC2 Auto Scaling configures instances launched as part of an Auto Scaling group using
  * either a
  * [launch template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)
- * or a launch configuration. We strongly recommend that you do not use launch configurations. They
- * do not provide full functionality for Amazon EC2 Auto Scaling or Amazon EC2. For more
- * information, see
+ * or a launch configuration. We strongly recommend that you do not use launch configurations. For
+ * more information, see
  * [Launch configurations](https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-configurations.html)
- * and
+ * in the *Amazon EC2 Auto Scaling User Guide* .
+ *
+ * For help migrating from launch configurations to launch templates, see
  * [Migrate AWS CloudFormation stacks from launch configurations to launch templates](https://docs.aws.amazon.com/autoscaling/ec2/userguide/migrate-launch-configurations-with-cloudformation.html)
  * in the *Amazon EC2 Auto Scaling User Guide* .
  *
@@ -64,6 +66,10 @@ import software.constructs.Construct
  * .healthCheckGracePeriod(123)
  * .healthCheckType("healthCheckType")
  * .instanceId("instanceId")
+ * .instanceMaintenancePolicy(InstanceMaintenancePolicyProperty.builder()
+ * .maxHealthyPercentage(123)
+ * .minHealthyPercentage(123)
+ * .build())
  * .launchConfigurationName("launchConfigurationName")
  * .launchTemplate(LaunchTemplateSpecificationProperty.builder()
  * .version("version")
@@ -99,6 +105,15 @@ import software.constructs.Construct
  * // the properties below are optional
  * .overrides(List.of(LaunchTemplateOverridesProperty.builder()
  * .instanceRequirements(InstanceRequirementsProperty.builder()
+ * .memoryMiB(MemoryMiBRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .vCpuCount(VCpuCountRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * // the properties below are optional
  * .acceleratorCount(AcceleratorCountRequestProperty.builder()
  * .max(123)
  * .min(123)
@@ -122,11 +137,8 @@ import software.constructs.Construct
  * .instanceGenerations(List.of("instanceGenerations"))
  * .localStorage("localStorage")
  * .localStorageTypes(List.of("localStorageTypes"))
+ * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
  * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
- * .max(123)
- * .min(123)
- * .build())
- * .memoryMiB(MemoryMiBRequestProperty.builder()
  * .max(123)
  * .min(123)
  * .build())
@@ -142,10 +154,6 @@ import software.constructs.Construct
  * .requireHibernateSupport(false)
  * .spotMaxPricePercentageOverLowestPrice(123)
  * .totalLocalStorageGb(TotalLocalStorageGBRequestProperty.builder()
- * .max(123)
- * .min(123)
- * .build())
- * .vCpuCount(VCpuCountRequestProperty.builder()
  * .max(123)
  * .min(123)
  * .build())
@@ -171,6 +179,11 @@ import software.constructs.Construct
  * .build())
  * .build())
  * .newInstancesProtectedFromScaleIn(false)
+ * .notificationConfiguration(NotificationConfigurationProperty.builder()
+ * .topicArn("topicArn")
+ * // the properties below are optional
+ * .notificationTypes(List.of("notificationTypes"))
+ * .build())
  * .notificationConfigurations(List.of(NotificationConfigurationProperty.builder()
  * .topicArn("topicArn")
  * // the properties below are optional
@@ -467,6 +480,38 @@ public class CfnAutoScalingGroupDsl(
     }
 
     /**
+     * An instance maintenance policy.
+     *
+     * For more information, see
+     * [Set instance maintenance policy](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-maintenance-policy.html)
+     * in the *Amazon EC2 Auto Scaling User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-instancemaintenancepolicy)
+     *
+     * @param instanceMaintenancePolicy An instance maintenance policy.
+     */
+    public fun instanceMaintenancePolicy(instanceMaintenancePolicy: IResolvable) {
+        cdkBuilder.instanceMaintenancePolicy(instanceMaintenancePolicy)
+    }
+
+    /**
+     * An instance maintenance policy.
+     *
+     * For more information, see
+     * [Set instance maintenance policy](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-maintenance-policy.html)
+     * in the *Amazon EC2 Auto Scaling User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-instancemaintenancepolicy)
+     *
+     * @param instanceMaintenancePolicy An instance maintenance policy.
+     */
+    public fun instanceMaintenancePolicy(
+        instanceMaintenancePolicy: CfnAutoScalingGroup.InstanceMaintenancePolicyProperty
+    ) {
+        cdkBuilder.instanceMaintenancePolicy(instanceMaintenancePolicy)
+    }
+
+    /**
      * The name of the launch configuration to use to launch instances.
      *
      * Required only if you don't specify `LaunchTemplate` , `MixedInstancesPolicy` , or
@@ -750,6 +795,30 @@ public class CfnAutoScalingGroupDsl(
      */
     public fun newInstancesProtectedFromScaleIn(newInstancesProtectedFromScaleIn: IResolvable) {
         cdkBuilder.newInstancesProtectedFromScaleIn(newInstancesProtectedFromScaleIn)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-notificationconfiguration)
+     *
+     * @param notificationConfiguration
+     * @deprecated this property has been deprecated
+     */
+    @Deprecated(message = "deprecated in CDK")
+    public fun notificationConfiguration(notificationConfiguration: IResolvable) {
+        cdkBuilder.notificationConfiguration(notificationConfiguration)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-notificationconfiguration)
+     *
+     * @param notificationConfiguration
+     * @deprecated this property has been deprecated
+     */
+    @Deprecated(message = "deprecated in CDK")
+    public fun notificationConfiguration(
+        notificationConfiguration: CfnAutoScalingGroup.NotificationConfigurationProperty
+    ) {
+        cdkBuilder.notificationConfiguration(notificationConfiguration)
     }
 
     /**

@@ -31,6 +31,7 @@ import software.amazon.awscdk.services.sns.CfnSubscriptionProps
  * Object deliveryPolicy;
  * Object filterPolicy;
  * Object redrivePolicy;
+ * Object replayPolicy;
  * CfnSubscriptionProps cfnSubscriptionProps = CfnSubscriptionProps.builder()
  * .protocol("protocol")
  * .topicArn("topicArn")
@@ -42,6 +43,7 @@ import software.amazon.awscdk.services.sns.CfnSubscriptionProps
  * .rawMessageDelivery(false)
  * .redrivePolicy(redrivePolicy)
  * .region("region")
+ * .replayPolicy(replayPolicy)
  * .subscriptionRoleArn("subscriptionRoleArn")
  * .build();
  * ```
@@ -203,15 +205,27 @@ public class CfnSubscriptionPropsDsl {
         cdkBuilder.region(region)
     }
 
+    /** @param replayPolicy the value to be set. */
+    public fun replayPolicy(replayPolicy: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(replayPolicy)
+        cdkBuilder.replayPolicy(builder.map)
+    }
+
+    /** @param replayPolicy the value to be set. */
+    public fun replayPolicy(replayPolicy: Any) {
+        cdkBuilder.replayPolicy(replayPolicy)
+    }
+
     /**
-     * @param subscriptionRoleArn This property applies only to Amazon Kinesis Data Firehose
-     *   delivery stream subscriptions. Specify the ARN of the IAM role that has the following:
-     * * Permission to write to the Amazon Kinesis Data Firehose delivery stream
+     * @param subscriptionRoleArn This property applies only to Amazon Data Firehose delivery stream
+     *   subscriptions. Specify the ARN of the IAM role that has the following:
+     * * Permission to write to the Amazon Data Firehose delivery stream
      * * Amazon SNS listed as a trusted entity
      *
-     * Specifying a valid ARN for this attribute is required for Kinesis Data Firehose delivery
-     * stream subscriptions. For more information, see
-     * [Fanout to Amazon Kinesis Data Firehose delivery streams](https://docs.aws.amazon.com/sns/latest/dg/sns-firehose-as-subscriber.html)
+     * Specifying a valid ARN for this attribute is required for Firehose delivery stream
+     * subscriptions. For more information, see
+     * [Fanout to Amazon Data Firehose delivery streams](https://docs.aws.amazon.com/sns/latest/dg/sns-firehose-as-subscriber.html)
      * in the *Amazon SNS Developer Guide.*
      */
     public fun subscriptionRoleArn(subscriptionRoleArn: String) {

@@ -14,21 +14,32 @@ package io.cloudshiftdev.awscdkdsl.services.dynamodb
 import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.dynamodb.Attribute
+import software.amazon.awscdk.services.dynamodb.AutoscaledCapacityOptions
 import software.amazon.awscdk.services.dynamodb.CfnGlobalTable
 import software.amazon.awscdk.services.dynamodb.CfnGlobalTableProps
 import software.amazon.awscdk.services.dynamodb.CfnTable
 import software.amazon.awscdk.services.dynamodb.CfnTableProps
+import software.amazon.awscdk.services.dynamodb.CsvOptions
 import software.amazon.awscdk.services.dynamodb.EnableScalingProps
 import software.amazon.awscdk.services.dynamodb.GlobalSecondaryIndexProps
+import software.amazon.awscdk.services.dynamodb.GlobalSecondaryIndexPropsV2
+import software.amazon.awscdk.services.dynamodb.ImportSourceSpecification
 import software.amazon.awscdk.services.dynamodb.LocalSecondaryIndexProps
 import software.amazon.awscdk.services.dynamodb.OperationsMetricOptions
+import software.amazon.awscdk.services.dynamodb.ReplicaGlobalSecondaryIndexOptions
+import software.amazon.awscdk.services.dynamodb.ReplicaTableProps
 import software.amazon.awscdk.services.dynamodb.SchemaOptions
 import software.amazon.awscdk.services.dynamodb.SecondaryIndexProps
 import software.amazon.awscdk.services.dynamodb.SystemErrorsForOperationsMetricOptions
 import software.amazon.awscdk.services.dynamodb.Table
 import software.amazon.awscdk.services.dynamodb.TableAttributes
+import software.amazon.awscdk.services.dynamodb.TableAttributesV2
 import software.amazon.awscdk.services.dynamodb.TableOptions
+import software.amazon.awscdk.services.dynamodb.TableOptionsV2
 import software.amazon.awscdk.services.dynamodb.TableProps
+import software.amazon.awscdk.services.dynamodb.TablePropsV2
+import software.amazon.awscdk.services.dynamodb.TableV2
+import software.amazon.awscdk.services.dynamodb.ThroughputProps
 import software.amazon.awscdk.services.dynamodb.UtilizationScalingProps
 import software.constructs.Construct
 
@@ -38,23 +49,53 @@ public object dynamodb {
      *
      * Example:
      * ```
-     * import software.amazon.awscdk.services.cloudwatch.*;
-     * Table table = Table.Builder.create(this, "Table")
-     * .partitionKey(Attribute.builder().name("id").type(AttributeType.STRING).build())
-     * .build();
-     * IMetric metric = table.metricThrottledRequestsForOperations(OperationsMetricOptions.builder()
-     * .operations(List.of(Operation.PUT_ITEM))
-     * .period(Duration.minutes(1))
-     * .build());
-     * Alarm.Builder.create(this, "Alarm")
-     * .metric(metric)
-     * .evaluationPeriods(1)
-     * .threshold(1)
+     * import software.amazon.awscdk.*;
+     * App app = new App();
+     * Stack stack = Stack.Builder.create(app,
+     * "Stack").env(Environment.builder().region("us-west-2").build()).build();
+     * TableV2 globalTable = TableV2.Builder.create(stack, "GlobalTable")
+     * .partitionKey(Attribute.builder().name("pk").type(AttributeType.STRING).build())
+     * // applys to all replicas, i.e., us-west-2, us-east-1, us-east-2
+     * .removalPolicy(RemovalPolicy.DESTROY)
+     * .replicas(List.of(ReplicaTableProps.builder().region("us-east-1").build(),
+     * ReplicaTableProps.builder().region("us-east-2").build()))
      * .build();
      * ```
      */
     public inline fun attribute(block: AttributeDsl.() -> Unit = {}): Attribute {
         val builder = AttributeDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Options used to configure autoscaled capacity.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.*;
+     * App app = new App();
+     * Stack stack = Stack.Builder.create(app,
+     * "Stack").env(Environment.builder().region("us-west-2").build()).build();
+     * TableV2 globalTable = TableV2.Builder.create(stack, "GlobalTable")
+     * .partitionKey(Attribute.builder().name("pk").type(AttributeType.STRING).build())
+     * .billing(Billing.provisioned(ThroughputProps.builder()
+     * .readCapacity(Capacity.fixed(10))
+     * .writeCapacity(Capacity.autoscaled(AutoscaledCapacityOptions.builder().maxCapacity(15).build()))
+     * .build()))
+     * .replicas(List.of(ReplicaTableProps.builder()
+     * .region("us-east-1")
+     * .build(), ReplicaTableProps.builder()
+     * .region("us-east-2")
+     * .readCapacity(Capacity.autoscaled(AutoscaledCapacityOptions.builder().maxCapacity(20).targetUtilizationPercent(50).build()))
+     * .build()))
+     * .build();
+     * ```
+     */
+    public inline fun autoscaledCapacityOptions(
+        block: AutoscaledCapacityOptionsDsl.() -> Unit = {}
+    ): AutoscaledCapacityOptions {
+        val builder = AutoscaledCapacityOptionsDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -186,6 +227,8 @@ public object dynamodb {
      * .build()))
      * .kinesisStreamSpecification(KinesisStreamSpecificationProperty.builder()
      * .streamArn("streamArn")
+     * // the properties below are optional
+     * .approximateCreationDateTimePrecision("approximateCreationDateTimePrecision")
      * .build())
      * .pointInTimeRecoverySpecification(PointInTimeRecoverySpecificationProperty.builder()
      * .pointInTimeRecoveryEnabled(false)
@@ -479,6 +522,8 @@ public object dynamodb {
      * KinesisStreamSpecificationProperty kinesisStreamSpecificationProperty =
      * KinesisStreamSpecificationProperty.builder()
      * .streamArn("streamArn")
+     * // the properties below are optional
+     * .approximateCreationDateTimePrecision("approximateCreationDateTimePrecision")
      * .build();
      * ```
      *
@@ -625,6 +670,8 @@ public object dynamodb {
      * .build()))
      * .kinesisStreamSpecification(KinesisStreamSpecificationProperty.builder()
      * .streamArn("streamArn")
+     * // the properties below are optional
+     * .approximateCreationDateTimePrecision("approximateCreationDateTimePrecision")
      * .build())
      * .pointInTimeRecoverySpecification(PointInTimeRecoverySpecificationProperty.builder()
      * .pointInTimeRecoveryEnabled(false)
@@ -890,6 +937,8 @@ public object dynamodb {
      * .build()))
      * .kinesisStreamSpecification(KinesisStreamSpecificationProperty.builder()
      * .streamArn("streamArn")
+     * // the properties below are optional
+     * .approximateCreationDateTimePrecision("approximateCreationDateTimePrecision")
      * .build())
      * .pointInTimeRecoverySpecification(PointInTimeRecoverySpecificationProperty.builder()
      * .pointInTimeRecoveryEnabled(false)
@@ -1157,6 +1206,8 @@ public object dynamodb {
      * .build())
      * .kinesisStreamSpecification(KinesisStreamSpecificationProperty.builder()
      * .streamArn("streamArn")
+     * // the properties below are optional
+     * .approximateCreationDateTimePrecision("approximateCreationDateTimePrecision")
      * .build())
      * .localSecondaryIndexes(List.of(LocalSecondaryIndexProperty.builder()
      * .indexName("indexName")
@@ -1438,6 +1489,8 @@ public object dynamodb {
      * KinesisStreamSpecificationProperty kinesisStreamSpecificationProperty =
      * KinesisStreamSpecificationProperty.builder()
      * .streamArn("streamArn")
+     * // the properties below are optional
+     * .approximateCreationDateTimePrecision("approximateCreationDateTimePrecision")
      * .build();
      * ```
      *
@@ -1596,6 +1649,8 @@ public object dynamodb {
      * .build())
      * .kinesisStreamSpecification(KinesisStreamSpecificationProperty.builder()
      * .streamArn("streamArn")
+     * // the properties below are optional
+     * .approximateCreationDateTimePrecision("approximateCreationDateTimePrecision")
      * .build())
      * .localSecondaryIndexes(List.of(LocalSecondaryIndexProperty.builder()
      * .indexName("indexName")
@@ -1778,19 +1833,52 @@ public object dynamodb {
     }
 
     /**
+     * The options for imported source files in CSV format.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.*;
+     * import software.amazon.awscdk.services.s3.*;
+     * IBucket bucket;
+     * App app = new App();
+     * Stack stack = new Stack(app, "Stack");
+     * Table.Builder.create(stack, "Table")
+     * .partitionKey(Attribute.builder()
+     * .name("id")
+     * .type(AttributeType.STRING)
+     * .build())
+     * .importSource(ImportSourceSpecification.builder()
+     * .compressionType(InputCompressionType.GZIP)
+     * .inputFormat(InputFormat.csv(CsvOptions.builder()
+     * .delimiter(",")
+     * .headerList(List.of("id", "name"))
+     * .build()))
+     * .bucket(bucket)
+     * .keyPrefix("prefix")
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun csvOptions(block: CsvOptionsDsl.() -> Unit = {}): CsvOptions {
+        val builder = CsvOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Properties for enabling DynamoDB capacity scaling.
      *
      * Example:
      * ```
-     * Table globalTable = Table.Builder.create(this, "Table")
-     * .partitionKey(Attribute.builder().name("id").type(AttributeType.STRING).build())
-     * .replicationRegions(List.of("us-east-1", "us-east-2", "us-west-2"))
-     * .billingMode(BillingMode.PROVISIONED)
-     * .build();
-     * globalTable.autoScaleWriteCapacity(EnableScalingProps.builder()
-     * .minCapacity(1)
-     * .maxCapacity(10)
-     * .build()).scaleOnUtilization(UtilizationScalingProps.builder().targetUtilizationPercent(75).build());
+     * import software.amazon.awscdk.services.dynamodb.*;
+     * Table table;
+     * IScalableTableAttribute readCapacity = table.autoScaleReadCapacity(EnableScalingProps.builder()
+     * .minCapacity(10)
+     * .maxCapacity(1000)
+     * .build());
+     * readCapacity.scaleOnUtilization(UtilizationScalingProps.builder()
+     * .targetUtilizationPercent(60)
+     * .build());
      * ```
      */
     public inline fun enableScalingProps(
@@ -1836,23 +1924,80 @@ public object dynamodb {
     }
 
     /**
+     * Properties used to configure a global secondary index.
+     *
+     * Example:
+     * ```
+     * TableV2 table = TableV2.Builder.create(this, "Table")
+     * .partitionKey(Attribute.builder().name("pk").type(AttributeType.STRING).build())
+     * .globalSecondaryIndexes(List.of(GlobalSecondaryIndexPropsV2.builder()
+     * .indexName("gsi1")
+     * .partitionKey(Attribute.builder().name("pk").type(AttributeType.STRING).build())
+     * .build()))
+     * .build();
+     * table.addGlobalSecondaryIndex(GlobalSecondaryIndexPropsV2.builder()
+     * .indexName("gsi2")
+     * .partitionKey(Attribute.builder().name("pk").type(AttributeType.STRING).build())
+     * .build());
+     * ```
+     */
+    public inline fun globalSecondaryIndexPropsV2(
+        block: GlobalSecondaryIndexPropsV2Dsl.() -> Unit = {}
+    ): GlobalSecondaryIndexPropsV2 {
+        val builder = GlobalSecondaryIndexPropsV2Dsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for importing data from the S3.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.*;
+     * import software.amazon.awscdk.services.s3.*;
+     * IBucket bucket;
+     * App app = new App();
+     * Stack stack = new Stack(app, "Stack");
+     * Table.Builder.create(stack, "Table")
+     * .partitionKey(Attribute.builder()
+     * .name("id")
+     * .type(AttributeType.STRING)
+     * .build())
+     * .importSource(ImportSourceSpecification.builder()
+     * .compressionType(InputCompressionType.GZIP)
+     * .inputFormat(InputFormat.dynamoDBJson())
+     * .bucket(bucket)
+     * .keyPrefix("prefix")
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun importSourceSpecification(
+        block: ImportSourceSpecificationDsl.() -> Unit = {}
+    ): ImportSourceSpecification {
+        val builder = ImportSourceSpecificationDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Properties for a local secondary index.
      *
      * Example:
      * ```
-     * // The code below shows an example of how to instantiate this type.
-     * // The values are placeholders you should change.
-     * import software.amazon.awscdk.services.dynamodb.*;
-     * LocalSecondaryIndexProps localSecondaryIndexProps = LocalSecondaryIndexProps.builder()
-     * .indexName("indexName")
-     * .sortKey(Attribute.builder()
-     * .name("name")
-     * .type(AttributeType.BINARY)
-     * .build())
-     * // the properties below are optional
-     * .nonKeyAttributes(List.of("nonKeyAttributes"))
-     * .projectionType(ProjectionType.KEYS_ONLY)
+     * TableV2 table = TableV2.Builder.create(this, "Table")
+     * .partitionKey(Attribute.builder().name("pk").type(AttributeType.STRING).build())
+     * .sortKey(Attribute.builder().name("sk").type(AttributeType.NUMBER).build())
+     * .localSecondaryIndexes(List.of(LocalSecondaryIndexProps.builder()
+     * .indexName("lsi1")
+     * .sortKey(Attribute.builder().name("sk").type(AttributeType.NUMBER).build())
+     * .build()))
      * .build();
+     * table.addLocalSecondaryIndex(LocalSecondaryIndexProps.builder()
+     * .indexName("lsi2")
+     * .sortKey(Attribute.builder().name("sk").type(AttributeType.NUMBER).build())
+     * .build());
      * ```
      */
     public inline fun localSecondaryIndexProps(
@@ -1868,18 +2013,22 @@ public object dynamodb {
      *
      * Example:
      * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.*;
      * import software.amazon.awscdk.services.cloudwatch.*;
-     * Table table = Table.Builder.create(this, "Table")
-     * .partitionKey(Attribute.builder().name("id").type(AttributeType.STRING).build())
-     * .build();
-     * IMetric metric = table.metricThrottledRequestsForOperations(OperationsMetricOptions.builder()
-     * .operations(List.of(Operation.PUT_ITEM))
-     * .period(Duration.minutes(1))
-     * .build());
-     * Alarm.Builder.create(this, "Alarm")
-     * .metric(metric)
-     * .evaluationPeriods(1)
-     * .threshold(1)
+     * import software.amazon.awscdk.services.dynamodb.*;
+     * OperationsMetricOptions operationsMetricOptions = OperationsMetricOptions.builder()
+     * .account("account")
+     * .color("color")
+     * .dimensionsMap(Map.of(
+     * "dimensionsMapKey", "dimensionsMap"))
+     * .label("label")
+     * .operations(List.of(Operation.GET_ITEM))
+     * .period(Duration.minutes(30))
+     * .region("region")
+     * .statistic("statistic")
+     * .unit(Unit.SECONDS)
      * .build();
      * ```
      */
@@ -1892,14 +2041,98 @@ public object dynamodb {
     }
 
     /**
+     * Options used to configure global secondary indexes on a replica table.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.*;
+     * App app = new App();
+     * Stack stack = Stack.Builder.create(app,
+     * "Stack").env(Environment.builder().region("us-west-2").build()).build();
+     * TableV2 globalTable = TableV2.Builder.create(stack, "GlobalTable")
+     * .partitionKey(Attribute.builder().name("pk").type(AttributeType.STRING).build())
+     * .contributorInsights(true)
+     * .billing(Billing.provisioned(ThroughputProps.builder()
+     * .readCapacity(Capacity.fixed(10))
+     * .writeCapacity(Capacity.autoscaled(AutoscaledCapacityOptions.builder().maxCapacity(10).build()))
+     * .build()))
+     * // each global secondary index will inherit contributor insights as true
+     * .globalSecondaryIndexes(List.of(GlobalSecondaryIndexPropsV2.builder()
+     * .indexName("gsi1")
+     * .partitionKey(Attribute.builder().name("pk").type(AttributeType.STRING).build())
+     * .readCapacity(Capacity.fixed(15))
+     * .build(), GlobalSecondaryIndexPropsV2.builder()
+     * .indexName("gsi2")
+     * .partitionKey(Attribute.builder().name("pk").type(AttributeType.STRING).build())
+     * .writeCapacity(Capacity.autoscaled(AutoscaledCapacityOptions.builder().minCapacity(5).maxCapacity(20).build()))
+     * .build()))
+     * .replicas(List.of(ReplicaTableProps.builder()
+     * .region("us-east-1")
+     * .globalSecondaryIndexOptions(Map.of(
+     * "gsi1", ReplicaGlobalSecondaryIndexOptions.builder()
+     * .readCapacity(Capacity.autoscaled(AutoscaledCapacityOptions.builder().minCapacity(1).maxCapacity(10).build()))
+     * .build()))
+     * .build(), ReplicaTableProps.builder()
+     * .region("us-east-2")
+     * .globalSecondaryIndexOptions(Map.of(
+     * "gsi2", ReplicaGlobalSecondaryIndexOptions.builder()
+     * .contributorInsights(false)
+     * .build()))
+     * .build()))
+     * .build();
+     * ```
+     */
+    public inline fun replicaGlobalSecondaryIndexOptions(
+        block: ReplicaGlobalSecondaryIndexOptionsDsl.() -> Unit = {}
+    ): ReplicaGlobalSecondaryIndexOptions {
+        val builder = ReplicaGlobalSecondaryIndexOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties used to configure a replica table.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.*;
+     * App app = new App();
+     * Stack stack = Stack.Builder.create(app,
+     * "Stack").env(Environment.builder().region("us-west-2").build()).build();
+     * TableV2 globalTable = TableV2.Builder.create(stack, "GlobalTable")
+     * .partitionKey(Attribute.builder().name("pk").type(AttributeType.STRING).build())
+     * .replicas(List.of(ReplicaTableProps.builder().region("us-east-1").build()))
+     * .build();
+     * globalTable.addReplica(ReplicaTableProps.builder().region("us-east-2").deletionProtection(true).build());
+     * ```
+     */
+    public inline fun replicaTableProps(
+        block: ReplicaTablePropsDsl.() -> Unit = {}
+    ): ReplicaTableProps {
+        val builder = ReplicaTablePropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Represents the table schema attributes.
      *
      * Example:
      * ```
-     * Table table;
-     * SchemaOptions schema = table.schema();
-     * Attribute partitionKey = schema.getPartitionKey();
-     * Attribute sortKey = schema.getSortKey();
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.dynamodb.*;
+     * SchemaOptions schemaOptions = SchemaOptions.builder()
+     * .partitionKey(Attribute.builder()
+     * .name("name")
+     * .type(AttributeType.BINARY)
+     * .build())
+     * // the properties below are optional
+     * .sortKey(Attribute.builder()
+     * .name("name")
+     * .type(AttributeType.BINARY)
+     * .build())
+     * .build();
      * ```
      */
     public inline fun schemaOptions(block: SchemaOptionsDsl.() -> Unit = {}): SchemaOptions {
@@ -1970,18 +2203,25 @@ public object dynamodb {
      *
      * Example:
      * ```
-     * import software.amazon.awscdk.services.cloudwatch.*;
-     * Table table = Table.Builder.create(this, "Table")
-     * .partitionKey(Attribute.builder().name("id").type(AttributeType.STRING).build())
-     * .build();
-     * IMetric metric = table.metricThrottledRequestsForOperations(OperationsMetricOptions.builder()
-     * .operations(List.of(Operation.PUT_ITEM))
-     * .period(Duration.minutes(1))
-     * .build());
-     * Alarm.Builder.create(this, "Alarm")
-     * .metric(metric)
-     * .evaluationPeriods(1)
-     * .threshold(1)
+     * import software.amazon.awscdk.*;
+     * import software.amazon.awscdk.services.s3.*;
+     * IBucket bucket;
+     * App app = new App();
+     * Stack stack = new Stack(app, "Stack");
+     * Table.Builder.create(stack, "Table")
+     * .partitionKey(Attribute.builder()
+     * .name("id")
+     * .type(AttributeType.STRING)
+     * .build())
+     * .importSource(ImportSourceSpecification.builder()
+     * .compressionType(InputCompressionType.GZIP)
+     * .inputFormat(InputFormat.csv(CsvOptions.builder()
+     * .delimiter(",")
+     * .headerList(List.of("id", "name"))
+     * .build()))
+     * .bucket(bucket)
+     * .keyPrefix("prefix")
+     * .build())
      * .build();
      * ```
      */
@@ -2023,6 +2263,36 @@ public object dynamodb {
     }
 
     /**
+     * Attributes of a DynamoDB table.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.dynamodb.*;
+     * import software.amazon.awscdk.services.kms.*;
+     * Key key;
+     * TableAttributesV2 tableAttributesV2 = TableAttributesV2.builder()
+     * .encryptionKey(key)
+     * .globalIndexes(List.of("globalIndexes"))
+     * .grantIndexPermissions(false)
+     * .localIndexes(List.of("localIndexes"))
+     * .tableArn("tableArn")
+     * .tableId("tableId")
+     * .tableName("tableName")
+     * .tableStreamArn("tableStreamArn")
+     * .build();
+     * ```
+     */
+    public inline fun tableAttributesV2(
+        block: TableAttributesV2Dsl.() -> Unit = {}
+    ): TableAttributesV2 {
+        val builder = TableAttributesV2Dsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Properties of a DynamoDB Table.
      *
      * Use `TableProps` for all table properties
@@ -2034,6 +2304,9 @@ public object dynamodb {
      * import software.amazon.awscdk.*;
      * import software.amazon.awscdk.services.dynamodb.*;
      * import software.amazon.awscdk.services.kms.*;
+     * import software.amazon.awscdk.services.s3.*;
+     * Bucket bucket;
+     * InputFormat inputFormat;
      * Key key;
      * TableOptions tableOptions = TableOptions.builder()
      * .partitionKey(Attribute.builder()
@@ -2046,6 +2319,14 @@ public object dynamodb {
      * .deletionProtection(false)
      * .encryption(TableEncryption.DEFAULT)
      * .encryptionKey(key)
+     * .importSource(ImportSourceSpecification.builder()
+     * .bucket(bucket)
+     * .inputFormat(inputFormat)
+     * // the properties below are optional
+     * .bucketOwner("bucketOwner")
+     * .compressionType(InputCompressionType.GZIP)
+     * .keyPrefix("keyPrefix")
+     * .build())
      * .pointInTimeRecovery(false)
      * .readCapacity(123)
      * .removalPolicy(RemovalPolicy.DESTROY)
@@ -2070,22 +2351,58 @@ public object dynamodb {
     }
 
     /**
+     * Options used to configure a DynamoDB table.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.dynamodb.*;
+     * import software.amazon.awscdk.services.kinesis.*;
+     * Stream stream;
+     * TableOptionsV2 tableOptionsV2 = TableOptionsV2.builder()
+     * .contributorInsights(false)
+     * .deletionProtection(false)
+     * .kinesisStream(stream)
+     * .pointInTimeRecovery(false)
+     * .tableClass(TableClass.STANDARD)
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     */
+    public inline fun tableOptionsV2(block: TableOptionsV2Dsl.() -> Unit = {}): TableOptionsV2 {
+        val builder = TableOptionsV2Dsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Properties for a DynamoDB Table.
      *
      * Example:
      * ```
-     * import software.amazon.awscdk.services.cloudwatch.*;
-     * Table table = Table.Builder.create(this, "Table")
-     * .partitionKey(Attribute.builder().name("id").type(AttributeType.STRING).build())
-     * .build();
-     * IMetric metric = table.metricThrottledRequestsForOperations(OperationsMetricOptions.builder()
-     * .operations(List.of(Operation.PUT_ITEM))
-     * .period(Duration.minutes(1))
-     * .build());
-     * Alarm.Builder.create(this, "Alarm")
-     * .metric(metric)
-     * .evaluationPeriods(1)
-     * .threshold(1)
+     * import software.amazon.awscdk.*;
+     * import software.amazon.awscdk.services.s3.*;
+     * IBucket bucket;
+     * App app = new App();
+     * Stack stack = new Stack(app, "Stack");
+     * Table.Builder.create(stack, "Table")
+     * .partitionKey(Attribute.builder()
+     * .name("id")
+     * .type(AttributeType.STRING)
+     * .build())
+     * .importSource(ImportSourceSpecification.builder()
+     * .compressionType(InputCompressionType.GZIP)
+     * .inputFormat(InputFormat.csv(CsvOptions.builder()
+     * .delimiter(",")
+     * .headerList(List.of("id", "name"))
+     * .build()))
+     * .bucket(bucket)
+     * .keyPrefix("prefix")
+     * .build())
      * .build();
      * ```
      */
@@ -2096,19 +2413,101 @@ public object dynamodb {
     }
 
     /**
+     * Properties used to configure a DynamoDB table.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.*;
+     * App app = new App();
+     * Stack stack = Stack.Builder.create(app,
+     * "Stack").env(Environment.builder().region("us-west-2").build()).build();
+     * TableV2 globalTable = TableV2.Builder.create(stack, "GlobalTable")
+     * .partitionKey(Attribute.builder().name("pk").type(AttributeType.STRING).build())
+     * // applys to all replicas, i.e., us-west-2, us-east-1, us-east-2
+     * .removalPolicy(RemovalPolicy.DESTROY)
+     * .replicas(List.of(ReplicaTableProps.builder().region("us-east-1").build(),
+     * ReplicaTableProps.builder().region("us-east-2").build()))
+     * .build();
+     * ```
+     */
+    public inline fun tablePropsV2(block: TablePropsV2Dsl.() -> Unit = {}): TablePropsV2 {
+        val builder = TablePropsV2Dsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A DynamoDB Table.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.*;
+     * App app = new App();
+     * Stack stack = Stack.Builder.create(app,
+     * "Stack").env(Environment.builder().region("us-west-2").build()).build();
+     * TableV2 globalTable = TableV2.Builder.create(stack, "GlobalTable")
+     * .partitionKey(Attribute.builder().name("pk").type(AttributeType.STRING).build())
+     * // applys to all replicas, i.e., us-west-2, us-east-1, us-east-2
+     * .removalPolicy(RemovalPolicy.DESTROY)
+     * .replicas(List.of(ReplicaTableProps.builder().region("us-east-1").build(),
+     * ReplicaTableProps.builder().region("us-east-2").build()))
+     * .build();
+     * ```
+     */
+    public inline fun tableV2(
+        scope: Construct,
+        id: String,
+        block: TableV2Dsl.() -> Unit = {},
+    ): TableV2 {
+        val builder = TableV2Dsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties used to configure provisioned throughput for a DynamoDB table.
+     *
+     * Example:
+     * ```
+     * import software.amazon.awscdk.*;
+     * App app = new App();
+     * Stack stack = Stack.Builder.create(app,
+     * "Stack").env(Environment.builder().region("us-west-2").build()).build();
+     * TableV2 globalTable = TableV2.Builder.create(stack, "GlobalTable")
+     * .partitionKey(Attribute.builder().name("pk").type(AttributeType.STRING).build())
+     * .billing(Billing.provisioned(ThroughputProps.builder()
+     * .readCapacity(Capacity.fixed(10))
+     * .writeCapacity(Capacity.autoscaled(AutoscaledCapacityOptions.builder().maxCapacity(15).build()))
+     * .build()))
+     * .replicas(List.of(ReplicaTableProps.builder()
+     * .region("us-east-1")
+     * .build(), ReplicaTableProps.builder()
+     * .region("us-east-2")
+     * .readCapacity(Capacity.autoscaled(AutoscaledCapacityOptions.builder().maxCapacity(20).targetUtilizationPercent(50).build()))
+     * .build()))
+     * .build();
+     * ```
+     */
+    public inline fun throughputProps(block: ThroughputPropsDsl.() -> Unit = {}): ThroughputProps {
+        val builder = ThroughputPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Properties for enabling DynamoDB utilization tracking.
      *
      * Example:
      * ```
-     * Table globalTable = Table.Builder.create(this, "Table")
-     * .partitionKey(Attribute.builder().name("id").type(AttributeType.STRING).build())
-     * .replicationRegions(List.of("us-east-1", "us-east-2", "us-west-2"))
-     * .billingMode(BillingMode.PROVISIONED)
-     * .build();
-     * globalTable.autoScaleWriteCapacity(EnableScalingProps.builder()
-     * .minCapacity(1)
-     * .maxCapacity(10)
-     * .build()).scaleOnUtilization(UtilizationScalingProps.builder().targetUtilizationPercent(75).build());
+     * import software.amazon.awscdk.services.dynamodb.*;
+     * Table table;
+     * IScalableTableAttribute readCapacity = table.autoScaleReadCapacity(EnableScalingProps.builder()
+     * .minCapacity(10)
+     * .maxCapacity(1000)
+     * .build());
+     * readCapacity.scaleOnUtilization(UtilizationScalingProps.builder()
+     * .targetUtilizationPercent(60)
+     * .build());
      * ```
      */
     public inline fun utilizationScalingProps(

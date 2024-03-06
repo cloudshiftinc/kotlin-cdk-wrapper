@@ -12,11 +12,10 @@
 package io.cloudshiftdev.awscdkdsl.services.apigatewayv2
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
-import io.cloudshiftdev.awscdkdsl.common.MapBuilder
 import kotlin.Any
 import kotlin.String
-import kotlin.Unit
 import kotlin.collections.Collection
+import kotlin.collections.Map
 import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigatewayv2.CfnDomainName
@@ -30,7 +29,6 @@ import software.amazon.awscdk.services.apigatewayv2.CfnDomainNameProps
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.apigatewayv2.*;
- * Object tags;
  * CfnDomainNameProps cfnDomainNameProps = CfnDomainNameProps.builder()
  * .domainName("domainName")
  * // the properties below are optional
@@ -45,7 +43,8 @@ import software.amazon.awscdk.services.apigatewayv2.CfnDomainNameProps
  * .truststoreUri("truststoreUri")
  * .truststoreVersion("truststoreVersion")
  * .build())
- * .tags(tags)
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
  * .build();
  * ```
  *
@@ -99,14 +98,7 @@ public class CfnDomainNamePropsDsl {
     }
 
     /** @param tags The collection of tags associated with a domain name. */
-    public fun tags(tags: MapBuilder.() -> Unit = {}) {
-        val builder = MapBuilder()
-        builder.apply(tags)
-        cdkBuilder.tags(builder.map)
-    }
-
-    /** @param tags The collection of tags associated with a domain name. */
-    public fun tags(tags: Any) {
+    public fun tags(tags: Map<String, String>) {
         cdkBuilder.tags(tags)
     }
 

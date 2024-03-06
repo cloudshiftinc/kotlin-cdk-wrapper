@@ -32,7 +32,7 @@ import software.amazon.awscdk.services.kms.IKey
  * .subnetType(SubnetType.PUBLIC)
  * .build())
  * .vpc(vpc)
- * .deletionProtection(true)
+ * .removalPolicy(RemovalPolicy.SNAPSHOT)
  * .build();
  * ```
  */

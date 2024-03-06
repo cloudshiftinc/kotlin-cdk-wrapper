@@ -38,7 +38,7 @@ import software.constructs.Construct
  * Function proxyFunction = Function.Builder.create(this, "ProxyFunction")
  * .handler("index.handler")
  * .code(Code.fromInline("my-code"))
- * .runtime(Runtime.NODEJS_14_X)
+ * .runtime(Runtime.NODEJS_LATEST)
  * .environment(Map.of(
  * "myServiceAddress", myServiceAddress.getValue()))
  * .build();

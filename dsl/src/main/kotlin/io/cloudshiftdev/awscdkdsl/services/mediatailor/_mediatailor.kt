@@ -29,7 +29,11 @@ import software.constructs.Construct
 
 public object mediatailor {
     /**
-     * Definition of AWS::MediaTailor::Channel Resource Type.
+     * The configuration parameters for a channel.
+     *
+     * For information about MediaTailor channels, see
+     * [Working with channels](https://docs.aws.amazon.com/mediatailor/latest/ug/channel-assembly-channels.html)
+     * in the *MediaTailor User Guide* .
      *
      * Example:
      * ```
@@ -49,6 +53,7 @@ public object mediatailor {
      * .suggestedPresentationDelaySeconds(123)
      * .build())
      * .hlsPlaylistSettings(HlsPlaylistSettingsProperty.builder()
+     * .adMarkupType(List.of("adMarkupType"))
      * .manifestWindowSeconds(123)
      * .build())
      * .build()))
@@ -66,6 +71,9 @@ public object mediatailor {
      * .value("value")
      * .build()))
      * .tier("tier")
+     * .timeShiftConfiguration(TimeShiftConfigurationProperty.builder()
+     * .maxTimeDelaySeconds(123)
+     * .build())
      * .build();
      * ```
      *
@@ -82,7 +90,7 @@ public object mediatailor {
     }
 
     /**
-     * Dash manifest configuration parameters.</p>.
+     * Dash manifest configuration parameters.
      *
      * Example:
      * ```
@@ -109,7 +117,7 @@ public object mediatailor {
     }
 
     /**
-     * HLS playlist configuration parameters.</p>.
+     * HLS playlist configuration parameters.
      *
      * Example:
      * ```
@@ -117,6 +125,7 @@ public object mediatailor {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.mediatailor.*;
      * HlsPlaylistSettingsProperty hlsPlaylistSettingsProperty = HlsPlaylistSettingsProperty.builder()
+     * .adMarkupType(List.of("adMarkupType"))
      * .manifestWindowSeconds(123)
      * .build();
      * ```
@@ -132,7 +141,7 @@ public object mediatailor {
     }
 
     /**
-     * The log configuration for the channel.</p>.
+     * The log configuration for the channel.
      *
      * Example:
      * ```
@@ -156,7 +165,9 @@ public object mediatailor {
     }
 
     /**
-     * Definition of AWS::MediaTailor::ChannelPolicy Resource Type.
+     * Specifies an IAM policy for the channel.
+     *
+     * IAM policies are used to control access to your channel.
      *
      * Example:
      * ```
@@ -228,6 +239,7 @@ public object mediatailor {
      * .suggestedPresentationDelaySeconds(123)
      * .build())
      * .hlsPlaylistSettings(HlsPlaylistSettingsProperty.builder()
+     * .adMarkupType(List.of("adMarkupType"))
      * .manifestWindowSeconds(123)
      * .build())
      * .build()))
@@ -245,6 +257,9 @@ public object mediatailor {
      * .value("value")
      * .build()))
      * .tier("tier")
+     * .timeShiftConfiguration(TimeShiftConfigurationProperty.builder()
+     * .maxTimeDelaySeconds(123)
+     * .build())
      * .build();
      * ```
      *
@@ -257,7 +272,7 @@ public object mediatailor {
     }
 
     /**
-     * The output configuration for this channel.</p>.
+     * The output configuration for this channel.
      *
      * Example:
      * ```
@@ -275,6 +290,7 @@ public object mediatailor {
      * .suggestedPresentationDelaySeconds(123)
      * .build())
      * .hlsPlaylistSettings(HlsPlaylistSettingsProperty.builder()
+     * .adMarkupType(List.of("adMarkupType"))
      * .manifestWindowSeconds(123)
      * .build())
      * .build();
@@ -291,7 +307,7 @@ public object mediatailor {
     }
 
     /**
-     * Slate VOD source configuration.</p>.
+     * Slate VOD source configuration.
      *
      * Example:
      * ```
@@ -315,7 +331,31 @@ public object mediatailor {
     }
 
     /**
-     * Definition of AWS::MediaTailor::LiveSource Resource Type.
+     * The configuration for time-shifted viewing.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.mediatailor.*;
+     * TimeShiftConfigurationProperty timeShiftConfigurationProperty =
+     * TimeShiftConfigurationProperty.builder()
+     * .maxTimeDelaySeconds(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-timeshiftconfiguration.html)
+     */
+    public inline fun cfnChannelTimeShiftConfigurationProperty(
+        block: CfnChannelTimeShiftConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnChannel.TimeShiftConfigurationProperty {
+        val builder = CfnChannelTimeShiftConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Live source configuration parameters.
      *
      * Example:
      * ```
@@ -351,7 +391,7 @@ public object mediatailor {
     }
 
     /**
-     * The HTTP package configuration properties for the requested VOD source.</p>.
+     * The HTTP package configuration properties for the requested VOD source.
      *
      * Example:
      * ```
@@ -479,12 +519,12 @@ public object mediatailor {
     }
 
     /**
-     * For HLS, when set to true, MediaTailor passes through EXT-X-CUE-IN, EXT-X-CUE-OUT, and
-     * EXT-X-SPLICEPOINT-SCTE35 ad markers from the origin manifest to the MediaTailor personalized
-     * manifest.
+     * For HLS, when set to `true` , MediaTailor passes through `EXT-X-CUE-IN` , `EXT-X-CUE-OUT` ,
+     * and `EXT-X-SPLICEPOINT-SCTE35` ad markers from the origin manifest to the MediaTailor
+     * personalized manifest.
      *
-     * No logic is applied to these ad markers. For example, if EXT-X-CUE-OUT has a value of 60, but
-     * no ads are filled for that ad break, MediaTailor will not set the value to 0.
+     * No logic is applied to these ad markers. For example, if `EXT-X-CUE-OUT` has a value of `60`
+     * , but no ads are filled for that ad break, MediaTailor will not set the value to `0` .
      *
      * Example:
      * ```
@@ -509,8 +549,8 @@ public object mediatailor {
     /**
      * The configuration for avail suppression, also known as ad suppression.
      *
-     * For more information about ad suppression, see Ad Suppression
-     * (https://docs.aws.amazon.com/mediatailor/latest/ug/ad-behavior.html).
+     * For more information about ad suppression, see
+     * [Ad Suppression](https://docs.aws.amazon.com/mediatailor/latest/ug/ad-behavior.html) .
      *
      * Example:
      * ```
@@ -537,8 +577,8 @@ public object mediatailor {
      * The configuration for bumpers.
      *
      * Bumpers are short audio or video clips that play at the start or before the end of an ad
-     * break. To learn more about bumpers, see Bumpers
-     * (https://docs.aws.amazon.com/mediatailor/latest/ug/bumpers.html).
+     * break. To learn more about bumpers, see
+     * [Bumpers](https://docs.aws.amazon.com/mediatailor/latest/ug/bumpers.html) .
      *
      * Example:
      * ```
@@ -755,7 +795,11 @@ public object mediatailor {
     }
 
     /**
-     * Definition of AWS::MediaTailor::SourceLocation Resource Type.
+     * A source location is a container for sources.
+     *
+     * For more information about source locations, see
+     * [Working with source locations](https://docs.aws.amazon.com/mediatailor/latest/ug/channel-assembly-source-locations.html)
+     * in the *MediaTailor User Guide* .
      *
      * Example:
      * ```
@@ -804,7 +848,7 @@ public object mediatailor {
     }
 
     /**
-     * Access configuration parameters.</p>.
+     * Access configuration parameters.
      *
      * Example:
      * ```
@@ -838,7 +882,7 @@ public object mediatailor {
      * server. For example, you can configure your source location server to be an origination
      * server, such as MediaPackage, and the segment delivery server to be a content delivery
      * network (CDN), such as CloudFront. If you don't specify a segment delivery server, then the
-     * source location server is used.</p>
+     * source location server is used.
      *
      * Example:
      * ```
@@ -862,7 +906,7 @@ public object mediatailor {
     }
 
     /**
-     * The HTTP configuration for the source location.</p>.
+     * The HTTP configuration for the source location.
      *
      * Example:
      * ```
@@ -934,7 +978,8 @@ public object mediatailor {
      * AWS Secrets Manager access token configuration parameters.
      *
      * For information about Secrets Manager access token authentication, see
-     * [Working with AWS Secrets Manager access token authentication](https://docs.aws.amazon.com/mediatailor/latest/ug/channel-assembly-access-configuration-access-token.html).</p>
+     * [Working with AWS Secrets Manager access token authentication](https://docs.aws.amazon.com/mediatailor/latest/ug/channel-assembly-access-configuration-access-token.html)
+     * .
      *
      * Example:
      * ```
@@ -960,7 +1005,7 @@ public object mediatailor {
     }
 
     /**
-     * The segment delivery configuration settings.</p>.
+     * The segment delivery configuration settings.
      *
      * Example:
      * ```
@@ -985,7 +1030,7 @@ public object mediatailor {
     }
 
     /**
-     * Definition of AWS::MediaTailor::VodSource Resource Type.
+     * The VOD source configuration parameters.
      *
      * Example:
      * ```
@@ -1021,7 +1066,7 @@ public object mediatailor {
     }
 
     /**
-     * The HTTP package configuration properties for the requested VOD source.</p>.
+     * The HTTP package configuration properties for the requested VOD source.
      *
      * Example:
      * ```

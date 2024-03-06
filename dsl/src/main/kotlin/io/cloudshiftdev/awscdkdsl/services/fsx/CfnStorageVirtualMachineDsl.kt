@@ -121,11 +121,12 @@ public class CfnStorageVirtualMachineDsl(
      * The security style of the root volume of the SVM. Specify one of the following values:.
      * * `UNIX` if the file system is managed by a UNIX administrator, the majority of users are NFS
      *   clients, and an application accessing the data uses a UNIX user as the service account.
-     * * `NTFS` if the file system is managed by a Windows administrator, the majority of users are
-     *   SMB clients, and an application accessing the data uses a Windows user as the service
-     *   account.
-     * * `MIXED` if the file system is managed by both UNIX and Windows administrators and users
-     *   consist of both NFS and SMB clients.
+     * * `NTFS` if the file system is managed by a Microsoft Windows administrator, the majority of
+     *   users are SMB clients, and an application accessing the data uses a Microsoft Windows user
+     *   as the service account.
+     * * `MIXED` This is an advanced setting. For more information, see
+     *   [Volume security style](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style.html)
+     *   in the Amazon FSx for NetApp ONTAP User Guide.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-storagevirtualmachine.html#cfn-fsx-storagevirtualmachine-rootvolumesecuritystyle)
      *
@@ -156,30 +157,22 @@ public class CfnStorageVirtualMachineDsl(
     }
 
     /**
-     * An array of key-value pairs to apply to this resource.
-     *
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * .
+     * A list of `Tag` values, with a maximum of 50 elements.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-storagevirtualmachine.html#cfn-fsx-storagevirtualmachine-tags)
      *
-     * @param tags An array of key-value pairs to apply to this resource.
+     * @param tags A list of `Tag` values, with a maximum of 50 elements.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
     /**
-     * An array of key-value pairs to apply to this resource.
-     *
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * .
+     * A list of `Tag` values, with a maximum of 50 elements.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-storagevirtualmachine.html#cfn-fsx-storagevirtualmachine-tags)
      *
-     * @param tags An array of key-value pairs to apply to this resource.
+     * @param tags A list of `Tag` values, with a maximum of 50 elements.
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)

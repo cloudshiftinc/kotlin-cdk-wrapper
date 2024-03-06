@@ -19,8 +19,6 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opsworks.CfnLayer
 
 /**
- * Describes an Amazon EBS volume configuration.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.

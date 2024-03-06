@@ -27,8 +27,8 @@ import software.constructs.Construct
  * The `AWS::IVS::Channel` resource specifies an channel.
  *
  * A channel stores configuration information related to your live stream. For more information, see
- * [CreateChannel](https://docs.aws.amazon.com/ivs/latest/APIReference/API_CreateChannel.html) in
- * the *Amazon Interactive Video Service API Reference* .
+ * [CreateChannel](https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_CreateChannel.html)
+ * in the *Amazon IVS Low-Latency Streaming API Reference* .
  *
  * By default, the IVS API CreateChannel endpoint creates a stream key in addition to a channel. The
  * Channel resource *does not* create a stream key; to create a stream key, use the StreamKey
@@ -197,7 +197,7 @@ public class CfnChannelDsl(
      * An array of key-value pairs to apply to this resource.
      *
      * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-channel-tag.html)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-channel.html#cfn-ivs-channel-tags)
@@ -212,7 +212,7 @@ public class CfnChannelDsl(
      * An array of key-value pairs to apply to this resource.
      *
      * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-channel-tag.html)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-channel.html#cfn-ivs-channel-tags)

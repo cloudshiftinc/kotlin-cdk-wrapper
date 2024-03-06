@@ -36,6 +36,8 @@ import software.amazon.awscdk.services.cloudwatch.IMetric
  * .scalingSteps(List.of(ScalingInterval.builder().upper(10).change(-1).build(),
  * ScalingInterval.builder().lower(50).change(+1).build(),
  * ScalingInterval.builder().lower(70).change(+3).build()))
+ * .evaluationPeriods(10)
+ * .datapointsToAlarm(5)
  * // Change this to AdjustmentType.PERCENT_CHANGE_IN_CAPACITY to interpret the
  * // 'change' numbers before as percentages instead of capacity counts.
  * .adjustmentType(AdjustmentType.CHANGE_IN_CAPACITY)
@@ -60,6 +62,18 @@ public class BasicStepScalingPolicyPropsDsl {
     }
 
     /**
+     * @param datapointsToAlarm The number of data points out of the evaluation periods that must be
+     *   breaching to trigger a scaling action. Creates an "M out of N" alarm, where this property
+     *   is the M and the value set for `evaluationPeriods` is the N value.
+     *
+     * Only has meaning if `evaluationPeriods != 1`. Must be less than or equal to
+     * `evaluationPeriods`.
+     */
+    public fun datapointsToAlarm(datapointsToAlarm: Number) {
+        cdkBuilder.datapointsToAlarm(datapointsToAlarm)
+    }
+
+    /**
      * @param estimatedInstanceWarmup Estimated time until a newly launched instance can send
      *   metrics to CloudWatch.
      */
@@ -71,6 +85,9 @@ public class BasicStepScalingPolicyPropsDsl {
      * @param evaluationPeriods How many evaluation periods of the metric to wait before triggering
      *   a scaling action. Raising this value can be used to smooth out the metric, at the expense
      *   of slower response times.
+     *
+     * If `datapointsToAlarm` is not set, then all data points in the evaluation period must meet
+     * the criteria to trigger a scaling action.
      */
     public fun evaluationPeriods(evaluationPeriods: Number) {
         cdkBuilder.evaluationPeriods(evaluationPeriods)

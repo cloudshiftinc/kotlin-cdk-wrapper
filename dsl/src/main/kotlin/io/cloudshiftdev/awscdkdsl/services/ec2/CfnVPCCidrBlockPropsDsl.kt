@@ -45,7 +45,7 @@ import software.amazon.awscdk.services.ec2.CfnVPCCidrBlockProps
  * subnetcount = subnetcount + 1;
  * }
  * Cluster cluster = Cluster.Builder.create(this, "hello-eks")
- * .version(KubernetesVersion.V1_27)
+ * .version(KubernetesVersion.V1_29)
  * .vpc(vpc)
  * .ipFamily(IpFamily.IP_V6)
  * .vpcSubnets(List.of(SubnetSelection.builder().subnets(vpc.getPublicSubnets()).build()))
@@ -60,7 +60,7 @@ public class CfnVPCCidrBlockPropsDsl {
 
     /**
      * @param amazonProvidedIpv6CidrBlock Requests an Amazon-provided IPv6 CIDR block with a /56
-     *   prefix length for the VPC. You cannot specify the range of IPv6 addresses, or the size of
+     *   prefix length for the VPC. You cannot specify the range of IPv6 addresses or the size of
      *   the CIDR block.
      */
     public fun amazonProvidedIpv6CidrBlock(amazonProvidedIpv6CidrBlock: Boolean) {
@@ -69,7 +69,7 @@ public class CfnVPCCidrBlockPropsDsl {
 
     /**
      * @param amazonProvidedIpv6CidrBlock Requests an Amazon-provided IPv6 CIDR block with a /56
-     *   prefix length for the VPC. You cannot specify the range of IPv6 addresses, or the size of
+     *   prefix length for the VPC. You cannot specify the range of IPv6 addresses or the size of
      *   the CIDR block.
      */
     public fun amazonProvidedIpv6CidrBlock(amazonProvidedIpv6CidrBlock: IResolvable) {

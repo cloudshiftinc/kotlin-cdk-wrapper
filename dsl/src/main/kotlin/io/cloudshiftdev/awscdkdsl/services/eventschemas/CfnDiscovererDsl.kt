@@ -60,6 +60,8 @@ public class CfnDiscovererDsl(
      * Allows for the discovery of the event schemas that are sent to the event bus from another
      * account.
      *
+     * Default: - true
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-discoverer.html#cfn-eventschemas-discoverer-crossaccount)
      *
      * @param crossAccount Allows for the discovery of the event schemas that are sent to the event
@@ -72,6 +74,8 @@ public class CfnDiscovererDsl(
     /**
      * Allows for the discovery of the event schemas that are sent to the event bus from another
      * account.
+     *
+     * Default: - true
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-discoverer.html#cfn-eventschemas-discoverer-crossaccount)
      *

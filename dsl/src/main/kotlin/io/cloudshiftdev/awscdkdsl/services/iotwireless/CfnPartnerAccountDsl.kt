@@ -134,18 +134,22 @@ public class CfnPartnerAccountDsl(
     }
 
     /**
+     * Information about a Sidewalk account.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html#cfn-iotwireless-partneraccount-sidewalkresponse)
      *
-     * @param sidewalkResponse
+     * @param sidewalkResponse Information about a Sidewalk account.
      */
     public fun sidewalkResponse(sidewalkResponse: IResolvable) {
         cdkBuilder.sidewalkResponse(sidewalkResponse)
     }
 
     /**
+     * Information about a Sidewalk account.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html#cfn-iotwireless-partneraccount-sidewalkresponse)
      *
-     * @param sidewalkResponse
+     * @param sidewalkResponse Information about a Sidewalk account.
      */
     public fun sidewalkResponse(
         sidewalkResponse: CfnPartnerAccount.SidewalkAccountInfoWithFingerprintProperty
@@ -154,18 +158,22 @@ public class CfnPartnerAccountDsl(
     }
 
     /**
+     * Sidewalk update.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html#cfn-iotwireless-partneraccount-sidewalkupdate)
      *
-     * @param sidewalkUpdate
+     * @param sidewalkUpdate Sidewalk update.
      */
     public fun sidewalkUpdate(sidewalkUpdate: IResolvable) {
         cdkBuilder.sidewalkUpdate(sidewalkUpdate)
     }
 
     /**
+     * Sidewalk update.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html#cfn-iotwireless-partneraccount-sidewalkupdate)
      *
-     * @param sidewalkUpdate
+     * @param sidewalkUpdate Sidewalk update.
      */
     public fun sidewalkUpdate(sidewalkUpdate: CfnPartnerAccount.SidewalkUpdateAccountProperty) {
         cdkBuilder.sidewalkUpdate(sidewalkUpdate)

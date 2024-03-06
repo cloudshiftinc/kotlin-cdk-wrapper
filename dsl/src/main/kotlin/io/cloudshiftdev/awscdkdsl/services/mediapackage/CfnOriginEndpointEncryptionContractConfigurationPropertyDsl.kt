@@ -50,12 +50,45 @@ public class CfnOriginEndpointEncryptionContractConfigurationPropertyDsl {
     private val cdkBuilder: CfnOriginEndpoint.EncryptionContractConfigurationProperty.Builder =
         CfnOriginEndpoint.EncryptionContractConfigurationProperty.builder()
 
-    /** @param presetSpeke20Audio A collection of audio encryption presets. */
+    /**
+     * @param presetSpeke20Audio A collection of audio encryption presets. Value description:
+     * * `PRESET-AUDIO-1` - Use one content key to encrypt all of the audio tracks in your stream.
+     * * `PRESET-AUDIO-2` - Use one content key to encrypt all of the stereo audio tracks and one
+     *   content key to encrypt all of the multichannel audio tracks.
+     * * `PRESET-AUDIO-3` - Use one content key to encrypt all of the stereo audio tracks, one
+     *   content key to encrypt all of the multichannel audio tracks with 3 to 6 channels, and one
+     *   content key to encrypt all of the multichannel audio tracks with more than 6 channels.
+     * * `SHARED` - Use the same content key for all of the audio and video tracks in your stream.
+     * * `UNENCRYPTED` - Don't encrypt any of the audio tracks in your stream.
+     */
     public fun presetSpeke20Audio(presetSpeke20Audio: String) {
         cdkBuilder.presetSpeke20Audio(presetSpeke20Audio)
     }
 
-    /** @param presetSpeke20Video A collection of video encryption presets. */
+    /**
+     * @param presetSpeke20Video A collection of video encryption presets. Value description:
+     * * `PRESET-VIDEO-1` - Use one content key to encrypt all of the video tracks in your stream.
+     * * `PRESET-VIDEO-2` - Use one content key to encrypt all of the SD video tracks and one
+     *   content key for all HD and higher resolutions video tracks.
+     * * `PRESET-VIDEO-3` - Use one content key to encrypt all of the SD video tracks, one content
+     *   key for HD video tracks and one content key for all UHD video tracks.
+     * * `PRESET-VIDEO-4` - Use one content key to encrypt all of the SD video tracks, one content
+     *   key for HD video tracks, one content key for all UHD1 video tracks and one content key for
+     *   all UHD2 video tracks.
+     * * `PRESET-VIDEO-5` - Use one content key to encrypt all of the SD video tracks, one content
+     *   key for HD1 video tracks, one content key for HD2 video tracks, one content key for all
+     *   UHD1 video tracks and one content key for all UHD2 video tracks.
+     * * `PRESET-VIDEO-6` - Use one content key to encrypt all of the SD video tracks, one content
+     *   key for HD1 video tracks, one content key for HD2 video tracks and one content key for all
+     *   UHD video tracks.
+     * * `PRESET-VIDEO-7` - Use one content key to encrypt all of the SD+HD1 video tracks, one
+     *   content key for HD2 video tracks and one content key for all UHD video tracks.
+     * * `PRESET-VIDEO-8` - Use one content key to encrypt all of the SD+HD1 video tracks, one
+     *   content key for HD2 video tracks, one content key for all UHD1 video tracks and one content
+     *   key for all UHD2 video tracks.
+     * * `SHARED` - Use the same content key for all of the video and audio tracks in your stream.
+     * * `UNENCRYPTED` - Don't encrypt any of the video tracks in your stream.
+     */
     public fun presetSpeke20Video(presetSpeke20Video: String) {
         cdkBuilder.presetSpeke20Video(presetSpeke20Video)
     }

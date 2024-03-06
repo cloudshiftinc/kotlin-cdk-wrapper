@@ -27,6 +27,10 @@ import software.amazon.awscdk.services.imagebuilder.CfnImageRecipe
 import software.amazon.awscdk.services.imagebuilder.CfnImageRecipeProps
 import software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration
 import software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfigurationProps
+import software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy
+import software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicyProps
+import software.amazon.awscdk.services.imagebuilder.CfnWorkflow
+import software.amazon.awscdk.services.imagebuilder.CfnWorkflowProps
 import software.constructs.Construct
 
 public object imagebuilder {
@@ -606,7 +610,7 @@ public object imagebuilder {
     }
 
     /**
-     * The Windows faster-launching configuration to use for AMI distribution.
+     * Define and configure faster launching for output Windows AMIs.
      *
      * Example:
      * ```
@@ -640,8 +644,10 @@ public object imagebuilder {
     }
 
     /**
-     * The launch template that the fast-launch enabled Windows AMI uses when it launches Windows
-     * instances to create pre-provisioned snapshots.
+     * Identifies the launch template that the associated Windows AMI uses for launching an instance
+     * when faster launching is enabled.
+     *
+     * You can specify either the `launchTemplateName` or the `launchTemplateId` , but not both.
      *
      * Example:
      * ```
@@ -670,8 +676,8 @@ public object imagebuilder {
     }
 
     /**
-     * Configuration settings for managing the number of snapshots that are created from
-     * pre-provisioned instances for the Windows AMI when faster launching is enabled.
+     * Configuration settings for creating and managing pre-provisioned snapshots for a fast-launch
+     * enabled Windows AMI.
      *
      * Example:
      * ```
@@ -837,10 +843,11 @@ public object imagebuilder {
     }
 
     /**
-     * An image build version.
+     * Creates a new image.
      *
-     * An image is a customized, secure, and up-to-date “golden” server image that is pre-installed
-     * and pre-configured with software and settings to meet specific IT standards.
+     * This request will create a new image along with all of the configured output resources
+     * defined in the distribution configuration. You must specify exactly one recipe for your
+     * image, using either a ContainerRecipeArn or an ImageRecipeArn.
      *
      * Example:
      * ```
@@ -853,6 +860,7 @@ public object imagebuilder {
      * .containerRecipeArn("containerRecipeArn")
      * .distributionConfigurationArn("distributionConfigurationArn")
      * .enhancedImageMetadataEnabled(false)
+     * .executionRole("executionRole")
      * .imageRecipeArn("imageRecipeArn")
      * .imageScanningConfiguration(ImageScanningConfigurationProperty.builder()
      * .ecrConfiguration(EcrConfigurationProperty.builder()
@@ -867,6 +875,15 @@ public object imagebuilder {
      * .build())
      * .tags(Map.of(
      * "tagsKey", "tags"))
+     * .workflows(List.of(WorkflowConfigurationProperty.builder()
+     * .onFailure("onFailure")
+     * .parallelGroup("parallelGroup")
+     * .parameters(List.of(WorkflowParameterProperty.builder()
+     * .name("name")
+     * .value(List.of("value"))
+     * .build()))
+     * .workflowArn("workflowArn")
+     * .build()))
      * .build();
      * ```
      *
@@ -883,8 +900,8 @@ public object imagebuilder {
     }
 
     /**
-     * Settings for Image Builder to configure the ECR repository and output container images that
-     * are scanned.
+     * Settings that Image Builder uses to configure the ECR repository and the output container
+     * images that Amazon Inspector scans.
      *
      * Example:
      * ```
@@ -971,9 +988,9 @@ public object imagebuilder {
      * The Image Builder image pipeline is associated with an image recipe that defines the build,
      * validation, and test phases for an image build lifecycle. An image pipeline can be associated
      * with an infrastructure configuration that defines where your image is built. You can define
-     * attributes, such as instance type, subnets, security groups, logging, and other
-     * infrastructure-related configurations. You can also associate your image pipeline with a
-     * distribution configuration to define how you would like to deploy your image.
+     * attributes, such as instance types, a subnet for your VPC, security groups, logging, and
+     * other infrastructure-related configurations. You can also associate your image pipeline with
+     * a distribution configuration to define how you would like to deploy your image.
      *
      * Example:
      * ```
@@ -988,6 +1005,7 @@ public object imagebuilder {
      * .description("description")
      * .distributionConfigurationArn("distributionConfigurationArn")
      * .enhancedImageMetadataEnabled(false)
+     * .executionRole("executionRole")
      * .imageRecipeArn("imageRecipeArn")
      * .imageScanningConfiguration(ImageScanningConfigurationProperty.builder()
      * .ecrConfiguration(EcrConfigurationProperty.builder()
@@ -1007,6 +1025,15 @@ public object imagebuilder {
      * .status("status")
      * .tags(Map.of(
      * "tagsKey", "tags"))
+     * .workflows(List.of(WorkflowConfigurationProperty.builder()
+     * .onFailure("onFailure")
+     * .parallelGroup("parallelGroup")
+     * .parameters(List.of(WorkflowParameterProperty.builder()
+     * .name("name")
+     * .value(List.of("value"))
+     * .build()))
+     * .workflowArn("workflowArn")
+     * .build()))
      * .build();
      * ```
      *
@@ -1023,8 +1050,8 @@ public object imagebuilder {
     }
 
     /**
-     * Settings for Image Builder to configure the ECR repository and output container images that
-     * are scanned.
+     * Settings that Image Builder uses to configure the ECR repository and the output container
+     * images that Amazon Inspector scans.
      *
      * Example:
      * ```
@@ -1048,10 +1075,7 @@ public object imagebuilder {
     }
 
     /**
-     * Determines if tests should run after building the image.
-     *
-     * Image Builder defaults to enable tests to run following the image build, before image
-     * distribution.
+     * Contains settings for Image Builder image resource and container image scans.
      *
      * Example:
      * ```
@@ -1124,6 +1148,7 @@ public object imagebuilder {
      * .description("description")
      * .distributionConfigurationArn("distributionConfigurationArn")
      * .enhancedImageMetadataEnabled(false)
+     * .executionRole("executionRole")
      * .imageRecipeArn("imageRecipeArn")
      * .imageScanningConfiguration(ImageScanningConfigurationProperty.builder()
      * .ecrConfiguration(EcrConfigurationProperty.builder()
@@ -1143,6 +1168,15 @@ public object imagebuilder {
      * .status("status")
      * .tags(Map.of(
      * "tagsKey", "tags"))
+     * .workflows(List.of(WorkflowConfigurationProperty.builder()
+     * .onFailure("onFailure")
+     * .parallelGroup("parallelGroup")
+     * .parameters(List.of(WorkflowParameterProperty.builder()
+     * .name("name")
+     * .value(List.of("value"))
+     * .build()))
+     * .workflowArn("workflowArn")
+     * .build()))
      * .build();
      * ```
      *
@@ -1157,7 +1191,7 @@ public object imagebuilder {
     }
 
     /**
-     * A schedule configures how often and when a pipeline will automatically create a new image.
+     * A schedule configures when and how often a pipeline will automatically create a new image.
      *
      * Example:
      * ```
@@ -1181,6 +1215,60 @@ public object imagebuilder {
     }
 
     /**
+     * Contains control settings and configurable inputs for a workflow resource.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.imagebuilder.*;
+     * WorkflowConfigurationProperty workflowConfigurationProperty =
+     * WorkflowConfigurationProperty.builder()
+     * .onFailure("onFailure")
+     * .parallelGroup("parallelGroup")
+     * .parameters(List.of(WorkflowParameterProperty.builder()
+     * .name("name")
+     * .value(List.of("value"))
+     * .build()))
+     * .workflowArn("workflowArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-workflowconfiguration.html)
+     */
+    public inline fun cfnImagePipelineWorkflowConfigurationProperty(
+        block: CfnImagePipelineWorkflowConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnImagePipeline.WorkflowConfigurationProperty {
+        val builder = CfnImagePipelineWorkflowConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Contains a key/value pair that sets the named workflow parameter.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.imagebuilder.*;
+     * WorkflowParameterProperty workflowParameterProperty = WorkflowParameterProperty.builder()
+     * .name("name")
+     * .value(List.of("value"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-workflowparameter.html)
+     */
+    public inline fun cfnImagePipelineWorkflowParameterProperty(
+        block: CfnImagePipelineWorkflowParameterPropertyDsl.() -> Unit = {}
+    ): CfnImagePipeline.WorkflowParameterProperty {
+        val builder = CfnImagePipelineWorkflowParameterPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Properties for defining a `CfnImage`.
      *
      * Example:
@@ -1194,6 +1282,7 @@ public object imagebuilder {
      * .containerRecipeArn("containerRecipeArn")
      * .distributionConfigurationArn("distributionConfigurationArn")
      * .enhancedImageMetadataEnabled(false)
+     * .executionRole("executionRole")
      * .imageRecipeArn("imageRecipeArn")
      * .imageScanningConfiguration(ImageScanningConfigurationProperty.builder()
      * .ecrConfiguration(EcrConfigurationProperty.builder()
@@ -1208,6 +1297,15 @@ public object imagebuilder {
      * .build())
      * .tags(Map.of(
      * "tagsKey", "tags"))
+     * .workflows(List.of(WorkflowConfigurationProperty.builder()
+     * .onFailure("onFailure")
+     * .parallelGroup("parallelGroup")
+     * .parameters(List.of(WorkflowParameterProperty.builder()
+     * .name("name")
+     * .value(List.of("value"))
+     * .build()))
+     * .workflowArn("workflowArn")
+     * .build()))
      * .build();
      * ```
      *
@@ -1523,6 +1621,60 @@ public object imagebuilder {
     }
 
     /**
+     * Contains control settings and configurable inputs for a workflow resource.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.imagebuilder.*;
+     * WorkflowConfigurationProperty workflowConfigurationProperty =
+     * WorkflowConfigurationProperty.builder()
+     * .onFailure("onFailure")
+     * .parallelGroup("parallelGroup")
+     * .parameters(List.of(WorkflowParameterProperty.builder()
+     * .name("name")
+     * .value(List.of("value"))
+     * .build()))
+     * .workflowArn("workflowArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-image-workflowconfiguration.html)
+     */
+    public inline fun cfnImageWorkflowConfigurationProperty(
+        block: CfnImageWorkflowConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnImage.WorkflowConfigurationProperty {
+        val builder = CfnImageWorkflowConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Contains a key/value pair that sets the named workflow parameter.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.imagebuilder.*;
+     * WorkflowParameterProperty workflowParameterProperty = WorkflowParameterProperty.builder()
+     * .name("name")
+     * .value(List.of("value"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-image-workflowparameter.html)
+     */
+    public inline fun cfnImageWorkflowParameterProperty(
+        block: CfnImageWorkflowParameterPropertyDsl.() -> Unit = {}
+    ): CfnImage.WorkflowParameterProperty {
+        val builder = CfnImageWorkflowParameterPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * The infrastructure configuration allows you to specify the infrastructure within which to
      * build and test your image.
      *
@@ -1702,6 +1854,499 @@ public object imagebuilder {
         block: CfnInfrastructureConfigurationS3LogsPropertyDsl.() -> Unit = {}
     ): CfnInfrastructureConfiguration.S3LogsProperty {
         val builder = CfnInfrastructureConfigurationS3LogsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Create a lifecycle policy resource.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.imagebuilder.*;
+     * CfnLifecyclePolicy cfnLifecyclePolicy = CfnLifecyclePolicy.Builder.create(this,
+     * "MyCfnLifecyclePolicy")
+     * .executionRole("executionRole")
+     * .name("name")
+     * .policyDetails(List.of(PolicyDetailProperty.builder()
+     * .action(ActionProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .includeResources(IncludeResourcesProperty.builder()
+     * .amis(false)
+     * .containers(false)
+     * .snapshots(false)
+     * .build())
+     * .build())
+     * .filter(FilterProperty.builder()
+     * .type("type")
+     * .value(123)
+     * // the properties below are optional
+     * .retainAtLeast(123)
+     * .unit("unit")
+     * .build())
+     * // the properties below are optional
+     * .exclusionRules(ExclusionRulesProperty.builder()
+     * .amis(AmiExclusionRulesProperty.builder()
+     * .isPublic(false)
+     * .lastLaunched(LastLaunchedProperty.builder()
+     * .unit("unit")
+     * .value(123)
+     * .build())
+     * .regions(List.of("regions"))
+     * .sharedAccounts(List.of("sharedAccounts"))
+     * .tagMap(Map.of(
+     * "tagMapKey", "tagMap"))
+     * .build())
+     * .tagMap(Map.of(
+     * "tagMapKey", "tagMap"))
+     * .build())
+     * .build()))
+     * .resourceSelection(ResourceSelectionProperty.builder()
+     * .recipes(List.of(RecipeSelectionProperty.builder()
+     * .name("name")
+     * .semanticVersion("semanticVersion")
+     * .build()))
+     * .tagMap(Map.of(
+     * "tagMapKey", "tagMap"))
+     * .build())
+     * .resourceType("resourceType")
+     * // the properties below are optional
+     * .description("description")
+     * .status("status")
+     * .tags(Map.of(
+     * "tagsKey", "tags"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-lifecyclepolicy.html)
+     */
+    public inline fun cfnLifecyclePolicy(
+        scope: Construct,
+        id: String,
+        block: CfnLifecyclePolicyDsl.() -> Unit = {},
+    ): CfnLifecyclePolicy {
+        val builder = CfnLifecyclePolicyDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Contains selection criteria for the lifecycle policy.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.imagebuilder.*;
+     * ActionProperty actionProperty = ActionProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .includeResources(IncludeResourcesProperty.builder()
+     * .amis(false)
+     * .containers(false)
+     * .snapshots(false)
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-action.html)
+     */
+    public inline fun cfnLifecyclePolicyActionProperty(
+        block: CfnLifecyclePolicyActionPropertyDsl.() -> Unit = {}
+    ): CfnLifecyclePolicy.ActionProperty {
+        val builder = CfnLifecyclePolicyActionPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Defines criteria for AMIs that are excluded from lifecycle actions.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.imagebuilder.*;
+     * AmiExclusionRulesProperty amiExclusionRulesProperty = AmiExclusionRulesProperty.builder()
+     * .isPublic(false)
+     * .lastLaunched(LastLaunchedProperty.builder()
+     * .unit("unit")
+     * .value(123)
+     * .build())
+     * .regions(List.of("regions"))
+     * .sharedAccounts(List.of("sharedAccounts"))
+     * .tagMap(Map.of(
+     * "tagMapKey", "tagMap"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-amiexclusionrules.html)
+     */
+    public inline fun cfnLifecyclePolicyAmiExclusionRulesProperty(
+        block: CfnLifecyclePolicyAmiExclusionRulesPropertyDsl.() -> Unit = {}
+    ): CfnLifecyclePolicy.AmiExclusionRulesProperty {
+        val builder = CfnLifecyclePolicyAmiExclusionRulesPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies resources that lifecycle policy actions should not apply to.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.imagebuilder.*;
+     * ExclusionRulesProperty exclusionRulesProperty = ExclusionRulesProperty.builder()
+     * .amis(AmiExclusionRulesProperty.builder()
+     * .isPublic(false)
+     * .lastLaunched(LastLaunchedProperty.builder()
+     * .unit("unit")
+     * .value(123)
+     * .build())
+     * .regions(List.of("regions"))
+     * .sharedAccounts(List.of("sharedAccounts"))
+     * .tagMap(Map.of(
+     * "tagMapKey", "tagMap"))
+     * .build())
+     * .tagMap(Map.of(
+     * "tagMapKey", "tagMap"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-exclusionrules.html)
+     */
+    public inline fun cfnLifecyclePolicyExclusionRulesProperty(
+        block: CfnLifecyclePolicyExclusionRulesPropertyDsl.() -> Unit = {}
+    ): CfnLifecyclePolicy.ExclusionRulesProperty {
+        val builder = CfnLifecyclePolicyExclusionRulesPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Defines filters that the lifecycle policy uses to determine impacted resource.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.imagebuilder.*;
+     * FilterProperty filterProperty = FilterProperty.builder()
+     * .type("type")
+     * .value(123)
+     * // the properties below are optional
+     * .retainAtLeast(123)
+     * .unit("unit")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-filter.html)
+     */
+    public inline fun cfnLifecyclePolicyFilterProperty(
+        block: CfnLifecyclePolicyFilterPropertyDsl.() -> Unit = {}
+    ): CfnLifecyclePolicy.FilterProperty {
+        val builder = CfnLifecyclePolicyFilterPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies how the lifecycle policy should apply actions to selected resources.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.imagebuilder.*;
+     * IncludeResourcesProperty includeResourcesProperty = IncludeResourcesProperty.builder()
+     * .amis(false)
+     * .containers(false)
+     * .snapshots(false)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-includeresources.html)
+     */
+    public inline fun cfnLifecyclePolicyIncludeResourcesProperty(
+        block: CfnLifecyclePolicyIncludeResourcesPropertyDsl.() -> Unit = {}
+    ): CfnLifecyclePolicy.IncludeResourcesProperty {
+        val builder = CfnLifecyclePolicyIncludeResourcesPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Defines criteria to exclude AMIs from lifecycle actions based on the last time they were used
+     * to launch an instance.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.imagebuilder.*;
+     * LastLaunchedProperty lastLaunchedProperty = LastLaunchedProperty.builder()
+     * .unit("unit")
+     * .value(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-lastlaunched.html)
+     */
+    public inline fun cfnLifecyclePolicyLastLaunchedProperty(
+        block: CfnLifecyclePolicyLastLaunchedPropertyDsl.() -> Unit = {}
+    ): CfnLifecyclePolicy.LastLaunchedProperty {
+        val builder = CfnLifecyclePolicyLastLaunchedPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The configuration details for a lifecycle policy resource.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.imagebuilder.*;
+     * PolicyDetailProperty policyDetailProperty = PolicyDetailProperty.builder()
+     * .action(ActionProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .includeResources(IncludeResourcesProperty.builder()
+     * .amis(false)
+     * .containers(false)
+     * .snapshots(false)
+     * .build())
+     * .build())
+     * .filter(FilterProperty.builder()
+     * .type("type")
+     * .value(123)
+     * // the properties below are optional
+     * .retainAtLeast(123)
+     * .unit("unit")
+     * .build())
+     * // the properties below are optional
+     * .exclusionRules(ExclusionRulesProperty.builder()
+     * .amis(AmiExclusionRulesProperty.builder()
+     * .isPublic(false)
+     * .lastLaunched(LastLaunchedProperty.builder()
+     * .unit("unit")
+     * .value(123)
+     * .build())
+     * .regions(List.of("regions"))
+     * .sharedAccounts(List.of("sharedAccounts"))
+     * .tagMap(Map.of(
+     * "tagMapKey", "tagMap"))
+     * .build())
+     * .tagMap(Map.of(
+     * "tagMapKey", "tagMap"))
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-policydetail.html)
+     */
+    public inline fun cfnLifecyclePolicyPolicyDetailProperty(
+        block: CfnLifecyclePolicyPolicyDetailPropertyDsl.() -> Unit = {}
+    ): CfnLifecyclePolicy.PolicyDetailProperty {
+        val builder = CfnLifecyclePolicyPolicyDetailPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnLifecyclePolicy`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.imagebuilder.*;
+     * CfnLifecyclePolicyProps cfnLifecyclePolicyProps = CfnLifecyclePolicyProps.builder()
+     * .executionRole("executionRole")
+     * .name("name")
+     * .policyDetails(List.of(PolicyDetailProperty.builder()
+     * .action(ActionProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .includeResources(IncludeResourcesProperty.builder()
+     * .amis(false)
+     * .containers(false)
+     * .snapshots(false)
+     * .build())
+     * .build())
+     * .filter(FilterProperty.builder()
+     * .type("type")
+     * .value(123)
+     * // the properties below are optional
+     * .retainAtLeast(123)
+     * .unit("unit")
+     * .build())
+     * // the properties below are optional
+     * .exclusionRules(ExclusionRulesProperty.builder()
+     * .amis(AmiExclusionRulesProperty.builder()
+     * .isPublic(false)
+     * .lastLaunched(LastLaunchedProperty.builder()
+     * .unit("unit")
+     * .value(123)
+     * .build())
+     * .regions(List.of("regions"))
+     * .sharedAccounts(List.of("sharedAccounts"))
+     * .tagMap(Map.of(
+     * "tagMapKey", "tagMap"))
+     * .build())
+     * .tagMap(Map.of(
+     * "tagMapKey", "tagMap"))
+     * .build())
+     * .build()))
+     * .resourceSelection(ResourceSelectionProperty.builder()
+     * .recipes(List.of(RecipeSelectionProperty.builder()
+     * .name("name")
+     * .semanticVersion("semanticVersion")
+     * .build()))
+     * .tagMap(Map.of(
+     * "tagMapKey", "tagMap"))
+     * .build())
+     * .resourceType("resourceType")
+     * // the properties below are optional
+     * .description("description")
+     * .status("status")
+     * .tags(Map.of(
+     * "tagsKey", "tags"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-lifecyclepolicy.html)
+     */
+    public inline fun cfnLifecyclePolicyProps(
+        block: CfnLifecyclePolicyPropsDsl.() -> Unit = {}
+    ): CfnLifecyclePolicyProps {
+        val builder = CfnLifecyclePolicyPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies an Image Builder recipe that the lifecycle policy uses for resource selection.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.imagebuilder.*;
+     * RecipeSelectionProperty recipeSelectionProperty = RecipeSelectionProperty.builder()
+     * .name("name")
+     * .semanticVersion("semanticVersion")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-recipeselection.html)
+     */
+    public inline fun cfnLifecyclePolicyRecipeSelectionProperty(
+        block: CfnLifecyclePolicyRecipeSelectionPropertyDsl.() -> Unit = {}
+    ): CfnLifecyclePolicy.RecipeSelectionProperty {
+        val builder = CfnLifecyclePolicyRecipeSelectionPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Resource selection criteria for the lifecycle policy.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.imagebuilder.*;
+     * ResourceSelectionProperty resourceSelectionProperty = ResourceSelectionProperty.builder()
+     * .recipes(List.of(RecipeSelectionProperty.builder()
+     * .name("name")
+     * .semanticVersion("semanticVersion")
+     * .build()))
+     * .tagMap(Map.of(
+     * "tagMapKey", "tagMap"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-resourceselection.html)
+     */
+    public inline fun cfnLifecyclePolicyResourceSelectionProperty(
+        block: CfnLifecyclePolicyResourceSelectionPropertyDsl.() -> Unit = {}
+    ): CfnLifecyclePolicy.ResourceSelectionProperty {
+        val builder = CfnLifecyclePolicyResourceSelectionPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Create a new workflow or a new version of an existing workflow.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.imagebuilder.*;
+     * CfnWorkflow cfnWorkflow = CfnWorkflow.Builder.create(this, "MyCfnWorkflow")
+     * .name("name")
+     * .type("type")
+     * .version("version")
+     * // the properties below are optional
+     * .changeDescription("changeDescription")
+     * .data("data")
+     * .description("description")
+     * .kmsKeyId("kmsKeyId")
+     * .tags(Map.of(
+     * "tagsKey", "tags"))
+     * .uri("uri")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-workflow.html)
+     */
+    public inline fun cfnWorkflow(
+        scope: Construct,
+        id: String,
+        block: CfnWorkflowDsl.() -> Unit = {},
+    ): CfnWorkflow {
+        val builder = CfnWorkflowDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnWorkflow`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.imagebuilder.*;
+     * CfnWorkflowProps cfnWorkflowProps = CfnWorkflowProps.builder()
+     * .name("name")
+     * .type("type")
+     * .version("version")
+     * // the properties below are optional
+     * .changeDescription("changeDescription")
+     * .data("data")
+     * .description("description")
+     * .kmsKeyId("kmsKeyId")
+     * .tags(Map.of(
+     * "tagsKey", "tags"))
+     * .uri("uri")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-workflow.html)
+     */
+    public inline fun cfnWorkflowProps(
+        block: CfnWorkflowPropsDsl.() -> Unit = {}
+    ): CfnWorkflowProps {
+        val builder = CfnWorkflowPropsDsl()
         builder.apply(block)
         return builder.build()
     }

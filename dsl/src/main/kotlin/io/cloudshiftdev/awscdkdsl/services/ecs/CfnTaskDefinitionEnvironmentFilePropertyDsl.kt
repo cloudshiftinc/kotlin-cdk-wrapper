@@ -20,10 +20,7 @@ import software.amazon.awscdk.services.ecs.CfnTaskDefinition
  *
  * You can specify up to ten environment files. The file must have a `.env` file extension. Each
  * line in an environment file should contain an environment variable in `VARIABLE=VALUE` format.
- * Lines beginning with `#` are treated as comments and are ignored. For more information about the
- * environment variable file syntax, see
- * [Declare default environment variables in file](https://docs.aws.amazon.com/https://docs.docker.com/compose/env-file/)
- * .
+ * Lines beginning with `#` are treated as comments and are ignored.
  *
  * If there are environment variables specified using the `environment` parameter in a container
  * definition, they take precedence over the variables contained within an environment file. If
@@ -35,6 +32,11 @@ import software.amazon.awscdk.services.ecs.CfnTaskDefinition
  * You must use the following platforms for the Fargate launch type:
  * * Linux platform version `1.4.0` or later.
  * * Windows platform version `1.0.0` or later.
+ *
+ * Consider the following when using the Fargate launch type:
+ * * The file is handled like a native Docker env-file.
+ * * There is no support for shell escape handling.
+ * * The container entry point interperts the `VARIABLE` values.
  *
  * Example:
  * ```

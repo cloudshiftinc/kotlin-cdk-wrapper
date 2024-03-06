@@ -20,7 +20,9 @@ import software.amazon.awscdk.services.mediatailor.CfnChannelPolicy
 import software.constructs.Construct
 
 /**
- * Definition of AWS::MediaTailor::ChannelPolicy Resource Type.
+ * Specifies an IAM policy for the channel.
+ *
+ * IAM policies are used to control access to your channel.
  *
  * Example:
  * ```
@@ -44,18 +46,24 @@ public class CfnChannelPolicyDsl(
     private val cdkBuilder: CfnChannelPolicy.Builder = CfnChannelPolicy.Builder.create(scope, id)
 
     /**
+     * The name of the channel associated with this Channel Policy.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channelpolicy.html#cfn-mediatailor-channelpolicy-channelname)
      *
-     * @param channelName
+     * @param channelName The name of the channel associated with this Channel Policy.
      */
     public fun channelName(channelName: String) {
         cdkBuilder.channelName(channelName)
     }
 
     /**
+     * The IAM policy for the channel.
+     *
+     * IAM policies are used to control access to your channel.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channelpolicy.html#cfn-mediatailor-channelpolicy-policy)
      *
-     * @param policy
+     * @param policy The IAM policy for the channel.
      */
     public fun policy(policy: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
@@ -64,9 +72,13 @@ public class CfnChannelPolicyDsl(
     }
 
     /**
+     * The IAM policy for the channel.
+     *
+     * IAM policies are used to control access to your channel.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channelpolicy.html#cfn-mediatailor-channelpolicy-policy)
      *
-     * @param policy
+     * @param policy The IAM policy for the channel.
      */
     public fun policy(policy: Any) {
         cdkBuilder.policy(policy)

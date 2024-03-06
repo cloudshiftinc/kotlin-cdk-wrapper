@@ -16,6 +16,9 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dlm.CfnLifecyclePolicy
 
 /**
+ * *[Custom snapshot policies only]* Specifies information about the archive storage tier retention
+ * period.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -37,12 +40,22 @@ public class CfnLifecyclePolicyArchiveRetainRulePropertyDsl {
     private val cdkBuilder: CfnLifecyclePolicy.ArchiveRetainRuleProperty.Builder =
         CfnLifecyclePolicy.ArchiveRetainRuleProperty.builder()
 
-    /** @param retentionArchiveTier the value to be set. */
+    /**
+     * @param retentionArchiveTier Information about retention period in the Amazon EBS Snapshots
+     *   Archive. For more information, see
+     *   [Archive Amazon EBS snapshots](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/snapshot-archive.html)
+     *   .
+     */
     public fun retentionArchiveTier(retentionArchiveTier: IResolvable) {
         cdkBuilder.retentionArchiveTier(retentionArchiveTier)
     }
 
-    /** @param retentionArchiveTier the value to be set. */
+    /**
+     * @param retentionArchiveTier Information about retention period in the Amazon EBS Snapshots
+     *   Archive. For more information, see
+     *   [Archive Amazon EBS snapshots](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/snapshot-archive.html)
+     *   .
+     */
     public fun retentionArchiveTier(
         retentionArchiveTier: CfnLifecyclePolicy.RetentionArchiveTierProperty
     ) {

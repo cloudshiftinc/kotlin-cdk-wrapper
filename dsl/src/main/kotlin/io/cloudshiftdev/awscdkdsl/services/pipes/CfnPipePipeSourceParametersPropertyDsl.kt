@@ -210,18 +210,12 @@ public class CfnPipePipeSourceParametersPropertyDsl {
         cdkBuilder.rabbitMqBrokerParameters(rabbitMqBrokerParameters)
     }
 
-    /**
-     * @param selfManagedKafkaParameters The parameters for using a self-managed Apache Kafka stream
-     *   as a source.
-     */
+    /** @param selfManagedKafkaParameters The parameters for using a stream as a source. */
     public fun selfManagedKafkaParameters(selfManagedKafkaParameters: IResolvable) {
         cdkBuilder.selfManagedKafkaParameters(selfManagedKafkaParameters)
     }
 
-    /**
-     * @param selfManagedKafkaParameters The parameters for using a self-managed Apache Kafka stream
-     *   as a source.
-     */
+    /** @param selfManagedKafkaParameters The parameters for using a stream as a source. */
     public fun selfManagedKafkaParameters(
         selfManagedKafkaParameters: CfnPipe.PipeSourceSelfManagedKafkaParametersProperty
     ) {

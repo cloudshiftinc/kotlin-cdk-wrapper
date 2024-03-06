@@ -19,7 +19,7 @@ import software.amazon.awscdk.services.msk.CfnBatchScramSecret
 import software.constructs.Construct
 
 /**
- * Resource Type definition for AWS::MSK::BatchScramSecret.
+ * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-batchscramsecret.html.
  *
  * Example:
  * ```

@@ -16,7 +16,7 @@ import kotlin.String
 import software.amazon.awscdk.services.networkmanager.CfnDevice
 
 /**
- * The Amazon Web Services location of the device, if applicable.
+ * Specifies a location in AWS .
  *
  * Example:
  * ```

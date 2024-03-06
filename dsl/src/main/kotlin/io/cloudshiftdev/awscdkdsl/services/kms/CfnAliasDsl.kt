@@ -89,12 +89,6 @@ public class CfnAliasDsl(
      * [AWS managed keys](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk)
      * .
      *
-     * *Pattern* : `^alias/[a-zA-Z0-9/_-]+$`
-     *
-     * *Minimum* : `1`
-     *
-     * *Maximum* : `256`
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-alias.html#cfn-kms-alias-aliasname)
      *
      * @param aliasName Specifies the alias name. This value must begin with `alias/` followed by a

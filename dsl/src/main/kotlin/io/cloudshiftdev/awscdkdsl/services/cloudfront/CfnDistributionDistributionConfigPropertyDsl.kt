@@ -625,9 +625,9 @@ public class CfnDistributionDistributionConfigPropertyDsl {
      * @param webAclId A unique identifier that specifies the AWS WAF web ACL, if any, to associate
      *   with this distribution. To specify a web ACL created using the latest version of AWS WAF ,
      *   use the ACL ARN, for example
-     *   `arn:aws:wafv2:us-east-1:123456789012:global/webacl/ExampleWebACL/473e64fd-f30b-4765-81a0-62ad96dd167a`
+     *   `arn:aws:wafv2:us-east-1:123456789012:global/webacl/ExampleWebACL/a1b2c3d4-5678-90ab-cdef-EXAMPLE11111`
      *   . To specify a web ACL created using AWS WAF Classic, use the ACL ID, for example
-     *   `473e64fd-f30b-4765-81a0-62ad96dd167a` .
+     *   `a1b2c3d4-5678-90ab-cdef-EXAMPLE11111` .
      *
      * AWS WAF is a web application firewall that lets you monitor the HTTP and HTTPS requests that
      * are forwarded to CloudFront, and lets you control access to your content. Based on conditions

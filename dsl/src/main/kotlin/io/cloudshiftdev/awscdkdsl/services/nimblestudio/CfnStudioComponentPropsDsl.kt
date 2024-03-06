@@ -143,7 +143,10 @@ public class CfnStudioComponentPropsDsl {
         cdkBuilder.name(name)
     }
 
-    /** @param runtimeRoleArn the value to be set. */
+    /**
+     * @param runtimeRoleArn An IAM role attached to a Studio Component that gives the studio
+     *   component access to AWS resources at anytime while the instance is running.
+     */
     public fun runtimeRoleArn(runtimeRoleArn: String) {
         cdkBuilder.runtimeRoleArn(runtimeRoleArn)
     }
@@ -163,7 +166,11 @@ public class CfnStudioComponentPropsDsl {
         cdkBuilder.scriptParameters(scriptParameters)
     }
 
-    /** @param secureInitializationRoleArn the value to be set. */
+    /**
+     * @param secureInitializationRoleArn An IAM role attached to Studio Component when the system
+     *   initialization script runs which give the studio component access to AWS resources when the
+     *   system initialization script runs.
+     */
     public fun secureInitializationRoleArn(secureInitializationRoleArn: String) {
         cdkBuilder.secureInitializationRoleArn(secureInitializationRoleArn)
     }

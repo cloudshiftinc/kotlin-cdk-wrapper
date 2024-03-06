@@ -29,39 +29,69 @@ import software.constructs.Construct
  *
  * Example:
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import software.amazon.awscdk.services.lakeformation.*;
- * Object catalog;
- * Object tableWildcard;
- * CfnTagAssociation cfnTagAssociation = CfnTagAssociation.Builder.create(this,
- * "MyCfnTagAssociation")
- * .lfTags(List.of(LFTagPairProperty.builder()
- * .catalogId("catalogId")
- * .tagKey("tagKey")
- * .tagValues(List.of("tagValues"))
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.glue.alpha.S3Table;
+ * import software.amazon.awscdk.services.glue.alpha.Database;
+ * import software.amazon.awscdk.services.glue.alpha.DataFormat;
+ * import software.amazon.awscdk.services.glue.alpha.Schema;
+ * import software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings;
+ * import software.amazon.awscdk.services.lakeformation.CfnTag;
+ * import software.amazon.awscdk.services.lakeformation.CfnTagAssociation;
+ * Stack stack;
+ * String accountId;
+ * String tagKey = "aws";
+ * String[] tagValues = List.of("dev");
+ * Database database = new Database(this, "Database");
+ * S3Table table = S3Table.Builder.create(this, "Table")
+ * .database(database)
+ * .columns(List.of(Column.builder()
+ * .name("col1")
+ * .type(Schema.STRING)
+ * .build(), Column.builder()
+ * .name("col2")
+ * .type(Schema.STRING)
  * .build()))
+ * .dataFormat(DataFormat.CSV)
+ * .build();
+ * DefaultStackSynthesizer synthesizer = (DefaultStackSynthesizer)stack.getSynthesizer();
+ * CfnDataLakeSettings.Builder.create(this, "DataLakeSettings")
+ * .admins(List.of(DataLakePrincipalProperty.builder()
+ * .dataLakePrincipalIdentifier(stack.formatArn(ArnComponents.builder()
+ * .service("iam")
+ * .resource("role")
+ * .region("")
+ * .account(accountId)
+ * .resourceName("Admin")
+ * .build()))
+ * .build(), DataLakePrincipalProperty.builder()
+ * // The CDK cloudformation execution role.
+ * .dataLakePrincipalIdentifier(synthesizer.cloudFormationExecutionRoleArn.replace("${AWS::Partition}",
+ * "aws"))
+ * .build()))
+ * .build();
+ * CfnTag tag = CfnTag.Builder.create(this, "Tag")
+ * .catalogId(accountId)
+ * .tagKey(tagKey)
+ * .tagValues(tagValues)
+ * .build();
+ * LFTagPairProperty lfTagPairProperty = LFTagPairProperty.builder()
+ * .catalogId(accountId)
+ * .tagKey(tagKey)
+ * .tagValues(tagValues)
+ * .build();
+ * CfnTagAssociation tagAssociation = CfnTagAssociation.Builder.create(this, "TagAssociation")
+ * .lfTags(List.of(lfTagPairProperty))
  * .resource(ResourceProperty.builder()
- * .catalog(catalog)
- * .database(DatabaseResourceProperty.builder()
- * .catalogId("catalogId")
- * .name("name")
- * .build())
- * .table(TableResourceProperty.builder()
- * .catalogId("catalogId")
- * .databaseName("databaseName")
- * // the properties below are optional
- * .name("name")
- * .tableWildcard(tableWildcard)
- * .build())
  * .tableWithColumns(TableWithColumnsResourceProperty.builder()
- * .catalogId("catalogId")
- * .columnNames(List.of("columnNames"))
- * .databaseName("databaseName")
- * .name("name")
+ * .databaseName(database.getDatabaseName())
+ * .columnNames(List.of("col1", "col2"))
+ * .catalogId(accountId)
+ * .name(table.getTableName())
  * .build())
  * .build())
  * .build();
+ * tagAssociation.node.addDependency(tag);
+ * tagAssociation.node.addDependency(table);
  * ```
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-tagassociation.html)

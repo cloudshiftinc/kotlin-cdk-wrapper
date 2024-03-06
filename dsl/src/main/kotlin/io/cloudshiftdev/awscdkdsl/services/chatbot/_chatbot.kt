@@ -29,8 +29,8 @@ public object chatbot {
      * This resource requires some setup to be done in the AWS Chatbot console. To provide the
      * required Microsoft Teams team and tenant IDs, you must perform the initial authorization flow
      * with Microsoft Teams in the AWS Chatbot console, then copy and paste the IDs from the
-     * console. For more details, see steps 1-4 in
-     * [Setting Up AWS Chatbot with Microsoft Teams](https://docs.aws.amazon.com/chatbot/latest/adminguide/teams-setup.html#teams-client-setup)
+     * console. For more details, see
+     * [Configure a Microsoft Teams client](https://docs.aws.amazon.com/chatbot/latest/adminguide/teams-setup.html#teams-client-setup)
      * in the *AWS Chatbot Administrator Guide* .
      *
      * Example:
@@ -106,8 +106,8 @@ public object chatbot {
      * This resource requires some setup to be done in the AWS Chatbot console. To provide the
      * required Slack workspace ID, you must perform the initial authorization flow with Slack in
      * the AWS Chatbot console, then copy and paste the workspace ID from the console. For more
-     * details, see steps 1-4 in
-     * [Setting Up AWS Chatbot with Slack](https://docs.aws.amazon.com/chatbot/latest/adminguide/setting-up.html#Setup_intro)
+     * details, see
+     * [Configure a Slack client](https://docs.aws.amazon.com/chatbot/latest/adminguide/slack-setup.html#slack-client-setup)
      * in the *AWS Chatbot User Guide* .
      *
      * Example:

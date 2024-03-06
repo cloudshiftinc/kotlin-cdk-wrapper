@@ -18,6 +18,7 @@ import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerProps
 
 /**
@@ -94,6 +95,11 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerProps
  * .certificates(List.of(CertificateProperty.builder()
  * .certificateArn("certificateArn")
  * .build()))
+ * .mutualAuthentication(MutualAuthenticationProperty.builder()
+ * .ignoreClientCertificateExpiry(false)
+ * .mode("mode")
+ * .trustStoreArn("trustStoreArn")
+ * .build())
  * .port(123)
  * .protocol("protocol")
  * .sslPolicy("sslPolicy")
@@ -197,6 +203,18 @@ public class CfnListenerPropsDsl {
     /** @param loadBalancerArn The Amazon Resource Name (ARN) of the load balancer. */
     public fun loadBalancerArn(loadBalancerArn: String) {
         cdkBuilder.loadBalancerArn(loadBalancerArn)
+    }
+
+    /** @param mutualAuthentication The mutual authentication configuration information. */
+    public fun mutualAuthentication(mutualAuthentication: IResolvable) {
+        cdkBuilder.mutualAuthentication(mutualAuthentication)
+    }
+
+    /** @param mutualAuthentication The mutual authentication configuration information. */
+    public fun mutualAuthentication(
+        mutualAuthentication: CfnListener.MutualAuthenticationProperty
+    ) {
+        cdkBuilder.mutualAuthentication(mutualAuthentication)
     }
 
     /**

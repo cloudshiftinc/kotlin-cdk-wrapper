@@ -245,6 +245,7 @@ public object gamelift {
      * .anywhereConfiguration(AnywhereConfigurationProperty.builder()
      * .cost("cost")
      * .build())
+     * .applyCapacity("applyCapacity")
      * .buildId("buildId")
      * .certificateConfiguration(CertificateConfigurationProperty.builder()
      * .certificateType("certificateType")
@@ -261,6 +262,7 @@ public object gamelift {
      * .ec2InstanceType("ec2InstanceType")
      * .fleetType("fleetType")
      * .instanceRoleArn("instanceRoleArn")
+     * .instanceRoleCredentialsProvider("instanceRoleCredentialsProvider")
      * .locations(List.of(LocationConfigurationProperty.builder()
      * .location("location")
      * // the properties below are optional
@@ -291,6 +293,23 @@ public object gamelift {
      * .parameters("parameters")
      * .build()))
      * .build())
+     * .scalingPolicies(List.of(ScalingPolicyProperty.builder()
+     * .metricName("metricName")
+     * .name("name")
+     * // the properties below are optional
+     * .comparisonOperator("comparisonOperator")
+     * .evaluationPeriods(123)
+     * .location("location")
+     * .policyType("policyType")
+     * .scalingAdjustment(123)
+     * .scalingAdjustmentType("scalingAdjustmentType")
+     * .status("status")
+     * .targetConfiguration(TargetConfigurationProperty.builder()
+     * .targetValue(123)
+     * .build())
+     * .threshold(123)
+     * .updateStatus("updateStatus")
+     * .build()))
      * .scriptId("scriptId")
      * .serverLaunchParameters("serverLaunchParameters")
      * .serverLaunchPath("serverLaunchPath")
@@ -473,6 +492,7 @@ public object gamelift {
      * .anywhereConfiguration(AnywhereConfigurationProperty.builder()
      * .cost("cost")
      * .build())
+     * .applyCapacity("applyCapacity")
      * .buildId("buildId")
      * .certificateConfiguration(CertificateConfigurationProperty.builder()
      * .certificateType("certificateType")
@@ -489,6 +509,7 @@ public object gamelift {
      * .ec2InstanceType("ec2InstanceType")
      * .fleetType("fleetType")
      * .instanceRoleArn("instanceRoleArn")
+     * .instanceRoleCredentialsProvider("instanceRoleCredentialsProvider")
      * .locations(List.of(LocationConfigurationProperty.builder()
      * .location("location")
      * // the properties below are optional
@@ -519,6 +540,23 @@ public object gamelift {
      * .parameters("parameters")
      * .build()))
      * .build())
+     * .scalingPolicies(List.of(ScalingPolicyProperty.builder()
+     * .metricName("metricName")
+     * .name("name")
+     * // the properties below are optional
+     * .comparisonOperator("comparisonOperator")
+     * .evaluationPeriods(123)
+     * .location("location")
+     * .policyType("policyType")
+     * .scalingAdjustment(123)
+     * .scalingAdjustmentType("scalingAdjustmentType")
+     * .status("status")
+     * .targetConfiguration(TargetConfigurationProperty.builder()
+     * .targetValue(123)
+     * .build())
+     * .threshold(123)
+     * .updateStatus("updateStatus")
+     * .build()))
      * .scriptId("scriptId")
      * .serverLaunchParameters("serverLaunchParameters")
      * .serverLaunchPath("serverLaunchPath")
@@ -610,6 +648,45 @@ public object gamelift {
     }
 
     /**
+     * Rule that controls how a fleet is scaled.
+     *
+     * Scaling policies are uniquely identified by the combination of name and fleet ID.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.gamelift.*;
+     * ScalingPolicyProperty scalingPolicyProperty = ScalingPolicyProperty.builder()
+     * .metricName("metricName")
+     * .name("name")
+     * // the properties below are optional
+     * .comparisonOperator("comparisonOperator")
+     * .evaluationPeriods(123)
+     * .location("location")
+     * .policyType("policyType")
+     * .scalingAdjustment(123)
+     * .scalingAdjustmentType("scalingAdjustmentType")
+     * .status("status")
+     * .targetConfiguration(TargetConfigurationProperty.builder()
+     * .targetValue(123)
+     * .build())
+     * .threshold(123)
+     * .updateStatus("updateStatus")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-scalingpolicy.html)
+     */
+    public inline fun cfnFleetScalingPolicyProperty(
+        block: CfnFleetScalingPolicyPropertyDsl.() -> Unit = {}
+    ): CfnFleet.ScalingPolicyProperty {
+        val builder = CfnFleetScalingPolicyPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * A set of instructions for launching server processes on each instance in a fleet.
      *
      * Server processes run either an executable in a custom game build or a Realtime Servers
@@ -634,6 +711,34 @@ public object gamelift {
         block: CfnFleetServerProcessPropertyDsl.() -> Unit = {}
     ): CfnFleet.ServerProcessProperty {
         val builder = CfnFleetServerProcessPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Settings for a target-based scaling policy.
+     *
+     * A target-based policy tracks a particular fleet metric specifies a target value for the
+     * metric. As player usage changes, the policy triggers Amazon GameLift to adjust capacity so
+     * that the metric returns to the target value. The target configuration specifies settings as
+     * needed for the target based policy, including the target value.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.gamelift.*;
+     * TargetConfigurationProperty targetConfigurationProperty = TargetConfigurationProperty.builder()
+     * .targetValue(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-targetconfiguration.html)
+     */
+    public inline fun cfnFleetTargetConfigurationProperty(
+        block: CfnFleetTargetConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnFleet.TargetConfigurationProperty {
+        val builder = CfnFleetTargetConfigurationPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -954,11 +1059,6 @@ public object gamelift {
     }
 
     /**
-     * A fleet or alias designated in a game session queue.
-     *
-     * Queues fulfill requests for new game sessions by placing a new game session on any of the
-     * queue's destinations.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -1002,6 +1102,33 @@ public object gamelift {
         block: CfnGameSessionQueueFilterConfigurationPropertyDsl.() -> Unit = {}
     ): CfnGameSessionQueue.FilterConfigurationProperty {
         val builder = CfnGameSessionQueueFilterConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A fleet or alias designated in a game session queue.
+     *
+     * Queues fulfill requests for new game sessions by placing a new game session on any of the
+     * queue's destinations.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.gamelift.*;
+     * GameSessionQueueDestinationProperty gameSessionQueueDestinationProperty =
+     * GameSessionQueueDestinationProperty.builder()
+     * .destinationArn("destinationArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-gamesessionqueuedestination.html)
+     */
+    public inline fun cfnGameSessionQueueGameSessionQueueDestinationProperty(
+        block: CfnGameSessionQueueGameSessionQueueDestinationPropertyDsl.() -> Unit = {}
+    ): CfnGameSessionQueue.GameSessionQueueDestinationProperty {
+        val builder = CfnGameSessionQueueGameSessionQueueDestinationPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -1122,7 +1249,7 @@ public object gamelift {
     }
 
     /**
-     * Creates a custom location for use in an Anywhere fleet.
+     * The AWS::GameLift::Location resource creates a custom location for use in an Anywhere fleet.
      *
      * Example:
      * ```
@@ -1205,6 +1332,7 @@ public object gamelift {
      * .acceptanceTimeoutSeconds(123)
      * .additionalPlayerCount(123)
      * .backfillMode("backfillMode")
+     * .creationTime("creationTime")
      * .customEventData("customEventData")
      * .description("description")
      * .flexMatchMode("flexMatchMode")
@@ -1215,6 +1343,7 @@ public object gamelift {
      * .gameSessionData("gameSessionData")
      * .gameSessionQueueArns(List.of("gameSessionQueueArns"))
      * .notificationTarget("notificationTarget")
+     * .ruleSetArn("ruleSetArn")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -1235,13 +1364,18 @@ public object gamelift {
     }
 
     /**
-     * Set of key-value pairs that contain information about a game session.
+     * This key-value pair can store custom data about a game session.
      *
-     * When included in a game session request, these properties communicate details to be used when
-     * setting up the new game session. For example, a game property might specify a game mode,
-     * level, or map. Game properties are passed to the game server process when initiating a new
-     * game session. For more information, see the
-     * [Amazon GameLift Developer Guide](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-client-api.html#gamelift-sdk-client-api-create)
+     * For example, you might use a `GameProperty` to track a game session's map, level of
+     * difficulty, or remaining time. The difficulty level could be specified like this: `{"Key":
+     * "difficulty", "Value":"Novice"}` .
+     *
+     * You can set game properties when creating a game session. You can also modify game properties
+     * of an active game session. When searching for game sessions, you can filter on game property
+     * keys and values. You can't delete game properties from a game session.
+     *
+     * For examples of working with game properties, see
+     * [Create a game session with properties](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-client-api.html#game-properties)
      * .
      *
      * Example:
@@ -1283,6 +1417,7 @@ public object gamelift {
      * .acceptanceTimeoutSeconds(123)
      * .additionalPlayerCount(123)
      * .backfillMode("backfillMode")
+     * .creationTime("creationTime")
      * .customEventData("customEventData")
      * .description("description")
      * .flexMatchMode("flexMatchMode")
@@ -1293,6 +1428,7 @@ public object gamelift {
      * .gameSessionData("gameSessionData")
      * .gameSessionQueueArns(List.of("gameSessionQueueArns"))
      * .notificationTarget("notificationTarget")
+     * .ruleSetArn("ruleSetArn")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")

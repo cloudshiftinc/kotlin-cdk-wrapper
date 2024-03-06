@@ -24,6 +24,7 @@ import software.amazon.awscdk.services.ec2.ISecurityGroup
 import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.iam.IRole
+import software.amazon.awscdk.services.rds.ClientPasswordAuthType
 import software.amazon.awscdk.services.rds.DatabaseProxyOptions
 import software.amazon.awscdk.services.rds.SessionPinningFilter
 import software.amazon.awscdk.services.secretsmanager.ISecret
@@ -64,6 +65,14 @@ public class DatabaseProxyOptionsDsl {
      */
     public fun borrowTimeout(borrowTimeout: Duration) {
         cdkBuilder.borrowTimeout(borrowTimeout)
+    }
+
+    /**
+     * @param clientPasswordAuthType Specifies the details of authentication used by a proxy to log
+     *   in as a specific database user.
+     */
+    public fun clientPasswordAuthType(clientPasswordAuthType: ClientPasswordAuthType) {
+        cdkBuilder.clientPasswordAuthType(clientPasswordAuthType)
     }
 
     /**

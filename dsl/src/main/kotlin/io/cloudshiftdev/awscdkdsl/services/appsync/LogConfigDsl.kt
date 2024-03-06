@@ -31,7 +31,7 @@ import software.amazon.awscdk.services.logs.RetentionDays
  * GraphqlApi.Builder.create(this, "api")
  * .authorizationConfig(AuthorizationConfig.builder().build())
  * .name("myApi")
- * .schema(SchemaFile.fromAsset(join(__dirname, "myApi.graphql")))
+ * .definition(Definition.fromFile(join(__dirname, "myApi.graphql")))
  * .logConfig(logConfig)
  * .build();
  * ```

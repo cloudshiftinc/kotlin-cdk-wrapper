@@ -13,6 +13,7 @@ package io.cloudshiftdev.awscdkdsl.services.s3
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Boolean
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -34,6 +35,7 @@ import software.amazon.awscdk.services.s3.ObjectLockRetention
 import software.amazon.awscdk.services.s3.ObjectOwnership
 import software.amazon.awscdk.services.s3.RedirectTarget
 import software.amazon.awscdk.services.s3.RoutingRule
+import software.amazon.awscdk.services.s3.TargetObjectKeyFormat
 import software.constructs.Construct
 
 /**
@@ -355,6 +357,21 @@ public class BucketDsl(
     }
 
     /**
+     * Enforces minimum TLS version for requests.
+     *
+     * Requires `enforceSSL` to be enabled.
+     *
+     * Default: No minimum TLS version is enforced.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/amazon-s3-policy-keys.html#example-object-tls-version)
+     *
+     * @param minimumTlsVersion Enforces minimum TLS version for requests.
+     */
+    public fun minimumTlsVersion(minimumTlsVersion: Number) {
+        cdkBuilder.minimumTlsVersion(minimumTlsVersion)
+    }
+
+    /**
      * The role to be used by the notifications handler.
      *
      * Default: - a new role will be created.
@@ -458,6 +475,18 @@ public class BucketDsl(
      */
     public fun serverAccessLogsPrefix(serverAccessLogsPrefix: String) {
         cdkBuilder.serverAccessLogsPrefix(serverAccessLogsPrefix)
+    }
+
+    /**
+     * Optional key format for log objects.
+     *
+     * Default: - the default key format is:
+     * [DestinationPrefix][YYYY]-[MM]-[DD]-[hh]-[mm]-[ss]-[UniqueString]
+     *
+     * @param targetObjectKeyFormat Optional key format for log objects.
+     */
+    public fun targetObjectKeyFormat(targetObjectKeyFormat: TargetObjectKeyFormat) {
+        cdkBuilder.targetObjectKeyFormat(targetObjectKeyFormat)
     }
 
     /**

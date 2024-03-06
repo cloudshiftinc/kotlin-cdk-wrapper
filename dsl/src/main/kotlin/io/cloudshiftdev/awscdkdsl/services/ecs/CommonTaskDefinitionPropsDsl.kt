@@ -43,6 +43,7 @@ import software.amazon.awscdk.services.iam.IRole
  * .volumes(List.of(Volume.builder()
  * .name("name")
  * // the properties below are optional
+ * .configuredAtLaunch(false)
  * .dockerVolumeConfiguration(DockerVolumeConfiguration.builder()
  * .driver("driver")
  * .scope(Scope.TASK)

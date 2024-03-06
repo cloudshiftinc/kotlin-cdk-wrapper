@@ -114,7 +114,7 @@ public class VolumePropsDsl {
      * @param iops The number of I/O operations per second (IOPS) to provision for the volume. The
      *   maximum ratio is 50 IOPS/GiB for PROVISIONED_IOPS_SSD, and 500 IOPS/GiB for both
      *   PROVISIONED_IOPS_SSD_IO2 and GENERAL_PURPOSE_SSD_GP3. See
-     *   https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html
+     *   https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-volume.html
      *   for more information.
      *
      * This parameter is valid only for PROVISIONED_IOPS_SSD, PROVISIONED_IOPS_SSD_IO2 and
@@ -132,7 +132,7 @@ public class VolumePropsDsl {
     /**
      * @param size The size of the volume, in GiBs. You must specify either a snapshot ID or a
      *   volume size. See
-     *   https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html
+     *   https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-volume.html
      *   for details on the allowable size for each type of volume.
      */
     public fun size(size: Size) {

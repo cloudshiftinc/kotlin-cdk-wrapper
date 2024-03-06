@@ -57,6 +57,7 @@ import software.amazon.awscdk.services.quicksight.CfnDataSet
  * .newColumnType("newColumnType")
  * // the properties below are optional
  * .format("format")
+ * .subType("subType")
  * .build())
  * .createColumnsOperation(CreateColumnsOperationProperty.builder()
  * .columns(List.of(CalculatedColumnProperty.builder()

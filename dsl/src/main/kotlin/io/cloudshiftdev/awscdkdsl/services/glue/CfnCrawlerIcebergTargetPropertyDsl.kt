@@ -19,6 +19,8 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.glue.CfnCrawler
 
 /**
+ * Specifies Apache Iceberg data store targets.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -43,32 +45,42 @@ public class CfnCrawlerIcebergTargetPropertyDsl {
 
     private val _paths: MutableList<String> = mutableListOf()
 
-    /** @param connectionName the value to be set. */
+    /** @param connectionName The name of the connection to use to connect to the Iceberg target. */
     public fun connectionName(connectionName: String) {
         cdkBuilder.connectionName(connectionName)
     }
 
-    /** @param exclusions the value to be set. */
+    /** @param exclusions A list of global patterns used to exclude from the crawl. */
     public fun exclusions(vararg exclusions: String) {
         _exclusions.addAll(listOf(*exclusions))
     }
 
-    /** @param exclusions the value to be set. */
+    /** @param exclusions A list of global patterns used to exclude from the crawl. */
     public fun exclusions(exclusions: Collection<String>) {
         _exclusions.addAll(exclusions)
     }
 
-    /** @param maximumTraversalDepth the value to be set. */
+    /**
+     * @param maximumTraversalDepth The maximum depth of Amazon S3 paths that the crawler can
+     *   traverse to discover the Iceberg metadata folder in your Amazon S3 path. Used to limit the
+     *   crawler run time.
+     */
     public fun maximumTraversalDepth(maximumTraversalDepth: Number) {
         cdkBuilder.maximumTraversalDepth(maximumTraversalDepth)
     }
 
-    /** @param paths the value to be set. */
+    /**
+     * @param paths One or more Amazon S3 paths that contains Iceberg metadata folders as
+     *   s3://bucket/prefix .
+     */
     public fun paths(vararg paths: String) {
         _paths.addAll(listOf(*paths))
     }
 
-    /** @param paths the value to be set. */
+    /**
+     * @param paths One or more Amazon S3 paths that contains Iceberg metadata folders as
+     *   s3://bucket/prefix .
+     */
     public fun paths(paths: Collection<String>) {
         _paths.addAll(paths)
     }

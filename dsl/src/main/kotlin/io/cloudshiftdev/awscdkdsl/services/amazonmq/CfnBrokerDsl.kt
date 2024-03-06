@@ -69,6 +69,7 @@ import software.constructs.Construct
  * // the properties below are optional
  * .consoleAccess(false)
  * .groups(List.of("groups"))
+ * .replicationUser(false)
  * .build()))
  * // the properties below are optional
  * .authenticationStrategy("authenticationStrategy")
@@ -224,18 +225,27 @@ public class CfnBrokerDsl(
     }
 
     /**
+     * Defines whether this broker is a part of a data replication pair.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-datareplicationmode)
      *
-     * @param dataReplicationMode
+     * @param dataReplicationMode Defines whether this broker is a part of a data replication pair.
      */
     public fun dataReplicationMode(dataReplicationMode: String) {
         cdkBuilder.dataReplicationMode(dataReplicationMode)
     }
 
     /**
+     * The Amazon Resource Name (ARN) of the primary broker that is used to replicate data from in a
+     * data replication pair, and is applied to the replica broker.
+     *
+     * Must be set when dataReplicationMode is set to CRDR.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-datareplicationprimarybrokerarn)
      *
-     * @param dataReplicationPrimaryBrokerArn
+     * @param dataReplicationPrimaryBrokerArn The Amazon Resource Name (ARN) of the primary broker
+     *   that is used to replicate data from in a data replication pair, and is applied to the
+     *   replica broker.
      */
     public fun dataReplicationPrimaryBrokerArn(dataReplicationPrimaryBrokerArn: String) {
         cdkBuilder.dataReplicationPrimaryBrokerArn(dataReplicationPrimaryBrokerArn)

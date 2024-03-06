@@ -35,10 +35,6 @@ import software.amazon.awscdk.services.vpclattice.CfnTargetGroupProps
  * .type("type")
  * // the properties below are optional
  * .config(TargetGroupConfigProperty.builder()
- * .port(123)
- * .protocol("protocol")
- * .vpcIdentifier("vpcIdentifier")
- * // the properties below are optional
  * .healthCheck(HealthCheckConfigProperty.builder()
  * .enabled(false)
  * .healthCheckIntervalSeconds(123)
@@ -54,7 +50,11 @@ import software.amazon.awscdk.services.vpclattice.CfnTargetGroupProps
  * .unhealthyThresholdCount(123)
  * .build())
  * .ipAddressType("ipAddressType")
+ * .lambdaEventStructureVersion("lambdaEventStructureVersion")
+ * .port(123)
+ * .protocol("protocol")
  * .protocolVersion("protocolVersion")
+ * .vpcIdentifier("vpcIdentifier")
  * .build())
  * .name("name")
  * .tags(List.of(CfnTag.builder()
@@ -79,18 +79,12 @@ public class CfnTargetGroupPropsDsl {
 
     private val _targets: MutableList<Any> = mutableListOf()
 
-    /**
-     * @param config The target group configuration. If the target group type is `LAMBDA` , this
-     *   parameter doesn't apply.
-     */
+    /** @param config The target group configuration. */
     public fun config(config: IResolvable) {
         cdkBuilder.config(config)
     }
 
-    /**
-     * @param config The target group configuration. If the target group type is `LAMBDA` , this
-     *   parameter doesn't apply.
-     */
+    /** @param config The target group configuration. */
     public fun config(config: CfnTargetGroup.TargetGroupConfigProperty) {
         cdkBuilder.config(config)
     }

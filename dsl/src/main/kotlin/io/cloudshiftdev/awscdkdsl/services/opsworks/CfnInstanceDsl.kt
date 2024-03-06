@@ -22,15 +22,7 @@ import software.amazon.awscdk.services.opsworks.CfnInstance
 import software.constructs.Construct
 
 /**
- * Creates an instance in a specified stack. For more information, see
- * [Adding an Instance to a Layer](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-add.html)
- * .
- *
- * *Required Permissions* : To use this action, an IAM user must have a Manage permissions level for
- * the stack, or an attached policy that explicitly grants permissions. For more information on user
- * permissions, see
- * [Managing User Permissions](https://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html)
- * .
+ * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html.
  *
  * Example:
  * ```
@@ -115,9 +107,8 @@ public class CfnInstanceDsl(
      *
      * The default setting is `INHERIT` . To specify an agent version, you must use the complete
      * version number, not the abbreviated number shown on the console. For a list of available
-     * agent version numbers, call
-     * [DescribeAgentVersions](https://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeAgentVersions)
-     * . AgentVersion cannot be set to Chef 12.2.
+     * agent version numbers, call `DescribeAgentVersions` . AgentVersion cannot be set to Chef
+     * 12.2.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-agentversion)
      *
@@ -297,10 +288,9 @@ public class CfnInstanceDsl(
      * Whether to install operating system and package updates when the instance boots.
      *
      * The default value is `true` . To control when updates are installed, set this value to
-     * `false` . You must then update your instances manually by using
-     * [CreateDeployment](https://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/CreateDeployment)
-     * to run the `update_dependencies` stack command or by manually running `yum` (Amazon Linux) or
-     * `apt-get` (Ubuntu) on the instances.
+     * `false` . You must then update your instances manually by using `CreateDeployment` to run the
+     * `update_dependencies` stack command or by manually running `yum` (Amazon Linux) or `apt-get`
+     * (Ubuntu) on the instances.
      *
      * We strongly recommend using the default value of `true` to ensure that your instances have
      * the latest security updates.
@@ -318,10 +308,9 @@ public class CfnInstanceDsl(
      * Whether to install operating system and package updates when the instance boots.
      *
      * The default value is `true` . To control when updates are installed, set this value to
-     * `false` . You must then update your instances manually by using
-     * [CreateDeployment](https://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/CreateDeployment)
-     * to run the `update_dependencies` stack command or by manually running `yum` (Amazon Linux) or
-     * `apt-get` (Ubuntu) on the instances.
+     * `false` . You must then update your instances manually by using `CreateDeployment` to run the
+     * `update_dependencies` stack command or by manually running `yum` (Amazon Linux) or `apt-get`
+     * (Ubuntu) on the instances.
      *
      * We strongly recommend using the default value of `true` to ensure that your instances have
      * the latest security updates.
@@ -398,11 +387,9 @@ public class CfnInstanceDsl(
      * .
      *
      * The default option is the current Amazon Linux version. If you set this parameter to `Custom`
-     * , you must use the
-     * [CreateInstance](https://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/CreateInstance)
-     * action's AmiId parameter to specify the custom AMI that you want to use. Block device
-     * mappings are not supported if the value is `Custom` . For more information about how to use
-     * custom AMIs with AWS OpsWorks Stacks, see
+     * , you must use the `CreateInstance` action's AmiId parameter to specify the custom AMI that
+     * you want to use. Block device mappings are not supported if the value is `Custom` . For more
+     * information about how to use custom AMIs with AWS OpsWorks Stacks, see
      * [Using Custom AMIs](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-custom-ami.html)
      * .
      *

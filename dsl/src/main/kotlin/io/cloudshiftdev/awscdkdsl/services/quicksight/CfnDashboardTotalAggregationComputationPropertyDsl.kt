@@ -27,6 +27,8 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * TotalAggregationComputationProperty totalAggregationComputationProperty =
  * TotalAggregationComputationProperty.builder()
  * .computationId("computationId")
+ * // the properties below are optional
+ * .name("name")
  * .value(MeasureFieldProperty.builder()
  * .calculatedMeasureField(CalculatedMeasureFieldProperty.builder()
  * .expression("expression")
@@ -273,8 +275,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * .build())
  * .build())
  * .build())
- * // the properties below are optional
- * .name("name")
  * .build();
  * ```
  *

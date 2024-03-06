@@ -101,6 +101,10 @@ public class CfnInstanceNetworkInterfacePropertyDsl {
      *   instance. Applies only if creating a network interface when launching an instance. The
      *   network interface must be the primary network interface. If launching into a default
      *   subnet, the default value is `true` .
+     *
+     * AWS charges for all public IPv4 addresses, including public IPv4 addresses associated with
+     * running instances and Elastic IP addresses. For more information, see the *Public IPv4
+     * Address* tab on the [VPC pricing page](https://docs.aws.amazon.com/vpc/pricing/) .
      */
     public fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
         cdkBuilder.associatePublicIpAddress(associatePublicIpAddress)
@@ -111,6 +115,10 @@ public class CfnInstanceNetworkInterfacePropertyDsl {
      *   instance. Applies only if creating a network interface when launching an instance. The
      *   network interface must be the primary network interface. If launching into a default
      *   subnet, the default value is `true` .
+     *
+     * AWS charges for all public IPv4 addresses, including public IPv4 addresses associated with
+     * running instances and Elastic IP addresses. For more information, see the *Public IPv4
+     * Address* tab on the [VPC pricing page](https://docs.aws.amazon.com/vpc/pricing/) .
      */
     public fun associatePublicIpAddress(associatePublicIpAddress: IResolvable) {
         cdkBuilder.associatePublicIpAddress(associatePublicIpAddress)

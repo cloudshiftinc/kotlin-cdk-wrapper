@@ -72,10 +72,14 @@ import software.amazon.awscdk.services.dms.CfnEndpointProps
  * .build())
  * .ibmDb2Settings(IbmDb2SettingsProperty.builder()
  * .currentLsn("currentLsn")
+ * .keepCsvFiles(false)
+ * .loadTimeout(123)
+ * .maxFileSize(123)
  * .maxKBytesPerRead(123)
  * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
  * .secretsManagerSecretId("secretsManagerSecretId")
  * .setDataCaptureChanges(false)
+ * .writeBufferSize(123)
  * .build())
  * .kafkaSettings(KafkaSettingsProperty.builder()
  * .broker("broker")
@@ -113,12 +117,20 @@ import software.amazon.awscdk.services.dms.CfnEndpointProps
  * .microsoftSqlServerSettings(MicrosoftSqlServerSettingsProperty.builder()
  * .bcpPacketSize(123)
  * .controlTablesFileGroup("controlTablesFileGroup")
+ * .databaseName("databaseName")
+ * .forceLobLookup(false)
+ * .password("password")
+ * .port(123)
  * .querySingleAlwaysOnNode(false)
  * .readBackupOnly(false)
  * .safeguardPolicy("safeguardPolicy")
  * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
  * .secretsManagerSecretId("secretsManagerSecretId")
+ * .serverName("serverName")
+ * .tlogAccessMode("tlogAccessMode")
+ * .trimSpaceInChar(false)
  * .useBcpFullLoad(false)
+ * .username("username")
  * .useThirdPartyBackupDevice(false)
  * .build())
  * .mongoDbSettings(MongoDbSettingsProperty.builder()
@@ -197,7 +209,9 @@ import software.amazon.awscdk.services.dms.CfnEndpointProps
  * .port(123)
  * .postgreSqlSettings(PostgreSqlSettingsProperty.builder()
  * .afterConnectScript("afterConnectScript")
+ * .babelfishDatabaseName("babelfishDatabaseName")
  * .captureDdls(false)
+ * .databaseMode("databaseMode")
  * .ddlArtifactsSchema("ddlArtifactsSchema")
  * .executeTimeout(123)
  * .failTasksOnLobTruncation(false)
@@ -251,6 +265,7 @@ import software.amazon.awscdk.services.dms.CfnEndpointProps
  * .resourceIdentifier("resourceIdentifier")
  * .s3Settings(S3SettingsProperty.builder()
  * .addColumnName(false)
+ * .addTrailingPaddingCharacter(false)
  * .bucketFolder("bucketFolder")
  * .bucketName("bucketName")
  * .cannedAclForObjects("cannedAclForObjects")
@@ -274,7 +289,9 @@ import software.amazon.awscdk.services.dms.CfnEndpointProps
  * .enableStatistics(false)
  * .encodingType("encodingType")
  * .encryptionMode("encryptionMode")
+ * .expectedBucketOwner("expectedBucketOwner")
  * .externalTableDefinition("externalTableDefinition")
+ * .glueCatalogGeneration(false)
  * .ignoreHeaderRows(123)
  * .includeOpForFullLoad(false)
  * .maxFileSize(123)
@@ -408,9 +425,9 @@ public class CfnEndpointPropsDsl {
     /**
      * @param engineName The type of engine for the endpoint, depending on the `EndpointType` value.
      *   *Valid values* : `mysql` | `oracle` | `postgres` | `mariadb` | `aurora` |
-     *   `aurora-postgresql` | `opensearch` | `redshift` | `s3` | `db2` | `azuredb` | `sybase` |
-     *   `dynamodb` | `mongodb` | `kinesis` | `kafka` | `elasticsearch` | `docdb` | `sqlserver` |
-     *   `neptune`
+     *   `aurora-postgresql` | `opensearch` | `redshift` | `redshift-serverless` | `s3` | `db2` |
+     *   `azuredb` | `sybase` | `dynamodb` | `mongodb` | `kinesis` | `kafka` | `elasticsearch` |
+     *   `docdb` | `sqlserver` | `neptune`
      */
     public fun engineName(engineName: String) {
         cdkBuilder.engineName(engineName)

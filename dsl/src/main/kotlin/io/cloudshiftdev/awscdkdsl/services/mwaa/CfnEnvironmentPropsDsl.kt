@@ -37,6 +37,7 @@ import software.amazon.awscdk.services.mwaa.CfnEnvironmentProps
  * .airflowConfigurationOptions(airflowConfigurationOptions)
  * .airflowVersion("airflowVersion")
  * .dagS3Path("dagS3Path")
+ * .endpointManagement("endpointManagement")
  * .environmentClass("environmentClass")
  * .executionRoleArn("executionRoleArn")
  * .kmsKey("kmsKey")
@@ -126,7 +127,8 @@ public class CfnEnvironmentPropsDsl {
      * If you specify a newer version number for an existing environment, the version update
      * requires some service interruption before taking effect.
      *
-     * *Allowed Values* : `2.0.2` | `1.10.12` | `2.2.2` | `2.4.3` | `2.5.1` | `2.6.3` (latest)
+     * *Allowed Values* : `1.10.12` | `2.0.2` | `2.2.2` | `2.4.3` | `2.5.1` | `2.6.3` | `2.7.2`
+     * (latest)
      */
     public fun airflowVersion(airflowVersion: String) {
         cdkBuilder.airflowVersion(airflowVersion)
@@ -140,6 +142,16 @@ public class CfnEnvironmentPropsDsl {
      */
     public fun dagS3Path(dagS3Path: String) {
         cdkBuilder.dagS3Path(dagS3Path)
+    }
+
+    /**
+     * @param endpointManagement Defines whether the VPC endpoints configured for the environment
+     *   are created, and managed, by the customer or by Amazon MWAA. If set to `SERVICE` , Amazon
+     *   MWAA will create and manage the required VPC endpoints in your VPC. If set to `CUSTOMER` ,
+     *   you must create, and manage, the VPC endpoints in your VPC.
+     */
+    public fun endpointManagement(endpointManagement: String) {
+        cdkBuilder.endpointManagement(endpointManagement)
     }
 
     /**

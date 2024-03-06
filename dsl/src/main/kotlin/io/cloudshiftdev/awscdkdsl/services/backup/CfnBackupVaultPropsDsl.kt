@@ -92,14 +92,6 @@ public class CfnBackupVaultPropsDsl {
     }
 
     /**
-     * @param backupVaultTags Metadata that you can assign to help organize the resources that you
-     *   create. Each tag is a key-value pair.
-     */
-    public fun backupVaultTags(backupVaultTags: IResolvable) {
-        cdkBuilder.backupVaultTags(backupVaultTags)
-    }
-
-    /**
      * @param encryptionKeyArn A server-side encryption key you can specify to encrypt your backups
      *   from services that support full AWS Backup management;. for example,
      *   `arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab` . If you

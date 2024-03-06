@@ -23,14 +23,13 @@ import software.amazon.awscdk.services.ec2.VpnTunnelOption
 /**
  * Example:
  * ```
- * Vpc vpc = Vpc.Builder.create(this, "MyVpc")
- * .vpnConnections(Map.of(
- * "dynamic", VpnConnectionOptions.builder() // Dynamic routing (BGP)
- * .ip("1.2.3.4").build(),
- * "static", VpnConnectionOptions.builder() // Static routing
- * .ip("4.5.6.7")
- * .staticRoutes(List.of("192.168.10.0/24", "192.168.20.0/24")).build()))
- * .build();
+ * // Across all tunnels in the account/region
+ * Metric allDataOut = VpnConnection.metricAllTunnelDataOut();
+ * // For a specific vpn connection
+ * VpnConnection vpnConnection = vpc.addVpnConnection("Dynamic", VpnConnectionOptions.builder()
+ * .ip("1.2.3.4")
+ * .build());
+ * Metric state = vpnConnection.metricTunnelState();
  * ```
  */
 @CdkDslMarker

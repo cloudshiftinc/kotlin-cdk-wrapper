@@ -32,6 +32,7 @@ import software.amazon.awscdk.services.ec2.SubnetConfiguration
  * .subnetType(SubnetType.PRIVATE_ISOLATED)
  * // the properties below are optional
  * .cidrMask(123)
+ * .ipv6AssignAddressOnCreation(false)
  * .mapPublicIpOnLaunch(false)
  * .reserved(false)
  * .build())

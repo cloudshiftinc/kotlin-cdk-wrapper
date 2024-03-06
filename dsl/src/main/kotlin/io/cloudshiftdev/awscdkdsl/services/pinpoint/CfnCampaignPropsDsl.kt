@@ -574,12 +574,12 @@ public class CfnCampaignPropsDsl {
         cdkBuilder.limits(limits)
     }
 
-    /** @param messageConfiguration The message configuration settings for the campaign. */
+    /** @param messageConfiguration The message configuration settings for the treatment. */
     public fun messageConfiguration(messageConfiguration: IResolvable) {
         cdkBuilder.messageConfiguration(messageConfiguration)
     }
 
-    /** @param messageConfiguration The message configuration settings for the campaign. */
+    /** @param messageConfiguration The message configuration settings for the treatment. */
     public fun messageConfiguration(
         messageConfiguration: CfnCampaign.MessageConfigurationProperty
     ) {
@@ -601,12 +601,12 @@ public class CfnCampaignPropsDsl {
         cdkBuilder.priority(priority)
     }
 
-    /** @param schedule The schedule settings for the campaign. */
+    /** @param schedule The schedule settings for the treatment. */
     public fun schedule(schedule: IResolvable) {
         cdkBuilder.schedule(schedule)
     }
 
-    /** @param schedule The schedule settings for the campaign. */
+    /** @param schedule The schedule settings for the treatment. */
     public fun schedule(schedule: CfnCampaign.ScheduleProperty) {
         cdkBuilder.schedule(schedule)
     }
@@ -653,18 +653,12 @@ public class CfnCampaignPropsDsl {
         cdkBuilder.templateConfiguration(templateConfiguration)
     }
 
-    /**
-     * @param treatmentDescription A custom description of the default treatment for the campaign.
-     */
+    /** @param treatmentDescription A custom description of the treatment. */
     public fun treatmentDescription(treatmentDescription: String) {
         cdkBuilder.treatmentDescription(treatmentDescription)
     }
 
-    /**
-     * @param treatmentName A custom name of the default treatment for the campaign, if the campaign
-     *   has multiple treatments. A *treatment* is a variation of a campaign that's used for A/B
-     *   testing.
-     */
+    /** @param treatmentName A custom name for the treatment. */
     public fun treatmentName(treatmentName: String) {
         cdkBuilder.treatmentName(treatmentName)
     }

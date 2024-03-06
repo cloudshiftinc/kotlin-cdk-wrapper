@@ -47,6 +47,7 @@ import software.constructs.Construct
  * .ip("ip")
  * .ipv6("ipv6")
  * .port("port")
+ * .protocol("protocol")
  * .build()))
  * .build();
  * ```

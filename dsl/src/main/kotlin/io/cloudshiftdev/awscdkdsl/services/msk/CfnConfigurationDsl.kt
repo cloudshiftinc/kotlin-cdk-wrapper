@@ -15,6 +15,7 @@ import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.msk.CfnConfiguration
 import software.constructs.Construct
 
@@ -50,6 +51,11 @@ import software.constructs.Construct
  * // the properties below are optional
  * .description("description")
  * .kafkaVersionsList(List.of("kafkaVersionsList"))
+ * .latestRevision(LatestRevisionProperty.builder()
+ * .creationTime("creationTime")
+ * .description("description")
+ * .revision(123)
+ * .build())
  * .build();
  * ```
  *
@@ -91,6 +97,28 @@ public class CfnConfigurationDsl(
      */
     public fun kafkaVersionsList(kafkaVersionsList: Collection<String>) {
         _kafkaVersionsList.addAll(kafkaVersionsList)
+    }
+
+    /**
+     * Latest revision of the configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html#cfn-msk-configuration-latestrevision)
+     *
+     * @param latestRevision Latest revision of the configuration.
+     */
+    public fun latestRevision(latestRevision: IResolvable) {
+        cdkBuilder.latestRevision(latestRevision)
+    }
+
+    /**
+     * Latest revision of the configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html#cfn-msk-configuration-latestrevision)
+     *
+     * @param latestRevision Latest revision of the configuration.
+     */
+    public fun latestRevision(latestRevision: CfnConfiguration.LatestRevisionProperty) {
+        cdkBuilder.latestRevision(latestRevision)
     }
 
     /**

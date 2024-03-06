@@ -25,8 +25,8 @@ import software.constructs.Construct
 /**
  * Creates a configuration for running a SageMaker image as a KernelGateway app.
  *
- * The configuration specifies the Amazon Elastic File System (EFS) storage volume on the image, and
- * a list of the kernels in the image.
+ * The configuration specifies the Amazon Elastic File System storage volume on the image, and a
+ * list of the kernels in the image.
  *
  * Example:
  * ```
@@ -37,6 +37,16 @@ import software.constructs.Construct
  * "MyCfnAppImageConfig")
  * .appImageConfigName("appImageConfigName")
  * // the properties below are optional
+ * .jupyterLabAppImageConfig(JupyterLabAppImageConfigProperty.builder()
+ * .containerConfig(ContainerConfigProperty.builder()
+ * .containerArguments(List.of("containerArguments"))
+ * .containerEntrypoint(List.of("containerEntrypoint"))
+ * .containerEnvironmentVariables(List.of(CustomImageContainerEnvironmentVariableProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .build())
  * .kernelGatewayImageConfig(KernelGatewayImageConfigProperty.builder()
  * .kernelSpecs(List.of(KernelSpecProperty.builder()
  * .name("name")
@@ -79,6 +89,34 @@ public class CfnAppImageConfigDsl(
      */
     public fun appImageConfigName(appImageConfigName: String) {
         cdkBuilder.appImageConfigName(appImageConfigName)
+    }
+
+    /**
+     * The configuration for the file system and the runtime, such as the environment variables and
+     * entry point.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html#cfn-sagemaker-appimageconfig-jupyterlabappimageconfig)
+     *
+     * @param jupyterLabAppImageConfig The configuration for the file system and the runtime, such
+     *   as the environment variables and entry point.
+     */
+    public fun jupyterLabAppImageConfig(jupyterLabAppImageConfig: IResolvable) {
+        cdkBuilder.jupyterLabAppImageConfig(jupyterLabAppImageConfig)
+    }
+
+    /**
+     * The configuration for the file system and the runtime, such as the environment variables and
+     * entry point.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html#cfn-sagemaker-appimageconfig-jupyterlabappimageconfig)
+     *
+     * @param jupyterLabAppImageConfig The configuration for the file system and the runtime, such
+     *   as the environment variables and entry point.
+     */
+    public fun jupyterLabAppImageConfig(
+        jupyterLabAppImageConfig: CfnAppImageConfig.JupyterLabAppImageConfigProperty
+    ) {
+        cdkBuilder.jupyterLabAppImageConfig(jupyterLabAppImageConfig)
     }
 
     /**

@@ -34,7 +34,20 @@ public inline fun CfnContainer.setContainerServiceDeployment(
     return setContainerServiceDeployment(builder.build())
 }
 
-/** Location of a resource. */
+/**
+ * An object that describes the configuration for the container service to access private container
+ * image repositories, such as Amazon Elastic Container Registry ( Amazon ECR ) private
+ * repositories.
+ */
+public inline fun CfnContainer.setPrivateRegistryAccess(
+    block: CfnContainerPrivateRegistryAccessPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnContainerPrivateRegistryAccessPropertyDsl()
+    builder.apply(block)
+    return setPrivateRegistryAccess(builder.build())
+}
+
+/** The AWS Region and Availability Zone where the disk is located. */
 public inline fun CfnDisk.setLocation(block: CfnDiskLocationPropertyDsl.() -> Unit = {}) {
     val builder = CfnDiskLocationPropertyDsl()
     builder.apply(block)

@@ -56,7 +56,10 @@ public class CfnOriginAccessControlOriginAccessControlConfigPropertyDsl {
         cdkBuilder.description(description)
     }
 
-    /** @param name A name to identify the origin access control. */
+    /**
+     * @param name A name to identify the origin access control. You can specify up to 64
+     *   characters.
+     */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }

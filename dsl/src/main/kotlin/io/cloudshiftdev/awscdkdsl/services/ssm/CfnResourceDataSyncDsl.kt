@@ -133,7 +133,7 @@ public class CfnResourceDataSyncDsl(
      * The ARN of an encryption key for a destination in Amazon S3 .
      *
      * You can use a KMS key to encrypt inventory data in Amazon S3 . You must specify a key that
-     * exist in the same region as the destination Amazon S3 bucket.
+     * exist in the same Region as the destination Amazon S3 bucket.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcedatasync.html#cfn-ssm-resourcedatasync-kmskeyarn)
      *
@@ -179,11 +179,9 @@ public class CfnResourceDataSyncDsl(
     }
 
     /**
-     * A name for the resource data sync.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcedatasync.html#cfn-ssm-resourcedatasync-syncname)
      *
-     * @param syncName A name for the resource data sync.
+     * @param syncName
      */
     public fun syncName(syncName: String) {
         cdkBuilder.syncName(syncName)

@@ -61,12 +61,12 @@ public class CfnClassifierCsvClassifierPropertyDsl {
         cdkBuilder.allowSingleColumn(allowSingleColumn)
     }
 
-    /** @param containsCustomDatatype the value to be set. */
+    /** @param containsCustomDatatype Indicates whether the CSV file contains custom data types. */
     public fun containsCustomDatatype(vararg containsCustomDatatype: String) {
         _containsCustomDatatype.addAll(listOf(*containsCustomDatatype))
     }
 
-    /** @param containsCustomDatatype the value to be set. */
+    /** @param containsCustomDatatype Indicates whether the CSV file contains custom data types. */
     public fun containsCustomDatatype(containsCustomDatatype: Collection<String>) {
         _containsCustomDatatype.addAll(containsCustomDatatype)
     }
@@ -83,12 +83,12 @@ public class CfnClassifierCsvClassifierPropertyDsl {
         cdkBuilder.containsHeader(containsHeader)
     }
 
-    /** @param customDatatypeConfigured the value to be set. */
+    /** @param customDatatypeConfigured Enables the configuration of custom data types. */
     public fun customDatatypeConfigured(customDatatypeConfigured: Boolean) {
         cdkBuilder.customDatatypeConfigured(customDatatypeConfigured)
     }
 
-    /** @param customDatatypeConfigured the value to be set. */
+    /** @param customDatatypeConfigured Enables the configuration of custom data types. */
     public fun customDatatypeConfigured(customDatatypeConfigured: IResolvable) {
         cdkBuilder.customDatatypeConfigured(customDatatypeConfigured)
     }

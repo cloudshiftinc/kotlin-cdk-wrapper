@@ -21,6 +21,8 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition
 
 /**
+ * Gets the suite definition configuration.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -49,46 +51,53 @@ public class CfnSuiteDefinitionSuiteDefinitionConfigurationPropertyDsl {
 
     private val _devices: MutableList<Any> = mutableListOf()
 
-    /** @param devicePermissionRoleArn The device permission role arn of the test suite. */
+    /**
+     * @param devicePermissionRoleArn Gets the device permission ARN. This is a required parameter.
+     */
     public fun devicePermissionRoleArn(devicePermissionRoleArn: String) {
         cdkBuilder.devicePermissionRoleArn(devicePermissionRoleArn)
     }
 
-    /** @param devices The devices being tested in the test suite. */
+    /** @param devices Gets the devices configured. */
     public fun devices(vararg devices: Any) {
         _devices.addAll(listOf(*devices))
     }
 
-    /** @param devices The devices being tested in the test suite. */
+    /** @param devices Gets the devices configured. */
     public fun devices(devices: Collection<Any>) {
         _devices.addAll(devices)
     }
 
-    /** @param devices The devices being tested in the test suite. */
+    /** @param devices Gets the devices configured. */
     public fun devices(devices: IResolvable) {
         cdkBuilder.devices(devices)
     }
 
-    /**
-     * @param intendedForQualification Whether the tests are intended for qualification in a suite.
-     */
+    /** @param intendedForQualification Gets the tests intended for qualification in a suite. */
     public fun intendedForQualification(intendedForQualification: Boolean) {
         cdkBuilder.intendedForQualification(intendedForQualification)
     }
 
-    /**
-     * @param intendedForQualification Whether the tests are intended for qualification in a suite.
-     */
+    /** @param intendedForQualification Gets the tests intended for qualification in a suite. */
     public fun intendedForQualification(intendedForQualification: IResolvable) {
         cdkBuilder.intendedForQualification(intendedForQualification)
     }
 
-    /** @param rootGroup The root group of the test suite. */
+    /**
+     * @param rootGroup Gets the test suite root group. This is a required parameter. For updating
+     *   or creating the latest qualification suite, if `intendedForQualification` is set to true,
+     *   `rootGroup` can be an empty string. If `intendedForQualification` is false, `rootGroup`
+     *   cannot be an empty string. If `rootGroup` is empty, and `intendedForQualification` is set
+     *   to true, all the qualification tests are included, and the configuration is default.
+     *
+     * For a qualification suite, the minimum length is 0, and the maximum is 2048. For a
+     * non-qualification suite, the minimum length is 1, and the maximum is 2048.
+     */
     public fun rootGroup(rootGroup: String) {
         cdkBuilder.rootGroup(rootGroup)
     }
 
-    /** @param suiteDefinitionName The Name of the suite definition. */
+    /** @param suiteDefinitionName Gets the suite definition name. This is a required parameter. */
     public fun suiteDefinitionName(suiteDefinitionName: String) {
         cdkBuilder.suiteDefinitionName(suiteDefinitionName)
     }

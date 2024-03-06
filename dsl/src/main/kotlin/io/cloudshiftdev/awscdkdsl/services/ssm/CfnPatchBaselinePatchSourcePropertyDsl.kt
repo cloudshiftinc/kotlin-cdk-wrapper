@@ -24,7 +24,7 @@ import software.amazon.awscdk.services.ssm.CfnPatchBaseline
  *
  * The AWS CloudFormation `AWS::SSM::PatchSource` resource is used to provide information about the
  * patches to use to update target instances, including target operating systems and source
- * repository. Applies to Linux instances only.
+ * repository. Applies to Linux managed nodes only.
  *
  * Example:
  * ```
@@ -71,8 +71,8 @@ public class CfnPatchBaselinePatchSourcePropertyDsl {
 
     /**
      * @param products The specific operating system versions a patch repository applies to, such as
-     *   "Ubuntu16.04", "AmazonLinux2016.09", "RedhatEnterpriseLinux7.2" or "Suse12.7". For lists of
-     *   supported product values, see
+     *   "Ubuntu16.04", "RedhatEnterpriseLinux7.2" or "Suse12.7". For lists of supported product
+     *   values, see
      *   [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html)
      *   in the *AWS Systems Manager API Reference* .
      */
@@ -82,8 +82,8 @@ public class CfnPatchBaselinePatchSourcePropertyDsl {
 
     /**
      * @param products The specific operating system versions a patch repository applies to, such as
-     *   "Ubuntu16.04", "AmazonLinux2016.09", "RedhatEnterpriseLinux7.2" or "Suse12.7". For lists of
-     *   supported product values, see
+     *   "Ubuntu16.04", "RedhatEnterpriseLinux7.2" or "Suse12.7". For lists of supported product
+     *   values, see
      *   [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html)
      *   in the *AWS Systems Manager API Reference* .
      */

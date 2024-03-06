@@ -13,8 +13,10 @@ package io.cloudshiftdev.awscdkdsl.services.appsync
 
 import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import io.cloudshiftdev.awscdkdsl.common.MapBuilder
 import kotlin.Any
 import kotlin.Boolean
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -36,6 +38,7 @@ import software.constructs.Construct
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.appsync.*;
+ * Object environmentVariables;
  * CfnGraphQLApi cfnGraphQLApi = CfnGraphQLApi.Builder.create(this, "MyCfnGraphQLApi")
  * .authenticationType("authenticationType")
  * .name("name")
@@ -61,6 +64,13 @@ import software.constructs.Construct
  * .build())
  * .build()))
  * .apiType("apiType")
+ * .enhancedMetricsConfig(EnhancedMetricsConfigProperty.builder()
+ * .dataSourceLevelMetricsBehavior("dataSourceLevelMetricsBehavior")
+ * .operationLevelMetricsConfig("operationLevelMetricsConfig")
+ * .resolverLevelMetricsBehavior("resolverLevelMetricsBehavior")
+ * .build())
+ * .environmentVariables(environmentVariables)
+ * .introspectionConfig("introspectionConfig")
  * .lambdaAuthorizerConfig(LambdaAuthorizerConfigProperty.builder()
  * .authorizerResultTtlInSeconds(123)
  * .authorizerUri("authorizerUri")
@@ -79,6 +89,8 @@ import software.constructs.Construct
  * .issuer("issuer")
  * .build())
  * .ownerContact("ownerContact")
+ * .queryDepthLimit(123)
+ * .resolverCountLimit(123)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -179,6 +191,112 @@ public class CfnGraphQLApiDsl(
      */
     public fun authenticationType(authenticationType: String) {
         cdkBuilder.authenticationType(authenticationType)
+    }
+
+    /**
+     * Enables and controls the enhanced metrics feature.
+     *
+     * Enhanced metrics emit granular data on API usage and performance such as AppSync request and
+     * error counts, latency, and cache hits/misses. All enhanced metric data is sent to your
+     * CloudWatch account, and you can configure the types of data that will be sent.
+     *
+     * Enhanced metrics can be configured at the resolver, data source, and operation levels. For
+     * more information, see
+     * [Monitoring and logging](https://docs.aws.amazon.com//appsync/latest/devguide/monitoring.html#cw-metrics)
+     * in the *AWS AppSync User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-enhancedmetricsconfig)
+     *
+     * @param enhancedMetricsConfig Enables and controls the enhanced metrics feature.
+     */
+    public fun enhancedMetricsConfig(enhancedMetricsConfig: IResolvable) {
+        cdkBuilder.enhancedMetricsConfig(enhancedMetricsConfig)
+    }
+
+    /**
+     * Enables and controls the enhanced metrics feature.
+     *
+     * Enhanced metrics emit granular data on API usage and performance such as AppSync request and
+     * error counts, latency, and cache hits/misses. All enhanced metric data is sent to your
+     * CloudWatch account, and you can configure the types of data that will be sent.
+     *
+     * Enhanced metrics can be configured at the resolver, data source, and operation levels. For
+     * more information, see
+     * [Monitoring and logging](https://docs.aws.amazon.com//appsync/latest/devguide/monitoring.html#cw-metrics)
+     * in the *AWS AppSync User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-enhancedmetricsconfig)
+     *
+     * @param enhancedMetricsConfig Enables and controls the enhanced metrics feature.
+     */
+    public fun enhancedMetricsConfig(
+        enhancedMetricsConfig: CfnGraphQLApi.EnhancedMetricsConfigProperty
+    ) {
+        cdkBuilder.enhancedMetricsConfig(enhancedMetricsConfig)
+    }
+
+    /**
+     * A map containing the list of resources with their properties and environment variables.
+     *
+     * For more information, see
+     * [Environmental variables](https://docs.aws.amazon.com/appsync/latest/devguide/environmental-variables.html)
+     * .
+     *
+     * *Pattern* : `^[A-Za-z]+\\w*$\\`
+     *
+     * *Minimum* : 2
+     *
+     * *Maximum* : 64
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-environmentvariables)
+     *
+     * @param environmentVariables A map containing the list of resources with their properties and
+     *   environment variables.
+     */
+    public fun environmentVariables(environmentVariables: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(environmentVariables)
+        cdkBuilder.environmentVariables(builder.map)
+    }
+
+    /**
+     * A map containing the list of resources with their properties and environment variables.
+     *
+     * For more information, see
+     * [Environmental variables](https://docs.aws.amazon.com/appsync/latest/devguide/environmental-variables.html)
+     * .
+     *
+     * *Pattern* : `^[A-Za-z]+\\w*$\\`
+     *
+     * *Minimum* : 2
+     *
+     * *Maximum* : 64
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-environmentvariables)
+     *
+     * @param environmentVariables A map containing the list of resources with their properties and
+     *   environment variables.
+     */
+    public fun environmentVariables(environmentVariables: Any) {
+        cdkBuilder.environmentVariables(environmentVariables)
+    }
+
+    /**
+     * If no value is provided, the introspection configuration will be set to `ENABLED` by default.
+     * This field will produce an error if the operation attempts to use the introspection feature
+     * while this field is disabled.
+     *
+     * For more information about introspection, see
+     * [GraphQL introspection](https://docs.aws.amazon.com/https://graphql.org/learn/introspection/)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-introspectionconfig)
+     *
+     * @param introspectionConfig Sets the value of the GraphQL API to enable ( `ENABLED` ) or
+     *   disable ( `DISABLED` ) introspection.
+     */
+    public fun introspectionConfig(introspectionConfig: String) {
+        cdkBuilder.introspectionConfig(introspectionConfig)
     }
 
     /**
@@ -295,6 +413,40 @@ public class CfnGraphQLApiDsl(
      */
     public fun ownerContact(ownerContact: String) {
         cdkBuilder.ownerContact(ownerContact)
+    }
+
+    /**
+     * The maximum depth a query can have in a single request.
+     *
+     * Depth refers to the amount of nested levels allowed in the body of query. The default value
+     * is `0` (or unspecified), which indicates there's no depth limit. If you set a limit, it can
+     * be between `1` and `75` nested levels. This field will produce a limit error if the operation
+     * falls out of bounds. Note that fields can still be set to nullable or non-nullable. If a
+     * non-nullable field produces an error, the error will be thrown upwards to the first nullable
+     * field available.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-querydepthlimit)
+     *
+     * @param queryDepthLimit The maximum depth a query can have in a single request.
+     */
+    public fun queryDepthLimit(queryDepthLimit: Number) {
+        cdkBuilder.queryDepthLimit(queryDepthLimit)
+    }
+
+    /**
+     * The maximum number of resolvers that can be invoked in a single request.
+     *
+     * The default value is `0` (or unspecified), which will set the limit to `10000` . When
+     * specified, the limit value can be between `1` and `10000` . This field will produce a limit
+     * error if the operation falls out of bounds.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-resolvercountlimit)
+     *
+     * @param resolverCountLimit The maximum number of resolvers that can be invoked in a single
+     *   request.
+     */
+    public fun resolverCountLimit(resolverCountLimit: Number) {
+        cdkBuilder.resolverCountLimit(resolverCountLimit)
     }
 
     /**

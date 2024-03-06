@@ -64,7 +64,7 @@ public class CfnAddonPropsDsl {
         cdkBuilder.addonVersion(addonVersion)
     }
 
-    /** @param clusterName The name of the cluster. */
+    /** @param clusterName The name of your cluster. */
     public fun clusterName(clusterName: String) {
         cdkBuilder.clusterName(clusterName)
     }

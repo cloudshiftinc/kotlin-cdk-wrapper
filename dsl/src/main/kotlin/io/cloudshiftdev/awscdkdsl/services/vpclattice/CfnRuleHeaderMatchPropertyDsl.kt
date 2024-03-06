@@ -46,12 +46,12 @@ public class CfnRuleHeaderMatchPropertyDsl {
     private val cdkBuilder: CfnRule.HeaderMatchProperty.Builder =
         CfnRule.HeaderMatchProperty.builder()
 
-    /** @param caseSensitive Indicates whether the match is case sensitive. Defaults to false. */
+    /** @param caseSensitive Indicates whether the match is case sensitive. */
     public fun caseSensitive(caseSensitive: Boolean) {
         cdkBuilder.caseSensitive(caseSensitive)
     }
 
-    /** @param caseSensitive Indicates whether the match is case sensitive. Defaults to false. */
+    /** @param caseSensitive Indicates whether the match is case sensitive. */
     public fun caseSensitive(caseSensitive: IResolvable) {
         cdkBuilder.caseSensitive(caseSensitive)
     }

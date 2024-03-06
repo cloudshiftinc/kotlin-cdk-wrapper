@@ -11,11 +11,14 @@
 
 package io.cloudshiftdev.awscdkdsl.services.backup
 
+import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Any
 import kotlin.String
+import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.backup.CfnFramework
 import software.constructs.Construct
@@ -68,7 +71,7 @@ public class CfnFrameworkDsl(
 
     private val _frameworkControls: MutableList<Any> = mutableListOf()
 
-    private val _frameworkTags: MutableList<Any> = mutableListOf()
+    private val _frameworkTags: MutableList<CfnTag> = mutableListOf()
 
     /**
      * Contains detailed information about all of the controls of a framework.
@@ -145,8 +148,8 @@ public class CfnFrameworkDsl(
      *
      * @param frameworkTags A list of tags with which to tag your framework.
      */
-    public fun frameworkTags(vararg frameworkTags: Any) {
-        _frameworkTags.addAll(listOf(*frameworkTags))
+    public fun frameworkTags(frameworkTags: CfnTagDsl.() -> Unit) {
+        _frameworkTags.add(CfnTagDsl().apply(frameworkTags).build())
     }
 
     /**
@@ -156,19 +159,8 @@ public class CfnFrameworkDsl(
      *
      * @param frameworkTags A list of tags with which to tag your framework.
      */
-    public fun frameworkTags(frameworkTags: Collection<Any>) {
+    public fun frameworkTags(frameworkTags: Collection<CfnTag>) {
         _frameworkTags.addAll(frameworkTags)
-    }
-
-    /**
-     * A list of tags with which to tag your framework.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworktags)
-     *
-     * @param frameworkTags A list of tags with which to tag your framework.
-     */
-    public fun frameworkTags(frameworkTags: IResolvable) {
-        cdkBuilder.frameworkTags(frameworkTags)
     }
 
     public fun build(): CfnFramework {

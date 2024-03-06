@@ -94,7 +94,13 @@ public class CfnAssetPropsDsl {
         cdkBuilder.assetHierarchies(assetHierarchies)
     }
 
-    /** @param assetModelId The ID of the asset model from which to create the asset. */
+    /**
+     * @param assetModelId The ID of the asset model from which to create the asset. This can be
+     *   either the actual ID in UUID format, or else `externalId:` followed by the external ID, if
+     *   it has one. For more information, see
+     *   [Referencing objects with external IDs](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-id-references)
+     *   in the *AWS IoT SiteWise User Guide* .
+     */
     public fun assetModelId(assetModelId: String) {
         cdkBuilder.assetModelId(assetModelId)
     }

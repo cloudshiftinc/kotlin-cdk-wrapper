@@ -27,6 +27,7 @@ import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.logs.RetentionDays
+import software.amazon.awscdk.services.rds.CaCertificate
 import software.amazon.awscdk.services.rds.DatabaseInstanceNewProps
 import software.amazon.awscdk.services.rds.IOptionGroup
 import software.amazon.awscdk.services.rds.IParameterGroup
@@ -52,6 +53,7 @@ import software.amazon.awscdk.services.s3.IBucket
  * import software.amazon.awscdk.services.rds.*;
  * import software.amazon.awscdk.services.s3.*;
  * Bucket bucket;
+ * CaCertificate caCertificate;
  * Key key;
  * OptionGroup optionGroup;
  * ParameterGroup parameterGroup;
@@ -67,6 +69,7 @@ import software.amazon.awscdk.services.s3.IBucket
  * .autoMinorVersionUpgrade(false)
  * .availabilityZone("availabilityZone")
  * .backupRetention(Duration.minutes(30))
+ * .caCertificate(caCertificate)
  * .cloudwatchLogsExports(List.of("cloudwatchLogsExports"))
  * .cloudwatchLogsRetention(RetentionDays.ONE_DAY)
  * .cloudwatchLogsRetentionRole(role)
@@ -152,6 +155,16 @@ public class DatabaseInstanceNewPropsDsl {
      */
     public fun backupRetention(backupRetention: Duration) {
         cdkBuilder.backupRetention(backupRetention)
+    }
+
+    /**
+     * @param caCertificate The identifier of the CA certificate for this DB instance. Specifying or
+     *   updating this property triggers a reboot.
+     *
+     * For RDS DB engines:
+     */
+    public fun caCertificate(caCertificate: CaCertificate) {
+        cdkBuilder.caCertificate(caCertificate)
     }
 
     /**
@@ -355,6 +368,8 @@ public class DatabaseInstanceNewPropsDsl {
 
     /**
      * @param publiclyAccessible Indicates whether the DB instance is an internet-facing instance.
+     *   If not specified, the instance's vpcSubnets will be used to determine if the instance is
+     *   internet-facing or not.
      */
     public fun publiclyAccessible(publiclyAccessible: Boolean) {
         cdkBuilder.publiclyAccessible(publiclyAccessible)

@@ -146,6 +146,10 @@ import software.amazon.awscdk.services.iot.CfnTopicRuleProps
  * .destinationArn("destinationArn")
  * .topic("topic")
  * // the properties below are optional
+ * .headers(List.of(KafkaActionHeaderProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .key("key")
  * .partition("partition")
  * .build())
@@ -353,6 +357,10 @@ import software.amazon.awscdk.services.iot.CfnTopicRuleProps
  * .destinationArn("destinationArn")
  * .topic("topic")
  * // the properties below are optional
+ * .headers(List.of(KafkaActionHeaderProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .key("key")
  * .partition("partition")
  * .build())

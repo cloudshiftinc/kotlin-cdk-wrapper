@@ -27,6 +27,7 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.medialive.*;
  * Ac3SettingsProperty ac3SettingsProperty = Ac3SettingsProperty.builder()
+ * .attenuationControl("attenuationControl")
  * .bitrate(123)
  * .bitstreamMode("bitstreamMode")
  * .codingMode("codingMode")
@@ -43,6 +44,11 @@ import software.amazon.awscdk.services.medialive.CfnChannel
 public class CfnChannelAc3SettingsPropertyDsl {
     private val cdkBuilder: CfnChannel.Ac3SettingsProperty.Builder =
         CfnChannel.Ac3SettingsProperty.builder()
+
+    /** @param attenuationControl the value to be set. */
+    public fun attenuationControl(attenuationControl: String) {
+        cdkBuilder.attenuationControl(attenuationControl)
+    }
 
     /**
      * @param bitrate The average bitrate in bits/second. Valid bitrates depend on the coding mode.

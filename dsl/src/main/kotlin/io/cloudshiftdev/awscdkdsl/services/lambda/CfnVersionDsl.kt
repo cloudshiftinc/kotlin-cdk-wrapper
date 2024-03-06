@@ -36,6 +36,11 @@ import software.constructs.Construct
  * .provisionedConcurrencyConfig(ProvisionedConcurrencyConfigurationProperty.builder()
  * .provisionedConcurrentExecutions(123)
  * .build())
+ * .runtimePolicy(RuntimePolicyProperty.builder()
+ * .updateRuntimeOn("updateRuntimeOn")
+ * // the properties below are optional
+ * .runtimeVersionArn("runtimeVersionArn")
+ * .build())
  * .build();
  * ```
  *
@@ -123,6 +128,28 @@ public class CfnVersionDsl(
         provisionedConcurrencyConfig: CfnVersion.ProvisionedConcurrencyConfigurationProperty
     ) {
         cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig)
+    }
+
+    /**
+     * Runtime Management Config of a function.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html#cfn-lambda-version-runtimepolicy)
+     *
+     * @param runtimePolicy Runtime Management Config of a function.
+     */
+    public fun runtimePolicy(runtimePolicy: IResolvable) {
+        cdkBuilder.runtimePolicy(runtimePolicy)
+    }
+
+    /**
+     * Runtime Management Config of a function.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html#cfn-lambda-version-runtimepolicy)
+     *
+     * @param runtimePolicy Runtime Management Config of a function.
+     */
+    public fun runtimePolicy(runtimePolicy: CfnVersion.RuntimePolicyProperty) {
+        cdkBuilder.runtimePolicy(runtimePolicy)
     }
 
     public fun build(): CfnVersion = cdkBuilder.build()

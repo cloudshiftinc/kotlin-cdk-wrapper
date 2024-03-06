@@ -47,7 +47,14 @@ import software.amazon.awscdk.services.cloudtrail.CfnEventDataStoreProps
  * // the properties below are optional
  * .name("name")
  * .build()))
+ * .billingMode("billingMode")
+ * .federationEnabled(false)
+ * .federationRoleArn("federationRoleArn")
  * .ingestionEnabled(false)
+ * .insightsDestination("insightsDestination")
+ * .insightSelectors(List.of(InsightSelectorProperty.builder()
+ * .insightType("insightType")
+ * .build()))
  * .kmsKeyId("kmsKeyId")
  * .multiRegionEnabled(false)
  * .name("name")
@@ -68,6 +75,8 @@ public class CfnEventDataStorePropsDsl {
     private val cdkBuilder: CfnEventDataStoreProps.Builder = CfnEventDataStoreProps.builder()
 
     private val _advancedEventSelectors: MutableList<Any> = mutableListOf()
+
+    private val _insightSelectors: MutableList<Any> = mutableListOf()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
@@ -141,6 +150,59 @@ public class CfnEventDataStorePropsDsl {
     }
 
     /**
+     * @param billingMode The billing mode for the event data store determines the cost for
+     *   ingesting events and the default and maximum retention period for the event data store. The
+     *   following are the possible values:
+     * * `EXTENDABLE_RETENTION_PRICING` - This billing mode is generally recommended if you want a
+     *   flexible retention period of up to 3653 days (about 10 years). The default retention period
+     *   for this billing mode is 366 days.
+     * * `FIXED_RETENTION_PRICING` - This billing mode is recommended if you expect to ingest more
+     *   than 25 TB of event data per month and need a retention period of up to 2557 days (about 7
+     *   years). The default retention period for this billing mode is 2557 days.
+     *
+     * The default value is `EXTENDABLE_RETENTION_PRICING` .
+     *
+     * For more information about CloudTrail pricing, see
+     * [AWS CloudTrail Pricing](https://docs.aws.amazon.com/cloudtrail/pricing/) and
+     * [Managing CloudTrail Lake costs](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-lake-manage-costs.html)
+     * .
+     */
+    public fun billingMode(billingMode: String) {
+        cdkBuilder.billingMode(billingMode)
+    }
+
+    /**
+     * @param federationEnabled Indicates if
+     *   [Lake query federation](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-federation.html)
+     *   is enabled. By default, Lake query federation is disabled. You cannot delete an event data
+     *   store if Lake query federation is enabled.
+     */
+    public fun federationEnabled(federationEnabled: Boolean) {
+        cdkBuilder.federationEnabled(federationEnabled)
+    }
+
+    /**
+     * @param federationEnabled Indicates if
+     *   [Lake query federation](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-federation.html)
+     *   is enabled. By default, Lake query federation is disabled. You cannot delete an event data
+     *   store if Lake query federation is enabled.
+     */
+    public fun federationEnabled(federationEnabled: IResolvable) {
+        cdkBuilder.federationEnabled(federationEnabled)
+    }
+
+    /**
+     * @param federationRoleArn If Lake query federation is enabled, provides the ARN of the
+     *   federation role used to access the resources for the federated event data store. The
+     *   federation role must exist in your account and provide the
+     *   [required minimum permissions](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-federation.html#query-federation-permissions-role)
+     *   .
+     */
+    public fun federationRoleArn(federationRoleArn: String) {
+        cdkBuilder.federationRoleArn(federationRoleArn)
+    }
+
+    /**
      * @param ingestionEnabled Specifies whether the event data store should start ingesting live
      *   events. The default is true.
      */
@@ -154,6 +216,58 @@ public class CfnEventDataStorePropsDsl {
      */
     public fun ingestionEnabled(ingestionEnabled: IResolvable) {
         cdkBuilder.ingestionEnabled(ingestionEnabled)
+    }
+
+    /**
+     * @param insightSelectors A JSON string that contains the Insights types you want to log on an
+     *   event data store. `ApiCallRateInsight` and `ApiErrorRateInsight` are valid Insight types.
+     *
+     * The `ApiCallRateInsight` Insights type analyzes write-only management API calls that are
+     * aggregated per minute against a baseline API call volume.
+     *
+     * The `ApiErrorRateInsight` Insights type analyzes management API calls that result in error
+     * codes. The error is shown if the API call is unsuccessful.
+     */
+    public fun insightSelectors(vararg insightSelectors: Any) {
+        _insightSelectors.addAll(listOf(*insightSelectors))
+    }
+
+    /**
+     * @param insightSelectors A JSON string that contains the Insights types you want to log on an
+     *   event data store. `ApiCallRateInsight` and `ApiErrorRateInsight` are valid Insight types.
+     *
+     * The `ApiCallRateInsight` Insights type analyzes write-only management API calls that are
+     * aggregated per minute against a baseline API call volume.
+     *
+     * The `ApiErrorRateInsight` Insights type analyzes management API calls that result in error
+     * codes. The error is shown if the API call is unsuccessful.
+     */
+    public fun insightSelectors(insightSelectors: Collection<Any>) {
+        _insightSelectors.addAll(insightSelectors)
+    }
+
+    /**
+     * @param insightSelectors A JSON string that contains the Insights types you want to log on an
+     *   event data store. `ApiCallRateInsight` and `ApiErrorRateInsight` are valid Insight types.
+     *
+     * The `ApiCallRateInsight` Insights type analyzes write-only management API calls that are
+     * aggregated per minute against a baseline API call volume.
+     *
+     * The `ApiErrorRateInsight` Insights type analyzes management API calls that result in error
+     * codes. The error is shown if the API call is unsuccessful.
+     */
+    public fun insightSelectors(insightSelectors: IResolvable) {
+        cdkBuilder.insightSelectors(insightSelectors)
+    }
+
+    /**
+     * @param insightsDestination The ARN (or ID suffix of the ARN) of the destination event data
+     *   store that logs Insights events. For more information, see
+     *   [Create an event data store for CloudTrail Insights events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-event-data-store-insights.html)
+     *   .
+     */
+    public fun insightsDestination(insightsDestination: String) {
+        cdkBuilder.insightsDestination(insightsDestination)
     }
 
     /**
@@ -221,8 +335,21 @@ public class CfnEventDataStorePropsDsl {
     }
 
     /**
-     * @param retentionPeriod The retention period of the event data store, in days. You can set a
-     *   retention period of up to 2557 days, the equivalent of seven years.
+     * @param retentionPeriod The retention period of the event data store, in days. If
+     *   `BillingMode` is set to `EXTENDABLE_RETENTION_PRICING` , you can set a retention period of
+     *   up to 3653 days, the equivalent of 10 years. If `BillingMode` is set to
+     *   `FIXED_RETENTION_PRICING` , you can set a retention period of up to 2557 days, the
+     *   equivalent of seven years.
+     *
+     * CloudTrail Lake determines whether to retain an event by checking if the `eventTime` of the
+     * event is within the specified retention period. For example, if you set a retention period of
+     * 90 days, CloudTrail will remove events when the `eventTime` is older than 90 days.
+     *
+     * If you plan to copy trail events to this event data store, we recommend that you consider
+     * both the age of the events that you want to copy as well as how long you want to keep the
+     * copied events in your event data store. For example, if you copy trail events that are 5
+     * years old and specify a retention period of 7 years, the event data store will retain those
+     * events for two years.
      */
     public fun retentionPeriod(retentionPeriod: Number) {
         cdkBuilder.retentionPeriod(retentionPeriod)
@@ -259,6 +386,7 @@ public class CfnEventDataStorePropsDsl {
     public fun build(): CfnEventDataStoreProps {
         if (_advancedEventSelectors.isNotEmpty())
             cdkBuilder.advancedEventSelectors(_advancedEventSelectors)
+        if (_insightSelectors.isNotEmpty()) cdkBuilder.insightSelectors(_insightSelectors)
         if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
         return cdkBuilder.build()
     }

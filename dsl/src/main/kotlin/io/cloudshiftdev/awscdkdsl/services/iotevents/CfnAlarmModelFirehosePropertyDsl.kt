@@ -52,16 +52,16 @@ public class CfnAlarmModelFirehosePropertyDsl {
     }
 
     /**
-     * @param payload You can configure the action payload when you send a message to an Amazon
-     *   Kinesis Data Firehose delivery stream.
+     * @param payload You can configure the action payload when you send a message to an Amazon Data
+     *   Firehose delivery stream.
      */
     public fun payload(payload: IResolvable) {
         cdkBuilder.payload(payload)
     }
 
     /**
-     * @param payload You can configure the action payload when you send a message to an Amazon
-     *   Kinesis Data Firehose delivery stream.
+     * @param payload You can configure the action payload when you send a message to an Amazon Data
+     *   Firehose delivery stream.
      */
     public fun payload(payload: CfnAlarmModel.PayloadProperty) {
         cdkBuilder.payload(payload)

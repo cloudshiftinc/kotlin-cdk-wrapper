@@ -18,7 +18,9 @@ import kotlin.Any
 import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.Collection
 import kotlin.collections.Map
+import kotlin.collections.MutableList
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.stepfunctions.Credentials
 import software.amazon.awscdk.services.stepfunctions.IntegrationPattern
@@ -47,6 +49,7 @@ import software.amazon.awscdk.services.stepfunctions.tasks.ResultConfiguration
  * .objectKey("folder")
  * .build())
  * .build())
+ * .executionParameters(List.of("param1", "param2"))
  * .build();
  * ```
  */
@@ -54,6 +57,8 @@ import software.amazon.awscdk.services.stepfunctions.tasks.ResultConfiguration
 public class AthenaStartQueryExecutionPropsDsl {
     private val cdkBuilder: AthenaStartQueryExecutionProps.Builder =
         AthenaStartQueryExecutionProps.builder()
+
+    private val _executionParameters: MutableList<String> = mutableListOf()
 
     /** @param clientRequestToken Unique string string to ensure idempotence. */
     public fun clientRequestToken(clientRequestToken: String) {
@@ -84,6 +89,24 @@ public class AthenaStartQueryExecutionPropsDsl {
     }
 
     /**
+     * @param executionParameters A list of values for the parameters in a query. The values are
+     *   applied sequentially to the parameters in the query in the order in which the parameters
+     *   occur.
+     */
+    public fun executionParameters(vararg executionParameters: String) {
+        _executionParameters.addAll(listOf(*executionParameters))
+    }
+
+    /**
+     * @param executionParameters A list of values for the parameters in a query. The values are
+     *   applied sequentially to the parameters in the query in the order in which the parameters
+     *   occur.
+     */
+    public fun executionParameters(executionParameters: Collection<String>) {
+        _executionParameters.addAll(executionParameters)
+    }
+
+    /**
      * @param heartbeat Timeout for the heartbeat.
      * @deprecated use `heartbeatTimeout`
      */
@@ -111,7 +134,9 @@ public class AthenaStartQueryExecutionPropsDsl {
 
     /**
      * @param integrationPattern AWS Step Functions integrates with services directly in the Amazon
-     *   States Language. You can control these AWS services using service integration patterns
+     *   States Language. You can control these AWS services using service integration patterns.
+     *
+     * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      */
     public fun integrationPattern(integrationPattern: IntegrationPattern) {
         cdkBuilder.integrationPattern(integrationPattern)
@@ -186,6 +211,11 @@ public class AthenaStartQueryExecutionPropsDsl {
         cdkBuilder.resultSelector(resultSelector)
     }
 
+    /** @param stateName Optional name for this state. */
+    public fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
+    }
+
     /**
      * @param taskTimeout Timeout for the task. [disable-awslint:duration-prop-type] is needed
      *   because all props interface in aws-stepfunctions-tasks extend this interface
@@ -208,5 +238,8 @@ public class AthenaStartQueryExecutionPropsDsl {
         cdkBuilder.workGroup(workGroup)
     }
 
-    public fun build(): AthenaStartQueryExecutionProps = cdkBuilder.build()
+    public fun build(): AthenaStartQueryExecutionProps {
+        if (_executionParameters.isNotEmpty()) cdkBuilder.executionParameters(_executionParameters)
+        return cdkBuilder.build()
+    }
 }

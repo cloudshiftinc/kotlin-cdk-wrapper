@@ -99,9 +99,6 @@ public class CfnRuleDsl(
     /**
      * Describes the action for a rule.
      *
-     * Each rule must include exactly one of the following types of actions: `forward` or
-     * `fixed-response` , and it must be the last action to be performed.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-rule.html#cfn-vpclattice-rule-action)
      *
      * @param action Describes the action for a rule.
@@ -112,9 +109,6 @@ public class CfnRuleDsl(
 
     /**
      * Describes the action for a rule.
-     *
-     * Each rule must include exactly one of the following types of actions: `forward` or
-     * `fixed-response` , and it must be the last action to be performed.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-rule.html#cfn-vpclattice-rule-action)
      *

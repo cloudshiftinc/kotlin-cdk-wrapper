@@ -14,6 +14,7 @@ package io.cloudshiftdev.awscdkdsl.services.sagemaker
 import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -39,16 +40,24 @@ import software.constructs.Construct
  * CfnEndpointConfig cfnEndpointConfig = CfnEndpointConfig.Builder.create(this,
  * "MyCfnEndpointConfig")
  * .productionVariants(List.of(ProductionVariantProperty.builder()
- * .initialVariantWeight(123)
- * .modelName("modelName")
  * .variantName("variantName")
  * // the properties below are optional
  * .acceleratorType("acceleratorType")
  * .containerStartupHealthCheckTimeoutInSeconds(123)
  * .enableSsmAccess(false)
  * .initialInstanceCount(123)
+ * .initialVariantWeight(123)
  * .instanceType("instanceType")
+ * .managedInstanceScaling(ManagedInstanceScalingProperty.builder()
+ * .maxInstanceCount(123)
+ * .minInstanceCount(123)
+ * .status("status")
+ * .build())
  * .modelDataDownloadTimeoutInSeconds(123)
+ * .modelName("modelName")
+ * .routingConfig(RoutingConfigProperty.builder()
+ * .routingStrategy("routingStrategy")
+ * .build())
  * .serverlessConfig(ServerlessConfigProperty.builder()
  * .maxConcurrency(123)
  * .memorySizeInMb(123)
@@ -88,7 +97,9 @@ import software.constructs.Construct
  * .enableCapture(false)
  * .kmsKeyId("kmsKeyId")
  * .build())
+ * .enableNetworkIsolation(false)
  * .endpointConfigName("endpointConfigName")
+ * .executionRoleArn("executionRoleArn")
  * .explainerConfig(ExplainerConfigProperty.builder()
  * .clarifyExplainerConfig(ClarifyExplainerConfigProperty.builder()
  * .shapConfig(ClarifyShapConfigProperty.builder()
@@ -125,16 +136,24 @@ import software.constructs.Construct
  * .build())
  * .kmsKeyId("kmsKeyId")
  * .shadowProductionVariants(List.of(ProductionVariantProperty.builder()
- * .initialVariantWeight(123)
- * .modelName("modelName")
  * .variantName("variantName")
  * // the properties below are optional
  * .acceleratorType("acceleratorType")
  * .containerStartupHealthCheckTimeoutInSeconds(123)
  * .enableSsmAccess(false)
  * .initialInstanceCount(123)
+ * .initialVariantWeight(123)
  * .instanceType("instanceType")
+ * .managedInstanceScaling(ManagedInstanceScalingProperty.builder()
+ * .maxInstanceCount(123)
+ * .minInstanceCount(123)
+ * .status("status")
+ * .build())
  * .modelDataDownloadTimeoutInSeconds(123)
+ * .modelName("modelName")
+ * .routingConfig(RoutingConfigProperty.builder()
+ * .routingStrategy("routingStrategy")
+ * .build())
  * .serverlessConfig(ServerlessConfigProperty.builder()
  * .maxConcurrency(123)
  * .memorySizeInMb(123)
@@ -147,6 +166,10 @@ import software.constructs.Construct
  * .key("key")
  * .value("value")
  * .build()))
+ * .vpcConfig(VpcConfigProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnets(List.of("subnets"))
+ * .build())
  * .build();
  * ```
  *
@@ -218,6 +241,24 @@ public class CfnEndpointConfigDsl(
     }
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html#cfn-sagemaker-endpointconfig-enablenetworkisolation)
+     *
+     * @param enableNetworkIsolation
+     */
+    public fun enableNetworkIsolation(enableNetworkIsolation: Boolean) {
+        cdkBuilder.enableNetworkIsolation(enableNetworkIsolation)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html#cfn-sagemaker-endpointconfig-enablenetworkisolation)
+     *
+     * @param enableNetworkIsolation
+     */
+    public fun enableNetworkIsolation(enableNetworkIsolation: IResolvable) {
+        cdkBuilder.enableNetworkIsolation(enableNetworkIsolation)
+    }
+
+    /**
      * The name of the endpoint configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html#cfn-sagemaker-endpointconfig-endpointconfigname)
@@ -229,18 +270,31 @@ public class CfnEndpointConfigDsl(
     }
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html#cfn-sagemaker-endpointconfig-executionrolearn)
+     *
+     * @param executionRoleArn
+     */
+    public fun executionRoleArn(executionRoleArn: String) {
+        cdkBuilder.executionRoleArn(executionRoleArn)
+    }
+
+    /**
+     * A parameter to activate explainers.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html#cfn-sagemaker-endpointconfig-explainerconfig)
      *
-     * @param explainerConfig
+     * @param explainerConfig A parameter to activate explainers.
      */
     public fun explainerConfig(explainerConfig: IResolvable) {
         cdkBuilder.explainerConfig(explainerConfig)
     }
 
     /**
+     * A parameter to activate explainers.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html#cfn-sagemaker-endpointconfig-explainerconfig)
      *
-     * @param explainerConfig
+     * @param explainerConfig A parameter to activate explainers.
      */
     public fun explainerConfig(explainerConfig: CfnEndpointConfig.ExplainerConfigProperty) {
         cdkBuilder.explainerConfig(explainerConfig)
@@ -405,6 +459,24 @@ public class CfnEndpointConfigDsl(
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html#cfn-sagemaker-endpointconfig-vpcconfig)
+     *
+     * @param vpcConfig
+     */
+    public fun vpcConfig(vpcConfig: IResolvable) {
+        cdkBuilder.vpcConfig(vpcConfig)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html#cfn-sagemaker-endpointconfig-vpcconfig)
+     *
+     * @param vpcConfig
+     */
+    public fun vpcConfig(vpcConfig: CfnEndpointConfig.VpcConfigProperty) {
+        cdkBuilder.vpcConfig(vpcConfig)
     }
 
     public fun build(): CfnEndpointConfig {

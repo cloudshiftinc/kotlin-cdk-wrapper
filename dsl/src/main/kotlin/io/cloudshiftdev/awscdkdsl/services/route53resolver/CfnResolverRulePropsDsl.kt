@@ -44,6 +44,7 @@ import software.amazon.awscdk.services.route53resolver.CfnResolverRuleProps
  * .ip("ip")
  * .ipv6("ipv6")
  * .port("port")
+ * .protocol("protocol")
  * .build()))
  * .build();
  * ```

@@ -32,6 +32,7 @@ import software.amazon.awscdk.services.opensearchserverless.CfnCollectionProps
  * .name("name")
  * // the properties below are optional
  * .description("description")
+ * .standbyReplicas("standbyReplicas")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -62,6 +63,13 @@ public class CfnCollectionPropsDsl {
      */
     public fun name(name: String) {
         cdkBuilder.name(name)
+    }
+
+    /**
+     * @param standbyReplicas Indicates whether standby replicas should be used for a collection.
+     */
+    public fun standbyReplicas(standbyReplicas: String) {
+        cdkBuilder.standbyReplicas(standbyReplicas)
     }
 
     /**

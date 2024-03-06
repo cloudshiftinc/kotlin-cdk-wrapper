@@ -30,7 +30,7 @@ public inline fun CfnConnectAttachment.setOptions(
     return setOptions(builder.build())
 }
 
-/** The attachment to move from one segment to another. */
+/** Describes a proposed segment change. */
 public inline fun CfnConnectAttachment.setProposedSegmentChange(
     block: CfnConnectAttachmentProposedSegmentChangePropertyDsl.() -> Unit = {}
 ) {
@@ -39,7 +39,7 @@ public inline fun CfnConnectAttachment.setProposedSegmentChange(
     return setProposedSegmentChange(builder.build())
 }
 
-/** Bgp options. */
+/** Describes the BGP options. */
 public inline fun CfnConnectPeer.setBgpOptions(
     block: CfnConnectPeerBgpOptionsPropertyDsl.() -> Unit = {}
 ) {
@@ -48,7 +48,7 @@ public inline fun CfnConnectPeer.setBgpOptions(
     return setBgpOptions(builder.build())
 }
 
-/** The Amazon Web Services location of the device, if applicable. */
+/** The AWS location of the device. */
 public inline fun CfnDevice.setAwsLocation(block: CfnDeviceAWSLocationPropertyDsl.() -> Unit = {}) {
     val builder = CfnDeviceAWSLocationPropertyDsl()
     builder.apply(block)
@@ -76,7 +76,7 @@ public inline fun CfnSite.setLocation(block: CfnSiteLocationPropertyDsl.() -> Un
     return setLocation(builder.build())
 }
 
-/** The attachment to move from one segment to another. */
+/** Describes a proposed segment change. */
 public inline fun CfnSiteToSiteVpnAttachment.setProposedSegmentChange(
     block: CfnSiteToSiteVpnAttachmentProposedSegmentChangePropertyDsl.() -> Unit = {}
 ) {
@@ -103,7 +103,7 @@ public inline fun CfnVpcAttachment.setOptions(
     return setOptions(builder.build())
 }
 
-/** The attachment to move from one segment to another. */
+/** Describes a proposed segment change. */
 public inline fun CfnVpcAttachment.setProposedSegmentChange(
     block: CfnVpcAttachmentProposedSegmentChangePropertyDsl.() -> Unit = {}
 ) {

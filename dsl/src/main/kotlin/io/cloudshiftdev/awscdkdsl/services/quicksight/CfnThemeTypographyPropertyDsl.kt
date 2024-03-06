@@ -19,6 +19,8 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTheme
 
 /**
+ * Determines the typography options.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -40,17 +42,17 @@ public class CfnThemeTypographyPropertyDsl {
 
     private val _fontFamilies: MutableList<Any> = mutableListOf()
 
-    /** @param fontFamilies the value to be set. */
+    /** @param fontFamilies Determines the list of font families. */
     public fun fontFamilies(vararg fontFamilies: Any) {
         _fontFamilies.addAll(listOf(*fontFamilies))
     }
 
-    /** @param fontFamilies the value to be set. */
+    /** @param fontFamilies Determines the list of font families. */
     public fun fontFamilies(fontFamilies: Collection<Any>) {
         _fontFamilies.addAll(fontFamilies)
     }
 
-    /** @param fontFamilies the value to be set. */
+    /** @param fontFamilies Determines the list of font families. */
     public fun fontFamilies(fontFamilies: IResolvable) {
         cdkBuilder.fontFamilies(fontFamilies)
     }

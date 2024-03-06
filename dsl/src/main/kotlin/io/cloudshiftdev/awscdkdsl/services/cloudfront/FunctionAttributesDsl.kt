@@ -26,6 +26,8 @@ import software.amazon.awscdk.services.cloudfront.FunctionAttributes
  * FunctionAttributes functionAttributes = FunctionAttributes.builder()
  * .functionArn("functionArn")
  * .functionName("functionName")
+ * // the properties below are optional
+ * .functionRuntime("functionRuntime")
  * .build();
  * ```
  */
@@ -41,6 +43,11 @@ public class FunctionAttributesDsl {
     /** @param functionName The name of the function. */
     public fun functionName(functionName: String) {
         cdkBuilder.functionName(functionName)
+    }
+
+    /** @param functionRuntime The Runtime of the function. */
+    public fun functionRuntime(functionRuntime: String) {
+        cdkBuilder.functionRuntime(functionRuntime)
     }
 
     public fun build(): FunctionAttributes = cdkBuilder.build()

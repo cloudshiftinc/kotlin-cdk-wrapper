@@ -27,34 +27,23 @@ import software.constructs.Construct
  *
  * Example:
  * ```
- * Vpc vpc;
- * Cluster cluster = Cluster.Builder.create(this, "Cluster")
- * .vpc(vpc)
+ * import software.amazon.awscdk.Tags;
+ * Vpc vpc = Vpc.Builder.create(this, "Vpc").maxAzs(1).build();
+ * Cluster cluster = Cluster.Builder.create(this, "EcsCluster").vpc(vpc).build();
+ * FargateTaskDefinition taskDefinition = FargateTaskDefinition.Builder.create(this, "TaskDef")
+ * .memoryLimitMiB(512)
+ * .cpu(256)
  * .build();
- * AutoScalingGroup autoScalingGroup = AutoScalingGroup.Builder.create(this, "ASG")
- * .vpc(vpc)
- * .instanceType(new InstanceType("t2.micro"))
- * .machineImage(EcsOptimizedImage.amazonLinux2())
- * .minCapacity(0)
- * .maxCapacity(100)
- * .build();
- * AsgCapacityProvider capacityProvider = AsgCapacityProvider.Builder.create(this,
- * "AsgCapacityProvider")
- * .autoScalingGroup(autoScalingGroup)
- * .build();
- * cluster.addAsgCapacityProvider(capacityProvider);
- * Ec2TaskDefinition taskDefinition = new Ec2TaskDefinition(this, "TaskDef");
- * taskDefinition.addContainer("web", ContainerDefinitionOptions.builder()
+ * taskDefinition.addContainer("WebContainer", ContainerDefinitionOptions.builder()
  * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
- * .memoryReservationMiB(256)
  * .build());
- * Ec2Service.Builder.create(this, "EC2Service")
+ * Tags.of(taskDefinition).add("my-tag", "my-tag-value");
+ * ScheduledFargateTask scheduledFargateTask = ScheduledFargateTask.Builder.create(this,
+ * "ScheduledFargateTask")
  * .cluster(cluster)
  * .taskDefinition(taskDefinition)
- * .capacityProviderStrategies(List.of(CapacityProviderStrategy.builder()
- * .capacityProvider(capacityProvider.getCapacityProviderName())
- * .weight(1)
- * .build()))
+ * .schedule(Schedule.expression("rate(1 minute)"))
+ * .propagateTags(PropagatedTagSource.TASK_DEFINITION)
  * .build();
  * ```
  */

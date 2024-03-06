@@ -342,7 +342,7 @@ public class CfnAutomationRulePropsDsl {
         cdkBuilder.ruleStatus(ruleStatus)
     }
 
-    /** @param tags User-defined tags that help you label the purpose of a rule. */
+    /** @param tags User-defined tags associated with an automation rule. */
     public fun tags(tags: Map<String, String>) {
         cdkBuilder.tags(tags)
     }

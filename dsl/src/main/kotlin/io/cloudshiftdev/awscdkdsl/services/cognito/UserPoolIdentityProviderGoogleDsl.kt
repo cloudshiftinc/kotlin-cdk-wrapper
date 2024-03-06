@@ -24,7 +24,7 @@ import software.amazon.awscdk.services.cognito.UserPoolIdentityProviderGoogle
 import software.constructs.Construct
 
 /**
- * Represents a identity provider that integrates with 'Google'.
+ * Represents an identity provider that integrates with Google.
  *
  * Example:
  * ```
@@ -123,13 +123,13 @@ public class UserPoolIdentityProviderGoogleDsl(
     }
 
     /**
-     * The list of google permissions to obtain for getting access to the google profile.
+     * The list of Google permissions to obtain for getting access to the Google profile.
      *
      * Default: [ profile ]
      *
      * [Documentation](https://developers.google.com/identity/sign-in/web/sign-in)
      *
-     * @param scopes The list of google permissions to obtain for getting access to the google
+     * @param scopes The list of Google permissions to obtain for getting access to the Google
      *   profile.
      */
     public fun scopes(vararg scopes: String) {
@@ -137,13 +137,13 @@ public class UserPoolIdentityProviderGoogleDsl(
     }
 
     /**
-     * The list of google permissions to obtain for getting access to the google profile.
+     * The list of Google permissions to obtain for getting access to the Google profile.
      *
      * Default: [ profile ]
      *
      * [Documentation](https://developers.google.com/identity/sign-in/web/sign-in)
      *
-     * @param scopes The list of google permissions to obtain for getting access to the google
+     * @param scopes The list of Google permissions to obtain for getting access to the Google
      *   profile.
      */
     public fun scopes(scopes: Collection<String>) {

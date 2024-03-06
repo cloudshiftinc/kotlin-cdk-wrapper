@@ -27,6 +27,9 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * PeriodToDateComputationProperty periodToDateComputationProperty =
  * PeriodToDateComputationProperty.builder()
  * .computationId("computationId")
+ * // the properties below are optional
+ * .name("name")
+ * .periodTimeGranularity("periodTimeGranularity")
  * .time(DimensionFieldProperty.builder()
  * .categoricalDimensionField(CategoricalDimensionFieldProperty.builder()
  * .column(ColumnIdentifierProperty.builder()
@@ -265,9 +268,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * .hierarchyId("hierarchyId")
  * .build())
  * .build())
- * // the properties below are optional
- * .name("name")
- * .periodTimeGranularity("periodTimeGranularity")
  * .value(MeasureFieldProperty.builder()
  * .calculatedMeasureField(CalculatedMeasureFieldProperty.builder()
  * .expression("expression")

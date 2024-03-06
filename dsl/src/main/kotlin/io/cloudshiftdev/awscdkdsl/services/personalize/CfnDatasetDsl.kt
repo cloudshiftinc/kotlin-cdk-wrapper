@@ -24,13 +24,16 @@ import software.constructs.Construct
  * [CreateDatasetImportJob](https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDatasetImportJob.html)
  * to import your training data to a dataset.
  *
- * There are three types of datasets:
- * * Interactions
+ * There are 5 types of datasets:
+ * * Item interactions
  * * Items
  * * Users
+ * * Action interactions
+ * * Actions
  *
- * Each dataset type has an associated schema with required field types. Only the `Interactions`
- * dataset is required in order to train a model (also referred to as creating a solution).
+ * Each dataset type has an associated schema with required field types. Only the `Item
+ * interactions` dataset is required in order to train a model (also referred to as creating a
+ * solution).
  *
  * A dataset can be in one of the following states:
  * * CREATE PENDING &gt; CREATE IN_PROGRESS &gt; ACTIVE -or- CREATE FAILED
@@ -124,6 +127,8 @@ public class CfnDatasetDsl(
      * * Interactions
      * * Items
      * * Users
+     * * Actions
+     * * Action_Interactions
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-personalize-dataset.html#cfn-personalize-dataset-datasettype)
      *

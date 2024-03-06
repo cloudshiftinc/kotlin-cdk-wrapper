@@ -21,19 +21,16 @@ import software.amazon.awscdk.services.pipes.CfnPipe
  *
  * Example:
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import software.amazon.awscdk.services.pipes.*;
- * PipeEnrichmentParametersProperty pipeEnrichmentParametersProperty =
- * PipeEnrichmentParametersProperty.builder()
- * .httpParameters(PipeEnrichmentHttpParametersProperty.builder()
- * .headerParameters(Map.of(
- * "headerParametersKey", "headerParameters"))
- * .pathParameterValues(List.of("pathParameterValues"))
- * .queryStringParameters(Map.of(
- * "queryStringParametersKey", "queryStringParameters"))
- * .build())
- * .inputTemplate("inputTemplate")
+ * Queue sourceQueue;
+ * Queue targetQueue;
+ * LogGroup loggroup;
+ * Pipe pipe = Pipe.Builder.create(this, "Pipe")
+ * .source(new SqsSource(sourceQueue))
+ * .target(new SqsTarget(targetQueue))
+ * .logLevel(LogLevel.TRACE)
+ * .logIncludeExecutionData(List.of(IncludeExecutionData.ALL))
+ * .logDestinations(List.of(
+ * new CloudwatchDestination(loggroup)))
  * .build();
  * ```
  *

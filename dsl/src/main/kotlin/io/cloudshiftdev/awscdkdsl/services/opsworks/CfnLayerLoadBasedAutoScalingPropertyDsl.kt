@@ -17,8 +17,6 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opsworks.CfnLayer
 
 /**
- * Describes a layer's load-based auto scaling configuration.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.

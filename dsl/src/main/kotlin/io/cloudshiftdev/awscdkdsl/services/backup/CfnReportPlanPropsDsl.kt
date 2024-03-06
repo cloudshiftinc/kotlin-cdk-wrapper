@@ -11,6 +11,7 @@
 
 package io.cloudshiftdev.awscdkdsl.services.backup
 
+import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import io.cloudshiftdev.awscdkdsl.common.MapBuilder
 import kotlin.Any
@@ -18,7 +19,7 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
-import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.backup.CfnReportPlanProps
 
 /**
@@ -50,7 +51,7 @@ import software.amazon.awscdk.services.backup.CfnReportPlanProps
 public class CfnReportPlanPropsDsl {
     private val cdkBuilder: CfnReportPlanProps.Builder = CfnReportPlanProps.builder()
 
-    private val _reportPlanTags: MutableList<Any> = mutableListOf()
+    private val _reportPlanTags: MutableList<CfnTag> = mutableListOf()
 
     /**
      * @param reportDeliveryChannel Contains information about where and how to deliver your
@@ -90,18 +91,13 @@ public class CfnReportPlanPropsDsl {
     }
 
     /** @param reportPlanTags A list of tags to tag your report plan. */
-    public fun reportPlanTags(vararg reportPlanTags: Any) {
-        _reportPlanTags.addAll(listOf(*reportPlanTags))
+    public fun reportPlanTags(reportPlanTags: CfnTagDsl.() -> Unit) {
+        _reportPlanTags.add(CfnTagDsl().apply(reportPlanTags).build())
     }
 
     /** @param reportPlanTags A list of tags to tag your report plan. */
-    public fun reportPlanTags(reportPlanTags: Collection<Any>) {
+    public fun reportPlanTags(reportPlanTags: Collection<CfnTag>) {
         _reportPlanTags.addAll(reportPlanTags)
-    }
-
-    /** @param reportPlanTags A list of tags to tag your report plan. */
-    public fun reportPlanTags(reportPlanTags: IResolvable) {
-        cdkBuilder.reportPlanTags(reportPlanTags)
     }
 
     /**

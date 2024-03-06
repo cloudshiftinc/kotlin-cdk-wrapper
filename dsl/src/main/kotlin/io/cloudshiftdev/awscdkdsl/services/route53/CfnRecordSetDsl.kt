@@ -58,6 +58,15 @@ import software.constructs.Construct
  * .countryCode("countryCode")
  * .subdivisionCode("subdivisionCode")
  * .build())
+ * .geoProximityLocation(GeoProximityLocationProperty.builder()
+ * .awsRegion("awsRegion")
+ * .bias(123)
+ * .coordinates(CoordinatesProperty.builder()
+ * .latitude("latitude")
+ * .longitude("longitude")
+ * .build())
+ * .localZoneGroup("localZoneGroup")
+ * .build())
  * .healthCheckId("healthCheckId")
  * .hostedZoneId("hostedZoneId")
  * .hostedZoneName("hostedZoneName")
@@ -221,9 +230,6 @@ public class CfnRecordSetDsl(
      * address of `192.0.2.111` , create a resource record set with a `Type` of `A` and a
      * `ContinentCode` of `AF` .
      *
-     * Although creating geolocation and geolocation alias resource record sets in a private hosted
-     * zone is allowed, it's not supported.
-     *
      * If you create separate resource record sets for overlapping geographic regions (for example,
      * one resource record set for a continent and one for a country on the same continent),
      * priority goes to the smallest geographic region. This allows you to route most queries for a
@@ -268,9 +274,6 @@ public class CfnRecordSetDsl(
      * address of `192.0.2.111` , create a resource record set with a `Type` of `A` and a
      * `ContinentCode` of `AF` .
      *
-     * Although creating geolocation and geolocation alias resource record sets in a private hosted
-     * zone is allowed, it's not supported.
-     *
      * If you create separate resource record sets for overlapping geographic regions (for example,
      * one resource record set for a continent and one for a country on the same continent),
      * priority goes to the smallest geographic region. This allows you to route most queries for a
@@ -305,6 +308,38 @@ public class CfnRecordSetDsl(
      */
     public fun geoLocation(geoLocation: CfnRecordSet.GeoLocationProperty) {
         cdkBuilder.geoLocation(geoLocation)
+    }
+
+    /**
+     * *GeoproximityLocation resource record sets only:* A complex type that lets you control how
+     * Route 53 responds to DNS queries based on the geographic origin of the query and your
+     * resources.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordset.html#cfn-route53-recordset-geoproximitylocation)
+     *
+     * @param geoProximityLocation *GeoproximityLocation resource record sets only:* A complex type
+     *   that lets you control how Route 53 responds to DNS queries based on the geographic origin
+     *   of the query and your resources.
+     */
+    public fun geoProximityLocation(geoProximityLocation: IResolvable) {
+        cdkBuilder.geoProximityLocation(geoProximityLocation)
+    }
+
+    /**
+     * *GeoproximityLocation resource record sets only:* A complex type that lets you control how
+     * Route 53 responds to DNS queries based on the geographic origin of the query and your
+     * resources.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordset.html#cfn-route53-recordset-geoproximitylocation)
+     *
+     * @param geoProximityLocation *GeoproximityLocation resource record sets only:* A complex type
+     *   that lets you control how Route 53 responds to DNS queries based on the geographic origin
+     *   of the query and your resources.
+     */
+    public fun geoProximityLocation(
+        geoProximityLocation: CfnRecordSet.GeoProximityLocationProperty
+    ) {
+        cdkBuilder.geoProximityLocation(geoProximityLocation)
     }
 
     /**
@@ -534,11 +569,6 @@ public class CfnRecordSetDsl(
      *   it as an * character (ASCII 42), not as a wildcard.
      *
      * You can't use the * wildcard for resource records sets that have a type of NS.
-     *
-     * You can use the * wildcard as the leftmost label in a domain name, for example,
-     * `*.example.com` . You can't use an * for one of the middle labels, for example,
-     * `marketing.*.example.com` . In addition, the * must replace the entire label; for example,
-     * you can't specify `prod*.example.com` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordset.html#cfn-route53-recordset-name)
      *

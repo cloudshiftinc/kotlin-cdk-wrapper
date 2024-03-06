@@ -33,6 +33,16 @@ import software.amazon.awscdk.services.sagemaker.CfnAppImageConfigProps
  * CfnAppImageConfigProps cfnAppImageConfigProps = CfnAppImageConfigProps.builder()
  * .appImageConfigName("appImageConfigName")
  * // the properties below are optional
+ * .jupyterLabAppImageConfig(JupyterLabAppImageConfigProperty.builder()
+ * .containerConfig(ContainerConfigProperty.builder()
+ * .containerArguments(List.of("containerArguments"))
+ * .containerEntrypoint(List.of("containerEntrypoint"))
+ * .containerEnvironmentVariables(List.of(CustomImageContainerEnvironmentVariableProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .build())
  * .kernelGatewayImageConfig(KernelGatewayImageConfigProperty.builder()
  * .kernelSpecs(List.of(KernelSpecProperty.builder()
  * .name("name")
@@ -64,6 +74,24 @@ public class CfnAppImageConfigPropsDsl {
     /** @param appImageConfigName The name of the AppImageConfig. Must be unique to your account. */
     public fun appImageConfigName(appImageConfigName: String) {
         cdkBuilder.appImageConfigName(appImageConfigName)
+    }
+
+    /**
+     * @param jupyterLabAppImageConfig The configuration for the file system and the runtime, such
+     *   as the environment variables and entry point.
+     */
+    public fun jupyterLabAppImageConfig(jupyterLabAppImageConfig: IResolvable) {
+        cdkBuilder.jupyterLabAppImageConfig(jupyterLabAppImageConfig)
+    }
+
+    /**
+     * @param jupyterLabAppImageConfig The configuration for the file system and the runtime, such
+     *   as the environment variables and entry point.
+     */
+    public fun jupyterLabAppImageConfig(
+        jupyterLabAppImageConfig: CfnAppImageConfig.JupyterLabAppImageConfigProperty
+    ) {
+        cdkBuilder.jupyterLabAppImageConfig(jupyterLabAppImageConfig)
     }
 
     /**

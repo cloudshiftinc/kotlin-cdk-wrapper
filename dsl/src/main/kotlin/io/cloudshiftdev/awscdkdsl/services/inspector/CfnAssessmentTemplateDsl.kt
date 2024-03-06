@@ -28,20 +28,11 @@ import software.constructs.Construct
  *
  * Example:
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.inspector.*;
- * CfnAssessmentTemplate cfnAssessmentTemplate = CfnAssessmentTemplate.Builder.create(this,
- * "MyCfnAssessmentTemplate")
- * .assessmentTargetArn("assessmentTargetArn")
- * .durationInSeconds(123)
- * .rulesPackageArns(List.of("rulesPackageArns"))
- * // the properties below are optional
- * .assessmentTemplateName("assessmentTemplateName")
- * .userAttributesForFindings(List.of(CfnTag.builder()
- * .key("key")
- * .value("value")
- * .build()))
+ * CfnAssessmentTemplate assessmentTemplate;
+ * Schedule.Builder.create(this, "Schedule")
+ * .schedule(ScheduleExpression.rate(Duration.minutes(60)))
+ * .target(new InspectorStartAssessmentRun(assessmentTemplate))
  * .build();
  * ```
  *

@@ -28,6 +28,7 @@ import software.amazon.awscdk.services.ecs.CfnCapacityProvider
  * AutoScalingGroupProviderProperty.builder()
  * .autoScalingGroupArn("autoScalingGroupArn")
  * // the properties below are optional
+ * .managedDraining("managedDraining")
  * .managedScaling(ManagedScalingProperty.builder()
  * .instanceWarmupPeriod(123)
  * .maximumScalingStepSize(123)
@@ -52,6 +53,15 @@ public class CfnCapacityProviderAutoScalingGroupProviderPropertyDsl {
      */
     public fun autoScalingGroupArn(autoScalingGroupArn: String) {
         cdkBuilder.autoScalingGroupArn(autoScalingGroupArn)
+    }
+
+    /**
+     * @param managedDraining The managed draining option for the Auto Scaling group capacity
+     *   provider. When you enable this, Amazon ECS manages and gracefully drains the EC2 container
+     *   instances that are in the Auto Scaling group capacity provider.
+     */
+    public fun managedDraining(managedDraining: String) {
+        cdkBuilder.managedDraining(managedDraining)
     }
 
     /**

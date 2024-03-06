@@ -65,12 +65,16 @@ public class CfnEndpointPropsDsl {
         cdkBuilder.customerOwnedIpv4Pool(customerOwnedIpv4Pool)
     }
 
-    /** @param failedReason the value to be set. */
+    /**
+     * @param failedReason The failure reason, if any, for a create or delete endpoint operation.
+     */
     public fun failedReason(failedReason: IResolvable) {
         cdkBuilder.failedReason(failedReason)
     }
 
-    /** @param failedReason the value to be set. */
+    /**
+     * @param failedReason The failure reason, if any, for a create or delete endpoint operation.
+     */
     public fun failedReason(failedReason: CfnEndpoint.FailedReasonProperty) {
         cdkBuilder.failedReason(failedReason)
     }
@@ -80,12 +84,12 @@ public class CfnEndpointPropsDsl {
         cdkBuilder.outpostId(outpostId)
     }
 
-    /** @param securityGroupId The ID of the security group to use with the endpoint. */
+    /** @param securityGroupId The ID of the security group used for the endpoint. */
     public fun securityGroupId(securityGroupId: String) {
         cdkBuilder.securityGroupId(securityGroupId)
     }
 
-    /** @param subnetId The ID of the subnet. */
+    /** @param subnetId The ID of the subnet used for the endpoint. */
     public fun subnetId(subnetId: String) {
         cdkBuilder.subnetId(subnetId)
     }

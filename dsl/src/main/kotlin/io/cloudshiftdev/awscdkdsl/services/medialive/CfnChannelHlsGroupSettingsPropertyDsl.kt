@@ -454,7 +454,15 @@ public class CfnChannelHlsGroupSettingsPropertyDsl {
         cdkBuilder.programDateTime(programDateTime)
     }
 
-    /** @param programDateTimeClock the value to be set. */
+    /**
+     * @param programDateTimeClock Specifies the algorithm used to drive the HLS
+     *   EXT-X-PROGRAM-DATE-TIME clock. Options include: INITIALIZE_FROM_OUTPUT_TIMECODE: The PDT
+     *   clock is initialized as a function of the first output timecode, then incremented by the
+     *   EXTINF duration of each encoded segment. SYSTEM_CLOCK: The PDT clock is initialized as a
+     *   function of the UTC wall clock, then incremented by the EXTINF duration of each encoded
+     *   segment. If the PDT clock diverges from the wall clock by more than 500ms, it is
+     *   resynchronized to the wall clock.
+     */
     public fun programDateTimeClock(programDateTimeClock: String) {
         cdkBuilder.programDateTimeClock(programDateTimeClock)
     }

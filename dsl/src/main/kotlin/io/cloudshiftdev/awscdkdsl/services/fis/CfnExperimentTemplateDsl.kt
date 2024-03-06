@@ -36,7 +36,7 @@ import software.constructs.Construct
  *
  * For more information, see
  * [Experiment templates](https://docs.aws.amazon.com/fis/latest/userguide/experiment-templates.html)
- * in the *AWS Fault Injection Simulator User Guide* .
+ * in the *AWS Fault Injection Service User Guide* .
  *
  * Example:
  * ```
@@ -81,6 +81,10 @@ import software.constructs.Construct
  * .targets(Map.of(
  * "targetsKey", "targets"))
  * .build()))
+ * .experimentOptions(ExperimentTemplateExperimentOptionsProperty.builder()
+ * .accountTargeting("accountTargeting")
+ * .emptyTargetResolutionMode("emptyTargetResolutionMode")
+ * .build())
  * .logConfiguration(ExperimentTemplateLogConfigurationProperty.builder()
  * .logSchemaVersion(123)
  * // the properties below are optional
@@ -140,14 +144,38 @@ public class CfnExperimentTemplateDsl(
     }
 
     /**
-     * A description for the experiment template.
+     * The description for the experiment template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html#cfn-fis-experimenttemplate-description)
      *
-     * @param description A description for the experiment template.
+     * @param description The description for the experiment template.
      */
     public fun description(description: String) {
         cdkBuilder.description(description)
+    }
+
+    /**
+     * The experiment options for an experiment template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html#cfn-fis-experimenttemplate-experimentoptions)
+     *
+     * @param experimentOptions The experiment options for an experiment template.
+     */
+    public fun experimentOptions(experimentOptions: IResolvable) {
+        cdkBuilder.experimentOptions(experimentOptions)
+    }
+
+    /**
+     * The experiment options for an experiment template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html#cfn-fis-experimenttemplate-experimentoptions)
+     *
+     * @param experimentOptions The experiment options for an experiment template.
+     */
+    public fun experimentOptions(
+        experimentOptions: CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty
+    ) {
+        cdkBuilder.experimentOptions(experimentOptions)
     }
 
     /**
@@ -175,57 +203,55 @@ public class CfnExperimentTemplateDsl(
     }
 
     /**
-     * The Amazon Resource Name (ARN) of an IAM role that grants the AWS FIS service permission to
-     * perform service actions on your behalf.
+     * The Amazon Resource Name (ARN) of an IAM role.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html#cfn-fis-experimenttemplate-rolearn)
      *
-     * @param roleArn The Amazon Resource Name (ARN) of an IAM role that grants the AWS FIS service
-     *   permission to perform service actions on your behalf.
+     * @param roleArn The Amazon Resource Name (ARN) of an IAM role.
      */
     public fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
     }
 
     /**
-     * The stop conditions.
+     * The stop conditions for the experiment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html#cfn-fis-experimenttemplate-stopconditions)
      *
-     * @param stopConditions The stop conditions.
+     * @param stopConditions The stop conditions for the experiment.
      */
     public fun stopConditions(vararg stopConditions: Any) {
         _stopConditions.addAll(listOf(*stopConditions))
     }
 
     /**
-     * The stop conditions.
+     * The stop conditions for the experiment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html#cfn-fis-experimenttemplate-stopconditions)
      *
-     * @param stopConditions The stop conditions.
+     * @param stopConditions The stop conditions for the experiment.
      */
     public fun stopConditions(stopConditions: Collection<Any>) {
         _stopConditions.addAll(stopConditions)
     }
 
     /**
-     * The stop conditions.
+     * The stop conditions for the experiment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html#cfn-fis-experimenttemplate-stopconditions)
      *
-     * @param stopConditions The stop conditions.
+     * @param stopConditions The stop conditions for the experiment.
      */
     public fun stopConditions(stopConditions: IResolvable) {
         cdkBuilder.stopConditions(stopConditions)
     }
 
     /**
-     * The tags to apply to the experiment template.
+     * The tags for the experiment template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html#cfn-fis-experimenttemplate-tags)
      *
-     * @param tags The tags to apply to the experiment template.
+     * @param tags The tags for the experiment template.
      */
     public fun tags(tags: Map<String, String>) {
         cdkBuilder.tags(tags)

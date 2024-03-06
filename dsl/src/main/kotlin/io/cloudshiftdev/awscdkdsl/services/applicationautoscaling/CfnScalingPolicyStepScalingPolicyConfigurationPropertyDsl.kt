@@ -69,7 +69,7 @@ public class CfnScalingPolicyStepScalingPolicyConfigurationPropertyDsl {
     /**
      * @param cooldown The amount of time, in seconds, to wait for a previous scaling activity to
      *   take effect. If not specified, the default value is 300. For more information, see
-     *   [Cooldown period](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-step-scaling-policies.html#step-scaling-cooldown)
+     *   [Cooldown period](https://docs.aws.amazon.com/autoscaling/application/userguide/step-scaling-policy-overview.html#step-scaling-cooldown)
      *   in the *Application Auto Scaling User Guide* .
      */
     public fun cooldown(cooldown: Number) {

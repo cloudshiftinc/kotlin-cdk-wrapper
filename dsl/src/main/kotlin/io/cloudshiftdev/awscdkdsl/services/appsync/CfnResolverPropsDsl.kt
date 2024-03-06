@@ -41,6 +41,7 @@ import software.amazon.awscdk.services.appsync.CfnResolverProps
  * .dataSourceName("dataSourceName")
  * .kind("kind")
  * .maxBatchSize(123)
+ * .metricsConfig("metricsConfig")
  * .pipelineConfig(PipelineConfigProperty.builder()
  * .functions(List.of("functions"))
  * .build())
@@ -127,6 +128,17 @@ public class CfnResolverPropsDsl {
         cdkBuilder.maxBatchSize(maxBatchSize)
     }
 
+    /**
+     * @param metricsConfig Enables or disables enhanced resolver metrics for specified resolvers.
+     *   Note that `MetricsConfig` won't be used unless the `resolverLevelMetricsBehavior` value is
+     *   set to `PER_RESOLVER_METRICS` . If the `resolverLevelMetricsBehavior` is set to
+     *   `FULL_REQUEST_RESOLVER_METRICS` instead, `MetricsConfig` will be ignored. However, you can
+     *   still set its value.
+     */
+    public fun metricsConfig(metricsConfig: String) {
+        cdkBuilder.metricsConfig(metricsConfig)
+    }
+
     /** @param pipelineConfig Functions linked with the pipeline resolver. */
     public fun pipelineConfig(pipelineConfig: IResolvable) {
         cdkBuilder.pipelineConfig(pipelineConfig)
@@ -170,18 +182,18 @@ public class CfnResolverPropsDsl {
     }
 
     /**
-     * @param runtime Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync
-     *   function. Specifies the name and version of the runtime to use. Note that if a runtime is
-     *   specified, code must also be specified.
+     * @param runtime Describes a runtime used by an AWS AppSync resolver or AWS AppSync function.
+     *   Specifies the name and version of the runtime to use. Note that if a runtime is specified,
+     *   code must also be specified.
      */
     public fun runtime(runtime: IResolvable) {
         cdkBuilder.runtime(runtime)
     }
 
     /**
-     * @param runtime Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync
-     *   function. Specifies the name and version of the runtime to use. Note that if a runtime is
-     *   specified, code must also be specified.
+     * @param runtime Describes a runtime used by an AWS AppSync resolver or AWS AppSync function.
+     *   Specifies the name and version of the runtime to use. Note that if a runtime is specified,
+     *   code must also be specified.
      */
     public fun runtime(runtime: CfnResolver.AppSyncRuntimeProperty) {
         cdkBuilder.runtime(runtime)

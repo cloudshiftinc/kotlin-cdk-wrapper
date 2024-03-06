@@ -97,7 +97,12 @@ public class CfnRuleGroupJsonBodyPropertyDsl {
 
     /**
      * @param matchScope The parts of the JSON to match against using the `MatchPattern` . If you
-     *   specify `All` , AWS WAF matches against keys and values.
+     *   specify `ALL` , AWS WAF matches against keys and values.
+     *
+     * `All` does not require a match to be found in the keys and a match to be found in the values.
+     * It requires a match to be found in the keys or the values or both. To require a match in the
+     * keys and in the values, use a logical `AND` statement to combine two match rules, one that
+     * inspects the keys and another that inspects the values.
      */
     public fun matchScope(matchScope: String) {
         cdkBuilder.matchScope(matchScope)

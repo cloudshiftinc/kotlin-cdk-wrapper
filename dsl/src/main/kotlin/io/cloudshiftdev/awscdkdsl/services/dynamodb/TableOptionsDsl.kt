@@ -22,6 +22,7 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.dynamodb.Attribute
 import software.amazon.awscdk.services.dynamodb.BillingMode
+import software.amazon.awscdk.services.dynamodb.ImportSourceSpecification
 import software.amazon.awscdk.services.dynamodb.StreamViewType
 import software.amazon.awscdk.services.dynamodb.TableClass
 import software.amazon.awscdk.services.dynamodb.TableEncryption
@@ -40,6 +41,9 @@ import software.amazon.awscdk.services.kms.IKey
  * import software.amazon.awscdk.*;
  * import software.amazon.awscdk.services.dynamodb.*;
  * import software.amazon.awscdk.services.kms.*;
+ * import software.amazon.awscdk.services.s3.*;
+ * Bucket bucket;
+ * InputFormat inputFormat;
  * Key key;
  * TableOptions tableOptions = TableOptions.builder()
  * .partitionKey(Attribute.builder()
@@ -52,6 +56,14 @@ import software.amazon.awscdk.services.kms.IKey
  * .deletionProtection(false)
  * .encryption(TableEncryption.DEFAULT)
  * .encryptionKey(key)
+ * .importSource(ImportSourceSpecification.builder()
+ * .bucket(bucket)
+ * .inputFormat(inputFormat)
+ * // the properties below are optional
+ * .bucketOwner("bucketOwner")
+ * .compressionType(InputCompressionType.GZIP)
+ * .keyPrefix("keyPrefix")
+ * .build())
  * .pointInTimeRecovery(false)
  * .readCapacity(123)
  * .removalPolicy(RemovalPolicy.DESTROY)
@@ -113,6 +125,24 @@ public class TableOptionsDsl {
      */
     public fun encryptionKey(encryptionKey: IKey) {
         cdkBuilder.encryptionKey(encryptionKey)
+    }
+
+    /**
+     * @param importSource The properties of data being imported from the S3 bucket source to the
+     *   table.
+     */
+    public fun importSource(importSource: ImportSourceSpecificationDsl.() -> Unit = {}) {
+        val builder = ImportSourceSpecificationDsl()
+        builder.apply(importSource)
+        cdkBuilder.importSource(builder.build())
+    }
+
+    /**
+     * @param importSource The properties of data being imported from the S3 bucket source to the
+     *   table.
+     */
+    public fun importSource(importSource: ImportSourceSpecification) {
+        cdkBuilder.importSource(importSource)
     }
 
     /** @param partitionKey Partition key attribute definition. */

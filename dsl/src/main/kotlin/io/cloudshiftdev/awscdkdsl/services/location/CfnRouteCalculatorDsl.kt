@@ -11,8 +11,13 @@
 
 package io.cloudshiftdev.awscdkdsl.services.location
 
+import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.String
+import kotlin.Unit
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.location.CfnRouteCalculator
 import software.constructs.Construct
 
@@ -39,6 +44,10 @@ import software.constructs.Construct
  * // the properties below are optional
  * .description("description")
  * .pricingPlan("pricingPlan")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -51,6 +60,8 @@ public class CfnRouteCalculatorDsl(
 ) {
     private val cdkBuilder: CfnRouteCalculator.Builder =
         CfnRouteCalculator.Builder.create(scope, id)
+
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
      * The name of the route calculator resource.
@@ -134,5 +145,30 @@ public class CfnRouteCalculatorDsl(
         cdkBuilder.pricingPlan(pricingPlan)
     }
 
-    public fun build(): CfnRouteCalculator = cdkBuilder.build()
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-routecalculator.html#cfn-location-routecalculator-tags)
+     *
+     * @param tags An array of key-value pairs to apply to this resource.
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
+
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-routecalculator.html#cfn-location-routecalculator-tags)
+     *
+     * @param tags An array of key-value pairs to apply to this resource.
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
+
+    public fun build(): CfnRouteCalculator {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

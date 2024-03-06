@@ -19,9 +19,9 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
 /**
- * List of default values defined for a given integer dataset parameter type.
+ * A list of default values for a given integer parameter.
  *
- * Currently only static values are supported.</p>
+ * This structure only accepts static values.
  *
  * Example:
  * ```
@@ -43,17 +43,17 @@ public class CfnDataSetIntegerDatasetParameterDefaultValuesPropertyDsl {
 
     private val _staticValues: MutableList<Number> = mutableListOf()
 
-    /** @param staticValues the value to be set. */
+    /** @param staticValues A list of static default values for a given integer parameter. */
     public fun staticValues(vararg staticValues: Number) {
         _staticValues.addAll(listOf(*staticValues))
     }
 
-    /** @param staticValues the value to be set. */
+    /** @param staticValues A list of static default values for a given integer parameter. */
     public fun staticValues(staticValues: Collection<Number>) {
         _staticValues.addAll(staticValues)
     }
 
-    /** @param staticValues the value to be set. */
+    /** @param staticValues A list of static default values for a given integer parameter. */
     public fun staticValues(staticValues: IResolvable) {
         cdkBuilder.staticValues(staticValues)
     }

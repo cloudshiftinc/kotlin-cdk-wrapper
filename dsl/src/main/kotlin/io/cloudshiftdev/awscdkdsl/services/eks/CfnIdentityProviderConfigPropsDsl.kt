@@ -65,7 +65,7 @@ public class CfnIdentityProviderConfigPropsDsl {
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
-    /** @param clusterName The cluster that the configuration is associated to. */
+    /** @param clusterName The name of your cluster. */
     public fun clusterName(clusterName: String) {
         cdkBuilder.clusterName(clusterName)
     }
@@ -90,16 +90,18 @@ public class CfnIdentityProviderConfigPropsDsl {
     }
 
     /**
-     * @param tags The metadata to apply to the provider configuration to assist with categorization
-     *   and organization. Each tag consists of a key and an optional value. You define both.
+     * @param tags Metadata that assists with categorization and organization. Each tag consists of
+     *   a key and an optional value. You define both. Tags don't propagate to any other cluster or
+     *   AWS resources.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
     /**
-     * @param tags The metadata to apply to the provider configuration to assist with categorization
-     *   and organization. Each tag consists of a key and an optional value. You define both.
+     * @param tags Metadata that assists with categorization and organization. Each tag consists of
+     *   a key and an optional value. You define both. Tags don't propagate to any other cluster or
+     *   AWS resources.
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)

@@ -63,7 +63,10 @@ public class CfnFlowScheduledTriggerPropertiesPropertyDsl {
         cdkBuilder.firstExecutionFrom(firstExecutionFrom)
     }
 
-    /** @param flowErrorDeactivationThreshold the value to be set. */
+    /**
+     * @param flowErrorDeactivationThreshold Defines how many times a scheduled flow fails
+     *   consecutively before Amazon AppFlow deactivates it.
+     */
     public fun flowErrorDeactivationThreshold(flowErrorDeactivationThreshold: Number) {
         cdkBuilder.flowErrorDeactivationThreshold(flowErrorDeactivationThreshold)
     }

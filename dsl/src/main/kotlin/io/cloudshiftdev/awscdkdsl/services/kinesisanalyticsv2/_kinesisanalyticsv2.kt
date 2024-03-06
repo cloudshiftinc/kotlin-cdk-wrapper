@@ -28,7 +28,7 @@ public object kinesisanalyticsv2 {
      * Creates an Amazon Kinesis Data Analytics application.
      *
      * For information about creating a Kinesis Data Analytics application, see
-     * [Creating an Application](https://docs.aws.amazon.com/kinesisanalytics/latest/java/getting-started.html)
+     * [Creating an Application](https://docs.aws.amazon.com/managed-flink/latest/java/getting-started.html)
      * .
      *
      * Example:
@@ -236,7 +236,7 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * Specifies the creation parameters for a Kinesis Data Analytics application.
+     * Specifies the creation parameters for a Managed Service for Apache Flink application.
      *
      * Example:
      * ```
@@ -434,7 +434,7 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * Describes whether snapshots are enabled for a Flink-based Kinesis Data Analytics application.
+     * Describes whether snapshots are enabled for a Managed Service for Apache Flink application.
      *
      * Example:
      * ```
@@ -458,8 +458,8 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * For a SQL-based Kinesis Data Analytics application, provides additional mapping information
-     * when the record format uses delimiters, such as CSV.
+     * For a SQL-based Managed Service for Apache Flink application, provides additional mapping
+     * information when the record format uses delimiters, such as CSV.
      *
      * For example, the following sample records use CSV format, where the records use the *'\n'* as
      * the row delimiter and a comma (",") as the column delimiter:
@@ -640,8 +640,8 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * Specifies either the application code, or the location of the application code, for a
-     * Flink-based Kinesis Data Analytics application.
+     * Specifies either the application code, or the location of the application code, for a Managed
+     * Service for Apache Flink application.
      *
      * Example:
      * ```
@@ -736,7 +736,7 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * Describes execution properties for a Flink-based Kinesis Data Analytics application.
+     * Describes execution properties for a Managed Service for Apache Flink application.
      *
      * Example:
      * ```
@@ -764,7 +764,7 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * Describes configuration parameters for a Flink-based Kinesis Data Analytics application or a
+     * Describes configuration parameters for a Managed Service for Apache Flink application or a
      * Studio notebook.
      *
      * Example:
@@ -808,7 +808,7 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * Describes the starting parameters for a Flink-based Kinesis Data Analytics application.
+     * Describes the starting parameters for a Managed Service for Apache Flink application.
      *
      * Example:
      * ```
@@ -858,7 +858,8 @@ public object kinesisanalyticsv2 {
 
     /**
      * An object that contains the Amazon Resource Name (ARN) of the Amazon Lambda function that is
-     * used to preprocess records in the stream in a SQL-based Kinesis Data Analytics application.
+     * used to preprocess records in the stream in a SQL-based Managed Service for Apache Flink
+     * application.
      *
      * Example:
      * ```
@@ -882,8 +883,8 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * For a SQL-based Kinesis Data Analytics application, describes the number of in-application
-     * streams to create for a given streaming source.
+     * For a SQL-based Managed Service for Apache Flink application, describes the number of
+     * in-application streams to create for a given streaming source.
      *
      * Example:
      * ```
@@ -936,9 +937,9 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * When you configure the application input for a SQL-based Kinesis Data Analytics application,
-     * you specify the streaming source, the in-application stream name that is created, and the
-     * mapping between the two.
+     * When you configure the application input for a SQL-based Managed Service for Apache Flink
+     * application, you specify the streaming source, the in-application stream name that is
+     * created, and the mapping between the two.
      *
      * Example:
      * ```
@@ -999,9 +1000,9 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * For a SQL-based Kinesis Data Analytics application, describes the format of the data in the
-     * streaming source, and how each data element maps to corresponding columns created in the
-     * in-application stream.
+     * For a SQL-based Managed Service for Apache Flink application, describes the format of the
+     * data in the streaming source, and how each data element maps to corresponding columns created
+     * in the in-application stream.
      *
      * Example:
      * ```
@@ -1044,8 +1045,8 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * For a SQL-based Kinesis Data Analytics application, provides additional mapping information
-     * when JSON is the record format on the streaming source.
+     * For a SQL-based Managed Service for Apache Flink application, provides additional mapping
+     * information when JSON is the record format on the streaming source.
      *
      * Example:
      * ```
@@ -1069,8 +1070,8 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * For a SQL-based Kinesis Data Analytics application, identifies a Kinesis Data Firehose
-     * delivery stream as the streaming source.
+     * For a SQL-based Managed Service for Apache Flink application, identifies a Kinesis Data
+     * Firehose delivery stream as the streaming source.
      *
      * You provide the delivery stream's Amazon Resource Name (ARN).
      *
@@ -1121,9 +1122,9 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * When you configure a SQL-based Kinesis Data Analytics application's input at the time of
-     * creating or updating an application, provides additional mapping information specific to the
-     * record format (such as JSON, CSV, or record fields delimited by some delimiter) on the
+     * When you configure a SQL-based Managed Service for Apache Flink application's input at the
+     * time of creating or updating an application, provides additional mapping information specific
+     * to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the
      * streaming source.
      *
      * Example:
@@ -1184,7 +1185,7 @@ public object kinesisanalyticsv2 {
      * Data Analytics application.
      *
      * For more information about CloudWatch logging, see
-     * [Monitoring](https://docs.aws.amazon.com/kinesisanalytics/latest/java/monitoring-overview) .
+     * [Monitoring](https://docs.aws.amazon.com/managed-flink/latest/java/monitoring-overview) .
      *
      * Example:
      * ```
@@ -1225,7 +1226,7 @@ public object kinesisanalyticsv2 {
      *
      * Any configuration update, including adding a streaming source using this operation, results
      * in a new version of the application. You can use the
-     * [DescribeApplication](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_DescribeApplication.html)
+     * [DescribeApplication](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_DescribeApplication.html)
      * operation to find the current application version.
      *
      * Creation of multiple outputs should be sequential (use of DependsOn) to avoid a problem with
@@ -1271,8 +1272,8 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * Describes the data format when records are written to the destination in a SQL-based Kinesis
-     * Data Analytics application.
+     * Describes the data format when records are written to the destination in a SQL-based Managed
+     * Service for Apache Flink application.
      *
      * Example:
      * ```
@@ -1295,8 +1296,8 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * For a SQL-based Kinesis Data Analytics application, when configuring application output,
-     * identifies a Kinesis Data Firehose delivery stream as the destination.
+     * For a SQL-based Managed Service for Apache Flink application, when configuring application
+     * output, identifies a Kinesis Data Firehose delivery stream as the destination.
      *
      * You provide the stream Amazon Resource Name (ARN) of the delivery stream.
      *
@@ -1322,8 +1323,8 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * When you configure a SQL-based Kinesis Data Analytics application's output, identifies a
-     * Kinesis data stream as the destination.
+     * When you configure a SQL-based Managed Service for Apache Flink application's output,
+     * identifies a Kinesis data stream as the destination.
      *
      * You provide the stream Amazon Resource Name (ARN).
      *
@@ -1349,8 +1350,8 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * When you configure a SQL-based Kinesis Data Analytics application's output, identifies an
-     * Amazon Lambda function as the destination.
+     * When you configure a SQL-based Managed Service for Apache Flink application's output,
+     * identifies an Amazon Lambda function as the destination.
      *
      * You provide the function Amazon Resource Name (ARN) of the Lambda function.
      *
@@ -1375,9 +1376,9 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * Describes a SQL-based Kinesis Data Analytics application's output configuration, in which you
-     * identify an in-application stream and a destination where you want the in-application stream
-     * data to be written.
+     * Describes a SQL-based Managed Service for Apache Flink application's output configuration, in
+     * which you identify an in-application stream and a destination where you want the
+     * in-application stream data to be written.
      *
      * The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream.
      *
@@ -1685,8 +1686,9 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * For a SQL-based Kinesis Data Analytics application, describes the mapping of each data
-     * element in the streaming source to the corresponding column in the in-application stream.
+     * For a SQL-based Managed Service for Apache Flink application, describes the mapping of each
+     * data element in the streaming source to the corresponding column in the in-application
+     * stream.
      *
      * Also used to describe the format of the reference data source.
      *
@@ -1714,8 +1716,8 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * For a SQL-based Kinesis Data Analytics application, describes the record format and relevant
-     * mapping information that should be applied to schematize the records on the stream.
+     * For a SQL-based Managed Service for Apache Flink application, describes the record format and
+     * relevant mapping information that should be applied to schematize the records on the stream.
      *
      * Example:
      * ```
@@ -1748,13 +1750,14 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * Adds a reference data source to an existing SQL-based Kinesis Data Analytics application.
+     * Adds a reference data source to an existing SQL-based Managed Service for Apache Flink
+     * application.
      *
-     * Kinesis Data Analytics reads reference data (that is, an Amazon S3 object) and creates an
-     * in-application table within your application. In the request, you provide the source (S3
-     * bucket name and object key name), name of the in-application table to create, and the
-     * necessary mapping information that describes how data in an Amazon S3 object maps to columns
-     * in the resulting in-application table.
+     * Managed Service for Apache Flink reads reference data (that is, an Amazon S3 object) and
+     * creates an in-application table within your application. In the request, you provide the
+     * source (S3 bucket name and object key name), name of the in-application table to create, and
+     * the necessary mapping information that describes how data in an Amazon S3 object maps to
+     * columns in the resulting in-application table.
      *
      * Example:
      * ```
@@ -1811,8 +1814,8 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * For a SQL-based Kinesis Data Analytics application, provides additional mapping information
-     * when the record format uses delimiters, such as CSV.
+     * For a SQL-based Managed Service for Apache Flink application, provides additional mapping
+     * information when the record format uses delimiters, such as CSV.
      *
      * For example, the following sample records use CSV format, where the records use the *'\n'* as
      * the row delimiter and a comma (",") as the column delimiter:
@@ -1844,8 +1847,8 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * For a SQL-based Kinesis Data Analytics application, provides additional mapping information
-     * when JSON is the record format on the streaming source.
+     * For a SQL-based Managed Service for Apache Flink application, provides additional mapping
+     * information when JSON is the record format on the streaming source.
      *
      * Example:
      * ```
@@ -1869,9 +1872,9 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * When you configure a SQL-based Kinesis Data Analytics application's input at the time of
-     * creating or updating an application, provides additional mapping information specific to the
-     * record format (such as JSON, CSV, or record fields delimited by some delimiter) on the
+     * When you configure a SQL-based Managed Service for Apache Flink application's input at the
+     * time of creating or updating an application, provides additional mapping information specific
+     * to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the
      * streaming source.
      *
      * Example:
@@ -1956,8 +1959,9 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * For a SQL-based Kinesis Data Analytics application, describes the mapping of each data
-     * element in the streaming source to the corresponding column in the in-application stream.
+     * For a SQL-based Managed Service for Apache Flink application, describes the mapping of each
+     * data element in the streaming source to the corresponding column in the in-application
+     * stream.
      *
      * Also used to describe the format of the reference data source.
      *
@@ -1985,8 +1989,8 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * For a SQL-based Kinesis Data Analytics application, describes the record format and relevant
-     * mapping information that should be applied to schematize the records on the stream.
+     * For a SQL-based Managed Service for Apache Flink application, describes the record format and
+     * relevant mapping information that should be applied to schematize the records on the stream.
      *
      * Example:
      * ```
@@ -2019,10 +2023,10 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * For a SQL-based Kinesis Data Analytics application, describes the reference data source by
-     * providing the source information (Amazon S3 bucket name and object key name), the resulting
-     * in-application table name that is created, and the necessary schema to map the data elements
-     * in the Amazon S3 object to the in-application table.
+     * For a SQL-based Managed Service for Apache Flink application, describes the reference data
+     * source by providing the source information (Amazon S3 bucket name and object key name), the
+     * resulting in-application table name that is created, and the necessary schema to map the data
+     * elements in the Amazon S3 object to the in-application table.
      *
      * Example:
      * ```
@@ -2073,9 +2077,9 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * For a SQL-based Kinesis Data Analytics application, describes the format of the data in the
-     * streaming source, and how each data element maps to corresponding columns created in the
-     * in-application stream.
+     * For a SQL-based Managed Service for Apache Flink application, describes the format of the
+     * data in the streaming source, and how each data element maps to corresponding columns created
+     * in the in-application stream.
      *
      * Example:
      * ```
@@ -2123,7 +2127,7 @@ public object kinesisanalyticsv2 {
      *
      * A Kinesis Data Analytics application loads reference data only once. If the data changes, you
      * call the
-     * [UpdateApplication](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_UpdateApplication.html)
+     * [UpdateApplication](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_UpdateApplication.html)
      * operation to trigger reloading of data into your application.
      *
      * Example:
@@ -2149,7 +2153,7 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * Describes the starting parameters for an Kinesis Data Analytics application.
+     * Describes the starting parameters for an Managed Service for Apache Flink application.
      *
      * Example:
      * ```
@@ -2231,8 +2235,8 @@ public object kinesisanalyticsv2 {
     }
 
     /**
-     * Describes the inputs, outputs, and reference data sources for a SQL-based Kinesis Data
-     * Analytics application.
+     * Describes the inputs, outputs, and reference data sources for a SQL-based Managed Service for
+     * Apache Flink application.
      *
      * Example:
      * ```
@@ -2377,7 +2381,7 @@ public object kinesisanalyticsv2 {
      * Studio notebook.
      *
      * For more information about CloudWatch logging, see
-     * [Monitoring](https://docs.aws.amazon.com/kinesisanalytics/latest/java/monitoring-overview.html)
+     * [Monitoring](https://docs.aws.amazon.com/managed-flink/latest/java/monitoring-overview.html)
      * .
      *
      * Example:

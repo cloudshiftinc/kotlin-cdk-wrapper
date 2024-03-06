@@ -34,17 +34,17 @@ import software.amazon.awscdk.services.s3.IBucket
  *
  * Example:
  * ```
+ * // Adding an existing Lambda&#64;Edge function created in a different stack
+ * // to a CloudFront distribution.
  * Bucket s3Bucket;
- * // Add a cloudfront Function to a Distribution
- * Function cfFunction = Function.Builder.create(this, "Function")
- * .code(FunctionCode.fromInline("function handler(event) { return event.request }"))
- * .build();
+ * IVersion functionVersion = Version.fromVersionArn(this, "Version",
+ * "arn:aws:lambda:us-east-1:123456789012:function:functionName:1");
  * Distribution.Builder.create(this, "distro")
  * .defaultBehavior(BehaviorOptions.builder()
  * .origin(new S3Origin(s3Bucket))
- * .functionAssociations(List.of(FunctionAssociation.builder()
- * .function(cfFunction)
- * .eventType(FunctionEventType.VIEWER_REQUEST)
+ * .edgeLambdas(List.of(EdgeLambda.builder()
+ * .functionVersion(functionVersion)
+ * .eventType(LambdaEdgeEventType.VIEWER_REQUEST)
  * .build()))
  * .build())
  * .build();
@@ -214,6 +214,11 @@ public class DistributionPropsDsl {
      */
     public fun priceClass(priceClass: PriceClass) {
         cdkBuilder.priceClass(priceClass)
+    }
+
+    /** @param publishAdditionalMetrics Whether to enable additional CloudWatch metrics. */
+    public fun publishAdditionalMetrics(publishAdditionalMetrics: Boolean) {
+        cdkBuilder.publishAdditionalMetrics(publishAdditionalMetrics)
     }
 
     /**

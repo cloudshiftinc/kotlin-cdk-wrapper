@@ -300,11 +300,13 @@ public class CfnPushTemplateDsl(
     }
 
     /**
-     * The name of the message template.
+     * The name of the message template to use for the message.
+     *
+     * If specified, this value must match the name of an existing message template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-pushtemplate.html#cfn-pinpoint-pushtemplate-templatename)
      *
-     * @param templateName The name of the message template.
+     * @param templateName The name of the message template to use for the message.
      */
     public fun templateName(templateName: String) {
         cdkBuilder.templateName(templateName)

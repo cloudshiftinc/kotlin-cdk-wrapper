@@ -62,12 +62,12 @@ public class CfnSequenceStoreDsl(
     }
 
     /**
-     * An S3 URI representing the bucket and folder to store failed read set uploads.
+     * An S3 location that is used to store files that have failed a direct upload.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html#cfn-omics-sequencestore-fallbacklocation)
      *
-     * @param fallbackLocation An S3 URI representing the bucket and folder to store failed read set
-     *   uploads.
+     * @param fallbackLocation An S3 location that is used to store files that have failed a direct
+     *   upload.
      */
     public fun fallbackLocation(fallbackLocation: String) {
         cdkBuilder.fallbackLocation(fallbackLocation)

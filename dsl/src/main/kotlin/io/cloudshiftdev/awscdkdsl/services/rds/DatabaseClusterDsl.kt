@@ -50,7 +50,7 @@ import software.constructs.Construct
  * ```
  * Vpc vpc;
  * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
- * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_2_08_1).build()))
+ * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_3_01_0).build()))
  * .writer(ClusterInstance.provisioned("writer", ProvisionedClusterInstanceProps.builder()
  * .instanceType(InstanceType.of(InstanceClass.R6G, InstanceSize.XLARGE4))
  * .build()))
@@ -237,6 +237,36 @@ public class DatabaseClusterDsl(
      */
     public fun deletionProtection(deletionProtection: Boolean) {
         cdkBuilder.deletionProtection(deletionProtection)
+    }
+
+    /**
+     * Directory ID for associating the DB cluster with a specific Active Directory.
+     *
+     * Necessary for enabling Kerberos authentication. If specified, the DB cluster joins the given
+     * Active Directory, enabling Kerberos authentication. If not specified, the DB cluster will not
+     * be associated with any Active Directory, and Kerberos authentication will not be enabled.
+     *
+     * Default: - DB cluster is not associated with an Active Directory; Kerberos authentication is
+     * not enabled.
+     *
+     * @param domain Directory ID for associating the DB cluster with a specific Active Directory.
+     */
+    public fun domain(domain: String) {
+        cdkBuilder.domain(domain)
+    }
+
+    /**
+     * The IAM role to be used when making API calls to the Directory Service.
+     *
+     * The role needs the AWS-managed policy `AmazonRDSDirectoryServiceAccess` or equivalent.
+     *
+     * Default: - If `DatabaseClusterBaseProps.domain` is specified, a role with the
+     * `AmazonRDSDirectoryServiceAccess` policy is automatically created.
+     *
+     * @param domainRole The IAM role to be used when making API calls to the Directory Service.
+     */
+    public fun domainRole(domainRole: IRole) {
+        cdkBuilder.domainRole(domainRole)
     }
 
     /**

@@ -66,6 +66,8 @@ import software.amazon.awscdk.services.appstream.CfnStackProps
  * .userSettings(List.of(UserSettingProperty.builder()
  * .action("action")
  * .permission("permission")
+ * // the properties below are optional
+ * .maximumLength(123)
  * .build()))
  * .build();
  * ```

@@ -26,6 +26,8 @@ import software.amazon.awscdk.services.redshiftserverless.CfnNamespace
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.redshiftserverless.*;
  * NamespaceProperty namespaceProperty = NamespaceProperty.builder()
+ * .adminPasswordSecretArn("adminPasswordSecretArn")
+ * .adminPasswordSecretKmsKeyId("adminPasswordSecretKmsKeyId")
  * .adminUsername("adminUsername")
  * .creationDate("creationDate")
  * .dbName("dbName")
@@ -50,6 +52,22 @@ public class CfnNamespaceNamespacePropertyDsl {
     private val _iamRoles: MutableList<String> = mutableListOf()
 
     private val _logExports: MutableList<String> = mutableListOf()
+
+    /**
+     * @param adminPasswordSecretArn The Amazon Resource Name (ARN) for the namespace's admin user
+     *   credentials secret.
+     */
+    public fun adminPasswordSecretArn(adminPasswordSecretArn: String) {
+        cdkBuilder.adminPasswordSecretArn(adminPasswordSecretArn)
+    }
+
+    /**
+     * @param adminPasswordSecretKmsKeyId The ID of the AWS Key Management Service (KMS) key used to
+     *   encrypt and store the namespace's admin credentials secret.
+     */
+    public fun adminPasswordSecretKmsKeyId(adminPasswordSecretKmsKeyId: String) {
+        cdkBuilder.adminPasswordSecretKmsKeyId(adminPasswordSecretKmsKeyId)
+    }
 
     /**
      * @param adminUsername The username of the administrator for the first database created in the

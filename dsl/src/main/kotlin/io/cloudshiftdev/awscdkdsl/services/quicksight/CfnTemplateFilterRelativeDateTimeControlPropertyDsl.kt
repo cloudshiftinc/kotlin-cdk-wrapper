@@ -32,6 +32,10 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * // the properties below are optional
  * .displayOptions(RelativeDateTimeControlDisplayOptionsProperty.builder()
  * .dateTimeFormat("dateTimeFormat")
+ * .infoIconLabelOptions(SheetControlInfoIconLabelOptionsProperty.builder()
+ * .infoIconText("infoIconText")
+ * .visibility("visibility")
+ * .build())
  * .titleOptions(LabelOptionsProperty.builder()
  * .customLabel("customLabel")
  * .fontConfiguration(FontConfigurationProperty.builder()

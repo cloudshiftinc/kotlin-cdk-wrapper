@@ -17,8 +17,6 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.emrserverless.CfnApplication
 
 /**
- * The initial capacity configuration per worker.
- *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -46,27 +44,17 @@ public class CfnApplicationInitialCapacityConfigKeyValuePairPropertyDsl {
     private val cdkBuilder: CfnApplication.InitialCapacityConfigKeyValuePairProperty.Builder =
         CfnApplication.InitialCapacityConfigKeyValuePairProperty.builder()
 
-    /**
-     * @param key The worker type for an analytics framework. For Spark applications, the key can
-     *   either be set to `Driver` or `Executor` . For Hive applications, it can be set to
-     *   `HiveDriver` or `TezTask` .
-     *
-     * *Minimum* : 1
-     *
-     * *Maximum* : 50
-     *
-     * *Pattern* : `^[a-zA-Z]+[-_]*[a-zA-Z]+$`
-     */
+    /** @param key Worker type for an analytics framework. */
     public fun key(key: String) {
         cdkBuilder.key(key)
     }
 
-    /** @param value The value for the initial capacity configuration per worker. */
+    /** @param value the value to be set. */
     public fun `value`(`value`: IResolvable) {
         cdkBuilder.`value`(`value`)
     }
 
-    /** @param value The value for the initial capacity configuration per worker. */
+    /** @param value the value to be set. */
     public fun `value`(`value`: CfnApplication.InitialCapacityConfigProperty) {
         cdkBuilder.`value`(`value`)
     }

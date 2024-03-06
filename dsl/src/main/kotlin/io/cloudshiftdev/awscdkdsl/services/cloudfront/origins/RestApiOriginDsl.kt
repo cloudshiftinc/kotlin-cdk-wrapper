@@ -17,7 +17,7 @@ import kotlin.Number
 import kotlin.String
 import kotlin.collections.Map
 import software.amazon.awscdk.Duration
-import software.amazon.awscdk.services.apigateway.RestApi
+import software.amazon.awscdk.services.apigateway.RestApiBase
 import software.amazon.awscdk.services.cloudfront.origins.RestApiOrigin
 
 /**
@@ -33,7 +33,7 @@ import software.amazon.awscdk.services.cloudfront.origins.RestApiOrigin
  */
 @CdkDslMarker
 public class RestApiOriginDsl(
-    restApi: RestApi,
+    restApi: RestApiBase,
 ) {
     private val cdkBuilder: RestApiOrigin.Builder = RestApiOrigin.Builder.create(restApi)
 

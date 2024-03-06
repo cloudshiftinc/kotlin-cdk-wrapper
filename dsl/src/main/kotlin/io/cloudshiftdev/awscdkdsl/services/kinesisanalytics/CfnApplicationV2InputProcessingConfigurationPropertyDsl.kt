@@ -44,7 +44,7 @@ public class CfnApplicationV2InputProcessingConfigurationPropertyDsl {
 
     /**
      * @param inputLambdaProcessor The
-     *   [InputLambdaProcessor](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_InputLambdaProcessor.html)
+     *   [InputLambdaProcessor](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_InputLambdaProcessor.html)
      *   that is used to preprocess the records in the stream before being processed by your
      *   application code.
      */
@@ -54,7 +54,7 @@ public class CfnApplicationV2InputProcessingConfigurationPropertyDsl {
 
     /**
      * @param inputLambdaProcessor The
-     *   [InputLambdaProcessor](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_InputLambdaProcessor.html)
+     *   [InputLambdaProcessor](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_InputLambdaProcessor.html)
      *   that is used to preprocess the records in the stream before being processed by your
      *   application code.
      */

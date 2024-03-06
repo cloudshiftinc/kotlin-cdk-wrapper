@@ -19,7 +19,7 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.dlm.CfnLifecyclePolicy
 
 /**
- * *[Snapshot policies only]* Specifies a rule for sharing snapshots across AWS accounts .
+ * *[Custom snapshot policies only]* Specifies a rule for sharing snapshots across AWS accounts .
  *
  * Example:
  * ```

@@ -15,6 +15,8 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.fis.CfnExperimentTemplate
 import software.amazon.awscdk.services.fis.CfnExperimentTemplateProps
+import software.amazon.awscdk.services.fis.CfnTargetAccountConfiguration
+import software.amazon.awscdk.services.fis.CfnTargetAccountConfigurationProps
 import software.constructs.Construct
 
 public object fis {
@@ -32,7 +34,7 @@ public object fis {
      *
      * For more information, see
      * [Experiment templates](https://docs.aws.amazon.com/fis/latest/userguide/experiment-templates.html)
-     * in the *AWS Fault Injection Simulator User Guide* .
+     * in the *AWS Fault Injection Service User Guide* .
      *
      * Example:
      * ```
@@ -77,6 +79,10 @@ public object fis {
      * .targets(Map.of(
      * "targetsKey", "targets"))
      * .build()))
+     * .experimentOptions(ExperimentTemplateExperimentOptionsProperty.builder()
+     * .accountTargeting("accountTargeting")
+     * .emptyTargetResolutionMode("emptyTargetResolutionMode")
+     * .build())
      * .logConfiguration(ExperimentTemplateLogConfigurationProperty.builder()
      * .logSchemaVersion(123)
      * // the properties below are optional
@@ -129,7 +135,7 @@ public object fis {
      *
      * For more information, see
      * [Actions](https://docs.aws.amazon.com/fis/latest/userguide/actions.html) in the *AWS Fault
-     * Injection Simulator User Guide* .
+     * Injection Service User Guide* .
      *
      * Example:
      * ```
@@ -160,11 +166,36 @@ public object fis {
     }
 
     /**
+     * Describes the experiment options for an experiment template.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.fis.*;
+     * ExperimentTemplateExperimentOptionsProperty experimentTemplateExperimentOptionsProperty =
+     * ExperimentTemplateExperimentOptionsProperty.builder()
+     * .accountTargeting("accountTargeting")
+     * .emptyTargetResolutionMode("emptyTargetResolutionMode")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateexperimentoptions.html)
+     */
+    public inline fun cfnExperimentTemplateExperimentTemplateExperimentOptionsProperty(
+        block: CfnExperimentTemplateExperimentTemplateExperimentOptionsPropertyDsl.() -> Unit = {}
+    ): CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty {
+        val builder = CfnExperimentTemplateExperimentTemplateExperimentOptionsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Specifies the configuration for experiment logging.
      *
      * For more information, see
      * [Experiment logging](https://docs.aws.amazon.com/fis/latest/userguide/monitoring-logging.html)
-     * in the *AWS Fault Injection Simulator User Guide* .
+     * in the *AWS Fault Injection Service User Guide* .
      *
      * Example:
      * ```
@@ -197,7 +228,7 @@ public object fis {
      *
      * For more information, see
      * [Stop conditions](https://docs.aws.amazon.com/fis/latest/userguide/stop-conditions.html) in
-     * the *AWS Fault Injection Simulator User Guide* .
+     * the *AWS Fault Injection Service User Guide* .
      *
      * Example:
      * ```
@@ -227,7 +258,7 @@ public object fis {
      *
      * For more information, see
      * [Resource filters](https://docs.aws.amazon.com/fis/latest/userguide/targets.html#target-filters)
-     * in the *AWS Fault Injection Simulator User Guide* .
+     * in the *AWS Fault Injection Service User Guide* .
      *
      * Example:
      * ```
@@ -259,7 +290,7 @@ public object fis {
      *
      * For more information, see
      * [Targets](https://docs.aws.amazon.com/fis/latest/userguide/targets.html) in the *AWS Fault
-     * Injection Simulator User Guide* .
+     * Injection Service User Guide* .
      *
      * Example:
      * ```
@@ -338,6 +369,10 @@ public object fis {
      * .targets(Map.of(
      * "targetsKey", "targets"))
      * .build()))
+     * .experimentOptions(ExperimentTemplateExperimentOptionsProperty.builder()
+     * .accountTargeting("accountTargeting")
+     * .emptyTargetResolutionMode("emptyTargetResolutionMode")
+     * .build())
      * .logConfiguration(ExperimentTemplateLogConfigurationProperty.builder()
      * .logSchemaVersion(123)
      * // the properties below are optional
@@ -380,6 +415,69 @@ public object fis {
         block: CfnExperimentTemplateS3ConfigurationPropertyDsl.() -> Unit = {}
     ): CfnExperimentTemplate.S3ConfigurationProperty {
         val builder = CfnExperimentTemplateS3ConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Creates a target account configuration for the experiment template.
+     *
+     * A target account configuration is required when `accountTargeting` of `experimentOptions` is
+     * set to `multi-account` . For more information, see
+     * [experiment options](https://docs.aws.amazon.com/fis/latest/userguide/experiment-options.html)
+     * in the *AWS Fault Injection Service User Guide* .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.fis.*;
+     * CfnTargetAccountConfiguration cfnTargetAccountConfiguration =
+     * CfnTargetAccountConfiguration.Builder.create(this, "MyCfnTargetAccountConfiguration")
+     * .accountId("accountId")
+     * .experimentTemplateId("experimentTemplateId")
+     * .roleArn("roleArn")
+     * // the properties below are optional
+     * .description("description")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-targetaccountconfiguration.html)
+     */
+    public inline fun cfnTargetAccountConfiguration(
+        scope: Construct,
+        id: String,
+        block: CfnTargetAccountConfigurationDsl.() -> Unit = {},
+    ): CfnTargetAccountConfiguration {
+        val builder = CfnTargetAccountConfigurationDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnTargetAccountConfiguration`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.fis.*;
+     * CfnTargetAccountConfigurationProps cfnTargetAccountConfigurationProps =
+     * CfnTargetAccountConfigurationProps.builder()
+     * .accountId("accountId")
+     * .experimentTemplateId("experimentTemplateId")
+     * .roleArn("roleArn")
+     * // the properties below are optional
+     * .description("description")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-targetaccountconfiguration.html)
+     */
+    public inline fun cfnTargetAccountConfigurationProps(
+        block: CfnTargetAccountConfigurationPropsDsl.() -> Unit = {}
+    ): CfnTargetAccountConfigurationProps {
+        val builder = CfnTargetAccountConfigurationPropsDsl()
         builder.apply(block)
         return builder.build()
     }

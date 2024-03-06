@@ -75,6 +75,13 @@ import software.amazon.awscdk.services.appflow.CfnFlow
  * .build())
  * .sapoData(SAPODataSourcePropertiesProperty.builder()
  * .objectPath("objectPath")
+ * // the properties below are optional
+ * .paginationConfig(SAPODataPaginationConfigProperty.builder()
+ * .maxPageSize(123)
+ * .build())
+ * .parallelismConfig(SAPODataParallelismConfigProperty.builder()
+ * .maxParallelism(123)
+ * .build())
  * .build())
  * .serviceNow(ServiceNowSourcePropertiesProperty.builder()
  * .object("object")

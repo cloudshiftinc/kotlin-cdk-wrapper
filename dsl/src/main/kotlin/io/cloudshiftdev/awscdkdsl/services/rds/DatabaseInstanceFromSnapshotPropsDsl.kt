@@ -29,6 +29,7 @@ import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.logs.RetentionDays
+import software.amazon.awscdk.services.rds.CaCertificate
 import software.amazon.awscdk.services.rds.DatabaseInstanceFromSnapshotProps
 import software.amazon.awscdk.services.rds.IInstanceEngine
 import software.amazon.awscdk.services.rds.IOptionGroup
@@ -110,6 +111,16 @@ public class DatabaseInstanceFromSnapshotPropsDsl {
      */
     public fun backupRetention(backupRetention: Duration) {
         cdkBuilder.backupRetention(backupRetention)
+    }
+
+    /**
+     * @param caCertificate The identifier of the CA certificate for this DB instance. Specifying or
+     *   updating this property triggers a reboot.
+     *
+     * For RDS DB engines:
+     */
+    public fun caCertificate(caCertificate: CaCertificate) {
+        cdkBuilder.caCertificate(caCertificate)
     }
 
     /**
@@ -350,6 +361,8 @@ public class DatabaseInstanceFromSnapshotPropsDsl {
 
     /**
      * @param publiclyAccessible Indicates whether the DB instance is an internet-facing instance.
+     *   If not specified, the instance's vpcSubnets will be used to determine if the instance is
+     *   internet-facing or not.
      */
     public fun publiclyAccessible(publiclyAccessible: Boolean) {
         cdkBuilder.publiclyAccessible(publiclyAccessible)

@@ -16,7 +16,20 @@ import kotlin.String
 import software.amazon.awscdk.services.appconfig.CfnExtension
 
 /**
- * An action for an extension to take at a specific action point.
+ * An action defines the tasks that the extension performs during the AWS AppConfig workflow.
+ *
+ * Each action includes an action point such as `ON_CREATE_HOSTED_CONFIGURATION` , `PRE_DEPLOYMENT`
+ * , or `ON_DEPLOYMENT` . Each action also includes a name, a URI to an AWS Lambda function, and an
+ * Amazon Resource Name (ARN) for an AWS Identity and Access Management assume role. You specify the
+ * name, URI, and ARN for each *action point* defined in the extension. You can specify the
+ * following actions for an extension:
+ * * `PRE_CREATE_HOSTED_CONFIGURATION_VERSION`
+ * * `PRE_START_DEPLOYMENT`
+ * * `ON_DEPLOYMENT_START`
+ * * `ON_DEPLOYMENT_STEP`
+ * * `ON_DEPLOYMENT_BAKING`
+ * * `ON_DEPLOYMENT_COMPLETE`
+ * * `ON_DEPLOYMENT_ROLLED_BACK`
  *
  * Example:
  * ```
@@ -39,22 +52,30 @@ public class CfnExtensionActionPropertyDsl {
     private val cdkBuilder: CfnExtension.ActionProperty.Builder =
         CfnExtension.ActionProperty.builder()
 
-    /** @param description The description of the extension Action. */
+    /** @param description Information about the action. */
     public fun description(description: String) {
         cdkBuilder.description(description)
     }
 
-    /** @param name The name of the extension action. */
+    /** @param name The action name. */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }
 
-    /** @param roleArn The ARN of the role for invoking the extension action. */
+    /**
+     * @param roleArn An Amazon Resource Name (ARN) for an AWS Identity and Access Management assume
+     *   role.
+     */
     public fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
     }
 
-    /** @param uri The URI of the extension action. */
+    /**
+     * @param uri The extension URI associated to the action point in the extension definition. The
+     *   URI can be an Amazon Resource Name (ARN) for one of the following: an AWS Lambda function,
+     *   an Amazon Simple Queue Service queue, an Amazon Simple Notification Service topic, or the
+     *   Amazon EventBridge default event bus.
+     */
     public fun uri(uri: String) {
         cdkBuilder.uri(uri)
     }

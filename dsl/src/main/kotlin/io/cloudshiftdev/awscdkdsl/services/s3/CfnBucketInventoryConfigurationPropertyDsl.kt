@@ -102,10 +102,7 @@ public class CfnBucketInventoryConfigurationPropertyDsl {
 
     /**
      * @param optionalFields Contains the optional fields that are included in the inventory
-     *   results. *Valid values* : `Size | LastModifiedDate | StorageClass | ETag |
-     *   IsMultipartUploaded | ReplicationStatus | EncryptionStatus | ObjectLockRetainUntilDate |
-     *   ObjectLockMode | ObjectLockLegalHoldStatus | IntelligentTieringAccessTier |
-     *   BucketKeyStatus`
+     *   results.
      */
     public fun optionalFields(vararg optionalFields: String) {
         _optionalFields.addAll(listOf(*optionalFields))
@@ -113,10 +110,7 @@ public class CfnBucketInventoryConfigurationPropertyDsl {
 
     /**
      * @param optionalFields Contains the optional fields that are included in the inventory
-     *   results. *Valid values* : `Size | LastModifiedDate | StorageClass | ETag |
-     *   IsMultipartUploaded | ReplicationStatus | EncryptionStatus | ObjectLockRetainUntilDate |
-     *   ObjectLockMode | ObjectLockLegalHoldStatus | IntelligentTieringAccessTier |
-     *   BucketKeyStatus`
+     *   results.
      */
     public fun optionalFields(optionalFields: Collection<String>) {
         _optionalFields.addAll(optionalFields)
@@ -127,10 +121,7 @@ public class CfnBucketInventoryConfigurationPropertyDsl {
         cdkBuilder.prefix(prefix)
     }
 
-    /**
-     * @param scheduleFrequency Specifies the schedule for generating inventory results. *Allowed
-     *   values* : `Daily` | `Weekly`
-     */
+    /** @param scheduleFrequency Specifies the schedule for generating inventory results. */
     public fun scheduleFrequency(scheduleFrequency: String) {
         cdkBuilder.scheduleFrequency(scheduleFrequency)
     }

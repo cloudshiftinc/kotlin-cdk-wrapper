@@ -191,6 +191,24 @@ public class QueueProcessingEc2ServiceDsl(
     }
 
     /**
+     * Grace period after scaling activity in seconds.
+     *
+     * Subsequent scale outs during the cooldown period are squashed so that only the biggest scale
+     * out happens.
+     *
+     * Subsequent scale ins during the cooldown period are ignored.
+     *
+     * Default: 300 seconds
+     *
+     * [Documentation](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_StepScalingPolicyConfiguration.html)
+     *
+     * @param cooldown Grace period after scaling activity in seconds.
+     */
+    public fun cooldown(cooldown: Duration) {
+        cdkBuilder.cooldown(cooldown)
+    }
+
+    /**
      * The number of cpu units used by the task.
      *
      * Valid values, which determines your range of valid values for the memory parameter:
@@ -213,6 +231,18 @@ public class QueueProcessingEc2ServiceDsl(
      */
     public fun cpu(cpu: Number) {
         cdkBuilder.cpu(cpu)
+    }
+
+    /**
+     * The target CPU utilization percentage for CPU based scaling strategy when enabled.
+     *
+     * Default: - 50
+     *
+     * @param cpuTargetUtilizationPercent The target CPU utilization percentage for CPU based
+     *   scaling strategy when enabled.
+     */
+    public fun cpuTargetUtilizationPercent(cpuTargetUtilizationPercent: Number) {
+        cdkBuilder.cpuTargetUtilizationPercent(cpuTargetUtilizationPercent)
     }
 
     /**
@@ -243,6 +273,17 @@ public class QueueProcessingEc2ServiceDsl(
      */
     public fun deploymentController(deploymentController: DeploymentController) {
         cdkBuilder.deploymentController(deploymentController)
+    }
+
+    /**
+     * Flag to disable CPU based auto scaling strategy on the service.
+     *
+     * Default: - false
+     *
+     * @param disableCpuBasedScaling Flag to disable CPU based auto scaling strategy on the service.
+     */
+    public fun disableCpuBasedScaling(disableCpuBasedScaling: Boolean) {
+        cdkBuilder.disableCpuBasedScaling(disableCpuBasedScaling)
     }
 
     /**
@@ -323,6 +364,11 @@ public class QueueProcessingEc2ServiceDsl(
 
     /**
      * The image used to start a container.
+     *
+     * For `QueueProcessingFargateService`, either `image` or `taskDefinition` must be specified,
+     * but not both. For `QueueProcessingEc2Service`, `image` is required.
+     *
+     * Default: - the image of the task definition is used for Fargate, required otherwise
      *
      * @param image The image used to start a container.
      */

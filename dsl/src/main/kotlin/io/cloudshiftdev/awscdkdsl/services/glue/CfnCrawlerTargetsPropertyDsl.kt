@@ -135,17 +135,17 @@ public class CfnCrawlerTargetsPropertyDsl {
         cdkBuilder.dynamoDbTargets(dynamoDbTargets)
     }
 
-    /** @param icebergTargets the value to be set. */
+    /** @param icebergTargets Specifies Apache Iceberg data store targets. */
     public fun icebergTargets(vararg icebergTargets: Any) {
         _icebergTargets.addAll(listOf(*icebergTargets))
     }
 
-    /** @param icebergTargets the value to be set. */
+    /** @param icebergTargets Specifies Apache Iceberg data store targets. */
     public fun icebergTargets(icebergTargets: Collection<Any>) {
         _icebergTargets.addAll(icebergTargets)
     }
 
-    /** @param icebergTargets the value to be set. */
+    /** @param icebergTargets Specifies Apache Iceberg data store targets. */
     public fun icebergTargets(icebergTargets: IResolvable) {
         cdkBuilder.icebergTargets(icebergTargets)
     }

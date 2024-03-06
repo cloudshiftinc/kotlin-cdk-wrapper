@@ -23,15 +23,15 @@ import software.amazon.awscdk.services.dynamodb.UtilizationScalingProps
  *
  * Example:
  * ```
- * Table globalTable = Table.Builder.create(this, "Table")
- * .partitionKey(Attribute.builder().name("id").type(AttributeType.STRING).build())
- * .replicationRegions(List.of("us-east-1", "us-east-2", "us-west-2"))
- * .billingMode(BillingMode.PROVISIONED)
- * .build();
- * globalTable.autoScaleWriteCapacity(EnableScalingProps.builder()
- * .minCapacity(1)
- * .maxCapacity(10)
- * .build()).scaleOnUtilization(UtilizationScalingProps.builder().targetUtilizationPercent(75).build());
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * Table table;
+ * IScalableTableAttribute readCapacity = table.autoScaleReadCapacity(EnableScalingProps.builder()
+ * .minCapacity(10)
+ * .maxCapacity(1000)
+ * .build());
+ * readCapacity.scaleOnUtilization(UtilizationScalingProps.builder()
+ * .targetUtilizationPercent(60)
+ * .build());
  * ```
  */
 @CdkDslMarker

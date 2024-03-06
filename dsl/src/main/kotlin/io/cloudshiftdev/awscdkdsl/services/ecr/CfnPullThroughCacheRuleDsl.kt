@@ -17,10 +17,10 @@ import software.amazon.awscdk.services.ecr.CfnPullThroughCacheRule
 import software.constructs.Construct
 
 /**
- * Creates a pull through cache rule.
+ * The `AWS::ECR::PullThroughCacheRule` resource creates or updates a pull through cache rule.
  *
- * A pull through cache rule provides a way to cache images from an external public registry in your
- * Amazon ECR private registry.
+ * A pull through cache rule provides a way to cache images from an upstream registry in your Amazon
+ * ECR private registry.
  *
  * Example:
  * ```
@@ -29,7 +29,9 @@ import software.constructs.Construct
  * import software.amazon.awscdk.services.ecr.*;
  * CfnPullThroughCacheRule cfnPullThroughCacheRule = CfnPullThroughCacheRule.Builder.create(this,
  * "MyCfnPullThroughCacheRule")
+ * .credentialArn("credentialArn")
  * .ecrRepositoryPrefix("ecrRepositoryPrefix")
+ * .upstreamRegistry("upstreamRegistry")
  * .upstreamRegistryUrl("upstreamRegistryUrl")
  * .build();
  * ```
@@ -45,6 +47,18 @@ public class CfnPullThroughCacheRuleDsl(
         CfnPullThroughCacheRule.Builder.create(scope, id)
 
     /**
+     * The ARN of the Secrets Manager secret associated with the pull through cache rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-pullthroughcacherule.html#cfn-ecr-pullthroughcacherule-credentialarn)
+     *
+     * @param credentialArn The ARN of the Secrets Manager secret associated with the pull through
+     *   cache rule.
+     */
+    public fun credentialArn(credentialArn: String) {
+        cdkBuilder.credentialArn(credentialArn)
+    }
+
+    /**
      * The Amazon ECR repository prefix associated with the pull through cache rule.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-pullthroughcacherule.html#cfn-ecr-pullthroughcacherule-ecrrepositoryprefix)
@@ -54,6 +68,18 @@ public class CfnPullThroughCacheRuleDsl(
      */
     public fun ecrRepositoryPrefix(ecrRepositoryPrefix: String) {
         cdkBuilder.ecrRepositoryPrefix(ecrRepositoryPrefix)
+    }
+
+    /**
+     * The name of the upstream source registry associated with the pull through cache rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-pullthroughcacherule.html#cfn-ecr-pullthroughcacherule-upstreamregistry)
+     *
+     * @param upstreamRegistry The name of the upstream source registry associated with the pull
+     *   through cache rule.
+     */
+    public fun upstreamRegistry(upstreamRegistry: String) {
+        cdkBuilder.upstreamRegistry(upstreamRegistry)
     }
 
     /**

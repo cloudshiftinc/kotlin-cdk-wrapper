@@ -15,9 +15,11 @@ import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
+import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.datapipeline.CfnPipeline
 import software.amazon.awscdk.services.datapipeline.CfnPipelineProps
 
 /**
@@ -73,7 +75,7 @@ public class CfnPipelinePropsDsl {
 
     private val _pipelineObjects: MutableList<Any> = mutableListOf()
 
-    private val _pipelineTags: MutableList<Any> = mutableListOf()
+    private val _pipelineTags: MutableList<CfnPipeline.PipelineTagProperty> = mutableListOf()
 
     /**
      * @param activate Indicates whether to validate and start the pipeline or stop an active
@@ -170,8 +172,8 @@ public class CfnPipelinePropsDsl {
      *   [Controlling Access to Pipelines and Resources](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-control-access.html)
      *   in the *AWS Data Pipeline Developer Guide* .
      */
-    public fun pipelineTags(vararg pipelineTags: Any) {
-        _pipelineTags.addAll(listOf(*pipelineTags))
+    public fun pipelineTags(pipelineTags: CfnPipelinePipelineTagPropertyDsl.() -> Unit) {
+        _pipelineTags.add(CfnPipelinePipelineTagPropertyDsl().apply(pipelineTags).build())
     }
 
     /**
@@ -180,18 +182,8 @@ public class CfnPipelinePropsDsl {
      *   [Controlling Access to Pipelines and Resources](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-control-access.html)
      *   in the *AWS Data Pipeline Developer Guide* .
      */
-    public fun pipelineTags(pipelineTags: Collection<Any>) {
+    public fun pipelineTags(pipelineTags: Collection<CfnPipeline.PipelineTagProperty>) {
         _pipelineTags.addAll(pipelineTags)
-    }
-
-    /**
-     * @param pipelineTags A list of arbitrary tags (key-value pairs) to associate with the
-     *   pipeline, which you can use to control permissions. For more information, see
-     *   [Controlling Access to Pipelines and Resources](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-control-access.html)
-     *   in the *AWS Data Pipeline Developer Guide* .
-     */
-    public fun pipelineTags(pipelineTags: IResolvable) {
-        cdkBuilder.pipelineTags(pipelineTags)
     }
 
     public fun build(): CfnPipelineProps {

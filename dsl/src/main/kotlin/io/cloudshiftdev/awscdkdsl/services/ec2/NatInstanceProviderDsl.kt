@@ -12,7 +12,10 @@
 package io.cloudshiftdev.awscdkdsl.services.ec2
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Deprecated
 import kotlin.String
+import software.amazon.awscdk.services.ec2.CpuCredits
+import software.amazon.awscdk.services.ec2.IKeyPair
 import software.amazon.awscdk.services.ec2.IMachineImage
 import software.amazon.awscdk.services.ec2.ISecurityGroup
 import software.amazon.awscdk.services.ec2.InstanceType
@@ -24,20 +27,34 @@ import software.amazon.awscdk.services.ec2.NatTrafficDirection
  *
  * Example:
  * ```
- * // Configure the `natGatewayProvider` when defining a Vpc
- * NatInstanceProvider natGatewayProvider = NatProvider.instance(NatInstanceProps.builder()
- * .instanceType(new InstanceType("t3.small"))
+ * NatInstanceProvider natInstanceProvider = NatProvider.instance(NatInstanceProps.builder()
+ * .instanceType(InstanceType.of(InstanceClass.T4G, InstanceSize.LARGE))
+ * .machineImage(new AmazonLinuxImage())
+ * .creditSpecification(CpuCredits.UNLIMITED)
  * .build());
- * Vpc vpc = Vpc.Builder.create(this, "MyVpc")
- * .natGatewayProvider(natGatewayProvider)
- * // The 'natGateways' parameter now controls the number of NAT instances
- * .natGateways(2)
+ * Vpc.Builder.create(this, "VPC")
+ * .natGatewayProvider(natInstanceProvider)
  * .build();
  * ```
  */
 @CdkDslMarker
 public class NatInstanceProviderDsl {
     private val cdkBuilder: NatInstanceProvider.Builder = NatInstanceProvider.Builder.create()
+
+    /**
+     * Specifying the CPU credit type for burstable EC2 instance types (T2, T3, T3a, etc).
+     *
+     * The unlimited CPU credit option is not supported for T3 instances with dedicated host
+     * (`host`) tenancy.
+     *
+     * Default: - T2 instances are standard, while T3, T4g, and T3a instances are unlimited.
+     *
+     * @param creditSpecification Specifying the CPU credit type for burstable EC2 instance types
+     *   (T2, T3, T3a, etc).
+     */
+    public fun creditSpecification(creditSpecification: CpuCredits) {
+        cdkBuilder.creditSpecification(creditSpecification)
+    }
 
     /**
      * Direction to allow all traffic through the NAT instance by default.
@@ -68,14 +85,28 @@ public class NatInstanceProviderDsl {
     }
 
     /**
-     * Name of SSH keypair to grant access to instance.
+     * (deprecated) Name of SSH keypair to grant access to instance.
      *
      * Default: - No SSH access will be possible.
+     * * Use `keyPair` instead -
+     *   https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_ec2-readme.html#using-an-existing-ec2-key-pair
      *
      * @param keyName Name of SSH keypair to grant access to instance.
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun keyName(keyName: String) {
         cdkBuilder.keyName(keyName)
+    }
+
+    /**
+     * The SSH keypair to grant access to the instance.
+     *
+     * Default: - No SSH access will be possible.
+     *
+     * @param keyPair The SSH keypair to grant access to the instance.
+     */
+    public fun keyPair(keyPair: IKeyPair) {
+        cdkBuilder.keyPair(keyPair)
     }
 
     /**

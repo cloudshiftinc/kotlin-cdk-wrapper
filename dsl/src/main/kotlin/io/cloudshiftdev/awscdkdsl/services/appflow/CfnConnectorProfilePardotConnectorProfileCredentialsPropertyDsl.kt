@@ -17,6 +17,8 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appflow.CfnConnectorProfile
 
 /**
+ * The connector-specific profile credentials required when using Salesforce Pardot.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -41,12 +43,15 @@ public class CfnConnectorProfilePardotConnectorProfileCredentialsPropertyDsl {
     private val cdkBuilder: CfnConnectorProfile.PardotConnectorProfileCredentialsProperty.Builder =
         CfnConnectorProfile.PardotConnectorProfileCredentialsProperty.builder()
 
-    /** @param accessToken the value to be set. */
+    /** @param accessToken The credentials used to access protected Salesforce Pardot resources. */
     public fun accessToken(accessToken: String) {
         cdkBuilder.accessToken(accessToken)
     }
 
-    /** @param clientCredentialsArn the value to be set. */
+    /**
+     * @param clientCredentialsArn The secret manager ARN, which contains the client ID and client
+     *   secret of the connected app.
+     */
     public fun clientCredentialsArn(clientCredentialsArn: String) {
         cdkBuilder.clientCredentialsArn(clientCredentialsArn)
     }
@@ -63,7 +68,7 @@ public class CfnConnectorProfilePardotConnectorProfileCredentialsPropertyDsl {
         cdkBuilder.connectorOAuthRequest(connectorOAuthRequest)
     }
 
-    /** @param refreshToken the value to be set. */
+    /** @param refreshToken The credentials used to acquire new access tokens. */
     public fun refreshToken(refreshToken: String) {
         cdkBuilder.refreshToken(refreshToken)
     }

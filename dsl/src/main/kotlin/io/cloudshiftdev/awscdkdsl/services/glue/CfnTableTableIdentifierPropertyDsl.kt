@@ -53,7 +53,7 @@ public class CfnTableTableIdentifierPropertyDsl {
         cdkBuilder.name(name)
     }
 
-    /** @param region the value to be set. */
+    /** @param region The Region of the table. */
     public fun region(region: String) {
         cdkBuilder.region(region)
     }

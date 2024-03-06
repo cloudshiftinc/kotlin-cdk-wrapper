@@ -55,10 +55,11 @@ public class CfnLaunchTemplateTagSpecificationPropertyDsl {
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
-     * @param resourceType The type of resource to tag. The `Valid Values` are all the resource
-     *   types that can be tagged. However, when creating a launch template, you can specify tags
-     *   for the following resource types only: `instance` | `volume` | `elastic-gpu` |
-     *   `network-interface` | `spot-instances-request`
+     * @param resourceType The type of resource to tag. Valid Values lists all resource types for
+     *   Amazon EC2 that can be tagged. When you create a launch template, you can specify tags for
+     *   the following resource types only: `instance` | `volume` | `network-interface` |
+     *   `spot-instances-request` . If the instance does not include the resource type that you
+     *   specify, the instance launch fails. For example, not all instance types include a volume.
      *
      * To tag a resource after it has been created, see
      * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .

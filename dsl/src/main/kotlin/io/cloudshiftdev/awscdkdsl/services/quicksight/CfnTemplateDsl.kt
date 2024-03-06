@@ -212,6 +212,36 @@ public class CfnTemplateDsl(
     }
 
     /**
+     * The option to relax the validation that is required to create and update analyses,
+     * dashboards, and templates with definition objects.
+     *
+     * When you set this value to `LENIENT` , validation is skipped for specific errors.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-template.html#cfn-quicksight-template-validationstrategy)
+     *
+     * @param validationStrategy The option to relax the validation that is required to create and
+     *   update analyses, dashboards, and templates with definition objects.
+     */
+    public fun validationStrategy(validationStrategy: IResolvable) {
+        cdkBuilder.validationStrategy(validationStrategy)
+    }
+
+    /**
+     * The option to relax the validation that is required to create and update analyses,
+     * dashboards, and templates with definition objects.
+     *
+     * When you set this value to `LENIENT` , validation is skipped for specific errors.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-template.html#cfn-quicksight-template-validationstrategy)
+     *
+     * @param validationStrategy The option to relax the validation that is required to create and
+     *   update analyses, dashboards, and templates with definition objects.
+     */
+    public fun validationStrategy(validationStrategy: CfnTemplate.ValidationStrategyProperty) {
+        cdkBuilder.validationStrategy(validationStrategy)
+    }
+
+    /**
      * A description of the current template version being created.
      *
      * This API operation creates the first version of the template. Every time `UpdateTemplate` is

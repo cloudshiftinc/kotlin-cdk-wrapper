@@ -13,12 +13,16 @@ package io.cloudshiftdev.awscdkdsl.services.appsync
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.Map
 import software.amazon.awscdk.services.appsync.AuthorizationConfig
+import software.amazon.awscdk.services.appsync.Definition
 import software.amazon.awscdk.services.appsync.DomainOptions
 import software.amazon.awscdk.services.appsync.GraphqlApi
 import software.amazon.awscdk.services.appsync.ISchema
+import software.amazon.awscdk.services.appsync.IntrospectionConfig
 import software.amazon.awscdk.services.appsync.LogConfig
 import software.amazon.awscdk.services.appsync.Visibility
 import software.constructs.Construct
@@ -31,7 +35,7 @@ import software.constructs.Construct
  * import software.amazon.awscdk.services.events.*;
  * GraphqlApi api = GraphqlApi.Builder.create(this, "EventBridgeApi")
  * .name("EventBridgeApi")
- * .schema(SchemaFile.fromAsset(join(__dirname, "appsync.eventbridge.graphql")))
+ * .definition(Definition.fromFile(join(__dirname, "appsync.eventbridge.graphql")))
  * .build();
  * EventBus bus = EventBus.Builder.create(this, "DestinationEventBus").build();
  * EventBridgeDataSource dataSource = api.addEventBridgeDataSource("NoneDS", bus);
@@ -75,6 +79,15 @@ public class GraphqlApiDsl(
     }
 
     /**
+     * Definition (schema file or source APIs) for this GraphQL Api.
+     *
+     * @param definition Definition (schema file or source APIs) for this GraphQL Api.
+     */
+    public fun definition(definition: Definition) {
+        cdkBuilder.definition(definition)
+    }
+
+    /**
      * The domain name configuration for the GraphQL API.
      *
      * The Route 53 hosted zone and CName DNS record must be configured in addition to this setting
@@ -102,6 +115,37 @@ public class GraphqlApiDsl(
      */
     public fun domainName(domainName: DomainOptions) {
         cdkBuilder.domainName(domainName)
+    }
+
+    /**
+     * A map containing the list of resources with their properties and environment variables.
+     *
+     * There are a few rules you must follow when creating keys and values:
+     * * Keys must begin with a letter.
+     * * Keys must be between 2 and 64 characters long.
+     * * Keys can only contain letters, numbers, and the underscore character (_).
+     * * Values can be up to 512 characters long.
+     * * You can configure up to 50 key-value pairs in a GraphQL API.
+     *
+     * Default: - No environment variables.
+     *
+     * @param environmentVariables A map containing the list of resources with their properties and
+     *   environment variables.
+     */
+    public fun environmentVariables(environmentVariables: Map<String, String>) {
+        cdkBuilder.environmentVariables(environmentVariables)
+    }
+
+    /**
+     * A value indicating whether the API to enable (ENABLED) or disable (DISABLED) introspection.
+     *
+     * Default: IntrospectionConfig.ENABLED
+     *
+     * @param introspectionConfig A value indicating whether the API to enable (ENABLED) or disable
+     *   (DISABLED) introspection.
+     */
+    public fun introspectionConfig(introspectionConfig: IntrospectionConfig) {
+        cdkBuilder.introspectionConfig(introspectionConfig)
     }
 
     /**
@@ -138,14 +182,16 @@ public class GraphqlApiDsl(
     }
 
     /**
-     * GraphQL schema definition. Specify how you want to define your schema.
+     * (deprecated) GraphQL schema definition. Specify how you want to define your schema.
      *
      * SchemaFile.fromAsset(filePath: string) allows schema definition through schema.graphql file
      *
      * Default: - schema will be generated code-first (i.e. addType, addObjectType, etc.)
      *
      * @param schema GraphQL schema definition. Specify how you want to define your schema.
+     * @deprecated use Definition.schema instead
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun schema(schema: ISchema) {
         cdkBuilder.schema(schema)
     }

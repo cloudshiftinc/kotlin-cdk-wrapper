@@ -48,7 +48,7 @@ import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
  * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
  * .volumeSpecification(VolumeSpecificationProperty.builder()
  * .volumeSize(size)
- * .volumeType(EmrCreateCluster.getEbsBlockDeviceVolumeType().GP2)
+ * .volumeType(EmrCreateCluster.getEbsBlockDeviceVolumeType().GP3)
  * // the properties below are optional
  * .iops(123)
  * .build())
@@ -60,12 +60,16 @@ import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
  * .weightedCapacity(123)
  * .build()))
  * .launchSpecifications(InstanceFleetProvisioningSpecificationsProperty.builder()
+ * .onDemandSpecification(OnDemandProvisioningSpecificationProperty.builder()
+ * .allocationStrategy(EmrCreateCluster.getOnDemandAllocationStrategy().LOWEST_PRICE)
+ * .build())
  * .spotSpecification(SpotProvisioningSpecificationProperty.builder()
  * .timeoutAction(EmrCreateCluster.getSpotTimeoutAction().SWITCH_TO_ON_DEMAND)
- * .timeoutDurationMinutes(123)
  * // the properties below are optional
  * .allocationStrategy(EmrCreateCluster.getSpotAllocationStrategy().CAPACITY_OPTIMIZED)
  * .blockDurationMinutes(123)
+ * .timeout(Duration.minutes(30))
+ * .timeoutDurationMinutes(123)
  * .build())
  * .build())
  * .name("name")
@@ -139,7 +143,12 @@ public class EmrCreateClusterInstanceFleetConfigPropertyDsl {
 
     /**
      * @param targetOnDemandCapacity The target capacity of On-Demand units for the instance fleet,
-     *   which determines how many On-Demand instances to provision.
+     *   which determines how many On-Demand instances to provision. If not specified or set to 0,
+     *   only Spot Instances are provisioned for the instance fleet using `targetSpotCapacity`.
+     *
+     * At least one of `targetSpotCapacity` and `targetOnDemandCapacity` should be greater than 0.
+     * For a master instance fleet, only one of `targetSpotCapacity` and `targetOnDemandCapacity`
+     * can be specified, and its value must be 1.
      */
     public fun targetOnDemandCapacity(targetOnDemandCapacity: Number) {
         cdkBuilder.targetOnDemandCapacity(targetOnDemandCapacity)
@@ -147,7 +156,12 @@ public class EmrCreateClusterInstanceFleetConfigPropertyDsl {
 
     /**
      * @param targetSpotCapacity The target capacity of Spot units for the instance fleet, which
-     *   determines how many Spot instances to provision.
+     *   determines how many Spot instances to provision. If not specified or set to 0, only
+     *   On-Demand Instances are provisioned for the instance fleet using `targetOnDemandCapacity`.
+     *
+     * At least one of `targetSpotCapacity` and `targetOnDemandCapacity` should be greater than 0.
+     * For a master instance fleet, only one of `targetSpotCapacity` and `targetOnDemandCapacity`
+     * can be specified, and its value must be 1.
      */
     public fun targetSpotCapacity(targetSpotCapacity: Number) {
         cdkBuilder.targetSpotCapacity(targetSpotCapacity)

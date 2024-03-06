@@ -28,8 +28,9 @@ import software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.s3objectlambda.*;
  * AliasProperty aliasProperty = AliasProperty.builder()
- * .status("status")
  * .value("value")
+ * // the properties below are optional
+ * .status("status")
  * .build();
  * ```
  *

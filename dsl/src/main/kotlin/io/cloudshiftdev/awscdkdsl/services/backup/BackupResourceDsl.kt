@@ -40,7 +40,7 @@ import software.constructs.Construct
  * "ServerlessCluster")
  * .engine(DatabaseClusterEngine.AURORA_POSTGRESQL)
  * .parameterGroup(ParameterGroup.fromParameterGroupName(this, "ParameterGroup",
- * "default.aurora-postgresql10"))
+ * "default.aurora-postgresql11"))
  * .vpc(vpc)
  * .build();
  * Construct myCoolConstruct = new Construct(this, "MyCoolConstruct");
