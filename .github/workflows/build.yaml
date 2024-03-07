@@ -12,6 +12,11 @@ jobs:
   build:
     runs-on:
     - 'Large_Runner'
+    permissions:
+      id-token: write
+      contents: write
+      checks: write
+      statuses: write
     steps:
     # https://github.com/hmarr/debug-action
     - uses: 'hmarr/debug-action@cd1afbd7852b7ad7b1b7a9a1b03efebd3b0a1820' # v3.0.0
