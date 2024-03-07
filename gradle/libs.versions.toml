@@ -35,7 +35,7 @@ kotest-extensions-spring = { module = "io.kotest.extensions:kotest-extensions-sp
 #
 #
 
-asm-bom = { module = "org.ow2.asm:asm-bom", version = "9.5" }
+asm-bom = { module = "org.ow2.asm:asm-bom", version = "9.6" }
 asm-core = { module = "org.ow2.asm:asm" }
 asm-tree = { module = "org.ow2.asm:asm-tree" }
 asm-util = { module = "org.ow2.asm:asm-util" }
