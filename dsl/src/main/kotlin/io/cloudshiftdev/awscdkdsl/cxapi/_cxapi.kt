@@ -11,6 +11,8 @@
 
 package io.cloudshiftdev.awscdkdsl.cxapi
 
+import io.cloudshiftdev.awscdkdsl.cloudassembly.schema.ArtifactManifestDsl
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.cxapi.AssemblyBuildOptions
@@ -699,5 +701,35 @@ public object cxapi {
         val builder = VpcSubnetGroupDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object CloudArtifact {
+        public fun fromManifest(
+            assembly: CloudAssembly,
+            id: String,
+            block: ArtifactManifestDsl.() -> Unit = {},
+        ): software.amazon.awscdk.cxapi.CloudArtifact? {
+            val builder = ArtifactManifestDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.cxapi.CloudArtifact.fromManifest(
+                assembly,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object EnvironmentPlaceholders {
+        public fun replace(
+            `object`: Any,
+            block: EnvironmentPlaceholderValuesDsl.() -> Unit = {}
+        ): Any {
+            val builder = EnvironmentPlaceholderValuesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.cxapi.EnvironmentPlaceholders.replace(
+                `object`,
+                builder.build()
+            )
+        }
     }
 }

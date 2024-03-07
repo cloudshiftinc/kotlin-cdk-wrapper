@@ -34,22 +34,22 @@ import software.amazon.awscdk.services.servicediscovery.CnameInstanceProps
 import software.amazon.awscdk.services.servicediscovery.DnsServiceProps
 import software.amazon.awscdk.services.servicediscovery.HealthCheckConfig
 import software.amazon.awscdk.services.servicediscovery.HealthCheckCustomConfig
-import software.amazon.awscdk.services.servicediscovery.HttpNamespace
 import software.amazon.awscdk.services.servicediscovery.HttpNamespaceAttributes
 import software.amazon.awscdk.services.servicediscovery.HttpNamespaceProps
+import software.amazon.awscdk.services.servicediscovery.IHttpNamespace
+import software.amazon.awscdk.services.servicediscovery.IPrivateDnsNamespace
+import software.amazon.awscdk.services.servicediscovery.IPublicDnsNamespace
+import software.amazon.awscdk.services.servicediscovery.IService
 import software.amazon.awscdk.services.servicediscovery.IpInstance
 import software.amazon.awscdk.services.servicediscovery.IpInstanceBaseProps
 import software.amazon.awscdk.services.servicediscovery.IpInstanceProps
 import software.amazon.awscdk.services.servicediscovery.NonIpInstance
 import software.amazon.awscdk.services.servicediscovery.NonIpInstanceBaseProps
 import software.amazon.awscdk.services.servicediscovery.NonIpInstanceProps
-import software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespace
 import software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespaceAttributes
 import software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespaceProps
-import software.amazon.awscdk.services.servicediscovery.PublicDnsNamespace
 import software.amazon.awscdk.services.servicediscovery.PublicDnsNamespaceAttributes
 import software.amazon.awscdk.services.servicediscovery.PublicDnsNamespaceProps
-import software.amazon.awscdk.services.servicediscovery.Service
 import software.amazon.awscdk.services.servicediscovery.ServiceAttributes
 import software.amazon.awscdk.services.servicediscovery.ServiceProps
 import software.constructs.Construct
@@ -1148,7 +1148,7 @@ public object servicediscovery {
         scope: Construct,
         id: String,
         block: HttpNamespaceDsl.() -> Unit = {},
-    ): HttpNamespace {
+    ): software.amazon.awscdk.services.servicediscovery.HttpNamespace {
         val builder = HttpNamespaceDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -1426,7 +1426,7 @@ public object servicediscovery {
         scope: Construct,
         id: String,
         block: PrivateDnsNamespaceDsl.() -> Unit = {},
-    ): PrivateDnsNamespace {
+    ): software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespace {
         val builder = PrivateDnsNamespaceDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -1519,7 +1519,7 @@ public object servicediscovery {
         scope: Construct,
         id: String,
         block: PublicDnsNamespaceDsl.() -> Unit = {},
-    ): PublicDnsNamespace {
+    ): software.amazon.awscdk.services.servicediscovery.PublicDnsNamespace {
         val builder = PublicDnsNamespaceDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -1615,7 +1615,7 @@ public object servicediscovery {
         scope: Construct,
         id: String,
         block: ServiceDsl.() -> Unit = {},
-    ): Service {
+    ): software.amazon.awscdk.services.servicediscovery.Service {
         val builder = ServiceDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -1681,5 +1681,60 @@ public object servicediscovery {
         val builder = ServicePropsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object HttpNamespace {
+        public fun fromHttpNamespaceAttributes(
+            scope: Construct,
+            id: String,
+            block: HttpNamespaceAttributesDsl.() -> Unit = {},
+        ): IHttpNamespace {
+            val builder = HttpNamespaceAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.servicediscovery.HttpNamespace
+                .fromHttpNamespaceAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object PrivateDnsNamespace {
+        public fun fromPrivateDnsNamespaceAttributes(
+            scope: Construct,
+            id: String,
+            block: PrivateDnsNamespaceAttributesDsl.() -> Unit = {},
+        ): IPrivateDnsNamespace {
+            val builder = PrivateDnsNamespaceAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespace
+                .fromPrivateDnsNamespaceAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object PublicDnsNamespace {
+        public fun fromPublicDnsNamespaceAttributes(
+            scope: Construct,
+            id: String,
+            block: PublicDnsNamespaceAttributesDsl.() -> Unit = {},
+        ): IPublicDnsNamespace {
+            val builder = PublicDnsNamespaceAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.servicediscovery.PublicDnsNamespace
+                .fromPublicDnsNamespaceAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object Service {
+        public fun fromServiceAttributes(
+            scope: Construct,
+            id: String,
+            block: ServiceAttributesDsl.() -> Unit = {},
+        ): IService {
+            val builder = ServiceAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.servicediscovery.Service.fromServiceAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
     }
 }

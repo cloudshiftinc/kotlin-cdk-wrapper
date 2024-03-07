@@ -1410,4 +1410,16 @@ public object applicationautoscaling {
         builder.apply(block)
         return builder.build()
     }
+
+    public object Schedule {
+        public fun cron(
+            block: CronOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.applicationautoscaling.Schedule {
+            val builder = CronOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.applicationautoscaling.Schedule.cron(
+                builder.build()
+            )
+        }
+    }
 }

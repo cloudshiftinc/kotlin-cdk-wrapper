@@ -11,6 +11,7 @@
 
 package io.cloudshiftdev.awscdkdsl.services.synthetics
 
+import io.cloudshiftdev.awscdkdsl.services.s3.assets.AssetOptionsDsl
 import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.synthetics.ArtifactsBucketLocation
@@ -711,5 +712,36 @@ public object synthetics {
         val builder = CustomTestOptionsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object Code {
+        public fun fromAsset(assetPath: String, block: AssetOptionsDsl.() -> Unit = {}): AssetCode {
+            val builder = AssetOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.synthetics.Code.fromAsset(
+                assetPath,
+                builder.build()
+            )
+        }
+    }
+
+    public object Schedule {
+        public fun cron(
+            block: CronOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.synthetics.Schedule {
+            val builder = CronOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.synthetics.Schedule.cron(builder.build())
+        }
+    }
+
+    public object Test {
+        public fun custom(
+            block: CustomTestOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.synthetics.Test {
+            val builder = CustomTestOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.synthetics.Test.custom(builder.build())
+        }
     }
 }

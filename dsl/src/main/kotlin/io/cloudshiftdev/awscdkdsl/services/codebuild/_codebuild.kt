@@ -11,6 +11,7 @@
 
 package io.cloudshiftdev.awscdkdsl.services.codebuild
 
+import io.cloudshiftdev.awscdkdsl.services.ecr.assets.DockerImageAssetPropsDsl
 import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.codebuild.ArtifactsConfig
@@ -46,6 +47,10 @@ import software.amazon.awscdk.services.codebuild.GitHubEnterpriseSourceProps
 import software.amazon.awscdk.services.codebuild.GitHubSourceCredentials
 import software.amazon.awscdk.services.codebuild.GitHubSourceCredentialsProps
 import software.amazon.awscdk.services.codebuild.GitHubSourceProps
+import software.amazon.awscdk.services.codebuild.IArtifacts
+import software.amazon.awscdk.services.codebuild.IBuildImage
+import software.amazon.awscdk.services.codebuild.IFileSystemLocation
+import software.amazon.awscdk.services.codebuild.ISource
 import software.amazon.awscdk.services.codebuild.LoggingOptions
 import software.amazon.awscdk.services.codebuild.PipelineProject
 import software.amazon.awscdk.services.codebuild.PipelineProjectProps
@@ -61,6 +66,7 @@ import software.amazon.awscdk.services.codebuild.SourceConfig
 import software.amazon.awscdk.services.codebuild.SourceProps
 import software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicy
 import software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicyProps
+import software.amazon.awscdk.services.s3.IBucket
 import software.constructs.Construct
 
 public object codebuild {
@@ -2513,5 +2519,138 @@ public object codebuild {
         val builder = UntrustedCodeBoundaryPolicyPropsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object Artifacts {
+        public fun s3(block: S3ArtifactsPropsDsl.() -> Unit = {}): IArtifacts {
+            val builder = S3ArtifactsPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.codebuild.Artifacts.s3(builder.build())
+        }
+    }
+
+    public object Cache {
+        public fun bucket(
+            bucket: IBucket,
+            block: BucketCacheOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.codebuild.Cache {
+            val builder = BucketCacheOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.codebuild.Cache.bucket(bucket, builder.build())
+        }
+    }
+
+    public object FileSystemLocation {
+        public fun efs(block: EfsFileSystemLocationPropsDsl.() -> Unit = {}): IFileSystemLocation {
+            val builder = EfsFileSystemLocationPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.codebuild.FileSystemLocation.efs(builder.build())
+        }
+    }
+
+    public object LinuxArmBuildImage {
+        public fun fromDockerRegistry(
+            name: String,
+            block: DockerImageOptionsDsl.() -> Unit = {}
+        ): IBuildImage {
+            val builder = DockerImageOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.codebuild.LinuxArmBuildImage.fromDockerRegistry(
+                name,
+                builder.build()
+            )
+        }
+    }
+
+    public object LinuxBuildImage {
+        public fun fromAsset(
+            scope: Construct,
+            id: String,
+            block: DockerImageAssetPropsDsl.() -> Unit = {},
+        ): IBuildImage {
+            val builder = DockerImageAssetPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.codebuild.LinuxBuildImage.fromAsset(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+
+        public fun fromDockerRegistry(
+            name: String,
+            block: DockerImageOptionsDsl.() -> Unit = {}
+        ): IBuildImage {
+            val builder = DockerImageOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.codebuild.LinuxBuildImage.fromDockerRegistry(
+                name,
+                builder.build()
+            )
+        }
+    }
+
+    public object Source {
+        public fun bitBucket(block: BitBucketSourcePropsDsl.() -> Unit = {}): ISource {
+            val builder = BitBucketSourcePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.codebuild.Source.bitBucket(builder.build())
+        }
+
+        public fun codeCommit(block: CodeCommitSourcePropsDsl.() -> Unit = {}): ISource {
+            val builder = CodeCommitSourcePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.codebuild.Source.codeCommit(builder.build())
+        }
+
+        public fun gitHub(block: GitHubSourcePropsDsl.() -> Unit = {}): ISource {
+            val builder = GitHubSourcePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.codebuild.Source.gitHub(builder.build())
+        }
+
+        public fun gitHubEnterprise(
+            block: GitHubEnterpriseSourcePropsDsl.() -> Unit = {}
+        ): ISource {
+            val builder = GitHubEnterpriseSourcePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.codebuild.Source.gitHubEnterprise(
+                builder.build()
+            )
+        }
+
+        public fun s3(block: S3SourcePropsDsl.() -> Unit = {}): ISource {
+            val builder = S3SourcePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.codebuild.Source.s3(builder.build())
+        }
+    }
+
+    public object WindowsBuildImage {
+        public fun fromAsset(
+            scope: Construct,
+            id: String,
+            block: DockerImageAssetPropsDsl.() -> Unit = {},
+        ): IBuildImage {
+            val builder = DockerImageAssetPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.codebuild.WindowsBuildImage.fromAsset(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+
+        public fun fromDockerRegistry(
+            name: String,
+            block: DockerImageOptionsDsl.() -> Unit = {}
+        ): IBuildImage {
+            val builder = DockerImageOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.codebuild.WindowsBuildImage.fromDockerRegistry(
+                name,
+                builder.build()
+            )
+        }
     }
 }

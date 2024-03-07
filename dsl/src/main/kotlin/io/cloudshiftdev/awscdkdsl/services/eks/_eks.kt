@@ -13,7 +13,6 @@ package io.cloudshiftdev.awscdkdsl.services.eks
 
 import kotlin.String
 import kotlin.Unit
-import software.amazon.awscdk.services.eks.AlbController
 import software.amazon.awscdk.services.eks.AlbControllerOptions
 import software.amazon.awscdk.services.eks.AlbControllerProps
 import software.amazon.awscdk.services.eks.AutoScalingGroupCapacityOptions
@@ -36,7 +35,6 @@ import software.amazon.awscdk.services.eks.CfnNodegroup
 import software.amazon.awscdk.services.eks.CfnNodegroupProps
 import software.amazon.awscdk.services.eks.CfnPodIdentityAssociation
 import software.amazon.awscdk.services.eks.CfnPodIdentityAssociationProps
-import software.amazon.awscdk.services.eks.Cluster
 import software.amazon.awscdk.services.eks.ClusterAttributes
 import software.amazon.awscdk.services.eks.ClusterOptions
 import software.amazon.awscdk.services.eks.ClusterProps
@@ -51,8 +49,9 @@ import software.amazon.awscdk.services.eks.FargateProfileProps
 import software.amazon.awscdk.services.eks.HelmChart
 import software.amazon.awscdk.services.eks.HelmChartOptions
 import software.amazon.awscdk.services.eks.HelmChartProps
+import software.amazon.awscdk.services.eks.ICluster
+import software.amazon.awscdk.services.eks.IKubectlProvider
 import software.amazon.awscdk.services.eks.IngressLoadBalancerAddressOptions
-import software.amazon.awscdk.services.eks.KubectlProvider
 import software.amazon.awscdk.services.eks.KubectlProviderAttributes
 import software.amazon.awscdk.services.eks.KubectlProviderProps
 import software.amazon.awscdk.services.eks.KubernetesManifest
@@ -107,7 +106,7 @@ public object eks {
         scope: Construct,
         id: String,
         block: AlbControllerDsl.() -> Unit = {},
-    ): AlbController {
+    ): software.amazon.awscdk.services.eks.AlbController {
         val builder = AlbControllerDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -1690,7 +1689,7 @@ public object eks {
         scope: Construct,
         id: String,
         block: ClusterDsl.() -> Unit = {},
-    ): Cluster {
+    ): software.amazon.awscdk.services.eks.Cluster {
         val builder = ClusterDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -2150,7 +2149,7 @@ public object eks {
         scope: Construct,
         id: String,
         block: KubectlProviderDsl.() -> Unit = {},
-    ): KubectlProvider {
+    ): software.amazon.awscdk.services.eks.KubectlProvider {
         val builder = KubectlProviderDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -2875,5 +2874,45 @@ public object eks {
         val builder = TaintSpecDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object AlbController {
+        public fun create(
+            scope: Construct,
+            block: AlbControllerPropsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.eks.AlbController {
+            val builder = AlbControllerPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.eks.AlbController.create(scope, builder.build())
+        }
+    }
+
+    public object Cluster {
+        public fun fromClusterAttributes(
+            scope: Construct,
+            id: String,
+            block: ClusterAttributesDsl.() -> Unit = {},
+        ): ICluster {
+            val builder = ClusterAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.eks.Cluster.fromClusterAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object KubectlProvider {
+        public fun fromKubectlProviderAttributes(
+            scope: Construct,
+            id: String,
+            block: KubectlProviderAttributesDsl.() -> Unit = {},
+        ): IKubectlProvider {
+            val builder = KubectlProviderAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.eks.KubectlProvider
+                .fromKubectlProviderAttributes(scope, id, builder.build())
+        }
     }
 }

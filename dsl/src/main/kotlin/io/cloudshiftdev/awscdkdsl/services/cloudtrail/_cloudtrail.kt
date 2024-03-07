@@ -11,6 +11,7 @@
 
 package io.cloudshiftdev.awscdkdsl.services.cloudtrail
 
+import io.cloudshiftdev.awscdkdsl.services.events.OnEventOptionsDsl
 import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.cloudtrail.AddEventSelectorOptions
@@ -23,8 +24,8 @@ import software.amazon.awscdk.services.cloudtrail.CfnResourcePolicyProps
 import software.amazon.awscdk.services.cloudtrail.CfnTrail
 import software.amazon.awscdk.services.cloudtrail.CfnTrailProps
 import software.amazon.awscdk.services.cloudtrail.S3EventSelector
-import software.amazon.awscdk.services.cloudtrail.Trail
 import software.amazon.awscdk.services.cloudtrail.TrailProps
+import software.amazon.awscdk.services.events.Rule
 import software.constructs.Construct
 
 public object cloudtrail {
@@ -824,7 +825,7 @@ public object cloudtrail {
         scope: Construct,
         id: String,
         block: TrailDsl.() -> Unit = {},
-    ): Trail {
+    ): software.amazon.awscdk.services.cloudtrail.Trail {
         val builder = TrailDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -845,5 +846,21 @@ public object cloudtrail {
         val builder = TrailPropsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object Trail {
+        public fun onEvent(
+            scope: Construct,
+            id: String,
+            block: OnEventOptionsDsl.() -> Unit = {},
+        ): Rule {
+            val builder = OnEventOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.cloudtrail.Trail.onEvent(
+                scope,
+                id,
+                builder.build()
+            )
+        }
     }
 }

@@ -4,7 +4,6 @@ import cloudshift.awscdkdsl.build.dsl.asm.AsmClassLoader
 import com.squareup.kotlinpoet.AnnotationSpec
 import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.FileSpec
-import com.squareup.kotlinpoet.TypeSpec
 import java.io.File
 import javax.inject.Inject
 import org.gradle.api.DefaultTask
@@ -55,6 +54,7 @@ constructor(
             includeEmptyDirs = false
         }
 
+        logger.lifecycle("Parsing sources...")
         val cdkSourceModel = SourceParser.parse(sourcesDir)
 
         fs.delete { delete(dslDir) }
@@ -71,26 +71,13 @@ constructor(
         BuilderGenerator.generate(cdkModel.builders).forEach { it.writeTo(outDir) }
 
         logger.lifecycle("Generating namespace objects...")
-        writeObjects(NamespaceObjectGenerator().generate(cdkModel.builders))
+        NamespaceObjectGenerator().generate(cdkModel).forEach { it.writeTo(outDir) }
 
         logger.lifecycle("Generating extension functions...")
         writeExtensionFunctions(
             BuildableLastArgumentExtensionGenerator().generate(cdkModel),
             "_BuildableLastArgumentExtensions"
         )
-    }
-
-    private fun writeObjects(
-        functionMap: Map<ClassName, List<NamespaceObjectGenerator.NamespacedBuilderFunction>>
-    ) {
-        functionMap.forEach { (objectName, builderFunctions) ->
-            val builder = FileSpec.builder(objectName.packageName, "_${objectName.simpleName}")
-            builder.suppressWarningTypes(SUPPRESSIONS)
-            val objectBuilder = TypeSpec.objectBuilder(objectName)
-            builderFunctions.forEach { builderFn -> objectBuilder.addFunction(builderFn.funSpec) }
-            builder.addType(objectBuilder.build())
-            builder.build().writeTo(dslDir.get().asFile)
-        }
     }
 
     private fun writeExtensionFunctions(

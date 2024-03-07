@@ -13,6 +13,8 @@ package io.cloudshiftdev.awscdkdsl.pipelines
 
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
+import software.amazon.awscdk.Stage
 import software.amazon.awscdk.pipelines.AddStageOpts
 import software.amazon.awscdk.pipelines.CodeBuildOptions
 import software.amazon.awscdk.pipelines.CodeBuildStep
@@ -43,6 +45,10 @@ import software.amazon.awscdk.pipelines.StageDeploymentProps
 import software.amazon.awscdk.pipelines.Wave
 import software.amazon.awscdk.pipelines.WaveOptions
 import software.amazon.awscdk.pipelines.WaveProps
+import software.amazon.awscdk.services.codecommit.IRepository as CodecommitIRepository
+import software.amazon.awscdk.services.ecr.IRepository as EcrIRepository
+import software.amazon.awscdk.services.s3.IBucket
+import software.amazon.awscdk.services.secretsmanager.ISecret
 import software.constructs.Construct
 
 public object pipelines {
@@ -968,5 +974,129 @@ public object pipelines {
         val builder = WavePropsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object CodePipelineSource {
+        public fun codeCommit(
+            repository: CodecommitIRepository,
+            branch: String,
+            block: CodeCommitSourceOptionsDsl.() -> Unit = {},
+        ): software.amazon.awscdk.pipelines.CodePipelineSource {
+            val builder = CodeCommitSourceOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.pipelines.CodePipelineSource.codeCommit(
+                repository,
+                branch,
+                builder.build()
+            )
+        }
+
+        public fun connection(
+            repoString: String,
+            branch: String,
+            block: ConnectionSourceOptionsDsl.() -> Unit = {},
+        ): software.amazon.awscdk.pipelines.CodePipelineSource {
+            val builder = ConnectionSourceOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.pipelines.CodePipelineSource.connection(
+                repoString,
+                branch,
+                builder.build()
+            )
+        }
+
+        public fun ecr(
+            repository: EcrIRepository,
+            block: ECRSourceOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.pipelines.CodePipelineSource {
+            val builder = ECRSourceOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.pipelines.CodePipelineSource.ecr(
+                repository,
+                builder.build()
+            )
+        }
+
+        public fun gitHub(
+            repoString: String,
+            branch: String,
+            block: GitHubSourceOptionsDsl.() -> Unit = {},
+        ): software.amazon.awscdk.pipelines.CodePipelineSource {
+            val builder = GitHubSourceOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.pipelines.CodePipelineSource.gitHub(
+                repoString,
+                branch,
+                builder.build()
+            )
+        }
+
+        public fun s3(
+            bucket: IBucket,
+            objectKey: String,
+            block: S3SourceOptionsDsl.() -> Unit = {},
+        ): software.amazon.awscdk.pipelines.CodePipelineSource {
+            val builder = S3SourceOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.pipelines.CodePipelineSource.s3(
+                bucket,
+                objectKey,
+                builder.build()
+            )
+        }
+    }
+
+    public object DockerCredential {
+        public fun customRegistry(
+            registryDomain: String,
+            secret: ISecret,
+            block: ExternalDockerCredentialOptionsDsl.() -> Unit = {},
+        ): software.amazon.awscdk.pipelines.DockerCredential {
+            val builder = ExternalDockerCredentialOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.pipelines.DockerCredential.customRegistry(
+                registryDomain,
+                secret,
+                builder.build()
+            )
+        }
+
+        public fun dockerHub(
+            secret: ISecret,
+            block: ExternalDockerCredentialOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.pipelines.DockerCredential {
+            val builder = ExternalDockerCredentialOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.pipelines.DockerCredential.dockerHub(
+                secret,
+                builder.build()
+            )
+        }
+
+        public fun ecr(
+            repositories: List<EcrIRepository>,
+            block: EcrDockerCredentialOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.pipelines.DockerCredential {
+            val builder = EcrDockerCredentialOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.pipelines.DockerCredential.ecr(
+                repositories,
+                builder.build()
+            )
+        }
+    }
+
+    public object StageDeployment {
+        public fun fromStage(
+            stage: Stage,
+            block: StageDeploymentPropsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.pipelines.StageDeployment {
+            val builder = StageDeploymentPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.pipelines.StageDeployment.fromStage(
+                stage,
+                builder.build()
+            )
+        }
     }
 }

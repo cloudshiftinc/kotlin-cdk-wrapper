@@ -11,6 +11,7 @@
 
 package io.cloudshiftdev.awscdkdsl.services.stepfunctions.tasks
 
+import io.cloudshiftdev.awscdkdsl.services.ecr.assets.DockerImageAssetPropsDsl
 import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.stepfunctions.tasks.AlgorithmSpecification
@@ -5031,5 +5032,21 @@ public object tasks {
         val builder = VpcConfigDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object DockerImage {
+        public fun fromAsset(
+            scope: Construct,
+            id: String,
+            block: DockerImageAssetPropsDsl.() -> Unit = {},
+        ): software.amazon.awscdk.services.stepfunctions.tasks.DockerImage {
+            val builder = DockerImageAssetPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.stepfunctions.tasks.DockerImage.fromAsset(
+                scope,
+                id,
+                builder.build()
+            )
+        }
     }
 }

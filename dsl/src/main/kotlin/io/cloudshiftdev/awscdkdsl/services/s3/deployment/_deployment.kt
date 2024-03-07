@@ -11,6 +11,7 @@
 
 package io.cloudshiftdev.awscdkdsl.services.s3.deployment
 
+import io.cloudshiftdev.awscdkdsl.services.s3.assets.AssetOptionsDsl
 import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
@@ -19,6 +20,7 @@ import software.amazon.awscdk.services.s3.deployment.BucketDeploymentProps
 import software.amazon.awscdk.services.s3.deployment.DeployTimeSubstitutedFile
 import software.amazon.awscdk.services.s3.deployment.DeployTimeSubstitutedFileProps
 import software.amazon.awscdk.services.s3.deployment.DeploymentSourceContext
+import software.amazon.awscdk.services.s3.deployment.ISource
 import software.amazon.awscdk.services.s3.deployment.SourceConfig
 import software.amazon.awscdk.services.s3.deployment.UserDefinedObjectMetadata
 import software.constructs.Construct
@@ -207,5 +209,13 @@ public object deployment {
         val builder = UserDefinedObjectMetadataDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object Source {
+        public fun asset(path: String, block: AssetOptionsDsl.() -> Unit = {}): ISource {
+            val builder = AssetOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.s3.deployment.Source.asset(path, builder.build())
+        }
     }
 }

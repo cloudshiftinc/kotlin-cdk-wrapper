@@ -26,14 +26,14 @@ import software.amazon.awscdk.services.docdb.CfnEventSubscription
 import software.amazon.awscdk.services.docdb.CfnEventSubscriptionProps
 import software.amazon.awscdk.services.docdb.ClusterParameterGroup
 import software.amazon.awscdk.services.docdb.ClusterParameterGroupProps
-import software.amazon.awscdk.services.docdb.DatabaseCluster
 import software.amazon.awscdk.services.docdb.DatabaseClusterAttributes
 import software.amazon.awscdk.services.docdb.DatabaseClusterProps
-import software.amazon.awscdk.services.docdb.DatabaseInstance
 import software.amazon.awscdk.services.docdb.DatabaseInstanceAttributes
 import software.amazon.awscdk.services.docdb.DatabaseInstanceProps
 import software.amazon.awscdk.services.docdb.DatabaseSecret
 import software.amazon.awscdk.services.docdb.DatabaseSecretProps
+import software.amazon.awscdk.services.docdb.IDatabaseCluster
+import software.amazon.awscdk.services.docdb.IDatabaseInstance
 import software.amazon.awscdk.services.docdb.Login
 import software.amazon.awscdk.services.docdb.RotationMultiUserOptions
 import software.constructs.Construct
@@ -566,7 +566,7 @@ public object docdb {
         scope: Construct,
         id: String,
         block: DatabaseClusterDsl.() -> Unit = {},
-    ): DatabaseCluster {
+    ): software.amazon.awscdk.services.docdb.DatabaseCluster {
         val builder = DatabaseClusterDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -658,7 +658,7 @@ public object docdb {
         scope: Construct,
         id: String,
         block: DatabaseInstanceDsl.() -> Unit = {},
-    ): DatabaseInstance {
+    ): software.amazon.awscdk.services.docdb.DatabaseInstance {
         val builder = DatabaseInstanceDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -816,5 +816,31 @@ public object docdb {
         val builder = RotationMultiUserOptionsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object DatabaseCluster {
+        public fun fromDatabaseClusterAttributes(
+            scope: Construct,
+            id: String,
+            block: DatabaseClusterAttributesDsl.() -> Unit = {},
+        ): IDatabaseCluster {
+            val builder = DatabaseClusterAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.docdb.DatabaseCluster
+                .fromDatabaseClusterAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object DatabaseInstance {
+        public fun fromDatabaseInstanceAttributes(
+            scope: Construct,
+            id: String,
+            block: DatabaseInstanceAttributesDsl.() -> Unit = {},
+        ): IDatabaseInstance {
+            val builder = DatabaseInstanceAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.docdb.DatabaseInstance
+                .fromDatabaseInstanceAttributes(scope, id, builder.build())
+        }
     }
 }

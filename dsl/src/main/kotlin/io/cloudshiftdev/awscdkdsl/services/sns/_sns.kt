@@ -770,4 +770,26 @@ public object sns {
         builder.apply(block)
         return builder.build()
     }
+
+    public object SubscriptionFilter {
+        public fun numericFilter(
+            block: NumericConditionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.sns.SubscriptionFilter {
+            val builder = NumericConditionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.sns.SubscriptionFilter.numericFilter(
+                builder.build()
+            )
+        }
+
+        public fun stringFilter(
+            block: StringConditionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.sns.SubscriptionFilter {
+            val builder = StringConditionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.sns.SubscriptionFilter.stringFilter(
+                builder.build()
+            )
+        }
+    }
 }

@@ -13,7 +13,6 @@ package io.cloudshiftdev.awscdkdsl.services.kms
 
 import kotlin.String
 import kotlin.Unit
-import software.amazon.awscdk.services.kms.Alias
 import software.amazon.awscdk.services.kms.AliasAttributes
 import software.amazon.awscdk.services.kms.AliasProps
 import software.amazon.awscdk.services.kms.CfnAlias
@@ -22,7 +21,8 @@ import software.amazon.awscdk.services.kms.CfnKey
 import software.amazon.awscdk.services.kms.CfnKeyProps
 import software.amazon.awscdk.services.kms.CfnReplicaKey
 import software.amazon.awscdk.services.kms.CfnReplicaKeyProps
-import software.amazon.awscdk.services.kms.Key
+import software.amazon.awscdk.services.kms.IAlias
+import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.kms.KeyLookupOptions
 import software.amazon.awscdk.services.kms.KeyProps
 import software.constructs.Construct
@@ -64,7 +64,7 @@ public object kms {
         scope: Construct,
         id: String,
         block: AliasDsl.() -> Unit = {},
-    ): Alias {
+    ): software.amazon.awscdk.services.kms.Alias {
         val builder = AliasDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -450,7 +450,7 @@ public object kms {
         scope: Construct,
         id: String,
         block: KeyDsl.() -> Unit = {},
-    ): Key {
+    ): software.amazon.awscdk.services.kms.Key {
         val builder = KeyDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -506,5 +506,33 @@ public object kms {
         val builder = KeyPropsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object Alias {
+        public fun fromAliasAttributes(
+            scope: Construct,
+            id: String,
+            block: AliasAttributesDsl.() -> Unit = {},
+        ): IAlias {
+            val builder = AliasAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.kms.Alias.fromAliasAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object Key {
+        public fun fromLookup(
+            scope: Construct,
+            id: String,
+            block: KeyLookupOptionsDsl.() -> Unit = {},
+        ): IKey {
+            val builder = KeyLookupOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.kms.Key.fromLookup(scope, id, builder.build())
+        }
     }
 }

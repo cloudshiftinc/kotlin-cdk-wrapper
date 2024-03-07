@@ -97,7 +97,7 @@ internal class AsmMethodAdapter(
                         .parseAsMethodSignature(delegate.signature)
                         .returnType
                         .toTypeName()
-            }
+            }.copy(nullable = annotations.any { it.toString().lowercase().contains("nullable") })
         }
     override val comment: String?
         get() {

@@ -11,10 +11,14 @@
 
 package io.cloudshiftdev.awscdkdsl.services.ecs
 
+import io.cloudshiftdev.awscdkdsl.services.elasticloadbalancingv2.AddApplicationTargetsPropsDsl
+import io.cloudshiftdev.awscdkdsl.services.elasticloadbalancingv2.AddNetworkTargetsPropsDsl
+import io.cloudshiftdev.awscdkdsl.services.s3.assets.AssetOptionsDsl
 import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.ecs.AddAutoScalingGroupCapacityOptions
 import software.amazon.awscdk.services.ecs.AddCapacityOptions
+import software.amazon.awscdk.services.ecs.AmiHardwareType
 import software.amazon.awscdk.services.ecs.AppMeshProxyConfiguration
 import software.amazon.awscdk.services.ecs.AppMeshProxyConfigurationConfigProps
 import software.amazon.awscdk.services.ecs.AppMeshProxyConfigurationProps
@@ -50,7 +54,6 @@ import software.amazon.awscdk.services.ecs.CfnTaskSet
 import software.amazon.awscdk.services.ecs.CfnTaskSetProps
 import software.amazon.awscdk.services.ecs.CloudMapNamespaceOptions
 import software.amazon.awscdk.services.ecs.CloudMapOptions
-import software.amazon.awscdk.services.ecs.Cluster
 import software.amazon.awscdk.services.ecs.ClusterAttributes
 import software.amazon.awscdk.services.ecs.ClusterProps
 import software.amazon.awscdk.services.ecs.CommonTaskDefinitionAttributes
@@ -70,10 +73,8 @@ import software.amazon.awscdk.services.ecs.DeploymentController
 import software.amazon.awscdk.services.ecs.Device
 import software.amazon.awscdk.services.ecs.DockerVolumeConfiguration
 import software.amazon.awscdk.services.ecs.EBSTagSpecification
-import software.amazon.awscdk.services.ecs.Ec2Service
 import software.amazon.awscdk.services.ecs.Ec2ServiceAttributes
 import software.amazon.awscdk.services.ecs.Ec2ServiceProps
-import software.amazon.awscdk.services.ecs.Ec2TaskDefinition
 import software.amazon.awscdk.services.ecs.Ec2TaskDefinitionAttributes
 import software.amazon.awscdk.services.ecs.Ec2TaskDefinitionProps
 import software.amazon.awscdk.services.ecs.EcsOptimizedImageOptions
@@ -82,16 +83,12 @@ import software.amazon.awscdk.services.ecs.EfsVolumeConfiguration
 import software.amazon.awscdk.services.ecs.EnvironmentFileConfig
 import software.amazon.awscdk.services.ecs.ExecuteCommandConfiguration
 import software.amazon.awscdk.services.ecs.ExecuteCommandLogConfiguration
-import software.amazon.awscdk.services.ecs.ExternalService
 import software.amazon.awscdk.services.ecs.ExternalServiceAttributes
 import software.amazon.awscdk.services.ecs.ExternalServiceProps
-import software.amazon.awscdk.services.ecs.ExternalTaskDefinition
 import software.amazon.awscdk.services.ecs.ExternalTaskDefinitionAttributes
 import software.amazon.awscdk.services.ecs.ExternalTaskDefinitionProps
-import software.amazon.awscdk.services.ecs.FargateService
 import software.amazon.awscdk.services.ecs.FargateServiceAttributes
 import software.amazon.awscdk.services.ecs.FargateServiceProps
-import software.amazon.awscdk.services.ecs.FargateTaskDefinition
 import software.amazon.awscdk.services.ecs.FargateTaskDefinitionAttributes
 import software.amazon.awscdk.services.ecs.FargateTaskDefinitionProps
 import software.amazon.awscdk.services.ecs.FireLensLogDriver
@@ -109,6 +106,12 @@ import software.amazon.awscdk.services.ecs.GenericLogDriver
 import software.amazon.awscdk.services.ecs.GenericLogDriverProps
 import software.amazon.awscdk.services.ecs.HealthCheck
 import software.amazon.awscdk.services.ecs.Host
+import software.amazon.awscdk.services.ecs.IBaseService
+import software.amazon.awscdk.services.ecs.ICluster
+import software.amazon.awscdk.services.ecs.IEc2TaskDefinition
+import software.amazon.awscdk.services.ecs.IExternalTaskDefinition
+import software.amazon.awscdk.services.ecs.IFargateTaskDefinition
+import software.amazon.awscdk.services.ecs.ITaskDefinition
 import software.amazon.awscdk.services.ecs.InferenceAccelerator
 import software.amazon.awscdk.services.ecs.JournaldLogDriver
 import software.amazon.awscdk.services.ecs.JournaldLogDriverProps
@@ -123,6 +126,7 @@ import software.amazon.awscdk.services.ecs.MountPoint
 import software.amazon.awscdk.services.ecs.NetworkMode
 import software.amazon.awscdk.services.ecs.PortMap
 import software.amazon.awscdk.services.ecs.PortMapping
+import software.amazon.awscdk.services.ecs.ProxyConfiguration
 import software.amazon.awscdk.services.ecs.RepositoryImage
 import software.amazon.awscdk.services.ecs.RepositoryImageProps
 import software.amazon.awscdk.services.ecs.RequestCountScalingProps
@@ -142,7 +146,6 @@ import software.amazon.awscdk.services.ecs.SplunkLogDriverProps
 import software.amazon.awscdk.services.ecs.SyslogLogDriver
 import software.amazon.awscdk.services.ecs.SyslogLogDriverProps
 import software.amazon.awscdk.services.ecs.SystemControl
-import software.amazon.awscdk.services.ecs.TaskDefinition
 import software.amazon.awscdk.services.ecs.TaskDefinitionAttributes
 import software.amazon.awscdk.services.ecs.TaskDefinitionProps
 import software.amazon.awscdk.services.ecs.Tmpfs
@@ -150,6 +153,10 @@ import software.amazon.awscdk.services.ecs.TrackCustomMetricProps
 import software.amazon.awscdk.services.ecs.Ulimit
 import software.amazon.awscdk.services.ecs.Volume
 import software.amazon.awscdk.services.ecs.VolumeFrom
+import software.amazon.awscdk.services.ecs.WindowsOptimizedVersion
+import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListener
+import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListener
+import software.amazon.awscdk.services.secretsmanager.ISecret
 import software.constructs.Construct
 
 public object ecs {
@@ -4600,7 +4607,7 @@ public object ecs {
         scope: Construct,
         id: String,
         block: ClusterDsl.() -> Unit = {},
-    ): Cluster {
+    ): software.amazon.awscdk.services.ecs.Cluster {
         val builder = ClusterDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -5341,7 +5348,7 @@ public object ecs {
         scope: Construct,
         id: String,
         block: Ec2ServiceDsl.() -> Unit = {},
-    ): Ec2Service {
+    ): software.amazon.awscdk.services.ecs.Ec2Service {
         val builder = Ec2ServiceDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -5418,7 +5425,7 @@ public object ecs {
         scope: Construct,
         id: String,
         block: Ec2TaskDefinitionDsl.() -> Unit = {},
-    ): Ec2TaskDefinition {
+    ): software.amazon.awscdk.services.ecs.Ec2TaskDefinition {
         val builder = Ec2TaskDefinitionDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -5683,7 +5690,7 @@ public object ecs {
         scope: Construct,
         id: String,
         block: ExternalServiceDsl.() -> Unit = {},
-    ): ExternalService {
+    ): software.amazon.awscdk.services.ecs.ExternalService {
         val builder = ExternalServiceDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -5754,7 +5761,7 @@ public object ecs {
         scope: Construct,
         id: String,
         block: ExternalTaskDefinitionDsl.() -> Unit = {},
-    ): ExternalTaskDefinition {
+    ): software.amazon.awscdk.services.ecs.ExternalTaskDefinition {
         val builder = ExternalTaskDefinitionDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -5879,7 +5886,7 @@ public object ecs {
         scope: Construct,
         id: String,
         block: FargateServiceDsl.() -> Unit = {},
-    ): FargateService {
+    ): software.amazon.awscdk.services.ecs.FargateService {
         val builder = FargateServiceDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -5979,7 +5986,7 @@ public object ecs {
         scope: Construct,
         id: String,
         block: FargateTaskDefinitionDsl.() -> Unit = {},
-    ): FargateTaskDefinition {
+    ): software.amazon.awscdk.services.ecs.FargateTaskDefinition {
         val builder = FargateTaskDefinitionDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -7661,7 +7668,7 @@ public object ecs {
         scope: Construct,
         id: String,
         block: TaskDefinitionDsl.() -> Unit = {},
-    ): TaskDefinition {
+    ): software.amazon.awscdk.services.ecs.TaskDefinition {
         val builder = TaskDefinitionDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -7870,5 +7877,336 @@ public object ecs {
         val builder = VolumeFromDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object Cluster {
+        public fun fromClusterAttributes(
+            scope: Construct,
+            id: String,
+            block: ClusterAttributesDsl.() -> Unit = {},
+        ): ICluster {
+            val builder = ClusterAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.Cluster.fromClusterAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object ContainerImage {
+        public fun fromAsset(
+            directory: String,
+            block: AssetImagePropsDsl.() -> Unit = {}
+        ): AssetImage {
+            val builder = AssetImagePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.ContainerImage.fromAsset(
+                directory,
+                builder.build()
+            )
+        }
+
+        public fun fromRegistry(
+            name: String,
+            block: RepositoryImagePropsDsl.() -> Unit = {}
+        ): RepositoryImage {
+            val builder = RepositoryImagePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.ContainerImage.fromRegistry(
+                name,
+                builder.build()
+            )
+        }
+    }
+
+    public object Ec2Service {
+        public fun fromEc2ServiceAttributes(
+            scope: Construct,
+            id: String,
+            block: Ec2ServiceAttributesDsl.() -> Unit = {},
+        ): IBaseService {
+            val builder = Ec2ServiceAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.Ec2Service.fromEc2ServiceAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object Ec2TaskDefinition {
+        public fun fromEc2TaskDefinitionAttributes(
+            scope: Construct,
+            id: String,
+            block: Ec2TaskDefinitionAttributesDsl.() -> Unit = {},
+        ): IEc2TaskDefinition {
+            val builder = Ec2TaskDefinitionAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.Ec2TaskDefinition
+                .fromEc2TaskDefinitionAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object EcsOptimizedImage {
+        public fun amazonLinux(
+            block: EcsOptimizedImageOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ecs.EcsOptimizedImage {
+            val builder = EcsOptimizedImageOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.EcsOptimizedImage.amazonLinux(
+                builder.build()
+            )
+        }
+
+        public fun amazonLinux2(
+            hardwareType: AmiHardwareType?,
+            block: EcsOptimizedImageOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ecs.EcsOptimizedImage {
+            val builder = EcsOptimizedImageOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.EcsOptimizedImage.amazonLinux2(
+                hardwareType,
+                builder.build()
+            )
+        }
+
+        public fun amazonLinux2023(
+            hardwareType: AmiHardwareType?,
+            block: EcsOptimizedImageOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ecs.EcsOptimizedImage {
+            val builder = EcsOptimizedImageOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.EcsOptimizedImage.amazonLinux2023(
+                hardwareType,
+                builder.build()
+            )
+        }
+
+        public fun windows(
+            windowsVersion: WindowsOptimizedVersion,
+            block: EcsOptimizedImageOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ecs.EcsOptimizedImage {
+            val builder = EcsOptimizedImageOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.EcsOptimizedImage.windows(
+                windowsVersion,
+                builder.build()
+            )
+        }
+    }
+
+    public object EnvironmentFile {
+        public fun fromAsset(
+            path: String,
+            block: AssetOptionsDsl.() -> Unit = {}
+        ): AssetEnvironmentFile {
+            val builder = AssetOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.EnvironmentFile.fromAsset(
+                path,
+                builder.build()
+            )
+        }
+    }
+
+    public object ExternalService {
+        public fun fromExternalServiceAttributes(
+            scope: Construct,
+            id: String,
+            block: ExternalServiceAttributesDsl.() -> Unit = {},
+        ): IBaseService {
+            val builder = ExternalServiceAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.ExternalService
+                .fromExternalServiceAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object ExternalTaskDefinition {
+        public fun fromExternalTaskDefinitionAttributes(
+            scope: Construct,
+            id: String,
+            block: ExternalTaskDefinitionAttributesDsl.() -> Unit = {},
+        ): IExternalTaskDefinition {
+            val builder = ExternalTaskDefinitionAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.ExternalTaskDefinition
+                .fromExternalTaskDefinitionAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object FargateService {
+        public fun fromFargateServiceAttributes(
+            scope: Construct,
+            id: String,
+            block: FargateServiceAttributesDsl.() -> Unit = {},
+        ): IBaseService {
+            val builder = FargateServiceAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.FargateService.fromFargateServiceAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object FargateTaskDefinition {
+        public fun fromFargateTaskDefinitionAttributes(
+            scope: Construct,
+            id: String,
+            block: FargateTaskDefinitionAttributesDsl.() -> Unit = {},
+        ): IFargateTaskDefinition {
+            val builder = FargateTaskDefinitionAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.FargateTaskDefinition
+                .fromFargateTaskDefinitionAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object ListenerConfig {
+        public fun applicationListener(
+            listener: ApplicationListener,
+            block: AddApplicationTargetsPropsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ecs.ListenerConfig {
+            val builder = AddApplicationTargetsPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.ListenerConfig.applicationListener(
+                listener,
+                builder.build()
+            )
+        }
+
+        public fun networkListener(
+            listener: NetworkListener,
+            block: AddNetworkTargetsPropsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ecs.ListenerConfig {
+            val builder = AddNetworkTargetsPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.ListenerConfig.networkListener(
+                listener,
+                builder.build()
+            )
+        }
+    }
+
+    public object LogDriver {
+        public fun awsLogs(
+            block: AwsLogDriverPropsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ecs.LogDriver {
+            val builder = AwsLogDriverPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.LogDriver.awsLogs(builder.build())
+        }
+    }
+
+    public object LogDrivers {
+        public fun awsLogs(
+            block: AwsLogDriverPropsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ecs.LogDriver {
+            val builder = AwsLogDriverPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.LogDrivers.awsLogs(builder.build())
+        }
+
+        public fun firelens(
+            block: FireLensLogDriverPropsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ecs.LogDriver {
+            val builder = FireLensLogDriverPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.LogDrivers.firelens(builder.build())
+        }
+
+        public fun fluentd(
+            block: FluentdLogDriverPropsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ecs.LogDriver {
+            val builder = FluentdLogDriverPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.LogDrivers.fluentd(builder.build())
+        }
+
+        public fun gelf(
+            block: GelfLogDriverPropsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ecs.LogDriver {
+            val builder = GelfLogDriverPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.LogDrivers.gelf(builder.build())
+        }
+
+        public fun journald(
+            block: JournaldLogDriverPropsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ecs.LogDriver {
+            val builder = JournaldLogDriverPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.LogDrivers.journald(builder.build())
+        }
+
+        public fun jsonFile(
+            block: JsonFileLogDriverPropsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ecs.LogDriver {
+            val builder = JsonFileLogDriverPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.LogDrivers.jsonFile(builder.build())
+        }
+
+        public fun splunk(
+            block: SplunkLogDriverPropsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ecs.LogDriver {
+            val builder = SplunkLogDriverPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.LogDrivers.splunk(builder.build())
+        }
+
+        public fun syslog(
+            block: SyslogLogDriverPropsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ecs.LogDriver {
+            val builder = SyslogLogDriverPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.LogDrivers.syslog(builder.build())
+        }
+    }
+
+    public object ProxyConfigurations {
+        public fun appMeshProxyConfiguration(
+            block: AppMeshProxyConfigurationConfigPropsDsl.() -> Unit = {}
+        ): ProxyConfiguration {
+            val builder = AppMeshProxyConfigurationConfigPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.ProxyConfigurations
+                .appMeshProxyConfiguration(builder.build())
+        }
+    }
+
+    public object Secret {
+        public fun fromSecretsManagerVersion(
+            secret: ISecret,
+            block: SecretVersionInfoDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ecs.Secret {
+            val builder = SecretVersionInfoDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.Secret.fromSecretsManagerVersion(
+                secret,
+                builder.build()
+            )
+        }
+    }
+
+    public object TaskDefinition {
+        public fun fromTaskDefinitionAttributes(
+            scope: Construct,
+            id: String,
+            block: TaskDefinitionAttributesDsl.() -> Unit = {},
+        ): ITaskDefinition {
+            val builder = TaskDefinitionAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecs.TaskDefinition.fromTaskDefinitionAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
     }
 }

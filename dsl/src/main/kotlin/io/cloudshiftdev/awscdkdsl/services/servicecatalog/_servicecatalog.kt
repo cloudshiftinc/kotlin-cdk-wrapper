@@ -11,6 +11,7 @@
 
 package io.cloudshiftdev.awscdkdsl.services.servicecatalog
 
+import io.cloudshiftdev.awscdkdsl.services.s3.assets.AssetOptionsDsl
 import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.servicecatalog.CfnAcceptedPortfolioShare
@@ -1878,5 +1879,19 @@ public object servicecatalog {
         val builder = TemplateRuleAssertionDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object CloudFormationTemplate {
+        public fun fromAsset(
+            path: String,
+            block: AssetOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.servicecatalog.CloudFormationTemplate {
+            val builder = AssetOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.servicecatalog.CloudFormationTemplate.fromAsset(
+                path,
+                builder.build()
+            )
+        }
     }
 }

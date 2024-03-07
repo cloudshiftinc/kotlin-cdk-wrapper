@@ -11,15 +11,16 @@
 
 package io.cloudshiftdev.awscdkdsl.services.elasticloadbalancingv2
 
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 import software.amazon.awscdk.services.elasticloadbalancingv2.AddApplicationActionProps
 import software.amazon.awscdk.services.elasticloadbalancingv2.AddApplicationTargetGroupsProps
 import software.amazon.awscdk.services.elasticloadbalancingv2.AddApplicationTargetsProps
 import software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkActionProps
 import software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkTargetsProps
 import software.amazon.awscdk.services.elasticloadbalancingv2.AddRuleProps
-import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListener
 import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerAttributes
 import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerCertificate
 import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerCertificateProps
@@ -27,12 +28,10 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListene
 import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerProps
 import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerRule
 import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerRuleProps
-import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancer
 import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerAttributes
 import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerLookupOptions
 import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerProps
 import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerRedirectConfig
-import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationTargetGroup
 import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationTargetGroupProps
 import software.amazon.awscdk.services.elasticloadbalancingv2.AuthenticateOidcOptions
 import software.amazon.awscdk.services.elasticloadbalancingv2.BaseApplicationListenerProps
@@ -59,16 +58,19 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevoc
 import software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptions
 import software.amazon.awscdk.services.elasticloadbalancingv2.ForwardOptions
 import software.amazon.awscdk.services.elasticloadbalancingv2.HealthCheck
+import software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationListener
+import software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBalancer
+import software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationTargetGroup
+import software.amazon.awscdk.services.elasticloadbalancingv2.INetworkListener
+import software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer
+import software.amazon.awscdk.services.elasticloadbalancingv2.INetworkTargetGroup
 import software.amazon.awscdk.services.elasticloadbalancingv2.LoadBalancerTargetProps
 import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkForwardOptions
-import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListener
 import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerLookupOptions
 import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerProps
-import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancer
 import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancerAttributes
 import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancerLookupOptions
 import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancerProps
-import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkTargetGroup
 import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkTargetGroupProps
 import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkWeightedTargetGroup
 import software.amazon.awscdk.services.elasticloadbalancingv2.QueryStringCondition
@@ -284,7 +286,7 @@ public object elasticloadbalancingv2 {
         scope: Construct,
         id: String,
         block: ApplicationListenerDsl.() -> Unit = {},
-    ): ApplicationListener {
+    ): software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListener {
         val builder = ApplicationListenerDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -525,7 +527,7 @@ public object elasticloadbalancingv2 {
         scope: Construct,
         id: String,
         block: ApplicationLoadBalancerDsl.() -> Unit = {},
-    ): ApplicationLoadBalancer {
+    ): software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancer {
         val builder = ApplicationLoadBalancerDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -654,7 +656,7 @@ public object elasticloadbalancingv2 {
         scope: Construct,
         id: String,
         block: ApplicationTargetGroupDsl.() -> Unit = {},
-    ): ApplicationTargetGroup {
+    ): software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationTargetGroup {
         val builder = ApplicationTargetGroupDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -2995,7 +2997,7 @@ public object elasticloadbalancingv2 {
         scope: Construct,
         id: String,
         block: NetworkListenerDsl.() -> Unit = {},
-    ): NetworkListener {
+    ): software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListener {
         val builder = NetworkListenerDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -3083,7 +3085,7 @@ public object elasticloadbalancingv2 {
         scope: Construct,
         id: String,
         block: NetworkLoadBalancerDsl.() -> Unit = {},
-    ): NetworkLoadBalancer {
+    ): software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancer {
         val builder = NetworkLoadBalancerDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -3214,7 +3216,7 @@ public object elasticloadbalancingv2 {
         scope: Construct,
         id: String,
         block: NetworkTargetGroupDsl.() -> Unit = {},
-    ): NetworkTargetGroup {
+    ): software.amazon.awscdk.services.elasticloadbalancingv2.NetworkTargetGroup {
         val builder = NetworkTargetGroupDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -3396,5 +3398,191 @@ public object elasticloadbalancingv2 {
         val builder = WeightedTargetGroupDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object ApplicationListener {
+        public fun fromApplicationListenerAttributes(
+            scope: Construct,
+            id: String,
+            block: ApplicationListenerAttributesDsl.() -> Unit = {},
+        ): IApplicationListener {
+            val builder = ApplicationListenerAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListener
+                .fromApplicationListenerAttributes(scope, id, builder.build())
+        }
+
+        public fun fromLookup(
+            scope: Construct,
+            id: String,
+            block: ApplicationListenerLookupOptionsDsl.() -> Unit = {},
+        ): IApplicationListener {
+            val builder = ApplicationListenerLookupOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListener
+                .fromLookup(scope, id, builder.build())
+        }
+    }
+
+    public object ApplicationLoadBalancer {
+        public fun fromApplicationLoadBalancerAttributes(
+            scope: Construct,
+            id: String,
+            block: ApplicationLoadBalancerAttributesDsl.() -> Unit = {},
+        ): IApplicationLoadBalancer {
+            val builder = ApplicationLoadBalancerAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancer
+                .fromApplicationLoadBalancerAttributes(scope, id, builder.build())
+        }
+
+        public fun fromLookup(
+            scope: Construct,
+            id: String,
+            block: ApplicationLoadBalancerLookupOptionsDsl.() -> Unit = {},
+        ): IApplicationLoadBalancer {
+            val builder = ApplicationLoadBalancerLookupOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancer
+                .fromLookup(scope, id, builder.build())
+        }
+    }
+
+    public object ApplicationTargetGroup {
+        public fun fromTargetGroupAttributes(
+            scope: Construct,
+            id: String,
+            block: TargetGroupAttributesDsl.() -> Unit = {},
+        ): IApplicationTargetGroup {
+            val builder = TargetGroupAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationTargetGroup
+                .fromTargetGroupAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object ListenerAction {
+        public fun authenticateOidc(
+            block: AuthenticateOidcOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction {
+            val builder = AuthenticateOidcOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction
+                .authenticateOidc(builder.build())
+        }
+
+        public fun fixedResponse(
+            statusCode: Number,
+            block: FixedResponseOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction {
+            val builder = FixedResponseOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction
+                .fixedResponse(statusCode, builder.build())
+        }
+
+        public fun forward(
+            targetGroups: List<IApplicationTargetGroup>,
+            block: ForwardOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction {
+            val builder = ForwardOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction.forward(
+                targetGroups,
+                builder.build()
+            )
+        }
+
+        public fun redirect(
+            block: RedirectOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction {
+            val builder = RedirectOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction.redirect(
+                builder.build()
+            )
+        }
+
+        public fun weightedForward(
+            targetGroups: List<WeightedTargetGroup>,
+            block: ForwardOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction {
+            val builder = ForwardOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction
+                .weightedForward(targetGroups, builder.build())
+        }
+    }
+
+    public object NetworkListener {
+        public fun fromLookup(
+            scope: Construct,
+            id: String,
+            block: NetworkListenerLookupOptionsDsl.() -> Unit = {},
+        ): INetworkListener {
+            val builder = NetworkListenerLookupOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListener
+                .fromLookup(scope, id, builder.build())
+        }
+    }
+
+    public object NetworkListenerAction {
+        public fun forward(
+            targetGroups: List<INetworkTargetGroup>,
+            block: NetworkForwardOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAction {
+            val builder = NetworkForwardOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAction
+                .forward(targetGroups, builder.build())
+        }
+
+        public fun weightedForward(
+            targetGroups: List<NetworkWeightedTargetGroup>,
+            block: NetworkForwardOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAction {
+            val builder = NetworkForwardOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAction
+                .weightedForward(targetGroups, builder.build())
+        }
+    }
+
+    public object NetworkLoadBalancer {
+        public fun fromLookup(
+            scope: Construct,
+            id: String,
+            block: NetworkLoadBalancerLookupOptionsDsl.() -> Unit = {},
+        ): INetworkLoadBalancer {
+            val builder = NetworkLoadBalancerLookupOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancer
+                .fromLookup(scope, id, builder.build())
+        }
+
+        public fun fromNetworkLoadBalancerAttributes(
+            scope: Construct,
+            id: String,
+            block: NetworkLoadBalancerAttributesDsl.() -> Unit = {},
+        ): INetworkLoadBalancer {
+            val builder = NetworkLoadBalancerAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancer
+                .fromNetworkLoadBalancerAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object NetworkTargetGroup {
+        public fun fromTargetGroupAttributes(
+            scope: Construct,
+            id: String,
+            block: TargetGroupAttributesDsl.() -> Unit = {},
+        ): INetworkTargetGroup {
+            val builder = TargetGroupAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.elasticloadbalancingv2.NetworkTargetGroup
+                .fromTargetGroupAttributes(scope, id, builder.build())
+        }
     }
 }

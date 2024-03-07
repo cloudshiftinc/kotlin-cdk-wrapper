@@ -17,7 +17,7 @@ import software.amazon.awscdk.services.kinesis.CfnStream
 import software.amazon.awscdk.services.kinesis.CfnStreamConsumer
 import software.amazon.awscdk.services.kinesis.CfnStreamConsumerProps
 import software.amazon.awscdk.services.kinesis.CfnStreamProps
-import software.amazon.awscdk.services.kinesis.Stream
+import software.amazon.awscdk.services.kinesis.IStream
 import software.amazon.awscdk.services.kinesis.StreamAttributes
 import software.amazon.awscdk.services.kinesis.StreamProps
 import software.constructs.Construct
@@ -253,7 +253,7 @@ public object kinesis {
         scope: Construct,
         id: String,
         block: StreamDsl.() -> Unit = {},
-    ): Stream {
+    ): software.amazon.awscdk.services.kinesis.Stream {
         val builder = StreamDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -299,5 +299,21 @@ public object kinesis {
         val builder = StreamPropsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object Stream {
+        public fun fromStreamAttributes(
+            scope: Construct,
+            id: String,
+            block: StreamAttributesDsl.() -> Unit = {},
+        ): IStream {
+            val builder = StreamAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.kinesis.Stream.fromStreamAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
     }
 }

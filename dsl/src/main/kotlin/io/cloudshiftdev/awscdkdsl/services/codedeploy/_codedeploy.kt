@@ -32,15 +32,16 @@ import software.amazon.awscdk.services.codedeploy.EcsApplicationProps
 import software.amazon.awscdk.services.codedeploy.EcsBlueGreenDeploymentConfig
 import software.amazon.awscdk.services.codedeploy.EcsDeploymentConfig
 import software.amazon.awscdk.services.codedeploy.EcsDeploymentConfigProps
-import software.amazon.awscdk.services.codedeploy.EcsDeploymentGroup
 import software.amazon.awscdk.services.codedeploy.EcsDeploymentGroupAttributes
 import software.amazon.awscdk.services.codedeploy.EcsDeploymentGroupProps
+import software.amazon.awscdk.services.codedeploy.IEcsDeploymentGroup
+import software.amazon.awscdk.services.codedeploy.ILambdaDeploymentConfig
+import software.amazon.awscdk.services.codedeploy.ILambdaDeploymentGroup
+import software.amazon.awscdk.services.codedeploy.IServerDeploymentGroup
 import software.amazon.awscdk.services.codedeploy.LambdaApplication
 import software.amazon.awscdk.services.codedeploy.LambdaApplicationProps
-import software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig
 import software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigImportProps
 import software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigProps
-import software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroup
 import software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroupAttributes
 import software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroupProps
 import software.amazon.awscdk.services.codedeploy.LinearTrafficRoutingConfig
@@ -48,7 +49,6 @@ import software.amazon.awscdk.services.codedeploy.ServerApplication
 import software.amazon.awscdk.services.codedeploy.ServerApplicationProps
 import software.amazon.awscdk.services.codedeploy.ServerDeploymentConfig
 import software.amazon.awscdk.services.codedeploy.ServerDeploymentConfigProps
-import software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup
 import software.amazon.awscdk.services.codedeploy.ServerDeploymentGroupAttributes
 import software.amazon.awscdk.services.codedeploy.ServerDeploymentGroupProps
 import software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRouting
@@ -1906,7 +1906,7 @@ public object codedeploy {
         scope: Construct,
         id: String,
         block: EcsDeploymentGroupDsl.() -> Unit = {},
-    ): EcsDeploymentGroup {
+    ): software.amazon.awscdk.services.codedeploy.EcsDeploymentGroup {
         val builder = EcsDeploymentGroupDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -2035,7 +2035,7 @@ public object codedeploy {
         scope: Construct,
         id: String,
         block: LambdaDeploymentConfigDsl.() -> Unit = {},
-    ): LambdaDeploymentConfig {
+    ): software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig {
         val builder = LambdaDeploymentConfigDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -2117,7 +2117,7 @@ public object codedeploy {
         scope: Construct,
         id: String,
         block: LambdaDeploymentGroupDsl.() -> Unit = {},
-    ): LambdaDeploymentGroup {
+    ): software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroup {
         val builder = LambdaDeploymentGroupDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -2297,7 +2297,7 @@ public object codedeploy {
         scope: Construct,
         id: String,
         block: ServerDeploymentGroupDsl.() -> Unit = {},
-    ): ServerDeploymentGroup {
+    ): software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup {
         val builder = ServerDeploymentGroupDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -2466,5 +2466,82 @@ public object codedeploy {
         val builder = TrafficRoutingConfigDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object EcsDeploymentGroup {
+        public fun fromEcsDeploymentGroupAttributes(
+            scope: Construct,
+            id: String,
+            block: EcsDeploymentGroupAttributesDsl.() -> Unit = {},
+        ): IEcsDeploymentGroup {
+            val builder = EcsDeploymentGroupAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.codedeploy.EcsDeploymentGroup
+                .fromEcsDeploymentGroupAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object LambdaDeploymentConfig {
+        public fun doImport(
+            _scope: Construct,
+            _id: String,
+            block: LambdaDeploymentConfigImportPropsDsl.() -> Unit = {},
+        ): ILambdaDeploymentConfig {
+            val builder = LambdaDeploymentConfigImportPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig.doImport(
+                _scope,
+                _id,
+                builder.build()
+            )
+        }
+    }
+
+    public object LambdaDeploymentGroup {
+        public fun fromLambdaDeploymentGroupAttributes(
+            scope: Construct,
+            id: String,
+            block: LambdaDeploymentGroupAttributesDsl.() -> Unit = {},
+        ): ILambdaDeploymentGroup {
+            val builder = LambdaDeploymentGroupAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroup
+                .fromLambdaDeploymentGroupAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object ServerDeploymentGroup {
+        public fun fromServerDeploymentGroupAttributes(
+            scope: Construct,
+            id: String,
+            block: ServerDeploymentGroupAttributesDsl.() -> Unit = {},
+        ): IServerDeploymentGroup {
+            val builder = ServerDeploymentGroupAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup
+                .fromServerDeploymentGroupAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object TrafficRouting {
+        public fun timeBasedCanary(
+            block: TimeBasedCanaryTrafficRoutingPropsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.codedeploy.TrafficRouting {
+            val builder = TimeBasedCanaryTrafficRoutingPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.codedeploy.TrafficRouting.timeBasedCanary(
+                builder.build()
+            )
+        }
+
+        public fun timeBasedLinear(
+            block: TimeBasedLinearTrafficRoutingPropsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.codedeploy.TrafficRouting {
+            val builder = TimeBasedLinearTrafficRoutingPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.codedeploy.TrafficRouting.timeBasedLinear(
+                builder.build()
+            )
+        }
     }
 }

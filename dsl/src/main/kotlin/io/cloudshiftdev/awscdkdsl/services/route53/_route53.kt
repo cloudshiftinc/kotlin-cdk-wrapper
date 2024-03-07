@@ -44,10 +44,11 @@ import software.amazon.awscdk.services.route53.CrossAccountZoneDelegationRecord
 import software.amazon.awscdk.services.route53.CrossAccountZoneDelegationRecordProps
 import software.amazon.awscdk.services.route53.DsRecord
 import software.amazon.awscdk.services.route53.DsRecordProps
-import software.amazon.awscdk.services.route53.HostedZone
 import software.amazon.awscdk.services.route53.HostedZoneAttributes
 import software.amazon.awscdk.services.route53.HostedZoneProps
 import software.amazon.awscdk.services.route53.HostedZoneProviderProps
+import software.amazon.awscdk.services.route53.IHostedZone
+import software.amazon.awscdk.services.route53.IPublicHostedZone
 import software.amazon.awscdk.services.route53.MxRecord
 import software.amazon.awscdk.services.route53.MxRecordProps
 import software.amazon.awscdk.services.route53.MxRecordValue
@@ -55,7 +56,6 @@ import software.amazon.awscdk.services.route53.NsRecord
 import software.amazon.awscdk.services.route53.NsRecordProps
 import software.amazon.awscdk.services.route53.PrivateHostedZone
 import software.amazon.awscdk.services.route53.PrivateHostedZoneProps
-import software.amazon.awscdk.services.route53.PublicHostedZone
 import software.amazon.awscdk.services.route53.PublicHostedZoneAttributes
 import software.amazon.awscdk.services.route53.PublicHostedZoneProps
 import software.amazon.awscdk.services.route53.RecordSet
@@ -1861,7 +1861,7 @@ public object route53 {
         scope: Construct,
         id: String,
         block: HostedZoneDsl.() -> Unit = {},
-    ): HostedZone {
+    ): software.amazon.awscdk.services.route53.HostedZone {
         val builder = HostedZoneDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -2169,7 +2169,7 @@ public object route53 {
         scope: Construct,
         id: String,
         block: PublicHostedZoneDsl.() -> Unit = {},
-    ): PublicHostedZone {
+    ): software.amazon.awscdk.services.route53.PublicHostedZone {
         val builder = PublicHostedZoneDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -2653,5 +2653,48 @@ public object route53 {
         val builder = ZoneDelegationRecordPropsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object HostedZone {
+        public fun fromHostedZoneAttributes(
+            scope: Construct,
+            id: String,
+            block: HostedZoneAttributesDsl.() -> Unit = {},
+        ): IHostedZone {
+            val builder = HostedZoneAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.route53.HostedZone.fromHostedZoneAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+
+        public fun fromLookup(
+            scope: Construct,
+            id: String,
+            block: HostedZoneProviderPropsDsl.() -> Unit = {},
+        ): IHostedZone {
+            val builder = HostedZoneProviderPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.route53.HostedZone.fromLookup(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object PublicHostedZone {
+        public fun fromPublicHostedZoneAttributes(
+            scope: Construct,
+            id: String,
+            block: PublicHostedZoneAttributesDsl.() -> Unit = {},
+        ): IPublicHostedZone {
+            val builder = PublicHostedZoneAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.route53.PublicHostedZone
+                .fromPublicHostedZoneAttributes(scope, id, builder.build())
+        }
     }
 }

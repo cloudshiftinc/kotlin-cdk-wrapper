@@ -58,7 +58,9 @@ import software.amazon.awscdk.services.iam.GrantOnPrincipalOptions
 import software.amazon.awscdk.services.iam.GrantWithResourceOptions
 import software.amazon.awscdk.services.iam.Group
 import software.amazon.awscdk.services.iam.GroupProps
-import software.amazon.awscdk.services.iam.InstanceProfile
+import software.amazon.awscdk.services.iam.IInstanceProfile
+import software.amazon.awscdk.services.iam.IRole
+import software.amazon.awscdk.services.iam.IUser
 import software.amazon.awscdk.services.iam.InstanceProfileAttributes
 import software.amazon.awscdk.services.iam.InstanceProfileProps
 import software.amazon.awscdk.services.iam.LazyRole
@@ -73,7 +75,6 @@ import software.amazon.awscdk.services.iam.PolicyDocumentProps
 import software.amazon.awscdk.services.iam.PolicyProps
 import software.amazon.awscdk.services.iam.PolicyStatement
 import software.amazon.awscdk.services.iam.PolicyStatementProps
-import software.amazon.awscdk.services.iam.Role
 import software.amazon.awscdk.services.iam.RoleProps
 import software.amazon.awscdk.services.iam.SamlProvider
 import software.amazon.awscdk.services.iam.SamlProviderProps
@@ -81,7 +82,6 @@ import software.amazon.awscdk.services.iam.ServicePrincipal
 import software.amazon.awscdk.services.iam.ServicePrincipalOpts
 import software.amazon.awscdk.services.iam.UnknownPrincipal
 import software.amazon.awscdk.services.iam.UnknownPrincipalProps
-import software.amazon.awscdk.services.iam.User
 import software.amazon.awscdk.services.iam.UserAttributes
 import software.amazon.awscdk.services.iam.UserProps
 import software.amazon.awscdk.services.iam.WithoutPolicyUpdatesOptions
@@ -1755,7 +1755,7 @@ public object iam {
         scope: Construct,
         id: String,
         block: InstanceProfileDsl.() -> Unit = {},
-    ): InstanceProfile {
+    ): software.amazon.awscdk.services.iam.InstanceProfile {
         val builder = InstanceProfileDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -2214,7 +2214,7 @@ public object iam {
         scope: Construct,
         id: String,
         block: RoleDsl.() -> Unit = {},
-    ): Role {
+    ): software.amazon.awscdk.services.iam.Role {
         val builder = RoleDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -2409,7 +2409,7 @@ public object iam {
         scope: Construct,
         id: String,
         block: UserDsl.() -> Unit = {},
-    ): User {
+    ): software.amazon.awscdk.services.iam.User {
         val builder = UserDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -2470,5 +2470,107 @@ public object iam {
         val builder = WithoutPolicyUpdatesOptionsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object Grant {
+        public fun addToPrincipal(
+            block: GrantOnPrincipalOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.iam.Grant {
+            val builder = GrantOnPrincipalOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.iam.Grant.addToPrincipal(builder.build())
+        }
+
+        public fun addToPrincipalAndResource(
+            block: GrantOnPrincipalAndResourceOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.iam.Grant {
+            val builder = GrantOnPrincipalAndResourceOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.iam.Grant.addToPrincipalAndResource(
+                builder.build()
+            )
+        }
+
+        public fun addToPrincipalOrResource(
+            block: GrantWithResourceOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.iam.Grant {
+            val builder = GrantWithResourceOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.iam.Grant.addToPrincipalOrResource(
+                builder.build()
+            )
+        }
+    }
+
+    public object InstanceProfile {
+        public fun fromInstanceProfileAttributes(
+            scope: Construct,
+            id: String,
+            block: InstanceProfileAttributesDsl.() -> Unit = {},
+        ): IInstanceProfile {
+            val builder = InstanceProfileAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.iam.InstanceProfile
+                .fromInstanceProfileAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object Role {
+        public fun customizeRoles(
+            scope: Construct,
+            block: CustomizeRolesOptionsDsl.() -> Unit = {}
+        ) {
+            val builder = CustomizeRolesOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.iam.Role.customizeRoles(scope, builder.build())
+        }
+
+        public fun fromRoleArn(
+            scope: Construct,
+            id: String,
+            roleArn: String,
+            block: FromRoleArnOptionsDsl.() -> Unit = {},
+        ): IRole {
+            val builder = FromRoleArnOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.iam.Role.fromRoleArn(
+                scope,
+                id,
+                roleArn,
+                builder.build()
+            )
+        }
+
+        public fun fromRoleName(
+            scope: Construct,
+            id: String,
+            roleName: String,
+            block: FromRoleNameOptionsDsl.() -> Unit = {},
+        ): IRole {
+            val builder = FromRoleNameOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.iam.Role.fromRoleName(
+                scope,
+                id,
+                roleName,
+                builder.build()
+            )
+        }
+    }
+
+    public object User {
+        public fun fromUserAttributes(
+            scope: Construct,
+            id: String,
+            block: UserAttributesDsl.() -> Unit = {},
+        ): IUser {
+            val builder = UserAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.iam.User.fromUserAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
     }
 }

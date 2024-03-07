@@ -2807,4 +2807,14 @@ public object ses {
         builder.apply(block)
         return builder.build()
     }
+
+    public object DkimIdentity {
+        public fun byoDkim(
+            block: ByoDkimOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ses.DkimIdentity {
+            val builder = ByoDkimOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ses.DkimIdentity.byoDkim(builder.build())
+        }
+    }
 }

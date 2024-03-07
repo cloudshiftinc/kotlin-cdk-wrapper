@@ -20,11 +20,11 @@ import software.amazon.awscdk.services.elasticsearch.CfnDomain
 import software.amazon.awscdk.services.elasticsearch.CfnDomainProps
 import software.amazon.awscdk.services.elasticsearch.CognitoOptions
 import software.amazon.awscdk.services.elasticsearch.CustomEndpointOptions
-import software.amazon.awscdk.services.elasticsearch.Domain
 import software.amazon.awscdk.services.elasticsearch.DomainAttributes
 import software.amazon.awscdk.services.elasticsearch.DomainProps
 import software.amazon.awscdk.services.elasticsearch.EbsOptions
 import software.amazon.awscdk.services.elasticsearch.EncryptionAtRestOptions
+import software.amazon.awscdk.services.elasticsearch.IDomain
 import software.amazon.awscdk.services.elasticsearch.LoggingOptions
 import software.amazon.awscdk.services.elasticsearch.ZoneAwarenessConfig
 import software.constructs.Construct
@@ -854,7 +854,7 @@ public object elasticsearch {
         scope: Construct,
         id: String,
         block: DomainDsl.() -> Unit = {},
-    ): Domain {
+    ): software.amazon.awscdk.services.elasticsearch.Domain {
         val builder = DomainDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -1053,5 +1053,21 @@ public object elasticsearch {
         val builder = ZoneAwarenessConfigDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object Domain {
+        public fun fromDomainAttributes(
+            scope: Construct,
+            id: String,
+            block: DomainAttributesDsl.() -> Unit = {},
+        ): IDomain {
+            val builder = DomainAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.elasticsearch.Domain.fromDomainAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
     }
 }

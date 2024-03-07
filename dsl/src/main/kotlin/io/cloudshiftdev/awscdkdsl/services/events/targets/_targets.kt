@@ -18,6 +18,7 @@ import software.amazon.awscdk.services.codebuild.IProject
 import software.amazon.awscdk.services.codepipeline.IPipeline
 import software.amazon.awscdk.services.events.IApiDestination
 import software.amazon.awscdk.services.events.IEventBus
+import software.amazon.awscdk.services.events.RuleTargetInput
 import software.amazon.awscdk.services.events.targets.ApiDestination
 import software.amazon.awscdk.services.events.targets.ApiDestinationProps
 import software.amazon.awscdk.services.events.targets.ApiGateway
@@ -1076,5 +1077,17 @@ public object targets {
         val builder = TaskEnvironmentVariableDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object LogGroupTargetInput {
+        public fun fromObject(
+            block: LogGroupTargetInputOptionsDsl.() -> Unit = {}
+        ): RuleTargetInput {
+            val builder = LogGroupTargetInputOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.events.targets.LogGroupTargetInput.fromObject(
+                builder.build()
+            )
+        }
     }
 }

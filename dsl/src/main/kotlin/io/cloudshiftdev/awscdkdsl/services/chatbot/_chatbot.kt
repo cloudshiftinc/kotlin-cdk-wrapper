@@ -11,14 +11,15 @@
 
 package io.cloudshiftdev.awscdkdsl.services.chatbot
 
+import io.cloudshiftdev.awscdkdsl.services.cloudwatch.MetricOptionsDsl
 import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.chatbot.CfnMicrosoftTeamsChannelConfiguration
 import software.amazon.awscdk.services.chatbot.CfnMicrosoftTeamsChannelConfigurationProps
 import software.amazon.awscdk.services.chatbot.CfnSlackChannelConfiguration
 import software.amazon.awscdk.services.chatbot.CfnSlackChannelConfigurationProps
-import software.amazon.awscdk.services.chatbot.SlackChannelConfiguration
 import software.amazon.awscdk.services.chatbot.SlackChannelConfigurationProps
+import software.amazon.awscdk.services.cloudwatch.Metric
 import software.constructs.Construct
 
 public object chatbot {
@@ -193,7 +194,7 @@ public object chatbot {
         scope: Construct,
         id: String,
         block: SlackChannelConfigurationDsl.() -> Unit = {},
-    ): SlackChannelConfiguration {
+    ): software.amazon.awscdk.services.chatbot.SlackChannelConfiguration {
         val builder = SlackChannelConfigurationDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -221,5 +222,16 @@ public object chatbot {
         val builder = SlackChannelConfigurationPropsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object SlackChannelConfiguration {
+        public fun metricAll(metricName: String, block: MetricOptionsDsl.() -> Unit = {}): Metric {
+            val builder = MetricOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.chatbot.SlackChannelConfiguration.metricAll(
+                metricName,
+                builder.build()
+            )
+        }
     }
 }

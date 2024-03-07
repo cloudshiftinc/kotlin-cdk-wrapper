@@ -13,7 +13,6 @@ package io.cloudshiftdev.awscdkdsl.services.efs
 
 import kotlin.String
 import kotlin.Unit
-import software.amazon.awscdk.services.efs.AccessPoint
 import software.amazon.awscdk.services.efs.AccessPointAttributes
 import software.amazon.awscdk.services.efs.AccessPointOptions
 import software.amazon.awscdk.services.efs.AccessPointProps
@@ -24,9 +23,10 @@ import software.amazon.awscdk.services.efs.CfnFileSystem
 import software.amazon.awscdk.services.efs.CfnFileSystemProps
 import software.amazon.awscdk.services.efs.CfnMountTarget
 import software.amazon.awscdk.services.efs.CfnMountTargetProps
-import software.amazon.awscdk.services.efs.FileSystem
 import software.amazon.awscdk.services.efs.FileSystemAttributes
 import software.amazon.awscdk.services.efs.FileSystemProps
+import software.amazon.awscdk.services.efs.IAccessPoint
+import software.amazon.awscdk.services.efs.IFileSystem
 import software.amazon.awscdk.services.efs.PosixUser
 import software.constructs.Construct
 
@@ -49,7 +49,7 @@ public object efs {
         scope: Construct,
         id: String,
         block: AccessPointDsl.() -> Unit = {},
-    ): AccessPoint {
+    ): software.amazon.awscdk.services.efs.AccessPoint {
         val builder = AccessPointDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -795,7 +795,7 @@ public object efs {
         scope: Construct,
         id: String,
         block: FileSystemDsl.() -> Unit = {},
-    ): FileSystem {
+    ): software.amazon.awscdk.services.efs.FileSystem {
         val builder = FileSystemDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -889,5 +889,37 @@ public object efs {
         val builder = PosixUserDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object AccessPoint {
+        public fun fromAccessPointAttributes(
+            scope: Construct,
+            id: String,
+            block: AccessPointAttributesDsl.() -> Unit = {},
+        ): IAccessPoint {
+            val builder = AccessPointAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.efs.AccessPoint.fromAccessPointAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object FileSystem {
+        public fun fromFileSystemAttributes(
+            scope: Construct,
+            id: String,
+            block: FileSystemAttributesDsl.() -> Unit = {},
+        ): IFileSystem {
+            val builder = FileSystemAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.efs.FileSystem.fromFileSystemAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
     }
 }

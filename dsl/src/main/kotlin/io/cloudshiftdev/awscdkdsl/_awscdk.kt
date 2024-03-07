@@ -14,6 +14,7 @@ package io.cloudshiftdev.awscdkdsl
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 import software.amazon.awscdk.App
 import software.amazon.awscdk.AppProps
 import software.amazon.awscdk.ArnComponents
@@ -124,6 +125,13 @@ import software.amazon.awscdk.GetContextKeyOptions
 import software.amazon.awscdk.GetContextKeyResult
 import software.amazon.awscdk.GetContextValueOptions
 import software.amazon.awscdk.GetContextValueResult
+import software.amazon.awscdk.IAnyProducer
+import software.amazon.awscdk.IListProducer
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.IStableAnyProducer
+import software.amazon.awscdk.IStableListProducer
+import software.amazon.awscdk.IStableStringProducer
+import software.amazon.awscdk.IStringProducer
 import software.amazon.awscdk.Intrinsic
 import software.amazon.awscdk.IntrinsicProps
 import software.amazon.awscdk.LazyAnyValueOptions
@@ -143,7 +151,6 @@ import software.amazon.awscdk.ResourceEnvironment
 import software.amazon.awscdk.ResourceProps
 import software.amazon.awscdk.ReverseOptions
 import software.amazon.awscdk.RoleOptions
-import software.amazon.awscdk.SecretValue
 import software.amazon.awscdk.SecretsManagerSecretOptions
 import software.amazon.awscdk.SizeConversionOptions
 import software.amazon.awscdk.Stack
@@ -160,6 +167,7 @@ import software.amazon.awscdk.TagType
 import software.amazon.awscdk.TimeConversionOptions
 import software.amazon.awscdk.UniqueResourceNameOptions
 import software.constructs.Construct
+import software.constructs.IConstruct
 
 public object awscdk {
     /**
@@ -4688,7 +4696,7 @@ public object awscdk {
     public inline fun secretValue(
         protectedValue: Any,
         block: SecretValueDsl.() -> Unit = {}
-    ): SecretValue {
+    ): software.amazon.awscdk.SecretValue {
         val builder = SecretValueDsl(protectedValue)
         builder.apply(block)
         return builder.build()
@@ -5072,5 +5080,201 @@ public object awscdk {
         val builder = UniqueResourceNameOptionsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object Arn {
+        public fun format(block: ArnComponentsDsl.() -> Unit = {}): String {
+            val builder = ArnComponentsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.Arn.format(builder.build())
+        }
+    }
+
+    public object ContextProvider {
+        public fun getKey(
+            scope: Construct,
+            block: GetContextKeyOptionsDsl.() -> Unit = {}
+        ): GetContextKeyResult {
+            val builder = GetContextKeyOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.ContextProvider.getKey(scope, builder.build())
+        }
+
+        public fun getValue(
+            scope: Construct,
+            block: GetContextValueOptionsDsl.() -> Unit = {}
+        ): GetContextValueResult {
+            val builder = GetContextValueOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.ContextProvider.getValue(scope, builder.build())
+        }
+    }
+
+    public object CustomResourceProvider {
+        public fun getOrCreate(
+            scope: Construct,
+            uniqueid: String,
+            block: CustomResourceProviderPropsDsl.() -> Unit = {},
+        ): String {
+            val builder = CustomResourceProviderPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.CustomResourceProvider.getOrCreate(
+                scope,
+                uniqueid,
+                builder.build()
+            )
+        }
+
+        public fun getOrCreateProvider(
+            scope: Construct,
+            uniqueid: String,
+            block: CustomResourceProviderPropsDsl.() -> Unit = {},
+        ): software.amazon.awscdk.CustomResourceProvider {
+            val builder = CustomResourceProviderPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.CustomResourceProvider.getOrCreateProvider(
+                scope,
+                uniqueid,
+                builder.build()
+            )
+        }
+    }
+
+    public object DockerImage {
+        public fun fromBuild(
+            path: String,
+            block: DockerBuildOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.DockerImage {
+            val builder = DockerBuildOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.DockerImage.fromBuild(path, builder.build())
+        }
+    }
+
+    public object FileSystem {
+        public fun copyDirectory(
+            srcDir: String,
+            destDir: String,
+            block: CopyOptionsDsl.() -> Unit = {},
+        ) {
+            val builder = CopyOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.FileSystem.copyDirectory(srcDir, destDir, builder.build())
+        }
+
+        public fun fingerprint(
+            fileOrDirectory: String,
+            block: FingerprintOptionsDsl.() -> Unit = {}
+        ): String {
+            val builder = FingerprintOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.FileSystem.fingerprint(fileOrDirectory, builder.build())
+        }
+    }
+
+    public object Lazy {
+        public fun any(
+            producer: IStableAnyProducer,
+            block: LazyAnyValueOptionsDsl.() -> Unit = {}
+        ): IResolvable {
+            val builder = LazyAnyValueOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.Lazy.any(producer, builder.build())
+        }
+
+        public fun list(
+            producer: IStableListProducer,
+            block: LazyListValueOptionsDsl.() -> Unit = {}
+        ): List<String> {
+            val builder = LazyListValueOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.Lazy.list(producer, builder.build())
+        }
+
+        public fun string(
+            producer: IStableStringProducer,
+            block: LazyStringValueOptionsDsl.() -> Unit = {}
+        ): String {
+            val builder = LazyStringValueOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.Lazy.string(producer, builder.build())
+        }
+
+        public fun uncachedAny(
+            producer: IAnyProducer,
+            block: LazyAnyValueOptionsDsl.() -> Unit = {}
+        ): IResolvable {
+            val builder = LazyAnyValueOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.Lazy.uncachedAny(producer, builder.build())
+        }
+
+        public fun uncachedList(
+            producer: IListProducer,
+            block: LazyListValueOptionsDsl.() -> Unit = {}
+        ): List<String> {
+            val builder = LazyListValueOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.Lazy.uncachedList(producer, builder.build())
+        }
+
+        public fun uncachedString(
+            producer: IStringProducer,
+            block: LazyStringValueOptionsDsl.() -> Unit = {}
+        ): String {
+            val builder = LazyStringValueOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.Lazy.uncachedString(producer, builder.build())
+        }
+    }
+
+    public object Names {
+        public fun uniqueResourceName(
+            construct: IConstruct,
+            block: UniqueResourceNameOptionsDsl.() -> Unit = {}
+        ): String {
+            val builder = UniqueResourceNameOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.Names.uniqueResourceName(construct, builder.build())
+        }
+    }
+
+    public object SecretValue {
+        public fun secretsManager(
+            secretId: String,
+            block: SecretsManagerSecretOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.SecretValue {
+            val builder = SecretsManagerSecretOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.SecretValue.secretsManager(secretId, builder.build())
+        }
+    }
+
+    public object Token {
+        public fun asList(`value`: Any, block: EncodingOptionsDsl.() -> Unit = {}): List<String> {
+            val builder = EncodingOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.Token.asList(`value`, builder.build())
+        }
+
+        public fun asString(`value`: Any, block: EncodingOptionsDsl.() -> Unit = {}): String {
+            val builder = EncodingOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.Token.asString(`value`, builder.build())
+        }
+    }
+
+    public object Tokenization {
+        public fun resolve(obj: Any, block: ResolveOptionsDsl.() -> Unit = {}): Any {
+            val builder = ResolveOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.Tokenization.resolve(obj, builder.build())
+        }
+
+        public fun reverse(x: Any, block: ReverseOptionsDsl.() -> Unit = {}): IResolvable? {
+            val builder = ReverseOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.Tokenization.reverse(x, builder.build())
+        }
     }
 }

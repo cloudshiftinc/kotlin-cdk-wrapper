@@ -37,17 +37,17 @@ import software.amazon.awscdk.services.appconfig.ConfigurationOptions
 import software.amazon.awscdk.services.appconfig.ConfigurationProps
 import software.amazon.awscdk.services.appconfig.DeploymentStrategy
 import software.amazon.awscdk.services.appconfig.DeploymentStrategyProps
-import software.amazon.awscdk.services.appconfig.Environment
 import software.amazon.awscdk.services.appconfig.EnvironmentAttributes
 import software.amazon.awscdk.services.appconfig.EnvironmentOptions
 import software.amazon.awscdk.services.appconfig.EnvironmentProps
-import software.amazon.awscdk.services.appconfig.Extension
 import software.amazon.awscdk.services.appconfig.ExtensionAttributes
 import software.amazon.awscdk.services.appconfig.ExtensionOptions
 import software.amazon.awscdk.services.appconfig.ExtensionProps
 import software.amazon.awscdk.services.appconfig.HostedConfiguration
 import software.amazon.awscdk.services.appconfig.HostedConfigurationOptions
 import software.amazon.awscdk.services.appconfig.HostedConfigurationProps
+import software.amazon.awscdk.services.appconfig.IEnvironment
+import software.amazon.awscdk.services.appconfig.IExtension
 import software.amazon.awscdk.services.appconfig.RolloutStrategyProps
 import software.amazon.awscdk.services.appconfig.SourcedConfiguration
 import software.amazon.awscdk.services.appconfig.SourcedConfigurationOptions
@@ -1258,7 +1258,7 @@ public object appconfig {
         scope: Construct,
         id: String,
         block: EnvironmentDsl.() -> Unit = {},
-    ): Environment {
+    ): software.amazon.awscdk.services.appconfig.Environment {
         val builder = EnvironmentDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -1361,7 +1361,7 @@ public object appconfig {
         scope: Construct,
         id: String,
         block: ExtensionDsl.() -> Unit = {},
-    ): Extension {
+    ): software.amazon.awscdk.services.appconfig.Extension {
         val builder = ExtensionDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -1639,5 +1639,69 @@ public object appconfig {
         val builder = SourcedConfigurationPropsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object Environment {
+        public fun fromEnvironmentAttributes(
+            scope: Construct,
+            id: String,
+            block: EnvironmentAttributesDsl.() -> Unit = {},
+        ): IEnvironment {
+            val builder = EnvironmentAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appconfig.Environment.fromEnvironmentAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object Extension {
+        public fun fromExtensionAttributes(
+            scope: Construct,
+            id: String,
+            block: ExtensionAttributesDsl.() -> Unit = {},
+        ): IExtension {
+            val builder = ExtensionAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appconfig.Extension.fromExtensionAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object Monitor {
+        public fun fromCfnMonitorsProperty(
+            block: CfnEnvironmentMonitorsPropertyDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.appconfig.Monitor {
+            val builder = CfnEnvironmentMonitorsPropertyDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appconfig.Monitor.fromCfnMonitorsProperty(
+                builder.build()
+            )
+        }
+    }
+
+    public object RolloutStrategy {
+        public fun exponential(
+            block: RolloutStrategyPropsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.appconfig.RolloutStrategy {
+            val builder = RolloutStrategyPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appconfig.RolloutStrategy.exponential(
+                builder.build()
+            )
+        }
+
+        public fun linear(
+            block: RolloutStrategyPropsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.appconfig.RolloutStrategy {
+            val builder = RolloutStrategyPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appconfig.RolloutStrategy.linear(builder.build())
+        }
     }
 }

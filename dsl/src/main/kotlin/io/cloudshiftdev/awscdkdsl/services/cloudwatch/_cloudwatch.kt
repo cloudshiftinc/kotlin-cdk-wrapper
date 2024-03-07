@@ -2480,4 +2480,24 @@ public object cloudwatch {
         builder.apply(block)
         return builder.build()
     }
+
+    public object Values {
+        public fun fromSearchComponents(
+            block: SearchComponentsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.cloudwatch.Values {
+            val builder = SearchComponentsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.cloudwatch.Values.fromSearchComponents(
+                builder.build()
+            )
+        }
+
+        public fun fromValues(
+            block: VariableValueDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.cloudwatch.Values {
+            val builder = VariableValueDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.cloudwatch.Values.fromValues(builder.build())
+        }
+    }
 }

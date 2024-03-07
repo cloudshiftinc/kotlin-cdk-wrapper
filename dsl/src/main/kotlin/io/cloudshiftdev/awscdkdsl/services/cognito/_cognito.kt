@@ -53,6 +53,7 @@ import software.amazon.awscdk.services.cognito.CustomDomainOptions
 import software.amazon.awscdk.services.cognito.DateTimeAttribute
 import software.amazon.awscdk.services.cognito.DeviceTracking
 import software.amazon.awscdk.services.cognito.EmailSettings
+import software.amazon.awscdk.services.cognito.IUserPoolResourceServer
 import software.amazon.awscdk.services.cognito.KeepOriginalAttrs
 import software.amazon.awscdk.services.cognito.MfaSecondFactor
 import software.amazon.awscdk.services.cognito.NumberAttribute
@@ -4604,5 +4605,29 @@ public object cognito {
         val builder = UserVerificationConfigDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object OAuthScope {
+        public fun resourceServer(
+            server: IUserPoolResourceServer,
+            block: ResourceServerScopeDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.cognito.OAuthScope {
+            val builder = ResourceServerScopeDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.cognito.OAuthScope.resourceServer(
+                server,
+                builder.build()
+            )
+        }
+    }
+
+    public object UserPoolEmail {
+        public fun withSES(
+            block: UserPoolSESOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.cognito.UserPoolEmail {
+            val builder = UserPoolSESOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.cognito.UserPoolEmail.withSES(builder.build())
+        }
     }
 }

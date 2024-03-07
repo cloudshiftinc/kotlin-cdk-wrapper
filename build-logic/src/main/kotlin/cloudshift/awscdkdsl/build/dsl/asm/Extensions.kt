@@ -44,9 +44,6 @@ internal fun ClassName.Companion.fromAsmClassName(name: String): ClassName {
             "V" -> UNIT
             else -> {
                 val fqClassName = normalizeBinaryClassName(name)
-                if (fqClassName.toString().startsWith("V")) {
-                    println("$name -> $fqClassName")
-                }
                 val fqName = FqName(fqClassName.toString())
                 when (val classId = JavaToKotlinClassMap.INSTANCE.mapJavaToKotlin(fqName)) {
                     null -> normalizeBinaryClassName(name)

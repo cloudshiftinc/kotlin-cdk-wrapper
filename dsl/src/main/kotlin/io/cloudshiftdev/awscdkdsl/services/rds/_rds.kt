@@ -57,7 +57,6 @@ import software.amazon.awscdk.services.rds.ClusterInstanceProps
 import software.amazon.awscdk.services.rds.CommonRotationUserOptions
 import software.amazon.awscdk.services.rds.CredentialsBaseOptions
 import software.amazon.awscdk.services.rds.CredentialsFromUsernameOptions
-import software.amazon.awscdk.services.rds.DatabaseCluster
 import software.amazon.awscdk.services.rds.DatabaseClusterAttributes
 import software.amazon.awscdk.services.rds.DatabaseClusterFromSnapshot
 import software.amazon.awscdk.services.rds.DatabaseClusterFromSnapshotProps
@@ -71,13 +70,19 @@ import software.amazon.awscdk.services.rds.DatabaseInstanceProps
 import software.amazon.awscdk.services.rds.DatabaseInstanceReadReplica
 import software.amazon.awscdk.services.rds.DatabaseInstanceReadReplicaProps
 import software.amazon.awscdk.services.rds.DatabaseInstanceSourceProps
-import software.amazon.awscdk.services.rds.DatabaseProxy
 import software.amazon.awscdk.services.rds.DatabaseProxyAttributes
 import software.amazon.awscdk.services.rds.DatabaseProxyOptions
 import software.amazon.awscdk.services.rds.DatabaseProxyProps
 import software.amazon.awscdk.services.rds.DatabaseSecret
 import software.amazon.awscdk.services.rds.DatabaseSecretProps
 import software.amazon.awscdk.services.rds.EngineVersion
+import software.amazon.awscdk.services.rds.IClusterEngine
+import software.amazon.awscdk.services.rds.IClusterInstance
+import software.amazon.awscdk.services.rds.IDatabaseCluster
+import software.amazon.awscdk.services.rds.IDatabaseInstance
+import software.amazon.awscdk.services.rds.IDatabaseProxy
+import software.amazon.awscdk.services.rds.IInstanceEngine
+import software.amazon.awscdk.services.rds.IServerlessCluster
 import software.amazon.awscdk.services.rds.InstanceEngineBindOptions
 import software.amazon.awscdk.services.rds.InstanceEngineConfig
 import software.amazon.awscdk.services.rds.InstanceEngineFeatures
@@ -104,7 +109,6 @@ import software.amazon.awscdk.services.rds.ProvisionedClusterInstanceProps
 import software.amazon.awscdk.services.rds.ProxyTargetConfig
 import software.amazon.awscdk.services.rds.RotationMultiUserOptions
 import software.amazon.awscdk.services.rds.RotationSingleUserOptions
-import software.amazon.awscdk.services.rds.ServerlessCluster
 import software.amazon.awscdk.services.rds.ServerlessClusterAttributes
 import software.amazon.awscdk.services.rds.ServerlessClusterFromSnapshot
 import software.amazon.awscdk.services.rds.ServerlessClusterFromSnapshotProps
@@ -2713,7 +2717,7 @@ public object rds {
         scope: Construct,
         id: String,
         block: DatabaseClusterDsl.() -> Unit = {},
-    ): DatabaseCluster {
+    ): software.amazon.awscdk.services.rds.DatabaseCluster {
         val builder = DatabaseClusterDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -3268,7 +3272,7 @@ public object rds {
         scope: Construct,
         id: String,
         block: DatabaseProxyDsl.() -> Unit = {},
-    ): DatabaseProxy {
+    ): software.amazon.awscdk.services.rds.DatabaseProxy {
         val builder = DatabaseProxyDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -4370,7 +4374,7 @@ public object rds {
         scope: Construct,
         id: String,
         block: ServerlessClusterDsl.() -> Unit = {},
-    ): ServerlessCluster {
+    ): software.amazon.awscdk.services.rds.ServerlessCluster {
         val builder = ServerlessClusterDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -4773,5 +4777,304 @@ public object rds {
         val builder = SubnetGroupPropsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object AuroraPostgresEngineVersion {
+        public fun of(
+            auroraPostgresFullVersion: String,
+            auroraPostgresMajorVersion: String,
+            block: AuroraPostgresEngineFeaturesDsl.() -> Unit = {},
+        ): software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion {
+            val builder = AuroraPostgresEngineFeaturesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.of(
+                auroraPostgresFullVersion,
+                auroraPostgresMajorVersion,
+                builder.build()
+            )
+        }
+    }
+
+    public object ClusterInstance {
+        public fun provisioned(
+            id: String,
+            block: ProvisionedClusterInstancePropsDsl.() -> Unit = {}
+        ): IClusterInstance {
+            val builder = ProvisionedClusterInstancePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.rds.ClusterInstance.provisioned(
+                id,
+                builder.build()
+            )
+        }
+
+        public fun serverlessV2(
+            id: String,
+            block: ServerlessV2ClusterInstancePropsDsl.() -> Unit = {}
+        ): IClusterInstance {
+            val builder = ServerlessV2ClusterInstancePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.rds.ClusterInstance.serverlessV2(
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object Credentials {
+        public fun fromGeneratedSecret(
+            username: String,
+            block: CredentialsBaseOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.rds.Credentials {
+            val builder = CredentialsBaseOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.rds.Credentials.fromGeneratedSecret(
+                username,
+                builder.build()
+            )
+        }
+
+        public fun fromUsername(
+            username: String,
+            block: CredentialsFromUsernameOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.rds.Credentials {
+            val builder = CredentialsFromUsernameOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.rds.Credentials.fromUsername(
+                username,
+                builder.build()
+            )
+        }
+    }
+
+    public object DatabaseCluster {
+        public fun fromDatabaseClusterAttributes(
+            scope: Construct,
+            id: String,
+            block: DatabaseClusterAttributesDsl.() -> Unit = {},
+        ): IDatabaseCluster {
+            val builder = DatabaseClusterAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.rds.DatabaseCluster
+                .fromDatabaseClusterAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object DatabaseClusterEngine {
+        public fun aurora(block: AuroraClusterEnginePropsDsl.() -> Unit = {}): IClusterEngine {
+            val builder = AuroraClusterEnginePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.rds.DatabaseClusterEngine.aurora(builder.build())
+        }
+
+        public fun auroraMysql(
+            block: AuroraMysqlClusterEnginePropsDsl.() -> Unit = {}
+        ): IClusterEngine {
+            val builder = AuroraMysqlClusterEnginePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.rds.DatabaseClusterEngine.auroraMysql(
+                builder.build()
+            )
+        }
+
+        public fun auroraPostgres(
+            block: AuroraPostgresClusterEnginePropsDsl.() -> Unit = {}
+        ): IClusterEngine {
+            val builder = AuroraPostgresClusterEnginePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.rds.DatabaseClusterEngine.auroraPostgres(
+                builder.build()
+            )
+        }
+    }
+
+    public object DatabaseInstanceBase {
+        public fun fromDatabaseInstanceAttributes(
+            scope: Construct,
+            id: String,
+            block: DatabaseInstanceAttributesDsl.() -> Unit = {},
+        ): IDatabaseInstance {
+            val builder = DatabaseInstanceAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.rds.DatabaseInstanceBase
+                .fromDatabaseInstanceAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object DatabaseInstanceEngine {
+        public fun mariaDb(block: MariaDbInstanceEnginePropsDsl.() -> Unit = {}): IInstanceEngine {
+            val builder = MariaDbInstanceEnginePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.rds.DatabaseInstanceEngine.mariaDb(
+                builder.build()
+            )
+        }
+
+        public fun mysql(block: MySqlInstanceEnginePropsDsl.() -> Unit = {}): IInstanceEngine {
+            val builder = MySqlInstanceEnginePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.rds.DatabaseInstanceEngine.mysql(builder.build())
+        }
+
+        public fun oracleEe(
+            block: OracleEeInstanceEnginePropsDsl.() -> Unit = {}
+        ): IInstanceEngine {
+            val builder = OracleEeInstanceEnginePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.rds.DatabaseInstanceEngine.oracleEe(
+                builder.build()
+            )
+        }
+
+        public fun oracleEeCdb(
+            block: OracleEeCdbInstanceEnginePropsDsl.() -> Unit = {}
+        ): IInstanceEngine {
+            val builder = OracleEeCdbInstanceEnginePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.rds.DatabaseInstanceEngine.oracleEeCdb(
+                builder.build()
+            )
+        }
+
+        public fun oracleSe2(
+            block: OracleSe2InstanceEnginePropsDsl.() -> Unit = {}
+        ): IInstanceEngine {
+            val builder = OracleSe2InstanceEnginePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.rds.DatabaseInstanceEngine.oracleSe2(
+                builder.build()
+            )
+        }
+
+        public fun oracleSe2Cdb(
+            block: OracleSe2CdbInstanceEnginePropsDsl.() -> Unit = {}
+        ): IInstanceEngine {
+            val builder = OracleSe2CdbInstanceEnginePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.rds.DatabaseInstanceEngine.oracleSe2Cdb(
+                builder.build()
+            )
+        }
+
+        public fun postgres(
+            block: PostgresInstanceEnginePropsDsl.() -> Unit = {}
+        ): IInstanceEngine {
+            val builder = PostgresInstanceEnginePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.rds.DatabaseInstanceEngine.postgres(
+                builder.build()
+            )
+        }
+
+        public fun sqlServerEe(
+            block: SqlServerEeInstanceEnginePropsDsl.() -> Unit = {}
+        ): IInstanceEngine {
+            val builder = SqlServerEeInstanceEnginePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.rds.DatabaseInstanceEngine.sqlServerEe(
+                builder.build()
+            )
+        }
+
+        public fun sqlServerEx(
+            block: SqlServerExInstanceEnginePropsDsl.() -> Unit = {}
+        ): IInstanceEngine {
+            val builder = SqlServerExInstanceEnginePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.rds.DatabaseInstanceEngine.sqlServerEx(
+                builder.build()
+            )
+        }
+
+        public fun sqlServerSe(
+            block: SqlServerSeInstanceEnginePropsDsl.() -> Unit = {}
+        ): IInstanceEngine {
+            val builder = SqlServerSeInstanceEnginePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.rds.DatabaseInstanceEngine.sqlServerSe(
+                builder.build()
+            )
+        }
+
+        public fun sqlServerWeb(
+            block: SqlServerWebInstanceEnginePropsDsl.() -> Unit = {}
+        ): IInstanceEngine {
+            val builder = SqlServerWebInstanceEnginePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.rds.DatabaseInstanceEngine.sqlServerWeb(
+                builder.build()
+            )
+        }
+    }
+
+    public object DatabaseProxy {
+        public fun fromDatabaseProxyAttributes(
+            scope: Construct,
+            id: String,
+            block: DatabaseProxyAttributesDsl.() -> Unit = {},
+        ): IDatabaseProxy {
+            val builder = DatabaseProxyAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.rds.DatabaseProxy.fromDatabaseProxyAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object PostgresEngineVersion {
+        public fun of(
+            postgresFullVersion: String,
+            postgresMajorVersion: String,
+            block: PostgresEngineFeaturesDsl.() -> Unit = {},
+        ): software.amazon.awscdk.services.rds.PostgresEngineVersion {
+            val builder = PostgresEngineFeaturesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.rds.PostgresEngineVersion.of(
+                postgresFullVersion,
+                postgresMajorVersion,
+                builder.build()
+            )
+        }
+    }
+
+    public object ServerlessCluster {
+        public fun fromServerlessClusterAttributes(
+            scope: Construct,
+            id: String,
+            block: ServerlessClusterAttributesDsl.() -> Unit = {},
+        ): IServerlessCluster {
+            val builder = ServerlessClusterAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.rds.ServerlessCluster
+                .fromServerlessClusterAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object SnapshotCredentials {
+        public fun fromGeneratedPassword(
+            username: String,
+            block: SnapshotCredentialsFromGeneratedPasswordOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.rds.SnapshotCredentials {
+            val builder = SnapshotCredentialsFromGeneratedPasswordOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.rds.SnapshotCredentials.fromGeneratedPassword(
+                username,
+                builder.build()
+            )
+        }
+
+        public fun fromGeneratedSecret(
+            username: String,
+            block: SnapshotCredentialsFromGeneratedPasswordOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.rds.SnapshotCredentials {
+            val builder = SnapshotCredentialsFromGeneratedPasswordOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.rds.SnapshotCredentials.fromGeneratedSecret(
+                username,
+                builder.build()
+            )
+        }
     }
 }

@@ -15,7 +15,6 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.s3.BlockPublicAccess
 import software.amazon.awscdk.services.s3.BlockPublicAccessOptions
-import software.amazon.awscdk.services.s3.Bucket
 import software.amazon.awscdk.services.s3.BucketAttributes
 import software.amazon.awscdk.services.s3.BucketMetrics
 import software.amazon.awscdk.services.s3.BucketNotificationDestinationConfig
@@ -43,6 +42,7 @@ import software.amazon.awscdk.services.s3.CfnStorageLensGroup
 import software.amazon.awscdk.services.s3.CfnStorageLensGroupProps
 import software.amazon.awscdk.services.s3.CfnStorageLensProps
 import software.amazon.awscdk.services.s3.CorsRule
+import software.amazon.awscdk.services.s3.IBucket
 import software.amazon.awscdk.services.s3.IntelligentTieringConfiguration
 import software.amazon.awscdk.services.s3.Inventory
 import software.amazon.awscdk.services.s3.InventoryDestination
@@ -114,7 +114,7 @@ public object s3 {
         scope: Construct,
         id: String,
         block: BucketDsl.() -> Unit = {},
-    ): Bucket {
+    ): software.amazon.awscdk.services.s3.Bucket {
         val builder = BucketDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -4969,5 +4969,21 @@ public object s3 {
         val builder = VirtualHostedStyleUrlOptionsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object Bucket {
+        public fun fromBucketAttributes(
+            scope: Construct,
+            id: String,
+            block: BucketAttributesDsl.() -> Unit = {},
+        ): IBucket {
+            val builder = BucketAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.s3.Bucket.fromBucketAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
     }
 }

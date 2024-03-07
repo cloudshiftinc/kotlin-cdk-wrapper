@@ -73,6 +73,7 @@ import software.amazon.awscdk.services.batch.Tmpfs
 import software.amazon.awscdk.services.batch.Ulimit
 import software.amazon.awscdk.services.batch.UnmanagedComputeEnvironment
 import software.amazon.awscdk.services.batch.UnmanagedComputeEnvironmentProps
+import software.amazon.awscdk.services.secretsmanager.ISecret
 import software.constructs.Construct
 
 public object batch {
@@ -4374,5 +4375,63 @@ public object batch {
         val builder = UnmanagedComputeEnvironmentPropsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object EcsVolume {
+        public fun efs(block: EfsVolumeOptionsDsl.() -> Unit = {}): EfsVolume {
+            val builder = EfsVolumeOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.batch.EcsVolume.efs(builder.build())
+        }
+
+        public fun host(block: HostVolumeOptionsDsl.() -> Unit = {}): HostVolume {
+            val builder = HostVolumeOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.batch.EcsVolume.host(builder.build())
+        }
+    }
+
+    public object EksVolume {
+        public fun emptyDir(block: EmptyDirVolumeOptionsDsl.() -> Unit = {}): EmptyDirVolume {
+            val builder = EmptyDirVolumeOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.batch.EksVolume.emptyDir(builder.build())
+        }
+
+        public fun hostPath(block: HostPathVolumeOptionsDsl.() -> Unit = {}): HostPathVolume {
+            val builder = HostPathVolumeOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.batch.EksVolume.hostPath(builder.build())
+        }
+
+        public fun secret(block: SecretPathVolumeOptionsDsl.() -> Unit = {}): SecretPathVolume {
+            val builder = SecretPathVolumeOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.batch.EksVolume.secret(builder.build())
+        }
+    }
+
+    public object Reason {
+        public fun custom(
+            block: CustomReasonDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.batch.Reason {
+            val builder = CustomReasonDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.batch.Reason.custom(builder.build())
+        }
+    }
+
+    public object Secret {
+        public fun fromSecretsManagerVersion(
+            secret: ISecret,
+            block: SecretVersionInfoDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.batch.Secret {
+            val builder = SecretVersionInfoDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.batch.Secret.fromSecretsManagerVersion(
+                secret,
+                builder.build()
+            )
+        }
     }
 }

@@ -31,7 +31,6 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualRouterProps
 import software.amazon.awscdk.services.appmesh.CfnVirtualService
 import software.amazon.awscdk.services.appmesh.CfnVirtualServiceProps
 import software.amazon.awscdk.services.appmesh.CommonGatewayRouteSpecOptions
-import software.amazon.awscdk.services.appmesh.GatewayRoute
 import software.amazon.awscdk.services.appmesh.GatewayRouteAttributes
 import software.amazon.awscdk.services.appmesh.GatewayRouteBaseProps
 import software.amazon.awscdk.services.appmesh.GatewayRouteHostnameMatchConfig
@@ -65,6 +64,12 @@ import software.amazon.awscdk.services.appmesh.HttpRoutePathMatchConfig
 import software.amazon.awscdk.services.appmesh.HttpRouteSpecOptions
 import software.amazon.awscdk.services.appmesh.HttpTimeout
 import software.amazon.awscdk.services.appmesh.HttpVirtualNodeListenerOptions
+import software.amazon.awscdk.services.appmesh.IGatewayRoute
+import software.amazon.awscdk.services.appmesh.IRoute
+import software.amazon.awscdk.services.appmesh.IVirtualGateway
+import software.amazon.awscdk.services.appmesh.IVirtualNode
+import software.amazon.awscdk.services.appmesh.IVirtualRouter
+import software.amazon.awscdk.services.appmesh.IVirtualService
 import software.amazon.awscdk.services.appmesh.ListenerTlsOptions
 import software.amazon.awscdk.services.appmesh.LoggingFormatConfig
 import software.amazon.awscdk.services.appmesh.Mesh
@@ -73,7 +78,6 @@ import software.amazon.awscdk.services.appmesh.MeshServiceDiscovery
 import software.amazon.awscdk.services.appmesh.MutualTlsValidation
 import software.amazon.awscdk.services.appmesh.OutlierDetection
 import software.amazon.awscdk.services.appmesh.QueryParameterMatchConfig
-import software.amazon.awscdk.services.appmesh.Route
 import software.amazon.awscdk.services.appmesh.RouteAttributes
 import software.amazon.awscdk.services.appmesh.RouteBaseProps
 import software.amazon.awscdk.services.appmesh.RouteProps
@@ -90,22 +94,18 @@ import software.amazon.awscdk.services.appmesh.TlsCertificateConfig
 import software.amazon.awscdk.services.appmesh.TlsClientPolicy
 import software.amazon.awscdk.services.appmesh.TlsValidation
 import software.amazon.awscdk.services.appmesh.TlsValidationTrustConfig
-import software.amazon.awscdk.services.appmesh.VirtualGateway
 import software.amazon.awscdk.services.appmesh.VirtualGatewayAttributes
 import software.amazon.awscdk.services.appmesh.VirtualGatewayBaseProps
 import software.amazon.awscdk.services.appmesh.VirtualGatewayListenerConfig
 import software.amazon.awscdk.services.appmesh.VirtualGatewayProps
-import software.amazon.awscdk.services.appmesh.VirtualNode
 import software.amazon.awscdk.services.appmesh.VirtualNodeAttributes
 import software.amazon.awscdk.services.appmesh.VirtualNodeBaseProps
 import software.amazon.awscdk.services.appmesh.VirtualNodeListenerConfig
 import software.amazon.awscdk.services.appmesh.VirtualNodeProps
-import software.amazon.awscdk.services.appmesh.VirtualRouter
 import software.amazon.awscdk.services.appmesh.VirtualRouterAttributes
 import software.amazon.awscdk.services.appmesh.VirtualRouterBaseProps
 import software.amazon.awscdk.services.appmesh.VirtualRouterListenerConfig
 import software.amazon.awscdk.services.appmesh.VirtualRouterProps
-import software.amazon.awscdk.services.appmesh.VirtualService
 import software.amazon.awscdk.services.appmesh.VirtualServiceAttributes
 import software.amazon.awscdk.services.appmesh.VirtualServiceBackendOptions
 import software.amazon.awscdk.services.appmesh.VirtualServiceProps
@@ -7555,7 +7555,7 @@ public object appmesh {
         scope: Construct,
         id: String,
         block: GatewayRouteDsl.() -> Unit = {},
-    ): GatewayRoute {
+    ): software.amazon.awscdk.services.appmesh.GatewayRoute {
         val builder = GatewayRouteDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -9098,7 +9098,7 @@ public object appmesh {
         scope: Construct,
         id: String,
         block: RouteDsl.() -> Unit = {},
-    ): Route {
+    ): software.amazon.awscdk.services.appmesh.Route {
         val builder = RouteDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -9818,7 +9818,7 @@ public object appmesh {
         scope: Construct,
         id: String,
         block: VirtualGatewayDsl.() -> Unit = {},
-    ): VirtualGateway {
+    ): software.amazon.awscdk.services.appmesh.VirtualGateway {
         val builder = VirtualGatewayDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -10029,7 +10029,7 @@ public object appmesh {
         scope: Construct,
         id: String,
         block: VirtualNodeDsl.() -> Unit = {},
-    ): VirtualNode {
+    ): software.amazon.awscdk.services.appmesh.VirtualNode {
         val builder = VirtualNodeDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -10283,7 +10283,7 @@ public object appmesh {
         scope: Construct,
         id: String,
         block: VirtualRouterDsl.() -> Unit = {},
-    ): VirtualRouter {
+    ): software.amazon.awscdk.services.appmesh.VirtualRouter {
         val builder = VirtualRouterDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -10410,7 +10410,7 @@ public object appmesh {
         scope: Construct,
         id: String,
         block: VirtualServiceDsl.() -> Unit = {},
-    ): VirtualService {
+    ): software.amazon.awscdk.services.appmesh.VirtualService {
         val builder = VirtualServiceDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -10550,5 +10550,268 @@ public object appmesh {
         val builder = WeightedTargetDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object Backend {
+        public fun virtualService(
+            virtualService: IVirtualService,
+            block: VirtualServiceBackendOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.appmesh.Backend {
+            val builder = VirtualServiceBackendOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appmesh.Backend.virtualService(
+                virtualService,
+                builder.build()
+            )
+        }
+    }
+
+    public object GatewayRoute {
+        public fun fromGatewayRouteAttributes(
+            scope: Construct,
+            id: String,
+            block: GatewayRouteAttributesDsl.() -> Unit = {},
+        ): IGatewayRoute {
+            val builder = GatewayRouteAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appmesh.GatewayRoute.fromGatewayRouteAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object GatewayRouteSpec {
+        public fun grpc(
+            block: GrpcGatewayRouteSpecOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.appmesh.GatewayRouteSpec {
+            val builder = GrpcGatewayRouteSpecOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appmesh.GatewayRouteSpec.grpc(builder.build())
+        }
+
+        public fun http(
+            block: HttpGatewayRouteSpecOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.appmesh.GatewayRouteSpec {
+            val builder = HttpGatewayRouteSpecOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appmesh.GatewayRouteSpec.http(builder.build())
+        }
+
+        public fun http2(
+            block: HttpGatewayRouteSpecOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.appmesh.GatewayRouteSpec {
+            val builder = HttpGatewayRouteSpecOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appmesh.GatewayRouteSpec.http2(builder.build())
+        }
+    }
+
+    public object HealthCheck {
+        public fun grpc(
+            block: GrpcHealthCheckOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.appmesh.HealthCheck {
+            val builder = GrpcHealthCheckOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appmesh.HealthCheck.grpc(builder.build())
+        }
+
+        public fun http(
+            block: HttpHealthCheckOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.appmesh.HealthCheck {
+            val builder = HttpHealthCheckOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appmesh.HealthCheck.http(builder.build())
+        }
+
+        public fun http2(
+            block: HttpHealthCheckOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.appmesh.HealthCheck {
+            val builder = HttpHealthCheckOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appmesh.HealthCheck.http2(builder.build())
+        }
+
+        public fun tcp(
+            block: TcpHealthCheckOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.appmesh.HealthCheck {
+            val builder = TcpHealthCheckOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appmesh.HealthCheck.tcp(builder.build())
+        }
+    }
+
+    public object Route {
+        public fun fromRouteAttributes(
+            scope: Construct,
+            id: String,
+            block: RouteAttributesDsl.() -> Unit = {},
+        ): IRoute {
+            val builder = RouteAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appmesh.Route.fromRouteAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object RouteSpec {
+        public fun grpc(
+            block: GrpcRouteSpecOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.appmesh.RouteSpec {
+            val builder = GrpcRouteSpecOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appmesh.RouteSpec.grpc(builder.build())
+        }
+
+        public fun http(
+            block: HttpRouteSpecOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.appmesh.RouteSpec {
+            val builder = HttpRouteSpecOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appmesh.RouteSpec.http(builder.build())
+        }
+
+        public fun http2(
+            block: HttpRouteSpecOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.appmesh.RouteSpec {
+            val builder = HttpRouteSpecOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appmesh.RouteSpec.http2(builder.build())
+        }
+
+        public fun tcp(
+            block: TcpRouteSpecOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.appmesh.RouteSpec {
+            val builder = TcpRouteSpecOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appmesh.RouteSpec.tcp(builder.build())
+        }
+    }
+
+    public object VirtualGateway {
+        public fun fromVirtualGatewayAttributes(
+            scope: Construct,
+            id: String,
+            block: VirtualGatewayAttributesDsl.() -> Unit = {},
+        ): IVirtualGateway {
+            val builder = VirtualGatewayAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appmesh.VirtualGateway
+                .fromVirtualGatewayAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object VirtualGatewayListener {
+        public fun grpc(
+            block: GrpcGatewayListenerOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.appmesh.VirtualGatewayListener {
+            val builder = GrpcGatewayListenerOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appmesh.VirtualGatewayListener.grpc(
+                builder.build()
+            )
+        }
+
+        public fun http(
+            block: HttpGatewayListenerOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.appmesh.VirtualGatewayListener {
+            val builder = HttpGatewayListenerOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appmesh.VirtualGatewayListener.http(
+                builder.build()
+            )
+        }
+
+        public fun http2(
+            block: Http2GatewayListenerOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.appmesh.VirtualGatewayListener {
+            val builder = Http2GatewayListenerOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appmesh.VirtualGatewayListener.http2(
+                builder.build()
+            )
+        }
+    }
+
+    public object VirtualNode {
+        public fun fromVirtualNodeAttributes(
+            scope: Construct,
+            id: String,
+            block: VirtualNodeAttributesDsl.() -> Unit = {},
+        ): IVirtualNode {
+            val builder = VirtualNodeAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appmesh.VirtualNode.fromVirtualNodeAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object VirtualNodeListener {
+        public fun grpc(
+            block: GrpcVirtualNodeListenerOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.appmesh.VirtualNodeListener {
+            val builder = GrpcVirtualNodeListenerOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appmesh.VirtualNodeListener.grpc(builder.build())
+        }
+
+        public fun http(
+            block: HttpVirtualNodeListenerOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.appmesh.VirtualNodeListener {
+            val builder = HttpVirtualNodeListenerOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appmesh.VirtualNodeListener.http(builder.build())
+        }
+
+        public fun http2(
+            block: Http2VirtualNodeListenerOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.appmesh.VirtualNodeListener {
+            val builder = Http2VirtualNodeListenerOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appmesh.VirtualNodeListener.http2(
+                builder.build()
+            )
+        }
+
+        public fun tcp(
+            block: TcpVirtualNodeListenerOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.appmesh.VirtualNodeListener {
+            val builder = TcpVirtualNodeListenerOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appmesh.VirtualNodeListener.tcp(builder.build())
+        }
+    }
+
+    public object VirtualRouter {
+        public fun fromVirtualRouterAttributes(
+            scope: Construct,
+            id: String,
+            block: VirtualRouterAttributesDsl.() -> Unit = {},
+        ): IVirtualRouter {
+            val builder = VirtualRouterAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appmesh.VirtualRouter
+                .fromVirtualRouterAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object VirtualService {
+        public fun fromVirtualServiceAttributes(
+            scope: Construct,
+            id: String,
+            block: VirtualServiceAttributesDsl.() -> Unit = {},
+        ): IVirtualService {
+            val builder = VirtualServiceAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appmesh.VirtualService
+                .fromVirtualServiceAttributes(scope, id, builder.build())
+        }
     }
 }

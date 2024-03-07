@@ -11,11 +11,11 @@
 
 package io.cloudshiftdev.awscdkdsl.services.appsync
 
+import io.cloudshiftdev.awscdkdsl.services.s3.assets.AssetOptionsDsl
 import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.appsync.ApiKeyConfig
-import software.amazon.awscdk.services.appsync.AppsyncFunction
 import software.amazon.awscdk.services.appsync.AppsyncFunctionAttributes
 import software.amazon.awscdk.services.appsync.AppsyncFunctionProps
 import software.amazon.awscdk.services.appsync.AssetCode
@@ -58,12 +58,14 @@ import software.amazon.awscdk.services.appsync.EventBridgeDataSource
 import software.amazon.awscdk.services.appsync.EventBridgeDataSourceProps
 import software.amazon.awscdk.services.appsync.ExtendedDataSourceProps
 import software.amazon.awscdk.services.appsync.ExtendedResolverProps
-import software.amazon.awscdk.services.appsync.GraphqlApi
 import software.amazon.awscdk.services.appsync.GraphqlApiAttributes
 import software.amazon.awscdk.services.appsync.GraphqlApiProps
 import software.amazon.awscdk.services.appsync.HttpDataSource
 import software.amazon.awscdk.services.appsync.HttpDataSourceOptions
 import software.amazon.awscdk.services.appsync.HttpDataSourceProps
+import software.amazon.awscdk.services.appsync.IAppsyncFunction
+import software.amazon.awscdk.services.appsync.IGraphqlApi
+import software.amazon.awscdk.services.appsync.ISourceApiAssociation
 import software.amazon.awscdk.services.appsync.LambdaAuthorizerConfig
 import software.amazon.awscdk.services.appsync.LambdaDataSource
 import software.amazon.awscdk.services.appsync.LambdaDataSourceProps
@@ -82,7 +84,6 @@ import software.amazon.awscdk.services.appsync.SchemaBindOptions
 import software.amazon.awscdk.services.appsync.SchemaFile
 import software.amazon.awscdk.services.appsync.SchemaProps
 import software.amazon.awscdk.services.appsync.SourceApi
-import software.amazon.awscdk.services.appsync.SourceApiAssociation
 import software.amazon.awscdk.services.appsync.SourceApiAssociationAttributes
 import software.amazon.awscdk.services.appsync.SourceApiAssociationProps
 import software.amazon.awscdk.services.appsync.SourceApiOptions
@@ -136,7 +137,7 @@ public object appsync {
         scope: Construct,
         id: String,
         block: AppsyncFunctionDsl.() -> Unit = {},
-    ): AppsyncFunction {
+    ): software.amazon.awscdk.services.appsync.AppsyncFunction {
         val builder = AppsyncFunctionDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -2703,7 +2704,7 @@ public object appsync {
         scope: Construct,
         id: String,
         block: GraphqlApiDsl.() -> Unit = {},
-    ): GraphqlApi {
+    ): software.amazon.awscdk.services.appsync.GraphqlApi {
         val builder = GraphqlApiDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -3466,7 +3467,7 @@ public object appsync {
         scope: Construct,
         id: String,
         block: SourceApiAssociationDsl.() -> Unit = {},
-    ): SourceApiAssociation {
+    ): software.amazon.awscdk.services.appsync.SourceApiAssociation {
         val builder = SourceApiAssociationDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -3591,5 +3592,67 @@ public object appsync {
         val builder = UserPoolConfigDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object AppsyncFunction {
+        public fun fromAppsyncFunctionAttributes(
+            scope: Construct,
+            id: String,
+            block: AppsyncFunctionAttributesDsl.() -> Unit = {},
+        ): IAppsyncFunction {
+            val builder = AppsyncFunctionAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appsync.AppsyncFunction
+                .fromAppsyncFunctionAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object Code {
+        public fun fromAsset(path: String, block: AssetOptionsDsl.() -> Unit = {}): AssetCode {
+            val builder = AssetOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appsync.Code.fromAsset(path, builder.build())
+        }
+    }
+
+    public object Definition {
+        public fun fromSourceApis(
+            block: SourceApiOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.appsync.Definition {
+            val builder = SourceApiOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appsync.Definition.fromSourceApis(
+                builder.build()
+            )
+        }
+    }
+
+    public object GraphqlApi {
+        public fun fromGraphqlApiAttributes(
+            scope: Construct,
+            id: String,
+            block: GraphqlApiAttributesDsl.() -> Unit = {},
+        ): IGraphqlApi {
+            val builder = GraphqlApiAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appsync.GraphqlApi.fromGraphqlApiAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object SourceApiAssociation {
+        public fun fromSourceApiAssociationAttributes(
+            scope: Construct,
+            id: String,
+            block: SourceApiAssociationAttributesDsl.() -> Unit = {},
+        ): ISourceApiAssociation {
+            val builder = SourceApiAssociationAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.appsync.SourceApiAssociation
+                .fromSourceApiAssociationAttributes(scope, id, builder.build())
+        }
     }
 }

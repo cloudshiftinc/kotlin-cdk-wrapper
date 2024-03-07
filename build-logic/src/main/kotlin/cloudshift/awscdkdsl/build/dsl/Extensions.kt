@@ -19,3 +19,4 @@ internal fun dslFunctionSpec(prop: BuilderProperty, block: FunSpec.Builder.() ->
     prop.comment?.let { builder.addKdoc("%L", it) }
     return builder.build()
 }
+

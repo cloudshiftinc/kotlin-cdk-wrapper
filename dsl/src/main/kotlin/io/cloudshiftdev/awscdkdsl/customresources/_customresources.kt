@@ -206,4 +206,16 @@ public object customresources {
         builder.apply(block)
         return builder.build()
     }
+
+    public object AwsCustomResourcePolicy {
+        public fun fromSdkCalls(
+            block: SdkCallsPolicyOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.customresources.AwsCustomResourcePolicy {
+            val builder = SdkCallsPolicyOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.customresources.AwsCustomResourcePolicy.fromSdkCalls(
+                builder.build()
+            )
+        }
+    }
 }

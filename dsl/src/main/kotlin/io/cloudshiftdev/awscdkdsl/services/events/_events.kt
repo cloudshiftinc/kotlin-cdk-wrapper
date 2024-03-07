@@ -32,17 +32,17 @@ import software.amazon.awscdk.services.events.CfnEventBusPolicyProps
 import software.amazon.awscdk.services.events.CfnEventBusProps
 import software.amazon.awscdk.services.events.CfnRule
 import software.amazon.awscdk.services.events.CfnRuleProps
-import software.amazon.awscdk.services.events.Connection
 import software.amazon.awscdk.services.events.ConnectionAttributes
 import software.amazon.awscdk.services.events.ConnectionProps
 import software.amazon.awscdk.services.events.CronOptions
-import software.amazon.awscdk.services.events.EventBus
 import software.amazon.awscdk.services.events.EventBusAttributes
 import software.amazon.awscdk.services.events.EventBusPolicy
 import software.amazon.awscdk.services.events.EventBusPolicyProps
 import software.amazon.awscdk.services.events.EventBusProps
 import software.amazon.awscdk.services.events.EventCommonOptions
 import software.amazon.awscdk.services.events.EventPattern
+import software.amazon.awscdk.services.events.IConnection
+import software.amazon.awscdk.services.events.IEventBus
 import software.amazon.awscdk.services.events.OAuthAuthorizationProps
 import software.amazon.awscdk.services.events.OnEventOptions
 import software.amazon.awscdk.services.events.Rule
@@ -2398,7 +2398,7 @@ public object events {
         scope: Construct,
         id: String,
         block: ConnectionDsl.() -> Unit = {},
-    ): Connection {
+    ): software.amazon.awscdk.services.events.Connection {
         val builder = ConnectionDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -2503,7 +2503,7 @@ public object events {
         scope: Construct,
         id: String,
         block: EventBusDsl.() -> Unit = {},
-    ): EventBus {
+    ): software.amazon.awscdk.services.events.EventBus {
         val builder = EventBusDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -2979,5 +2979,57 @@ public object events {
         val builder = RuleTargetInputPropertiesDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object Authorization {
+        public fun oauth(
+            block: OAuthAuthorizationPropsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.events.Authorization {
+            val builder = OAuthAuthorizationPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.events.Authorization.oauth(builder.build())
+        }
+    }
+
+    public object Connection {
+        public fun fromConnectionAttributes(
+            scope: Construct,
+            id: String,
+            block: ConnectionAttributesDsl.() -> Unit = {},
+        ): IConnection {
+            val builder = ConnectionAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.events.Connection.fromConnectionAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object EventBus {
+        public fun fromEventBusAttributes(
+            scope: Construct,
+            id: String,
+            block: EventBusAttributesDsl.() -> Unit = {},
+        ): IEventBus {
+            val builder = EventBusAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.events.EventBus.fromEventBusAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object Schedule {
+        public fun cron(
+            block: CronOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.events.Schedule {
+            val builder = CronOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.events.Schedule.cron(builder.build())
+        }
     }
 }

@@ -51,9 +51,9 @@ import software.amazon.awscdk.services.codepipeline.actions.ElasticBeanstalkDepl
 import software.amazon.awscdk.services.codepipeline.actions.GitHubSourceAction
 import software.amazon.awscdk.services.codepipeline.actions.GitHubSourceActionProps
 import software.amazon.awscdk.services.codepipeline.actions.GitHubSourceVariables
+import software.amazon.awscdk.services.codepipeline.actions.IJenkinsProvider
 import software.amazon.awscdk.services.codepipeline.actions.JenkinsAction
 import software.amazon.awscdk.services.codepipeline.actions.JenkinsActionProps
-import software.amazon.awscdk.services.codepipeline.actions.JenkinsProvider
 import software.amazon.awscdk.services.codepipeline.actions.JenkinsProviderAttributes
 import software.amazon.awscdk.services.codepipeline.actions.JenkinsProviderProps
 import software.amazon.awscdk.services.codepipeline.actions.LambdaInvokeAction
@@ -1617,7 +1617,7 @@ public object actions {
         scope: Construct,
         id: String,
         block: JenkinsProviderDsl.() -> Unit = {},
-    ): JenkinsProvider {
+    ): software.amazon.awscdk.services.codepipeline.actions.JenkinsProvider {
         val builder = JenkinsProviderDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -2072,5 +2072,38 @@ public object actions {
         val builder = StepFunctionsInvokeActionPropsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object JenkinsProvider {
+        public fun fromJenkinsProviderAttributes(
+            scope: Construct,
+            id: String,
+            block: JenkinsProviderAttributesDsl.() -> Unit = {},
+        ): IJenkinsProvider {
+            val builder = JenkinsProviderAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.codepipeline.actions.JenkinsProvider
+                .fromJenkinsProviderAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object StackSetDeploymentModel {
+        public fun organizations(
+            block: OrganizationsDeploymentPropsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.codepipeline.actions.StackSetDeploymentModel {
+            val builder = OrganizationsDeploymentPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.codepipeline.actions.StackSetDeploymentModel
+                .organizations(builder.build())
+        }
+
+        public fun selfManaged(
+            block: SelfManagedDeploymentPropsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.codepipeline.actions.StackSetDeploymentModel {
+            val builder = SelfManagedDeploymentPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.codepipeline.actions.StackSetDeploymentModel
+                .selfManaged(builder.build())
+        }
     }
 }

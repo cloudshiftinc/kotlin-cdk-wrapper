@@ -25,8 +25,8 @@ import software.amazon.awscdk.services.fsx.CfnVolume
 import software.amazon.awscdk.services.fsx.CfnVolumeProps
 import software.amazon.awscdk.services.fsx.FileSystemAttributes
 import software.amazon.awscdk.services.fsx.FileSystemProps
+import software.amazon.awscdk.services.fsx.IFileSystem
 import software.amazon.awscdk.services.fsx.LustreConfiguration
-import software.amazon.awscdk.services.fsx.LustreFileSystem
 import software.amazon.awscdk.services.fsx.LustreFileSystemProps
 import software.amazon.awscdk.services.fsx.LustreMaintenanceTime
 import software.amazon.awscdk.services.fsx.LustreMaintenanceTimeProps
@@ -1885,7 +1885,7 @@ public object fsx {
         scope: Construct,
         id: String,
         block: LustreFileSystemDsl.() -> Unit = {},
-    ): LustreFileSystem {
+    ): software.amazon.awscdk.services.fsx.LustreFileSystem {
         val builder = LustreFileSystemDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -1964,5 +1964,18 @@ public object fsx {
         val builder = LustreMaintenanceTimePropsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object LustreFileSystem {
+        public fun fromLustreFileSystemAttributes(
+            scope: Construct,
+            id: String,
+            block: FileSystemAttributesDsl.() -> Unit = {},
+        ): IFileSystem {
+            val builder = FileSystemAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.fsx.LustreFileSystem
+                .fromLustreFileSystemAttributes(scope, id, builder.build())
+        }
     }
 }

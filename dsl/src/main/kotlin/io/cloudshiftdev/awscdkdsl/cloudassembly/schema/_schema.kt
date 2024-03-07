@@ -11,6 +11,7 @@
 
 package io.cloudshiftdev.awscdkdsl.cloudassembly.schema
 
+import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.cloudassembly.schema.AmiContextQuery
 import software.amazon.awscdk.cloudassembly.schema.ArtifactManifest
@@ -1774,5 +1775,19 @@ public object schema {
         val builder = VpcContextQueryDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object Manifest {
+        public fun loadAssemblyManifest(
+            filePath: String,
+            block: LoadManifestOptionsDsl.() -> Unit = {}
+        ): AssemblyManifest {
+            val builder = LoadManifestOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.cloudassembly.schema.Manifest.loadAssemblyManifest(
+                filePath,
+                builder.build()
+            )
+        }
     }
 }

@@ -17,7 +17,7 @@ import software.amazon.awscdk.services.signer.CfnProfilePermission
 import software.amazon.awscdk.services.signer.CfnProfilePermissionProps
 import software.amazon.awscdk.services.signer.CfnSigningProfile
 import software.amazon.awscdk.services.signer.CfnSigningProfileProps
-import software.amazon.awscdk.services.signer.SigningProfile
+import software.amazon.awscdk.services.signer.ISigningProfile
 import software.amazon.awscdk.services.signer.SigningProfileAttributes
 import software.amazon.awscdk.services.signer.SigningProfileProps
 import software.constructs.Construct
@@ -202,7 +202,7 @@ public object signer {
         scope: Construct,
         id: String,
         block: SigningProfileDsl.() -> Unit = {},
-    ): SigningProfile {
+    ): software.amazon.awscdk.services.signer.SigningProfile {
         val builder = SigningProfileDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -257,5 +257,18 @@ public object signer {
         val builder = SigningProfilePropsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object SigningProfile {
+        public fun fromSigningProfileAttributes(
+            scope: Construct,
+            id: String,
+            block: SigningProfileAttributesDsl.() -> Unit = {},
+        ): ISigningProfile {
+            val builder = SigningProfileAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.signer.SigningProfile
+                .fromSigningProfileAttributes(scope, id, builder.build())
+        }
     }
 }

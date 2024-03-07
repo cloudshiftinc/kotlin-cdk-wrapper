@@ -22,6 +22,7 @@ import software.amazon.awscdk.services.secretsmanager.CfnSecret
 import software.amazon.awscdk.services.secretsmanager.CfnSecretProps
 import software.amazon.awscdk.services.secretsmanager.CfnSecretTargetAttachment
 import software.amazon.awscdk.services.secretsmanager.CfnSecretTargetAttachmentProps
+import software.amazon.awscdk.services.secretsmanager.ISecret
 import software.amazon.awscdk.services.secretsmanager.MultiUserHostedRotationOptions
 import software.amazon.awscdk.services.secretsmanager.ReplicaRegion
 import software.amazon.awscdk.services.secretsmanager.ResourcePolicy
@@ -29,7 +30,6 @@ import software.amazon.awscdk.services.secretsmanager.ResourcePolicyProps
 import software.amazon.awscdk.services.secretsmanager.RotationSchedule
 import software.amazon.awscdk.services.secretsmanager.RotationScheduleOptions
 import software.amazon.awscdk.services.secretsmanager.RotationScheduleProps
-import software.amazon.awscdk.services.secretsmanager.Secret
 import software.amazon.awscdk.services.secretsmanager.SecretAttachmentTargetProps
 import software.amazon.awscdk.services.secretsmanager.SecretAttributes
 import software.amazon.awscdk.services.secretsmanager.SecretProps
@@ -806,7 +806,7 @@ public object secretsmanager {
         scope: Construct,
         id: String,
         block: SecretDsl.() -> Unit = {},
-    ): Secret {
+    ): software.amazon.awscdk.services.secretsmanager.Secret {
         val builder = SecretDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -1098,5 +1098,160 @@ public object secretsmanager {
         val builder = SingleUserHostedRotationOptionsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object HostedRotation {
+        public fun mariaDbMultiUser(
+            block: MultiUserHostedRotationOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.secretsmanager.HostedRotation {
+            val builder = MultiUserHostedRotationOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.secretsmanager.HostedRotation.mariaDbMultiUser(
+                builder.build()
+            )
+        }
+
+        public fun mariaDbSingleUser(
+            block: SingleUserHostedRotationOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.secretsmanager.HostedRotation {
+            val builder = SingleUserHostedRotationOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.secretsmanager.HostedRotation.mariaDbSingleUser(
+                builder.build()
+            )
+        }
+
+        public fun mongoDbMultiUser(
+            block: MultiUserHostedRotationOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.secretsmanager.HostedRotation {
+            val builder = MultiUserHostedRotationOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.secretsmanager.HostedRotation.mongoDbMultiUser(
+                builder.build()
+            )
+        }
+
+        public fun mongoDbSingleUser(
+            block: SingleUserHostedRotationOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.secretsmanager.HostedRotation {
+            val builder = SingleUserHostedRotationOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.secretsmanager.HostedRotation.mongoDbSingleUser(
+                builder.build()
+            )
+        }
+
+        public fun mysqlMultiUser(
+            block: MultiUserHostedRotationOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.secretsmanager.HostedRotation {
+            val builder = MultiUserHostedRotationOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.secretsmanager.HostedRotation.mysqlMultiUser(
+                builder.build()
+            )
+        }
+
+        public fun mysqlSingleUser(
+            block: SingleUserHostedRotationOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.secretsmanager.HostedRotation {
+            val builder = SingleUserHostedRotationOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.secretsmanager.HostedRotation.mysqlSingleUser(
+                builder.build()
+            )
+        }
+
+        public fun oracleMultiUser(
+            block: MultiUserHostedRotationOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.secretsmanager.HostedRotation {
+            val builder = MultiUserHostedRotationOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.secretsmanager.HostedRotation.oracleMultiUser(
+                builder.build()
+            )
+        }
+
+        public fun oracleSingleUser(
+            block: SingleUserHostedRotationOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.secretsmanager.HostedRotation {
+            val builder = SingleUserHostedRotationOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.secretsmanager.HostedRotation.oracleSingleUser(
+                builder.build()
+            )
+        }
+
+        public fun postgreSqlMultiUser(
+            block: MultiUserHostedRotationOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.secretsmanager.HostedRotation {
+            val builder = MultiUserHostedRotationOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.secretsmanager.HostedRotation
+                .postgreSqlMultiUser(builder.build())
+        }
+
+        public fun postgreSqlSingleUser(
+            block: SingleUserHostedRotationOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.secretsmanager.HostedRotation {
+            val builder = SingleUserHostedRotationOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.secretsmanager.HostedRotation
+                .postgreSqlSingleUser(builder.build())
+        }
+
+        public fun redshiftMultiUser(
+            block: MultiUserHostedRotationOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.secretsmanager.HostedRotation {
+            val builder = MultiUserHostedRotationOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.secretsmanager.HostedRotation.redshiftMultiUser(
+                builder.build()
+            )
+        }
+
+        public fun redshiftSingleUser(
+            block: SingleUserHostedRotationOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.secretsmanager.HostedRotation {
+            val builder = SingleUserHostedRotationOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.secretsmanager.HostedRotation.redshiftSingleUser(
+                builder.build()
+            )
+        }
+
+        public fun sqlServerMultiUser(
+            block: MultiUserHostedRotationOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.secretsmanager.HostedRotation {
+            val builder = MultiUserHostedRotationOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.secretsmanager.HostedRotation.sqlServerMultiUser(
+                builder.build()
+            )
+        }
+
+        public fun sqlServerSingleUser(
+            block: SingleUserHostedRotationOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.secretsmanager.HostedRotation {
+            val builder = SingleUserHostedRotationOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.secretsmanager.HostedRotation
+                .sqlServerSingleUser(builder.build())
+        }
+    }
+
+    public object Secret {
+        public fun fromSecretAttributes(
+            scope: Construct,
+            id: String,
+            block: SecretAttributesDsl.() -> Unit = {},
+        ): ISecret {
+            val builder = SecretAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.secretsmanager.Secret.fromSecretAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
     }
 }

@@ -33,7 +33,7 @@ internal object AsmClassLoader : CdkClassLoader {
                 !name.endsWith("/\$Module") &&
                 !name.endsWith("/package-info")
         }
-        val toTrace = setOf("AssetManifestDockerImageDestination\$Builder")
+        val toTrace = emptySet<String>()
         return classpath.flatMap { file ->
             JarFile(file).use { jar ->
                 jar.stream().use { jarStream ->

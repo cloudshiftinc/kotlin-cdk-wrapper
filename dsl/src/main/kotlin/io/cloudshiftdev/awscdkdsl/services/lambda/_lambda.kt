@@ -11,11 +11,13 @@
 
 package io.cloudshiftdev.awscdkdsl.services.lambda
 
+import io.cloudshiftdev.awscdkdsl.services.cloudwatch.MetricOptionsDsl
+import io.cloudshiftdev.awscdkdsl.services.s3.assets.AssetOptionsDsl
 import kotlin.String
 import kotlin.Unit
+import software.amazon.awscdk.services.cloudwatch.Metric
 import software.amazon.awscdk.services.ecr.IRepository
 import software.amazon.awscdk.services.lambda.AdotInstrumentationConfig
-import software.amazon.awscdk.services.lambda.Alias
 import software.amazon.awscdk.services.lambda.AliasAttributes
 import software.amazon.awscdk.services.lambda.AliasOptions
 import software.amazon.awscdk.services.lambda.AliasProps
@@ -65,7 +67,6 @@ import software.amazon.awscdk.services.lambda.EventSourceMapping
 import software.amazon.awscdk.services.lambda.EventSourceMappingOptions
 import software.amazon.awscdk.services.lambda.EventSourceMappingProps
 import software.amazon.awscdk.services.lambda.FileSystemConfig
-import software.amazon.awscdk.services.lambda.Function
 import software.amazon.awscdk.services.lambda.FunctionAttributes
 import software.amazon.awscdk.services.lambda.FunctionOptions
 import software.amazon.awscdk.services.lambda.FunctionProps
@@ -73,14 +74,18 @@ import software.amazon.awscdk.services.lambda.FunctionUrl
 import software.amazon.awscdk.services.lambda.FunctionUrlCorsOptions
 import software.amazon.awscdk.services.lambda.FunctionUrlOptions
 import software.amazon.awscdk.services.lambda.FunctionUrlProps
+import software.amazon.awscdk.services.lambda.IAlias
+import software.amazon.awscdk.services.lambda.IFunction
+import software.amazon.awscdk.services.lambda.ILayerVersion
+import software.amazon.awscdk.services.lambda.IVersion
 import software.amazon.awscdk.services.lambda.LambdaRuntimeProps
-import software.amazon.awscdk.services.lambda.LayerVersion
 import software.amazon.awscdk.services.lambda.LayerVersionAttributes
 import software.amazon.awscdk.services.lambda.LayerVersionOptions
 import software.amazon.awscdk.services.lambda.LayerVersionPermission
 import software.amazon.awscdk.services.lambda.LayerVersionProps
 import software.amazon.awscdk.services.lambda.LogRetentionRetryOptions
 import software.amazon.awscdk.services.lambda.ParamsAndSecretsOptions
+import software.amazon.awscdk.services.lambda.ParamsAndSecretsVersions
 import software.amazon.awscdk.services.lambda.Permission
 import software.amazon.awscdk.services.lambda.ResourceBindOptions
 import software.amazon.awscdk.services.lambda.Runtime
@@ -89,7 +94,6 @@ import software.amazon.awscdk.services.lambda.SingletonFunction
 import software.amazon.awscdk.services.lambda.SingletonFunctionProps
 import software.amazon.awscdk.services.lambda.SourceAccessConfiguration
 import software.amazon.awscdk.services.lambda.UtilizationScalingOptions
-import software.amazon.awscdk.services.lambda.Version
 import software.amazon.awscdk.services.lambda.VersionAttributes
 import software.amazon.awscdk.services.lambda.VersionOptions
 import software.amazon.awscdk.services.lambda.VersionProps
@@ -152,7 +156,7 @@ public object lambda {
         scope: Construct,
         id: String,
         block: AliasDsl.() -> Unit = {},
-    ): Alias {
+    ): software.amazon.awscdk.services.lambda.Alias {
         val builder = AliasDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -3122,7 +3126,7 @@ public object lambda {
         scope: Construct,
         id: String,
         block: FunctionDsl.() -> Unit = {},
-    ): Function {
+    ): software.amazon.awscdk.services.lambda.Function {
         val builder = FunctionDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -3444,7 +3448,7 @@ public object lambda {
         scope: Construct,
         id: String,
         block: LayerVersionDsl.() -> Unit = {},
-    ): LayerVersion {
+    ): software.amazon.awscdk.services.lambda.LayerVersion {
         val builder = LayerVersionDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -3825,7 +3829,7 @@ public object lambda {
         scope: Construct,
         id: String,
         block: VersionDsl.() -> Unit = {},
-    ): Version {
+    ): software.amazon.awscdk.services.lambda.Version {
         val builder = VersionDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -3911,5 +3915,227 @@ public object lambda {
         val builder = VersionWeightDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object Alias {
+        public fun fromAliasAttributes(
+            scope: Construct,
+            id: String,
+            block: AliasAttributesDsl.() -> Unit = {},
+        ): IAlias {
+            val builder = AliasAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.lambda.Alias.fromAliasAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object Code {
+        public fun fromAsset(path: String, block: AssetOptionsDsl.() -> Unit = {}): AssetCode {
+            val builder = AssetOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.lambda.Code.fromAsset(path, builder.build())
+        }
+
+        public fun fromAssetImage(
+            directory: String,
+            block: AssetImageCodePropsDsl.() -> Unit = {}
+        ): AssetImageCode {
+            val builder = AssetImageCodePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.lambda.Code.fromAssetImage(
+                directory,
+                builder.build()
+            )
+        }
+
+        public fun fromCfnParameters(
+            block: CfnParametersCodePropsDsl.() -> Unit = {}
+        ): CfnParametersCode {
+            val builder = CfnParametersCodePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.lambda.Code.fromCfnParameters(builder.build())
+        }
+
+        public fun fromDockerBuild(
+            path: String,
+            block: DockerBuildAssetOptionsDsl.() -> Unit = {}
+        ): AssetCode {
+            val builder = DockerBuildAssetOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.lambda.Code.fromDockerBuild(
+                path,
+                builder.build()
+            )
+        }
+
+        public fun fromEcrImage(
+            repository: IRepository,
+            block: EcrImageCodePropsDsl.() -> Unit = {}
+        ): EcrImageCode {
+            val builder = EcrImageCodePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.lambda.Code.fromEcrImage(
+                repository,
+                builder.build()
+            )
+        }
+    }
+
+    public object DockerImageCode {
+        public fun fromEcr(
+            repository: IRepository,
+            block: EcrImageCodePropsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.lambda.DockerImageCode {
+            val builder = EcrImageCodePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.lambda.DockerImageCode.fromEcr(
+                repository,
+                builder.build()
+            )
+        }
+
+        public fun fromImageAsset(
+            directory: String,
+            block: AssetImageCodePropsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.lambda.DockerImageCode {
+            val builder = AssetImageCodePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.lambda.DockerImageCode.fromImageAsset(
+                directory,
+                builder.build()
+            )
+        }
+    }
+
+    public object Function {
+        public fun fromFunctionAttributes(
+            scope: Construct,
+            id: String,
+            block: FunctionAttributesDsl.() -> Unit = {},
+        ): IFunction {
+            val builder = FunctionAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.lambda.Function.fromFunctionAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+
+        public fun metricAll(metricName: String, block: MetricOptionsDsl.() -> Unit = {}): Metric {
+            val builder = MetricOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.lambda.Function.metricAll(
+                metricName,
+                builder.build()
+            )
+        }
+
+        public fun metricAllConcurrentExecutions(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+            val builder = MetricOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.lambda.Function.metricAllConcurrentExecutions(
+                builder.build()
+            )
+        }
+
+        public fun metricAllDuration(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+            val builder = MetricOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.lambda.Function.metricAllDuration(
+                builder.build()
+            )
+        }
+
+        public fun metricAllErrors(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+            val builder = MetricOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.lambda.Function.metricAllErrors(builder.build())
+        }
+
+        public fun metricAllInvocations(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+            val builder = MetricOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.lambda.Function.metricAllInvocations(
+                builder.build()
+            )
+        }
+
+        public fun metricAllThrottles(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+            val builder = MetricOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.lambda.Function.metricAllThrottles(
+                builder.build()
+            )
+        }
+
+        public fun metricAllUnreservedConcurrentExecutions(
+            block: MetricOptionsDsl.() -> Unit = {}
+        ): Metric {
+            val builder = MetricOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.lambda.Function
+                .metricAllUnreservedConcurrentExecutions(builder.build())
+        }
+    }
+
+    public object LayerVersion {
+        public fun fromLayerVersionAttributes(
+            scope: Construct,
+            id: String,
+            block: LayerVersionAttributesDsl.() -> Unit = {},
+        ): ILayerVersion {
+            val builder = LayerVersionAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.lambda.LayerVersion.fromLayerVersionAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object ParamsAndSecretsLayerVersion {
+        public fun fromVersion(
+            version: ParamsAndSecretsVersions,
+            block: ParamsAndSecretsOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.lambda.ParamsAndSecretsLayerVersion {
+            val builder = ParamsAndSecretsOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.lambda.ParamsAndSecretsLayerVersion.fromVersion(
+                version,
+                builder.build()
+            )
+        }
+
+        public fun fromVersionArn(
+            arn: String,
+            block: ParamsAndSecretsOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.lambda.ParamsAndSecretsLayerVersion {
+            val builder = ParamsAndSecretsOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.lambda.ParamsAndSecretsLayerVersion
+                .fromVersionArn(arn, builder.build())
+        }
+    }
+
+    public object Version {
+        public fun fromVersionAttributes(
+            scope: Construct,
+            id: String,
+            block: VersionAttributesDsl.() -> Unit = {},
+        ): IVersion {
+            val builder = VersionAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.lambda.Version.fromVersionAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
     }
 }

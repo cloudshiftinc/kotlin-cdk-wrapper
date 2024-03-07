@@ -20,7 +20,7 @@ import software.amazon.awscdk.services.sqs.CfnQueuePolicy
 import software.amazon.awscdk.services.sqs.CfnQueuePolicyProps
 import software.amazon.awscdk.services.sqs.CfnQueueProps
 import software.amazon.awscdk.services.sqs.DeadLetterQueue
-import software.amazon.awscdk.services.sqs.Queue
+import software.amazon.awscdk.services.sqs.IQueue
 import software.amazon.awscdk.services.sqs.QueueAttributes
 import software.amazon.awscdk.services.sqs.QueuePolicy
 import software.amazon.awscdk.services.sqs.QueuePolicyProps
@@ -287,7 +287,7 @@ public object sqs {
         scope: Construct,
         id: String,
         block: QueueDsl.() -> Unit = {},
-    ): Queue {
+    ): software.amazon.awscdk.services.sqs.Queue {
         val builder = QueueDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -423,5 +423,21 @@ public object sqs {
         val builder = RedriveAllowPolicyDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object Queue {
+        public fun fromQueueAttributes(
+            scope: Construct,
+            id: String,
+            block: QueueAttributesDsl.() -> Unit = {},
+        ): IQueue {
+            val builder = QueueAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.sqs.Queue.fromQueueAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
     }
 }

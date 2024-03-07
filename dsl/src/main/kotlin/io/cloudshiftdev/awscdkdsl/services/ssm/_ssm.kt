@@ -32,12 +32,12 @@ import software.amazon.awscdk.services.ssm.CfnResourceDataSyncProps
 import software.amazon.awscdk.services.ssm.CfnResourcePolicy
 import software.amazon.awscdk.services.ssm.CfnResourcePolicyProps
 import software.amazon.awscdk.services.ssm.CommonStringParameterAttributes
+import software.amazon.awscdk.services.ssm.IStringListParameter
+import software.amazon.awscdk.services.ssm.IStringParameter
 import software.amazon.awscdk.services.ssm.ListParameterAttributes
 import software.amazon.awscdk.services.ssm.ParameterOptions
 import software.amazon.awscdk.services.ssm.SecureStringParameterAttributes
-import software.amazon.awscdk.services.ssm.StringListParameter
 import software.amazon.awscdk.services.ssm.StringListParameterProps
-import software.amazon.awscdk.services.ssm.StringParameter
 import software.amazon.awscdk.services.ssm.StringParameterAttributes
 import software.amazon.awscdk.services.ssm.StringParameterProps
 import software.constructs.Construct
@@ -1896,7 +1896,7 @@ public object ssm {
         scope: Construct,
         id: String,
         block: StringListParameterDsl.() -> Unit = {},
-    ): StringListParameter {
+    ): software.amazon.awscdk.services.ssm.StringListParameter {
         val builder = StringListParameterDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -1948,7 +1948,7 @@ public object ssm {
         scope: Construct,
         id: String,
         block: StringParameterDsl.() -> Unit = {},
-    ): StringParameter {
+    ): software.amazon.awscdk.services.ssm.StringParameter {
         val builder = StringParameterDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -2027,5 +2027,42 @@ public object ssm {
         val builder = StringParameterPropsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object StringListParameter {
+        public fun fromListParameterAttributes(
+            scope: Construct,
+            id: String,
+            block: ListParameterAttributesDsl.() -> Unit = {},
+        ): IStringListParameter {
+            val builder = ListParameterAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ssm.StringListParameter
+                .fromListParameterAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object StringParameter {
+        public fun fromSecureStringParameterAttributes(
+            scope: Construct,
+            id: String,
+            block: SecureStringParameterAttributesDsl.() -> Unit = {},
+        ): IStringParameter {
+            val builder = SecureStringParameterAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ssm.StringParameter
+                .fromSecureStringParameterAttributes(scope, id, builder.build())
+        }
+
+        public fun fromStringParameterAttributes(
+            scope: Construct,
+            id: String,
+            block: StringParameterAttributesDsl.() -> Unit = {},
+        ): IStringParameter {
+            val builder = StringParameterAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ssm.StringParameter
+                .fromStringParameterAttributes(scope, id, builder.build())
+        }
     }
 }

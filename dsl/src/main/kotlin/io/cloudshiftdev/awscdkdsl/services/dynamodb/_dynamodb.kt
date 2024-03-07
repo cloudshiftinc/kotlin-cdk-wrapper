@@ -23,6 +23,8 @@ import software.amazon.awscdk.services.dynamodb.CsvOptions
 import software.amazon.awscdk.services.dynamodb.EnableScalingProps
 import software.amazon.awscdk.services.dynamodb.GlobalSecondaryIndexProps
 import software.amazon.awscdk.services.dynamodb.GlobalSecondaryIndexPropsV2
+import software.amazon.awscdk.services.dynamodb.ITable
+import software.amazon.awscdk.services.dynamodb.ITableV2
 import software.amazon.awscdk.services.dynamodb.ImportSourceSpecification
 import software.amazon.awscdk.services.dynamodb.LocalSecondaryIndexProps
 import software.amazon.awscdk.services.dynamodb.OperationsMetricOptions
@@ -31,14 +33,12 @@ import software.amazon.awscdk.services.dynamodb.ReplicaTableProps
 import software.amazon.awscdk.services.dynamodb.SchemaOptions
 import software.amazon.awscdk.services.dynamodb.SecondaryIndexProps
 import software.amazon.awscdk.services.dynamodb.SystemErrorsForOperationsMetricOptions
-import software.amazon.awscdk.services.dynamodb.Table
 import software.amazon.awscdk.services.dynamodb.TableAttributes
 import software.amazon.awscdk.services.dynamodb.TableAttributesV2
 import software.amazon.awscdk.services.dynamodb.TableOptions
 import software.amazon.awscdk.services.dynamodb.TableOptionsV2
 import software.amazon.awscdk.services.dynamodb.TableProps
 import software.amazon.awscdk.services.dynamodb.TablePropsV2
-import software.amazon.awscdk.services.dynamodb.TableV2
 import software.amazon.awscdk.services.dynamodb.ThroughputProps
 import software.amazon.awscdk.services.dynamodb.UtilizationScalingProps
 import software.constructs.Construct
@@ -2229,7 +2229,7 @@ public object dynamodb {
         scope: Construct,
         id: String,
         block: TableDsl.() -> Unit = {},
-    ): Table {
+    ): software.amazon.awscdk.services.dynamodb.Table {
         val builder = TableDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -2458,7 +2458,7 @@ public object dynamodb {
         scope: Construct,
         id: String,
         block: TableV2Dsl.() -> Unit = {},
-    ): TableV2 {
+    ): software.amazon.awscdk.services.dynamodb.TableV2 {
         val builder = TableV2Dsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -2516,5 +2516,67 @@ public object dynamodb {
         val builder = UtilizationScalingPropsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object Billing {
+        public fun provisioned(
+            block: ThroughputPropsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.dynamodb.Billing {
+            val builder = ThroughputPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.dynamodb.Billing.provisioned(builder.build())
+        }
+    }
+
+    public object Capacity {
+        public fun autoscaled(
+            block: AutoscaledCapacityOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.dynamodb.Capacity {
+            val builder = AutoscaledCapacityOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.dynamodb.Capacity.autoscaled(builder.build())
+        }
+    }
+
+    public object InputFormat {
+        public fun csv(
+            block: CsvOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.dynamodb.InputFormat {
+            val builder = CsvOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.dynamodb.InputFormat.csv(builder.build())
+        }
+    }
+
+    public object Table {
+        public fun fromTableAttributes(
+            scope: Construct,
+            id: String,
+            block: TableAttributesDsl.() -> Unit = {},
+        ): ITable {
+            val builder = TableAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.dynamodb.Table.fromTableAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object TableV2 {
+        public fun fromTableAttributes(
+            scope: Construct,
+            id: String,
+            block: TableAttributesV2Dsl.() -> Unit = {},
+        ): ITableV2 {
+            val builder = TableAttributesV2Dsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.dynamodb.TableV2.fromTableAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
     }
 }

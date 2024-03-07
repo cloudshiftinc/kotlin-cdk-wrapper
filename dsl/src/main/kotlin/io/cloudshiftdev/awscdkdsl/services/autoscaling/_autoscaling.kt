@@ -11,6 +11,7 @@
 
 package io.cloudshiftdev.awscdkdsl.services.autoscaling
 
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.autoscaling.AdjustmentTier
@@ -4428,5 +4429,103 @@ public object autoscaling {
         val builder = WarmPoolPropsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object BlockDeviceVolume {
+        public fun ebs(
+            volumeSize: Number,
+            block: EbsDeviceOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.autoscaling.BlockDeviceVolume {
+            val builder = EbsDeviceOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.autoscaling.BlockDeviceVolume.ebs(
+                volumeSize,
+                builder.build()
+            )
+        }
+
+        public fun ebsFromSnapshot(
+            snapshotId: String,
+            block: EbsDeviceSnapshotOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.autoscaling.BlockDeviceVolume {
+            val builder = EbsDeviceSnapshotOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.autoscaling.BlockDeviceVolume.ebsFromSnapshot(
+                snapshotId,
+                builder.build()
+            )
+        }
+    }
+
+    public object HealthCheck {
+        public fun ec2(
+            block: Ec2HealthCheckOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.autoscaling.HealthCheck {
+            val builder = Ec2HealthCheckOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.autoscaling.HealthCheck.ec2(builder.build())
+        }
+
+        public fun elb(
+            block: ElbHealthCheckOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.autoscaling.HealthCheck {
+            val builder = ElbHealthCheckOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.autoscaling.HealthCheck.elb(builder.build())
+        }
+    }
+
+    public object Schedule {
+        public fun cron(
+            block: CronOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.autoscaling.Schedule {
+            val builder = CronOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.autoscaling.Schedule.cron(builder.build())
+        }
+    }
+
+    public object Signals {
+        public fun waitForAll(
+            block: SignalsOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.autoscaling.Signals {
+            val builder = SignalsOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.autoscaling.Signals.waitForAll(builder.build())
+        }
+
+        public fun waitForCount(
+            count: Number,
+            block: SignalsOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.autoscaling.Signals {
+            val builder = SignalsOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.autoscaling.Signals.waitForCount(
+                count,
+                builder.build()
+            )
+        }
+
+        public fun waitForMinCapacity(
+            block: SignalsOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.autoscaling.Signals {
+            val builder = SignalsOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.autoscaling.Signals.waitForMinCapacity(
+                builder.build()
+            )
+        }
+    }
+
+    public object UpdatePolicy {
+        public fun rollingUpdate(
+            block: RollingUpdateOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.autoscaling.UpdatePolicy {
+            val builder = RollingUpdateOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.autoscaling.UpdatePolicy.rollingUpdate(
+                builder.build()
+            )
+        }
     }
 }

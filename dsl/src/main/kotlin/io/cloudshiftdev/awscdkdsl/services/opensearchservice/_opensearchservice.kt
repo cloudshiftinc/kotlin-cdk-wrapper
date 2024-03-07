@@ -19,11 +19,11 @@ import software.amazon.awscdk.services.opensearchservice.CfnDomain
 import software.amazon.awscdk.services.opensearchservice.CfnDomainProps
 import software.amazon.awscdk.services.opensearchservice.CognitoOptions
 import software.amazon.awscdk.services.opensearchservice.CustomEndpointOptions
-import software.amazon.awscdk.services.opensearchservice.Domain
 import software.amazon.awscdk.services.opensearchservice.DomainAttributes
 import software.amazon.awscdk.services.opensearchservice.DomainProps
 import software.amazon.awscdk.services.opensearchservice.EbsOptions
 import software.amazon.awscdk.services.opensearchservice.EncryptionAtRestOptions
+import software.amazon.awscdk.services.opensearchservice.IDomain
 import software.amazon.awscdk.services.opensearchservice.LoggingOptions
 import software.amazon.awscdk.services.opensearchservice.SAMLOptionsProperty
 import software.amazon.awscdk.services.opensearchservice.WindowStartTime
@@ -1012,7 +1012,7 @@ public object opensearchservice {
         scope: Construct,
         id: String,
         block: DomainDsl.() -> Unit = {},
-    ): Domain {
+    ): software.amazon.awscdk.services.opensearchservice.Domain {
         val builder = DomainDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -1236,5 +1236,21 @@ public object opensearchservice {
         val builder = ZoneAwarenessConfigDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object Domain {
+        public fun fromDomainAttributes(
+            scope: Construct,
+            id: String,
+            block: DomainAttributesDsl.() -> Unit = {},
+        ): IDomain {
+            val builder = DomainAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.opensearchservice.Domain.fromDomainAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
     }
 }

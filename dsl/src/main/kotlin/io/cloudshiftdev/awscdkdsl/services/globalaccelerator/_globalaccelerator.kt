@@ -13,7 +13,6 @@ package io.cloudshiftdev.awscdkdsl.services.globalaccelerator
 
 import kotlin.String
 import kotlin.Unit
-import software.amazon.awscdk.services.globalaccelerator.Accelerator
 import software.amazon.awscdk.services.globalaccelerator.AcceleratorAttributes
 import software.amazon.awscdk.services.globalaccelerator.AcceleratorProps
 import software.amazon.awscdk.services.globalaccelerator.CfnAccelerator
@@ -25,6 +24,7 @@ import software.amazon.awscdk.services.globalaccelerator.CfnListenerProps
 import software.amazon.awscdk.services.globalaccelerator.EndpointGroup
 import software.amazon.awscdk.services.globalaccelerator.EndpointGroupOptions
 import software.amazon.awscdk.services.globalaccelerator.EndpointGroupProps
+import software.amazon.awscdk.services.globalaccelerator.IAccelerator
 import software.amazon.awscdk.services.globalaccelerator.Listener
 import software.amazon.awscdk.services.globalaccelerator.ListenerOptions
 import software.amazon.awscdk.services.globalaccelerator.ListenerProps
@@ -72,7 +72,7 @@ public object globalaccelerator {
         scope: Construct,
         id: String,
         block: AcceleratorDsl.() -> Unit = {},
-    ): Accelerator {
+    ): software.amazon.awscdk.services.globalaccelerator.Accelerator {
         val builder = AcceleratorDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -731,5 +731,18 @@ public object globalaccelerator {
         val builder = RawEndpointPropsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object Accelerator {
+        public fun fromAcceleratorAttributes(
+            scope: Construct,
+            id: String,
+            block: AcceleratorAttributesDsl.() -> Unit = {},
+        ): IAccelerator {
+            val builder = AcceleratorAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.globalaccelerator.Accelerator
+                .fromAcceleratorAttributes(scope, id, builder.build())
+        }
     }
 }

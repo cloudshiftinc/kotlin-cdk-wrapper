@@ -11,6 +11,7 @@
 
 package io.cloudshiftdev.awscdkdsl.services.apigateway
 
+import io.cloudshiftdev.awscdkdsl.services.s3.assets.AssetOptionsDsl
 import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.apigateway.AccessLogDestinationConfig
@@ -70,7 +71,6 @@ import software.amazon.awscdk.services.apigateway.CognitoUserPoolsAuthorizerProp
 import software.amazon.awscdk.services.apigateway.CorsOptions
 import software.amazon.awscdk.services.apigateway.Deployment
 import software.amazon.awscdk.services.apigateway.DeploymentProps
-import software.amazon.awscdk.services.apigateway.DomainName
 import software.amazon.awscdk.services.apigateway.DomainNameAttributes
 import software.amazon.awscdk.services.apigateway.DomainNameOptions
 import software.amazon.awscdk.services.apigateway.DomainNameProps
@@ -80,6 +80,10 @@ import software.amazon.awscdk.services.apigateway.GatewayResponseOptions
 import software.amazon.awscdk.services.apigateway.GatewayResponseProps
 import software.amazon.awscdk.services.apigateway.HttpIntegration
 import software.amazon.awscdk.services.apigateway.HttpIntegrationProps
+import software.amazon.awscdk.services.apigateway.IDomainName
+import software.amazon.awscdk.services.apigateway.IResource
+import software.amazon.awscdk.services.apigateway.IRestApi
+import software.amazon.awscdk.services.apigateway.IStage
 import software.amazon.awscdk.services.apigateway.Integration
 import software.amazon.awscdk.services.apigateway.IntegrationConfig
 import software.amazon.awscdk.services.apigateway.IntegrationOptions
@@ -114,11 +118,9 @@ import software.amazon.awscdk.services.apigateway.RequestContext
 import software.amazon.awscdk.services.apigateway.RequestValidator
 import software.amazon.awscdk.services.apigateway.RequestValidatorOptions
 import software.amazon.awscdk.services.apigateway.RequestValidatorProps
-import software.amazon.awscdk.services.apigateway.Resource
 import software.amazon.awscdk.services.apigateway.ResourceAttributes
 import software.amazon.awscdk.services.apigateway.ResourceOptions
 import software.amazon.awscdk.services.apigateway.ResourceProps
-import software.amazon.awscdk.services.apigateway.RestApi
 import software.amazon.awscdk.services.apigateway.RestApiAttributes
 import software.amazon.awscdk.services.apigateway.RestApiBaseProps
 import software.amazon.awscdk.services.apigateway.RestApiProps
@@ -126,7 +128,6 @@ import software.amazon.awscdk.services.apigateway.SagemakerIntegration
 import software.amazon.awscdk.services.apigateway.SagemakerIntegrationOptions
 import software.amazon.awscdk.services.apigateway.SpecRestApi
 import software.amazon.awscdk.services.apigateway.SpecRestApiProps
-import software.amazon.awscdk.services.apigateway.Stage
 import software.amazon.awscdk.services.apigateway.StageAttributes
 import software.amazon.awscdk.services.apigateway.StageOptions
 import software.amazon.awscdk.services.apigateway.StageProps
@@ -144,6 +145,7 @@ import software.amazon.awscdk.services.apigateway.VpcLink
 import software.amazon.awscdk.services.apigateway.VpcLinkProps
 import software.amazon.awscdk.services.lambda.IFunction
 import software.amazon.awscdk.services.sagemaker.IEndpoint
+import software.amazon.awscdk.services.stepfunctions.IStateMachine
 import software.constructs.Construct
 
 public object apigateway {
@@ -2929,7 +2931,7 @@ public object apigateway {
         scope: Construct,
         id: String,
         block: DomainNameDsl.() -> Unit = {},
-    ): DomainName {
+    ): software.amazon.awscdk.services.apigateway.DomainName {
         val builder = DomainNameDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -4393,7 +4395,7 @@ public object apigateway {
         scope: Construct,
         id: String,
         block: ResourceDsl.() -> Unit = {},
-    ): Resource {
+    ): software.amazon.awscdk.services.apigateway.Resource {
         val builder = ResourceDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -4534,7 +4536,7 @@ public object apigateway {
         scope: Construct,
         id: String,
         block: RestApiDsl.() -> Unit = {},
-    ): RestApi {
+    ): software.amazon.awscdk.services.apigateway.RestApi {
         val builder = RestApiDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -4973,7 +4975,7 @@ public object apigateway {
         scope: Construct,
         id: String,
         block: StageDsl.() -> Unit = {},
-    ): Stage {
+    ): software.amazon.awscdk.services.apigateway.Stage {
         val builder = StageDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -5422,5 +5424,106 @@ public object apigateway {
         val builder = VpcLinkPropsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object AccessLogFormat {
+        public fun jsonWithStandardFields(
+            block: JsonWithStandardFieldPropsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.apigateway.AccessLogFormat {
+            val builder = JsonWithStandardFieldPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.apigateway.AccessLogFormat
+                .jsonWithStandardFields(builder.build())
+        }
+    }
+
+    public object ApiDefinition {
+        public fun fromAsset(
+            `file`: String,
+            block: AssetOptionsDsl.() -> Unit = {}
+        ): AssetApiDefinition {
+            val builder = AssetOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.apigateway.ApiDefinition.fromAsset(
+                `file`,
+                builder.build()
+            )
+        }
+    }
+
+    public object DomainName {
+        public fun fromDomainNameAttributes(
+            scope: Construct,
+            id: String,
+            block: DomainNameAttributesDsl.() -> Unit = {},
+        ): IDomainName {
+            val builder = DomainNameAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.apigateway.DomainName.fromDomainNameAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object Resource {
+        public fun fromResourceAttributes(
+            scope: Construct,
+            id: String,
+            block: ResourceAttributesDsl.() -> Unit = {},
+        ): IResource {
+            val builder = ResourceAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.apigateway.Resource.fromResourceAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object RestApi {
+        public fun fromRestApiAttributes(
+            scope: Construct,
+            id: String,
+            block: RestApiAttributesDsl.() -> Unit = {},
+        ): IRestApi {
+            val builder = RestApiAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.apigateway.RestApi.fromRestApiAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object Stage {
+        public fun fromStageAttributes(
+            scope: Construct,
+            id: String,
+            block: StageAttributesDsl.() -> Unit = {},
+        ): IStage {
+            val builder = StageAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.apigateway.Stage.fromStageAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object StepFunctionsIntegration {
+        public fun startExecution(
+            stateMachine: IStateMachine,
+            block: StepFunctionsExecutionIntegrationOptionsDsl.() -> Unit = {}
+        ): AwsIntegration {
+            val builder = StepFunctionsExecutionIntegrationOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.apigateway.StepFunctionsIntegration
+                .startExecution(stateMachine, builder.build())
+        }
     }
 }

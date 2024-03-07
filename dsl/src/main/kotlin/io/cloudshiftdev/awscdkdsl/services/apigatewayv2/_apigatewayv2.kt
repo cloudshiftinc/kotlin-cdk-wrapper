@@ -14,7 +14,6 @@ package io.cloudshiftdev.awscdkdsl.services.apigatewayv2
 import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.apigatewayv2.AddRoutesOptions
-import software.amazon.awscdk.services.apigatewayv2.ApiMapping
 import software.amazon.awscdk.services.apigatewayv2.ApiMappingAttributes
 import software.amazon.awscdk.services.apigatewayv2.ApiMappingProps
 import software.amazon.awscdk.services.apigatewayv2.BatchHttpRouteOptions
@@ -46,15 +45,12 @@ import software.amazon.awscdk.services.apigatewayv2.CfnVpcLink
 import software.amazon.awscdk.services.apigatewayv2.CfnVpcLinkProps
 import software.amazon.awscdk.services.apigatewayv2.CorsPreflightOptions
 import software.amazon.awscdk.services.apigatewayv2.DomainMappingOptions
-import software.amazon.awscdk.services.apigatewayv2.DomainName
 import software.amazon.awscdk.services.apigatewayv2.DomainNameAttributes
 import software.amazon.awscdk.services.apigatewayv2.DomainNameProps
 import software.amazon.awscdk.services.apigatewayv2.EndpointOptions
 import software.amazon.awscdk.services.apigatewayv2.GrantInvokeOptions
-import software.amazon.awscdk.services.apigatewayv2.HttpApi
 import software.amazon.awscdk.services.apigatewayv2.HttpApiAttributes
 import software.amazon.awscdk.services.apigatewayv2.HttpApiProps
-import software.amazon.awscdk.services.apigatewayv2.HttpAuthorizer
 import software.amazon.awscdk.services.apigatewayv2.HttpAuthorizerAttributes
 import software.amazon.awscdk.services.apigatewayv2.HttpAuthorizerProps
 import software.amazon.awscdk.services.apigatewayv2.HttpIntegration
@@ -65,21 +61,26 @@ import software.amazon.awscdk.services.apigatewayv2.HttpRouteAuthorizerConfig
 import software.amazon.awscdk.services.apigatewayv2.HttpRouteIntegrationBindOptions
 import software.amazon.awscdk.services.apigatewayv2.HttpRouteIntegrationConfig
 import software.amazon.awscdk.services.apigatewayv2.HttpRouteProps
-import software.amazon.awscdk.services.apigatewayv2.HttpStage
 import software.amazon.awscdk.services.apigatewayv2.HttpStageAttributes
 import software.amazon.awscdk.services.apigatewayv2.HttpStageOptions
 import software.amazon.awscdk.services.apigatewayv2.HttpStageProps
+import software.amazon.awscdk.services.apigatewayv2.IApiMapping
+import software.amazon.awscdk.services.apigatewayv2.IDomainName
+import software.amazon.awscdk.services.apigatewayv2.IHttpApi
+import software.amazon.awscdk.services.apigatewayv2.IHttpRouteAuthorizer
+import software.amazon.awscdk.services.apigatewayv2.IHttpStage
+import software.amazon.awscdk.services.apigatewayv2.IVpcLink
+import software.amazon.awscdk.services.apigatewayv2.IWebSocketApi
+import software.amazon.awscdk.services.apigatewayv2.IWebSocketRouteAuthorizer
+import software.amazon.awscdk.services.apigatewayv2.IWebSocketStage
 import software.amazon.awscdk.services.apigatewayv2.MTLSConfig
 import software.amazon.awscdk.services.apigatewayv2.StageAttributes
 import software.amazon.awscdk.services.apigatewayv2.StageOptions
 import software.amazon.awscdk.services.apigatewayv2.ThrottleSettings
-import software.amazon.awscdk.services.apigatewayv2.VpcLink
 import software.amazon.awscdk.services.apigatewayv2.VpcLinkAttributes
 import software.amazon.awscdk.services.apigatewayv2.VpcLinkProps
-import software.amazon.awscdk.services.apigatewayv2.WebSocketApi
 import software.amazon.awscdk.services.apigatewayv2.WebSocketApiAttributes
 import software.amazon.awscdk.services.apigatewayv2.WebSocketApiProps
-import software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizer
 import software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizerAttributes
 import software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizerProps
 import software.amazon.awscdk.services.apigatewayv2.WebSocketIntegration
@@ -91,7 +92,6 @@ import software.amazon.awscdk.services.apigatewayv2.WebSocketRouteIntegrationBin
 import software.amazon.awscdk.services.apigatewayv2.WebSocketRouteIntegrationConfig
 import software.amazon.awscdk.services.apigatewayv2.WebSocketRouteOptions
 import software.amazon.awscdk.services.apigatewayv2.WebSocketRouteProps
-import software.amazon.awscdk.services.apigatewayv2.WebSocketStage
 import software.amazon.awscdk.services.apigatewayv2.WebSocketStageAttributes
 import software.amazon.awscdk.services.apigatewayv2.WebSocketStageProps
 import software.constructs.Construct
@@ -154,7 +154,7 @@ public object apigatewayv2 {
         scope: Construct,
         id: String,
         block: ApiMappingDsl.() -> Unit = {},
-    ): ApiMapping {
+    ): software.amazon.awscdk.services.apigatewayv2.ApiMapping {
         val builder = ApiMappingDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -1834,7 +1834,7 @@ public object apigatewayv2 {
         scope: Construct,
         id: String,
         block: DomainNameDsl.() -> Unit = {},
-    ): DomainName {
+    ): software.amazon.awscdk.services.apigatewayv2.DomainName {
         val builder = DomainNameDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -1961,7 +1961,7 @@ public object apigatewayv2 {
         scope: Construct,
         id: String,
         block: HttpApiDsl.() -> Unit = {},
-    ): HttpApi {
+    ): software.amazon.awscdk.services.apigatewayv2.HttpApi {
         val builder = HttpApiDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -2044,7 +2044,7 @@ public object apigatewayv2 {
         scope: Construct,
         id: String,
         block: HttpAuthorizerDsl.() -> Unit = {},
-    ): HttpAuthorizer {
+    ): software.amazon.awscdk.services.apigatewayv2.HttpAuthorizer {
         val builder = HttpAuthorizerDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -2365,7 +2365,7 @@ public object apigatewayv2 {
         scope: Construct,
         id: String,
         block: HttpStageDsl.() -> Unit = {},
-    ): HttpStage {
+    ): software.amazon.awscdk.services.apigatewayv2.HttpStage {
         val builder = HttpStageDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -2559,7 +2559,7 @@ public object apigatewayv2 {
         scope: Construct,
         id: String,
         block: VpcLinkDsl.() -> Unit = {},
-    ): VpcLink {
+    ): software.amazon.awscdk.services.apigatewayv2.VpcLink {
         val builder = VpcLinkDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -2632,7 +2632,7 @@ public object apigatewayv2 {
         scope: Construct,
         id: String,
         block: WebSocketApiDsl.() -> Unit = {},
-    ): WebSocketApi {
+    ): software.amazon.awscdk.services.apigatewayv2.WebSocketApi {
         val builder = WebSocketApiDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -2710,7 +2710,7 @@ public object apigatewayv2 {
         scope: Construct,
         id: String,
         block: WebSocketAuthorizerDsl.() -> Unit = {},
-    ): WebSocketAuthorizer {
+    ): software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizer {
         val builder = WebSocketAuthorizerDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -3065,7 +3065,7 @@ public object apigatewayv2 {
         scope: Construct,
         id: String,
         block: WebSocketStageDsl.() -> Unit = {},
-    ): WebSocketStage {
+    ): software.amazon.awscdk.services.apigatewayv2.WebSocketStage {
         val builder = WebSocketStageDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -3124,5 +3124,137 @@ public object apigatewayv2 {
         val builder = WebSocketStagePropsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object ApiMapping {
+        public fun fromApiMappingAttributes(
+            scope: Construct,
+            id: String,
+            block: ApiMappingAttributesDsl.() -> Unit = {},
+        ): IApiMapping {
+            val builder = ApiMappingAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.apigatewayv2.ApiMapping.fromApiMappingAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object DomainName {
+        public fun fromDomainNameAttributes(
+            scope: Construct,
+            id: String,
+            block: DomainNameAttributesDsl.() -> Unit = {},
+        ): IDomainName {
+            val builder = DomainNameAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.apigatewayv2.DomainName.fromDomainNameAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object HttpApi {
+        public fun fromHttpApiAttributes(
+            scope: Construct,
+            id: String,
+            block: HttpApiAttributesDsl.() -> Unit = {},
+        ): IHttpApi {
+            val builder = HttpApiAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.apigatewayv2.HttpApi.fromHttpApiAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object HttpAuthorizer {
+        public fun fromHttpAuthorizerAttributes(
+            scope: Construct,
+            id: String,
+            block: HttpAuthorizerAttributesDsl.() -> Unit = {},
+        ): IHttpRouteAuthorizer {
+            val builder = HttpAuthorizerAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.apigatewayv2.HttpAuthorizer
+                .fromHttpAuthorizerAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object HttpStage {
+        public fun fromHttpStageAttributes(
+            scope: Construct,
+            id: String,
+            block: HttpStageAttributesDsl.() -> Unit = {},
+        ): IHttpStage {
+            val builder = HttpStageAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.apigatewayv2.HttpStage.fromHttpStageAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object VpcLink {
+        public fun fromVpcLinkAttributes(
+            scope: Construct,
+            id: String,
+            block: VpcLinkAttributesDsl.() -> Unit = {},
+        ): IVpcLink {
+            val builder = VpcLinkAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.apigatewayv2.VpcLink.fromVpcLinkAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object WebSocketApi {
+        public fun fromWebSocketApiAttributes(
+            scope: Construct,
+            id: String,
+            block: WebSocketApiAttributesDsl.() -> Unit = {},
+        ): IWebSocketApi {
+            val builder = WebSocketApiAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.apigatewayv2.WebSocketApi
+                .fromWebSocketApiAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object WebSocketAuthorizer {
+        public fun fromWebSocketAuthorizerAttributes(
+            scope: Construct,
+            id: String,
+            block: WebSocketAuthorizerAttributesDsl.() -> Unit = {},
+        ): IWebSocketRouteAuthorizer {
+            val builder = WebSocketAuthorizerAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizer
+                .fromWebSocketAuthorizerAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object WebSocketStage {
+        public fun fromWebSocketStageAttributes(
+            scope: Construct,
+            id: String,
+            block: WebSocketStageAttributesDsl.() -> Unit = {},
+        ): IWebSocketStage {
+            val builder = WebSocketStageAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.apigatewayv2.WebSocketStage
+                .fromWebSocketStageAttributes(scope, id, builder.build())
+        }
     }
 }

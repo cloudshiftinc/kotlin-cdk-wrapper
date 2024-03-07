@@ -11,9 +11,14 @@
 
 package io.cloudshiftdev.awscdkdsl.services.ec2
 
+import io.cloudshiftdev.awscdkdsl.services.cloudwatch.MetricOptionsDsl
+import kotlin.Any
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 import kotlin.collections.Map
+import software.amazon.awscdk.services.cloudwatch.Metric
 import software.amazon.awscdk.services.ec2.AclCidrConfig
 import software.amazon.awscdk.services.ec2.AclIcmp
 import software.amazon.awscdk.services.ec2.AclPortRange
@@ -23,13 +28,9 @@ import software.amazon.awscdk.services.ec2.AllocateCidrRequest
 import software.amazon.awscdk.services.ec2.AllocateIpv6CidrRequest
 import software.amazon.awscdk.services.ec2.AllocateVpcIpv6CidrRequest
 import software.amazon.awscdk.services.ec2.AllocatedSubnet
-import software.amazon.awscdk.services.ec2.AmazonLinux2022ImageSsmParameter
 import software.amazon.awscdk.services.ec2.AmazonLinux2022ImageSsmParameterProps
-import software.amazon.awscdk.services.ec2.AmazonLinux2023ImageSsmParameter
 import software.amazon.awscdk.services.ec2.AmazonLinux2023ImageSsmParameterProps
-import software.amazon.awscdk.services.ec2.AmazonLinux2ImageSsmParameter
 import software.amazon.awscdk.services.ec2.AmazonLinux2ImageSsmParameterProps
-import software.amazon.awscdk.services.ec2.AmazonLinuxImage
 import software.amazon.awscdk.services.ec2.AmazonLinuxImageProps
 import software.amazon.awscdk.services.ec2.AmazonLinuxImageSsmParameterBaseOptions
 import software.amazon.awscdk.services.ec2.AmazonLinuxImageSsmParameterBaseProps
@@ -229,7 +230,6 @@ import software.amazon.awscdk.services.ec2.CfnVolumeProps
 import software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRule
 import software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRuleOptions
 import software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRuleProps
-import software.amazon.awscdk.services.ec2.ClientVpnEndpoint
 import software.amazon.awscdk.services.ec2.ClientVpnEndpointAttributes
 import software.amazon.awscdk.services.ec2.ClientVpnEndpointOptions
 import software.amazon.awscdk.services.ec2.ClientVpnEndpointProps
@@ -262,6 +262,19 @@ import software.amazon.awscdk.services.ec2.GenericLinuxImage
 import software.amazon.awscdk.services.ec2.GenericLinuxImageProps
 import software.amazon.awscdk.services.ec2.GenericWindowsImage
 import software.amazon.awscdk.services.ec2.GenericWindowsImageProps
+import software.amazon.awscdk.services.ec2.IClientVpnEndpoint
+import software.amazon.awscdk.services.ec2.IInterfaceVpcEndpoint
+import software.amazon.awscdk.services.ec2.IIpAddresses
+import software.amazon.awscdk.services.ec2.IKeyPair
+import software.amazon.awscdk.services.ec2.ILaunchTemplate
+import software.amazon.awscdk.services.ec2.IMachineImage
+import software.amazon.awscdk.services.ec2.IPrivateSubnet
+import software.amazon.awscdk.services.ec2.IPublicSubnet
+import software.amazon.awscdk.services.ec2.ISecurityGroup
+import software.amazon.awscdk.services.ec2.ISubnet
+import software.amazon.awscdk.services.ec2.IVolume
+import software.amazon.awscdk.services.ec2.IVpc
+import software.amazon.awscdk.services.ec2.IVpnConnection
 import software.amazon.awscdk.services.ec2.InitCommandOptions
 import software.amazon.awscdk.services.ec2.InitFileAssetOptions
 import software.amazon.awscdk.services.ec2.InitFileOptions
@@ -273,14 +286,11 @@ import software.amazon.awscdk.services.ec2.Instance
 import software.amazon.awscdk.services.ec2.InstanceProps
 import software.amazon.awscdk.services.ec2.InstanceRequireImdsv2Aspect
 import software.amazon.awscdk.services.ec2.InstanceRequireImdsv2AspectProps
-import software.amazon.awscdk.services.ec2.InterfaceVpcEndpoint
 import software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAttributes
 import software.amazon.awscdk.services.ec2.InterfaceVpcEndpointOptions
 import software.amazon.awscdk.services.ec2.InterfaceVpcEndpointProps
-import software.amazon.awscdk.services.ec2.KeyPair
 import software.amazon.awscdk.services.ec2.KeyPairAttributes
 import software.amazon.awscdk.services.ec2.KeyPairProps
-import software.amazon.awscdk.services.ec2.LaunchTemplate
 import software.amazon.awscdk.services.ec2.LaunchTemplateAttributes
 import software.amazon.awscdk.services.ec2.LaunchTemplateProps
 import software.amazon.awscdk.services.ec2.LaunchTemplateRequireImdsv2Aspect
@@ -309,10 +319,8 @@ import software.amazon.awscdk.services.ec2.PortProps
 import software.amazon.awscdk.services.ec2.PrefixList
 import software.amazon.awscdk.services.ec2.PrefixListOptions
 import software.amazon.awscdk.services.ec2.PrefixListProps
-import software.amazon.awscdk.services.ec2.PrivateSubnet
 import software.amazon.awscdk.services.ec2.PrivateSubnetAttributes
 import software.amazon.awscdk.services.ec2.PrivateSubnetProps
-import software.amazon.awscdk.services.ec2.PublicSubnet
 import software.amazon.awscdk.services.ec2.PublicSubnetAttributes
 import software.amazon.awscdk.services.ec2.PublicSubnetProps
 import software.amazon.awscdk.services.ec2.RequestedSubnet
@@ -320,12 +328,10 @@ import software.amazon.awscdk.services.ec2.ResolveSsmParameterAtLaunchImage
 import software.amazon.awscdk.services.ec2.RuleScope
 import software.amazon.awscdk.services.ec2.S3DestinationOptions
 import software.amazon.awscdk.services.ec2.S3DownloadOptions
-import software.amazon.awscdk.services.ec2.SecurityGroup
 import software.amazon.awscdk.services.ec2.SecurityGroupImportOptions
 import software.amazon.awscdk.services.ec2.SecurityGroupProps
 import software.amazon.awscdk.services.ec2.SelectedSubnets
 import software.amazon.awscdk.services.ec2.SsmParameterImageOptions
-import software.amazon.awscdk.services.ec2.Subnet
 import software.amazon.awscdk.services.ec2.SubnetAttributes
 import software.amazon.awscdk.services.ec2.SubnetConfiguration
 import software.amazon.awscdk.services.ec2.SubnetIpamOptions
@@ -334,17 +340,14 @@ import software.amazon.awscdk.services.ec2.SubnetNetworkAclAssociationProps
 import software.amazon.awscdk.services.ec2.SubnetProps
 import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.ec2.SystemdConfigFileOptions
-import software.amazon.awscdk.services.ec2.Volume
 import software.amazon.awscdk.services.ec2.VolumeAttributes
 import software.amazon.awscdk.services.ec2.VolumeProps
-import software.amazon.awscdk.services.ec2.Vpc
 import software.amazon.awscdk.services.ec2.VpcAttributes
 import software.amazon.awscdk.services.ec2.VpcEndpointService
 import software.amazon.awscdk.services.ec2.VpcEndpointServiceProps
 import software.amazon.awscdk.services.ec2.VpcIpamOptions
 import software.amazon.awscdk.services.ec2.VpcLookupOptions
 import software.amazon.awscdk.services.ec2.VpcProps
-import software.amazon.awscdk.services.ec2.VpnConnection
 import software.amazon.awscdk.services.ec2.VpnConnectionAttributes
 import software.amazon.awscdk.services.ec2.VpnConnectionOptions
 import software.amazon.awscdk.services.ec2.VpnConnectionProps
@@ -355,6 +358,8 @@ import software.amazon.awscdk.services.ec2.WindowsImage
 import software.amazon.awscdk.services.ec2.WindowsImageProps
 import software.amazon.awscdk.services.ec2.WindowsUserDataOptions
 import software.amazon.awscdk.services.ec2.WindowsVersion
+import software.amazon.awscdk.services.s3.IBucket
+import software.amazon.awscdk.services.s3.assets.Asset
 import software.constructs.Construct
 
 public object ec2 {
@@ -602,7 +607,7 @@ public object ec2 {
      */
     public inline fun amazonLinux2022ImageSsmParameter(
         block: AmazonLinux2022ImageSsmParameterDsl.() -> Unit = {}
-    ): AmazonLinux2022ImageSsmParameter {
+    ): software.amazon.awscdk.services.ec2.AmazonLinux2022ImageSsmParameter {
         val builder = AmazonLinux2022ImageSsmParameterDsl()
         builder.apply(block)
         return builder.build()
@@ -661,7 +666,7 @@ public object ec2 {
      */
     public inline fun amazonLinux2023ImageSsmParameter(
         block: AmazonLinux2023ImageSsmParameterDsl.() -> Unit = {}
-    ): AmazonLinux2023ImageSsmParameter {
+    ): software.amazon.awscdk.services.ec2.AmazonLinux2023ImageSsmParameter {
         val builder = AmazonLinux2023ImageSsmParameterDsl()
         builder.apply(block)
         return builder.build()
@@ -722,7 +727,7 @@ public object ec2 {
      */
     public inline fun amazonLinux2ImageSsmParameter(
         block: AmazonLinux2ImageSsmParameterDsl.() -> Unit = {}
-    ): AmazonLinux2ImageSsmParameter {
+    ): software.amazon.awscdk.services.ec2.AmazonLinux2ImageSsmParameter {
         val builder = AmazonLinux2ImageSsmParameterDsl()
         builder.apply(block)
         return builder.build()
@@ -804,7 +809,7 @@ public object ec2 {
      */
     public inline fun amazonLinuxImage(
         block: AmazonLinuxImageDsl.() -> Unit = {}
-    ): AmazonLinuxImage {
+    ): software.amazon.awscdk.services.ec2.AmazonLinuxImage {
         val builder = AmazonLinuxImageDsl()
         builder.apply(block)
         return builder.build()
@@ -15988,7 +15993,7 @@ public object ec2 {
         scope: Construct,
         id: String,
         block: ClientVpnEndpointDsl.() -> Unit = {},
-    ): ClientVpnEndpoint {
+    ): software.amazon.awscdk.services.ec2.ClientVpnEndpoint {
         val builder = ClientVpnEndpointDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -17259,7 +17264,7 @@ public object ec2 {
         scope: Construct,
         id: String,
         block: InterfaceVpcEndpointDsl.() -> Unit = {},
-    ): InterfaceVpcEndpoint {
+    ): software.amazon.awscdk.services.ec2.InterfaceVpcEndpoint {
         val builder = InterfaceVpcEndpointDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -17369,7 +17374,7 @@ public object ec2 {
         scope: Construct,
         id: String,
         block: KeyPairDsl.() -> Unit = {},
-    ): KeyPair {
+    ): software.amazon.awscdk.services.ec2.KeyPair {
         val builder = KeyPairDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -17445,7 +17450,7 @@ public object ec2 {
         scope: Construct,
         id: String,
         block: LaunchTemplateDsl.() -> Unit = {},
-    ): LaunchTemplate {
+    ): software.amazon.awscdk.services.ec2.LaunchTemplate {
         val builder = LaunchTemplateDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -18207,7 +18212,7 @@ public object ec2 {
         scope: Construct,
         id: String,
         block: PrivateSubnetDsl.() -> Unit = {},
-    ): PrivateSubnet {
+    ): software.amazon.awscdk.services.ec2.PrivateSubnet {
         val builder = PrivateSubnetDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -18284,7 +18289,7 @@ public object ec2 {
         scope: Construct,
         id: String,
         block: PublicSubnetDsl.() -> Unit = {},
-    ): PublicSubnet {
+    ): software.amazon.awscdk.services.ec2.PublicSubnet {
         val builder = PublicSubnetDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -18528,7 +18533,7 @@ public object ec2 {
         scope: Construct,
         id: String,
         block: SecurityGroupDsl.() -> Unit = {},
-    ): SecurityGroup {
+    ): software.amazon.awscdk.services.ec2.SecurityGroup {
         val builder = SecurityGroupDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -18671,7 +18676,7 @@ public object ec2 {
         scope: Construct,
         id: String,
         block: SubnetDsl.() -> Unit = {},
-    ): Subnet {
+    ): software.amazon.awscdk.services.ec2.Subnet {
         val builder = SubnetDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -18909,7 +18914,7 @@ public object ec2 {
         scope: Construct,
         id: String,
         block: VolumeDsl.() -> Unit = {},
-    ): Volume {
+    ): software.amazon.awscdk.services.ec2.Volume {
         val builder = VolumeDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -19005,7 +19010,7 @@ public object ec2 {
         scope: Construct,
         id: String,
         block: VpcDsl.() -> Unit = {},
-    ): Vpc {
+    ): software.amazon.awscdk.services.ec2.Vpc {
         val builder = VpcDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -19192,7 +19197,7 @@ public object ec2 {
         scope: Construct,
         id: String,
         block: VpnConnectionDsl.() -> Unit = {},
-    ): VpnConnection {
+    ): software.amazon.awscdk.services.ec2.VpnConnection {
         val builder = VpnConnectionDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -19416,5 +19421,816 @@ public object ec2 {
         val builder = WindowsUserDataOptionsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object AclTraffic {
+        public fun icmp(
+            block: AclIcmpDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ec2.AclTraffic {
+            val builder = AclIcmpDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.AclTraffic.icmp(builder.build())
+        }
+
+        public fun icmpv6(
+            block: AclIcmpDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ec2.AclTraffic {
+            val builder = AclIcmpDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.AclTraffic.icmpv6(builder.build())
+        }
+    }
+
+    public object AmazonLinux2022ImageSsmParameter {
+        public fun ssmParameterName(
+            block: AmazonLinux2022ImageSsmParameterPropsDsl.() -> Unit = {}
+        ): String {
+            val builder = AmazonLinux2022ImageSsmParameterPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.AmazonLinux2022ImageSsmParameter
+                .ssmParameterName(builder.build())
+        }
+    }
+
+    public object AmazonLinux2023ImageSsmParameter {
+        public fun ssmParameterName(
+            block: AmazonLinux2023ImageSsmParameterPropsDsl.() -> Unit = {}
+        ): String {
+            val builder = AmazonLinux2023ImageSsmParameterPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.AmazonLinux2023ImageSsmParameter
+                .ssmParameterName(builder.build())
+        }
+    }
+
+    public object AmazonLinux2ImageSsmParameter {
+        public fun ssmParameterName(
+            block: AmazonLinux2ImageSsmParameterPropsDsl.() -> Unit = {}
+        ): String {
+            val builder = AmazonLinux2ImageSsmParameterPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.AmazonLinux2ImageSsmParameter
+                .ssmParameterName(builder.build())
+        }
+    }
+
+    public object AmazonLinuxImage {
+        public fun ssmParameterName(block: AmazonLinuxImagePropsDsl.() -> Unit = {}): String {
+            val builder = AmazonLinuxImagePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.AmazonLinuxImage.ssmParameterName(
+                builder.build()
+            )
+        }
+    }
+
+    public object BlockDeviceVolume {
+        public fun ebs(
+            volumeSize: Number,
+            block: EbsDeviceOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ec2.BlockDeviceVolume {
+            val builder = EbsDeviceOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.BlockDeviceVolume.ebs(
+                volumeSize,
+                builder.build()
+            )
+        }
+
+        public fun ebsFromSnapshot(
+            snapshotId: String,
+            block: EbsDeviceSnapshotOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ec2.BlockDeviceVolume {
+            val builder = EbsDeviceSnapshotOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.BlockDeviceVolume.ebsFromSnapshot(
+                snapshotId,
+                builder.build()
+            )
+        }
+    }
+
+    public object ClientVpnEndpoint {
+        public fun fromEndpointAttributes(
+            scope: Construct,
+            id: String,
+            block: ClientVpnEndpointAttributesDsl.() -> Unit = {},
+        ): IClientVpnEndpoint {
+            val builder = ClientVpnEndpointAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.ClientVpnEndpoint.fromEndpointAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object CloudFormationInit {
+        public fun fromConfigSets(
+            block: ConfigSetPropsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ec2.CloudFormationInit {
+            val builder = ConfigSetPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.CloudFormationInit.fromConfigSets(
+                builder.build()
+            )
+        }
+    }
+
+    public object FlowLogDestination {
+        public fun toS3(
+            bucket: IBucket?,
+            keyPrefix: String?,
+            block: S3DestinationOptionsDsl.() -> Unit = {},
+        ): software.amazon.awscdk.services.ec2.FlowLogDestination {
+            val builder = S3DestinationOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.FlowLogDestination.toS3(
+                bucket,
+                keyPrefix,
+                builder.build()
+            )
+        }
+    }
+
+    public object InitCommand {
+        public fun argvCommand(
+            argv: List<String>,
+            block: InitCommandOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ec2.InitCommand {
+            val builder = InitCommandOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.InitCommand.argvCommand(
+                argv,
+                builder.build()
+            )
+        }
+
+        public fun shellCommand(
+            shellCommand: String,
+            block: InitCommandOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ec2.InitCommand {
+            val builder = InitCommandOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.InitCommand.shellCommand(
+                shellCommand,
+                builder.build()
+            )
+        }
+    }
+
+    public object InitFile {
+        public fun fromAsset(
+            targetFileName: String,
+            path: String,
+            block: InitFileAssetOptionsDsl.() -> Unit = {},
+        ): software.amazon.awscdk.services.ec2.InitFile {
+            val builder = InitFileAssetOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.InitFile.fromAsset(
+                targetFileName,
+                path,
+                builder.build()
+            )
+        }
+
+        public fun fromExistingAsset(
+            targetFileName: String,
+            asset: Asset,
+            block: InitFileOptionsDsl.() -> Unit = {},
+        ): software.amazon.awscdk.services.ec2.InitFile {
+            val builder = InitFileOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.InitFile.fromExistingAsset(
+                targetFileName,
+                asset,
+                builder.build()
+            )
+        }
+
+        public fun fromFileInline(
+            targetFileName: String,
+            sourceFileName: String,
+            block: InitFileOptionsDsl.() -> Unit = {},
+        ): software.amazon.awscdk.services.ec2.InitFile {
+            val builder = InitFileOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.InitFile.fromFileInline(
+                targetFileName,
+                sourceFileName,
+                builder.build()
+            )
+        }
+
+        public fun fromObject(
+            fileName: String,
+            obj: Map<String, Any>,
+            block: InitFileOptionsDsl.() -> Unit = {},
+        ): software.amazon.awscdk.services.ec2.InitFile {
+            val builder = InitFileOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.InitFile.fromObject(
+                fileName,
+                obj,
+                builder.build()
+            )
+        }
+
+        public fun fromS3Object(
+            fileName: String,
+            bucket: IBucket,
+            key: String,
+            block: InitFileOptionsDsl.() -> Unit = {},
+        ): software.amazon.awscdk.services.ec2.InitFile {
+            val builder = InitFileOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.InitFile.fromS3Object(
+                fileName,
+                bucket,
+                key,
+                builder.build()
+            )
+        }
+
+        public fun fromString(
+            fileName: String,
+            content: String,
+            block: InitFileOptionsDsl.() -> Unit = {},
+        ): software.amazon.awscdk.services.ec2.InitFile {
+            val builder = InitFileOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.InitFile.fromString(
+                fileName,
+                content,
+                builder.build()
+            )
+        }
+
+        public fun fromUrl(
+            fileName: String,
+            url: String,
+            block: InitFileOptionsDsl.() -> Unit = {},
+        ): software.amazon.awscdk.services.ec2.InitFile {
+            val builder = InitFileOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.InitFile.fromUrl(
+                fileName,
+                url,
+                builder.build()
+            )
+        }
+
+        public fun symlink(
+            fileName: String,
+            target: String,
+            block: InitFileOptionsDsl.() -> Unit = {},
+        ): software.amazon.awscdk.services.ec2.InitFile {
+            val builder = InitFileOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.InitFile.symlink(
+                fileName,
+                target,
+                builder.build()
+            )
+        }
+    }
+
+    public object InitPackage {
+        public fun apt(
+            packageName: String,
+            block: NamedPackageOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ec2.InitPackage {
+            val builder = NamedPackageOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.InitPackage.apt(packageName, builder.build())
+        }
+
+        public fun msi(
+            location: String,
+            block: LocationPackageOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ec2.InitPackage {
+            val builder = LocationPackageOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.InitPackage.msi(location, builder.build())
+        }
+
+        public fun python(
+            packageName: String,
+            block: NamedPackageOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ec2.InitPackage {
+            val builder = NamedPackageOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.InitPackage.python(
+                packageName,
+                builder.build()
+            )
+        }
+
+        public fun rpm(
+            location: String,
+            block: LocationPackageOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ec2.InitPackage {
+            val builder = LocationPackageOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.InitPackage.rpm(location, builder.build())
+        }
+
+        public fun rubyGem(
+            gemName: String,
+            block: NamedPackageOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ec2.InitPackage {
+            val builder = NamedPackageOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.InitPackage.rubyGem(gemName, builder.build())
+        }
+
+        public fun yum(
+            packageName: String,
+            block: NamedPackageOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ec2.InitPackage {
+            val builder = NamedPackageOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.InitPackage.yum(packageName, builder.build())
+        }
+    }
+
+    public object InitService {
+        public fun enable(
+            serviceName: String,
+            block: InitServiceOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ec2.InitService {
+            val builder = InitServiceOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.InitService.enable(
+                serviceName,
+                builder.build()
+            )
+        }
+
+        public fun systemdConfigFile(
+            serviceName: String,
+            block: SystemdConfigFileOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ec2.InitFile {
+            val builder = SystemdConfigFileOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.InitService.systemdConfigFile(
+                serviceName,
+                builder.build()
+            )
+        }
+    }
+
+    public object InitSource {
+        public fun fromAsset(
+            targetDirectory: String,
+            path: String,
+            block: InitSourceAssetOptionsDsl.() -> Unit = {},
+        ): software.amazon.awscdk.services.ec2.InitSource {
+            val builder = InitSourceAssetOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.InitSource.fromAsset(
+                targetDirectory,
+                path,
+                builder.build()
+            )
+        }
+
+        public fun fromExistingAsset(
+            targetDirectory: String,
+            asset: Asset,
+            block: InitSourceOptionsDsl.() -> Unit = {},
+        ): software.amazon.awscdk.services.ec2.InitSource {
+            val builder = InitSourceOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.InitSource.fromExistingAsset(
+                targetDirectory,
+                asset,
+                builder.build()
+            )
+        }
+
+        public fun fromGitHub(
+            targetDirectory: String,
+            owner: String,
+            repo: String,
+            refSpec: String?,
+            block: InitSourceOptionsDsl.() -> Unit = {},
+        ): software.amazon.awscdk.services.ec2.InitSource {
+            val builder = InitSourceOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.InitSource.fromGitHub(
+                targetDirectory,
+                owner,
+                repo,
+                refSpec,
+                builder.build()
+            )
+        }
+
+        public fun fromS3Object(
+            targetDirectory: String,
+            bucket: IBucket,
+            key: String,
+            block: InitSourceOptionsDsl.() -> Unit = {},
+        ): software.amazon.awscdk.services.ec2.InitSource {
+            val builder = InitSourceOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.InitSource.fromS3Object(
+                targetDirectory,
+                bucket,
+                key,
+                builder.build()
+            )
+        }
+
+        public fun fromUrl(
+            targetDirectory: String,
+            url: String,
+            block: InitSourceOptionsDsl.() -> Unit = {},
+        ): software.amazon.awscdk.services.ec2.InitSource {
+            val builder = InitSourceOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.InitSource.fromUrl(
+                targetDirectory,
+                url,
+                builder.build()
+            )
+        }
+    }
+
+    public object InitUser {
+        public fun fromName(
+            userName: String,
+            block: InitUserOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ec2.InitUser {
+            val builder = InitUserOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.InitUser.fromName(userName, builder.build())
+        }
+    }
+
+    public object InterfaceVpcEndpoint {
+        public fun fromInterfaceVpcEndpointAttributes(
+            scope: Construct,
+            id: String,
+            block: InterfaceVpcEndpointAttributesDsl.() -> Unit = {},
+        ): IInterfaceVpcEndpoint {
+            val builder = InterfaceVpcEndpointAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.InterfaceVpcEndpoint
+                .fromInterfaceVpcEndpointAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object IpAddresses {
+        public fun awsIpamAllocation(block: AwsIpamPropsDsl.() -> Unit = {}): IIpAddresses {
+            val builder = AwsIpamPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.IpAddresses.awsIpamAllocation(
+                builder.build()
+            )
+        }
+    }
+
+    public object KeyPair {
+        public fun fromKeyPairAttributes(
+            scope: Construct,
+            id: String,
+            block: KeyPairAttributesDsl.() -> Unit = {},
+        ): IKeyPair {
+            val builder = KeyPairAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.KeyPair.fromKeyPairAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object LaunchTemplate {
+        public fun fromLaunchTemplateAttributes(
+            scope: Construct,
+            id: String,
+            block: LaunchTemplateAttributesDsl.() -> Unit = {},
+        ): ILaunchTemplate {
+            val builder = LaunchTemplateAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.LaunchTemplate.fromLaunchTemplateAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object MachineImage {
+        public fun fromSsmParameter(
+            parameterName: String,
+            block: SsmParameterImageOptionsDsl.() -> Unit = {}
+        ): IMachineImage {
+            val builder = SsmParameterImageOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.MachineImage.fromSsmParameter(
+                parameterName,
+                builder.build()
+            )
+        }
+
+        public fun genericLinux(
+            amiMap: Map<String, String>,
+            block: GenericLinuxImagePropsDsl.() -> Unit = {}
+        ): IMachineImage {
+            val builder = GenericLinuxImagePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.MachineImage.genericLinux(
+                amiMap,
+                builder.build()
+            )
+        }
+
+        public fun genericWindows(
+            amiMap: Map<String, String>,
+            block: GenericWindowsImagePropsDsl.() -> Unit = {}
+        ): IMachineImage {
+            val builder = GenericWindowsImagePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.MachineImage.genericWindows(
+                amiMap,
+                builder.build()
+            )
+        }
+
+        public fun latestAmazonLinux(
+            block: AmazonLinuxImagePropsDsl.() -> Unit = {}
+        ): IMachineImage {
+            val builder = AmazonLinuxImagePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.MachineImage.latestAmazonLinux(
+                builder.build()
+            )
+        }
+
+        public fun latestAmazonLinux2(
+            block: AmazonLinux2ImageSsmParameterPropsDsl.() -> Unit = {}
+        ): IMachineImage {
+            val builder = AmazonLinux2ImageSsmParameterPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.MachineImage.latestAmazonLinux2(
+                builder.build()
+            )
+        }
+
+        public fun latestAmazonLinux2022(
+            block: AmazonLinux2022ImageSsmParameterPropsDsl.() -> Unit = {}
+        ): IMachineImage {
+            val builder = AmazonLinux2022ImageSsmParameterPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.MachineImage.latestAmazonLinux2022(
+                builder.build()
+            )
+        }
+
+        public fun latestAmazonLinux2023(
+            block: AmazonLinux2023ImageSsmParameterPropsDsl.() -> Unit = {}
+        ): IMachineImage {
+            val builder = AmazonLinux2023ImageSsmParameterPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.MachineImage.latestAmazonLinux2023(
+                builder.build()
+            )
+        }
+
+        public fun latestWindows(
+            version: WindowsVersion,
+            block: WindowsImagePropsDsl.() -> Unit = {}
+        ): IMachineImage {
+            val builder = WindowsImagePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.MachineImage.latestWindows(
+                version,
+                builder.build()
+            )
+        }
+
+        public fun lookup(block: LookupMachineImagePropsDsl.() -> Unit = {}): IMachineImage {
+            val builder = LookupMachineImagePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.MachineImage.lookup(builder.build())
+        }
+
+        public fun resolveSsmParameterAtLaunch(
+            parameterName: String,
+            block: SsmParameterImageOptionsDsl.() -> Unit = {}
+        ): IMachineImage {
+            val builder = SsmParameterImageOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.MachineImage.resolveSsmParameterAtLaunch(
+                parameterName,
+                builder.build()
+            )
+        }
+    }
+
+    public object MultipartBody {
+        public fun fromRawBody(
+            block: MultipartBodyOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ec2.MultipartBody {
+            val builder = MultipartBodyOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.MultipartBody.fromRawBody(builder.build())
+        }
+    }
+
+    public object NatProvider {
+        public fun gateway(
+            block: NatGatewayPropsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ec2.NatProvider {
+            val builder = NatGatewayPropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.NatProvider.gateway(builder.build())
+        }
+
+        public fun instance(block: NatInstancePropsDsl.() -> Unit = {}): NatInstanceProvider {
+            val builder = NatInstancePropsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.NatProvider.instance(builder.build())
+        }
+    }
+
+    public object PrivateSubnet {
+        public fun fromPrivateSubnetAttributes(
+            scope: Construct,
+            id: String,
+            block: PrivateSubnetAttributesDsl.() -> Unit = {},
+        ): IPrivateSubnet {
+            val builder = PrivateSubnetAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.PrivateSubnet.fromPrivateSubnetAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object PublicSubnet {
+        public fun fromPublicSubnetAttributes(
+            scope: Construct,
+            id: String,
+            block: PublicSubnetAttributesDsl.() -> Unit = {},
+        ): IPublicSubnet {
+            val builder = PublicSubnetAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.PublicSubnet.fromPublicSubnetAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object SecurityGroup {
+        public fun fromSecurityGroupId(
+            scope: Construct,
+            id: String,
+            securityGroupId: String,
+            block: SecurityGroupImportOptionsDsl.() -> Unit = {},
+        ): ISecurityGroup {
+            val builder = SecurityGroupImportOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.SecurityGroup.fromSecurityGroupId(
+                scope,
+                id,
+                securityGroupId,
+                builder.build()
+            )
+        }
+    }
+
+    public object Subnet {
+        public fun fromSubnetAttributes(
+            scope: Construct,
+            id: String,
+            block: SubnetAttributesDsl.() -> Unit = {},
+        ): ISubnet {
+            val builder = SubnetAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.Subnet.fromSubnetAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object UserData {
+        public fun forLinux(
+            block: LinuxUserDataOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ec2.UserData {
+            val builder = LinuxUserDataOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.UserData.forLinux(builder.build())
+        }
+
+        public fun forWindows(
+            block: WindowsUserDataOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.ec2.UserData {
+            val builder = WindowsUserDataOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.UserData.forWindows(builder.build())
+        }
+    }
+
+    public object Volume {
+        public fun fromVolumeAttributes(
+            scope: Construct,
+            id: String,
+            block: VolumeAttributesDsl.() -> Unit = {},
+        ): IVolume {
+            val builder = VolumeAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.Volume.fromVolumeAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object Vpc {
+        public fun fromLookup(
+            scope: Construct,
+            id: String,
+            block: VpcLookupOptionsDsl.() -> Unit = {},
+        ): IVpc {
+            val builder = VpcLookupOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.Vpc.fromLookup(scope, id, builder.build())
+        }
+
+        public fun fromVpcAttributes(
+            scope: Construct,
+            id: String,
+            block: VpcAttributesDsl.() -> Unit = {},
+        ): IVpc {
+            val builder = VpcAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.Vpc.fromVpcAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object VpnConnection {
+        public fun fromVpnConnectionAttributes(
+            scope: Construct,
+            id: String,
+            block: VpnConnectionAttributesDsl.() -> Unit = {},
+        ): IVpnConnection {
+            val builder = VpnConnectionAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.VpnConnection.fromVpnConnectionAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+
+        public fun metricAll(metricName: String, block: MetricOptionsDsl.() -> Unit = {}): Metric {
+            val builder = MetricOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.VpnConnection.metricAll(
+                metricName,
+                builder.build()
+            )
+        }
+
+        public fun metricAllTunnelDataIn(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+            val builder = MetricOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.VpnConnection.metricAllTunnelDataIn(
+                builder.build()
+            )
+        }
+
+        public fun metricAllTunnelDataOut(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+            val builder = MetricOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.VpnConnection.metricAllTunnelDataOut(
+                builder.build()
+            )
+        }
+
+        public fun metricAllTunnelState(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+            val builder = MetricOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ec2.VpnConnection.metricAllTunnelState(
+                builder.build()
+            )
+        }
     }
 }

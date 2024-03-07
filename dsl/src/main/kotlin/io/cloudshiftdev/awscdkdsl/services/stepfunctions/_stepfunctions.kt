@@ -11,8 +11,12 @@
 
 package io.cloudshiftdev.awscdkdsl.services.stepfunctions
 
+import io.cloudshiftdev.awscdkdsl.services.cloudwatch.MetricOptionsDsl
+import io.cloudshiftdev.awscdkdsl.services.s3.assets.AssetOptionsDsl
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
+import software.amazon.awscdk.services.cloudwatch.Metric
 import software.amazon.awscdk.services.stepfunctions.Activity
 import software.amazon.awscdk.services.stepfunctions.ActivityProps
 import software.amazon.awscdk.services.stepfunctions.AfterwardsOptions
@@ -2071,5 +2075,84 @@ public object stepfunctions {
         val builder = WaitPropsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object DefinitionBody {
+        public fun fromFile(
+            path: String,
+            block: AssetOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.stepfunctions.DefinitionBody {
+            val builder = AssetOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.stepfunctions.DefinitionBody.fromFile(
+                path,
+                builder.build()
+            )
+        }
+    }
+
+    public object State {
+        public fun findReachableEndStates(
+            start: software.amazon.awscdk.services.stepfunctions.State,
+            block: FindStateOptionsDsl.() -> Unit = {}
+        ): List<software.amazon.awscdk.services.stepfunctions.State> {
+            val builder = FindStateOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.stepfunctions.State.findReachableEndStates(
+                start,
+                builder.build()
+            )
+        }
+
+        public fun findReachableStates(
+            start: software.amazon.awscdk.services.stepfunctions.State,
+            block: FindStateOptionsDsl.() -> Unit = {}
+        ): List<software.amazon.awscdk.services.stepfunctions.State> {
+            val builder = FindStateOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.stepfunctions.State.findReachableStates(
+                start,
+                builder.build()
+            )
+        }
+    }
+
+    public object StateTransitionMetric {
+        public fun metric(metricName: String, block: MetricOptionsDsl.() -> Unit = {}): Metric {
+            val builder = MetricOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.stepfunctions.StateTransitionMetric.metric(
+                metricName,
+                builder.build()
+            )
+        }
+
+        public fun metricConsumedCapacity(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+            val builder = MetricOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.stepfunctions.StateTransitionMetric
+                .metricConsumedCapacity(builder.build())
+        }
+
+        public fun metricProvisionedBucketSize(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+            val builder = MetricOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.stepfunctions.StateTransitionMetric
+                .metricProvisionedBucketSize(builder.build())
+        }
+
+        public fun metricProvisionedRefillRate(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+            val builder = MetricOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.stepfunctions.StateTransitionMetric
+                .metricProvisionedRefillRate(builder.build())
+        }
+
+        public fun metricThrottledEvents(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+            val builder = MetricOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.stepfunctions.StateTransitionMetric
+                .metricThrottledEvents(builder.build())
+        }
     }
 }

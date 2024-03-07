@@ -11,8 +11,10 @@
 
 package io.cloudshiftdev.awscdkdsl.services.cloudfront
 
+import io.cloudshiftdev.awscdkdsl.services.s3.assets.AssetOptionsDsl
 import kotlin.String
 import kotlin.Unit
+import software.amazon.awscdk.services.certificatemanager.ICertificate
 import software.amazon.awscdk.services.cloudfront.AddBehaviorOptions
 import software.amazon.awscdk.services.cloudfront.AssetImportSource
 import software.amazon.awscdk.services.cloudfront.Behavior
@@ -47,20 +49,19 @@ import software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy
 import software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicyProps
 import software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution
 import software.amazon.awscdk.services.cloudfront.CfnStreamingDistributionProps
-import software.amazon.awscdk.services.cloudfront.CloudFrontWebDistribution
 import software.amazon.awscdk.services.cloudfront.CloudFrontWebDistributionAttributes
 import software.amazon.awscdk.services.cloudfront.CloudFrontWebDistributionProps
 import software.amazon.awscdk.services.cloudfront.CustomOriginConfig
-import software.amazon.awscdk.services.cloudfront.Distribution
 import software.amazon.awscdk.services.cloudfront.DistributionAttributes
 import software.amazon.awscdk.services.cloudfront.DistributionProps
 import software.amazon.awscdk.services.cloudfront.EdgeLambda
 import software.amazon.awscdk.services.cloudfront.ErrorResponse
 import software.amazon.awscdk.services.cloudfront.FileCodeOptions
-import software.amazon.awscdk.services.cloudfront.Function
 import software.amazon.awscdk.services.cloudfront.FunctionAssociation
 import software.amazon.awscdk.services.cloudfront.FunctionAttributes
 import software.amazon.awscdk.services.cloudfront.FunctionProps
+import software.amazon.awscdk.services.cloudfront.IDistribution
+import software.amazon.awscdk.services.cloudfront.IFunction
 import software.amazon.awscdk.services.cloudfront.KeyGroup
 import software.amazon.awscdk.services.cloudfront.KeyGroupProps
 import software.amazon.awscdk.services.cloudfront.KeyValueStore
@@ -4509,7 +4510,7 @@ public object cloudfront {
         scope: Construct,
         id: String,
         block: CloudFrontWebDistributionDsl.() -> Unit = {},
-    ): CloudFrontWebDistribution {
+    ): software.amazon.awscdk.services.cloudfront.CloudFrontWebDistribution {
         val builder = CloudFrontWebDistributionDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -4621,7 +4622,7 @@ public object cloudfront {
         scope: Construct,
         id: String,
         block: DistributionDsl.() -> Unit = {},
-    ): Distribution {
+    ): software.amazon.awscdk.services.cloudfront.Distribution {
         val builder = DistributionDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -4772,7 +4773,7 @@ public object cloudfront {
         scope: Construct,
         id: String,
         block: FunctionDsl.() -> Unit = {},
-    ): Function {
+    ): software.amazon.awscdk.services.cloudfront.Function {
         val builder = FunctionDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -6247,5 +6248,97 @@ public object cloudfront {
         val builder = ViewerCertificateOptionsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object CloudFrontWebDistribution {
+        public fun fromDistributionAttributes(
+            scope: Construct,
+            id: String,
+            block: CloudFrontWebDistributionAttributesDsl.() -> Unit = {},
+        ): IDistribution {
+            val builder = CloudFrontWebDistributionAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.cloudfront.CloudFrontWebDistribution
+                .fromDistributionAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object Distribution {
+        public fun fromDistributionAttributes(
+            scope: Construct,
+            id: String,
+            block: DistributionAttributesDsl.() -> Unit = {},
+        ): IDistribution {
+            val builder = DistributionAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.cloudfront.Distribution
+                .fromDistributionAttributes(scope, id, builder.build())
+        }
+    }
+
+    public object Function {
+        public fun fromFunctionAttributes(
+            scope: Construct,
+            id: String,
+            block: FunctionAttributesDsl.() -> Unit = {},
+        ): IFunction {
+            val builder = FunctionAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.cloudfront.Function.fromFunctionAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
+    }
+
+    public object FunctionCode {
+        public fun fromFile(
+            block: FileCodeOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.cloudfront.FunctionCode {
+            val builder = FileCodeOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.cloudfront.FunctionCode.fromFile(builder.build())
+        }
+    }
+
+    public object ImportSource {
+        public fun fromAsset(
+            path: String,
+            block: AssetOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.cloudfront.ImportSource {
+            val builder = AssetOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.cloudfront.ImportSource.fromAsset(
+                path,
+                builder.build()
+            )
+        }
+    }
+
+    public object ViewerCertificate {
+        public fun fromAcmCertificate(
+            certificate: ICertificate,
+            block: ViewerCertificateOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.cloudfront.ViewerCertificate {
+            val builder = ViewerCertificateOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.cloudfront.ViewerCertificate.fromAcmCertificate(
+                certificate,
+                builder.build()
+            )
+        }
+
+        public fun fromIamCertificate(
+            iamCertificateId: String,
+            block: ViewerCertificateOptionsDsl.() -> Unit = {}
+        ): software.amazon.awscdk.services.cloudfront.ViewerCertificate {
+            val builder = ViewerCertificateOptionsDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.cloudfront.ViewerCertificate.fromIamCertificate(
+                iamCertificateId,
+                builder.build()
+            )
+        }
     }
 }

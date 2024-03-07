@@ -23,10 +23,10 @@ import software.amazon.awscdk.services.ecr.CfnReplicationConfiguration
 import software.amazon.awscdk.services.ecr.CfnReplicationConfigurationProps
 import software.amazon.awscdk.services.ecr.CfnRepository
 import software.amazon.awscdk.services.ecr.CfnRepositoryProps
+import software.amazon.awscdk.services.ecr.IRepository
 import software.amazon.awscdk.services.ecr.LifecycleRule
 import software.amazon.awscdk.services.ecr.OnCloudTrailImagePushedOptions
 import software.amazon.awscdk.services.ecr.OnImageScanCompletedOptions
-import software.amazon.awscdk.services.ecr.Repository
 import software.amazon.awscdk.services.ecr.RepositoryAttributes
 import software.amazon.awscdk.services.ecr.RepositoryProps
 import software.constructs.Construct
@@ -758,7 +758,7 @@ public object ecr {
         scope: Construct,
         id: String,
         block: RepositoryDsl.() -> Unit = {},
-    ): Repository {
+    ): software.amazon.awscdk.services.ecr.Repository {
         val builder = RepositoryDsl(scope, id)
         builder.apply(block)
         return builder.build()
@@ -794,5 +794,21 @@ public object ecr {
         val builder = RepositoryPropsDsl()
         builder.apply(block)
         return builder.build()
+    }
+
+    public object Repository {
+        public fun fromRepositoryAttributes(
+            scope: Construct,
+            id: String,
+            block: RepositoryAttributesDsl.() -> Unit = {},
+        ): IRepository {
+            val builder = RepositoryAttributesDsl()
+            builder.apply(block)
+            return software.amazon.awscdk.services.ecr.Repository.fromRepositoryAttributes(
+                scope,
+                id,
+                builder.build()
+            )
+        }
     }
 }
