@@ -1,0 +1,40 @@
+package io.cloudshiftdev.awscdk.services.cloudwatch
+
+import kotlin.Deprecated
+import kotlin.String
+import kotlin.collections.List
+import kotlin.collections.Map
+
+public interface IMetric {
+  public fun toMetricConfig(): MetricConfig
+
+  @Deprecated(message = "deprecated in CDK")
+  public fun warnings(): List<String> = unwrap(this).getWarnings() ?: emptyList()
+
+  public fun warningsV2(): Map<String, String> = unwrap(this).getWarningsV2() ?: emptyMap()
+
+  private class Wrapper internal constructor(
+    internal val cdkObject: software.amazon.awscdk.services.cloudwatch.IMetric,
+  ) : IMetric {
+    public override fun toMetricConfig(): MetricConfig =
+        unwrap(this).toMetricConfig().let(MetricConfig::wrap)
+
+    @Deprecated(message = "deprecated in CDK")
+    public override fun warnings(): List<String> = unwrap(this).getWarnings() ?: emptyList()
+
+    public override fun warningsV2(): Map<String, String> = unwrap(this).getWarningsV2() ?:
+        emptyMap()
+  }
+
+  public companion object {
+    init {
+
+    }
+
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.IMetric): IMetric =
+        Wrapper(cdkObject)
+
+    internal fun unwrap(wrapped: IMetric): software.amazon.awscdk.services.cloudwatch.IMetric =
+        (wrapped as Wrapper).cdkObject
+  }
+}

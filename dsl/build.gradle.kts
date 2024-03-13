@@ -6,7 +6,7 @@ plugins {
 }
 
 dependencies {
-    api(libs.awscdk)
+    implementation(libs.awscdk)
     api(projects.common)
 }
 
@@ -17,8 +17,8 @@ tasks.named<KotlinCompile>("compileKotlin") {
     onlyIf {
         // don't compile DSL code when in IntelliJ as it's large and takes considerable time
         when {
-            System.getenv("XPC_SERVICE_NAME")?.contains("intellij") ?: false -> false
-            System.getenv("IDEA_INITIAL_DIRECTORY") != null -> false
+//            System.getenv("XPC_SERVICE_NAME")?.contains("intellij") ?: false -> false
+//            System.getenv("IDEA_INITIAL_DIRECTORY") != null -> false
             else -> true
         }
     }

@@ -8,6 +8,8 @@ import kotlin.reflect.jvm.internal.impl.name.FqName
 import org.objectweb.asm.Opcodes
 import org.objectweb.asm.Opcodes.ACC_PUBLIC
 import org.objectweb.asm.Type
+import org.objectweb.asm.tree.ClassNode
+import org.objectweb.asm.tree.FieldNode
 import org.objectweb.asm.tree.MethodNode
 
 internal object Asm {
@@ -19,6 +21,12 @@ internal fun MethodNode.isConstructor() = name == Asm.ConstructorMethodName
 internal val MethodNode.accessFlags: AccessFlags
     get() = AccessFlags(access)
 
+internal val ClassNode.accessFlags: AccessFlags
+    get() = AccessFlags(access)
+
+internal val FieldNode.accessFlags: AccessFlags
+    get() = AccessFlags(access)
+
 @JvmInline
 internal value class AccessFlags(private val value: Int) {
     fun isPublic() = flagSet(ACC_PUBLIC)
@@ -27,7 +35,15 @@ internal value class AccessFlags(private val value: Int) {
 
     fun isBridge() = flagSet(Opcodes.ACC_BRIDGE)
 
+    fun isAbstract() = flagSet(Opcodes.ACC_ABSTRACT)
+
+    fun isFinal() = flagSet(Opcodes.ACC_FINAL)
+
+    fun isInterface() = flagSet(Opcodes.ACC_INTERFACE)
+
     fun isStatic() = flagSet(Opcodes.ACC_STATIC)
+
+    fun isEnum() = flagSet(Opcodes.ACC_ENUM)
 
     fun isGenerated() = isSynthetic() || isBridge()
 

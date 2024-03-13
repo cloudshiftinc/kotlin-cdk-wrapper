@@ -17,6 +17,9 @@ import org.objectweb.asm.Type
 import org.objectweb.asm.tree.AnnotationNode
 import org.objectweb.asm.tree.MethodNode
 
+internal class AsmEnumFieldAdapter(override val name : String) : CdkClass.EnumField {
+}
+
 internal class AsmMethodAdapter(
     private val delegate: MethodNode,
     private val sourceMethod: CdkSourceMethod? = null
@@ -90,6 +93,7 @@ internal class AsmMethodAdapter(
 
     override val returnType: TypeName by
         lazy(LazyThreadSafetyMode.NONE) {
+//            println("${delegate.name} ${delegate.signature} ${annotations} ${delegate.allAnnotations.map { it.desc }}")
             when (delegate.signature) {
                 null -> Type.getReturnType(delegate.desc).toTypeName()
                 else ->
@@ -99,10 +103,15 @@ internal class AsmMethodAdapter(
                         .toTypeName()
             }.copy(nullable = annotations.any { it.toString().lowercase().contains("nullable") })
         }
+    override val isStatic: Boolean
+        get() = delegate.accessFlags.isStatic()
+    override val isFinal: Boolean
+        get() = delegate.accessFlags.isFinal()
+    override val isAbstract: Boolean
+        get() = delegate.accessFlags.isAbstract()
+
     override val comment: String?
-        get() {
-            return sourceMethod?.comment
-        }
+        get() = sourceMethod?.comment
 
     override fun toString(): String {
         return "AsmMethodAdapter(name=$name; desc=${delegate.desc})"

@@ -1,0 +1,154 @@
+package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
+
+import io.cloudshiftdev.awscdk.Duration
+import kotlin.Boolean
+import kotlin.Number
+import kotlin.String
+import kotlin.Unit
+
+public interface HealthCheck {
+  public fun enabled(): Boolean? = unwrap(this).getEnabled()
+
+  public fun healthyGrpcCodes(): String? = unwrap(this).getHealthyGrpcCodes()
+
+  public fun healthyHttpCodes(): String? = unwrap(this).getHealthyHttpCodes()
+
+  public fun healthyThresholdCount(): Number? = unwrap(this).getHealthyThresholdCount()
+
+  public fun interval(): Duration? = unwrap(this).getInterval()?.let(Duration::wrap)
+
+  public fun path(): String? = unwrap(this).getPath()
+
+  public fun port(): String? = unwrap(this).getPort()
+
+  public fun protocol(): Protocol? = unwrap(this).getProtocol()?.let(Protocol::wrap)
+
+  public fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
+
+  public fun unhealthyThresholdCount(): Number? = unwrap(this).getUnhealthyThresholdCount()
+
+  public interface Builder {
+    public fun enabled(enabled: Boolean) {
+    }
+
+    public fun healthyGrpcCodes(healthyGrpcCodes: String) {
+    }
+
+    public fun healthyHttpCodes(healthyHttpCodes: String) {
+    }
+
+    public fun healthyThresholdCount(healthyThresholdCount: Number) {
+    }
+
+    public fun interval(interval: Duration) {
+    }
+
+    public fun path(path: String) {
+    }
+
+    public fun port(port: String) {
+    }
+
+    public fun protocol(protocol: Protocol) {
+    }
+
+    public fun timeout(timeout: Duration) {
+    }
+
+    public fun unhealthyThresholdCount(unhealthyThresholdCount: Number) {
+    }
+  }
+
+  private class BuilderImpl : Builder {
+    private val cdkBuilder:
+        software.amazon.awscdk.services.elasticloadbalancingv2.HealthCheck.Builder =
+        software.amazon.awscdk.services.elasticloadbalancingv2.HealthCheck.builder()
+
+    public override fun enabled(enabled: Boolean) {
+      cdkBuilder.enabled(enabled)
+    }
+
+    public override fun healthyGrpcCodes(healthyGrpcCodes: String) {
+      cdkBuilder.healthyGrpcCodes(healthyGrpcCodes)
+    }
+
+    public override fun healthyHttpCodes(healthyHttpCodes: String) {
+      cdkBuilder.healthyHttpCodes(healthyHttpCodes)
+    }
+
+    public override fun healthyThresholdCount(healthyThresholdCount: Number) {
+      cdkBuilder.healthyThresholdCount(healthyThresholdCount)
+    }
+
+    public override fun interval(interval: Duration) {
+      cdkBuilder.interval(interval.let(Duration::unwrap))
+    }
+
+    public override fun path(path: String) {
+      cdkBuilder.path(path)
+    }
+
+    public override fun port(port: String) {
+      cdkBuilder.port(port)
+    }
+
+    public override fun protocol(protocol: Protocol) {
+      cdkBuilder.protocol(protocol.let(Protocol::unwrap))
+    }
+
+    public override fun timeout(timeout: Duration) {
+      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+    }
+
+    public override fun unhealthyThresholdCount(unhealthyThresholdCount: Number) {
+      cdkBuilder.unhealthyThresholdCount(unhealthyThresholdCount)
+    }
+
+    public fun build(): software.amazon.awscdk.services.elasticloadbalancingv2.HealthCheck =
+        cdkBuilder.build()
+  }
+
+  private class Wrapper internal constructor(
+    internal val cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.HealthCheck,
+  ) : HealthCheck {
+    public override fun enabled(): Boolean? = unwrap(this).getEnabled()
+
+    public override fun healthyGrpcCodes(): String? = unwrap(this).getHealthyGrpcCodes()
+
+    public override fun healthyHttpCodes(): String? = unwrap(this).getHealthyHttpCodes()
+
+    public override fun healthyThresholdCount(): Number? = unwrap(this).getHealthyThresholdCount()
+
+    public override fun interval(): Duration? = unwrap(this).getInterval()?.let(Duration::wrap)
+
+    public override fun path(): String? = unwrap(this).getPath()
+
+    public override fun port(): String? = unwrap(this).getPort()
+
+    public override fun protocol(): Protocol? = unwrap(this).getProtocol()?.let(Protocol::wrap)
+
+    public override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
+
+    public override fun unhealthyThresholdCount(): Number? =
+        unwrap(this).getUnhealthyThresholdCount()
+  }
+
+  public companion object {
+    init {
+
+    }
+
+    public operator fun invoke(block: Builder.() -> Unit = {}): HealthCheck {
+      val builderImpl = BuilderImpl()
+      return Wrapper(builderImpl.apply(block).build())
+    }
+
+    internal
+        fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.HealthCheck):
+        HealthCheck = Wrapper(cdkObject)
+
+    internal fun unwrap(wrapped: HealthCheck):
+        software.amazon.awscdk.services.elasticloadbalancingv2.HealthCheck = (wrapped as
+        Wrapper).cdkObject
+  }
+}

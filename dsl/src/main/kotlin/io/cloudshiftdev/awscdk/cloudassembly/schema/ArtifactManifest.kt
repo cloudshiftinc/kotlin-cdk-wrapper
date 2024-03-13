@@ -1,0 +1,172 @@
+package io.cloudshiftdev.awscdk.cloudassembly.schema
+
+import kotlin.Any
+import kotlin.String
+import kotlin.Suppress
+import kotlin.Unit
+import kotlin.collections.List
+import kotlin.collections.Map
+import kotlin.jvm.JvmName
+
+public interface ArtifactManifest {
+  public fun dependencies(): List<String> = unwrap(this).getDependencies() ?: emptyList()
+
+  public fun displayName(): String? = unwrap(this).getDisplayName()
+
+  public fun environment(): String? = unwrap(this).getEnvironment()
+
+  public fun metadata(): Map<String, List<MetadataEntry>> = unwrap(this).getMetadata()?.mapValues {
+      it.value.map(MetadataEntry::wrap) } ?: emptyMap()
+
+  public fun properties(): Any? = unwrap(this).getProperties()
+
+  public fun type(): ArtifactType
+
+  public interface Builder {
+    public fun dependencies(dependencies: List<String>) {
+    }
+
+    public fun displayName(displayName: String) {
+    }
+
+    public fun environment(environment: String) {
+    }
+
+    public fun metadata(metadata: Map<String, List<MetadataEntry>>) {
+    }
+
+    public fun properties(properties: AwsCloudFormationStackProperties) {
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("a9cd88ece8befdc19b37573af4b6c9ee97784ee34c7291444edc318e75ea25c6")
+    public fun properties(properties: AwsCloudFormationStackProperties.Builder.() -> Unit) {
+    }
+
+    public fun properties(properties: AssetManifestProperties) {
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ee0ebde54971d0249092385447cb2b381d07277ce72ceb0f74f7a3eaa1fe4c29")
+    public fun properties(properties: AssetManifestProperties.Builder.() -> Unit) {
+    }
+
+    public fun properties(properties: TreeArtifactProperties) {
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("47793dc3eb10e0d0626e3b0aa0cf9c28e466764aeba5fa5edc25e3214336a9b0")
+    public fun properties(properties: TreeArtifactProperties.Builder.() -> Unit) {
+    }
+
+    public fun properties(properties: NestedCloudAssemblyProperties) {
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d46dae78e7b3afa168d770b9d51e110746b9cc92d5dde476a945f005261b5f64")
+    public fun properties(properties: NestedCloudAssemblyProperties.Builder.() -> Unit) {
+    }
+
+    public fun type(type: ArtifactType) {
+    }
+  }
+
+  private class BuilderImpl : Builder {
+    private val cdkBuilder: software.amazon.awscdk.cloudassembly.schema.ArtifactManifest.Builder =
+        software.amazon.awscdk.cloudassembly.schema.ArtifactManifest.builder()
+
+    public override fun dependencies(dependencies: List<String>) {
+      cdkBuilder.dependencies(dependencies)
+    }
+
+    public override fun displayName(displayName: String) {
+      cdkBuilder.displayName(displayName)
+    }
+
+    public override fun environment(environment: String) {
+      cdkBuilder.environment(environment)
+    }
+
+    public override fun metadata(metadata: Map<String, List<MetadataEntry>>) {
+      cdkBuilder.metadata(metadata.mapValues { it.value.map(MetadataEntry::unwrap) })
+    }
+
+    public override fun properties(properties: AwsCloudFormationStackProperties) {
+      cdkBuilder.properties(properties.let(AwsCloudFormationStackProperties::unwrap))
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("a9cd88ece8befdc19b37573af4b6c9ee97784ee34c7291444edc318e75ea25c6")
+    public override fun properties(properties: AwsCloudFormationStackProperties.Builder.() -> Unit):
+        Unit = properties(AwsCloudFormationStackProperties(properties))
+
+    public override fun properties(properties: AssetManifestProperties) {
+      cdkBuilder.properties(properties.let(AssetManifestProperties::unwrap))
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ee0ebde54971d0249092385447cb2b381d07277ce72ceb0f74f7a3eaa1fe4c29")
+    public override fun properties(properties: AssetManifestProperties.Builder.() -> Unit): Unit =
+        properties(AssetManifestProperties(properties))
+
+    public override fun properties(properties: TreeArtifactProperties) {
+      cdkBuilder.properties(properties.let(TreeArtifactProperties::unwrap))
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("47793dc3eb10e0d0626e3b0aa0cf9c28e466764aeba5fa5edc25e3214336a9b0")
+    public override fun properties(properties: TreeArtifactProperties.Builder.() -> Unit): Unit =
+        properties(TreeArtifactProperties(properties))
+
+    public override fun properties(properties: NestedCloudAssemblyProperties) {
+      cdkBuilder.properties(properties.let(NestedCloudAssemblyProperties::unwrap))
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d46dae78e7b3afa168d770b9d51e110746b9cc92d5dde476a945f005261b5f64")
+    public override fun properties(properties: NestedCloudAssemblyProperties.Builder.() -> Unit):
+        Unit = properties(NestedCloudAssemblyProperties(properties))
+
+    public override fun type(type: ArtifactType) {
+      cdkBuilder.type(type.let(ArtifactType::unwrap))
+    }
+
+    public fun build(): software.amazon.awscdk.cloudassembly.schema.ArtifactManifest =
+        cdkBuilder.build()
+  }
+
+  private class Wrapper internal constructor(
+    internal val cdkObject: software.amazon.awscdk.cloudassembly.schema.ArtifactManifest,
+  ) : ArtifactManifest {
+    public override fun dependencies(): List<String> = unwrap(this).getDependencies() ?: emptyList()
+
+    public override fun displayName(): String? = unwrap(this).getDisplayName()
+
+    public override fun environment(): String? = unwrap(this).getEnvironment()
+
+    public override fun metadata(): Map<String, List<MetadataEntry>> =
+        unwrap(this).getMetadata()?.mapValues { it.value.map(MetadataEntry::wrap) } ?: emptyMap()
+
+    public override fun properties(): Any? = unwrap(this).getProperties()
+
+    public override fun type(): ArtifactType = unwrap(this).getType().let(ArtifactType::wrap)
+  }
+
+  public companion object {
+    init {
+
+    }
+
+    public operator fun invoke(block: Builder.() -> Unit = {}): ArtifactManifest {
+      val builderImpl = BuilderImpl()
+      return Wrapper(builderImpl.apply(block).build())
+    }
+
+    internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.ArtifactManifest):
+        ArtifactManifest = Wrapper(cdkObject)
+
+    internal fun unwrap(wrapped: ArtifactManifest):
+        software.amazon.awscdk.cloudassembly.schema.ArtifactManifest = (wrapped as
+        Wrapper).cdkObject
+  }
+}

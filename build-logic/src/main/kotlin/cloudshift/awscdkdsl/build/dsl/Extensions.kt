@@ -2,7 +2,12 @@ package cloudshift.awscdkdsl.build.dsl
 
 import cloudshift.awscdkdsl.build.dsl.model.BuilderProperty
 import com.squareup.kotlinpoet.AnnotationSpec
+import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.FunSpec
+import com.squareup.kotlinpoet.LambdaTypeName
+import com.squareup.kotlinpoet.ParameterizedTypeName
+import com.squareup.kotlinpoet.ParameterizedTypeName.Companion.parameterizedBy
+import com.squareup.kotlinpoet.TypeName
 import com.squareup.kotlinpoet.asTypeName
 
 internal object Annotations {
@@ -12,7 +17,7 @@ internal object Annotations {
             .build()
 }
 
-internal fun dslFunctionSpec(prop: BuilderProperty, block: FunSpec.Builder.() -> Unit): FunSpec {
+internal fun dslFunctionSpec(prop: BuilderProperty, block: FunSpec.Builder.() -> Unit = {}): FunSpec {
     val builder = FunSpec.builder(prop.name)
     builder.apply(block)
     if (prop.deprecated) builder.addAnnotation(Annotations.Deprecated)
@@ -20,3 +25,40 @@ internal fun dslFunctionSpec(prop: BuilderProperty, block: FunSpec.Builder.() ->
     return builder.build()
 }
 
+
+internal fun ClassName.mappedClassName(): ClassName {
+    val pkgName =
+        packageName.replace("software.amazon.awscdk", "io.cloudshiftdev.awscdk")
+            .replace("software.constructs", "io.cloudshiftdev.constructs")
+    return (ClassName(pkgName, simpleNames).copy(nullable = this.isNullable) as ClassName)
+}
+
+internal val ClassName.isJssiClass: Boolean
+    get() = toString().lowercase().contains("jsii")
+
+internal val ClassName.isCdkClass: Boolean
+    get() = packageName.startsWith("software")
+
+internal val ClassName.isBuilderClass: Boolean
+    get() = simpleNames.last().endsWith("Builder")
+
+internal val TypeName.isCdkClass: Boolean
+    get() = when (this) {
+        is ClassName -> this.isCdkClass
+        is ParameterizedTypeName -> this.rawType.isCdkClass
+        else -> false
+    }
+
+internal fun TypeName.mapClassName(): TypeName {
+    return when (this) {
+        is ClassName -> mappedClassName()
+        is ParameterizedTypeName -> {
+            this.rawType.mappedClassName().parameterizedBy(
+                *this.typeArguments.map { it.mapClassName() }.toTypedArray(),
+            )
+        }
+        is LambdaTypeName -> this
+
+        else -> TODO("Unknown type: ${this::class} $this")
+    }
+}
